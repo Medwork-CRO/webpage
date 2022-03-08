@@ -1,0 +1,19 @@
+.tabContainer :global .ReactTabs__TabList {
+  color: blueviolet;
+}
+
+.tabContainer :global .ReactTabs__Tab {
+  color: blueviolet;
+}
+
+.tabContainer :global .ReactTabs__Tab.ReactTabs__Tab--selected {
+  color: blueviolet;
+}
+
+.tabContainer :global .ReactTabs__Tab:focus {
+  color: blueviolet;
+}
+
+.tabContainer :global .ReactTabs__Tab:focus:after {
+  color: blueviolet;
+}
