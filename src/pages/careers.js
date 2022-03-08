@@ -1,18 +1,16 @@
-import React from "react"
-import { graphql, StaticQuery } from "gatsby"
-import Img from "gatsby-image"
+import React from "react";
+import { graphql, StaticQuery } from "gatsby";
+import Img from "gatsby-image";
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../components/layout";
+import SEO from "../components/seo";
 
-import "../utils/normalize.css"
-import "../utils/css/screen.css"
-
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import 'react-tabs/style/react-tabs.css';
+import "../utils/normalize.css";
+import "../utils/css/screen.css";
+import "react-tabs/style/react-tabs.css";
 
 const AboutPage = ({ data }, location) => {
-  const siteTitle = data.site.siteMetadata.title
+  const siteTitle = data.site.siteMetadata.title;
 
   return (
     <Layout title={siteTitle}>
@@ -30,22 +28,33 @@ const AboutPage = ({ data }, location) => {
             />
             <figcaption>Large imagery is at the heart of this theme</figcaption>
           </figure> */}
-          <p><i>
-            100% of our employees have an upward trajectory. 90% of people who started working at us, still do 2 years after and all that moved on have
-            solid fundamentals and knowledge to excel in their next endeavors.
-          </i></p>
+          <p>
+            <i>
+              100% of our employees have an upward career trajectory. 90% of
+              people who started working at us, still do 2 years after and all
+              that moved on have solid fundamentals and knowledge to excel in
+              their next endeavors.
+            </i>
+          </p>
           <hr />
           <p>
-            Medwork values the depth of experience that professionals add to our company and to our projects. Our clients expect the best and we are constantly on the lookout for exceptional persons who will take us to the next level.
-            We hire driven and creative experienced professionals as well as entry-level career-seekers in the fields of Medical and Life Sciences.
-            <br /><br />
-            Please feel free to submit an open application including your CV along with a cover letter to <a href="mailto: medworkinfo@medwork.gr">medworkinfo@medwork.gr</a>.
+            Medwork values the depth of experience that professionals add to our
+            company and to our projects. Our clients expect the best and we are
+            constantly on the lookout for exceptional persons who will take us
+            to the next level. We hire driven and creative experienced
+            professionals as well as entry-level career-seekers in the fields of
+            Medical and Life Sciences.
+            <br />
+            <br />
+            Please feel free to submit an open application including your CV
+            along with a cover letter to{" "}
+            <a href="mailto: medworkinfo@medwork.gr">medworkinfo@medwork.gr</a>.
           </p>
         </div>
       </article>
     </Layout>
-  )
-}
+  );
+};
 
 const indexQuery = graphql`
   query {
@@ -64,7 +73,7 @@ const indexQuery = graphql`
       }
     }
   }
-`
+`;
 
 export default props => (
   <StaticQuery
@@ -73,4 +82,4 @@ export default props => (
       <AboutPage location={props.location} data={data} {...props} />
     )}
   />
-)
+);

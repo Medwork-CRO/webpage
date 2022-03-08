@@ -1,19 +1,17 @@
-import React from "react"
-import { graphql, StaticQuery } from "gatsby"
-import Img from "gatsby-image"
+import React from "react";
+import { graphql, StaticQuery } from "gatsby";
+import Img from "gatsby-image";
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../components/layout";
+import SEO from "../components/seo";
 
-import "../utils/normalize.css"
-import "../utils/css/screen.css"
+import "../utils/normalize.css";
+import "../utils/css/screen.css";
 
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import 'react-tabs/style/react-tabs.css';
-import styles from '../pages/css/about.css';
+import "react-tabs/style/react-tabs.css";
 
 const AboutPage = ({ data }, location) => {
-  const siteTitle = data.site.siteMetadata.title
+  const siteTitle = data.site.siteMetadata.title;
 
   return (
     <Layout title={siteTitle}>
@@ -35,7 +33,10 @@ const AboutPage = ({ data }, location) => {
             <tbody>
               <tr>
                 <td>Phone</td>
-                <td><a href="tel: 00302109960971">(+30) 210 9960971</a><br /></td>
+                <td>
+                  <a href="tel: 00302109960971">(+30) 210 9960971</a>
+                  <br />
+                </td>
               </tr>
               <tr>
                 <td>Fax</td>
@@ -43,22 +44,38 @@ const AboutPage = ({ data }, location) => {
               </tr>
               <tr>
                 <td>Email</td>
-                <td><a href="mailto: medworkinfo@medwork.gr">medworkinfo@medwork.gr</a></td>
+                <td>
+                  <a href="mailto: medworkinfo@medwork.gr">
+                    medworkinfo@medwork.gr
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td>LinkedIn</td>
+                <td>
+                  <a href="https://www.linkedin.com/company/medwork/">
+                    company/medwork
+                  </a>
+                </td>
               </tr>
             </tbody>
             <tfoot>
               <tr>
                 <td colSpan={1} />
-                <td><u>Keep in mind that Medwork is located in Greece (GMT+2)</u></td>
+                <td>
+                  <u>
+                    Greece: phone code <i>30</i>
+                  </u>
+                  , <u>timezone (GMT+2)</u>
+                </td>
               </tr>
             </tfoot>
           </table>
-
         </div>
       </article>
     </Layout>
-  )
-}
+  );
+};
 
 const indexQuery = graphql`
   query {
@@ -77,7 +94,7 @@ const indexQuery = graphql`
       }
     }
   }
-`
+`;
 
 export default props => (
   <StaticQuery
@@ -86,4 +103,4 @@ export default props => (
       <AboutPage location={props.location} data={data} {...props} />
     )}
   />
-)
+);

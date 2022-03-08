@@ -36,6 +36,7 @@ test/**/public
 .gatsby-context.js
 .DS_Store
 public/
+content/
 node_modules/
 e2e-tests/gatsby-pnp/
 __diff_output__/
