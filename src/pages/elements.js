@@ -1,22 +1,19 @@
-import React from "react"
-import { graphql, StaticQuery } from "gatsby"
-import Img from "gatsby-image"
+import React from "react";
+import { graphql, StaticQuery } from "gatsby";
+import Img from "gatsby-image";
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../components/layout";
+import SEO from "../components/seo";
 
-import "../utils/normalize.css"
-import "../utils/css/screen.css"
+import "../utils/normalize.css";
+import "../utils/css/screen.css";
 
 const ElementsPage = ({ data }, location) => {
-  const siteTitle = data.site.siteMetadata.title
+  const siteTitle = data.site.siteMetadata.title;
 
   return (
     <Layout title={siteTitle}>
-      <SEO
-        title="All posts"
-        keywords={[`blog`, `gatsby`, `javascript`, `react`]}
-      />
+      <SEO title="All posts" keywords={[`blog`]} />
 
       <article className="post-content page-template no-image">
         <div className="post-content-body">
@@ -137,25 +134,25 @@ const ElementsPage = ({ data }, location) => {
           <hr />
           <h2 id="images">Images</h2>
           <figure className="kg-card kg-image-card">
-            <Img
+            {/* <Img
               fluid={data.smallPic.childImageSharp.fluid}
               className="kg-image"
             />
-            <figcaption>Regular image</figcaption>
+            <figcaption>Regular image</figcaption> */}
           </figure>
           <figure className="kg-card kg-image-card kg-width-wide">
-            <Img
+            {/* <Img
               fluid={data.medPic.childImageSharp.fluid}
               className="kg-image"
             />
-            <figcaption>Large image</figcaption>
+            <figcaption>Large image</figcaption> */}
           </figure>
           <figure className="kg-card kg-image-card kg-width-full">
-            <Img
+            {/* <Img
               fluid={data.largePic.childImageSharp.fluid}
               className="kg-image"
             />
-            <figcaption>Full bleed image</figcaption>
+            <figcaption>Full bleed image</figcaption> */}
           </figure>
           <hr />
           <h2 id="table">Table</h2>
@@ -384,7 +381,7 @@ const ElementsPage = ({ data }, location) => {
                 style={{
                   padding: "1rem 0",
                   textAlign: "center",
-                  background: "#eee",
+                  background: "#eee"
                 }}
               >
                 12
@@ -397,7 +394,7 @@ const ElementsPage = ({ data }, location) => {
                 style={{
                   padding: "1rem 0",
                   textAlign: "center",
-                  background: "#eee",
+                  background: "#eee"
                 }}
               >
                 3
@@ -408,7 +405,7 @@ const ElementsPage = ({ data }, location) => {
                 style={{
                   padding: "1rem 0",
                   textAlign: "center",
-                  background: "#eee",
+                  background: "#eee"
                 }}
               >
                 9
@@ -421,7 +418,7 @@ const ElementsPage = ({ data }, location) => {
                 style={{
                   padding: "1rem 0",
                   textAlign: "center",
-                  background: "#eee",
+                  background: "#eee"
                 }}
               >
                 6
@@ -432,7 +429,7 @@ const ElementsPage = ({ data }, location) => {
                 style={{
                   padding: "1rem 0",
                   textAlign: "center",
-                  background: "#eee",
+                  background: "#eee"
                 }}
               >
                 6
@@ -445,7 +442,7 @@ const ElementsPage = ({ data }, location) => {
                 style={{
                   padding: "1rem 0",
                   textAlign: "center",
-                  background: "#eee",
+                  background: "#eee"
                 }}
               >
                 auto
@@ -456,7 +453,7 @@ const ElementsPage = ({ data }, location) => {
                 style={{
                   padding: "1rem 0",
                   textAlign: "center",
-                  background: "#eee",
+                  background: "#eee"
                 }}
               >
                 auto
@@ -467,7 +464,7 @@ const ElementsPage = ({ data }, location) => {
                 style={{
                   padding: "1rem 0",
                   textAlign: "center",
-                  background: "#eee",
+                  background: "#eee"
                 }}
               >
                 auto
@@ -480,7 +477,7 @@ const ElementsPage = ({ data }, location) => {
                 style={{
                   padding: "1rem 0",
                   textAlign: "center",
-                  background: "#eee",
+                  background: "#eee"
                 }}
               >
                 auto
@@ -491,7 +488,7 @@ const ElementsPage = ({ data }, location) => {
                 style={{
                   padding: "1rem 0",
                   textAlign: "center",
-                  background: "#eee",
+                  background: "#eee"
                 }}
               >
                 auto
@@ -502,7 +499,7 @@ const ElementsPage = ({ data }, location) => {
                 style={{
                   padding: "1rem 0",
                   textAlign: "center",
-                  background: "#eee",
+                  background: "#eee"
                 }}
               >
                 auto
@@ -513,7 +510,7 @@ const ElementsPage = ({ data }, location) => {
                 style={{
                   padding: "1rem 0",
                   textAlign: "center",
-                  background: "#eee",
+                  background: "#eee"
                 }}
               >
                 auto
@@ -523,8 +520,8 @@ const ElementsPage = ({ data }, location) => {
         </div>
       </article>
     </Layout>
-  )
-}
+  );
+};
 
 const indexQuery = graphql`
   query {
@@ -559,7 +556,7 @@ const indexQuery = graphql`
       }
     }
   }
-`
+`;
 
 export default props => (
   <StaticQuery
@@ -568,4 +565,4 @@ export default props => (
       <ElementsPage location={props.location} data={data} {...props} />
     )}
   />
-)
+);

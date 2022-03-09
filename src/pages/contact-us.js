@@ -10,18 +10,16 @@ import "../utils/css/screen.css";
 
 import "react-tabs/style/react-tabs.css";
 
-const AboutPage = ({ data }, location) => {
+const ContactUsPage = ({ data }, location) => {
   const siteTitle = data.site.siteMetadata.title;
 
   return (
     <Layout title={siteTitle}>
-      <SEO title="ABout" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
+      <SEO title="Contact Us" keywords={[`blog`]} />
 
       <article className="post-content page-template no-image">
         <div className="post-content-body">
-          <h2 id="clean-minimal-and-deeply-customisable-london-is-a-theme-made-for-people-who-appreciate-simple-lines-">
-            Contact Us
-          </h2>
+          <h2>Contact Us</h2>
           {/* <figure className="kg-card kg-image-card kg-width-full">
             <Img
               fluid={data.benchAccounting.childImageSharp.fluid}
@@ -29,13 +27,13 @@ const AboutPage = ({ data }, location) => {
             />
             <figcaption>Large imagery is at the heart of this theme</figcaption>
           </figure> */}
+
           <table>
             <tbody>
               <tr>
                 <td>Phone</td>
                 <td>
                   <a href="tel: 00302109960971">(+30) 210 9960971</a>
-                  <br />
                 </td>
               </tr>
               <tr>
@@ -100,7 +98,7 @@ export default props => (
   <StaticQuery
     query={indexQuery}
     render={data => (
-      <AboutPage location={props.location} data={data} {...props} />
+      <ContactUsPage location={props.location} data={data} {...props} />
     )}
   />
 );

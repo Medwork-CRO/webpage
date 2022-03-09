@@ -10,17 +10,14 @@ import "../utils/normalize.css";
 import "../utils/css/screen.css";
 //TODO: switch to staticQuery, get rid of comments, remove unnecessary components, export as draft template
 const BlogIndex = ({ data }, location) => {
-  console.log("data :>> ", data);
   const siteTitle = data.site.siteMetadata.title;
+  const siteIcon = data.site.siteMetadata.icon;
   const posts = data.allMarkdownRemark.edges;
   let postCounter = 0;
 
   return (
-    <Layout title={siteTitle}>
-      <SEO
-        title="All posts"
-        keywords={[`blog`, `gatsby`, `javascript`, `react`]}
-      />
+    <Layout title={siteTitle} icon={siteIcon} selected={1}>
+      <SEO title="All posts" keywords={[`services`]} />
       {/* <Bio /> */}
       {data.site.siteMetadata.description && (
         <header className="page-head">

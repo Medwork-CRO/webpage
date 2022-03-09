@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Faq from "react-faq-component";
 import { graphql, StaticQuery } from "gatsby";
-import Img from "gatsby-image";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -11,7 +10,7 @@ import "../utils/css/screen.css";
 
 import "react-tabs/style/react-tabs.css";
 
-const AboutPage = ({ data }, location) => {
+const ServicesPage = ({ data }, location) => {
   const siteTitle = data.site.siteMetadata.title;
   const pharmacovigilance = {
     rows: [
@@ -179,7 +178,7 @@ const AboutPage = ({ data }, location) => {
     ]
   };
 
-  const qualityManagment = {
+  const qualityManagement = {
     rows: [
       {
         title: "Full pharmacovigilance Support",
@@ -268,13 +267,11 @@ const AboutPage = ({ data }, location) => {
 
   return (
     <Layout title={siteTitle}>
-      <SEO title="ABout" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
+      <SEO title="Services" keywords={[`blog`]} />
 
       <article className="post-content page-template no-image">
         <div className="post-content-body">
-          <h2 id="clean-minimal-and-deeply-customisable-london-is-a-theme-made-for-people-who-appreciate-simple-lines-">
-            Services
-          </h2>
+          <h2>Services</h2>
           {/* <figure className="kg-card kg-image-card kg-width-full">
             <Img
               fluid={data.benchAccounting.childImageSharp.fluid}
@@ -282,14 +279,18 @@ const AboutPage = ({ data }, location) => {
             />
             <figcaption>Large imagery is at the heart of this theme</figcaption>
           </figure> */}
-          <p>
-            Our services include Pharmacovigilance, Quality Management and
-            Materiovigilance. With more than 17 years of experience Medwork is
-            the leader, with a proven record and a trusted name.
-          </p>
+          <i>
+            With over {new Date().getFullYear() - 2005} years of experience
+            Medwork is the leader, with a proven record and a trusted name. Our
+            services include Pharmacovigilance, Quality Management and
+            Materiovigilance and Cosmetovigilance.
+          </i>
 
-          <h5 href="pharmacovigilance">Pharmacovigilance</h5>
-          <p>
+          <h5>
+            <a href="/pharmacovigilance">Pharmacovigilance</a>
+          </h5>
+
+          <span>
             Compliance with pharmacovigilance requirements is becoming an
             increasing challenge for pharmaceutical companies worldwide. In this
             very demanding environment, Medwork offers a reliable solution for
@@ -302,11 +303,13 @@ const AboutPage = ({ data }, location) => {
             activities. Our services may be fully customized to cover all of a
             Marketing Authorization Holder’s responsibilities related to drug
             safety.
-          </p>
+          </span>
           <Faq data={pharmacovigilance} styles={styles} config={config} />
 
-          <h5 href="qualityManagment">Quality Managment</h5>
-          <p>
+          <h5>
+            <a href="/quality-management">Quality Management</a>
+          </h5>
+          <span>
             Combining an excellent knowledge of the pharmaceutical environment,
             a deep understanding of European and international pharmaceutical
             quality standards and an unwavering commitment to quality, Medwork
@@ -332,11 +335,13 @@ const AboutPage = ({ data }, location) => {
                 environment.
               </li>
             </ul>
-          </p>
-          <Faq data={qualityManagment} styles={styles} config={config} />
+          </span>
+          <Faq data={qualityManagement} styles={styles} config={config} />
 
-          <h5 href="materiovigilance">Materiovigilance</h5>
-          <p>
+          <h5>
+            <a href="/materiovigilance">Materiovigilance</a>
+          </h5>
+          <span>
             The principal purpose of materiovigilance is to improve the
             protection of the health and safety of patients, users and others by
             reducing the likelihood that incidents related to the use of a
@@ -378,10 +383,12 @@ const AboutPage = ({ data }, location) => {
                 Summary/Trend Reports to National Competent Authorities.
               </li>
             </ul>
-          </p>
+          </span>
 
-          <h5 href="cosmetovigilance">Cosmetovigilance</h5>
-          <p>
+          <h5>
+            <a href="/cosmetovigilance">Cosmetovigilance</a>
+          </h5>
+          <span>
             Medwork provides a comprehensive and customizable set of services to
             assist cosmetics companies in complying with the regulatory
             directives.
@@ -402,7 +409,7 @@ const AboutPage = ({ data }, location) => {
                 Training of personnel on cosmetovigilance, as legally required
               </li>
             </ul>
-          </p>
+          </span>
         </div>
       </article>
     </Layout>
@@ -432,7 +439,7 @@ export default props => (
   <StaticQuery
     query={indexQuery}
     render={data => (
-      <AboutPage location={props.location} data={data} {...props} />
+      <ServicesPage location={props.location} data={data} {...props} />
     )}
   />
 );

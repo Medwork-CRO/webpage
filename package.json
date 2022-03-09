@@ -32,7 +32,10 @@
     "react-dom": "^16.8.6",
     "react-faq-component": "^1.3.1",
     "react-helmet": "^5.2.1",
+    "react-slick": "^0.28.1",
     "react-tabs": "^4.0.1",
+    "slick-carousel": "^1.8.1",
+    "styled-components": "^5.3.3",
     "typeface-alegreya": "^0.0.69",
     "typeface-merriweather": "0.0.72",
     "typeface-montserrat": "0.0.54",
@@ -42,6 +45,7 @@
   "devDependencies": {
     "@types/react-tabs": "^2.3.4",
     "autoprefixer": "^9.5.1",
+    "gh-pages": "^3.2.3",
     "husky": "^2.2.0",
     "postcss-color-function": "^4.1.0",
     "postcss-custom-properties": "^8.0.10",
@@ -64,6 +68,7 @@
     "url": "git+https://github.com/ImedAdel/gatsby-london.git"
   },
   "scripts": {
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",

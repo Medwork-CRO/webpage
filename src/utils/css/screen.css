@@ -44,6 +44,23 @@ body {
   text-indent: -9999px;
 }
 
+.profile-round {
+  vertical-align: middle;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #bbb;
+  border-color: #111;
+  margin-right: 10px;
+}
+.profile-text {
+  align-self: center;
+  font-size: 1.5rem;
+  line-height: 1.1em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 /* Layout
 /* ---------------------------------------------------------- */
 
@@ -159,6 +176,10 @@ body {
   list-style: none;
 }
 
+.site-head-name {
+  display: flex;
+}
+
 .site-head li {
   display: block;
   margin: 0;
@@ -190,7 +211,8 @@ body {
 
 .site-head-logo {
   flex-shrink: 0;
-  display: block;
+  display: flex;
+  align-items: center;
   padding: 10px;
   color: var(--color-base);
   font-size: 2.1rem;
@@ -198,6 +220,16 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+
+.site-head-logo-img {
+  vertical-align: middle;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #bbb;
+  border-color: #111;
 }
 
 .site-head-logo:hover {
@@ -326,6 +358,13 @@ body {
     display: flex;
     justify-content: center;
   }
+  .site-head-center-new {
+    order: 1;
+    position: static;
+    z-index: auto;
+    display: flex;
+    justify-content: center;
+  }
   .site-head-right {
     order: 3;
     width: 100%;
@@ -384,7 +423,6 @@ body {
 
 .post-feed {
   display: flex;
-  align-items: ;
   flex-wrap: wrap;
 }
 
@@ -502,7 +540,7 @@ body {
 .post-content {
   max-width: 960px;
   margin: 0 auto;
-  padding: 6vw 0;
+  padding: 2vw 0;
 }
 
 .post-content-header {

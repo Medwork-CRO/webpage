@@ -1,9 +1,12 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
+import { Link } from "gatsby";
+import Img from "gatsby-image";
 
 const Layout = props => {
-  const { title, children } = props
-  const [toggleNav, setToggleNav] = React.useState(false)
+  let selected = -1;
+  const { title, icon, children } = props;
+  const [toggleNav, setToggleNav] = React.useState(false);
+
   return (
     <div className={`site-wrapper ${toggleNav ? `site-head-open` : ``}`}>
       <header className="site-head">
@@ -24,33 +27,62 @@ const Layout = props => {
               </div>
             </div>
           </a>
-          <nav id="swup" class="site-head-left">
+
+          <nav id="swup" className="site-head-left">
             <ul className="nav" role="menu">
-              <li className="nav-home nav-current" role="menuitem">
+              <li
+                onSelect={() => (selected = 0)}
+                className={selected === 0 ? "nav-current" : ""}
+                role="menuitem"
+              >
                 <Link to={`/`}>Home</Link>
               </li>
-              <li className="nav-about" role="menuitem">
-                <Link to={`/about`}>About</Link>
+              <li
+                onSelect={() => (selected = 1)}
+                className={selected === 1 ? "nav-current" : ""}
+                role="menuitem"
+              >
+                <Link to={`/about-us`}>About Us</Link>
               </li>
-              <li className="nav-elements" role="menuitem">
+              <li
+                onSelect={() => (selected = 2)}
+                className={selected === 2 ? "nav-current" : ""}
+                role="menuitem"
+              >
                 <Link to={`/services`}>Services</Link>
               </li>
-              <li className="nav-elements" role="menuitem">
+              <li
+                onSelect={() => (selected = 3)}
+                className={selected === 3 ? "nav-current" : ""}
+                role="menuitem"
+              >
                 <Link to={`/careers`}>Careers</Link>
               </li>
-              <li className="nav-elements" role="menuitem">
+              <li
+                onSelect={() => (selected = 4)}
+                className={selected === 4 ? "nav-current" : ""}
+                role="menuitem"
+              >
                 <Link to={`/contact-us`}>Contact Us</Link>
               </li>
-              <li className="nav-elements" role="menuitem">
+              {/* <li className="nav-current" role="menuitem">
                 <Link to={`/elements`}>Elements</Link>
-              </li>
+              </li> */}
             </ul>
           </nav>
+
           <div className="site-head-center">
-            <Link className="site-head-logo" to={`/`}>
-              {title}
+            <Link className="site-head-name" to={`/`}>
+              <img
+                className="site-head-logo-img"
+                src={require("./../../content/assets/medwork-icon.png")}
+                alt="Medwork Logo"
+              ></img>
+              <span className="site-head-logo">{title}</span>
+              {/* /{icon}/ */}
             </Link>
           </div>
+
           <div className="site-head-right">
             <div className="social-links">
               <a
@@ -79,8 +111,8 @@ const Layout = props => {
         </div>
       </main>
       <footer className="site-foot">
-        &copy; {new Date().getFullYear()} <Link to={`/`}>{title}</Link>. All Rights Reserved. &mdash;
-        Made by {" "}
+        &copy; {new Date().getFullYear()} <Link to={`/`}>{title}</Link>. All
+        Rights Reserved. &mdash; Made by{" "}
         <a
           href="https://github.com/keybraker"
           target="_blank"
@@ -90,7 +122,7 @@ const Layout = props => {
         </a>
       </footer>
     </div>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;
