@@ -1,15 +1,62 @@
-import React from "react";
 import { graphql, StaticQuery } from "gatsby";
-import Img from "gatsby-image";
-
+import React from "react";
+import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
+import "react-tabs/style/react-tabs.css";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-
-import "../utils/normalize.css";
 import "../utils/css/screen.css";
+import "../utils/normalize.css";
 
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import "react-tabs/style/react-tabs.css";
+const clients = [
+  {
+    name: "bayer",
+    img: "bayer-logo.png"
+  },
+  {
+    name: "novartis",
+    img: "novartis-logo.png"
+  },
+  {
+    name: "roche",
+    img: "roche-logo.png"
+  },
+  {
+    name: "pfizer",
+    img: "pfizer-logo.png"
+  },
+  {
+    name: "gsk",
+    img: "gsk-logo.png"
+  },
+  {
+    name: "merck",
+    img: "merck-logo.png"
+  },
+  {
+    name: "moderna",
+    img: "moderna-logo.png"
+  },
+  {
+    name: "sanofi",
+    img: "sanofi-logo.png"
+  },
+  {
+    name: "j&j",
+    img: "j&j-logo.png"
+  }
+];
+
+const clientImages = clients.map((client, i) => {
+  return (
+    <div class="grid-item" key={i}>
+      <img
+        className="client-logo-img"
+        src={require(`./../../content/assets/client-logos/${client.img}`)}
+        alt={client.name}
+      ></img>
+    </div>
+  );
+});
 
 const AboutPage = ({ data }, location) => {
   const siteTitle = data.site.siteMetadata.title;
@@ -50,6 +97,19 @@ const AboutPage = ({ data }, location) => {
             that is demonstrated in contracts that are continuously renewed year
             after year.
           </p>
+
+          <h5>Company Policies</h5>
+          <p>
+            We strongly believe that commitment to confidentiality, meticulous
+            observance of legislation and ethical behaviour, foster and
+            guarantee good, fair and trustful cooperation both within the
+            company and with all business partners. We have documented this
+            conviction in our Code of Conduct, Information Security Policy, Data
+            Privacy Policy and Quality Policy.
+          </p>
+
+          <h5>Our Clients</h5>
+          <div class="grid-container">{clientImages}</div>
 
           <h5>Senior Management Team</h5>
           <Tabs>
@@ -143,16 +203,6 @@ const AboutPage = ({ data }, location) => {
               conducted numerous GCP, GDP and quality system audits.
             </TabPanel>
           </Tabs>
-
-          <h5>Company Policies</h5>
-          <p>
-            We strongly believe that commitment to confidentiality, meticulous
-            observance of legislation and ethical behaviour, foster and
-            guarantee good, fair and trustful cooperation both within the
-            company and with all business partners. We have documented this
-            conviction in our Code of Conduct, Information Security Policy, Data
-            Privacy Policy and Quality Policy.
-          </p>
         </div>
       </article>
     </Layout>

@@ -38,6 +38,7 @@ const CareerPage = ({ data }, location) => {
       surName: "Tsiakkas",
       img:
         "https://media-exp1.licdn.com/dms/image/C4D03AQEir4ovE0CQEQ/profile-displayphoto-shrink_800_800/0/1516519019934?e=1652313600&v=beta&t=rcAxtS6JpnIC9ofBJUyaF4YMHogi4eEh_UB6acqKmbA",
+      title: "Founder & Medical Director",
       linkedIn: "nicolas-tsiakkas-026b2613"
     },
     {
@@ -45,12 +46,14 @@ const CareerPage = ({ data }, location) => {
       surName: "Tsiakkas",
       img:
         "https://media-exp1.licdn.com/dms/image/C4E03AQEsfXmWCd0adQ/profile-displayphoto-shrink_200_200/0/1644357009913?e=1652313600&v=beta&t=RvIfEbZPMJ-6Pg9W9oQBzqfOUHCEqhhFZlipJ80Io2U",
+      title: "Software Engineer",
       linkedIn: "ioannis-t-3365151a2"
     },
     {
       firstName: "Cat",
       surName: "Catikoul",
       img: "http://placekitten.com/g/200/200",
+      title: "Test Animal",
       linkedIn: "cat"
     },
     {
@@ -58,6 +61,7 @@ const CareerPage = ({ data }, location) => {
       surName: "Tsiakkas",
       img:
         "https://media-exp1.licdn.com/dms/image/C4D03AQEir4ovE0CQEQ/profile-displayphoto-shrink_800_800/0/1516519019934?e=1652313600&v=beta&t=rcAxtS6JpnIC9ofBJUyaF4YMHogi4eEh_UB6acqKmbA",
+      title: "Founder & Medical Director",
       linkedIn: "nicolas-tsiakkas-026b2613"
     },
     {
@@ -65,26 +69,46 @@ const CareerPage = ({ data }, location) => {
       surName: "Tsiakkas",
       img:
         "https://media-exp1.licdn.com/dms/image/C4E03AQEsfXmWCd0adQ/profile-displayphoto-shrink_200_200/0/1644357009913?e=1652313600&v=beta&t=RvIfEbZPMJ-6Pg9W9oQBzqfOUHCEqhhFZlipJ80Io2U",
+      title: "Software Engineer",
       linkedIn: "ioannis-t-3365151a2"
     },
     {
       firstName: "Cat",
       surName: "Catikoul",
       img: "http://placekitten.com/g/200/200",
+      title: "Test Animal",
       linkedIn: "cat"
     }
   ];
 
+  // const employeeProfiles = team.map((employee, i) => {
+  //   return (
+  //     <span id={i}>
+  //       <a href={`https://www.linkedin.com/in/${employee.linkedIn}`}>
+  //         <img className="profile-round" src={employee.img} />
+  //         <span className="profile-text">
+  //           {employee.firstName} {employee.surName}
+  //         </span>
+  //       </a>
+  //     </span>
+  //   );
+  // });
+
   const employeeProfiles = team.map((employee, i) => {
     return (
-      <span id={i}>
-        <a href={`https://www.linkedin.com/in/${employee.linkedIn}`}>
-          <img className="profile-round" src={employee.img} />
-          <span className="profile-text">
+      <div>
+        <img
+          className="employee-logo-img"
+          src={employee.img}
+          alt={employee.firstName}
+        ></img>
+        <span className="employee-card">
+          <b>
             {employee.firstName} {employee.surName}
-          </span>
-        </a>
-      </span>
+          </b>
+          {employee.title}
+        </span>
+      </div>
     );
   });
 
@@ -126,10 +150,11 @@ const CareerPage = ({ data }, location) => {
           </p>
 
           <h5>Our Team</h5>
+          <div class="grid-container">{employeeProfiles}</div>
 
-          <Slider className="post-content page-template no-image" {...settings}>
+          {/* <Slider className="post-content page-template no-image" {...settings}>
             {employeeProfiles}
-          </Slider>
+          </Slider> */}
         </div>
       </article>
     </Layout>

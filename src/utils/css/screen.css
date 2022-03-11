@@ -7,6 +7,7 @@ production stylesheet in assets/built/screen.css using gulp dev
 
 /* Lib - Local component imports
 /* ---------------------------------------------------------- */
+
 @import "vars.css";
 @import "components/global.css";
 @import "components/ghost.css";
@@ -23,7 +24,8 @@ production stylesheet in assets/built/screen.css using gulp dev
 /* ---------------------------------------------------------- */
 
 body {
-  font-family: "Muli", sans-serif;
+  /* font-family: "Muli", sans-serif; */
+  font-family: "Graphik Web", sans-serif;
   background: var(--color-bg);
   transition: background 0.3s ease-out;
   transition-delay: 0.25;
@@ -54,11 +56,13 @@ body {
   border-color: #111;
   margin-right: 10px;
 }
+
 .profile-text {
   align-self: center;
   font-size: 1.5rem;
   line-height: 1.1em;
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
+  font-family: "Muli", sans-serif;
 }
 
 /* Layout
@@ -68,6 +72,7 @@ body {
   padding: 3vw;
   min-height: 100vh;
 }
+
 @media (max-width: 850px) {
   .site-wrapper {
     padding: 6vw;
@@ -115,6 +120,7 @@ body {
   font-size: 3rem;
   color: var(--color-base);
 }
+
 @media (max-width: 500px) {
   .page-head-title {
     font-size: 2rem;
@@ -127,6 +133,7 @@ body {
   font-size: 2.2rem;
   line-height: 1.35em;
 }
+
 @media (max-width: 500px) {
   .page-head-description {
     font-size: 1.6rem;
@@ -302,9 +309,11 @@ body {
   .site-head {
     padding: 0;
   }
+
   .nav-burger {
     display: block;
   }
+
   .site-head-container {
     flex-direction: column;
     justify-content: flex-start;
@@ -314,6 +323,7 @@ body {
     transition: all 0.4s ease-out;
     overflow: hidden;
   }
+
   .site-head-left,
   .site-head-right {
     position: relative;
@@ -322,6 +332,7 @@ body {
     transition: height 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99);
     transition-delay: 1s;
   }
+
   .site-head-left a,
   .site-head-right a {
     margin: 8px 0;
@@ -334,11 +345,13 @@ body {
       opacity 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99);
     transform: scale(1.1) translateY(-25px);
   }
+
   .site-head-right a {
     padding: 5px 0;
     margin: 1px 0;
     font-size: 2rem;
   }
+
   .nav {
     width: 100%;
     flex-direction: column;
@@ -346,11 +359,13 @@ body {
     align-items: flex-start;
     margin: 3vw 0 0 0;
   }
+
   .site-head-left {
     order: 2;
     margin: 0;
     width: 100%;
   }
+
   .site-head-center {
     order: 1;
     position: static;
@@ -358,6 +373,7 @@ body {
     display: flex;
     justify-content: center;
   }
+
   .site-head-center-new {
     order: 1;
     position: static;
@@ -365,11 +381,13 @@ body {
     display: flex;
     justify-content: center;
   }
+
   .site-head-right {
     order: 3;
     width: 100%;
     margin-top: 3vw;
   }
+
   .social-links {
     flex-direction: column;
     align-items: flex-start;
@@ -402,12 +420,15 @@ body {
       opacity 0.9s cubic-bezier(0.4, 0.01, 0.165, 0.99);
     transform: scale(1) translateY(0px);
   }
+
   .site-head-open .nav-current a {
     border-bottom: var(--color-base) 2px solid;
   }
+
   .site-head-open .site-head-right a {
     opacity: 0.5;
   }
+
   .site-head-open .site-foot {
     display: block;
     position: fixed;
@@ -423,11 +444,9 @@ body {
 
 .post-feed {
   display: flex;
-  flex-wrap: wrap;
 }
 
 .post-card {
-  position: relative;
   flex: 1 1 50%;
   display: flex;
   position: relative;
@@ -438,7 +457,12 @@ body {
   counter-increment: posts;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1300px) {
+  .post-feed {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   .post-card {
     flex: 1 1 100%;
     height: 70vw;
@@ -473,6 +497,7 @@ body {
 .post-card.with-image .post-card-content {
   opacity: 0;
 }
+
 @media (max-width: 700px) {
   .post-card.with-image .post-card-content {
     opacity: 1;
@@ -488,12 +513,13 @@ body {
   margin: 0;
   display: inline-block;
   font-size: 3.4rem;
-  max-width: 70%;
   text-align: center;
+  text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
   transition: all 0.3s cubic-bezier(0.33, 0, 0.2, 1);
 }
 
 /* Posts without images */
+
 .post-card.no-image:before {
   display: block;
   content: counter(posts);
@@ -528,6 +554,7 @@ body {
     font-size: 3.4rem;
   }
 }
+
 @media (max-width: 700px) {
   .post-card.no-image:before {
     font-size: 50vw;
@@ -563,6 +590,7 @@ body {
   text-align: center;
   opacity: 0.5;
 }
+
 @media (max-width: 500px) {
   .post-content-excerpt {
     font-size: 1.8rem;
@@ -583,6 +611,7 @@ body {
   font-size: 1.9rem;
   line-height: 1.65em;
 }
+
 @media (max-width: 500px) {
   .post-content-body {
     font-size: 1.7rem;
@@ -749,4 +778,52 @@ body {
 .page-template .post-content-body h2,
 .page-template .post-content-body h3 {
   text-align: center;
+}
+
+/* Grid Template
+/* ---------------------------------------------------------- */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: none;
+  padding: 2rem;
+  width: 100%;
+}
+
+.grid-item {
+  background-color: none;
+  border: 1px solid none;
+  padding: 2rem;
+  text-align: center;
+}
+
+.employee-card {
+  font-size: medium;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  text-align: start;
+  padding-left: 15px;
+}
+
+.employee-logo-img {
+  height: 362px;
+  width: 362px;
+  padding: 15px;
+  float: center;
+  object-fit: cover;
+}
+
+.client-logo-img {
+  float: center;
+  object-fit: cover;
+}
+
+@media (hover: hover) {
+  client-logo-im:hover {
+    height: 100px;
+    filter: grayscale(10%);
+  }
 }
