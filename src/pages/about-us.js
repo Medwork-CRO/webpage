@@ -48,7 +48,7 @@ const clients = [
 
 const clientImages = clients.map((client, i) => {
   return (
-    <div class="grid-item" key={i}>
+    <div className="grid-item" key={i}>
       <img
         className="client-logo-img"
         src={require(`./../../content/assets/client-logos/${client.img}`)}

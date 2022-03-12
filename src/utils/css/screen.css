@@ -824,6 +824,7 @@ body {
   padding: 15px;
   float: center;
   object-fit: cover;
+  filter: grayscale(1);
 }
 
 .client-logo-img {

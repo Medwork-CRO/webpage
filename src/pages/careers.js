@@ -99,11 +99,11 @@ const CareerPage = ({ data }, location) => {
           alt={employee.firstName}
         ></img>
         <span className="employee-card">
-          <b>
-            <a href={`https://www.linkedin.com/in/${employee.linkedIn}`}>
+          <a href={`https://www.linkedin.com/in/${employee.linkedIn}`}>
+            <b>
               {employee.firstName} {employee.surName}
-            </a>
-          </b>
+            </b>
+          </a>
           {employee.title}
         </span>
       </div>
