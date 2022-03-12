@@ -10,5 +10,5 @@ module.exports = {
   author: "Ioannis Tsiakkas",
   twitter: "Ioannis_Tsiakkas",
   linkedIn: "company/Medwork",
-  icon: "content/assets/medwork-icon.png"
+  icon: "content/assets/medwork-logo.png"
 };

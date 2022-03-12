@@ -75,7 +75,7 @@ const Layout = props => {
             <Link className="site-head-name" to={`/`}>
               <img
                 className="site-head-logo-img"
-                src={require("./../../content/assets/medwork-icon.png")}
+                src={require("./../../content/assets/medwork-logo.png")}
                 alt="Medwork Logo"
               ></img>
               {/* <span className="site-head-logo">{title}</span> */}
