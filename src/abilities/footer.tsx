@@ -1,5 +1,5 @@
 // import Image from "next/image";
-// import medworkLogo from "@assets/medworkLogo.png";
+// import medworkLogo from "@assets/medwork-logo.png";
 import { Inter } from "@next/font/google";
 
 const inter = Inter({

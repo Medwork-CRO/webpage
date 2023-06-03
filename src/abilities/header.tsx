@@ -1,4 +1,4 @@
-import medworkLogo from "@assets/medworkLogo.png";
+import medworkLogo from "@assets/medwork-logo.png";
 import { FaLinkedin } from "@react-icons/all-files/fa/FaLinkedin";
 import { MdEmail } from "@react-icons/all-files/md/MdEmail";
 import { MdLocationOn } from "@react-icons/all-files/md/MdLocationOn";
@@ -15,46 +15,59 @@ const mail = "mailto:" + "iantsiakkas@gmail.com";
 const address = "http://maps.google.com/?q=" + "Greece, Athens - 16452";
 const linkedin = "https://www.linkedin.com/in/" + "company/medwork";
 
-function Tabs() {
+import { useState } from "react";
+
+function Logo() {
   return (
-    <div
-      className={`${inter.variable} flex-start flex flex-row items-end justify-start gap-4 align-middle font-sans`}
+    <Link
+      className="flex items-center text-2xl font-semibold gap-2"
+      aria-label="By clicking you will be taken to Home"
+      href="/"
     >
-      <Link
-        className="whitespace-nowrap"
-        aria-label="By clicking you will be taken to Home"
-        href="/"
+      <div><Image src={medworkLogo} alt="Medwork Logo" width={46} /></div>
+      <div
+        className={`${inter.variable} font-sans text-3xl`}
       >
-        Home
-      </Link>
-      <Link
-        className="whitespace-nowrap"
-        aria-label="By clicking you will be taken to About Us"
-        href="/about-us"
+        Medwork
+      </div>
+    </Link >
+  );
+}
+
+function Tab({ label, href }: { label: string, href: string }) {
+  const [isActive, setIsActive] = useState(false);
+
+  return (
+    <Link
+      className={`whitespace-nowrap ${isActive ? "text-blue-500" : ""}`}
+      aria-label={`By clicking you will be taken to ${label}`}
+      href={href}
+      onMouseEnter={() => setIsActive(true)}
+      onMouseLeave={() => setIsActive(false)}
+    >
+      {label}
+    </Link>
+  );
+}
+
+function Tabs() {
+  const tabs = [
+    { label: "Home", href: "/" },
+    { label: "About Us", href: "/about-us" },
+    { label: "Services", href: "/services" },
+    { label: "Careers", href: "/careers" },
+    { label: "Contact Us", href: "/contact-us" },
+  ];
+
+  return (
+    <div className="flex justify-end items-center">
+      <div
+        className={`${inter.variable} flex-start flex flex-row items-end justify-start gap-10 align-middle font-sans`}
       >
-        About Us
-      </Link>
-      <Link
-        className="whitespace-nowrap"
-        aria-label="By clicking you will be taken to Services"
-        href="/services"
-      >
-        Services
-      </Link>
-      <Link
-        className="whitespace-nowrap"
-        aria-label="By clicking you will be taken to Careers"
-        href="/careers"
-      >
-        Careers
-      </Link>
-      <Link
-        className="whitespace-nowrap"
-        aria-label="By clicking you will be taken to Contact Us"
-        href="/contact-us"
-      >
-        Contact Us
-      </Link>
+        {tabs.map((tab) => (
+          <Tab key={tab.href} label={tab.label} href={tab.href} />
+        ))}
+      </div>
     </div>
   );
 }
@@ -92,14 +105,13 @@ function AboutPageInner() {
 
 export default function Header() {
   return (
-    <header className="container mx-auto w-full max-w-[96rem] px-2 sticky top-0 z-40 border-b-2 border-grey-200">
-      <div className="grid grid-cols-3 content-evenly gap-4 px-2 pt-2 pb-6 backdrop-blur-lg xs:py-4 ">
+    <header className="sticky top-0 z-50 w-full bg-white shadow-sm">
+      <div className="flex justify-between items-center w-full max-w-[86em] px-4 py-8 mx-auto">
+        <Logo />
         <Tabs />
-        <div className="font-helvetica flex flex-col items-center justify-center gap-1 text-2xl font-semibold tn:flex-row xs:gap-2">
-          <Image src={medworkLogo} alt="Medwork Logo" width={36} />
-        </div>
-        <AboutPageInner />
       </div>
     </header>
   );
 }
+
+

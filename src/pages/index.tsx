@@ -2,10 +2,19 @@ import CompanyInfo from "@/abilities/companyInfo";
 import Services from "@/abilities/services";
 import CategoryTitle from "@/components/categoryTitle";
 import Head from "next/head";
+import Carousel from "../components/Carousel";
+import Image from "next/image";
+
+const images = [
+  "https://placehold.co/480x300?font=roboto&text=Slide+1",
+  "https://placehold.co/480x300?font=roboto&text=Slide+2",
+  "https://placehold.co/480x300?font=roboto&text=Slide+3",
+  "https://placehold.co/480x300?font=roboto&text=Slide+4",
+];
 
 export default function Home() {
   return (
-    <div className="container relative mx-auto w-full max-w-7xl px-2 pb-2 xs:px-4 xs:pb-4 md:px-8 md:pb-8">
+    <div className="container relative mx-auto w-full px-2 pb-2 xs:px-4 xs:pb-4 md:px-8 md:pb-8">
       <Head>
         <title>Medwork</title>
         <meta name="title" content="Medwork" />
@@ -31,20 +40,26 @@ export default function Home() {
           content="https://avatars.githubusercontent.com/u/23459466?v=4"
         />
       </Head>
-
-      <main className="flex flex-col justify-center gap-4 place-self-center backdrop-blur-3xl">
-        <div>
-          <div>
-            <CompanyInfo />
-            <div className="sticky inset-y-0 left-0 top-[4.4rem] z-50 mt-12 mb-2 text-center xs:top-10 xs:text-left">
-              <CategoryTitle title={"Services"} />
-            </div>
-            <div>
-              <Services />
-            </div>
-          </div>
-        </div>
-      </main>
-    </div>
+      <main className="flex flex-col justify-center gap-4 place-self-center">
+        <Carousel loop>
+          {images.map((src, i) => {
+            return (
+              // 👇 style each individual slide.
+              // relative - needed since we use the fill prop from next/image component
+              // h-64 - arbitrary height
+              // flex[0_0_100%]
+              //   - shorthand for flex-grow:0; flex-shrink:0; flex-basis:100%
+              //   - we want this slide to not be able to grow or shrink and take up 100% width of the viewport.
+              <div className="relative h-[734px] flex-[0_0_100%]" key={i}>
+                <Image src={src} fill className="object-cover" alt="alt" />
+              </div>
+            );
+          })}
+        </Carousel>
+        <CompanyInfo />
+        <CategoryTitle title={"Services"} />
+        <Services />
+      </main >
+    </div >
   );
 }
