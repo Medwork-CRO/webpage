@@ -4,9 +4,9 @@ import { Head, Html, Main, NextScript } from "next/document";
 
 export default function Layout() {
   return (
-    <Html className="bg-white" lang="en">
+    <Html className="bg-gray-100" lang="en">
       <Head />
-      <body className="bg-white">
+      <body>
         <Header />
         <Main />
         <Footer />

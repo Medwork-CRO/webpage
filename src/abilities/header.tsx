@@ -1,10 +1,8 @@
-import medworkLogo from "@assets/medwork-logo.png";
+import { Inter } from "@next/font/google";
 import { FaLinkedin } from "@react-icons/all-files/fa/FaLinkedin";
 import { MdEmail } from "@react-icons/all-files/md/MdEmail";
 import { MdLocationOn } from "@react-icons/all-files/md/MdLocationOn";
-import Image from "next/image";
 import Link from "next/link";
-import { Inter } from "@next/font/google";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -15,24 +13,8 @@ const mail = "mailto:" + "iantsiakkas@gmail.com";
 const address = "http://maps.google.com/?q=" + "Greece, Athens - 16452";
 const linkedin = "https://www.linkedin.com/in/" + "company/medwork";
 
+import Logo from "@/components/Logo";
 import { useState } from "react";
-
-function Logo() {
-  return (
-    <Link
-      className="flex items-center text-2xl font-semibold gap-2"
-      aria-label="By clicking you will be taken to Home"
-      href="/"
-    >
-      <div><Image src={medworkLogo} alt="Medwork Logo" width={46} /></div>
-      <div
-        className={`${inter.variable} font-sans text-3xl`}
-      >
-        Medwork
-      </div>
-    </Link >
-  );
-}
 
 function Tab({ label, href }: { label: string, href: string }) {
   const [isActive, setIsActive] = useState(false);

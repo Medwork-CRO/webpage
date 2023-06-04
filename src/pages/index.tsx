@@ -2,8 +2,8 @@ import CompanyInfo from "@/abilities/companyInfo";
 import Services from "@/abilities/services";
 import CategoryTitle from "@/components/categoryTitle";
 import Head from "next/head";
-import Carousel from "../components/Carousel";
 import Image from "next/image";
+import Carousel from "../components/Carousel";
 
 const images = [
   "https://placehold.co/480x300?font=roboto&text=Slide+1",
@@ -23,7 +23,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
 
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://itsiakkas.com/" />
+        <meta property="og:url" content="https://medwork.gr/" />
         <meta property="og:title" content="Medwork" />
         <meta property="og:description" content="Medwork Website" />
         <meta
@@ -32,7 +32,7 @@ export default function Home() {
         />
 
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://itsiakkas.com/" />
+        <meta property="twitter:url" content="https://medwork.gr/" />
         <meta property="twitter:title" content="Medwork" />
         <meta property="twitter:description" content="Medwork Website" />
         <meta
@@ -57,7 +57,7 @@ export default function Home() {
           })}
         </Carousel>
         <CompanyInfo />
-        <CategoryTitle title={"Services"} />
+        <CategoryTitle title={"CORE SERVICES"} />
         <Services />
       </main >
     </div >
