@@ -34,9 +34,9 @@ function Tab({ label, href }: { label: string, href: string }) {
 
 function Tabs() {
   const tabs = [
-    { label: "Home", href: "/" },
     { label: "About Us", href: "/about-us" },
     { label: "Services", href: "/services" },
+    { label: "Compliance", href: "/compliance" },
     { label: "Careers", href: "/careers" },
     { label: "Contact Us", href: "/contact-us" },
   ];

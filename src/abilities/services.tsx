@@ -6,11 +6,6 @@ import qualityManagement from "@assets/services/qualityManagement.jpg";
 import { StaticImageData } from "next/image";
 import "react-multi-carousel/lib/styles.css";
 
-interface ImageData {
-  imageData: StaticImageData;
-  imageTitle: string;
-}
-
 export default function Services() {
   interface ImageData {
     imageData: StaticImageData;
