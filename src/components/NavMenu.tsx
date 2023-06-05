@@ -23,7 +23,7 @@ function HorizontalNav({ label, href, subCategories }: NavProp) {
     return (
         <div className="relative">
             <Link
-                className={`peer lg:px-8 py-4 text-sm text-gray-500 hover:text-cyan-500 flex items-center`}
+                className={`peer py-4 text-sm text-gray-500 hover:text-cyan-500 flex items-center`}
                 aria-label={`By clicking you will be taken to ${label}`}
                 key={href}
                 href={href}
@@ -33,7 +33,7 @@ function HorizontalNav({ label, href, subCategories }: NavProp) {
                 </span>
             </Link>
             {hasSubCategories && (
-                <div className="hidden peer-hover:flex hover:flex w-[200px] flex-col bg-white drop-shadow-lg absolute z-10 shadow-md border-t-2 border-cyan-500 right-0">
+                <div className="absolute z-10 hidden peer-hover:flex hover:flex w-[200px] flex-col bg-white drop-shadow-lg shadow-md border-t-2 border-cyan-500">
                     {subCategories.map((subCategory) => (
                         <Link
                             className="px-5 py-3 text-sm hover:bg-gray-200"

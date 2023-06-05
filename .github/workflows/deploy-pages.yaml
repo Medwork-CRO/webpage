@@ -1,24 +1,22 @@
-name: Node.js CI
+name: Build and Deploy
 
 on:
   push:
-    branches: [ main ]
-
+    branches:
+      - main
 jobs:
-  build:
-
+  build-and-deploy:
     runs-on: ubuntu-latest
 
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+
     steps:
-      # https://github.com/actions/checkout
       - uses: actions/checkout@v3
-        
-      # a standard step for GitHub actions on Node
-      # https://github.com/actions/setup-node
+
       - uses: actions/setup-node@v3
         with:
-          # update the Node version to meet your needs
-          node-version: 16
+          node-version: 18
           cache: npm
 
       - name: Build
@@ -26,11 +24,11 @@ jobs:
           npm ci
           npm run build
           npm run export
-          touch out/.nojekyll
 
       - name: Deploy
-        # https://github.com/JamesIves/github-pages-deploy-action
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
           folder: out
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
