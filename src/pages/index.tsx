@@ -1,10 +1,10 @@
 
 import RoundedButton from "@/components/RoundedButton";
-import Carousel from "@/components/carousel";
-import CategoryTitle from "@/components/categoryTitle";
-import Footer from "@/components/footer";
-import Header from "@/components/header";
-import Services from "@/components/services";
+import Carousel from "@/components/Carousel";
+import CategoryTitle from "@/components/CategoryTitle";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+import Services from "@/components/Services";
 import Head from "next/head";
 import Image, { StaticImageData } from "next/image";
 import img1 from "../../public/assets/img/img1.jpg";
@@ -17,7 +17,7 @@ const images: StaticImageData[] = [
   img3,
 ];
 
-function ImageShowCase({ image, key }: { image: StaticImageData, key: string }) {
+function ImageShowCase({ image, id }: { image: StaticImageData, id: string }) {
   return (
     // 👇 style each individual slide.
     // relative - needed since we use the fill prop from next/image component
@@ -25,7 +25,7 @@ function ImageShowCase({ image, key }: { image: StaticImageData, key: string }) 
     // flex[0_0_100%]
     //   - shorthand for flex-grow:0; flex-shrink:0; flex-basis:100%
     //   - we want this slide to not be able to grow or shrink and take up 100% width of the viewport.
-    <div className="relative h-[615px] flex-[0_0_100%]" key={key}>
+    <div className="relative h-[615px] flex-[0_0_100%]" key={id}>
       <Image src={image} fill className="saturate-150" alt="alt" />
       <div className="absolute z-10 inset-0 bg-cyan-800 opacity-70"></div>
 

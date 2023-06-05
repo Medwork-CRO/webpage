@@ -4,7 +4,7 @@ import pharmacovigilance from "@assets/services/pharmacovigilance.jpg";
 import qualityManagement from "@assets/services/qualityManagement.jpg";
 import { StaticImageData } from "next/image";
 import "react-multi-carousel/lib/styles.css";
-import Card from "./card";
+import Card from "./Card";
 
 function Services() {
   interface ImageData {
