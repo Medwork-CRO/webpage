@@ -25,11 +25,12 @@ function ImageShowCase({ image, key }: { image: StaticImageData, key: string }) 
     // flex[0_0_100%]
     //   - shorthand for flex-grow:0; flex-shrink:0; flex-basis:100%
     //   - we want this slide to not be able to grow or shrink and take up 100% width of the viewport.
-    <div className="relative h-[615px] flex-[0_0_100%] flex justify-center items-center" key={key}>
+    <div className="relative h-[615px] flex-[0_0_100%]" key={key}>
       <Image src={image} fill className="saturate-150" alt="alt" />
       <div className="absolute z-10 inset-0 bg-cyan-800 opacity-70"></div>
 
-      <div className="absolute z-20 top-1 flex flex-col gap-8 mx-24 my-48 text-white text-center place-items-centers justify-around">
+      <div className="absolute z-20 top-1 flex flex-col gap-8 mx-24 my-48 text-white text-center items-center justify-center">
+        <CategoryTitle title={"CORE SERVICES"} />
         <span className="text-5xl md:text-2xl font-semibold">
           Medwork is a Contract Research Organization (CRO) operating in Southeast
           Europe, which since 2005 offers a wide range of specialized services to

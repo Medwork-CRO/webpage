@@ -1,4 +1,5 @@
 import classNames from "classnames";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 type Props = {
     canScrollPrev: boolean;
@@ -9,7 +10,7 @@ type Props = {
 
 export default function CarouselControls(props: Props) {
     return (
-        <div className="flex w-full justify-end gap-2 ">
+        <div className="flex w-full justify-between gap-2">
             <button
                 onClick={() => {
                     if (props.canScrollPrev) {
@@ -18,12 +19,11 @@ export default function CarouselControls(props: Props) {
                 }}
                 disabled={!props.canScrollPrev}
                 className={classNames({
-                    "px-4 py-2 text-white rounded-md": true,
-                    "bg-indigo-200": !props.canScrollPrev,
-                    "bg-indigo-400": props.canScrollPrev,
+                    "w-10 h-10 ml-4 text-white rounded-full flex items-center justify-center": true,
+                    "bg-black bg-opacity-40": true,
                 })}
             >
-                Prev
+                <FaChevronLeft color="white" />
             </button>
             <button
                 onClick={() => {
@@ -33,12 +33,11 @@ export default function CarouselControls(props: Props) {
                 }}
                 disabled={!props.canScrollNext}
                 className={classNames({
-                    "px-4 py-2 text-white rounded-md": true,
-                    "bg-indigo-200": !props.canScrollNext,
-                    "bg-indigo-400": props.canScrollNext,
+                    "w-10 h-10 mr-4 text-white rounded-full flex items-center justify-center": true,
+                    "bg-black bg-opacity-40": true,
                 })}
             >
-                Next
+                <FaChevronRight color="white" />
             </button>
         </div>
     );
