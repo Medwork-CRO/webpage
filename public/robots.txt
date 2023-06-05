@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://itsiakkas.com
+Host: https://www.medwork.gr
 
 # Sitemaps
-Sitemap: https://itsiakkas.com/sitemap.xml
+Sitemap: https://www.medwork.gr/sitemap.xml
