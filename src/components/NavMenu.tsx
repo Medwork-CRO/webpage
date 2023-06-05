@@ -33,7 +33,7 @@ function HorizontalNav({ label, href, subCategories }: NavProp) {
                 </span>
             </Link>
             {hasSubCategories && (
-                <div className="absolute z-10 hidden peer-hover:flex hover:flex w-[200px] flex-col bg-white drop-shadow-lg shadow-md border-t-2 border-cyan-500">
+                <div className="absolute z-10 hidden peer-hover:flex hover:flex w-[200px] flex-col bg-white drop-shadow-lg shadow-md border-t-2 border-cyan-500 right-0">
                     {subCategories.map((subCategory) => (
                         <Link
                             className="px-5 py-3 text-sm hover:bg-gray-200"

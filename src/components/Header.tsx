@@ -63,7 +63,7 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className={`${inter.variable} font-sans sticky top-0 z-50 bg-white shadow-sm w-full`}>
+    <header className={`${inter.variable} font-sans sticky top-0 z-50 w-full bg-white shadow-sm`}>
       <div className="max-w-[86em] mx-auto px-4 py-8 flex justify-between items-center">
         <Logo />
         <button className="md:hidden block text-xl" onClick={() => setIsOpen(!isOpen)}>
