@@ -59,7 +59,7 @@ const navMenu: NavProp[] = [
   },
 ];
 
-export default function CustomHeader() {
+export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (

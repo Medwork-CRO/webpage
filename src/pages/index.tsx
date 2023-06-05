@@ -1,12 +1,10 @@
-import CompanyInfo from "@/components/companyInfo";
-import Services from "@/components/services";
 import CategoryTitle from "@/components/CategoryTitle";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 import Head from "next/head";
 import Image from "next/image";
 import Carousel from "../components/Carousel";
-import { FaAngleDown } from "@react-icons/all-files/fa/FaAngleDown";
-import CustomFooter from "@/components/Footer";
-import CustomHeader from "@/components/Header";
+import Services from "@/components/services";
 
 const images = [
   "https://placehold.co/480x300?font=roboto&text=Slide+1",
@@ -43,7 +41,7 @@ export default function Home() {
           content="https://avatars.githubusercontent.com/u/23459466?v=4"
         />
       </Head>
-      <CustomHeader />
+      <Header />
       <main className="flex flex-col justify-center gap-4 place-self-center">
         <Carousel loop>
           {images.map((src, i) => {
@@ -79,7 +77,7 @@ export default function Home() {
         <CategoryTitle title={"CORE SERVICES"} />
         <Services />
       </main >
-      <CustomFooter />
+      <Footer />
     </div >
   );
 }

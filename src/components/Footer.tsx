@@ -73,11 +73,11 @@ function CompanyFooter() {
   );
 }
 
-export default function CustomFooter() {
+export default function Footer() {
   return (
     <footer className={`${inter.variable} font-sans flex justify-center p-6 xs:p-4 w-full bg-gradient-to-l from-cyan-600 to-cyan-900`}>
       <div className="flex flex-col items-start w-full max-w-[86em]">
-        <div className="flex flex-col xs:flex-row justify-around py-32 gap-8">
+        <div className="flex flex-col xs:flex-row py-32">
           <div className="flex flex-col gap-8">
             <Logo color="text-white" />
             <span className={"whitespace-pre-line text-xl text-left text-cyan-400 max-w-sm"}>
