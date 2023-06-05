@@ -8,14 +8,14 @@ type CardProps = {
     readMoreLink: string;
 }
 
-export default function Card({
+function Card({
     imageData,
     imageTitle,
     imageDescription,
     readMoreLink,
 }: CardProps) {
     return (
-        <div className="flex flex-col justify-between h-[32rem] w-[24rem] rounded-xl bg-white p-6 shadow-sm">
+        <div className="flex flex-col justify-between h-[32rem] w-[24rem] bg-[#eae4dd] shadow-xs p-6">
             <div className="flex flex-col justify-between gap-4">
                 <Image
                     className="h-24 rounded-xl object-none"
@@ -29,10 +29,12 @@ export default function Card({
                     {imageDescription}
                 </p>
             </div>
-            <RoundedButton label="READ MORE" href={readMoreLink} />
+            <RoundedButton label="READ MORE" href={readMoreLink} color="orange"/>
         </div>
     );
 };
+
+export default Card;
 
 /* <div className="relative">
 <Image

@@ -92,7 +92,7 @@ export default function Footer() {
               <span>{mail}</span>
               <span>{address}</span>
             </div>
-            <RoundedButton label="GET IN TOUCH" href="" />
+            <RoundedButton label="GET IN TOUCH" href="" color="orange" />
             <CompanyInfo />
           </div>
         </div>

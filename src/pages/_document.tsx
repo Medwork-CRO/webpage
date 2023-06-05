@@ -2,7 +2,7 @@ import { Head, Html, Main, NextScript } from "next/document";
 
 export default function Layout() {
   return (
-    <Html className="bg-gray-100" lang="en">
+    <Html lang="en">
       <Head />
       <body>
         <Main />
