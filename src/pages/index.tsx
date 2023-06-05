@@ -79,7 +79,7 @@ function Home() {
       <Header />
       <main className="flex flex-col justify-center gap-4 place-self-center">
         <Carousel loop>
-          {images.map((image, i) => <ImageShowCase image={image} key={i.toString()} />)}
+          {images.map((image, i) => <ImageShowCase image={image} id={i.toString()} />)}
         </Carousel>
         <div className={`flex flex-col gap-8 whitespace-pre-line px-24 py-8 text-xl text-center text-gray-500`}>
           <p className="font-semibold">
