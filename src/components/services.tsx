@@ -1,10 +1,10 @@
-import Card from "@/components/Card";
 import cosmeticovigilance from "@assets/services/cosmeticovigilance.jpg";
 import materiovigilance from "@assets/services/materiovigilance.jpg";
 import pharmacovigilance from "@assets/services/pharmacovigilance.jpg";
 import qualityManagement from "@assets/services/qualityManagement.jpg";
 import { StaticImageData } from "next/image";
 import "react-multi-carousel/lib/styles.css";
+import Card from "./card";
 
 export default function Services() {
   interface ImageData {

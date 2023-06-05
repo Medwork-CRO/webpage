@@ -1,4 +1,4 @@
-import Logo from "@/components/Logo";
+import Logo from "@/components/logo";
 import RoundedButton from "@/components/RoundedButton";
 import { Inter } from "@next/font/google";
 import { FaLinkedin } from "@react-icons/all-files/fa/FaLinkedin";

@@ -1,9 +1,9 @@
-import Logo from "@/components/Logo";
-import NavHamburger, { NavProp } from "@/components/NavHamburger";
-import NavMenu from "@/components/NavMenu";
+import Logo from "@/components/logo";
 import { Inter } from "@next/font/google";
 import { FaBars } from "@react-icons/all-files/fa/FaBars";
 import { useState } from "react";
+import NavHamburger, { NavProp } from "./navHamburger";
+import NavMenu from "./navMenu";
 
 const inter = Inter({
   subsets: ["latin"],

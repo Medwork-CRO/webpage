@@ -1,12 +1,5 @@
-import { Inter } from "@next/font/google";
 import Image, { StaticImageData } from "next/image";
-import Link from "next/link";
 import RoundedButton from "./RoundedButton";
-
-const inter = Inter({
-    subsets: ["latin"],
-    variable: "--font-inter",
-});
 
 type CardProps = {
     imageData: StaticImageData;
@@ -36,7 +29,7 @@ export default function Card({
                     {imageDescription}
                 </p>
             </div>
-            <RoundedButton label="READ MORE" href="" />
+            <RoundedButton label="READ MORE" href={readMoreLink} />
         </div>
     );
 };

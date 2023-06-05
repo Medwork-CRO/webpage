@@ -1,10 +1,11 @@
-// import CategoryTitle from "@/components/CategoryTitle";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-import Services from "@/components/Services";
+
+import CategoryTitle from "@/components/categoryTitle";
+import Footer from "@/components/footer";
+import Header from "@/components/header";
+import Services from "@/components/services";
+import Carousel from "@/components/carousel";
 import Head from "next/head";
 import Image from "next/image";
-import Carousel from "../components/Carousel";
 
 const images = [
   "https://placehold.co/480x300?font=roboto&text=Slide+1",
@@ -74,13 +75,7 @@ export default function Home() {
           handled with the quality and care that results in compliant outcomes and patient-focused results.
           From early phase studies through Phase III clinical trials, we provide a range of services to support your research needs.
         </p>
-        <div className="flex items-center justify-center mb-8">
-          <span className="text-3xl text-cyan-400">
-            {/* &#8226;  */}
-            CORE SERVICES
-          </span>
-        </div>
-        {/* <CategoryTitle title={"CORE SERVICES"} /> */}
+        <CategoryTitle title={"CORE SERVICES"} />
         <Services />
       </main >
       <Footer />
