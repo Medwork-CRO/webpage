@@ -3,7 +3,7 @@ const isProd = process.env.NODE_ENV === "production";
 
 const nextConfig = {
   reactStrictMode: true,
-  assetPrefix: isProd ? "/keybraker.github.io/" : "",
+  assetPrefix: isProd ? "/medwork.gr/" : "",
   images: {
     unoptimized: true,
   },

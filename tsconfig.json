@@ -23,6 +23,9 @@
       "@abilities/*": [
         "./abilities/*"
       ],
+      "@components/*": [
+        "./components/*"
+      ],
       "@assets/*": [
         "./public/assets/*"
       ],
