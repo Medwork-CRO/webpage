@@ -17,7 +17,7 @@ const images: StaticImageData[] = [
   img3,
 ];
 
-function ImageShowCase({ image, id }: { image: StaticImageData, id: string }) {
+function ImageShowCase({ image, id }: { image: StaticImageData, id: number }) {
   return (
     // 👇 style each individual slide.
     // relative - needed since we use the fill prop from next/image component
@@ -46,7 +46,6 @@ function ImageShowCase({ image, id }: { image: StaticImageData, id: string }) {
     </div>
   );
 }
-
 
 function Home() {
   return (
@@ -79,7 +78,7 @@ function Home() {
       <Header />
       <main className="flex flex-col justify-center gap-4 place-self-center">
         <Carousel loop>
-          {images.map((image, i) => <ImageShowCase image={image} id={i.toString()} />)}
+          {images.map((image, i) => <ImageShowCase image={image} id={i} />)}
         </Carousel>
         <div className={`flex flex-col gap-8 whitespace-pre-line px-24 py-8 text-xl text-center text-gray-500`}>
           <p className="font-semibold">
