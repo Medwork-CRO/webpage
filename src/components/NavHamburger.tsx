@@ -48,7 +48,7 @@ function VerticalNav({ label, href, subCategories }: NavProp) {
     );
 }
 
-export default function NavHamburger(navHamburger: NavHamburgerProp & { isOpen: boolean }) {
+function NavHamburger(navHamburger: NavHamburgerProp & { isOpen: boolean }) {
     return (
         <div className={`mx-6 ${navHamburger.isOpen ? 'block' : 'hidden'}`}>
             {navHamburger.nav.map((props) => (
@@ -57,6 +57,8 @@ export default function NavHamburger(navHamburger: NavHamburgerProp & { isOpen: 
         </div>
     );
 }
+
+export default NavHamburger;
 
 // export default function NavHamburger(navHamburger: NavHamburgerProp) {
 //     return (

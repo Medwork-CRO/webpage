@@ -5,7 +5,7 @@ type CompanyInfoProps = {
   align?: "center" | "left";
 }
 
-export default function CompanyInfo({ align = "center" }: CompanyInfoProps) {
+function CompanyInfo({ align = "center" }: CompanyInfoProps) {
   return (
     <section className="">
       <p className={`whitespace-pre-line p-8 text-xl font-bold text-${align}`}>
@@ -16,3 +16,5 @@ export default function CompanyInfo({ align = "center" }: CompanyInfoProps) {
     </section>
   );
 }
+
+export default CompanyInfo;

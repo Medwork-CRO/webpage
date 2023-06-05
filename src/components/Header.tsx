@@ -59,7 +59,7 @@ const navMenu: NavProp[] = [
   },
 ];
 
-export default function Header() {
+function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -79,3 +79,5 @@ export default function Header() {
     </header>
   );
 }
+
+export default Header;

@@ -12,7 +12,7 @@ const inter = Inter({
 
 type Props = PropsWithChildren & EmblaOptionsType & { color?: "text-white" | "text-black" | "text-cyan-400" };
 
-export default function Logo({ children, color = "text-black", ...options }: Props) {
+function Logo({ children, color = "text-black", ...options }: Props) {
     return (
         <Link
             className="flex items-center gap-4"
@@ -26,3 +26,5 @@ export default function Logo({ children, color = "text-black", ...options }: Pro
         </Link >
     );
 };
+
+export default Logo;

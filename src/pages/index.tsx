@@ -48,7 +48,7 @@ function ImageShowCase({ image, key }: { image: StaticImageData, key: string }) 
 }
 
 
-export default function Home() {
+function Home() {
   return (
     <div className="relative w-full bg-[#f6f1eb]">
       <Head>
@@ -106,3 +106,5 @@ export default function Home() {
     </div >
   );
 }
+
+export default Home;

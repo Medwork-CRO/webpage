@@ -6,7 +6,7 @@ type RoundedButtonProps = {
   color: 'gray' | 'orange';
 };
 
-export default function RoundedButton({ label, href, color }: RoundedButtonProps) {
+function RoundedButton({ label, href, color }: RoundedButtonProps) {
   return (
     <Link
       className={`
@@ -21,3 +21,5 @@ export default function RoundedButton({ label, href, color }: RoundedButtonProps
     </Link >
   );
 }
+
+export default RoundedButton;

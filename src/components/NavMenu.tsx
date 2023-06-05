@@ -50,7 +50,7 @@ function HorizontalNav({ label, href, subCategories }: NavProp) {
     );
 }
 
-export default function NavMenu(navMenu: NavMenuProp) {
+function NavMenu(navMenu: NavMenuProp) {
     return (
         <div className={`${inter.variable} flex-start flex flex-row place-items-end items-end justify-start gap-10 align-middle font-sans mx-8`}>
             {navMenu.nav.map((tab) => (
@@ -59,3 +59,5 @@ export default function NavMenu(navMenu: NavMenuProp) {
         </div>
     );
 }
+
+export default NavMenu;

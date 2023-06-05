@@ -6,7 +6,7 @@ import { StaticImageData } from "next/image";
 import "react-multi-carousel/lib/styles.css";
 import Card from "./card";
 
-export default function Services() {
+function Services() {
   interface ImageData {
     imageData: StaticImageData;
     imageTitle: string;
@@ -50,3 +50,5 @@ export default function Services() {
     </div>
   );
 }
+
+export default Services;

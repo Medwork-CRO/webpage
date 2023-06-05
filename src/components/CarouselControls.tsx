@@ -8,7 +8,7 @@ type Props = {
     onNext(): void;
 };
 
-export default function CarouselControls(props: Props) {
+function CarouselControls(props: Props) {
     return (
         <div className="flex w-full justify-between items-center gap-2">
             <button
@@ -42,3 +42,5 @@ export default function CarouselControls(props: Props) {
         </div>
     );
 };
+
+export default CarouselControls;

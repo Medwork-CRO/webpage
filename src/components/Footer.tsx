@@ -73,7 +73,7 @@ function CompanyFooter() {
   );
 }
 
-export default function Footer() {
+function Footer() {
   return (
     <footer className={`${inter.variable} font-sans w-full bg-gradient-to-l from-cyan-600 to-cyan-900`}>
       <div className="flex flex-col justify-between w-full max-w-[86em] mx-auto px-16">
@@ -101,3 +101,5 @@ export default function Footer() {
     </footer>
   );
 }
+
+export default Footer;

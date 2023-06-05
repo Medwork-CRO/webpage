@@ -1,6 +1,6 @@
 import { Head, Html, Main, NextScript } from "next/document";
 
-export default function Layout() {
+function Layout() {
   return (
     <Html lang="en">
       <Head />
@@ -11,3 +11,5 @@ export default function Layout() {
     </Html>
   );
 }
+
+export default Layout;
