@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import Head from "next/head";
 import Image from "next/image";
 import Carousel from "../components/Carousel";
-import Services from "@/components/services";
+import Services from "@/components/Services";
 
 const images = [
   "https://placehold.co/480x300?font=roboto&text=Slide+1",
