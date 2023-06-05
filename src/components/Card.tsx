@@ -1,6 +1,7 @@
 import { Inter } from "@next/font/google";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
+import RoundedButton from "./RoundedButton";
 
 const inter = Inter({
     subsets: ["latin"],
@@ -35,13 +36,7 @@ export default function Card({
                     {imageDescription}
                 </p>
             </div>
-            <Link
-                className="text-1xl md:text-sm text-gray-900"
-                aria-label="By clicking you will be taken to Home"
-                href={readMoreLink}
-            >
-                <button className="rounded-full bg-gray-500 hover:bg-gray-600 active:bg-gray-700 focus:outline-none focus:ring focus:ring-gray-300 px-3 py-2 text-white">READ MORE</button>
-            </Link >
+            <RoundedButton label="READ MORE" href="" />
         </div>
     );
 };

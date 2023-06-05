@@ -36,7 +36,7 @@ export default function Services() {
   ];
 
   return (
-    <section className="flex justify-center">
+    <div className="flex justify-center">
       <div className="grid grid-rows-2 md:grid-cols-2 max-w-5xl gap-16">
         {images.map((image) => (
           <Card
@@ -47,6 +47,6 @@ export default function Services() {
             readMoreLink={""} />
         ))}
       </div>
-    </section>
+    </div>
   );
 }

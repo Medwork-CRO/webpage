@@ -10,9 +10,9 @@ const inter = Inter({
     variable: "--font-inter",
 });
 
-type Props = PropsWithChildren & EmblaOptionsType;
+type Props = PropsWithChildren & EmblaOptionsType & { color?: "text-white" | "text-black" | "text-cyan-400" };
 
-const Logo = ({ children, ...options }: Props) => {
+export default function Logo({ children, color = "text-black", ...options }: Props) {
     return (
         <Link
             className="flex items-center gap-4"
@@ -20,11 +20,9 @@ const Logo = ({ children, ...options }: Props) => {
             href="/"
         >
             <Image src={medworkLogo} alt="Medwork Logo" width={46} />
-            <div className={`${inter.variable} font-sans text-3xl`}>
+            <div className={`${inter.variable} font-sans text-3xl ${color}`}>
                 Medwork
             </div>
         </Link >
     );
 };
-
-export default Logo;

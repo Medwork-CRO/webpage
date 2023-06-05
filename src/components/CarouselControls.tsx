@@ -6,6 +6,7 @@ type Props = {
     onPrev(): void;
     onNext(): void;
 };
+
 const CarouselControls = (props: Props) => {
     return (
         <div className="flex w-full justify-end gap-2 ">

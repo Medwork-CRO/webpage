@@ -1,9 +1,12 @@
-import CompanyInfo from "@/abilities/companyInfo";
-import Services from "@/abilities/services";
-import CategoryTitle from "@/components/categoryTitle";
+import CompanyInfo from "@/components/companyInfo";
+import Services from "@/components/services";
+import CategoryTitle from "@/components/CategoryTitle";
 import Head from "next/head";
 import Image from "next/image";
 import Carousel from "../components/Carousel";
+import { FaAngleDown } from "@react-icons/all-files/fa/FaAngleDown";
+import CustomFooter from "@/components/Footer";
+import CustomHeader from "@/components/Header";
 
 const images = [
   "https://placehold.co/480x300?font=roboto&text=Slide+1",
@@ -14,7 +17,7 @@ const images = [
 
 export default function Home() {
   return (
-    <div className="container relative mx-auto w-full px-2 pb-2 xs:px-4 xs:pb-4 md:px-8 md:pb-8">
+    <div className="relative w-full">
       <Head>
         <title>Medwork</title>
         <meta name="title" content="Medwork" />
@@ -40,6 +43,7 @@ export default function Home() {
           content="https://avatars.githubusercontent.com/u/23459466?v=4"
         />
       </Head>
+      <CustomHeader />
       <main className="flex flex-col justify-center gap-4 place-self-center">
         <Carousel loop>
           {images.map((src, i) => {
@@ -56,10 +60,26 @@ export default function Home() {
             );
           })}
         </Carousel>
-        <CompanyInfo />
+        <p className={`whitespace-pre-line p-2 text-xl font-semibold text-center`}>
+          Medwork is a Contract Research Organization (CRO) operating in Southeast
+          Europe, which since 2005 offers a wide range of specialized services to
+          the pharmaceutical and medical device industries
+        </p>
+        <p className={`whitespace-pre-line p-2 text-xl text-center`}>
+          A Contract Research Organization (CRO) is a company that provides support to the pharmaceutical, biotechnology,
+          and medical device industries in the form of research services outsourced on a contract basis. At our CRO,
+          we have experience and expertise with a diverse range of Therapeutic Areas and focus on innovative,
+          technology-enabled solutions that allow our clients to focus on their core strengths.
+        </p>
+        <p className={`whitespace-pre-line p-2 text-xl text-center`}>
+          Our experienced team delivers high-touch services and technology to ensure your trial is
+          handled with the quality and care that results in compliant outcomes and patient-focused results.
+          From early phase studies through Phase III clinical trials, we provide a range of services to support your research needs.
+        </p>
         <CategoryTitle title={"CORE SERVICES"} />
         <Services />
       </main >
+      <CustomFooter />
     </div >
   );
 }
