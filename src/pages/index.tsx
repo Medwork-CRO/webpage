@@ -17,7 +17,7 @@ const images: StaticImageData[] = [
   img3,
 ];
 
-function ImageShowCase({ image, id }: { image: StaticImageData, id: number }) {
+function ImageShowCase({ image }: { image: StaticImageData }) {
   return (
     // 👇 style each individual slide.
     // relative - needed since we use the fill prop from next/image component
@@ -25,7 +25,7 @@ function ImageShowCase({ image, id }: { image: StaticImageData, id: number }) {
     // flex[0_0_100%]
     //   - shorthand for flex-grow:0; flex-shrink:0; flex-basis:100%
     //   - we want this slide to not be able to grow or shrink and take up 100% width of the viewport.
-    <div className="relative h-[615px] flex-[0_0_100%]" key={id}>
+    <div className="relative h-[615px] flex-[0_0_100%]">
       <Image src={image} fill className="saturate-150" alt="alt" />
       <div className="absolute z-10 inset-0 bg-cyan-800 opacity-70"></div>
 
@@ -78,7 +78,10 @@ function Home() {
       <Header />
       <main className="flex flex-col justify-center gap-4 place-self-center">
         <Carousel loop>
-          {images.map((image, i) => <ImageShowCase image={image} id={i} />)}
+          {images.map((image, i) =>
+            <div key={i}>
+              <ImageShowCase image={image} />
+            </div>)}
         </Carousel>
         <div className={`flex flex-col gap-8 whitespace-pre-line px-24 py-8 text-xl text-center text-gray-500`}>
           <p className="font-semibold">
