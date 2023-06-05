@@ -29,18 +29,20 @@ const Carousel = ({ children, ...options }: Props) => {
     const canScrollPrev = !!emblaApi?.canScrollPrev();
 
     return (
-        <>
-            <div className="overflow-hidden" ref={emblaRef}>
-                <div className="flex">{children}</div>
+        <div className="overflow-hidden relative" ref={emblaRef}>
+            <div className="flex">{children}</div>
+            <div className="absolute bottom-[50%] left-0 right-0 z-40 flex justify-center">
+                <CarouselControls
+                    canScrollNext={canScrollNext}
+                    canScrollPrev={canScrollPrev}
+                    onNext={() => emblaApi?.scrollNext()}
+                    onPrev={() => emblaApi?.scrollPrev()}
+                />
+            </div>
+            <div className="absolute bottom-0 left-0 right-0 z-40 flex justify-center">
                 <Dots itemsLength={length} selectedIndex={selectedIndex} />
             </div>
-            <CarouselControls
-                canScrollNext={canScrollNext}
-                canScrollPrev={canScrollPrev}
-                onNext={() => emblaApi?.scrollNext()}
-                onPrev={() => emblaApi?.scrollPrev()}
-            />
-        </>
+        </div>
     );
 };
 export default Carousel;

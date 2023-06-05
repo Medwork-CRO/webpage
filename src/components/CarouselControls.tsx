@@ -10,7 +10,7 @@ type Props = {
 
 export default function CarouselControls(props: Props) {
     return (
-        <div className="flex w-full justify-between gap-2">
+        <div className="flex w-full justify-between items-center gap-2">
             <button
                 onClick={() => {
                     if (props.canScrollPrev) {
