@@ -1,9 +1,9 @@
 
-import RoundedButton from "@/components/RoundedButton";
 import Carousel from "@/components/Carousel";
-import CategoryTitle from "@/components/CategoryTitle";
+// import CategoryTitle from "@/components/CategoryTitle";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import RoundedButton from "@/components/RoundedButton";
 import Services from "@/components/Services";
 import Head from "next/head";
 import Image, { StaticImageData } from "next/image";
@@ -30,7 +30,7 @@ function ImageShowCase({ image }: { image: StaticImageData }) {
       <div className="absolute z-10 inset-0 bg-cyan-800 opacity-70"></div>
 
       <div className="absolute z-20 top-1 flex flex-col gap-8 mx-24 my-48 text-white text-center items-center justify-center">
-        <CategoryTitle title={"CORE SERVICES"} />
+        {/* <CategoryTitle title={"CORE SERVICES"} /> */}
         <span className="text-5xl md:text-2xl font-semibold">
           Medwork is a Contract Research Organization (CRO) operating in Southeast
           Europe, which since 2005 offers a wide range of specialized services to
@@ -101,7 +101,7 @@ function Home() {
             From early phase studies through Phase III clinical trials, we provide a range of services to support your research needs.
           </p>
         </div>
-        <CategoryTitle title={"CORE SERVICES"} />
+        {/* <CategoryTitle title={"CORE SERVICES"} /> */}
         <Services />
       </main >
       <Footer />
