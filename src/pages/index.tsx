@@ -1,10 +1,10 @@
 
-import Carousel from "../components/Carousel";
-import CategoryTitle from "../components/CategoryTitle";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
-import RoundedButton from "../components/RoundedButton";
-import Services from "../components/Services";
+import Carousel from "@/components/Carousel";
+import CategoryTitle from "@/components/CategoryTitle";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+import RoundedButton from "@/components/RoundedButton";
+import Services from "@/components/Services";
 import Head from "next/head";
 import Image, { StaticImageData } from "next/image";
 import img1 from "../../public/assets/img/img1.jpg";
