@@ -7,10 +7,6 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  webpack: (config, options) => {
-    config.resolve.plugins.push(new TsconfigPathsPlugin());
-    return config;
-  },
 };
 
 module.exports = nextConfig;

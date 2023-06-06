@@ -1,10 +1,10 @@
 import React from 'react';
 
-type CategoryTitleProps = {
+type TitleProps = {
   title: string;
 };
 
-function CategoryTitle({ title }: CategoryTitleProps) {
+function Title({ title }: TitleProps) {
   return (
     <div className="flex items-center justify-center">
       <span className="text-3xl text-cyan-400">
@@ -15,4 +15,4 @@ function CategoryTitle({ title }: CategoryTitleProps) {
   );
 }
 
-export default CategoryTitle;
+export default Title;

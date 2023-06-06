@@ -4,7 +4,7 @@ import img1 from "../../public/assets/img/img1.jpg";
 import img2 from "../../public/assets/img/img2.jpg";
 import img3 from "../../public/assets/img/img3.jpg";
 import Carousel from "../components/Carousel";
-import CategoryTitle from "../components/CategoryTitle";
+import Title from "../components/Title";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Services from "../components/Services";
@@ -72,7 +72,7 @@ function Home() {
             services to support your research needs.
           </p>
         </div>
-        <CategoryTitle title={"CORE SERVICES"} />
+        <Title title={"CORE SERVICES"} />
         <Services />
       </main>
       <Footer />

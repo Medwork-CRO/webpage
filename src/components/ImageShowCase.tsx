@@ -1,6 +1,6 @@
 import Image, { StaticImageData } from "next/image";
 import RoundedButton from "./RoundedButton";
-import CategoryTitle from "./CategoryTitle";
+import Title from "./Title";
 
 function ImageShowCase({ image }: { image: StaticImageData }) {
   return (
@@ -15,7 +15,7 @@ function ImageShowCase({ image }: { image: StaticImageData }) {
       <div className="absolute inset-0 z-10 bg-cyan-800 opacity-70"></div>
 
       <div className="absolute top-1 z-20 mx-24 my-48 flex flex-col items-center justify-center gap-8 text-center text-white">
-        <CategoryTitle title={"CORE SERVICES"} />
+        <Title title={"CORE SERVICES"} />
         <span className="text-5xl font-semibold md:text-2xl">
           Medwork is a Contract Research Organization (CRO) operating in
           Southeast Europe, which since 2005 offers a wide range of specialized
