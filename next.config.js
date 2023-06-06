@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
-const isProd = process.env.NODE_ENV === "production";
+// const isProd = process.env.NODE_ENV === "production";
 
 const nextConfig = {
   reactStrictMode: true,
-  assetPrefix: isProd ? "/medwork.gr/" : "itsiakkas.xyz",
+  assetPrefix: "itsiakkas.xyz",
   images: {
     unoptimized: true,
   },
