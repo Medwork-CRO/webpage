@@ -36,7 +36,7 @@ function Services() {
   ];
 
   return (
-    <div className="flex justify-center my-6">
+    <div className="flex justify-center my-12">
       <div className="grid grid-rows-2 md:grid-cols-2 max-w-5xl gap-16">
         {images.map((image) => (
           <Card

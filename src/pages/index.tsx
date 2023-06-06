@@ -1,51 +1,15 @@
-
+import ImageShowCase from "@/components/ImageShowCase";
+import Head from "next/head";
+import img1 from "../../public/assets/img/img1.jpg";
+import img2 from "../../public/assets/img/img2.jpg";
+import img3 from "../../public/assets/img/img3.jpg";
 import Carousel from "../components/Carousel";
 import CategoryTitle from "../components/CategoryTitle";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import RoundedButton from "../components/RoundedButton";
 import Services from "../components/Services";
-import Head from "next/head";
-import Image, { StaticImageData } from "next/image";
-import img1 from "../../public/assets/img/img1.jpg";
-import img2 from "../../public/assets/img/img2.jpg";
-import img3 from "../../public/assets/img/img3.jpg";
 
-const images: StaticImageData[] = [
-  img1,
-  img2,
-  img3,
-];
-
-function ImageShowCase({ image }: { image: StaticImageData }) {
-  return (
-    // 👇 style each individual slide.
-    // relative - needed since we use the fill prop from next/image component
-    // h-64 - arbitrary height
-    // flex[0_0_100%]
-    //   - shorthand for flex-grow:0; flex-shrink:0; flex-basis:100%
-    //   - we want this slide to not be able to grow or shrink and take up 100% width of the viewport.
-    <div className="relative h-[615px] flex-[0_0_100%]">
-      <Image src={image} fill className="saturate-150" alt="alt" />
-      <div className="absolute z-10 inset-0 bg-cyan-800 opacity-70"></div>
-
-      <div className="absolute z-20 top-1 flex flex-col gap-8 mx-24 my-48 text-white text-center items-center justify-center">
-        <CategoryTitle title={"CORE SERVICES"} />
-        <span className="text-5xl md:text-2xl font-semibold">
-          Medwork is a Contract Research Organization (CRO) operating in Southeast
-          Europe, which since 2005 offers a wide range of specialized services to
-          the pharmaceutical and medical device industries
-        </span>
-        <span className="text-md md:text-md">
-          A Contract Research Organization (CRO) is a company that provides support to the pharmaceutical, biotechnology, and medical device industries
-          in the form of research services outsourced on a contract basis. At our CRO, we have experience and expertise with a diverse range of
-          Therapeutic Areas and focus on innovative, technology-enabled solutions that allow our clients to focus on their core strengths.
-        </span>
-        <RoundedButton label={"MORE INFO"} href={""} color={'gray'} />
-      </div>
-    </div>
-  );
-}
+const images = [img1, img2, img3];
 
 function Home() {
   return (
@@ -78,33 +42,41 @@ function Home() {
       <Header />
       <main className="flex flex-col justify-center gap-4 place-self-center">
         <Carousel loop>
-          {images.map((image, i) =>
+          {images.map((image, i) => (
             <ImageShowCase image={image} key={i} />
-          )}
+          ))}
         </Carousel>
-        <div className={`flex flex-col gap-8 whitespace-pre-line px-24 py-8 text-xl text-center text-gray-500`}>
+        <div
+          className={`flex flex-col gap-8 whitespace-pre-line px-24 py-8 text-center text-xl text-gray-500`}
+        >
           <p className="font-semibold">
-            Medwork is a Contract Research Organization (CRO) operating in Southeast
-            Europe, which since 2005 offers a wide range of specialized services to
-            the pharmaceutical and medical device industries
+            Medwork is a Contract Research Organization (CRO) operating in
+            Southeast Europe, which since 2005 offers a wide range of
+            specialized services to the pharmaceutical and medical device
+            industries
           </p>
           <p>
-            A Contract Research Organization (CRO) is a company that provides support to the pharmaceutical, biotechnology,
-            and medical device industries in the form of research services outsourced on a contract basis. At our CRO,
-            we have experience and expertise with a diverse range of Therapeutic Areas and focus on innovative,
-            technology-enabled solutions that allow our clients to focus on their core strengths.
+            A Contract Research Organization (CRO) is a company that provides
+            support to the pharmaceutical, biotechnology, and medical device
+            industries in the form of research services outsourced on a contract
+            basis. At our CRO, we have experience and expertise with a diverse
+            range of Therapeutic Areas and focus on innovative,
+            technology-enabled solutions that allow our clients to focus on
+            their core strengths.
           </p>
           <p>
-            Our experienced team delivers high-touch services and technology to ensure your trial is
-            handled with the quality and care that results in compliant outcomes and patient-focused results.
-            From early phase studies through Phase III clinical trials, we provide a range of services to support your research needs.
+            Our experienced team delivers high-touch services and technology to
+            ensure your trial is handled with the quality and care that results
+            in compliant outcomes and patient-focused results. From early phase
+            studies through Phase III clinical trials, we provide a range of
+            services to support your research needs.
           </p>
         </div>
         <CategoryTitle title={"CORE SERVICES"} />
         <Services />
-      </main >
+      </main>
       <Footer />
-    </div >
+    </div>
   );
 }
 
