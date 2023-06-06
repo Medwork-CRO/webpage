@@ -7,7 +7,7 @@ import Carousel from "../components/Carousel";
 import Title from "../components/Title";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import Services from "../components/Services";
+import ProvidedServices from "../components/ProvidedServices";
 
 const images = [img1, img2, img3];
 
@@ -73,7 +73,7 @@ function Home() {
           </p>
         </div>
         <Title title={"CORE SERVICES"} />
-        <Services />
+        <ProvidedServices />
       </main>
       <Footer />
     </div>
