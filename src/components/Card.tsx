@@ -2,37 +2,39 @@ import Image, { StaticImageData } from "next/image";
 import RoundedButton from "./RoundedButton";
 
 type CardProps = {
-    imageData: StaticImageData;
-    imageTitle: string;
-    imageDescription: string;
-    readMoreLink: string;
-}
+  imageData: StaticImageData;
+  imageTitle: string;
+  imageDescription: string;
+  readMoreLink: string;
+};
 
 function Card({
-    imageData,
-    imageTitle,
-    imageDescription,
-    readMoreLink,
+  imageData,
+  imageTitle,
+  imageDescription,
+  readMoreLink,
 }: CardProps) {
-    return (
-        <div className="flex flex-col justify-between h-[32rem] w-[24rem] bg-[#eae4dd] shadow-xs p-6">
-            <div className="flex flex-col justify-between gap-4">
-                <Image
-                    className="h-24 rounded-xl object-none"
-                    src={imageData}
-                    alt={imageTitle}
-                />
-                <p className="text-5xl md:text-2xl text-gray-900">
-                    {imageTitle}
-                </p>
-                <p className="text-xl md:text-md text-gray-600">
-                    {imageDescription}
-                </p>
-            </div>
-            <RoundedButton label="READ MORE" href={readMoreLink} color="orange"/>
+  return (
+    <div className="flex h-[32rem] w-[24rem] transform flex-col justify-between rounded-2xl bg-[#eae4dd] p-6 shadow-md transition-all hover:scale-105">
+      <div className="flex flex-col justify-between gap-6">
+        <div className="h-24 overflow-hidden rounded-2xl">
+          <Image
+            className="h-full w-full transform object-cover transition-transform hover:scale-110"
+            src={imageData}
+            alt={imageTitle}
+          />
         </div>
-    );
-};
+        <h2 className="text-3xl font-semibold tracking-tight text-gray-900 md:text-2xl">
+          {imageTitle}
+        </h2>
+        <p className="text-lg leading-relaxed text-gray-700 md:text-base">
+          {imageDescription}
+        </p>
+      </div>
+      <RoundedButton label="READ MORE" href={readMoreLink} color="orange" />
+    </div>
+  );
+}
 
 export default Card;
 
