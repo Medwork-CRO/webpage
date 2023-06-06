@@ -3,7 +3,7 @@
 
 const nextConfig = {
   reactStrictMode: true,
-  assetPrefix: "itsiakkas.xyz",
+  // assetPrefix: "medwork.gr",
   images: {
     unoptimized: true,
   },

@@ -11,7 +11,7 @@
     "export": "next export"
   },
   "dependencies": {
-    "@next/font": "13.1.6",
+    "@next/font": "^13.1.6",
     "@react-hook/media-query": "^1.1.1",
     "@react-icons/all-files": "^4.1.0",
     "@types/node": "18.14.0",
@@ -32,9 +32,9 @@
   "devDependencies": {
     "autoprefixer": "^10.4.13",
     "next-sitemap": "^3.1.52",
-    "postcss": "^8.4.21",
+    "postcss": "^8.4.24",
     "prettier": "^2.8.4",
     "prettier-plugin-tailwindcss": "^0.2.3",
-    "tailwindcss": "^3.2.7"
+    "tailwindcss": "^3.3.2"
   }
 }
