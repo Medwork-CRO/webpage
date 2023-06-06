@@ -19,7 +19,7 @@ function Card({
       <div className="flex flex-col justify-between gap-6">
         <div className="h-24 overflow-hidden rounded-2xl">
           <Image
-            className="h-full w-full transform object-cover transition-transform hover:scale-110"
+            className="h-full w-full object-cover"
             src={imageData}
             alt={imageTitle}
           />

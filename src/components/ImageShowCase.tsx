@@ -2,7 +2,21 @@ import Image, { StaticImageData } from "next/image";
 import RoundedButton from "./RoundedButton";
 import Title from "./Title";
 
-function ImageShowCase({ image }: { image: StaticImageData }) {
+type ImageShowCaseProps = {
+  image: StaticImageData;
+  title: string;
+  description: string;
+  description2: string;
+  link: string;
+};
+
+function ImageShowCase({
+  image,
+  title,
+  description,
+  description2,
+  link,
+}: ImageShowCaseProps) {
   return (
     // 👇 style each individual slide.
     // relative - needed since we use the fill prop from next/image component
@@ -15,21 +29,12 @@ function ImageShowCase({ image }: { image: StaticImageData }) {
       <div className="absolute inset-0 z-10 bg-cyan-800 opacity-70"></div>
 
       <div className="absolute left-1/2 top-1/2 z-20 flex -translate-x-1/2 -translate-y-1/2 transform flex-col items-center justify-center gap-8 text-center">
-        <Title title={"CORE SERVICES"} />
+        <Title title={title} />
         <span className="text-5xl font-semibold md:text-2xl">
-          Medwork is a Contract Research Organization (CRO) operating in
-          Southeast Europe, which since 2005 offers a wide range of specialized
-          services to the pharmaceutical and medical device industries
+          {description}
         </span>
-        <span className="text-md md:text-md">
-          A Contract Research Organization (CRO) is a company that provides
-          support to the pharmaceutical, biotechnology, and medical device
-          industries in the form of research services outsourced on a contract
-          basis. At our CRO, we have experience and expertise with a diverse
-          range of Therapeutic Areas and focus on innovative, technology-enabled
-          solutions that allow our clients to focus on their core strengths.
-        </span>
-        <RoundedButton label={"MORE INFO"} href={""} color={"gray"} />
+        <span className="text-md md:text-md">{description2}</span>
+        <RoundedButton label={"MORE INFO"} href={link} color={"gray"} />
       </div>
     </div>
   );

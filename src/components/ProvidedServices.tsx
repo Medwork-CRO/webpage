@@ -17,25 +17,25 @@ const images: ImageData[] = [
     imageData: cosmeticovigilance,
     imageTitle: "COSMETICOVIGILANCE",
     imageDescription:
-      "Our cosmeticovigilance services ensure the safety and quality of cosmetic products.",
+      "CosmeticoVigilance is our comprehensive suite of services geared towards ensuring the safety, compliance, and quality of cosmetic products. We adhere to rigorous industry standards and global regulations.",
   },
   {
     imageData: materiovigilance,
     imageTitle: "MATERIOVIGILANCE",
     imageDescription:
-      "Our materiovigilance services monitor the safety and performance of medical devices.",
+      "Our MaterioVigilance services employ advanced monitoring techniques to safeguard the performance and safety of medical devices. We provide thorough post-market surveillance and regulatory support.",
   },
   {
     imageData: pharmacovigilance,
     imageTitle: "PHARMACOVIGILANCE",
     imageDescription:
-      "Our pharmacovigilance services ensure the safety and efficacy of pharmaceutical products.",
+      "PharmacoVigilance is our dedicated service ensuring the safety, efficacy, and risk/benefit balance of pharmaceutical products. We provide detailed drug safety and adverse event reporting services.",
   },
   {
     imageData: qualityManagement,
     imageTitle: "QUALITY MANAGEMENT",
     imageDescription:
-      "Our quality management services help organizations maintain high standards of quality and compliance.",
+      "Our Quality Management service is designed to help organizations maintain and exceed industry standards of quality and compliance. We provide comprehensive quality systems, audits, and continuous improvement strategies.",
   },
 ];
 
