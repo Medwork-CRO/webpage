@@ -14,7 +14,7 @@ function ImageShowCase({ image }: { image: StaticImageData }) {
       <Image src={image} fill className="saturate-150" alt="alt" />
       <div className="absolute inset-0 z-10 bg-cyan-800 opacity-70"></div>
 
-      <div className="absolute top-1 z-20 mx-24 my-48 flex flex-col items-center justify-center gap-8 text-center text-white">
+      <div className="absolute left-1/2 top-1/2 z-20 flex -translate-x-1/2 -translate-y-1/2 transform flex-col items-center justify-center gap-8 text-center">
         <Title title={"CORE SERVICES"} />
         <span className="text-5xl font-semibold md:text-2xl">
           Medwork is a Contract Research Organization (CRO) operating in
