@@ -5,7 +5,7 @@ import { FaLinkedin } from "@react-icons/all-files/fa/FaLinkedin";
 import { MdEmail } from "@react-icons/all-files/md/MdEmail";
 import { MdLocationOn } from "@react-icons/all-files/md/MdLocationOn";
 
-const mail = "contact@medwork.gr";
+const mail = "contact@itsiakkas.xyz";
 const address = "Greece, Chiou 5, Argyroupoli 164 52";
 const linkedin = "company/medwork";
 

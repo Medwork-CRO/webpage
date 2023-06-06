@@ -22,7 +22,7 @@ function Home() {
         <link rel="icon" href="/favicon.ico" />
 
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://medwork.gr/" />
+        <meta property="og:url" content="https://itsiakkas.xyz/" />
         <meta property="og:title" content="Medwork" />
         <meta property="og:description" content="Medwork Website" />
         <meta
@@ -31,7 +31,7 @@ function Home() {
         />
 
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://medwork.gr/" />
+        <meta property="twitter:url" content="https://itsiakkas.xyz/" />
         <meta property="twitter:title" content="Medwork" />
         <meta property="twitter:description" content="Medwork Website" />
         <meta
