@@ -45,21 +45,22 @@ const imageShowCases = [
 
 function Home() {
   return (
-      <div className="flex flex-col justify-center gap-4 place-self-center">
-        <Carousel loop>
-          {imageShowCases.map((imageShowCase, i) => (
-            <ImageShowCase
-              image={imageShowCase.image}
-              description={imageShowCase.description}
-              description2={imageShowCase.description2}
-              title={imageShowCase.title}
-              link={imageShowCase.link}
-              key={i}
-            />
-          ))}
-        </Carousel>
+    <div className="flex flex-col justify-center gap-4 place-self-center">
+      <Carousel loop>
+        {imageShowCases.map((imageShowCase, i) => (
+          <ImageShowCase
+            image={imageShowCase.image}
+            description={imageShowCase.description}
+            description2={imageShowCase.description2}
+            title={imageShowCase.title}
+            link={imageShowCase.link}
+            key={i}
+          />
+        ))}
+      </Carousel>
+      <div className="mx-auto mt-16 flex max-w-[86em] flex-col items-center justify-between">
         <div
-          className={`flex flex-col gap-8 whitespace-pre-line px-24 py-8 text-center text-xl text-gray-500`}
+          className={`flex flex-col gap-8 whitespace-pre-line text-center text-xl text-gray-500 mb-16`}
         >
           <p className="font-semibold">
             Medwork is a Contract Research Organization (CRO) operating in
@@ -87,6 +88,7 @@ function Home() {
         <Title title={"CORE SERVICES"} />
         <ProvidedServices />
       </div>
+    </div>
   );
 }
 

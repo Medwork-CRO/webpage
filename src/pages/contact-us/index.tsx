@@ -2,7 +2,7 @@ import Title from "@/components/Title";
 
 function OurTeam() {
   return (
-    <div className="flex flex-col gap-16 pt-16 text-black">
+    <div className="mx-auto mt-16 flex max-w-[86em] flex-col items-center  justify-between text-black">
       <Title title={"CONTACT US"} />
       <div className="flex">
         <div className="w-1/3">
@@ -12,8 +12,8 @@ function OurTeam() {
           brings a wealth of experience and a comprehensive portfolio of
           solutions, including clinical research support, life science
           consulting, R&D technology, pharmacovigilance, and IRB/IBC services.
-          We are committed to delivering optimal outcomes for our clients
-          trials and improving patient care.
+          We are committed to delivering optimal outcomes for our clients trials
+          and improving patient care.
         </div>
         <div className="w-2/3">
           <section>

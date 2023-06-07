@@ -31,9 +31,9 @@ const membersInfo: MemberInfo[] = [
 
 function OurTeam() {
   return (
-    <div className="flex flex-col justify-center gap-4 place-self-center">
+    <div className="mx-auto flex max-w-[86em] flex-col items-center justify-between mt-16">
       <div
-        className={`flex flex-col gap-8 whitespace-pre-line px-24 py-8 text-center text-xl text-gray-500`}
+        className={`flex flex-col gap-8 whitespace-pre-line text-center text-xl text-gray-500`}
       >
         <Title title={"OUR TEAM"} />
         <p className="font-semibold">
@@ -43,8 +43,8 @@ function OurTeam() {
           brings a wealth of experience and a comprehensive portfolio of
           solutions, including clinical research support, life science
           consulting, R&D technology, pharmacovigilance, and IRB/IBC services.
-          We are committed to delivering optimal outcomes for our clients
-          trials and improving patient care.
+          We are committed to delivering optimal outcomes for our clients trials
+          and improving patient care.
         </p>
         <p>
           With our end-to-end global clinical services and advanced technology
