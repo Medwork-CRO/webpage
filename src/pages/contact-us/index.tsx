@@ -1,4 +1,3 @@
-import MemberCard from "@/components/MemberCard";
 import Title from "@/components/Title";
 
 function OurTeam() {
@@ -13,7 +12,7 @@ function OurTeam() {
           brings a wealth of experience and a comprehensive portfolio of
           solutions, including clinical research support, life science
           consulting, R&D technology, pharmacovigilance, and IRB/IBC services.
-          We are committed to delivering optimal outcomes for our clients'
+          We are committed to delivering optimal outcomes for our clients
           trials and improving patient care.
         </div>
         <div className="w-2/3">
