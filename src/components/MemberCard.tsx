@@ -17,7 +17,7 @@ function MemberCard({
           backgroundImage: "url('https://i.ibb.co/FWggPq1/banner.png')",
         }}
       >
-        <div className="absolute -bottom-12 flex h-[136px] w-[136px] items-center justify-center rounded-full border-[4px] border-white bg-pink-400">
+        <div className="absolute -bottom-12 flex h-[136px] w-[136px] items-center justify-center rounded-full border-[4px]">
           {/* <img
             className="h-full w-full rounded-full"
             src="https://i.ibb.co/6YbS9ff/avatar11.png"
