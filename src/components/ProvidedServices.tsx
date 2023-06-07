@@ -41,7 +41,7 @@ const images: ImageData[] = [
 
 function ProvidedServices() {
   return (
-    <div className="my-12 flex justify-center">
+    <div className="flex justify-center">
       <div className="grid max-w-5xl grid-rows-2 gap-16 md:grid-cols-2">
         {images.map((image) => (
           <Card
