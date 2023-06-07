@@ -16,14 +16,14 @@ const navMenu: NavProp[] = [
     href: "/about-us",
     subCategories: [
       {
-        label: "Leadership",
-        href: "leadership",
+        label: "Our Team",
+        href: "/our-team",
       },
       {
         label: "Careers",
         href: "careers",
-      }
-    ]
+      },
+    ],
   },
   {
     label: "Services",
@@ -40,8 +40,8 @@ const navMenu: NavProp[] = [
       {
         label: "Quality Management",
         href: "quality-management",
-      }
-    ]
+      },
+    ],
   },
   {
     label: "Technology",
@@ -50,8 +50,8 @@ const navMenu: NavProp[] = [
       {
         label: "Compliance",
         href: "compliance",
-      }
-    ]
+      },
+    ],
   },
   {
     label: "Contact Us",
@@ -63,17 +63,22 @@ function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className={`${inter.variable} font-sans sticky top-0 z-50 w-full bg-[#f6f1eb] shadow-sm`}>
-      <div className="max-w-[86em] mx-auto px-4 py-8 flex justify-between items-center">
+    <header
+      className={`${inter.variable} sticky top-0 z-50 w-full bg-[#f6f1eb] font-sans shadow-sm`}
+    >
+      <div className="mx-auto flex max-w-[86em] items-center justify-between px-4 py-8">
         <Logo />
-        <button className="md:hidden block text-xl" onClick={() => setIsOpen(!isOpen)}>
-          <FaBars className="text-cyan-500 cursor-pointer mr-2" />
+        <button
+          className="block text-xl md:hidden"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          <FaBars className="mr-2 cursor-pointer text-cyan-500" />
         </button>
         <div className="hidden md:block">
           <NavMenu nav={navMenu} />
         </div>
       </div>
-      <div className="md:hidden block">
+      <div className="block md:hidden">
         <NavHamburger nav={navMenu} isOpen={isOpen} />
       </div>
     </header>

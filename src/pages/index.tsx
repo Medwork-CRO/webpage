@@ -1,13 +1,10 @@
+import Carousel from "@/components/Carousel";
 import ImageShowCase from "@/components/ImageShowCase";
-import Head from "next/head";
-import img1 from "../../public/assets/img/img1.jpg";
-import img2 from "../../public/assets/img/img2.jpg";
-import img3 from "../../public/assets/img/img3.jpg";
-import Carousel from "../components/Carousel";
-import Title from "../components/Title";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
-import ProvidedServices from "../components/ProvidedServices";
+import ProvidedServices from "@/components/ProvidedServices";
+import Title from "@/components/Title";
+import img1 from "@assets/img/img1.jpg";
+import img2 from "@assets/img/img2.jpg";
+import img3 from "@assets/img/img3.jpg";
 
 const imageShowCases = [
   {
@@ -48,34 +45,7 @@ const imageShowCases = [
 
 function Home() {
   return (
-    <div className="relative w-full bg-[#f6f1eb]">
-      <Head>
-        <title>Medwork</title>
-        <meta name="title" content="Medwork" />
-        <meta name="description" content="Medwork Website" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://itsiakkas.xyz/" />
-        <meta property="og:title" content="Medwork" />
-        <meta property="og:description" content="Medwork Website" />
-        <meta
-          property="og:image"
-          content="https://avatars.githubusercontent.com/u/23459466?v=4"
-        />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://itsiakkas.xyz/" />
-        <meta property="twitter:title" content="Medwork" />
-        <meta property="twitter:description" content="Medwork Website" />
-        <meta
-          property="twitter:image"
-          content="https://avatars.githubusercontent.com/u/23459466?v=4"
-        />
-      </Head>
-      <Header />
-      <main className="flex flex-col justify-center gap-4 place-self-center">
+      <div className="flex flex-col justify-center gap-4 place-self-center">
         <Carousel loop>
           {imageShowCases.map((imageShowCase, i) => (
             <ImageShowCase
@@ -116,9 +86,7 @@ function Home() {
         </div>
         <Title title={"CORE SERVICES"} />
         <ProvidedServices />
-      </main>
-      <Footer />
-    </div>
+      </div>
   );
 }
 
