@@ -47,17 +47,13 @@ function CompanyInfo() {
 
 function CompanyFooter() {
   return (
-    <div className="flex flex-col xs:flex-row justify-start gap-2 pb-8 text-sm">
+    <div className="flex flex-col justify-start gap-2 pb-8 text-sm xs:flex-row">
       <span className="text-cyan-400">
         © Copyright 2005 - {new Date().getFullYear()} Medwork -
       </span>
       <span className="flex gap-2">
-        <span className="text-white">
-          All Rights Reserved
-        </span>
-        <span className="text-cyan-400">
-          |
-        </span>
+        <span className="text-white">All Rights Reserved</span>
+        <span className="text-cyan-400">|</span>
         <span className="text-white">
           Made by{" "}
           <a
@@ -75,20 +71,48 @@ function CompanyFooter() {
 
 function Footer() {
   return (
-    <footer className={`${inter.variable} font-sans w-full bg-gradient-to-l from-cyan-600 to-cyan-900`}>
-      <div className="flex flex-col justify-between w-full max-w-[86em] mx-auto px-16">
-        <div className="flex flex-col md:flex-row py-32">
-          <div className="flex flex-col gap-8">
+    <footer
+      className={`${inter.variable} w-full bg-gradient-to-l from-cyan-600 to-cyan-900 font-sans`}
+    >
+      <div className="mx-auto flex w-full max-w-[86em] flex-col justify-between px-16">
+        <div className="flex flex-col justify-between py-32 md:flex-row gap-8">
+          <div className="flex flex-col gap-6">
             <Logo color="text-white" />
-            <span className={"whitespace-pre-line text-xl text-left text-cyan-400 max-w-sm"}>
-              Medwork is a Contract Research Organization (CRO) operating in Southeast
-              Europe, which since 2005 offers a wide range of specialized services to
-              the pharmaceutical and medical device industries
+            <span
+              className={
+                "max-w-sm whitespace-pre-line text-left text-xl text-cyan-400"
+              }
+            >
+              Medwork is a Contract Research Organization (CRO) operating in
+              Southeast Europe, which since 2005 offers a wide range of
+              specialized services to the pharmaceutical and medical device
+              industries
             </span>
           </div>
-          <div className="flex flex-col gap-8 text-left text-white min-w-96">
-            <span className="text-xl font-semibold text-white">CONTACT INFO</span>
-            <div className="flex flex-col gap-2 text-md text-cyan-400">
+
+          <div className="min-w-96 flex flex-col gap-6 text-left text-white">
+            <span className="text-xl font-semibold text-white">SERVICES</span>
+            <div className="text-md flex flex-col gap-2 text-cyan-400">
+              <span>Pharmacovigilance</span>
+              <span>Cosmetovigilance</span>
+              <span>Quality Management</span>
+              <span>Materiovigilance</span>
+            </div>
+          </div>
+
+          <div className="min-w-96 flex flex-col gap-6 text-left text-white">
+            <span className="text-xl font-semibold text-white">ABOUT US</span>
+            <div className="text-md flex flex-col gap-2 text-cyan-400">
+              <span>Our Team</span>
+              <span>Careers</span>
+            </div>
+          </div>
+
+          <div className="min-w-96 flex flex-col gap-6 text-left text-white">
+            <span className="text-xl font-semibold text-white">
+              CONTACT INFO
+            </span>
+            <div className="text-md flex flex-col gap-2 text-cyan-400">
               <span>{mail}</span>
               <span>{address}</span>
             </div>

@@ -41,6 +41,10 @@ const navMenu: NavProp[] = [
         label: "Quality Management",
         href: "quality-management",
       },
+      {
+        label: "Materiovigilance",
+        href: "materiovigilance",
+      },
     ],
   },
   {

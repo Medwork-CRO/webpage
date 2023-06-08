@@ -28,10 +28,10 @@ function ImageShowCase({
 
       <div className="absolute left-1/2 top-1/2 z-20 flex -translate-x-1/2 -translate-y-1/2 transform flex-col items-center justify-center gap-8 text-center">
         <Title title={title} />
-        <span className="text-sm font-semibold xs:text-5xl md:text-2xl">
+        <span className="text-sm font-semibold md:text-2xl xl:text-3xl">
           {description}
         </span>
-        <span className="xs:text-md text-xs">{description2}</span>
+        <span className="md:text-xl xl:text-2xl text-xs">{description2}</span>
         <RoundedButton label={"MORE INFO"} href={link} color={"gray"} />
       </div>
     </div>

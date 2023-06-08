@@ -59,7 +59,7 @@ function Home() {
         ))}
       </Carousel>
       <div className="mx-auto mt-16 flex max-w-[86em] flex-col items-center justify-between">
-        <div className="mb-16 flex flex-col gap-8 whitespace-pre-line px-8 text-center text-xl text-gray-500 xs:px-0">
+        <div className="mb-16 flex flex-col gap-8 whitespace-pre-line px-8 text-center text-xl text-gray-500 xs:px-24">
           <p className="font-semibold">
             Medwork is a Contract Research Organization (CRO) operating in
             Southeast Europe, which since 2005 offers a wide range of
@@ -84,8 +84,9 @@ function Home() {
           </p>
         </div>
         <Title title={"CORE SERVICES"} />
-        <div className="my-4"></div>
-        <ProvidedServices />
+        <div className="mt-8 mb-16">
+          <ProvidedServices />
+        </div>
       </div>
     </div>
   );

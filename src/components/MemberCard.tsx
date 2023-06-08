@@ -12,7 +12,7 @@ function MemberCard({
   return (
     <div className="flex flex-col w-[24rem] rounded-2xl bg-[#ece9e6] p-6 shadow-md">
       <div
-        className="relative mt-1 flex h-32 w-full justify-center rounded-xl bg-cover"
+        className="relative flex h-32 w-full justify-center rounded-xl bg-cover"
         style={{
           backgroundImage: "url('https://i.ibb.co/FWggPq1/banner.png')",
         }}

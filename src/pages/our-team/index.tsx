@@ -31,9 +31,9 @@ const membersInfo: MemberInfo[] = [
 
 function OurTeam() {
   return (
-    <div className="mx-auto flex max-w-[86em] flex-col items-center justify-between mt-16">
+    <div className="mx-auto mt-16 flex max-w-[86em] flex-col items-center justify-between">
       <div
-        className={`flex flex-col gap-8 whitespace-pre-line text-center text-xl text-gray-500`}
+        className={`flex flex-col gap-8 whitespace-pre-line px-8 text-center text-xl text-gray-500 xs:px-24`}
       >
         <Title title={"OUR TEAM"} />
         <p className="font-semibold">
@@ -59,19 +59,17 @@ function OurTeam() {
           ever-evolving pharmaceutical industry.
         </p>
       </div>
-      <div className="my-12 flex justify-center">
-        <div className="grid max-w-5xl grid-rows-2 gap-16 md:grid-cols-2">
-          {membersInfo.map((memberInfo, i) => (
-            <MemberCard
-              key={i}
-              image={memberInfo.image}
-              name={memberInfo.name}
-              title={memberInfo.title}
-              description={memberInfo.description}
-              linkedInTag={""}
-            />
-          ))}
-        </div>
+      <div className="my-12 flex flex-wrap max-w-5xl gap-16 justify-center">
+        {membersInfo.map((memberInfo, i) => (
+          <MemberCard
+            key={i}
+            image={memberInfo.image}
+            name={memberInfo.name}
+            title={memberInfo.title}
+            description={memberInfo.description}
+            linkedInTag={""}
+          />
+        ))}
       </div>
     </div>
   );
