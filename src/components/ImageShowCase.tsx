@@ -26,9 +26,9 @@ function ImageShowCase({
       />
       <div className="absolute inset-0 z-10 bg-cyan-800 opacity-70"></div>
 
-      <div className="absolute left-1/2 top-1/2 z-20 flex -translate-x-1/2 -translate-y-1/2 transform flex-col items-center justify-center gap-8 text-center">
+      <div className="absolute left-1/2 top-1/2 z-20 flex -translate-x-1/2 -translate-y-1/2 transform flex-col items-center justify-center gap-8">
         <Title title={title} />
-        <span className="text-sm font-semibold md:text-2xl xl:text-3xl">
+        <span className="text-sm font-semibold md:text-2xl xl:text-3xl text-center">
           {description}
         </span>
         <span className="md:text-xl xl:text-2xl text-xs">{description2}</span>

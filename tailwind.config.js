@@ -29,6 +29,7 @@ module.exports = {
       sans: ["var(--font-inter)", ...fontFamily.sans],
       body: [
         "Inter",
+        "argent-cf",
         "ui-sans-serif",
         "system-ui",
         "-apple-system",

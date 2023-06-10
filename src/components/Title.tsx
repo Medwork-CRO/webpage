@@ -1,4 +1,10 @@
-import React from 'react';
+import { Spectral } from "@next/font/google";
+
+const inter = Spectral({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  weight: "400",
+});
 
 type TitleProps = {
   title: string;
@@ -7,7 +13,7 @@ type TitleProps = {
 function Title({ title }: TitleProps) {
   return (
     <div className="flex items-center justify-center">
-      <span className="text-xl xs:text-3xl text-cyan-400">
+      <span className={`${inter.variable} text-xl text-cyan-400 xs:text-3xl`}>
         {/* &#8226;  */}
         {title}
       </span>

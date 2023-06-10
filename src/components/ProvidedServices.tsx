@@ -41,18 +41,16 @@ const images: ImageData[] = [
 
 function ProvidedServices() {
   return (
-    <div className="flex justify-center">
-      <div className="grid max-w-5xl grid-rows-2 gap-16 md:grid-cols-2">
-        {images.map((image) => (
-          <Card
-            key={image.imageTitle}
-            imageData={image.imageData}
-            imageTitle={image.imageTitle}
-            imageDescription={image.imageDescription}
-            readMoreLink={""}
-          />
-        ))}
-      </div>
+    <div className="flex flex-wrap max-w-5xl gap-6 mx-auto">
+      {images.map((image) => (
+        <Card
+          key={image.imageTitle}
+          imageData={image.imageData}
+          imageTitle={image.imageTitle}
+          imageDescription={image.imageDescription}
+          readMoreLink={""}
+        />
+      ))}
     </div>
   );
 }

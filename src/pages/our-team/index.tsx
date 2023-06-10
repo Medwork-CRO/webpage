@@ -4,14 +4,55 @@ import { MemberInfo } from "@/types/MemberInfo";
 import cat from "@assets/team-photos/cat-cat.jpg";
 import ioannis from "@assets/team-photos/ioannis-tsiakkas.jpg";
 import nicolas from "@assets/team-photos/nicolas-tsiakkas.jpg";
+import ai from "@assets/team-photos/ai.webp";
+import ai1 from "@assets/team-photos/ai1.webp";
+import ai2 from "@assets/team-photos/ai2.webp";
+import ai3 from "@assets/team-photos/ai3.jpg";
+import ai4 from "@assets/team-photos/ai4.webp";
+import ai5 from "@assets/team-photos/ai5.png";
 
 const membersInfo: MemberInfo[] = [
   {
-    image: cat,
-    name: "Katelinus Mouserous",
-    title: "CEO",
+    image: ai,
+    name: "Jane Smith",
+    title: "Marketing Manager",
     description:
-      "Whiskers, the extraordinary feline CEO of a pharmaceutical company, combines feline intuition with exceptional leadership skills to revolutionize the industry. With a passion for improving lives, Whiskers drives groundbreaking research and development, inspiring their team to reach new heights. Their charismatic presence and advocacy for animal welfare have made them an iconic figure, creating a positive impact on both humans and pets alike.",
+      "Jane is a creative and strategic marketing professional with a passion for developing innovative campaigns that drive business growth. With a deep understanding of consumer behavior and market trends, she leverages data-driven insights to create impactful marketing strategies that resonate with target audiences. Jane's exceptional communication skills and collaborative approach make her a valuable asset to any team.",
+  },
+  {
+    image: ai1,
+    name: "Bob Johnson",
+    title: "Software Engineer",
+    description:
+      "Bob is a highly skilled software engineer with a passion for developing scalable and efficient applications. With expertise in a wide range of programming languages and frameworks, he leverages his technical knowledge to design and implement robust solutions that meet business requirements. Bob's attention to detail and commitment to quality ensure that his code is always of the highest standard.",
+  },
+  {
+    image: ai2,
+    name: "Emily Davis",
+    title: "Human Resources Manager",
+    description:
+      "Emily is a dedicated and compassionate HR professional with a passion for creating a positive work environment. With expertise in talent acquisition, employee relations, and performance management, she ensures that the organization attracts and retains top talent. Emily's exceptional interpersonal skills and ability to build strong relationships make her a trusted advisor to both employees and management.",
+  },
+  {
+    image: ai3,
+    name: "Alex Rodriguez",
+    title: "Sales Manager",
+    description:
+      "Alex is a results-driven sales professional with a proven track record of exceeding targets. With expertise in lead generation, account management, and sales strategy, he drives revenue growth and builds long-term customer relationships. Alex's exceptional communication skills and ability to understand customer needs make him a valuable asset to any sales team.",
+  },
+  {
+    image: ai4,
+    name: "Sarah Lee",
+    title: "Product Manager",
+    description:
+      "Sarah is a highly skilled product manager with a passion for developing innovative products that meet customer needs. With expertise in product strategy, market research, and user experience design, she leads cross-functional teams to deliver products that exceed customer expectations. Sarah's exceptional communication skills and ability to collaborate with stakeholders make her a valuable asset to any product team.",
+  },
+  {
+    image: ai5,
+    name: "David Kim",
+    title: "Data Analyst",
+    description:
+      "David is a data analyst with a passion for turning data into insights that drive business decisions. With expertise in data visualization, statistical analysis, and machine learning, he leverages data-driven insights to inform business strategy and improve operational efficiency. David's exceptional analytical skills and attention to detail ensure that his insights are always accurate and actionable.",
   },
   {
     image: ioannis,
@@ -33,7 +74,7 @@ function OurTeam() {
   return (
     <div className="mx-auto mt-16 flex max-w-[86em] flex-col items-center justify-between">
       <div
-        className={`flex flex-col gap-8 whitespace-pre-line px-8 text-center text-xl text-gray-500 xs:px-24`}
+        className={`flex flex-col gap-8 whitespace-pre-line px-6 text-xl text-gray-500 sm:px-8`}
       >
         <Title title={"OUR TEAM"} />
         <p className="font-semibold">
@@ -59,7 +100,7 @@ function OurTeam() {
           ever-evolving pharmaceutical industry.
         </p>
       </div>
-      <div className="my-12 flex flex-wrap max-w-5xl gap-16 justify-center">
+      <div className="my-12 grid grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-4">
         {membersInfo.map((memberInfo, i) => (
           <MemberCard
             key={i}
