@@ -10,7 +10,7 @@ const inter = Inter({
     variable: "--font-inter",
 });
 
-type Props = PropsWithChildren & EmblaOptionsType & { color?: "text-white" | "text-black" | "text-cyan-400" };
+type Props = PropsWithChildren & EmblaOptionsType & { color?: "text-white" | "text-black" | "text-cyan-600" };
 
 function Logo({ children, color = "text-black", ...options }: Props) {
     return (
@@ -20,7 +20,7 @@ function Logo({ children, color = "text-black", ...options }: Props) {
             href="/"
         >
             <Image src={medworkLogo} alt="Medwork Logo" width={46} />
-            <div className={`${inter.variable} font-sans text-3xl ${color}`}>
+            <div className={`${inter.variable} font-sans text-3xl italic ${color}`}>
                 Medwork
             </div>
         </Link >

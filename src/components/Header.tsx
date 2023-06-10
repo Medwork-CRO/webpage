@@ -101,7 +101,7 @@ function Header() {
           className="block text-xl md:hidden"
           onClick={() => setIsOpen(!isOpen)}
         >
-          <FaBars className="mr-2 cursor-pointer text-cyan-500" />
+          <FaBars className="mr-2 cursor-pointer text-cyan-600" />
         </button>
         <div className="hidden md:block">
           <NavMenu nav={navMenu} />

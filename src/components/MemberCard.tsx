@@ -10,13 +10,13 @@ function MemberCard({
   linkedInTag,
 }: MemberInfo) {
   return (
-    <div className="flex w-[24rem] flex-col p-2 md:p-8">
+    <div className="flex w-[20rem] flex-col p-2 sm:p-4 md:p-6 lg:p-8">
       <div
         className="flex h-32 w-full justify-center rounded-xl bg-cover"
       >
         <div className="flex h-[136px] w-[136px] items-center justify-center rounded-full border-[4px]">
           <Image
-            className="h-[136px] w-[136px] rounded-full border-2 border-cyan-500 object-cover"
+            className="h-[136px] w-[136px] rounded-full border-2 border-cyan-600 object-cover"
             src={image}
             alt={title}
           />
@@ -34,7 +34,7 @@ function MemberCard({
             <FaLinkedin className="antialiased" size={"20px"} />
           </a>
         </div>
-        <p className="text-lightSecondary text-base font-normal text-cyan-500">
+        <p className="text-lightSecondary text-base font-normal text-cyan-600">
           {title}
         </p>
         <p className="mt-4 overflow-ellipsis text-lg font-normal text-gray-700 md:text-base">
@@ -56,7 +56,7 @@ export default MemberCard;
       >
         <div className="absolute -bottom-12 flex h-[136px] w-[136px] items-center justify-center rounded-full border-[4px]">
           <Image
-          className="h-[136px] w-[136px] rounded-full border-2 border-cyan-500 object-cover"
+          className="h-[136px] w-[136px] rounded-full border-2 border-cyan-600 object-cover"
           src={image}
           alt={title}
         />
@@ -74,7 +74,7 @@ export default MemberCard;
             <FaLinkedin className="antialiased" size={"20px"} />
           </a>
         </div>
-        <p className="text-lightSecondary text-base text-cyan-500 font-normal">{title}</p>
+        <p className="text-lightSecondary text-base text-cyan-600 font-normal">{title}</p>
         <p className="mt-4 overflow-ellipsis text-lg font-normal text-gray-700 md:text-base">
           {description}
         </p>

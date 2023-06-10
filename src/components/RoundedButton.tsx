@@ -10,7 +10,7 @@ function RoundedButton({ label, href, color }: RoundedButtonProps) {
   return (
     <Link
       className={`
-      xs:text-md w-[200px] rounded-full bg-cyan-400 py-3 text-center text-sm font-semibold
+      xs:text-md w-[200px] rounded-full bg-cyan-600 py-3 text-center text-sm font-semibold
       transition duration-100 ease-in focus:outline-none
       focus:ring ${
         color === "orange"
