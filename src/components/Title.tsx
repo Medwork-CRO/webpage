@@ -13,7 +13,7 @@ type TitleProps = {
 function Title({ title }: TitleProps) {
   return (
     <div className="flex items-center justify-center">
-      <span className={`${inter.variable} text-xl text-cyan-500 xs:text-3xl`}>
+      <span className={`${inter.variable} text-xl font-semibold text-cyan-500 xs:text-3xl`}>
         {/* &#8226;  */}
         {title}
       </span>

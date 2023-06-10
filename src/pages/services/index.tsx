@@ -1,11 +1,10 @@
-import Image from "next/image";
-import Link from "next/link";
+import Carousel from "@/components/Carousel";
+import ImageShowCase from "@/components/ImageShowCase";
 import ProvidedServices from "@/components/ProvidedServices";
 import Title from "@/components/Title";
 import img1 from "@assets/img/img1.jpg";
 import img2 from "@assets/img/img2.jpg";
 import img3 from "@assets/img/img3.jpg";
-import team from "@assets/img/team.jpg";
 
 const imageShowCases = [
   {
@@ -47,47 +46,18 @@ const imageShowCases = [
 function Home() {
   return (
     <div className="flex flex-col justify-center gap-4 place-self-center">
-      <div className="relative hidden h-[615px] flex-[0_0_100%] sm:block">
-        <Image src={team} className="h-full w-full object-cover" alt="alt" />
-        <div className="absolute inset-0 z-10 bg-gradient-to-r from-cyan-600 to-transparent"></div>
-
-        <div className="absolute  top-1/2 z-20 flex w-1/2 -translate-y-1/2 transform flex-col items-start justify-center gap-8 px-8 md:px-12 lg:px-24">
-          <span className="text-left text-xl font-semibold md:text-2xl xl:text-3xl">
-            Alone we can do so little; together we can do so much.
-          </span>
-          <span className="text-md text-left md:text-xl xl:text-2xl">
-            Our team at Medwork is made up of experienced professionals who are
-            passionate about improving patient outcomes. We work closely with
-            the research community and pharmaceutical companies to develop
-            innovative solutions that address the most pressing healthcare
-            challenges.
-          </span>
-        </div>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2">
-        <div className="relative sm:hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-cyan-700"></div>
-          <div className="relative z-10 float-left p-6 md:p-12">
-            <div className="md:hidden">
-              <Image src={team} alt="Image for mobile" layout="responsive" />
-            </div>
-            <div className="mt-8 md:mt-0">
-              <h1 className="mb-4 text-4xl">
-                Alone we can do so little; together we can do so much.
-              </h1>
-              <p className="mb-4 text-lg">
-                Our team at Medwork is made up of experienced professionals who
-                are passionate about improving patient outcomes. We work closely
-                with the research community and pharmaceutical companies to
-                develop innovative solutions that address the most pressing
-                healthcare challenges.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
+      <Carousel loop>
+        {imageShowCases.map((imageShowCase, i) => (
+          <ImageShowCase
+            image={imageShowCase.image}
+            description={imageShowCase.description}
+            description2={imageShowCase.description2}
+            title={imageShowCase.title}
+            link={imageShowCase.link}
+            key={i}
+          />
+        ))}
+      </Carousel>
       <div className="mx-auto mt-16 flex max-w-[86em] flex-col items-center justify-between">
         <div className="mb-16 flex flex-col gap-8 whitespace-pre-line px-8 text-xl text-gray-500 xs:px-24">
           <p className="font-semibold">
@@ -114,7 +84,7 @@ function Home() {
           </p>
         </div>
         <Title title={"CORE SERVICES"} />
-        <div className="mb-16 mt-8">
+        <div className="mt-8 mb-16">
           <ProvidedServices />
         </div>
       </div>
