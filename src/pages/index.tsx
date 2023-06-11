@@ -54,8 +54,8 @@ function Home() {
         <div className="absolute inset-0 z-10 bg-gradient-to-r from-cyan-600 to-transparent"></div>
 
         <div className="absolute  top-1/2 z-20 flex w-1/2 -translate-y-1/2 transform flex-col items-start justify-center gap-8 px-8 md:px-12 lg:px-24">
-          <span className="text-left text-xl font-semibold md:text-2xl xl:text-3xl">
-            Alone we can do so little; together we can do so much.
+          <span className="text-left text-xl font-semibold italic md:text-2xl xl:text-3xl">
+            We value excellence and our people excel at that
           </span>
           <span className="text-md text-left md:text-xl xl:text-2xl">
             Our team at Medwork is made up of experienced professionals who are
@@ -75,8 +75,8 @@ function Home() {
               <Image src={team} alt="Image for mobile" layout="responsive" />
             </div>
             <div className="mt-8 md:mt-0">
-              <h1 className="mb-4 text-4xl">
-                Alone we can do so little; together we can do so much.
+              <h1 className="mb-4 text-4xl italic">
+                We value excellence and our people excel at that
               </h1>
               <p className="mb-4 text-lg">
                 Our team at Medwork is made up of experienced professionals who
@@ -91,7 +91,7 @@ function Home() {
       </div>
 
       <div className="mx-auto mt-16 flex max-w-[86em] flex-col items-center justify-between">
-        <div className="mb-16 flex flex-col gap-8 whitespace-pre-line px-8 text-xl text-gray-500 xs:px-24">
+        <div className="mb-16 flex flex-col gap-8 whitespace-pre-line px-8 text-xl text-gray-500 xs:px-8">
           <p className="font-semibold">
             Medwork is a Contract Research Organization (CRO) operating in
             Southeast Europe, which since 2005 offers a wide range of
@@ -119,16 +119,17 @@ function Home() {
         <div className="mt-8">
           <ProvidedServices />
         </div>
-        <div className="m-2 mt-32 flex h-[18rem] transform flex-col items-center justify-center gap-6 rounded-xl bg-[#1a2188] p-6 text-center text-white sm:h-[26rem] md:h-[32rem]">
+        <div className="m-2 mt-32 flex h-[26rem] transform flex-col items-center justify-center gap-6 rounded-xl bg-[#1a2188] p-6 text-center text-white md:h-[32rem]">
           <Logo color="text-white" />
-          <p className=" max-w-4xl text-2xl font-semibold sm:text-xl md:text-3xl">
+          <p className="max-w-[86em] text-2xl font-semibold sm:text-xl md:text-3xl">
             Want to learn more about Medwork?
           </p>
-          <p className="text-md max-w-4xl font-normal  sm:text-xl md:text-2xl">
-            We believe in harnessing science for human good. So whether you are a
-            provider, drug developer, hospital, medical researcher or patient—we
-            promise to work tirelessly to bring you trusted information to make
-            clear, confident decisions for a healthier future.
+          <p className="text-md max-w-[86em] font-normal  sm:text-xl md:text-2xl">
+            We believe in harnessing science for human good. So whether you are
+            a provider, drug developer, hospital, medical researcher or
+            patient—we promise to work tirelessly to bring you trusted
+            information to make clear, confident decisions for a healthier
+            future.
           </p>
           <RoundedButton label="GET IN TOUCH" href="contact-us" color="gray" />
         </div>

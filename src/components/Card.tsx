@@ -15,7 +15,7 @@ function Card({
   readMoreLink,
 }: CardProps) {
   return (
-    <div className="flex w-full max-w-[24rem] transform flex-col justify-between gap-2 rounded-xl">
+    <div className="flex w-full transform flex-col justify-between gap-2 rounded-xl">
       <div className="flex flex-col gap-2">
         <div className="overflow-hidden rounded-2xl">
           <Image
