@@ -125,7 +125,7 @@ function Home() {
             Want to learn more about Medwork?
           </p>
           <p className="text-md max-w-4xl font-normal  sm:text-xl md:text-2xl">
-            We believe in harnessing science for human good. So whether you're a
+            We believe in harnessing science for human good. So whether you are a
             provider, drug developer, hospital, medical researcher or patient—we
             promise to work tirelessly to bring you trusted information to make
             clear, confident decisions for a healthier future.
