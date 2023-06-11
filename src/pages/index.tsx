@@ -6,6 +6,8 @@ import img1 from "@assets/img/img1.jpg";
 import img2 from "@assets/img/img2.jpg";
 import img3 from "@assets/img/img3.jpg";
 import team from "@assets/img/team.jpg";
+import Logo from "@/components/Logo";
+import RoundedButton from "@/components/RoundedButton";
 
 const imageShowCases = [
   {
@@ -47,7 +49,7 @@ const imageShowCases = [
 function Home() {
   return (
     <div className="flex flex-col justify-center gap-4 place-self-center">
-      <div className="relative hidden h-[615px] flex-[0_0_100%] sm:block">
+      <div className="relative hidden h-[615px] flex-[0_0_100%] md:block">
         <Image src={team} className="h-full w-full object-cover" alt="alt" />
         <div className="absolute inset-0 z-10 bg-gradient-to-r from-cyan-600 to-transparent"></div>
 
@@ -66,7 +68,7 @@ function Home() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2">
-        <div className="relative sm:hidden">
+        <div className="relative md:hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-cyan-700"></div>
           <div className="relative z-10 float-left p-6 md:p-12">
             <div className="md:hidden">
@@ -114,8 +116,21 @@ function Home() {
           </p>
         </div>
         <Title title={"CORE SERVICES"} />
-        <div className="mb-16 mt-8">
+        <div className="mt-8">
           <ProvidedServices />
+        </div>
+        <div className="m-2 mt-32 flex h-[18rem] transform flex-col items-center justify-center gap-6 rounded-xl bg-[#1a2188] p-6 text-center text-white sm:h-[26rem] md:h-[32rem]">
+          <Logo color="text-white" />
+          <p className=" max-w-4xl text-2xl font-semibold sm:text-xl md:text-3xl">
+            Want to learn more about Medwork?
+          </p>
+          <p className="text-md max-w-4xl font-normal  sm:text-xl md:text-2xl">
+            We believe in harnessing science for human good. So whether you're a
+            provider, drug developer, hospital, medical researcher or patient—we
+            promise to work tirelessly to bring you trusted information to make
+            clear, confident decisions for a healthier future.
+          </p>
+          <RoundedButton label="GET IN TOUCH" href="contact-us" color="gray" />
         </div>
       </div>
     </div>

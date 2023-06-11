@@ -1,5 +1,5 @@
 import Image, { StaticImageData } from "next/image";
-import RoundedButton from "./RoundedButton";
+import Link from "next/link";
 
 type CardProps = {
   imageData: StaticImageData;
@@ -15,23 +15,28 @@ function Card({
   readMoreLink,
 }: CardProps) {
   return (
-    <div className="flex h-[32rem] w-[24rem] transform flex-col justify-between rounded-2xl bg-[#eae4dd] p-6 shadow-md transition-all hover:scale-105">
-      <div className="flex flex-col justify-between gap-6">
-        <div className="h-24 overflow-hidden rounded-2xl">
+    <div className="flex w-full max-w-[24rem] transform flex-col justify-between gap-2 rounded-xl">
+      <div className="flex flex-col gap-2">
+        <div className="overflow-hidden rounded-2xl">
           <Image
-            className="h-full w-full object-cover"
+            className="h-[16rem] w-full rounded-2xl object-cover sm:h-[12rem]"
             src={imageData}
             alt={imageTitle}
           />
         </div>
-        <h2 className="text-3xl font-semibold tracking-tight text-gray-900 md:text-2xl">
-          {imageTitle}
-        </h2>
-        <p className="text-lg leading-relaxed text-gray-700 md:text-base">
+        <p className="text-base font-normal text-cyan-600">{imageTitle}</p>
+      </div>
+      <div className="flex flex-col gap-2">
+        <p className="overflow-ellipsis text-lg font-normal text-gray-700 md:text-base">
           {imageDescription}
         </p>
+        <Link
+          className="font-semibold text-black underline"
+          href={readMoreLink}
+        >
+          Learn More
+        </Link>
       </div>
-      <RoundedButton label="READ MORE" href={readMoreLink} color="orange" />
     </div>
   );
 }

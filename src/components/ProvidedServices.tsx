@@ -41,7 +41,7 @@ const images: ImageData[] = [
 
 function ProvidedServices() {
   return (
-    <div className="flex flex-wrap max-w-5xl gap-6 mx-auto">
+    <div className="flex flex-wrap max-w-5xl gap-24 mx-4 justify-around">
       {images.map((image) => (
         <Card
           key={image.imageTitle}

@@ -34,7 +34,7 @@ function MemberCard({
             <FaLinkedin className="antialiased" size={"20px"} />
           </a>
         </div>
-        <p className="text-lightSecondary text-base font-normal text-cyan-600">
+        <p className="text-base font-normal text-cyan-600">
           {title}
         </p>
         <p className="mt-4 overflow-ellipsis text-lg font-normal text-gray-700 md:text-base">

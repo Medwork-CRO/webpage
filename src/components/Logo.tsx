@@ -4,13 +4,20 @@ import { EmblaOptionsType } from "embla-carousel-react";
 import Image from "next/image";
 import Link from "next/link";
 import { PropsWithChildren } from "react";
+import { Roboto } from "@next/font/google";
 
 const inter = Inter({
-    subsets: ["latin"],
-    variable: "--font-inter",
+  subsets: ["latin"],
+  variable: "--font-inter",
 });
 
-type Props = PropsWithChildren & EmblaOptionsType & { color?: "text-white" | "text-black" | "text-cyan-600" };
+const roboto = Roboto({
+  weight: "400",
+  subsets: ["latin"],
+});
+
+type Props = PropsWithChildren &
+  EmblaOptionsType & { color?: "text-white" | "text-black" | "text-cyan-600" };
 
 function Logo({ children, color = "text-black", ...options }: Props) {
     return (
@@ -20,11 +27,11 @@ function Logo({ children, color = "text-black", ...options }: Props) {
             href="/"
         >
             <Image src={medworkLogo} alt="Medwork Logo" width={46} />
-            <div className={`${inter.variable} font-sans text-3xl italic ${color}`}>
+            <div className={`${roboto.className} font-sans text-3xl ${color}`} style={{ fontStyle: 'italic' }}>
                 Medwork
             </div>
-        </Link >
+        </Link>
     );
-};
+}
 
 export default Logo;
