@@ -15,9 +15,9 @@ function QualityManagement() {
           <h2>Medwork can assist you with:</h2>
           <p className="font-semibold">
             Building a corporate quality-oriented mind-set by improving your
-            personnel's understanding of quality requirements, and communicating
-            and enforcing this message at all levels and functions throughout
-            your organization;
+            personnel&apos;s understanding of quality requirements, and
+            communicating and enforcing this message at all levels and functions
+            throughout your organization;
           </p>
           <p className="font-semibold">
             Integrating quality into your daily working environment by building
