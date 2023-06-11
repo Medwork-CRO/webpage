@@ -24,7 +24,7 @@ function Pharmacovigilance() {
           </p>
           <p>
             Our services may be fully customized to cover all of a Marketing
-            Authorization Holder's responsibilities related to drug safety.
+            Authorization Holder&apos;s responsibilities related to drug safety.
           </p>
         </div>
       </div>
