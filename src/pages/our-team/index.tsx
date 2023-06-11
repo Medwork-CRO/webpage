@@ -1,15 +1,14 @@
 import MemberCard from "@/components/MemberCard";
 import Title from "@/components/Title";
 import { MemberInfo } from "@/types/MemberInfo";
-import cat from "@assets/team-photos/cat-cat.jpg";
-import ioannis from "@assets/team-photos/ioannis-tsiakkas.jpg";
-import nicolas from "@assets/team-photos/nicolas-tsiakkas.jpg";
 import ai from "@assets/team-photos/ai.webp";
 import ai1 from "@assets/team-photos/ai1.webp";
 import ai2 from "@assets/team-photos/ai2.webp";
 import ai3 from "@assets/team-photos/ai3.jpg";
 import ai4 from "@assets/team-photos/ai4.webp";
 import ai5 from "@assets/team-photos/ai5.png";
+import ioannis from "@assets/team-photos/ioannis-tsiakkas.jpg";
+import nicolas from "@assets/team-photos/nicolas-tsiakkas.jpg";
 
 const membersInfo: MemberInfo[] = [
   {

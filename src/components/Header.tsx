@@ -22,7 +22,7 @@ const navMenu: NavProp[] = [
       },
       {
         label: "Careers",
-        href: "careers",
+        href: "/careers",
       },
     ],
   },
@@ -32,19 +32,19 @@ const navMenu: NavProp[] = [
     subCategories: [
       {
         label: "Pharmacovigilance",
-        href: "pharmacovigilance",
+        href: "/services/pharmacovigilance",
       },
       {
         label: "Cosmetovigilance",
-        href: "cosmetovigilance",
+        href: "/services/cosmetovigilance",
       },
       {
         label: "Quality Management",
-        href: "quality-management",
+        href: "/services/quality-management",
       },
       {
         label: "Materiovigilance",
-        href: "materiovigilance",
+        href: "/services/materiovigilance",
       },
     ],
   },
@@ -54,7 +54,7 @@ const navMenu: NavProp[] = [
     subCategories: [
       {
         label: "Compliance",
-        href: "compliance",
+        href: "/technology/compliance",
       },
     ],
   },
@@ -95,7 +95,7 @@ function Header() {
         isScrolled ? "bg-[#f6f1eb] shadow-sm" : "bg-transparent"
       } transition-all duration-300`}
     >
-      <div className="mx-auto flex max-w-[86em] items-center justify-between px-4 py-6">
+      <div className="mx-auto flex max-w-[86em] items-center justify-between px-4 lg:px-0 py-6">
         <Logo />
         <button
           className="block text-xl md:hidden"

@@ -1,4 +1,4 @@
-import cosmeticovigilance from "@assets/services/cosmeticovigilance.jpg";
+import cosmetovigilance from "@assets/services/cosmetovigilance.jpg";
 import materiovigilance from "@assets/services/materiovigilance.jpg";
 import pharmacovigilance from "@assets/services/pharmacovigilance.jpg";
 import qualityManagement from "@assets/services/qualityManagement.jpg";
@@ -15,9 +15,9 @@ type ImageData = {
 
 const images: ImageData[] = [
   {
-    imageData: cosmeticovigilance,
+    imageData: cosmetovigilance,
     imageTitle: "COSMETICOVIGILANCE",
-    readMoreLink: "/services/cosmeticovigilance",
+    readMoreLink: "/services/cosmetovigilance",
     imageDescription:
       "CosmeticoVigilance is our comprehensive suite of services geared towards ensuring the safety, compliance, and quality of cosmetic products. We adhere to rigorous industry standards and global regulations.",
   },
