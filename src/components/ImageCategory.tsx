@@ -9,8 +9,8 @@ type ImageCategoryProps = {
 function ImageCategory({ title, description, image }: ImageCategoryProps) {
   return (
     <>
-      <div className="relative hidden h-[615px] flex-[0_0_100%] md:block">
-        <Image src={image} className="h-[615px] w-full object-cover" alt="alt" />
+      <div className="relative hidden h-[615px] w-full flex-[0_0_100%] md:block">
+        <Image src={image} className="h-[615px] min-w-full object-cover" alt="alt" />
         <div className="absolute inset-0 z-10 bg-gradient-to-r from-cyan-600 to-transparent"></div>
 
         <div className="absolute top-1/2 z-20 flex w-1/2 -translate-y-1/2 transform flex-col items-start justify-center gap-8 px-8 md:px-12 lg:px-24">
