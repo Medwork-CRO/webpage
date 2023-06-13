@@ -4,25 +4,48 @@ type ImageCategoryProps = {
   title: string;
   description: string;
   image: StaticImageData;
+  textSide?: "left" | "right";
 };
 
-function ImageCategory({ title, description, image }: ImageCategoryProps) {
+function ImageCategory({
+  title,
+  description,
+  image,
+  textSide,
+}: ImageCategoryProps) {
   return (
     <>
-      <div className="relative hidden h-[615px] w-full flex-[0_0_100%] md:block">
-        <Image src={image} className="h-[615px] min-w-full object-cover" alt="alt" />
-        <div className="absolute inset-0 z-10 bg-gradient-to-r from-cyan-600 to-transparent"></div>
+      <div className="relative hidden h-[515px] max-w-[86em] flex-[0_0_100%] md:block">
+        <Image
+          src={image}
+          className="h-full min-w-full object-cover"
+          alt="alt"
+        />
+        <div
+          className={`absolute inset-0 z-10 from-cyan-700 to-transparent ${
+            !textSide || textSide === "left"
+              ? "bg-gradient-to-r"
+              : "bg-gradient-to-l"
+          }`}
+        ></div>
 
-        <div className="absolute top-1/2 z-20 flex w-1/2 -translate-y-1/2 transform flex-col items-start justify-center gap-8 px-8 md:px-12 lg:px-24">
-          <span className="text-left text-xl font-semibold italic md:text-2xl xl:text-3xl">
+        <div
+          className={`absolute top-3/4 z-20 flex w-1/2 -translate-y-1/2 transform flex-col justify-center gap-8 px-8 md:px-12 lg:px-24 ${
+            !textSide || textSide === "left"
+              ? "text-left"
+              : "left-1/2 text-right"
+          }`}
+        >
+          <span className=" text-xl font-semibold italic md:text-2xl xl:text-3xl">
             {title}
           </span>
-          <span className="text-md text-left md:text-xl xl:text-2xl">
+          <span className="text-md font-thin md:text-xl xl:text-2xl">
             {description}
           </span>
         </div>
       </div>
 
+      {/* this part is for mobile devices */}
       <div className="grid grid-cols-1 md:grid-cols-2">
         <div className="relative md:hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-cyan-700"></div>

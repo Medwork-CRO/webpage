@@ -1,19 +1,24 @@
 import ImageCategory from "@/components/ImageCategory";
 import RoundedButton from "@/components/RoundedButton";
-import happyPeople from "@assets/img/happy-people.jpg";
 import ai from "@assets/team-photos/ai.webp";
 import ai1 from "@assets/team-photos/ai1.webp";
 import ai2 from "@assets/team-photos/ai2.webp";
 import ai4 from "@assets/team-photos/ai4.webp";
+import team3 from "@assets/team-photos/team3.jpg";
 import Image from "next/image";
 
 function Cosmetovigilance() {
   return (
     <div className="flex flex-col justify-center gap-4 place-self-center">
       <ImageCategory
-        image={happyPeople}
-        title="About Medwork"
-        description="We believe in a better world when it comes to health. It is our responsibility to make it."
+        textSide="right"
+        image={team3}
+        title="We value excellence and our people excel at that"
+        description="Our team at Medwork is made up of experienced professionals who are
+      passionate about improving patient outcomes. We work closely with
+      the research community and pharmaceutical companies to develop
+      innovative solutions that address the most pressing healthcare
+      challenges."
       />
 
       <div className="mx-4 mt-16 flex max-w-[86em] flex-col items-center justify-between md:mx-2">

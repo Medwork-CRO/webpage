@@ -13,16 +13,20 @@ const inter = Inter({
 
 const navMenu: NavProp[] = [
   {
-    label: "About Us",
-    href: "/about-us",
+    label: "About",
+    href: "/about",
     subCategories: [
       {
+        label: "About Us",
+        href: "/about/about-us",
+      },
+      {
         label: "Our Team",
-        href: "/our-team",
+        href: "/about/our-team",
       },
       {
         label: "Careers",
-        href: "/careers",
+        href: "/about/careers",
       },
     ],
   },
@@ -49,14 +53,8 @@ const navMenu: NavProp[] = [
     ],
   },
   {
-    label: "Technology",
-    href: "/technology",
-    subCategories: [
-      {
-        label: "Compliance",
-        href: "/technology/compliance",
-      },
-    ],
+    label: "FAQ",
+    href: "/faq",
   },
   {
     label: "Contact Us",

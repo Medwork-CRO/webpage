@@ -47,7 +47,7 @@ function CompanyInfo() {
 
 function CompanyFooter() {
   return (
-    <div className="flex flex-col justify-start gap-2 pb-8 text-sm xs:flex-row">
+    <div className="flex flex-col justify-start gap-2 pb-8 text-sm xs:flex-row border-t  border-white pt-4">
       <span className="text-cyan-400">
         © Copyright 2005 - {new Date().getFullYear()} Medwork -
       </span>

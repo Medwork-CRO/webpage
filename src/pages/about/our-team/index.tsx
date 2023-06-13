@@ -1,3 +1,4 @@
+import ImageCategory from "@/components/ImageCategory";
 import MemberCard from "@/components/MemberCard";
 import Title from "@/components/Title";
 import { MemberInfo } from "@/types/MemberInfo";
@@ -9,6 +10,7 @@ import ai4 from "@assets/team-photos/ai4.webp";
 import ai5 from "@assets/team-photos/ai5.png";
 import ioannis from "@assets/team-photos/ioannis-tsiakkas.jpg";
 import nicolas from "@assets/team-photos/nicolas-tsiakkas.jpg";
+import team1 from "@assets/team-photos/team1.jpg";
 
 const membersInfo: MemberInfo[] = [
   {
@@ -71,9 +73,15 @@ const membersInfo: MemberInfo[] = [
 
 function OurTeam() {
   return (
-    <div className="mx-auto mt-16 flex max-w-[86em] flex-col items-center justify-between">
+    <div className="mx-auto flex max-w-[86em] flex-col items-center justify-between">
+    {/* <div className="flex flex-col justify-center gap-4 place-self-center"> */}
+      <ImageCategory
+        image={team1}
+        title="Meet the people behind the answers."
+        description="We believe in a better world when it comes to health. It is our responsibility to make it."
+      />
       <div
-        className={`flex flex-col gap-8 whitespace-pre-line px-6 text-xl text-gray-500 sm:px-8`}
+        className={`flex flex-col gap-8 whitespace-pre-line px-6 text-xl text-gray-500 sm:px-8 mt-16`}
       >
         <Title title={"OUR TEAM"} />
         <p className="font-semibold">

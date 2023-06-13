@@ -14,7 +14,7 @@ function MemberCard({
       <div className="flex h-32 w-full justify-center rounded-xl bg-cover">
         <div className="flex h-[136px] w-[136px] items-center justify-center rounded-full border-[4px]">
           <Image
-            className="h-[136px] w-[136px] rounded-full border-2 border-cyan-600 object-cover"
+            className="h-[136px] w-[136px] rounded-full border-2 border-cyan-600 object-cover antialiased"
             src={image}
             alt={title}
           />

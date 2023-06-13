@@ -10,7 +10,7 @@ function QualityManagement() {
         description="Combining an excellent knowledge of the pharmaceutical environment, a deep understanding of European and international pharmaceutical quality standards and an unwavering commitment to quality, Medwork provides tailored and cost-effective quality management services in the area of Pharmacovigilance (GVP)."
       />
 
-      <div className="mx-auto mt-16 flex max-w-[86em] flex-col items-center justify-between">
+      <div className="mx-auto flex max-w-[86em] flex-col items-center justify-between">
         <div className="mb-16 flex flex-col gap-8 whitespace-pre-line px-8 text-xl text-gray-500 xs:px-24">
           <h2>Medwork can assist you with:</h2>
           <p className="font-semibold">

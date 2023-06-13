@@ -1,10 +1,9 @@
 import ImageCategory from "@/components/ImageCategory";
-import React from "react";
 import happyPeople2 from "@assets/img/happy-people2.jpg";
 import {
+  AiOutlineEnvironment,
   AiOutlineMail,
   AiOutlinePhone,
-  AiOutlineEnvironment,
 } from "react-icons/ai";
 
 const Contact = () => {

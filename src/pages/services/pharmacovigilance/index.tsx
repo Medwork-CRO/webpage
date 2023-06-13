@@ -10,7 +10,7 @@ function Pharmacovigilance() {
         description="Compliance with pharmacovigilance requirements is becoming an increasing challenge for pharmaceutical companies worldwide. In this very demanding environment, Medwork offers a reliable solution for every need related to drug safety."
       />
 
-      <div className="mx-auto mt-16 flex max-w-[86em] flex-col items-center justify-between">
+      <div className="mx-auto flex max-w-[86em] flex-col items-center justify-between">
         <div className="mb-16 flex flex-col gap-8 whitespace-pre-line px-8 text-xl text-gray-500 xs:px-24">
           <p className="font-semibold">
             We have an extensive Pharmacovigilance Department composed of a team

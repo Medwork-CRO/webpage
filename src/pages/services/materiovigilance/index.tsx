@@ -10,7 +10,7 @@ function Materiovigilance() {
         description="The principal purpose of materiovigilance is to improve the protection of the health and safety of patients, users and others by reducing the likelihood that incidents related to the use of a medical device will reoccur."
       />
 
-      <div className="mx-auto mt-16 flex max-w-[86em] flex-col items-center justify-between">
+      <div className="mx-auto flex max-w-[86em] flex-col items-center justify-between">
         <div className="mb-16 flex flex-col gap-8 whitespace-pre-line px-8 text-xl text-gray-500 xs:px-24">
           <p className="font-semibold">
             Medical Devices Directives ensure that adverse incidents are
