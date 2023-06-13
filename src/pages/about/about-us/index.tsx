@@ -1,13 +1,13 @@
 import ImageCategory from "@/components/ImageCategory";
 import Logo from "@/components/Logo";
 import RoundedButton from "@/components/RoundedButton";
-import team4 from "@assets/team-photos/team4.jpg";
+import team0 from "@assets/team-photos/team0.jpg";
 
 function Cosmetovigilance() {
   return (
     <div className="flex flex-col justify-center gap-4 place-self-center">
       <ImageCategory
-        image={team4}
+        image={team0}
         title="About Medwork"
         description="We believe in a better world when it comes to health. It is our responsibility to make it."
       />
