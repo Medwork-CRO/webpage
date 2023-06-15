@@ -11,12 +11,8 @@ function Home() {
       <div className="mx-auto flex max-w-[86em] flex-col items-center justify-between">
         <ImageCategory
           image={team2}
-          title="We value excellence and our people excel at that"
-          description="Our team at Medwork is made up of experienced professionals who are
-      passionate about improving patient outcomes. We work closely with
-      the research community and pharmaceutical companies to develop
-      innovative solutions that address the most pressing healthcare
-      challenges."
+          title="Focused & Dedicated"
+          description="Marketing Authorization Holders of medicinal products, Device Manufacturers, and Cosmetics Manufacturers rely on Medwork's expertise. They appreciate our dedication and ability to support our clients in complying with their vigilance responsibilities in Europe."
         />
 
         <div className="my-16 flex flex-col gap-8 whitespace-pre-line px-8 text-xl text-gray-500 xs:px-8">
