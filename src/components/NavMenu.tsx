@@ -22,17 +22,27 @@ function HorizontalNav({ label, href, subCategories }: NavProp) {
 
   return (
     <div className="relative">
-      <Link
-        className={`peer flex items-center py-4 text-sm text-gray-500 hover:text-cyan-500`}
-        aria-label={`By clicking you will be taken to ${label}`}
-        key={href}
-        href={href}
-      >
-        <span className="flex items-center hover:text-cyan-500">
-          {label.toUpperCase()}{" "}
-          {hasSubCategories && <FaAngleDown className="ml-2" />}
-        </span>
-      </Link>
+      {!hasSubCategories ? (
+        <Link
+          className={`peer flex items-center py-4 text-sm text-gray-500 hover:text-cyan-500`}
+          aria-label={`By clicking you will be taken to ${label}`}
+          key={href}
+          href={href}
+        >
+          <span className="flex items-center hover:text-cyan-500">
+            {label.toUpperCase()}
+          </span>
+        </Link>
+      ) : (
+        <div
+          className={`peer flex items-center py-4 text-sm text-gray-500 hover:text-cyan-500`}
+        >
+          <span className="flex items-center hover:text-cyan-500">
+            {label.toUpperCase()}{" "}
+            {hasSubCategories && <FaAngleDown className="ml-2" />}
+          </span>
+        </div>
+      )}
       {hasSubCategories && (
         <div className="absolute right-0 z-10 hidden w-[200px] flex-col border-t-2 border-cyan-500 bg-[#f6f1eb] text-gray-500 shadow-md drop-shadow-lg hover:flex peer-hover:flex">
           {subCategories.map((subCategory) => (

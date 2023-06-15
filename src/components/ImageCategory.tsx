@@ -15,7 +15,7 @@ function ImageCategory({
 }: ImageCategoryProps) {
   return (
     <>
-      <div className="relative hidden h-[515px] max-w-[86em] flex-[0_0_100%] md:block">
+      <div className="relative hidden aspect-w-16 aspect-h-9 h-[515px] w-full max-w-[86em] flex-[0_0_100%] md:block">
         <Image
           src={image}
           className="h-full min-w-full object-cover"

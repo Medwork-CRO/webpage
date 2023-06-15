@@ -47,24 +47,26 @@ function CompanyInfo() {
 
 function CompanyFooter() {
   return (
-    <div className="flex flex-col justify-start gap-2 pb-8 text-sm xs:flex-row border-t  border-white pt-4">
-      <span className="text-cyan-400">
-        © Copyright 2005 - {new Date().getFullYear()} Medwork -
-      </span>
-      <span className="flex gap-2">
-        <span className="text-white">All Rights Reserved</span>
-        <span className="text-cyan-400">|</span>
-        <span className="text-white">
-          Made by{" "}
-          <a
-            href="https://github.com/keybraker"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Keybraker
-          </a>
+    <div className="relative">
+      <div className="flex flex-col justify-start gap-2 border-t border-white pb-8 pt-4  text-sm xs:flex-row">
+        <span className="text-cyan-400">
+          © Copyright 2005 - {new Date().getFullYear()} Medwork -
         </span>
-      </span>
+        <span className="flex gap-2">
+          <span className="text-white">All Rights Reserved</span>
+          <span className="text-cyan-400">|</span>
+          <span className="text-white">
+            Made by{" "}
+            <a
+              href="https://github.com/keybraker"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Keybraker
+            </a>
+          </span>
+        </span>
+      </div>
     </div>
   );
 }
@@ -75,7 +77,7 @@ function Footer() {
       className={`${inter.variable} w-full bg-gradient-to-l from-cyan-600 to-cyan-900 font-sans`}
     >
       <div className="mx-auto flex w-full max-w-[86em] flex-col justify-between px-16">
-        <div className="flex flex-col justify-between py-32 md:flex-row gap-8">
+        <div className="flex flex-col justify-between gap-8 py-32 md:flex-row">
           <div className="flex flex-col gap-6">
             <Logo color="text-white" />
             <span
@@ -121,6 +123,11 @@ function Footer() {
           </div>
         </div>
         <CompanyFooter />
+        <div className="absolute overflow-hidden hidden lg:block">
+          <p className="relative bottom-[-175px] text-[375px] leading-[490px] overflow-hidden opacity-5">
+            forward
+          </p>
+        </div>
       </div>
     </footer>
   );
