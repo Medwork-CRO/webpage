@@ -37,7 +37,7 @@ const ContactForm = () => {
             id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="dark:shadow-sm-light block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
+            className="dark:shadow-sm-light block w-full rounded-lg border border-gray-300 bg-[#eae4dd] p-2.5 text-sm text-gray-900 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
             placeholder="name@email.com"
             required
           />
@@ -54,7 +54,7 @@ const ContactForm = () => {
             id="subject"
             value={subject}
             onChange={(e) => setSubject(e.target.value)}
-            className="dark:shadow-sm-light block w-full rounded-lg border border-gray-300 bg-gray-50 p-3 text-sm text-gray-900 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
+            className="dark:shadow-sm-light block w-full rounded-lg border border-gray-300 bg-[#eae4dd] p-3 text-sm text-gray-900 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
             placeholder="Let us know how we can help you"
             required
           />
@@ -71,7 +71,7 @@ const ContactForm = () => {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             rows={6}
-            className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
+            className="block w-full rounded-lg border border-gray-300 bg-[#eae4dd] p-2.5 text-sm text-gray-900 shadow-sm focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
             placeholder="Leave a comment..."
           ></textarea>
         </div>
@@ -96,36 +96,31 @@ const ContactForm = () => {
 
 const ConnectCard = () => {
   return (
-    <div className="flex items-center justify-center">
-      <div className="m-4 flex h-[356px] w-full flex-col items-center space-x-5 rounded-xl p-8 shadow-md md:m-8 md:max-w-[456px] md:flex-row bg-[#1a2188]">
+    <div className="text: flex items-center justify-center">
+      <div className="m-4 flex h-[356px] w-full flex-col items-center space-x-5 rounded-xl bg-[#1a2188] p-8 text-gray-300 shadow-md md:m-8 md:max-w-[456px] md:flex-row">
         <div className="p-4 md:p-8">
           <Title title="Connect with us" />
           <div className="mx-8 mb-6 mt-8 flex space-x-3">
             <AiOutlinePhone className="h-6 w-6" />
-            <a href="tel:+302109960971" className="text-sm text-gray-300">
+            <a href="tel:+302109960971" className="text-sm">
               (+30) 210 9960971
             </a>
           </div>
           <div className="mx-8 mb-6 flex space-x-3">
             <AiOutlinePhone className="h-6 w-6" />
-            <a href="fax:+302109969578" className="text-sm text-gray-300">
+            <a href="fax:+302109969578" className="text-sm">
               (+30) 210 9969578
             </a>
           </div>
           <div className="mx-8 mb-6 flex space-x-3">
             <AiOutlineMail className="h-6 w-6" />
-            <a
-              href="mailto:medworkinfo@medwork.gr"
-              className="text-sm text-gray-300"
-            >
+            <a href="mailto:medworkinfo@medwork.gr" className="text-sm">
               medworkinfo@medwork.gr
             </a>
           </div>
           <div className="mx-8 flex space-x-3">
             <AiOutlineEnvironment className="h-6 w-6" />
-            <div className="text-sm text-gray-300">
-              Chiou 5, Argyroupoli 16452
-            </div>
+            <div className="text-sm">Chiou 5, Argyroupoli 16452</div>
           </div>
         </div>
         <div className="mx-0 my-2 md:mx-2 md:my-0"></div>
