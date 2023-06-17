@@ -90,7 +90,7 @@ function Header() {
   return (
     <header
       className={`${inter.variable} sticky top-0 z-50 w-full font-sans  ${
-        isScrolled ? "bg-[#f6f1eb] shadow-sm" : "bg-transparent"
+        isScrolled ? "bg-[#f6f1eb] dark:bg-[#2d333b] shadow-sm" : "bg-transparent"
       } transition-all duration-300`}
     >
       <div className="mx-auto flex max-w-[86em] items-center justify-between px-4 lg:px-0 py-6">

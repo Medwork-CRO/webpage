@@ -12,7 +12,9 @@ const inter = Inter({
 
 function App({ Component, pageProps }: AppProps) {
   return (
-    <div className={`${inter.variable} relative w-full bg-[#f6f1eb] font-sans`}>
+    <div
+      className={`${inter.variable} relative w-full bg-[#f6f1eb] font-sans dark:bg-[#2d333b]`}
+    >
       <Head>
         <title>Medwork</title>
         <meta name="title" content="Medwork" />

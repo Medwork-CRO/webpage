@@ -20,7 +20,7 @@ function MemberCard({
           />
         </div>
       </div>
-      <div className="items-top mt-16 flex flex-col text-black">
+      <div className="items-top mt-16 flex flex-col text-black dark:text-white">
         <div className="flex items-center gap-2">
           <h4 className="text-bluePrimary text-xl font-bold">{name}</h4>
           <a
@@ -33,7 +33,7 @@ function MemberCard({
           </a>
         </div>
         <p className="text-base font-normal text-cyan-600">{title}</p>
-        <p className="mt-4 overflow-ellipsis text-lg font-normal text-gray-700 md:text-base">
+        <p className="mt-4 overflow-ellipsis text-lg font-normal text-gray-500 dark:text-gray-400 md:text-base">
           {description}
         </p>
       </div>

@@ -24,7 +24,7 @@ function HorizontalNav({ label, href, subCategories }: NavProp) {
     <div className="relative">
       {!hasSubCategories ? (
         <Link
-          className={`peer flex items-center py-4 text-sm text-gray-500 hover:text-cyan-500`}
+          className={`peer flex items-center py-4 text-sm text-gray-500 hover:text-cyan-500 dark:text-gray-400`}
           aria-label={`By clicking you will be taken to ${label}`}
           key={href}
           href={href}
@@ -35,7 +35,7 @@ function HorizontalNav({ label, href, subCategories }: NavProp) {
         </Link>
       ) : (
         <div
-          className={`peer flex items-center py-4 text-sm text-gray-500 hover:text-cyan-500`}
+          className={`peer flex items-center py-4 text-sm text-gray-500 hover:text-cyan-500 dark:text-gray-400`}
         >
           <span className="flex items-center hover:text-cyan-500">
             {label.toUpperCase()}{" "}
@@ -44,10 +44,10 @@ function HorizontalNav({ label, href, subCategories }: NavProp) {
         </div>
       )}
       {hasSubCategories && (
-        <div className="absolute right-0 z-10 hidden w-[200px] flex-col border-t-2 border-cyan-500 bg-[#f6f1eb] text-gray-500 shadow-md drop-shadow-lg hover:flex peer-hover:flex">
+        <div className="absolute right-0 z-10 hidden w-[200px] flex-col border-t-2 border-cyan-500 bg-[#f6f1eb] text-gray-500 shadow-md drop-shadow-lg hover:flex peer-hover:flex dark:bg-[#2d333b] dark:text-gray-400">
           {subCategories.map((subCategory) => (
             <Link
-              className="px-5 py-3 text-sm hover:bg-[#eae4dd]"
+              className="px-5 py-3 text-sm hover:bg-[#eae4dd] dark:hover:bg-gray-500"
               aria-label={`By clicking you will be taken to ${subCategory.label}`}
               key={subCategory.href}
               href={subCategory.href}

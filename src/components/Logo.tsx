@@ -20,18 +20,21 @@ type Props = PropsWithChildren &
   EmblaOptionsType & { color?: "text-white" | "text-black" | "text-cyan-600" };
 
 function Logo({ children, color = "text-black", ...options }: Props) {
-    return (
-        <Link
-            className="flex items-center gap-4"
-            aria-label="By clicking you will be taken to Home"
-            href="/"
-        >
-            <Image src={medworkLogo} alt="Medwork Logo" width={46} />
-            <div className={`${roboto.className} font-sans text-3xl ${color}`} style={{ fontStyle: 'italic' }}>
-                Medwork
-            </div>
-        </Link>
-    );
+  return (
+    <Link
+      className="flex items-center gap-4"
+      aria-label="By clicking you will be taken to Home"
+      href="/"
+    >
+      <Image src={medworkLogo} alt="Medwork Logo" width={46} />
+      <div
+        className={`${roboto.className} font-sans text-3xl text-[#2d333b] dark:text-[#f6f1eb]`}
+        style={{ fontStyle: "italic" }}
+      >
+        Medwork
+      </div>
+    </Link>
+  );
 }
 
 export default Logo;

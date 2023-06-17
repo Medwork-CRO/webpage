@@ -1,5 +1,6 @@
 import ImageCategory from "@/components/ImageCategory";
 import Logo from "@/components/Logo";
+import PromoCard from "@/components/PromoCard";
 import ProvidedServices from "@/components/ProvidedServices";
 import RoundedButton from "@/components/RoundedButton";
 import Title from "@/components/Title";
@@ -44,20 +45,7 @@ function Home() {
           <ProvidedServices />
         </div>
 
-        <div className="m-2 mt-32 flex h-[26rem] transform flex-col items-center justify-center gap-6 rounded-xl bg-[#1a2188] p-6 text-center text-white sm:p-16 md:h-[32rem] lg:p-56">
-          <Logo color="text-white" />
-          <p className="max-w-[86em] text-2xl font-semibold sm:text-xl md:text-3xl">
-            Want to learn more about Medwork?
-          </p>
-          <p className="text-md max-w-[86em] font-normal sm:text-xl md:text-2xl">
-            We believe in harnessing science for human good. So whether you are
-            a provider, drug developer, hospital, medical researcher or
-            patient—we promise to work tirelessly to bring you trusted
-            information to make clear, confident decisions for a healthier
-            future.
-          </p>
-          <RoundedButton label="GET IN TOUCH" href="contact-us" color="gray" />
-        </div>
+        <PromoCard />
       </div>
     </div>
   );

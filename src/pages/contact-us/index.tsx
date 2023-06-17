@@ -97,18 +97,18 @@ const ContactForm = () => {
 const ConnectCard = () => {
   return (
     <div className="flex items-center justify-center">
-      <div className="m-4 flex h-[356px] w-full flex-col items-center space-x-5 rounded-xl bg-gray-200 p-8 shadow-md dark:bg-gray-500 md:m-8 md:max-w-[456px] md:flex-row">
+      <div className="m-4 flex h-[356px] w-full flex-col items-center space-x-5 rounded-xl p-8 shadow-md md:m-8 md:max-w-[456px] md:flex-row bg-[#1a2188]">
         <div className="p-4 md:p-8">
           <Title title="Connect with us" />
           <div className="mx-8 mb-6 mt-8 flex space-x-3">
             <AiOutlinePhone className="h-6 w-6" />
-            <a href="tel:+302109960971" className="text-sm text-gray-700">
+            <a href="tel:+302109960971" className="text-sm text-gray-300">
               (+30) 210 9960971
             </a>
           </div>
           <div className="mx-8 mb-6 flex space-x-3">
             <AiOutlinePhone className="h-6 w-6" />
-            <a href="fax:+302109969578" className="text-sm text-gray-700">
+            <a href="fax:+302109969578" className="text-sm text-gray-300">
               (+30) 210 9969578
             </a>
           </div>
@@ -116,14 +116,14 @@ const ConnectCard = () => {
             <AiOutlineMail className="h-6 w-6" />
             <a
               href="mailto:medworkinfo@medwork.gr"
-              className="text-sm text-gray-700"
+              className="text-sm text-gray-300"
             >
               medworkinfo@medwork.gr
             </a>
           </div>
           <div className="mx-8 flex space-x-3">
             <AiOutlineEnvironment className="h-6 w-6" />
-            <div className="text-sm text-gray-700">
+            <div className="text-sm text-gray-300">
               Chiou 5, Argyroupoli 16452
             </div>
           </div>
@@ -141,7 +141,7 @@ const ConnectCard = () => {
 
 const Contact = () => {
   return (
-    <section className="bg-white dark:bg-gray-900">
+    <section className="flex flex-col gap-24">
       <ConnectCard />
       <ContactForm />
     </section>
