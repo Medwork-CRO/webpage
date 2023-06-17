@@ -4,10 +4,45 @@ import { Inter } from "@next/font/google";
 import { FaLinkedin } from "@react-icons/all-files/fa/FaLinkedin";
 import { MdEmail } from "@react-icons/all-files/md/MdEmail";
 import { MdLocationOn } from "@react-icons/all-files/md/MdLocationOn";
+import Link from "next/link";
 
 const mail = "medworkinfo@medwork.gr";
 const address = "Greece, Chiou 5, Argyroupoli 164 52";
 const linkedin = "company/medwork";
+
+const services = [
+  {
+    label: "Pharmacovigilance",
+    href: "/services/pharmacovigilance",
+  },
+  {
+    label: "Cosmetovigilance",
+    href: "/services/cosmetovigilance",
+  },
+  {
+    label: "Quality Management",
+    href: "/services/quality-management",
+  },
+  {
+    label: "Materiovigilance",
+    href: "/services/materiovigilance",
+  },
+];
+
+const about = [
+  {
+    label: "About Us",
+    href: "/about/about-us",
+  },
+  {
+    label: "Our Team",
+    href: "/about/our-team",
+  },
+  {
+    label: "Careers",
+    href: "/about/careers",
+  },
+];
 
 const inter = Inter({
   subsets: ["latin"],
@@ -95,18 +130,34 @@ function Footer() {
           <div className="min-w-96 flex flex-col gap-6 text-left text-white">
             <span className="text-xl font-semibold text-white">SERVICES</span>
             <div className="text-md flex flex-col gap-2 text-cyan-400">
-              <span>Pharmacovigilance</span>
-              <span>Cosmetovigilance</span>
-              <span>Quality Management</span>
-              <span>Materiovigilance</span>
+              {services.map((service, i) => (
+                <Link
+                  aria-label={`By clicking you will be taken to ${service.label}`}
+                  key={i}
+                  href={service.href}
+                >
+                  <span className="flex items-center hover:text-cyan-500">
+                    {service.label}
+                  </span>
+                </Link>
+              ))}
             </div>
           </div>
 
           <div className="min-w-96 flex flex-col gap-6 text-left text-white">
             <span className="text-xl font-semibold text-white">ABOUT US</span>
             <div className="text-md flex flex-col gap-2 text-cyan-400">
-              <span>Our Team</span>
-              <span>Careers</span>
+              {about.map((a, i) => (
+                <Link
+                  aria-label={`By clicking you will be taken to ${a.label}`}
+                  key={i}
+                  href={a.href}
+                >
+                  <span className="flex items-center hover:text-cyan-500">
+                    {a.label}
+                  </span>
+                </Link>
+              ))}
             </div>
           </div>
 
@@ -123,11 +174,11 @@ function Footer() {
           </div>
         </div>
         <CompanyFooter />
-        <div className="absolute overflow-hidden hidden lg:block">
-          <p className="relative bottom-[-175px] text-[375px] leading-[490px] overflow-hidden opacity-5">
+        {/* <div className="absolute hidden overflow-hidden lg:block ">
+          <div className="relative bottom-[-175px] select-none overflow-hidden text-[375px] leading-[490px] opacity-5">
             forward
-          </p>
-        </div>
+          </div>
+        </div> */}
       </div>
     </footer>
   );

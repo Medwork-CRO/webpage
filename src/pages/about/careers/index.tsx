@@ -1,11 +1,13 @@
 import ImageCategory from "@/components/ImageCategory";
 import RoundedButton from "@/components/RoundedButton";
+import Title from "@/components/Title";
 import ai from "@assets/team-photos/ai.webp";
 import ai1 from "@assets/team-photos/ai1.webp";
 import ai2 from "@assets/team-photos/ai2.webp";
 import ai4 from "@assets/team-photos/ai4.webp";
 import team3 from "@assets/team-photos/team3.jpg";
 import Image from "next/image";
+import Link from "next/link";
 
 function Cosmetovigilance() {
   return (
@@ -88,7 +90,7 @@ function Cosmetovigilance() {
             greater way to supercharge your career than to join a company that
             is growing exponentially. We are always looking for talented
             individuals to join our team. If you are interested in working with
-            us, please send your CV to .
+            us, please send your CV to.
           </p>
           <p className="font-thin italic">
             <b>90%</b> of our employees have a positive trajectory in their
@@ -97,7 +99,37 @@ function Cosmetovigilance() {
           </p>
         </div>
 
-        <RoundedButton label="GET IN TOUCH" href="" color="orange" />
+        <Title title={"Job Offerings"} />
+        <div className="my-16 flex flex-col gap-2 whitespace-pre-line text-2xl font-thin text-blue-800 xs:px-24">
+          <div>
+            You can see all our open job offerings @{" "}
+            <Link
+              className="font-bold"
+              aria-label={`By clicking you will be taken to kariera.gr`}
+              key={"kariera"}
+              href={"https://www.kariera.gr/en/companies/3531"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {"Kariera"}
+            </Link>
+          </div>
+          <div>
+            You can see all our open job offerings @{" "}
+            <Link
+              className="font-bold"
+              aria-label={`By clicking you will be taken to linkedIn.gr`}
+              key={"linkedIn"}
+              href={"https://www.linkedin.com/company/medwork/jobs/"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {"LinkedIn"}
+            </Link>
+          </div>
+        </div>
+
+        <RoundedButton label="GET IN TOUCH" href="/contact-us" color="orange" />
 
         <div className="mt-8"></div>
       </div>

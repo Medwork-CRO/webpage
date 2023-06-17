@@ -39,7 +39,7 @@ function App({ Component, pageProps }: AppProps) {
         />
       </Head>
       <Header />
-      <main className="flex flex-col justify-center gap-4 place-self-center">
+      <main className="flex flex-col justify-center place-self-center">
         <Component {...pageProps} />
         <Footer />
       </main>
