@@ -20,21 +20,21 @@ const images: ImageData[] = [
     imageTitle: "COSMETICOVIGILANCE",
     readMoreLink: "/services/cosmetovigilance",
     imageDescription:
-      "CosmeticoVigilance is our comprehensive suite of services geared towards ensuring the safety, compliance, and quality of cosmetic products. We adhere to rigorous industry standards and global regulations.",
+      "Cosmeticovigilance is our comprehensive suite of services geared towards ensuring the safety, compliance, and quality of cosmetic products. We adhere to rigorous industry standards and global regulations.",
   },
   {
     imageData: materiovigilance,
     imageTitle: "MATERIOVIGILANCE",
     readMoreLink: "/services/materiovigilance",
     imageDescription:
-      "Our MaterioVigilance services employ advanced monitoring techniques to safeguard the performance and safety of medical devices. We provide thorough post-market surveillance and regulatory support.",
+      "Our Materiovigilance services employ advanced monitoring techniques to safeguard the performance and safety of medical devices. We provide thorough post-market surveillance and regulatory support.",
   },
   {
     imageData: pharmacovigilance,
     imageTitle: "PHARMACOVIGILANCE",
     readMoreLink: "/services/pharmacovigilance",
     imageDescription:
-      "PharmacoVigilance is our dedicated service ensuring the safety, efficacy, and risk/benefit balance of pharmaceutical products. We provide detailed drug safety and adverse event reporting services.",
+      "Pharmacovigilance is our dedicated service ensuring the safety, efficacy, and risk/benefit balance of pharmaceutical products. We provide detailed drug safety and adverse event reporting services.",
   },
   {
     imageData: qualityManagement,
