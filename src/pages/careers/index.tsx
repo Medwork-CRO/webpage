@@ -11,6 +11,12 @@ import linkedin from "@assets/companies/linkedin_icon.png";
 
 import Image from "next/image";
 import Link from "next/link";
+import DisplayParagraphs from "@/components/DisplayParagraphs";
+
+const paragraphs = [
+  "We have proudly established ourselves as the leading and most esteemed Contract Research Organization (CRO) in Greece.",
+  "Our commitment to making a significant difference propelled us to expand our operations to Cyprus. Currently, we have extended our sphere of influence to encompass the whole of Europe, always maintaining our dedication to high quality service.",
+];
 
 function Cosmetovigilance() {
   return (
@@ -26,23 +32,11 @@ function Cosmetovigilance() {
       challenges."
       />
 
-      <div className="flex max-w-[86em] flex-col items-center gap-8 whitespace-pre-line px-6 text-xl text-gray-500 sm:px-8">
+      <div className="flex max-w-[86em] flex-col items-center gap-8 whitespace-pre-line px-6 text-xl text-gray-500 dark:text-gray-400 sm:px-8">
         <Title title={"CAREERS"} />
-        <div className="flex flex-col gap-8 whitespace-pre-line text-xl text-gray-500 xs:px-24 sm:text-2xl md:text-3xl">
-          <p className="font-semibold">
-            We have proudly established ourselves as the leading and most
-            esteemed Contract Research Organization (CRO) in Greece.
-          </p>
-          <p className="">
-            Our commitment to making a significant difference propelled us to
-            expand our operations to Cyprus. Currently, we have extended our
-            sphere of influence to encompass the whole of Europe, always
-            maintaining our dedication to high quality service and respect for
-            all stakeholders.
-          </p>
-        </div>
+        <DisplayParagraphs paragraphs={paragraphs} />
 
-        <div className="mt-16 flex flex-col justify-between gap-4 text-gray-500 md:flex-row">
+        <div className="mt-16 flex flex-col justify-between gap-4 text-gray-500 dark:text-gray-400 md:flex-row">
           <div className="mb-8 mr-8 border-b-2 border-r-0 border-b-gray-500 border-r-gray-500 pb-8 pr-8 md:border-b-0 md:border-r-2">
             <div className="flex w-56 flex-col">
               <span className="number mb-4 text-4xl font-bold text-cyan-500">
@@ -103,7 +97,7 @@ function Cosmetovigilance() {
             You can see all our open job offerings
             <div className="mt-4 flex flex-col justify-center gap-6 text-center">
               <Link
-                className="flex flex-row items-center justify-center gap-4 rounded-xl border-2 border-cyan-800 bg-cyan-500 p-2 font-bold hover:bg-cyan-600 text-gray-200"
+                className="flex flex-row items-center justify-center gap-4 rounded-xl border-2 border-cyan-800 bg-cyan-500 p-2 font-bold text-gray-200 hover:bg-cyan-600"
                 aria-label={`By clicking you will be taken to kariera.gr`}
                 key={"kariera"}
                 href={"https://www.kariera.gr/en/companies/3531"}
@@ -118,7 +112,7 @@ function Cosmetovigilance() {
                 {"Kariera"}
               </Link>
               <Link
-                className="flex flex-row items-center justify-center gap-4 rounded-xl border-2 border-cyan-800 bg-cyan-500 p-2 font-bold hover:bg-cyan-600 text-gray-200"
+                className="flex flex-row items-center justify-center gap-4 rounded-xl border-2 border-cyan-800 bg-cyan-500 p-2 font-bold text-gray-200 hover:bg-cyan-600"
                 aria-label={`By clicking you will be taken to linkedIn.gr`}
                 key={"linkedIn"}
                 href={"https://www.linkedin.com/company/medwork/jobs/"}

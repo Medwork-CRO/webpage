@@ -11,7 +11,7 @@ function Pharmacovigilance() {
       />
 
       <div className="mx-auto flex max-w-[86em] flex-col items-center justify-between">
-        <div className="mb-16 flex flex-col gap-8 whitespace-pre-line px-8 text-xl text-gray-500 xs:px-24">
+        <div className="mb-16 flex flex-col gap-8 whitespace-pre-line px-8 text-xl text-gray-500 dark:text-gray-400 xs:px-24">
           <p className="font-semibold">
             We have an extensive Pharmacovigilance Department composed of a team
             of 21 pharmacovigilance professionals and four medical advisors.

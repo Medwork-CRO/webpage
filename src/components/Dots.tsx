@@ -4,6 +4,7 @@ type Props = {
     itemsLength: number;
     selectedIndex: number;
 };
+
 const Dots = ({ itemsLength, selectedIndex }: Props) => {
     const arr = new Array(itemsLength).fill(0);
     return (
@@ -24,4 +25,5 @@ const Dots = ({ itemsLength, selectedIndex }: Props) => {
         </div>
     );
 };
+
 export default Dots;
