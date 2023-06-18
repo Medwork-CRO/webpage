@@ -14,7 +14,7 @@ function PromoCard() {
         promise to work tirelessly to bring you trusted information to make
         clear, confident decisions for a healthier future.
       </p>
-      <RoundedButton label="GET IN TOUCH" href="contact-us" color="gray" />
+      <RoundedButton label="GET IN TOUCH" href="/contact-us" color="gray" />
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import Title from "@/components/Title";
+import Link from "next/link";
 import { useState } from "react";
 import {
   AiOutlineEnvironment,
@@ -19,7 +20,7 @@ const ContactForm = () => {
   return (
     <div className="w-full max-w-5xl">
       <Title title="Contact Us" />
-      <p className="mb-8 text-center font-light text-gray-500 dark:text-gray-400 sm:text-xl lg:mb-16">
+      <p className="mb-8 text-left font-light text-gray-500 dark:text-gray-400 sm:text-xl lg:mb-16">
         You are always welcome to send us your CV and tell us about yourself.
       </p>
       <form onSubmit={handleSubmit} className="space-y-8">
@@ -102,34 +103,56 @@ const ConnectCard = () => {
   return (
     <div className="w-full max-w-5xl">
       <Title title="Connect with us" />
-      <div className="mx-auto flex h-full flex-col items-center gap-8 rounded-xl bg-cyan-800 p-4 md:p-8">
+      <div className="mx-auto flex h-full flex-col items-start gap-8 rounded-xl bg-cyan-800 p-4 md:p-8">
         <div className="text-[#f6f1eb]">
-          <div className="mx-8 mb-6 mt-8 flex space-x-3">
+          <div className="mb-6 mt-8 flex space-x-3">
             <AiOutlinePhone className="h-6 w-6" />
-            <a href="tel:+302109960971" className="text-sm">
+            <Link
+              href="tel:+302109960971"
+              className="text-sm"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               (+30) 210 9960971
-            </a>
+            </Link>
           </div>
-          <div className="mx-8 mb-6 flex space-x-3">
+          <div className="mb-6 flex space-x-3">
             <AiOutlinePhone className="h-6 w-6" />
-            <a href="fax:+302109969578" className="text-sm">
+            <Link
+              href="fax:+302109969578"
+              className="text-sm"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               (+30) 210 9969578
-            </a>
+            </Link>
           </div>
-          <div className="mx-8 mb-6 flex space-x-3">
+          <div className="mb-6 flex space-x-3">
             <AiOutlineMail className="h-6 w-6" />
-            <a href="mailto:medworkinfo@medwork.gr" className="text-sm">
+            <Link
+              href="mailto:medworkinfo@medwork.gr"
+              className="text-sm"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               medworkinfo@medwork.gr
-            </a>
+            </Link>
           </div>
-          <div className="mx-8 flex space-x-3">
+          <div className="flex space-x-3">
             <AiOutlineEnvironment className="h-6 w-6" />
-            <div className="text-sm">Chiou 5, Argyroupoli 16452</div>
+            <Link
+              href="https://goo.gl/maps/KDKk5piro9Cb6AXG7"
+              className="text-sm"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Chiou 5, Argyroupoli 16452
+            </Link>
           </div>
         </div>
         <iframe
           src="https://maps.google.com/maps?q=Chiou5,Argyroupoli16452&t=&z=13&ie=UTF8&iwloc=&output=embed"
-          className="rounded-lg shadow-md w-full"
+          className="w-full rounded-lg shadow-md"
           allowFullScreen
         ></iframe>
       </div>
