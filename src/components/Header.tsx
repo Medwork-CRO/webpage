@@ -13,22 +13,8 @@ const inter = Inter({
 
 const navMenu: NavProp[] = [
   {
-    label: "About",
-    href: "/about",
-    subCategories: [
-      {
-        label: "About Us",
-        href: "/about/about-us",
-      },
-      {
-        label: "Our Team",
-        href: "/about/our-team",
-      },
-      {
-        label: "Careers",
-        href: "/about/careers",
-      },
-    ],
+    label: "About Us",
+    href: "/about-us",
   },
   {
     label: "Services",
@@ -39,6 +25,10 @@ const navMenu: NavProp[] = [
         href: "/services/pharmacovigilance",
       },
       {
+        label: "Outsourcing",
+        href: "/services/outsourcing",
+      },
+      {
         label: "Cosmetovigilance",
         href: "/services/cosmetovigilance",
       },
@@ -47,10 +37,22 @@ const navMenu: NavProp[] = [
         href: "/services/quality-management",
       },
       {
+        label: "Training",
+        href: "/services/training",
+      },
+      {
         label: "Materiovigilance",
         href: "/services/materiovigilance",
       },
     ],
+  },
+  {
+    label: "People",
+    href: "/people",
+  },
+  {
+    label: "Careers",
+    href: "/careers",
   },
   {
     label: "Contact Us",
@@ -86,10 +88,12 @@ function Header() {
   return (
     <header
       className={`${inter.variable} sticky top-0 z-50 w-full font-sans  ${
-        isScrolled ? "bg-[#f6f1eb] dark:bg-[#2d333b] shadow-sm" : "bg-transparent"
+        isScrolled
+          ? "bg-[#f6f1eb] shadow-sm dark:bg-[#2d333b]"
+          : "bg-transparent"
       } transition-all duration-300`}
     >
-      <div className="mx-auto flex max-w-[86em] items-center justify-between px-4 lg:px-0 py-6">
+      <div className="mx-auto flex max-w-[86em] items-center justify-between px-4 py-6 lg:px-0">
         <Logo />
         <button
           className="block text-xl md:hidden"

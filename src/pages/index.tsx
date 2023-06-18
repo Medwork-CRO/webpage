@@ -8,12 +8,12 @@ function Home() {
     <div className="mx-auto flex flex-col items-center justify-between gap-10">
       <ImageCategory
         image={team2}
-        title="Focused & Dedicated"
-        description="Marketing Authorization Holders of medicinal products, Device Manufacturers, and Cosmetics Manufacturers rely on Medwork's expertise. They appreciate our dedication and ability to support our clients in complying with their vigilance responsibilities in Europe."
+        title="A European Pharmacovigilance Expert based in Athens with a focus in Greece and Cyprus."
+        description="We are a highly proficient and extensively resourced corporation specializing tackling complex pharmacovigilance projects in a compact organisation able and willing to take care of projects and clients"
       />
 
       <div className="flex max-w-[86em] flex-col items-center gap-8 text-gray-500">
-        <div className="flex flex-col gap-8 whitespace-pre-line text-xl sm:text-2xl md:text-3xl text-gray-500 px-4 xs:px-8">
+        <div className="flex flex-col gap-8 whitespace-pre-line px-4 text-xl text-gray-500 xs:px-8 sm:text-2xl md:text-3xl">
           <p className="font-semibold">
             Medwork is a Contract Research Organization (CRO) operating in
             Southeast Europe, which since 2005 offers a wide range of
