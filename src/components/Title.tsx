@@ -7,14 +7,19 @@ const inter = Spectral({
 });
 
 type TitleProps = {
+  colour?: string;
   title: string;
 };
 
-function Title({ title }: TitleProps) {
+function Title({
+  title,
+  colour = "text-gray-500 dark:text-[#f6f1eb]",
+}: TitleProps) {
   return (
     <div className="flex items-center justify-center">
       <span
-        className={`${inter.variable} dark:text-white text-xl font-semibold text-black xs:text-3xl`}
+        className={`my-4 text-center text-3xl font-bold ${colour}`}
+        // className={`${inter.variable} dark:text-white text-xl font-semibold text-gray-400 xs:text-3xl`}
       >
         {/*  text-cyan-500 */}
         {/* &#8226;  */}

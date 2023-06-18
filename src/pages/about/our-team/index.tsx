@@ -73,39 +73,40 @@ const membersInfo: MemberInfo[] = [
 
 function OurTeam() {
   return (
-    <div className="mx-auto flex max-w-[86em] flex-col items-center justify-between">
-    {/* <div className="flex flex-col justify-center gap-4 place-self-center"> */}
+    <div className="mx-auto flex flex-col items-center justify-between">
+      {/* <div className="flex flex-col justify-center gap-4 place-self-center"> */}
       <ImageCategory
         image={team1}
         title="Meet the people behind the answers."
         description="We believe in a better world when it comes to health. It is our responsibility to make it."
       />
-      <div
-        className={`flex flex-col gap-8 whitespace-pre-line px-6 text-xl text-gray-500 sm:px-8 mt-16`}
-      >
-        <Title title={"OUR TEAM"} />
-        <p className="font-semibold">
-          Medwork is a leading pharmaceutical company, specializing in clinical,
-          drug safety, and review services for global pharmaceutical,
-          biotechnology, and medical device companies. Our team of experts
-          brings a wealth of experience and a comprehensive portfolio of
-          solutions, including clinical research support, life science
-          consulting, R&D technology, pharmacovigilance, and IRB/IBC services.
-          We are committed to delivering optimal outcomes for our clients trials
-          and improving patient care.
-        </p>
-        <p>
-          With our end-to-end global clinical services and advanced technology
-          solutions, Medwork is dedicated to serving the needs of clinical
-          research and patients worldwide. Our unwavering dedication, coupled
-          with our commitment to excellence, drives us to continually innovate
-          and provide the highest standard of service. We strive to optimize the
-          research and development process, ensure drug safety, and facilitate
-          efficient regulatory review, all with the ultimate goal of advancing
-          healthcare through exceptional pharmaceutical services. Partner with
-          Medwork for trusted expertise and a customer-centric approach in the
-          ever-evolving pharmaceutical industry.
-        </p>
+
+      <div className="mt-16 flex max-w-[86em] flex-col items-center gap-8 whitespace-pre-line px-6 text-xl text-gray-500 sm:px-8">
+        <Title title={"OUR TEAM"} />{" "}
+        <div className="flex flex-col gap-8 whitespace-pre-line text-xl sm:text-2xl md:text-3xl text-gray-500 xs:px-24">
+          <p className="font-semibold">
+            Medwork is a leading pharmaceutical company, specializing in
+            clinical, drug safety, and review services for global
+            pharmaceutical, biotechnology, and medical device companies. Our
+            team of experts brings a wealth of experience and a comprehensive
+            portfolio of solutions, including clinical research support, life
+            science consulting, R&D technology, pharmacovigilance, and IRB/IBC
+            services. We are committed to delivering optimal outcomes for our
+            clients trials and improving patient care.
+          </p>
+          <p>
+            With our end-to-end global clinical services and advanced technology
+            solutions, Medwork is dedicated to serving the needs of clinical
+            research and patients worldwide. Our unwavering dedication, coupled
+            with our commitment to excellence, drives us to continually innovate
+            and provide the highest standard of service. We strive to optimize
+            the research and development process, ensure drug safety, and
+            facilitate efficient regulatory review, all with the ultimate goal
+            of advancing healthcare through exceptional pharmaceutical services.
+            Partner with Medwork for trusted expertise and a customer-centric
+            approach in the ever-evolving pharmaceutical industry.
+          </p>{" "}
+        </div>
       </div>
       <div className="my-12 grid grid-cols-1 gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {membersInfo.map((memberInfo, i) => (

@@ -12,13 +12,11 @@ function MemberCard({
   return (
     <div className="flex w-[20rem] flex-col p-2 sm:p-4 md:p-6 lg:p-8">
       <div className="flex h-32 w-full justify-center rounded-xl bg-cover">
-        <div className="flex h-[136px] w-[136px] items-center justify-center rounded-full border-[4px]">
-          <Image
-            className="h-[136px] w-[136px] rounded-full border-2 border-cyan-600 object-cover antialiased"
-            src={image}
-            alt={title}
-          />
-        </div>
+        <Image
+          className="h-[136px] w-[136px] rounded-full border-2 border-cyan-600 object-cover"
+          src={image}
+          alt={title}
+        />
       </div>
       <div className="items-top mt-16 flex flex-col text-black dark:text-white">
         <div className="flex items-center gap-2">

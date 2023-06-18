@@ -53,10 +53,6 @@ const navMenu: NavProp[] = [
     ],
   },
   {
-    label: "FAQ",
-    href: "/faq",
-  },
-  {
     label: "Contact Us",
     href: "/contact-us",
   },

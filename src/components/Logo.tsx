@@ -17,9 +17,15 @@ const roboto = Roboto({
 });
 
 type Props = PropsWithChildren &
-  EmblaOptionsType & { color?: "text-white" | "text-black" | "text-cyan-600" };
+  EmblaOptionsType & { colour?: "text-white" | "text-black" | "text-cyan-500" };
 
-function Logo({ children, color = "text-black", ...options }: Props) {
+function Logo({ children, colour: colour = "text-black", ...options }: Props) {
+  const colourToDisplay =
+    colour === "text-black"
+      ? "text-[#2d333b] dark:text-[#f6f1eb]"
+      : colour === "text-white"
+      ? "dark:text-[#2d333b] text-[#f6f1eb]"
+      : "text-cyan-600";
   return (
     <Link
       className="flex items-center gap-4"
@@ -28,7 +34,7 @@ function Logo({ children, color = "text-black", ...options }: Props) {
     >
       <Image src={medworkLogo} alt="Medwork Logo" width={46} />
       <div
-        className={`${roboto.className} font-sans text-3xl text-[#2d333b] dark:text-[#f6f1eb]`}
+        className={`${roboto.className} font-sans text-3xl ${colourToDisplay}`}
         style={{ fontStyle: "italic" }}
       >
         Medwork

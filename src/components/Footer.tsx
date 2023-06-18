@@ -112,9 +112,9 @@ function Footer() {
       className={`${inter.variable} w-full bg-gradient-to-l from-cyan-500 to-cyan-800 dark:from-cyan-600 dark:to-cyan-900 font-sans`}
     >
       <div className="mx-auto flex w-full max-w-[86em] flex-col justify-between px-16">
-        <div className="flex flex-col justify-between gap-8 py-32 md:flex-row">
+        <div className="flex flex-col justify-between gap-8 py-16 md:flex-row">
           <div className="flex flex-col gap-6">
-            <Logo color="text-white" />
+            <Logo colour="text-cyan-500" />
             <span
               className={
                 "max-w-sm whitespace-pre-line text-left text-xl text-cyan-400"

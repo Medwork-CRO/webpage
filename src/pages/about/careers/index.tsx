@@ -14,7 +14,7 @@ import Link from "next/link";
 
 function Cosmetovigilance() {
   return (
-    <div className="flex flex-col justify-center gap-4 place-self-center">
+    <div className="mx-auto flex flex-col items-center justify-between gap-10">
       <ImageCategory
         textSide="right"
         image={team3}
@@ -26,8 +26,9 @@ function Cosmetovigilance() {
       challenges."
       />
 
-      <div className="mx-4 mt-16 flex max-w-[86em] flex-col items-center justify-between md:mx-2">
-        <div className="mb-16 flex flex-col gap-8 whitespace-pre-line text-3xl text-gray-500 xs:px-24">
+      <div className="flex max-w-[86em] flex-col items-center gap-8 whitespace-pre-line px-6 text-xl text-gray-500 sm:px-8">
+        <Title title={"CAREERS"} />
+        <div className="flex flex-col gap-8 whitespace-pre-line text-xl text-gray-500 xs:px-24 sm:text-2xl md:text-3xl">
           <p className="font-semibold">
             We have proudly established ourselves as the leading and most
             esteemed Contract Research Organization (CRO) in Greece.
@@ -41,28 +42,24 @@ function Cosmetovigilance() {
           </p>
         </div>
 
-        <div className="flex flex-col justify-between gap-4 text-black md:flex-row">
-          <div className="mb-8 mr-8 border-b-2 border-r-0 border-b-black border-r-black pb-8 pr-8 md:border-b-0 md:border-r-2">
+        <div className="mt-16 flex flex-col justify-between gap-4 text-gray-500 md:flex-row">
+          <div className="mb-8 mr-8 border-b-2 border-r-0 border-b-gray-500 border-r-gray-500 pb-8 pr-8 md:border-b-0 md:border-r-2">
             <div className="flex w-56 flex-col">
               <span className="number mb-4 text-4xl font-bold text-cyan-500">
                 90%
               </span>
-              <span className="subtext text-gray-600">
-                of employees are
-                <br />
-                <strong>women</strong>
+              <span className="subtext text-gray-600 dark:text-gray-400">
+                of employees are <strong>women</strong>
               </span>
             </div>
           </div>
-          <div className="mb-8 mr-8 border-b-2 border-r-0 border-b-black border-r-black pb-8 pr-8 md:border-b-0 md:border-r-2">
+          <div className="mb-8 mr-8 border-b-2 border-r-0 border-b-gray-500 border-r-gray-500 pb-8 pr-8 md:border-b-0 md:border-r-2">
             <div className="flex w-56 flex-col">
               <span className="number mb-4 text-4xl font-bold text-cyan-500">
                 80%
               </span>
-              <span className="subtext text-gray-600">
-                of employees are happy after
-                <br />
-                <strong>2 years</strong>
+              <span className="subtext text-gray-600 dark:text-gray-400">
+                of employees are happy after <strong>2 years</strong>
               </span>
             </div>
           </div>
@@ -71,10 +68,8 @@ function Cosmetovigilance() {
               <span className="number mb-4 text-4xl font-bold text-cyan-500">
                 84%
               </span>
-              <span className="subtext text-gray-600">
-                of employees has at least one
-                <br />
-                <strong>degree</strong>
+              <span className="subtext text-gray-600 dark:text-gray-400">
+                of employees has at least one <strong>degree</strong>
               </span>
             </div>
           </div>
@@ -87,7 +82,7 @@ function Cosmetovigilance() {
           <Image src={ai4} alt="AI" className="h-48 w-48 object-cover" />
         </div>
 
-        <div className="mb-16 flex flex-col gap-8 whitespace-pre-line text-2xl text-blue-800 dark:text-blue-400 xs:px-24">
+        <div className="flex flex-col gap-8 whitespace-pre-line text-2xl text-blue-800 dark:text-blue-400 xs:px-24">
           <p className="font-thin">
             Medwork values people and people value their future. There is no
             greater way to supercharge your career than to join a company that
@@ -102,13 +97,13 @@ function Cosmetovigilance() {
           </p>
         </div>
 
-        <Title title={"Job Offerings"} />
-        <div className="my-16 flex flex-col gap-2 whitespace-pre-line text-2xl font-thin text-cyan-800 dark:text-cyan-400 xs:px-24">
+        <Title title={"JOB OFFERINGS"} />
+        <div className="my-16 flex flex-col gap-2 whitespace-pre-line text-2xl font-thin text-cyan-600 dark:text-cyan-400 xs:px-24">
           <div>
             You can see all our open job offerings
-            <div className="mt-4 flex flex-col justify-center text-center gap-6">
+            <div className="mt-4 flex flex-col justify-center gap-6 text-center">
               <Link
-                className="flex flex-row items-center justify-center gap-4 font-bold border-2 rounded-xl p-2 border-cyan-800 hover:bg-cyan-600"
+                className="flex flex-row items-center justify-center gap-4 rounded-xl border-2 border-cyan-800 bg-cyan-500 p-2 font-bold hover:bg-cyan-600 text-gray-200"
                 aria-label={`By clicking you will be taken to kariera.gr`}
                 key={"kariera"}
                 href={"https://www.kariera.gr/en/companies/3531"}
@@ -123,7 +118,7 @@ function Cosmetovigilance() {
                 {"Kariera"}
               </Link>
               <Link
-                className="flex flex-row items-center justify-center gap-4 font-bold border-2 rounded-xl p-2 border-cyan-800 hover:bg-cyan-600"
+                className="flex flex-row items-center justify-center gap-4 rounded-xl border-2 border-cyan-800 bg-cyan-500 p-2 font-bold hover:bg-cyan-600 text-gray-200"
                 aria-label={`By clicking you will be taken to linkedIn.gr`}
                 key={"linkedIn"}
                 href={"https://www.linkedin.com/company/medwork/jobs/"}

@@ -15,7 +15,7 @@ function ImageCategory({
 }: ImageCategoryProps) {
   return (
     <>
-      <div className="relative hidden aspect-w-16 aspect-h-9 h-max-[515px] h-min-[515px] w-full max-w-[86em] flex-[0_0_100%] md:block text-white">
+      <div className="relative hidden aspect-w-16 aspect-h-9 h-max-[515px] h-min-[515px] w-full max-w-[86em] flex-[0_0_100%] md:block">
         <Image
           src={image}
           className="h-full min-w-full object-cover"
@@ -30,7 +30,7 @@ function ImageCategory({
         ></div>
 
         <div
-          className={`absolute top-3/4 z-20 flex w-1/2 -translate-y-1/2 transform flex-col justify-center gap-8 px-8 md:px-12 lg:px-24 ${
+          className={`absolute text-white top-3/4 z-20 flex w-1/2 -translate-y-1/2 transform flex-col justify-center gap-8 px-8 md:px-12 lg:px-24 ${
             !textSide || textSide === "left"
               ? "text-left"
               : "left-1/2 text-right"
@@ -53,7 +53,7 @@ function ImageCategory({
             <div className="md:hidden">
               <Image src={image} alt="Image for mobile" className="" />
             </div>
-            <div className="mt-8 md:mt-0">
+            <div className="mt-8 md:mt-0 text-white">
               <h1 className="mb-4 text-4xl italic">{title}</h1>
               <p className="mb-4 text-lg">{description}</p>
             </div>
