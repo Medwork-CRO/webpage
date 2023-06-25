@@ -87,11 +87,10 @@ function Header() {
 
   return (
     <header
-      className={`${inter.variable} sticky top-0 z-50 w-full font-sans  ${
-        isScrolled
+      className={`${inter.variable} sticky top-0 z-50 w-full font-sans  ${isScrolled
           ? "bg-[#f6f1eb] shadow-sm dark:bg-[#2d333b]"
           : "bg-transparent"
-      } transition-all duration-300`}
+        } transition-all duration-300`}
     >
       <div className="mx-auto flex max-w-[86em] items-center justify-between px-4 py-6 lg:px-0">
         <Logo />
@@ -105,7 +104,7 @@ function Header() {
           <NavMenu nav={navMenu} />
         </div>
       </div>
-      <div className="block md:hidden">
+      <div className="shadow-xl block md:hidden">
         <NavHamburger nav={navMenu} isOpen={isOpen} />
       </div>
     </header>

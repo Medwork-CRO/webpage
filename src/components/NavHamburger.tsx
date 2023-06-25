@@ -14,7 +14,7 @@ export type NavHamburgerProp = {
 
 function VerticalNav({ label, href, subCategories }: NavProp) {
   const [isClicked, setIsClicked] = useState(false);
-  
+
   const hasSubCategories = subCategories && subCategories.length > 0;
 
   return (
