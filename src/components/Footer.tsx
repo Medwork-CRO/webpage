@@ -109,9 +109,9 @@ function CompanyFooter() {
 function Footer() {
   return (
     <footer
-      className={`${inter.variable} w-full bg-gradient-to-l from-cyan-500 to-cyan-800 dark:from-cyan-600 dark:to-cyan-900 font-sans`}
+      className={`${inter.variable} w-full bg-gradient-to-l from-cyan-500 to-cyan-800 dark:from-cyan-600 dark:to-cyan-900 font-sans px-8`}
     >
-      <div className="mx-auto flex w-full max-w-[86em] flex-col justify-between px-16">
+      <div className="mx-auto flex w-full max-w-[86em] flex-col justify-between px-0 sm:px-8 md:px-16 ">
         <div className="flex flex-col justify-between gap-8 py-16 md:flex-row">
           <div className="flex flex-col gap-6">
             <Logo colour="text-cyan-500" />
