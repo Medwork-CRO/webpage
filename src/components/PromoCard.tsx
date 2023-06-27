@@ -3,8 +3,8 @@ import RoundedButton from "./RoundedButton";
 
 function PromoCard() {
   return (
-    <div className="my-8 flex sm:h-[26rem] max-w-5xl transform flex-col items-center justify-center gap-6 rounded-xl bg-[#1a2188] px-12 py-20 text-center text-white sm:p-16 md:h-[32rem] lg:p-56">
-      <Logo colour="text-cyan-500" />
+    <div className="my-8 flex sm:h-[26rem] max-w-5xl transform flex-col items-center justify-center gap-6 rounded-xl bg-cyan-600 px-12 py-20 text-center text-white sm:p-16 md:h-[32rem] lg:p-56">
+      <Logo />
       <p className="max-w-[86em] text-2xl font-semibold sm:text-xl md:text-3xl">
         Want to learn more about Medwork?
       </p>

@@ -32,7 +32,7 @@ const paragraphs = [
 
 function Home() {
   return (
-    <div className="mx-auto flex flex-col items-center justify-between gap-10">
+    <div className="mx-auto flex flex-col items-center justify-between">
       {/* <ImageCategory
         image={team2}
         title="A European Pharmacovigilance Expert based in Athens with a focus in Greece and Cyprus."

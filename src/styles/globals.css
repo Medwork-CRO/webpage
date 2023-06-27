@@ -107,3 +107,7 @@ a {
     font-family: Helvetica;
   }
 } */
+
+.text-stroke-3 {
+  text-shadow: -0.2px -0.2px 0 rgb(74, 74, 74), 0.2px -0.2px 0 rgb(74, 74, 74), -0.2px 0.2px 0 rgb(74, 74, 74), 0.2px 0.2px 0 rgb(74, 74, 74);
+}

@@ -5,60 +5,12 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import NavHamburger, { NavProp } from "./NavHamburger";
 import NavMenu from "./NavMenu";
+import { navMenu } from "./HeaderLinks";
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
 });
-
-const navMenu: NavProp[] = [
-  {
-    label: "About Us",
-    href: "/about-us",
-  },
-  {
-    label: "Services",
-    href: "/services",
-    subCategories: [
-      {
-        label: "Pharmacovigilance",
-        href: "/services/pharmacovigilance",
-      },
-      {
-        label: "Outsourcing",
-        href: "/services/outsourcing",
-      },
-      {
-        label: "Cosmetovigilance",
-        href: "/services/cosmetovigilance",
-      },
-      {
-        label: "Quality Management",
-        href: "/services/quality-management",
-      },
-      {
-        label: "Training",
-        href: "/services/training",
-      },
-      {
-        label: "Materiovigilance",
-        href: "/services/materiovigilance",
-      },
-    ],
-  },
-  {
-    label: "People",
-    href: "/people",
-  },
-  {
-    label: "Careers",
-    href: "/careers",
-  },
-  {
-    label: "Contact Us",
-    href: "/contact-us",
-  },
-];
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false); // Set initial state to false
@@ -87,10 +39,11 @@ function Header() {
 
   return (
     <header
-      className={`${inter.variable} sticky top-0 z-50 w-full font-sans  ${isScrolled
+      className={`${inter.variable} sticky top-0 z-50 w-full font-sans  ${
+        isScrolled
           ? "bg-[#f6f1eb] shadow-sm dark:bg-[#2d333b]"
           : "bg-transparent"
-        } transition-all duration-300`}
+      } transition-all duration-300`}
     >
       <div className="mx-auto flex max-w-[86em] items-center justify-between px-4 py-6 lg:px-0">
         <Logo />
@@ -104,7 +57,7 @@ function Header() {
           <NavMenu nav={navMenu} />
         </div>
       </div>
-      <div className="shadow-xl block md:hidden">
+      <div className="block shadow-xl md:hidden">
         <NavHamburger nav={navMenu} isOpen={isOpen} />
       </div>
     </header>

@@ -11,12 +11,12 @@ const paragraphs = [
   "Training of personnel on cosmetovigilance, as legally required",
 ];
 
-function Cosmetovigilance() {
+function Training() {
   return (
     <div className="mx-auto flex flex-col items-center justify-between">
       <ImageCategory
         image={cosmetovigilance}
-        title="Cosmetovigilance"
+        title="Training"
         description="Medwork provides a comprehensive and customizable set of services to assist cosmetics companies in complying with the regulatory directives."
       />
 
@@ -27,4 +27,4 @@ function Cosmetovigilance() {
   );
 }
 
-export default Cosmetovigilance;
+export default Training;

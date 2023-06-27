@@ -11,15 +11,14 @@ const paragraphs = [
 
 function Cosmetovigilance() {
   return (
-    <div className="mx-auto flex flex-col items-center justify-between gap-10">
+    <div className="mx-auto flex flex-col items-center justify-between">
       <ImageCategory
         image={team0}
         title="About Medwork"
         description="We believe in a better world when it comes to health. It is our responsibility to make it."
       />
 
-      <div className="flex max-w-[86em] flex-col items-center gap-8 whitespace-pre-line px-6 text-xl text-gray-500 dark:text-gray-400 sm:px-8">
-        <Title title={"ABOUT US"} />
+      <div className="flex max-w-[86em] flex-col items-center gap-6 whitespace-pre-line px-6 text-xl text-gray-500 dark:text-gray-400 sm:px-8 py-16">
         <DisplayParagraphs paragraphs={paragraphs} />
         <PromoCard />
       </div>

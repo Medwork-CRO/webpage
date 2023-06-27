@@ -5,44 +5,11 @@ import { FaLinkedin } from "@react-icons/all-files/fa/FaLinkedin";
 import { MdEmail } from "@react-icons/all-files/md/MdEmail";
 import { MdLocationOn } from "@react-icons/all-files/md/MdLocationOn";
 import Link from "next/link";
+import { AboutUs, Careers, People, Services } from "./HeaderLinks";
 
 const mail = "medworkinfo@medwork.gr";
 const address = "Greece, Chiou 5, Argyroupoli 164 52";
 const linkedin = "company/medwork";
-
-const services = [
-  {
-    label: "Pharmacovigilance",
-    href: "/services/pharmacovigilance",
-  },
-  {
-    label: "Cosmetovigilance",
-    href: "/services/cosmetovigilance",
-  },
-  {
-    label: "Quality Management",
-    href: "/services/quality-management",
-  },
-  { 
-    label: "Materiovigilance",
-    href: "/services/materiovigilance",
-  },
-];
-
-const about = [
-  {
-    label: "About Us",
-    href: "/about/about-us",
-  },
-  {
-    label: "Our Team",
-    href: "/about/our-team",
-  },
-  {
-    label: "Careers",
-    href: "/about/careers",
-  },
-];
 
 const inter = Inter({
   subsets: ["latin"],
@@ -109,12 +76,12 @@ function CompanyFooter() {
 function Footer() {
   return (
     <footer
-      className={`${inter.variable} w-full bg-gradient-to-l from-cyan-500 to-cyan-800 dark:from-cyan-600 dark:to-cyan-900 font-sans px-8`}
+      className={`${inter.variable} w-full bg-gradient-to-l from-cyan-500 to-cyan-800 px-8 font-sans dark:from-cyan-600 dark:to-cyan-900`}
     >
       <div className="mx-auto flex w-full max-w-[86em] flex-col justify-between px-0 sm:px-8 md:px-16 ">
         <div className="flex flex-col justify-between gap-8 py-16 md:flex-row">
           <div className="flex flex-col gap-6">
-            <Logo colour="text-cyan-500" />
+            <Logo />
             <span
               className={
                 "max-w-sm whitespace-pre-line text-left text-xl text-cyan-400"
@@ -130,7 +97,7 @@ function Footer() {
           <div className="min-w-96 flex flex-col gap-6 text-left text-white">
             <span className="text-xl font-semibold text-white">SERVICES</span>
             <div className="text-md flex flex-col gap-2 text-cyan-400">
-              {services.map((service, i) => (
+              {Services.subCategories.map((service, i) => (
                 <Link
                   aria-label={`By clicking you will be taken to ${service.label}`}
                   key={i}
@@ -145,9 +112,9 @@ function Footer() {
           </div>
 
           <div className="min-w-96 flex flex-col gap-6 text-left text-white">
-            <span className="text-xl font-semibold text-white">ABOUT US</span>
+            <span className="text-xl font-semibold text-white">ABOUT</span>
             <div className="text-md flex flex-col gap-2 text-cyan-400">
-              {about.map((a, i) => (
+              {[AboutUs, People, Careers].map((a, i) => (
                 <Link
                   aria-label={`By clicking you will be taken to ${a.label}`}
                   key={i}
@@ -169,7 +136,7 @@ function Footer() {
               <span>{mail}</span>
               <span>{address}</span>
             </div>
-            <RoundedButton label="GET IN TOUCH" href="" color="orange" />
+            <RoundedButton label="GET IN TOUCH" href="/contact-us" color="orange" />
             <CompanyInfo />
           </div>
         </div>

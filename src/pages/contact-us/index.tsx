@@ -20,7 +20,7 @@ const ContactForm = () => {
   return (
     <div className="w-full max-w-5xl">
       <Title title="Contact Us" />
-      <p className="mb-8 text-left font-light text-gray-500 dark:text-gray-400 sm:text-xl lg:mb-16">
+      <p className="mb-8 text-left font-light text-gray-500 dark:text-gray-400 sm:text-xl">
         You are always welcome to send us your CV and tell us about yourself.
       </p>
       <form onSubmit={handleSubmit} className="space-y-8">
@@ -77,13 +77,13 @@ const ContactForm = () => {
         <div className="flex gap-2">
           <button
             type="submit"
-            className="rounded-lg bg-primary-700 px-5 py-3 text-center text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 sm:w-fit"
+            className="xs:text-md w-[200px] cursor-pointer rounded-full bg-cyan-400 py-3 text-center text-sm font-semibold text-white transition duration-100 ease-in hover:bg-green-400 focus:outline-none"
           >
             Send message
           </button>
           <label
             htmlFor="cv"
-            className="cursor-pointer rounded-lg bg-primary-700 px-5 py-3 text-center text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 sm:w-fit"
+            className="xs:text-md w-[200px] cursor-pointer rounded-full bg-cyan-400 py-3 text-center text-sm font-semibold text-white transition duration-100 ease-in hover:bg-green-400 focus:outline-none"
           >
             Upload CV
             <input
@@ -101,11 +101,11 @@ const ContactForm = () => {
 
 const ConnectCard = () => {
   return (
-    <div className="w-full max-w-5xl">
+    <div className="h-full w-full max-w-5xl">
       <Title title="Connect with us" />
-      <div className="mx-auto flex h-full flex-col items-start gap-8 rounded-xl bg-cyan-800 p-4 md:p-8">
+      <div className="flex h-full flex-col items-start gap-8 rounded-xl bg-cyan-600 p-4 md:p-8">
         <div className="text-[#f6f1eb]">
-          <div className="mb-6 mt-8 flex space-x-3">
+          <div className="mb-6 mt-8 flex gap-4">
             <AiOutlinePhone className="h-6 w-6" />
             <Link
               href="tel:+302109960971"
@@ -116,7 +116,7 @@ const ConnectCard = () => {
               (+30) 210 9960971
             </Link>
           </div>
-          <div className="mb-6 flex space-x-3">
+          <div className="mb-6 flex gap-4">
             <AiOutlinePhone className="h-6 w-6" />
             <Link
               href="fax:+302109969578"
@@ -127,7 +127,7 @@ const ConnectCard = () => {
               (+30) 210 9969578
             </Link>
           </div>
-          <div className="mb-6 flex space-x-3">
+          <div className="mb-6 flex gap-4">
             <AiOutlineMail className="h-6 w-6" />
             <Link
               href="mailto:medworkinfo@medwork.gr"
@@ -138,7 +138,7 @@ const ConnectCard = () => {
               medworkinfo@medwork.gr
             </Link>
           </div>
-          <div className="flex space-x-3">
+          <div className="flex gap-4">
             <AiOutlineEnvironment className="h-6 w-6" />
             <Link
               href="https://goo.gl/maps/KDKk5piro9Cb6AXG7"
@@ -152,7 +152,7 @@ const ConnectCard = () => {
         </div>
         <iframe
           src="https://maps.google.com/maps?q=Chiou5,Argyroupoli16452&t=&z=13&ie=UTF8&iwloc=&output=embed"
-          className="w-full rounded-lg shadow-md"
+          className="h-full max-h-96 w-full rounded-lg shadow-xl"
           allowFullScreen
         ></iframe>
       </div>
@@ -162,7 +162,7 @@ const ConnectCard = () => {
 
 const Contact = () => {
   return (
-    <section className="mx-auto flex max-w-[86em] flex-col items-start justify-center gap-16 px-4 py-8 md:flex-row lg:py-16">
+    <section className="mx-auto my-8 flex max-w-[86em] flex-col items-start justify-center gap-16 md:flex-row lg:my-16">
       <ConnectCard />
       <ContactForm />
     </section>

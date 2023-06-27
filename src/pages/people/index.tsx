@@ -88,7 +88,6 @@ function OurTeam() {
       />
 
       <div className="mt-16 flex max-w-[86em] flex-col items-center gap-8 whitespace-pre-line px-6 text-xl text-gray-500 dark:text-gray-400 sm:px-8">
-        <Title title={"OUR TEAM"} />{" "}
         <DisplayParagraphs paragraphs={paragraphs} />
       </div>
       <div className="my-12 grid grid-cols-1 gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">

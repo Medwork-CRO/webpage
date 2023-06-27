@@ -1,6 +1,7 @@
 import { FaAngleDown } from "@react-icons/all-files/fa/FaAngleDown";
 import Link from "next/link";
-import { useState } from "react";
+import router, { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 
 export type NavProp = {
   label: string;
@@ -13,9 +14,15 @@ export type NavHamburgerProp = {
 };
 
 function VerticalNav({ label, href, subCategories }: NavProp) {
+  const [isOpen, setIsOpen] = useState(false); // Set initial state to false
   const [isClicked, setIsClicked] = useState(false);
+  const router = useRouter();
 
   const hasSubCategories = subCategories && subCategories.length > 0;
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [router.asPath]);
 
   return (
     <>

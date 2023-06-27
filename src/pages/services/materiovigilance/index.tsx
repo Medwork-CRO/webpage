@@ -18,14 +18,14 @@ const paragraphs2 = [
 
 function Materiovigilance() {
   return (
-    <div className="mx-auto my-8 flex flex-col items-center justify-between gap-10">
+    <div className="mx-auto flex flex-col items-center justify-between">
       <ImageCategory
         image={materiovigilance}
         title="Materiovigilance"
         description="The principal purpose of materiovigilance is to improve the protection of the health and safety of patients, users and others by reducing the likelihood that incidents related to the use of a medical device will reoccur."
       />
 
-      <div className="flex max-w-[86em] flex-col items-center gap-8 whitespace-pre-line px-6 text-xl text-gray-500 dark:text-gray-400 sm:px-8">
+      <div className="flex max-w-[86em] flex-col items-center gap-6 whitespace-pre-line px-6 text-xl text-gray-500 dark:text-gray-400 sm:px-8 py-16">
         <DisplayParagraphs paragraphs={paragraphs1} />
         <DisplayParagraphs paragraphs={paragraphs2} />
       </div>

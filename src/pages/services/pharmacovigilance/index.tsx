@@ -10,14 +10,14 @@ const paragraphs = [
 
 function Pharmacovigilance() {
   return (
-    <div className="mx-auto my-8 flex flex-col items-center justify-between gap-10">
+    <div className="mx-auto flex flex-col items-center justify-between">
       <ImageCategory
         image={pharmacovigilance}
         title="Pharmacovigilance"
         description="Compliance with pharmacovigilance requirements is becoming an increasing challenge for pharmaceutical companies worldwide. In this very demanding environment, Medwork offers a reliable solution for every need related to drug safety."
       />
 
-      <div className="flex max-w-[86em] flex-col items-center gap-8 whitespace-pre-line px-6 text-xl text-gray-500 dark:text-gray-400 sm:px-8">
+      <div className="flex max-w-[86em] flex-col items-center gap-6 whitespace-pre-line px-6 text-xl text-gray-500 dark:text-gray-400 sm:px-8 py-16">
         <DisplayParagraphs paragraphs={paragraphs} />
       </div>
     </div>

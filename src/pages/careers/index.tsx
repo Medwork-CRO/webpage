@@ -20,7 +20,7 @@ const paragraphs = [
 
 function Cosmetovigilance() {
   return (
-    <div className="mx-auto flex flex-col items-center justify-between gap-10">
+    <div className="mx-auto flex flex-col items-center justify-between">
       <ImageCategory
         textSide="right"
         image={team3}
@@ -32,7 +32,7 @@ function Cosmetovigilance() {
       challenges."
       />
 
-      <div className="flex max-w-[86em] flex-col items-center gap-8 whitespace-pre-line px-6 text-xl text-gray-500 dark:text-gray-400 sm:px-8">
+      <div className="flex max-w-[86em] flex-col items-center gap-6 whitespace-pre-line px-6 py-16 text-xl text-gray-500 dark:text-gray-400 sm:px-8">
         <Title title={"CAREERS"} />
         <DisplayParagraphs paragraphs={paragraphs} />
 
@@ -91,13 +91,12 @@ function Cosmetovigilance() {
           </p>
         </div>
 
-        <Title title={"JOB OFFERINGS"} />
         <div className="my-16 flex flex-col gap-2 whitespace-pre-line text-2xl font-thin text-cyan-600 dark:text-cyan-400 xs:px-24">
           <div>
             You can see all our open job offerings
             <div className="mt-4 flex flex-col justify-center gap-6 text-center">
               <Link
-                className="flex flex-row items-center justify-center gap-4 rounded-xl border-2 border-cyan-800 bg-cyan-500 p-2 font-bold text-gray-200 hover:bg-cyan-600"
+                className="text-[#f6f1eb] flex flex-row items-center justify-center gap-4 rounded-xl bg-cyan-400 p-3 font-bold hover:bg-green-400 dark:text-[#2d333b]"
                 aria-label={`By clicking you will be taken to kariera.gr`}
                 key={"kariera"}
                 href={"https://www.kariera.gr/en/companies/3531"}
@@ -112,7 +111,7 @@ function Cosmetovigilance() {
                 {"Kariera"}
               </Link>
               <Link
-                className="flex flex-row items-center justify-center gap-4 rounded-xl border-2 border-cyan-800 bg-cyan-500 p-2 font-bold text-gray-200 hover:bg-cyan-600"
+                className="text-[#f6f1eb] flex flex-row items-center justify-center gap-4 rounded-xl bg-cyan-400 p-3 font-bold hover:bg-green-400 dark:text-[#2d333b]"
                 aria-label={`By clicking you will be taken to linkedIn.gr`}
                 key={"linkedIn"}
                 href={"https://www.linkedin.com/company/medwork/jobs/"}
@@ -129,9 +128,6 @@ function Cosmetovigilance() {
             </div>
           </div>
         </div>
-
-        <RoundedButton label="GET IN TOUCH" href="/contact-us" color="orange" />
-
         <div className="mt-8"></div>
       </div>
     </div>
