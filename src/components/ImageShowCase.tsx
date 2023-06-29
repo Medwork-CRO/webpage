@@ -18,7 +18,7 @@ function ImageShowCase({
   link,
 }: ImageShowCaseProps) {
   return (
-    <div className="relative h-[615px] flex-[0_0_100%]">
+    <div className="relative h-[815px] flex-[0_0_100%]">
       <Image src={image} className="h-full w-full object-cover" alt="alt" />
       <div className="absolute inset-0 z-10 bg-cyan-800 opacity-70"></div>
 

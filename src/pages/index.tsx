@@ -38,7 +38,7 @@ function Home() {
         title="A European Pharmacovigilance Expert based in Athens with a focus in Greece and Cyprus."
         description="We are a highly proficient and extensively resourced corporation specializing tackling complex pharmacovigilance projects in a compact organisation able and willing to take care of projects and clients"
       /> */}
-      <Carousel loop>
+      <Carousel loop={true}>
         {imageShowCases.map((imageShowCase, i) => (
           <ImageShowCase
             image={imageShowCase.image}

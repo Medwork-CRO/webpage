@@ -18,7 +18,6 @@ const roboto = Roboto({
 type Props = PropsWithChildren & EmblaOptionsType;
 
 function Logo({ children, ...options }: Props) {
-  ;
   return (
     <Link
       className="flex items-center gap-4"

@@ -18,8 +18,8 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="w-full max-w-5xl">
-      <Title title="Contact Us" />
+    <div className="flex-1 h-full w-full max-w-5xl">
+      <Title title="Contact Us" align="left" />
       <p className="mb-8 text-left font-light text-gray-500 dark:text-gray-400 sm:text-xl">
         You are always welcome to send us your CV and tell us about yourself.
       </p>
@@ -101,11 +101,11 @@ const ContactForm = () => {
 
 const ConnectCard = () => {
   return (
-    <div className="h-full w-full max-w-5xl">
-      <Title title="Connect with us" />
-      <div className="flex h-full flex-col items-start gap-8 rounded-xl bg-cyan-600 p-4 md:p-8">
-        <div className="text-[#f6f1eb]">
-          <div className="mb-6 mt-8 flex gap-4">
+    <div className="flex-1 h-full w-full max-w-5xl">
+      <Title title="Connect with us" align="left" />
+      <div className="flex h-full flex-col justify-between rounded-xl gap-8 bg-cyan-600 p-4 md:p-8">
+        <div className="text-[#f6f1eb] flex flex-col justify-end">
+          <div className="mb-6 flex gap-4">
             <AiOutlinePhone className="h-6 w-6" />
             <Link
               href="tel:+302109960971"
@@ -152,7 +152,7 @@ const ConnectCard = () => {
         </div>
         <iframe
           src="https://maps.google.com/maps?q=Chiou5,Argyroupoli16452&t=&z=13&ie=UTF8&iwloc=&output=embed"
-          className="h-full max-h-96 w-full rounded-lg shadow-xl"
+          className="h-full max-h-56 w-full rounded-lg shadow-xl"
           allowFullScreen
         ></iframe>
       </div>
@@ -161,8 +161,10 @@ const ConnectCard = () => {
 };
 
 const Contact = () => {
+
   return (
-    <section className="mx-auto my-8 flex max-w-[86em] flex-col items-start justify-center gap-16 md:flex-row lg:my-16">
+    // <section className="grid md:grid-cols-2 gap-16 md:mx-auto max-w-[86em] mx-4 mb-8">
+    <section className="md:mx-auto flex max-w-[86em] flex-col items-start justify-center gap-16 md:flex-row mx-4 mb-8">
       <ConnectCard />
       <ContactForm />
     </section>

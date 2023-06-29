@@ -9,23 +9,21 @@ const inter = Spectral({
 type TitleProps = {
   colour?: string;
   title: string;
+  align: "left" | "center"
 };
 
 function Title({
   title,
+  align = "center",
   colour = "text-gray-500 dark:text-[#f6f1eb]",
 }: TitleProps) {
+  const textAlign = align === "left" ? "md:text-left" : "md:text-center";
   return (
-    <div className="flex items-center justify-center">
-      <span
-        className={`my-4 text-center text-3xl font-bold ${colour}`}
-        // className={`${inter.variable} dark:text-white text-xl font-semibold text-gray-400 xs:text-3xl`}
-      >
+      <div className={`my-4 text-center ${textAlign} text-3xl font-bold ${colour} my-4`}>
         {/*  text-cyan-500 */}
         {/* &#8226;  */}
         {title}
-      </span>
-    </div>
+      </div>
   );
 }
 

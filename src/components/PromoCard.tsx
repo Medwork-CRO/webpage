@@ -9,10 +9,7 @@ function PromoCard() {
         Want to learn more about Medwork?
       </p>
       <p className="text-md max-w-[86em] font-normal sm:text-xl md:text-2xl">
-        We believe in harnessing science for human good. So whether you are a
-        provider, drug developer, hospital, medical researcher or patient—we
-        promise to work tirelessly to bring you trusted information to make
-        clear, confident decisions for a healthier future.
+        We are firm believers in leveraging scientific advancements for the betterment of mankind. Whether you're a healthcare provider, pharmaceutical innovator, medical institution, scientific investigator, or a patient, our commitment remains unshaken—we will persistently provide trustworthy information to help you make well-informed, confident choices for a healthier tomorrow.
       </p>
       <RoundedButton label="GET IN TOUCH" href="/contact-us" color="gray" />
     </div>
