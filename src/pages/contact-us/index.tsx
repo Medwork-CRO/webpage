@@ -77,13 +77,13 @@ const ContactForm = () => {
         <div className="flex gap-2">
           <button
             type="submit"
-            className="xs:text-md w-[200px] cursor-pointer rounded-full bg-cyan-400 py-3 text-center text-sm font-semibold text-white transition duration-100 ease-in hover:bg-green-400 focus:outline-none"
+            className="cursor-pointer text-white xs:text-md w-[200px] rounded-full bg-cyan-400 hover:bg-green-400 py-3 text-center text-sm font-semibold transition duration-100 ease-in focus:outline-none border-2 border-transparent hover:border-white"
           >
             Send message
           </button>
           <label
             htmlFor="cv"
-            className="xs:text-md w-[200px] cursor-pointer rounded-full bg-cyan-400 py-3 text-center text-sm font-semibold text-white transition duration-100 ease-in hover:bg-green-400 focus:outline-none"
+            className="cursor-pointer text-white xs:text-md w-[200px] rounded-full bg-cyan-400 hover:bg-green-400 py-3 text-center text-sm font-semibold transition duration-100 ease-in focus:outline-none border-2 border-transparent hover:border-white"
           >
             Upload CV
             <input
