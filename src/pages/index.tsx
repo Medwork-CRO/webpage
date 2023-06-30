@@ -4,8 +4,8 @@ import ImageShowCase from "@/components/ImageShowCase";
 import PromoCard from "@/components/PromoCard";
 import ProvidedServices from "@/components/ProvidedServices";
 import EMA from "@assets/stock-images/EMA.webp";
-import happyWoman from "@assets/img/stock-images/happy-woman.jpg";
-import pv from "@assets/img/team-photos/team1.jpg";
+import happyWoman from "@assets/stock-images/happy-woman.jpg";
+import pv from "@assets/team-photos/team1.jpg";
 
 const imageShowCases = [
   {
