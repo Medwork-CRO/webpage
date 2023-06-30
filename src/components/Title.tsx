@@ -7,23 +7,25 @@ const inter = Spectral({
 });
 
 type TitleProps = {
-  colour?: string;
   title: string;
-  align: "left" | "center"
+  colour?: string;
+  align?: "left" | "center";
 };
 
 function Title({
   title,
-  align = "center",
   colour = "text-gray-500 dark:text-[#f6f1eb]",
+  align = "center",
 }: TitleProps) {
   const textAlign = align === "left" ? "md:text-left" : "md:text-center";
   return (
-      <div className={`my-4 text-center ${textAlign} text-3xl font-bold ${colour} my-4`}>
-        {/*  text-cyan-500 */}
-        {/* &#8226;  */}
-        {title}
-      </div>
+    <div
+      className={`my-4 text-center ${textAlign} text-3xl font-bold ${colour} my-4`}
+    >
+      {/*  text-cyan-500 */}
+      {/* &#8226;  */}
+      {title}
+    </div>
   );
 }
 
