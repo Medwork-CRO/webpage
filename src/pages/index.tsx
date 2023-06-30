@@ -3,24 +3,32 @@ import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ImageShowCase from "@/components/ImageShowCase";
 import PromoCard from "@/components/PromoCard";
 import ProvidedServices from "@/components/ProvidedServices";
-import img2 from "@assets/img/img2.jpg";
-import team2 from "@assets/team-photos/team2.jpg";
+import EMA from "@assets/stock-images/EMA.webp";
+import happyWoman from "@assets/img/stock-images/happy-woman.jpg";
+import pv from "@assets/img/team-photos/team1.jpg";
 
 const imageShowCases = [
   {
-    image: team2,
+    image: EMA,
     title: "Leading provider",
     description:
       "A European Pharmacovigilance Expert based in Athens with a focus in Greece and Cyprus",
     description2: "We run projects for clients all-around Europe.",
-    link: `/services`,
+    link: `/about-us`,
   },
   {
-    image: img2,
-    title: `PharmaSolve`,
-    description: "We are a highly proficient and extensively resourced corporation specializing tackling complex pharmacovigilance projects.",
-    description2: "A compact organisation able and willing to take care of projects and clients.",
-    link: `/pharmasolve`,
+    image: happyWoman,
+    title: `Our People`,
+    description: "We undertake projects for clients throughout Europe, leveraging our extensive resources and skilled team to manage complex pharmacovigilance projects.",
+    description2: "",
+    link: `/people`,
+  },
+  {
+    image: pv,
+    title: `Pharmacovigilance Department`,
+    description: "Despite our extensive team, Medwork maintains the flexibility and responsiveness of a compact organization, demonstrating our commitment to care for our clients and their projects.",
+    description2: "",
+    link: `/pharmacovigilance`,
   },
 ];
 

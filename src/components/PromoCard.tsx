@@ -9,7 +9,7 @@ function PromoCard() {
         Want to learn more about Medwork?
       </p>
       <p className="text-md max-w-[86em] font-normal sm:text-xl md:text-2xl">
-        We are firm believers in leveraging scientific advancements for the betterment of mankind. Whether you're a healthcare provider, pharmaceutical innovator, medical institution, scientific investigator, or a patient, our commitment remains unshaken—we will persistently provide trustworthy information to help you make well-informed, confident choices for a healthier tomorrow.
+        We are firm believers in leveraging scientific advancements for the betterment of mankind. Whether you&apos;re a healthcare provider, pharmaceutical innovator, medical institution, scientific investigator, or a patient, our commitment remains unshaken—we will persistently provide trustworthy information to help you make well-informed, confident choices for a healthier tomorrow.
       </p>
       <RoundedButton label="GET IN TOUCH" href="/contact-us" color="gray" />
     </div>
