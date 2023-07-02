@@ -2,10 +2,26 @@ import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ImageCategory from "@/components/ImageCategory";
 import pharmacovigilance from "@assets/services/pharmacovigilance.jpg";
 
-const paragraphs = [
+const paragraphs0 = [
   "We have an extensive Pharmacovigilance Department composed of a team of 21 pharmacovigilance professionals and four medical advisors.",
   "Our clients range from small local companies to large international corporations. Currently [Dec 2021 data], we have over 117 active contracts with more than 77 clients relating to pharmacovigilance activities.",
-  "Our services may be fully customized to cover all of a Marketing Authorization Holder&apos;s responsibilities related to drug safety."
+  "Our services may be fully customized to cover all of a Marketing Authorization Holder&apos;s responsibilities related to drug safety.",
+];
+
+const paragraphs1 = [
+  "Bulk ICSR processing",
+];
+
+const paragraphs2 = [
+  "Local contact person GR/CY",
+];
+
+const paragraphs3 = [
+  "Local MLM",
+];
+
+const paragraphs4 = [
+  "Global MLM",
 ];
 
 function Pharmacovigilance() {
@@ -18,7 +34,11 @@ function Pharmacovigilance() {
       />
 
       <div className="flex max-w-[86em] flex-col items-center gap-6 whitespace-pre-line px-6 text-xl text-gray-500 dark:text-gray-400 sm:px-8 py-16">
-        <DisplayParagraphs paragraphs={paragraphs} />
+        <DisplayParagraphs paragraphs={paragraphs0} />
+        <DisplayParagraphs paragraphs={paragraphs1} />
+        <DisplayParagraphs paragraphs={paragraphs2} />
+        <DisplayParagraphs paragraphs={paragraphs3} />
+        <DisplayParagraphs paragraphs={paragraphs4} />
       </div>
     </div>
   );

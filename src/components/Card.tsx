@@ -31,7 +31,7 @@ function Card({
           {imageDescription}
         </p>
         <Link
-          className="font-semibold text-black underline dark:text-white"
+          className="font-semibold text-black hover:text-cyan-400 underline dark:text-white"
           href={readMoreLink}
         >
           Learn More

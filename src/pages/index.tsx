@@ -5,27 +5,27 @@ import PromoCard from "@/components/PromoCard";
 import ProvidedServices from "@/components/ProvidedServices";
 import EMA from "@assets/stock-images/EMA.webp";
 import happyWoman from "@assets/stock-images/happy-woman.jpg";
-import pv from "@assets/team-photos/team1.jpg";
+import pv from "@assets/team-photos/team3.jpg";
 
 const imageShowCases = [
   {
     image: EMA,
-    title: "Leading provider",
+    title: "",
     description:
-      "A European Pharmacovigilance Expert based in Athens with a focus in Greece and Cyprus",
-    description2: "We run projects for clients all-around Europe.",
+      "Medwork is a European pharmacovigilance expert organization with a focus in Greece and Cyprus.",
+    description2: "",
     link: `/about-us`,
   },
   {
     image: happyWoman,
-    title: `Our People`,
+    title: ``,
     description: "We undertake projects for clients throughout Europe, leveraging our extensive resources and skilled team to manage complex pharmacovigilance projects.",
     description2: "",
     link: `/people`,
   },
   {
     image: pv,
-    title: `Pharmacovigilance Department`,
+    title: ``,
     description: "Despite our extensive team, Medwork maintains the flexibility and responsiveness of a compact organization, demonstrating our commitment to care for our clients and their projects.",
     description2: "",
     link: `/pharmacovigilance`,
