@@ -1,42 +1,21 @@
 import Image, { StaticImageData } from "next/image";
-import RoundedButton from "./RoundedButton";
-import Title from "./Title";
 
 type ImageShowCaseProps = {
   image: StaticImageData;
-  title: string;
   description: string;
-  description2: string;
-  link: string;
 };
 
 function ImageShowCase({
   image,
-  title,
   description,
-  description2,
-  link,
 }: ImageShowCaseProps) {
   return (
-    <div className="flex flex-col md:flex-row h-[815px] w-full flex-[0_0_100%]">
-      {/* <div className="absolute inset-0 z-10 bg-cyan-800 opacity-70"></div> */}
-
-      <Image src={image} className="h-full w-2/3 object-cover" alt="alt" />
-      <div className="flex flex-col w-1/3 items-center justify-center gap-8 sm:pl-8 sm:pr-20 text-gray-500 dark:text-gray-400">
-        <div className="flex">
-          <span
-            className={`my-4 text-center text-7xl font-bold italic`}
-          // className={`${inter.variable} dark:text-white text-xl font-semibold text-gray-400 xs:text-3xl`}
-          >
-            {/*  text-cyan-500 */}
-            {/* &#8226;  */}
-            {title}
-          </span>
-        </div>
-        <span className="align-left text-2xl font-semibold md:text-4xl xl:text-6xl">
+    <div className="flex flex-col md:flex-row h-[670px] flex-[0_0_100%]">
+      <Image src={image} className="md:h-full h-2/3 md:w-2/3 object-cover" alt="alt" />
+      <div className="flex flex-col md:h-full h-1/3 md:w-1/3 items-center justify-center gap-8 pl-6 pr-6 md:pl-8 md:pr-20">
+        <span className="text-ellipsis align-left text-semibold text-2xl sm:text-3xl md:text-3xl xl:text-6xl text-gray-500 dark:text-gray-400">
           {description}
         </span>
-        <span className="text-xs md:text-xl xl:text-2xl">{description2}</span>
       </div>
     </div>
   );

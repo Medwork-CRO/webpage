@@ -22,21 +22,19 @@ function ImageCategory({
           alt="alt"
         />
         <div
-          className={`absolute inset-0 z-10 from-cyan-700 to-transparent ${
-            !textSide || textSide === "left"
+          className={`absolute inset-0 z-10 from-cyan-700 to-transparent ${!textSide || textSide === "left"
               ? "bg-gradient-to-r"
               : "bg-gradient-to-l"
-          }`}
+            }`}
         ></div>
 
         <div
-          className={`absolute text-white top-3/4 z-20 flex w-1/2 -translate-y-1/2 transform flex-col justify-center gap-8 px-8 md:px-12 lg:px-24 ${
-            !textSide || textSide === "left"
+          className={`absolute text-white top-3/4 z-20 flex w-1/2 -translate-y-1/2 transform flex-col justify-center gap-8 px-8 md:px-12 lg:px-24 ${!textSide || textSide === "left"
               ? "text-left"
               : "left-1/2 text-right"
-          }`}
+            }`}
         >
-          <span className=" text-xl font-semibold italic md:text-2xl xl:text-3xl">
+          <span className=" text-2xl font-semibold italic md:text-3xl xl:text-4xl">
             {title}
           </span>
           <span className="text-md font-thin md:text-xl xl:text-2xl">
@@ -45,13 +43,12 @@ function ImageCategory({
         </div>
       </div>
 
-      {/* this part is for mobile devices */}
-      <div className="grid grid-cols-1 md:grid-cols-2">
-        <div className="relative md:hidden">
+      <div className="grid grid-cols-1 md:grid-cols-2 md:hidden">
+        <div className="relative">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-cyan-700"></div>
           <div className="relative z-10 float-left p-6 md:p-12">
-            <div className="md:hidden">
-              <Image src={image} alt="Image for mobile" className="" />
+            <div>
+              <Image src={image} alt="Image for mobile" />
             </div>
             <div className="mt-8 md:mt-0 text-white">
               <h1 className="mb-4 text-4xl italic">{title}</h1>
