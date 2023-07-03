@@ -50,4 +50,5 @@ const Carousel = ({ children, ...options }: Props) => {
         </div>
     );
 };
+
 export default Carousel;
