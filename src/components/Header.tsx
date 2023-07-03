@@ -1,12 +1,11 @@
 import Logo from "@/components/Logo";
 import { Inter } from "@next/font/google";
-import { FaBars } from "@react-icons/all-files/fa/FaBars";
-import { FaTimes } from "@react-icons/all-files/fa/FaTimes";
+import Hamburger from 'hamburger-react';
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import { navMenu } from "./HeaderLinks";
 import NavHamburger from "./NavHamburger";
 import NavMenu from "./NavMenu";
-import { navMenu } from "./HeaderLinks";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -14,7 +13,7 @@ const inter = Inter({
 });
 
 function Header() {
-  const [isOpen, setIsOpen] = useState(false); // Set initial state to false
+  const [isOpen, setOpen] = useState(false); // Set initial state to false
   const [isScrolled, setIsScrolled] = useState(false);
   const router = useRouter();
 
@@ -43,7 +42,7 @@ function Header() {
   }, []);
 
   useEffect(() => {
-    setIsOpen(false);
+    setOpen(false);
   }, [router.asPath]);
 
   return (
@@ -57,13 +56,9 @@ function Header() {
         <Logo />
         <button
           className="block text-xl md:hidden"
-          onClick={() => setIsOpen(!isOpen)}
+          onClick={() => setOpen(!isOpen)}
         >
-          {isOpen ? (
-            <FaTimes className="mr-2 cursor-pointer text-cyan-600" />
-          ) : (
-            <FaBars className="mr-2 cursor-pointer text-cyan-600" />
-          )}
+          <Hamburger toggled={isOpen} toggle={setOpen} color="#0891b2" size={24}/>
         </button>
         <div className="hidden md:block">
           <NavMenu nav={navMenu} />

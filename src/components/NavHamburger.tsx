@@ -22,7 +22,6 @@ function VerticalNav({ label, href, subCategories }: NavProp) {
     (subCategory) => subCategory.href === router.asPath
   );
   const activeClasses = isActive || isActiveSubCategory ? 'border-cyan-500 text-cyan-500' : 'border-transparent';
-
   const hasSubCategories = subCategories && subCategories.length > 0;
 
   return (
@@ -71,8 +70,10 @@ function VerticalNav({ label, href, subCategories }: NavProp) {
 }
 
 function NavHamburger(navHamburger: NavHamburgerProp & { isOpen: boolean }) {
+  const visibility = navHamburger.isOpen ? "block" : "hidden";
+
   return (
-    <div className={`mx-6 ${navHamburger.isOpen ? "block" : "hidden"}`}>
+<div className={`mx-6 flex flex-col fixed inset-x-0 bottom-0 ${visibility}`}>
       {navHamburger.nav.map((props) => (
         <VerticalNav key={props.href} {...props} />
       ))}
