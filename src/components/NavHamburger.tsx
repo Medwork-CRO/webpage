@@ -1,7 +1,7 @@
 import { FaAngleDown } from "@react-icons/all-files/fa/FaAngleDown";
 import Link from "next/link";
-import router, { useRouter } from "next/router";
-import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
+import { useState } from "react";
 
 export type NavProp = {
   label: string;
@@ -14,39 +14,49 @@ export type NavHamburgerProp = {
 };
 
 function VerticalNav({ label, href, subCategories }: NavProp) {
-  const [isOpen, setIsOpen] = useState(false); // Set initial state to false
   const [isClicked, setIsClicked] = useState(false);
   const router = useRouter();
 
-  const hasSubCategories = subCategories && subCategories.length > 0;
+  const isActive = router.asPath === href;
+  const isActiveSubCategory = subCategories?.some(
+    (subCategory) => subCategory.href === router.asPath
+  );
+  const activeClasses = isActive || isActiveSubCategory ? 'border-cyan-500 text-cyan-500' : 'border-transparent';
 
-  useEffect(() => {
-    setIsOpen(false);
-  }, [router.asPath]);
+  const hasSubCategories = subCategories && subCategories.length > 0;
 
   return (
     <>
-      <span className="flex items-center justify-between text-gray-500 dark:text-gray-400 hover:text-cyan-500">
-        <Link
-          className={`flex items-center py-4  text-sm lg:px-8`}
-          aria-label={`By clicking you will be taken to ${label}`}
-          key={href}
-          href={href}
-        >
-          {label.toUpperCase()}
-        </Link>
-        {hasSubCategories && (
-          <FaAngleDown
-            className="ml-2"
-            onClick={() => setIsClicked(!isClicked)}
-          />
+      <div
+        className="flex items-center justify-between text-gray-500 dark:text-gray-400 hover:text-cyan-500"
+        onClick={() => setIsClicked(!isClicked)}
+      >
+        {!hasSubCategories && (
+          <Link
+            className="flex items-center py-4 text-md font-semibold lg:px-8"
+            aria-label={`By clicking you will be taken to ${label}`}
+            key={href}
+            href={href}
+          >
+            <span className={`border-b-2 ${activeClasses}`}>{label.toUpperCase()}</span>
+          </Link>
         )}
-      </span>
+        {hasSubCategories && (
+          <>
+            <div
+              className="flex items-center py-4 text-md font-semibold lg:px-8"
+            >
+              <span className={`border-b-2 ${activeClasses}`}>{label.toUpperCase()}</span>
+            </div>
+            <FaAngleDown />
+          </>
+        )}
+      </div>
       {isClicked && hasSubCategories && (
-        <div className={"flex w-[200px] flex-col "}>
+        <div className={"flex w-[200px] flex-col"}>
           {subCategories.map((subCategory) => (
             <Link
-              className="ml-2 px-5 py-3 text-sm text-gray-500 dark:text-gray-400 hover:text-cyan-500"
+              className="ml-2 px-5 py-3 text-md font-semibold text-gray-500 dark:text-gray-400 hover:text-cyan-500"
               aria-label={`By clicking you will be taken to ${subCategory.label}`}
               key={subCategory.href}
               href={subCategory.href}
