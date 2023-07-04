@@ -32,7 +32,7 @@ function VerticalNav({ label, href, subCategories }: NavProp) {
       >
         {!hasSubCategories && (
           <Link
-            className="flex items-center py-4 text-md font-semibold lg:px-8"
+            className="flex items-center py-3 text-md font-semibold lg:px-8"
             aria-label={`By clicking you will be taken to ${label}`}
             key={href}
             href={href}
@@ -43,11 +43,11 @@ function VerticalNav({ label, href, subCategories }: NavProp) {
         {hasSubCategories && (
           <>
             <div
-              className="flex items-center py-4 text-md font-semibold lg:px-8"
+              className="flex items-center py-3 text-md font-semibold lg:px-8"
             >
               <span className={`border-b-2 ${activeClasses}`}>{label.toUpperCase()}</span>
             </div>
-            <FaAngleDown />
+            <FaAngleDown style={{ transform: `rotate(${isClicked ? 0 : 180}deg)` }} />
           </>
         )}
       </div>
@@ -73,7 +73,7 @@ function NavHamburger(navHamburger: NavHamburgerProp & { isOpen: boolean }) {
   const visibility = navHamburger.isOpen ? "block" : "hidden";
 
   return (
-<div className={`mx-6 flex flex-col fixed inset-x-0 bottom-0 ${visibility}`}>
+    <div className={`mx-6 mb-2 flex flex-col fixed inset-x-0 bottom-0 ${visibility}`}>
       {navHamburger.nav.map((props) => (
         <VerticalNav key={props.href} {...props} />
       ))}

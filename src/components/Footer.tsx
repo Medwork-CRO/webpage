@@ -55,9 +55,9 @@ function CompanyFooter() {
           © Copyright 2005 - {new Date().getFullYear()} Medwork -
         </span>
         <span className="flex gap-2">
-          <span className="text-white">All Rights Reserved</span>
+          <span className="text-[#f6f1eb] dark:text-gray-300">All Rights Reserved</span>
           <span className="text-cyan-400">|</span>
-          <span className="text-white">
+          <span className="text-[#f6f1eb] dark:text-gray-300">
             Made by{" "}
             <a
               href="https://github.com/keybraker"
@@ -94,8 +94,8 @@ function Footer() {
             </span>
           </div>
 
-          <div className="min-w-96 flex flex-col gap-6 text-left text-white">
-            <span className="text-xl font-semibold text-white">SERVICES</span>
+          <div className="min-w-96 flex flex-col gap-6 text-left text-[#f6f1eb] dark:text-gray-300">
+            <span className="text-xl font-semibold text-[#f6f1eb] dark:text-gray-300">SERVICES</span>
             <div className="text-md flex flex-col gap-2 text-cyan-400">
               {Services.subCategories.map((service, i) => (
                 <Link
@@ -111,8 +111,8 @@ function Footer() {
             </div>
           </div>
 
-          <div className="min-w-96 flex flex-col gap-6 text-left text-white">
-            <span className="text-xl font-semibold text-white">ABOUT</span>
+          <div className="min-w-96 flex flex-col gap-6 text-left text-[#f6f1eb] dark:text-gray-300">
+            <span className="text-xl font-semibold text-[#f6f1eb] dark:text-gray-300">ABOUT</span>
             <div className="text-md flex flex-col gap-2 text-cyan-400">
               {[AboutUs, People, Careers].map((a, i) => (
                 <Link
@@ -128,8 +128,8 @@ function Footer() {
             </div>
           </div>
 
-          <div className="min-w-96 flex flex-col gap-6 text-left text-white">
-            <span className="text-xl font-semibold text-white">
+          <div className="min-w-96 flex flex-col gap-6 text-left text-[#f6f1eb] dark:text-gray-300">
+            <span className="text-xl font-semibold text-[#f6f1eb] dark:text-gray-300">
               CONTACT INFO
             </span>
             <div className="text-md flex flex-col gap-2 text-cyan-400">

@@ -32,7 +32,7 @@ function Cosmetovigilance() {
       challenges."
       />
 
-      <div className="flex max-w-[86em] flex-col items-center gap-6 whitespace-pre-line px-6 py-16 text-xl text-gray-500 dark:text-gray-400 sm:px-8">
+      <div className="flex max-w-[86em] flex-col items-center gap-6 whitespace-pre-line px-4 py-16 text-xl text-gray-500 dark:text-gray-400 sm:px-8">
         <DisplayParagraphs paragraphs={paragraphs} />
 
         <div className="mt-16 flex flex-col justify-between gap-4 text-gray-500 dark:text-gray-400 md:flex-row">

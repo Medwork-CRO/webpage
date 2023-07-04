@@ -46,7 +46,7 @@ function Home() {
         ))}
       </Carousel>
 
-      <div className="mt-16 flex max-w-[86em] flex-col items-center gap-8 whitespace-pre-line px-6 text-xl text-gray-500 dark:text-gray-400 sm:px-8">
+      <div className="mt-16 flex max-w-[86em] flex-col items-center gap-8 whitespace-pre-line px-4 text-xl text-gray-500 dark:text-gray-400 sm:px-8">
         <DisplayParagraphs paragraphs={paragraphs} />
         <ProvidedServices />
         <PromoCard />
