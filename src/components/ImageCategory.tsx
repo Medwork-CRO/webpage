@@ -22,14 +22,14 @@ function ImageCategory({
           alt="alt"
         />
         <div
-          className={`absolute inset-0 z-10 from-cyan-700 to-transparent ${!textSide || textSide === "left"
-              ? "bg-gradient-to-r"
-              : "bg-gradient-to-l"
+          className={`absolute inset-0 z-10 from-cyan-600 dark:from-cyan-800 to-transparent ${!textSide || textSide === "left"
+              ? "bg-gradient-to-t"
+              : "bg-gradient-to-t"
             }`}
         ></div>
 
         <div
-          className={`absolute text-white top-3/4 z-20 flex w-1/2 -translate-y-1/2 transform flex-col justify-center gap-8 px-8 md:px-12 lg:px-24 ${!textSide || textSide === "left"
+          className={`absolute text-[#f6f1eb] top-3/4 z-20 flex w-1/2 -translate-y-1/2 transform flex-col justify-center gap-8 px-8 md:px-12 lg:px-24 ${!textSide || textSide === "left"
               ? "text-left"
               : "left-1/2 text-right"
             }`}
@@ -50,7 +50,7 @@ function ImageCategory({
             <div>
               <Image src={image} alt="Image for mobile" />
             </div>
-            <div className="mt-8 md:mt-0 text-white">
+            <div className="mt-8 md:mt-0 text-[#f6f1eb]">
               <h1 className="mb-4 text-4xl italic">{title}</h1>
               <p className="mb-4 text-lg">{description}</p>
             </div>

@@ -23,25 +23,25 @@ function Pharmacovigilance() {
           title="Bulk ICSR processing"
           text="We offer an advanced solution for the processing of Individual Case Safety Reports (ICSR). With the capability of handling a large volume of data, our system ensures timely and accurate submissions to meet regulatory requirements."
           link="/solutions/early-phase/clinical-research-units/"
-          color="bg-lime-200 text-white"
+          color="bg-lime-200"
         />
         <InfoBox
           title="Local contact person GR/CY"
           text="For our clients based in Greece and Cyprus, we provide a dedicated local contact person for seamless communication and tailored service delivery. This local presence ensures better understanding and execution of region-specific requirements."
           link="/solutions/early-phase/patient-studies/"
-          color="bg-blue-200 text-white"
+          color="bg-blue-200"
         />
         <InfoBox
           title="Local MLM"
           text="Our local Medical Literature Monitoring (MLM) service ensures that all relevant local literature is screened for Individual Case Safety Reports (ICSRs), increasing the likelihood of identifying adverse drug reactions from different sources."
           link="/solutions/early-phase/pharmacodynamic-models/"
-          color="bg-purple-200 text-white"
+          color="bg-purple-200"
         />
         <InfoBox
           title="Global MLM"
           text="Our global Medical Literature Monitoring (MLM) service provides comprehensive monitoring and review of worldwide literature. This global approach helps ensure the early detection of new potential risks or side effects of a drug."
           link="/solutions/early-phase/pharmacodynamic-models/"
-          color="bg-red-200 text-white"
+          color="bg-red-200"
         />
       </div>
 
