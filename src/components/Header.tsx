@@ -52,7 +52,7 @@ function Header() {
         : "bg-transparent"
         } transition-all duration-300`}
     >
-      <div className="mx-auto flex max-w-[86em] items-center justify-between px-4 py-6 lg:px-0">
+      <div className="mx-auto flex max-w-[86rem] items-center justify-between px-4 py-6 lg:px-0">
         <Logo />
         <button
           className="block text-xl md:hidden"

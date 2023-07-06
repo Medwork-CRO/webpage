@@ -1,17 +1,15 @@
 import ImageCategory from "@/components/ImageCategory";
-import RoundedButton from "@/components/RoundedButton";
-import Title from "@/components/Title";
+import kariera from "@assets/companies/kariera_icon.png";
+import linkedin from "@assets/companies/linkedin_icon.png";
 import ai from "@assets/team-photos/ai.webp";
 import ai1 from "@assets/team-photos/ai1.webp";
 import ai2 from "@assets/team-photos/ai2.webp";
 import ai4 from "@assets/team-photos/ai4.webp";
 import team3 from "@assets/team-photos/team3.jpg";
-import kariera from "@assets/companies/kariera_icon.png";
-import linkedin from "@assets/companies/linkedin_icon.png";
 
+import DisplayParagraphs from "@/components/DisplayParagraphs";
 import Image from "next/image";
 import Link from "next/link";
-import DisplayParagraphs from "@/components/DisplayParagraphs";
 
 const paragraphs = [
   "We have proudly established ourselves as the leading and most esteemed Contract Research Organization (CRO) in Greece.",
@@ -20,7 +18,7 @@ const paragraphs = [
 
 function Cosmetovigilance() {
   return (
-    <div className="mx-auto flex flex-col items-center justify-between">
+    <div className="mx-auto max-w-[86rem] flex flex-col items-center justify-between">
       <ImageCategory
         textSide="right"
         image={team3}
@@ -32,7 +30,7 @@ function Cosmetovigilance() {
       challenges."
       />
 
-      <div className="flex max-w-[86em] flex-col items-center gap-6 whitespace-pre-line px-4 py-16 text-xl text-gray-500 dark:text-gray-400 sm:px-8">
+      <div className="flex flex-col items-center gap-6 whitespace-pre-line py-16 text-xl text-gray-500 dark:text-gray-400">
         <DisplayParagraphs paragraphs={paragraphs} />
 
         <div className="mt-16 flex flex-col justify-between gap-4 text-gray-500 dark:text-gray-400 md:flex-row">
@@ -75,7 +73,7 @@ function Cosmetovigilance() {
           <Image src={ai4} alt="AI" className="h-48 w-48 object-cover" />
         </div>
 
-        <div className="flex flex-col gap-8 whitespace-pre-line text-2xl text-blue-800 dark:text-blue-400 xs:px-24">
+        <div className="flex flex-col gap-8 whitespace-pre-line text-2xl text-blue-800 dark:text-blue-400">
           <p className="font-thin">
             Medwork values people and people value their future. There is no
             greater way to supercharge your career than to join a company that
@@ -90,7 +88,7 @@ function Cosmetovigilance() {
           </p>
         </div>
 
-        <div className="my-16 flex flex-col gap-2 whitespace-pre-line text-2xl font-thin text-cyan-600 dark:text-cyan-400 xs:px-24">
+        <div className="my-16 flex flex-col gap-2 whitespace-pre-line text-2xl font-thin text-cyan-600 dark:text-cyan-400">
           <div>
             You can see all our open job offerings
             <div className="mt-4 flex flex-col justify-center gap-6 text-center">

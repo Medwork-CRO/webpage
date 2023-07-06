@@ -10,7 +10,7 @@ function MemberCard({
   linkedInTag,
 }: MemberInfo) {
   return (
-    <div className="flex w-[20rem] flex-col p-2 sm:p-4 md:p-6 lg:p-8">
+    <div className="flex flex-col w-full max-w-[20rem]">
       <div className="flex h-32 w-full justify-center rounded-xl bg-cover">
         <Image
           className="h-[136px] w-[136px] rounded-full border-2 border-cyan-600 object-cover"

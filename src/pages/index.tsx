@@ -1,7 +1,6 @@
 import Carousel from "@/components/Carousel";
 import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ImageShowCase from "@/components/ImageShowCase";
-import PromoCard from "@/components/PromoCard";
 import ProvidedServices from "@/components/ProvidedServices";
 import EMA from "@assets/stock-images/EMA.webp";
 import happyWoman from "@assets/stock-images/happy-woman.jpg";
@@ -46,10 +45,10 @@ function Home() {
         ))}
       </Carousel>
 
-      <div className="mt-16 flex max-w-[86em] flex-col items-center gap-8 whitespace-pre-line px-4 text-xl text-gray-500 dark:text-gray-400 sm:px-8">
+      <div className="mt-16 flex max-w-[86rem] flex-col items-center gap-8 whitespace-pre-line px-4 text-xl text-gray-500 dark:text-gray-400 sm:px-8">
         <DisplayParagraphs paragraphs={paragraphs} />
         <ProvidedServices />
-        <PromoCard />
+        {/* <PromoCard /> */}
       </div>
     </div>
   );

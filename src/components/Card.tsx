@@ -15,7 +15,7 @@ function Card({
   readMoreLink,
 }: CardProps) {
   return (
-    <div className="flex transform flex-col justify-between gap-2 rounded-xl">
+    <div className="flex transform flex-col gap-2 rounded-xl">
       <div className="flex flex-col gap-4">
         <div className="overflow-hidden rounded-2xl">
           <Image
@@ -26,12 +26,12 @@ function Card({
         </div>
         <p className="text-base font-normal text-cyan-600">{imageTitle}</p>
       </div>
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-2 h-full justify-between">
         <p className="overflow-ellipsis text-lg font-normal text-gray-500 dark:text-gray-400 md:text-base">
           {imageDescription}
         </p>
         <Link
-          className="font-semibold text-black hover:text-cyan-400 underline dark:text-white"
+          className="font-semibold text-black hover:text-cyan-400 hover:underline dark:text-white"
           href={readMoreLink}
         >
           Learn More

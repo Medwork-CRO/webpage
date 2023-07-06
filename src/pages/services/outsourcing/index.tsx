@@ -20,7 +20,7 @@ function Outsourcing() {
         description="Medwork provides a comprehensive and customizable set of services to assist cosmetics companies in complying with the regulatory directives."
       />
 
-      <div className="mx-auto flex max-w-[86em] flex-col items-center gap-6 whitespace-pre-line px-4 text-xl text-gray-500 dark:text-gray-400 sm:px-8 py-16">
+      <div className="mx-auto flex max-w-[86rem] flex-col items-center gap-6 whitespace-pre-line px-4 text-xl text-gray-500 dark:text-gray-400 sm:px-8 py-16">
         <DisplayParagraphs paragraphs={paragraphs} />
       </div>
     </div>
