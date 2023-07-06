@@ -62,17 +62,3 @@ function ImageCategory({
 }
 
 export default ImageCategory;
-
-/* <div className="relative">
-<Image
-className="h-96 rounded-xl object-none"
-src={imageData}
-alt={imageTitle}
-/>
-<span className="absolute top-1/3 left-2 text-5xl md:text-2xl font-bold text-left text-white drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)]">
-{imageTitle}
-</span>
-<p className="absolute top-2/3 left-2 w-full text-lg md:text-base text-white p-2 font-bold drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)]">
-{imageDescription}
-</p>
-</div> */

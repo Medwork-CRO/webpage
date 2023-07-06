@@ -24,7 +24,7 @@ function Logo({ children, ...options }: Props) {
       aria-label="By clicking you will be taken to Home"
       href="/"
     >
-      <Image className="hover:animate-spin" src={medworkLogo} alt="Medwork Logo" width={46} />
+      <Image src={medworkLogo} alt="Medwork Logo" width={46} />
       <div
         className={`${roboto.className} font-sans text-3xl text-[#919191]`}
         style={{ fontStyle: "italic" }}

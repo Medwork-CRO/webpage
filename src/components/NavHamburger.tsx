@@ -25,7 +25,7 @@ function VerticalNav({ label, href, subCategories }: NavProp) {
   const hasSubCategories = subCategories && subCategories.length > 0;
 
   return (
-    <>
+    <div className="transform duration-200">
       <div
         className="flex items-center justify-between text-gray-500 dark:text-gray-400 hover:text-cyan-500"
         onClick={() => setIsClicked(!isClicked)}
@@ -65,19 +65,23 @@ function VerticalNav({ label, href, subCategories }: NavProp) {
           ))}
         </div>
       )}
-    </>
+    </div>
   );
 }
 
 function NavHamburger(navHamburger: NavHamburgerProp & { isOpen: boolean }) {
-  const visibility = navHamburger.isOpen ? "block" : "hidden";
+  const visibility = navHamburger.isOpen ? "translate-y-0" : "translate-y-full";
 
   return (
-    <div className={`mx-6 mb-2 flex flex-col fixed inset-x-0 bottom-0 ${visibility}`}>
-      {navHamburger.nav.map((props) => (
-        <VerticalNav key={props.href} {...props} />
-      ))}
-    </div>
+    <>
+      {navHamburger.isOpen &&
+        <div className="fixed inset-0 bg-black bg-opacity-40 z-10"></div>}
+      <div className={`mx-6 mb-2 flex flex-col fixed inset-x-1 bottom-0 transform duration-200 ${visibility} z-20`}>
+        {navHamburger.nav.map((props) => (
+          <VerticalNav key={props.href} {...props} />
+        ))}
+      </div>
+    </>
   );
 }
 

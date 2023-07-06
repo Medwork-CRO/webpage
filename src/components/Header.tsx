@@ -52,10 +52,10 @@ function Header() {
         : "bg-transparent"
         } transition-all duration-300`}
     >
-      <div className="mx-auto flex max-w-[86rem] px-4 py-2 sm:py-4 lg:px-0 items-center justify-between ">
+      <div className="mx-auto flex max-w-[86rem] px-4 py-3 sm:py-4 lg:px-0 items-center justify-between ">
         <Logo />
         <button
-          className="block text-xl md:hidden"
+          className="block text-xl md:hidden z-20"
           onClick={() => setOpen(!isOpen)}
         >
           <Hamburger toggled={isOpen} toggle={setOpen} color="#0891b2" size={24}/>
