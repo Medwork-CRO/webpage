@@ -18,7 +18,7 @@ const paragraphs = [
 
 function Cosmetovigilance() {
   return (
-    <div className="mx-auto max-w-[86rem] flex flex-col items-center justify-between">
+    <div className="mx-auto max-w-[86rem] px-4 md:px-0 flex flex-col items-center justify-between">
       <ImageCategory
         textSide="right"
         image={team3}

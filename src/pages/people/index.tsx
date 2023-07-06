@@ -1,7 +1,6 @@
 import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ImageCategory from "@/components/ImageCategory";
 import MemberCard from "@/components/MemberCard";
-import Title from "@/components/Title";
 import { MemberInfo } from "@/types/MemberInfo";
 import ai from "@assets/team-photos/ai.webp";
 import ai1 from "@assets/team-photos/ai1.webp";
@@ -79,7 +78,7 @@ const paragraphs = [
 
 function OurTeam() {
   return (
-    <div className="mx-auto max-w-[86rem] flex flex-col items-center justify-between">
+    <div className="mx-auto max-w-[86rem] px-4 md:px-0 flex flex-col items-center justify-between">
       {/* <div className="flex flex-col justify-center gap-4 place-self-center"> */}
       <ImageCategory
         image={team1}
@@ -91,7 +90,7 @@ function OurTeam() {
         <DisplayParagraphs paragraphs={paragraphs} />
       </div>
 
-      <div className="my-12 m-4 md:mx-6 lg:mx-0 grid grid-cols-1 gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <div className="my-12 grid grid-cols-1 gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {membersInfo.map((memberInfo, i) => (
           <MemberCard
             key={i}

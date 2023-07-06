@@ -76,7 +76,7 @@ function CompanyFooter() {
 function Footer() {
   return (
     <footer
-      className={`${inter.variable} w-full flex justify-center bg-gradient-to-l from-cyan-500 to-cyan-800 px-8 font-sans dark:from-cyan-600 dark:to-cyan-900`}
+      className={`${inter.variable} w-full flex justify-center bg-gradient-to-l from-cyan-500 to-cyan-800 px-4 sm:px-8 font-sans dark:from-cyan-600 dark:to-cyan-900`}
     >
       <div className="flex w-full max-w-[86rem] flex-col">
         <div className="flex flex-col justify-between gap-8 py-16 md:flex-row">

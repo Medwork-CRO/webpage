@@ -47,12 +47,12 @@ function Header() {
 
   return (
     <header
-      className={`${inter.variable} sticky top-0 z-50 w-full font-sans  ${isScrolled
+      className={`${inter.variable} sticky top-0 z-50 w-full font-sans ${isScrolled
         ? "bg-[#f6f1eb] shadow-sm dark:bg-[#2d333b]"
         : "bg-transparent"
         } transition-all duration-300`}
     >
-      <div className="mx-auto flex max-w-[86rem] items-center justify-between px-4 py-6 lg:px-0">
+      <div className="mx-auto flex max-w-[86rem] px-4 py-2 sm:py-4 lg:px-0 items-center justify-between ">
         <Logo />
         <button
           className="block text-xl md:hidden"
