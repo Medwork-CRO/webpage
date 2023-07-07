@@ -27,7 +27,7 @@ function VerticalNav({ label, href, subCategories }: NavProp) {
   return (
     <div className="transform duration-200">
       <div
-        className="flex items-center justify-between text-gray-500 dark:text-gray-400 hover:text-cyan-500"
+        className="flex items-center justify-between text-cyan-800 dark:text-cyan-400 hover:text-cyan-600 hover:dark:text-cyan-200"
         onClick={() => setIsClicked(!isClicked)}
       >
         {!hasSubCategories && (
@@ -55,7 +55,7 @@ function VerticalNav({ label, href, subCategories }: NavProp) {
         <div className={"flex w-[200px] flex-col"}>
           {subCategories.map((subCategory) => (
             <Link
-              className="ml-2 px-5 py-3 text-md font-semibold text-gray-500 dark:text-gray-400 hover:text-cyan-500"
+              className="ml-2 px-5 py-3 text-md font-semibold text-cyan-800 dark:text-cyan-400 hover:text-cyan-600 hover:dark:text-cyan-200"
               aria-label={`By clicking you will be taken to ${subCategory.label}`}
               key={subCategory.href}
               href={subCategory.href}
@@ -75,7 +75,7 @@ function NavHamburger(navHamburger: NavHamburgerProp & { isOpen: boolean }) {
   return (
     <>
       {navHamburger.isOpen &&
-        <div className="fixed inset-0 bg-black bg-opacity-40 z-10"></div>}
+        <div className="fixed inset-0 bg-gray-400 backdrop-blur-sm bg-opacity-40 z-10"></div>}
       <div className={`mx-6 mb-2 flex flex-col fixed inset-x-1 bottom-0 transform duration-200 ${visibility} z-20`}>
         {navHamburger.nav.map((props) => (
           <VerticalNav key={props.href} {...props} />
