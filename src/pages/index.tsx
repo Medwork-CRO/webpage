@@ -29,7 +29,7 @@ const paragraphs = [
 
 function Home() {
   return (
-    <div className="mx-auto max-w-[86rem] px-4 md:px-0 flex flex-col items-center justify-between">
+    <div className="mx-auto flex flex-col items-center justify-between">
       {/* <ImageCategory
         image={team2}
         title="A European Pharmacovigilance Expert based in Athens with a focus in Greece and Cyprus."
@@ -45,7 +45,7 @@ function Home() {
         ))}
       </Carousel>
 
-      <div className="mt-16 flex flex-col items-center gap-8 whitespace-pre-line text-xl text-gray-500 dark:text-gray-400 ">
+      <div className="flex max-w-[86rem] flex-col items-center gap-6 whitespace-pre-line px-4 text-xl text-gray-500 dark:text-gray-400 sm:px-8 py-16">
         <DisplayParagraphs paragraphs={paragraphs} />
         <ProvidedServices />
         {/* <PromoCard /> */}

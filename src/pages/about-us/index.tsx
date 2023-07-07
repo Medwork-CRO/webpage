@@ -1,7 +1,6 @@
 import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ImageCategory from "@/components/ImageCategory";
 import PromoCard from "@/components/PromoCard";
-import Title from "@/components/Title";
 import team0 from "@assets/team-photos/team0.jpg";
 
 const paragraphs = [

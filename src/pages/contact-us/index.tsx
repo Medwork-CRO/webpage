@@ -163,7 +163,6 @@ const ConnectCard = () => {
 const Contact = () => {
 
   return (
-    // <section className="grid md:grid-cols-2 gap-16 md:mx-auto max-w-[86rem] px-4 md:px-0 mx-4 mb-8">
     <section className="md:mx-auto flex max-w-[86rem] flex-col items-start justify-center gap-16 md:flex-row mx-4 mb-8">
       <ConnectCard />
       <ContactForm />
