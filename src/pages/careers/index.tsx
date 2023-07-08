@@ -12,8 +12,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 const paragraphs = [
-  "We have proudly established ourselves as the leading and most esteemed Contract Research Organization (CRO) in Greece.",
-  "Our commitment to making a significant difference propelled us to expand our operations to Cyprus. Currently, we have extended our sphere of influence to encompass the whole of Europe, always maintaining our dedication to high quality service.",
+  "Medwork has made its mark as the top Contract Research Organization (CRO) in Greece, setting the standard for excellence.",
+  "Opting to join the Medwork team over further academic study provides multiple benefits and can substantially enhance your career progression.",
+  "Through hands-on experience and learning from industry professionals, you'll gain invaluable insights and skills that surpass classroom education while offering an immediate income and avoiding further academic debt.",
+  "With three years at Medwork, you'll gather extensive industry knowledge, positioning you advantageously for rapid career advancement in the ever-evolving pharmaceutical field."
 ];
 
 function Cosmetovigilance() {

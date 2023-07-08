@@ -8,7 +8,7 @@ type Props = {
 const Dots = ({ itemsLength, selectedIndex }: Props) => {
     const arr = new Array(itemsLength).fill(0);
     return (
-        <div className="flex gap-2 justify-center bg-black dark:bg-white p-1.5 rounded-xl">
+        <div className="flex gap-2 justify-center bg-black dark:bg-white p-1.5 rounded-full">
             {arr.map((_, index) => {
                 const selected = index === selectedIndex;
                 return (
