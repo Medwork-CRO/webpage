@@ -19,7 +19,7 @@ function Pharmacovigilance() {
       />
 
       <div className="flex max-w-[86rem] flex-col items-center gap-6 whitespace-pre-line px-4 text-xl text-gray-500 dark:text-gray-400 sm:px-8 py-16">
-        <div className="w-full grid grid-cols-1 md:grid-cols-2 md:mx-4 md:my-8 lg:grid-cols-4 lg:mx-0 lg:my-16 my-8 px-4">
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 md:mx-4 md:my-8 lg:grid-cols-4 lg:mx-0 lg:my-16 my-8">
           <InfoBox
             title="Bulk ICSR processing"
             text="We offer an advanced solution for the processing of Individual Case Safety Reports (ICSR). With the capability of handling a large volume of data, our system ensures timely and accurate submissions to meet regulatory requirements."
@@ -46,9 +46,7 @@ function Pharmacovigilance() {
           />
         </div>
 
-        <div className="flex max-w-[86rem] flex-col items-center gap-6 whitespace-pre-line px-4 text-xl text-gray-500 dark:text-gray-400 sm:px-8 py-16">
-          <DisplayParagraphs paragraphs={paragraphs0} />
-        </div>
+        <DisplayParagraphs paragraphs={paragraphs0} />
       </div>
     </div>
   );

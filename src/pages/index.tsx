@@ -17,7 +17,7 @@ const imageShowCases = [
   },
   {
     image: pv,
-    description: "Despite our extensive team, Medwork maintains the flexibility and responsiveness of a compact organization, demonstrating our commitment to care for our clients and their projects.",
+    description: "We maintain flexibility, agility and responsiveness of a compact organization, demonstrating our commitment to care for our clients and their projects.",
   },
 ];
 
