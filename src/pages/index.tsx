@@ -17,7 +17,7 @@ const imageShowCases = [
   },
   {
     image: pv,
-    description: "We maintain flexibility, agility and responsiveness of a compact organization, demonstrating our commitment to care for our clients and their projects.",
+    description: "We maintain the flexibility, agility, and responsiveness of a compact organization without compromising our commitment to caring for our clients and their projects.",
   },
 ];
 
