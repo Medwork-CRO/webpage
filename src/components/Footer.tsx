@@ -136,7 +136,7 @@ function Footer() {
               <span>{mail}</span>
               <span>{address}</span>
             </div>
-            <RoundedButton label="GET IN TOUCH" href="/contact-us" color="orange" />
+            <RoundedButton label="GET IN TOUCH" href="/contact-us"/>
             <CompanyInfo />
           </div>
         </div>
