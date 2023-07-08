@@ -13,14 +13,14 @@ const paragraphs = [
 
 function Training() {
   return (
-    <div className="mx-auto flex flex-col items-center justify-between">
+    <div className="mx-auto flex flex-col items-center justify-between max-w-[86rem] w-full">
       <ImageCategory
         image={cosmetovigilance}
         title="Training"
         description="Medwork provides a comprehensive and customizable set of services to assist cosmetics companies in complying with the regulatory directives."
       />
 
-      <div className="flex max-w-[86rem] flex-col items-center gap-6 whitespace-pre-line px-4 text-xl text-gray-500 dark:text-gray-400 sm:px-8 py-16">
+      <div className="flex flex-col items-center gap-6 whitespace-pre-line px-4 text-xl text-gray-500 dark:text-gray-400 sm:px-8 py-16">
         <DisplayParagraphs paragraphs={paragraphs} />
       </div>
     </div>

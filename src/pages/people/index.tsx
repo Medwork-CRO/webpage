@@ -78,7 +78,7 @@ const paragraphs = [
 
 function OurTeam() {
   return (
-    <div className="mx-auto flex flex-col items-center justify-between">
+    <div className="mx-auto flex flex-col items-center justify-between max-w-[86rem] w-full">
       {/* <div className="flex flex-col justify-center gap-4 place-self-center"> */}
       <ImageCategory
         image={team1}
@@ -86,7 +86,7 @@ function OurTeam() {
         description="We believe in a better world when it comes to health. It is our responsibility to make it."
       />
 
-      <div className="flex max-w-[86rem] flex-col items-center gap-6 whitespace-pre-line px-4 text-xl text-gray-500 dark:text-gray-400 sm:px-8 py-16">
+      <div className="flex flex-col items-center gap-6 whitespace-pre-line px-4 text-xl text-gray-500 dark:text-gray-400 sm:px-8 py-16">
         <DisplayParagraphs paragraphs={paragraphs} />
 
         <div className="w-full my-12 grid grid-cols-1 gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">

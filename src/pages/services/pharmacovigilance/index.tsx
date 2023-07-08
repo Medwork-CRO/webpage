@@ -6,19 +6,19 @@ import pharmacovigilance from "@assets/services/pharmacovigilance.jpg";
 const paragraphs0 = [
   "We have an extensive Pharmacovigilance Department composed of a team of 21 pharmacovigilance professionals and four medical advisors.",
   "Our clients range from small local companies to large international corporations. Currently [Dec 2021 data], we have over 117 active contracts with more than 77 clients relating to pharmacovigilance activities.",
-  "Our services may be fully customized to cover all of a Marketing Authorization Holder&apos;s responsibilities related to drug safety.",
+  "Our services may be fully customized to cover all of a Marketing Authorization Holders responsibilities related to drug safety.",
 ];
 
 function Pharmacovigilance() {
   return (
-    <div className="mx-auto flex flex-col items-center justify-between">
+    <div className="mx-auto flex flex-col items-center justify-between max-w-[86rem] w-full">
       <ImageCategory
         image={pharmacovigilance}
         title="Pharmacovigilance"
         description="Compliance with pharmacovigilance requirements is becoming an increasing challenge for pharmaceutical companies worldwide. In this very demanding environment, Medwork offers a reliable solution for every need related to drug safety."
       />
 
-      <div className="flex max-w-[86rem] flex-col items-center gap-6 whitespace-pre-line px-4 text-xl text-gray-500 dark:text-gray-400 sm:px-8 py-16">
+      <div className="flex flex-col items-center gap-6 whitespace-pre-line px-4 text-xl text-gray-500 dark:text-gray-400 sm:px-8 py-16">
         <div className="w-full grid grid-cols-1 md:grid-cols-2 md:mx-4 md:my-8 lg:grid-cols-4 lg:mx-0 lg:my-16 my-8">
           <InfoBox
             title="Bulk ICSR processing"

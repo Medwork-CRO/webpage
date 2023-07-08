@@ -13,6 +13,10 @@ import Link from "next/link";
 
 const paragraphs = [
   "Medwork has made its mark as the top Contract Research Organization (CRO) in Greece, setting the standard for excellence.",
+  "90% of our employees have a positive trajectory in their career path, and excel in their field. We are proud to say that Medwork is a place where people can grow and thrive.",
+];
+
+const paragraphs2 = [
   "Opting to join the Medwork team over further academic study provides multiple benefits and can substantially enhance your career progression.",
   "Through hands-on experience and learning from industry professionals, you'll gain invaluable insights and skills that surpass classroom education while offering an immediate income and avoiding further academic debt.",
   "With three years at Medwork, you'll gather extensive industry knowledge, positioning you advantageously for rapid career advancement in the ever-evolving pharmaceutical field."
@@ -26,10 +30,7 @@ function Cosmetovigilance() {
         image={team3}
         title="We value excellence and our people excel at that"
         description="Our team at Medwork is made up of experienced professionals who are
-      passionate about improving patient outcomes. We work closely with
-      the research community and pharmaceutical companies to develop
-      innovative solutions that address the most pressing healthcare
-      challenges."
+      passionate about improving patient outcomes."
       />
 
       <div className="flex max-w-[86rem] flex-col items-center gap-6 whitespace-pre-line px-4 text-xl text-gray-500 dark:text-gray-400 sm:px-8 py-16">
@@ -76,26 +77,27 @@ function Cosmetovigilance() {
         </div>
 
         <div className="flex flex-col gap-8 whitespace-pre-line text-2xl text-blue-800 dark:text-blue-400">
-          <p className="font-thin">
-            Medwork values people and people value their future. There is no
-            greater way to supercharge your career than to join a company that
-            is growing exponentially. We are always looking for talented
-            individuals to join our team. If you are interested in working with
-            us, please send your CV to.
+
+          <p className="font-thin italic">
+            {paragraphs2[0]}
           </p>
           <p className="font-thin italic">
-            <b>90%</b> of our employees have a positive trajectory in their
-            career path, and excel in their field. We are proud to say that
-            Medwork is a place where people can grow and thrive.
+            {paragraphs2[1]}
+          </p>
+          <p className="font-thin italic">
+            {paragraphs2[2]}
+
           </p>
         </div>
 
         <div className="my-16 flex flex-col gap-2 whitespace-pre-line text-2xl font-thin text-cyan-600 dark:text-cyan-400">
           <div>
             You can see all our open job offerings
-            <div className="mt-4 flex flex-col justify-center gap-6 text-center">
+            <div className="mt-4 flex flex-col sm:flex-row justify-center gap-6 text-center w-full">
               <Link
-                className="text-[#f6f1eb] flex flex-row items-center justify-center gap-4 rounded-xl bg-cyan-400 p-3 font-bold hover:bg-green-400 dark:text-[#2d333b]"
+                className="text-[#f6f1eb] flex flex-row items-center justify-center gap-4
+                rounded-full bg-cyan-400 px-6 py-2.5 font-bold hover:bg-green-400 dark:text-[#2d333b]
+                 border-2 border-transparent hover:border-[#2d333b] hover:dark:border-[#f6f1eb]"
                 aria-label={`By clicking you will be taken to kariera.gr`}
                 key={"kariera"}
                 href={"https://www.kariera.gr/en/companies/3531"}
@@ -110,7 +112,10 @@ function Cosmetovigilance() {
                 {"Kariera"}
               </Link>
               <Link
-                className="text-[#f6f1eb] flex flex-row items-center justify-center gap-4 rounded-xl bg-cyan-400 p-3 font-bold hover:bg-green-400 dark:text-[#2d333b]"
+
+                className="text-[#f6f1eb] flex flex-row items-center justify-center gap-4
+                rounded-full bg-cyan-400 px-6 py-2.5 font-bold hover:bg-green-400 dark:text-[#2d333b]
+                 border-2 border-transparent hover:border-[#2d333b] hover:dark:border-[#f6f1eb]"
                 aria-label={`By clicking you will be taken to linkedIn.gr`}
                 key={"linkedIn"}
                 href={"https://www.linkedin.com/company/medwork/jobs/"}

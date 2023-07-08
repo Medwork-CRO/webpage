@@ -15,10 +15,10 @@ function ImageCategory({
 }: ImageCategoryProps) {
   return (
     <>
-      <div className="relative hidden aspect-w-16 aspect-h-9 h-max-[515px] h-min-[515px] w-full max-w-[86rem] flex-[0_0_100%] md:block">
+      <div className="relative hidden aspect-w-16 aspect-h-9 h-[640px] w-full max-w-[86rem] md:block">
         <Image
           src={image}
-          className="h-full min-w-full object-cover"
+          className="h-full min-w-full object-cover shadow-gray-800 shadow-xl"
           alt="alt"
         />
         <div
@@ -45,7 +45,7 @@ function ImageCategory({
 
       <div className="grid grid-cols-1 md:grid-cols-2 md:hidden">
         <div className="relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-cyan-700"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-cyan-800"></div>
           <div className="relative z-10 float-left p-6 md:p-12">
             <div>
               <Image src={image} alt="Image for mobile" />

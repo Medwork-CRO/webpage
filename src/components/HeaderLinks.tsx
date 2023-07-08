@@ -51,6 +51,6 @@ const ContactUs = {
   href: "/contact-us",
 };
 
-const navMenu: NavProp[] = [AboutUs, Services, People, Careers, ContactUs];
+const navMenu: NavProp[] = [Services, People, AboutUs, Careers, ContactUs];
 
-export { navMenu, AboutUs, Services, People, Careers, ContactUs };
+export { navMenu, Services, People, AboutUs, Careers, ContactUs };

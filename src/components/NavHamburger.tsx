@@ -27,7 +27,7 @@ function VerticalNav({ label, href, subCategories }: NavProp) {
   return (
     <div className="transform duration-200">
       <div
-        className="flex items-center justify-between text-cyan-800 dark:text-cyan-400 hover:text-cyan-600 hover:dark:text-cyan-200"
+        className="flex items-center justify-between text-cyan-800 dark:text-cyan-400 hover:text-cyan-500"
         onClick={() => setIsClicked(!isClicked)}
       >
         {!hasSubCategories && (
@@ -55,7 +55,7 @@ function VerticalNav({ label, href, subCategories }: NavProp) {
         <div className={"flex w-[200px] flex-col"}>
           {subCategories.map((subCategory) => (
             <Link
-              className="ml-2 px-5 py-3 text-md font-semibold text-cyan-800 dark:text-cyan-400 hover:text-cyan-600 hover:dark:text-cyan-200"
+              className="ml-2 px-5 py-3 text-md font-semibold text-cyan-800 dark:text-cyan-400 hover:text-cyan-500"
               aria-label={`By clicking you will be taken to ${subCategory.label}`}
               key={subCategory.href}
               href={subCategory.href}

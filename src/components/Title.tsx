@@ -1,11 +1,5 @@
 import { Spectral } from "@next/font/google";
 
-const inter = Spectral({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  weight: "400",
-});
-
 type TitleProps = {
   title: string;
   colour?: string;
@@ -14,7 +8,7 @@ type TitleProps = {
 
 function Title({
   title,
-  colour = "text-gray-500 dark:text-[#f6f1eb]",
+  colour = "text-[#2d333b] dark:text-[#f6f1eb]",
   align = "center",
 }: TitleProps) {
   const textAlign = align === "left" ? "md:text-left" : "md:text-center";
