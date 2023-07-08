@@ -10,6 +10,7 @@ import team3 from "@assets/team-photos/team3.jpg";
 import DisplayParagraphs from "@/components/DisplayParagraphs";
 import Image from "next/image";
 import Link from "next/link";
+import Counter from "@/components/Counter";
 
 const paragraphs = [
   "Medwork has made its mark as the top Contract Research Organization (CRO) in Greece, setting the standard for excellence.",
@@ -39,8 +40,9 @@ function Cosmetovigilance() {
         <div className="mt-16 flex flex-col justify-between gap-4 text-gray-500 dark:text-gray-400 md:flex-row">
           <div className="mb-8 mr-8 border-b-2 border-r-0 border-b-gray-500 border-r-gray-500 pb-8 pr-8 md:border-b-0 md:border-r-2">
             <div className="flex w-56 flex-col">
-              <span className="number mb-4 text-4xl font-bold text-cyan-500">
-                90%
+              <span className="number mb-4 text-4xl font-bold text-cyan-500 flex flex-row">
+                <Counter number={90} title="" duration={3} />
+                <span>%</span>
               </span>
               <span className="subtext text-gray-600 dark:text-gray-400">
                 of employees are <strong>women</strong>
@@ -49,8 +51,9 @@ function Cosmetovigilance() {
           </div>
           <div className="mb-8 mr-8 border-b-2 border-r-0 border-b-gray-500 border-r-gray-500 pb-8 pr-8 md:border-b-0 md:border-r-2">
             <div className="flex w-56 flex-col">
-              <span className="number mb-4 text-4xl font-bold text-cyan-500">
-                80%
+              <span className="number mb-4 text-4xl font-bold text-cyan-500 flex flex-row">
+                <Counter number={80} title="" duration={3} />
+                <span>%</span>
               </span>
               <span className="subtext text-gray-600 dark:text-gray-400">
                 of employees are happy after <strong>2 years</strong>
@@ -59,8 +62,9 @@ function Cosmetovigilance() {
           </div>
           <div className="">
             <div className="flex w-56 flex-col">
-              <span className="number mb-4 text-4xl font-bold text-cyan-500">
-                84%
+              <span className="number mb-4 text-4xl font-bold text-cyan-500 flex flex-row">
+                <Counter number={84} title="" duration={3} />
+                <span>%</span>
               </span>
               <span className="subtext text-gray-600 dark:text-gray-400">
                 of employees has at least one <strong>degree</strong>
