@@ -22,9 +22,10 @@ const imageShowCases = [
 ];
 
 const paragraphs = [
-  "Medwork is a Contract Research Organization (CRO) operating in Southeast Europe, which since 2005 offers a wide range of specialized services to the pharmaceutical and medical device industries.",
-  "A Contract Research Organization (CRO) is a company that provides support to the pharmaceutical, biotechnology, and medical device industries in the form of research services outsourced on a contract basis. At our CRO, we have experience and expertise with a diverse range of Therapeutic Areas and focus on innovative, technology-enabled solutions that allow our clients to focus on their core strengths.",
-  "Our experienced team delivers high-touch services and technology to ensure your trial is handled with the quality and care that results in compliant outcomes and patient-focused results. From early phase studies through Phase III clinical trials, we provide a range of services to support your research needs.",
+  "Medwork is a CRO specializing in Drug Safety. Since 2005, Medwork has been providing a wide range of Drug safety services to the pharmaceutical and medical device industries.",
+  "At Medwork, we prioritize experience and quality, following a deliberate path characterized by small yet robust steps. This approach allows us to achieve steady growth year after year, while ensuring the satisfaction of our clients, the smooth progress of their projects, and the ongoing development and deepening of our structure as well as the relationships with our clients. We believe in taking measured and thoughtful strides rather than pursuing rapid acceleration or becoming a booming giant. Our focus is on stability, productivity, and maintaining a strong commitment to quality.",
+  "We consider ourselves fortunate to have had the opportunity to work with MAHs and medical device manufacturers over the course of years and even decades, who appreciate and value this organic growth and maturity approach in all aspects of our collaboration.",
+  "If you resonate with our approach, we would be delighted to establish a partnership whenever you require drug safety services of any kind!",
 ];
 
 function Home() {
