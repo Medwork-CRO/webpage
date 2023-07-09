@@ -1,7 +1,7 @@
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { AiOutlinePhone, AiOutlineMail, AiOutlineEnvironment } from "react-icons/ai";
-import Title from "./Title";
+import Title from "../../components/Title";
 
 type MapCategoryProps = {
   location?: string;
@@ -23,7 +23,6 @@ function getIFrame(location: string, rounded = false) {
 function getCompanyInfo() {
   return (
     <div className="font-semibold leading-[2rem] sm:leading-[2rem] md:leading-[3rem] xl:leading-[4rem] text-lg sm:text-xl text-[#2d333b] dark:text-[#f6f1eb] text-left">
-      <Title title="Connect with us" align="left" />
       <div className="text-[#2d333b] dark:text-[#f6f1eb] flex flex-col justify-end">
         <div className="mb-6 flex gap-4 items-center">
           <AiOutlinePhone className="h-6 w-6" />
