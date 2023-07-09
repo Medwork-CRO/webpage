@@ -24,7 +24,7 @@ function getCompanyInfo() {
   return (
     <div className="font-semibold leading-[2rem] sm:leading-[2rem] md:leading-[3rem] xl:leading-[4rem] text-lg sm:text-xl text-[#2d333b] dark:text-[#f6f1eb] text-left">
       <div className="text-[#2d333b] dark:text-[#f6f1eb] flex flex-col justify-end">
-        <div className="mb-6 flex gap-4 items-center">
+        <div className="mb-6 flex gap-4 items-center rounded-full backdrop-blur-3xl border-white border-2 px-6 py-2">
           <AiOutlinePhone className="h-6 w-6" />
           <Link
             href="tel:+302109960971"
@@ -34,7 +34,7 @@ function getCompanyInfo() {
             (+30) 210 9960971
           </Link>
         </div>
-        <div className="mb-6 flex gap-4 items-center">
+        <div className="mb-6 flex gap-4 items-center rounded-full backdrop-blur-3xl border-white border-2 px-6 py-2">
           <AiOutlinePhone className="h-6 w-6" />
           <Link
             href="fax:+302109969578"
@@ -44,7 +44,7 @@ function getCompanyInfo() {
             (+30) 210 9969578
           </Link>
         </div>
-        <div className="mb-6 flex gap-4 items-center">
+        <div className="mb-6 flex gap-4 items-center rounded-full backdrop-blur-3xl border-white border-2 px-6 py-2">
           <AiOutlineMail className="h-6 w-6" />
           <Link
             href="mailto:medworkinfo@medwork.gr"
@@ -54,7 +54,7 @@ function getCompanyInfo() {
             medworkinfo@medwork.gr
           </Link>
         </div>
-        <div className="flex gap-4 items-center">
+        <div className="flex gap-4 items-center rounded-full backdrop-blur-3xl border-white border-2 px-6 py-2">
           <AiOutlineEnvironment className="h-6 w-6" />
           <Link
             href="https://goo.gl/maps/KDKk5piro9Cb6AXG7"

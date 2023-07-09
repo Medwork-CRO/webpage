@@ -23,16 +23,16 @@ function Pharmacovigilance() {
 
         <div className="w-full grid grid-cols-1 md:grid-cols-2 md:mx-4 md:my-8 lg:grid-cols-3 lg:mx-0 lg:my-16 my-8">
           <InfoBox
-            title="Bulk ICSR processing"
-            text="We offer an advanced solution for the processing of Individual Case Safety Reports (ICSR). With the capability of handling a large volume of data, our system ensures timely and accurate submissions to meet regulatory requirements."
+            title="Bulk ICSR Processing: Efficient Solutions for acute Needs"
+            text="When faced with a surge in the number of ICSRs that require processing, urgent handling of excessive amounts of ICSRs, or simply a need for ICSR handling for any reason, there's no need to panic. Our specialized Bulk ICSR Processing services are here to assist you. Compliant with EudraVigilance rules and all applicable regulatory requirements, we ensure that all ICSRs are processed according to your existing pharmacovigilance systems and processes. We work closely with your team to understand your specific requirements and tailor our approach accordingly. We understand the challenges that arise from managing a sudden influx of ICSRs or handling exceptionally large volumes, and we are equipped to handle them efficiently."
             link="/solutions/early-phase/clinical-research-units/"
             color="bg-lime-200"
           />
           <InfoBox
-            title="Local contact person GR/CY"
-            text="For our clients based in Greece and Cyprus, we provide a dedicated local contact person for seamless communication and tailored service delivery. This local presence ensures better understanding and execution of region-specific requirements."
+            title="Development of Pharmacovigilance Systems"
+            text="We develop reliable and compliant pharmacovigilance systems. We understand the criticality of establishing efficient processes that prioritize patient safety and regulatory compliance. Working closely with our clients, we offer customized solutions that align with regulatory requirements and industry standards. Our services encompass the implementation of robust quality systems, reporting mechanisms, comprehensive signal detection and management, streamlined case processing, and proactive risk assessment. We maintain a thorough understanding of the regulatory landscape to deliver effective pharmacovigilance systems."
             link="/solutions/early-phase/patient-studies/"
-            color="bg-blue-200"
+          color="bg-blue-200"
           />
           <InfoBox
             title="Local MLM"
@@ -47,14 +47,14 @@ function Pharmacovigilance() {
             color="bg-red-200"
           />
           <InfoBox
-            title="PPVs & Local PV Services in Greece, Cyprus, and Malta"
-            text="We offer comprehensive and integrated local pharmacovigilance services for Greece, Cyprus and Malta. Our services go beyond the responsibilities of a local QP/LPPV, providing MAHs with a complete local PV system. This includes an independent and cutting-edge Local MLM service, regulatory intelligence, a diverse team of case handling personnel, along with all other expertise necessary for the QP/LPPV to fulfil their role effectively, even during absences, vacations, or unexpected leave."
+            title="LPPV & Local PV Services in Greece, Cyprus and Malta"
+            text="We offer comprehensive and integrated local pharmacovigilance services for Greece, Cyprus and Malta. Our services go beyond the responsibilities of a local QP/LPPV, providing MAHs with a complete local PV system. This includes an independent Local MLM service, regulatory intelligence, a diverse team of case handling personnel, along with all other expertise necessary for the QP/LPPV to fulfil their role effectively, even during regular leave, absences, vacations, or unexpected incidences."
             link="/solutions/early-phase/pharmacodynamic-models/"
             color="bg-orange-200"
           />
           <InfoBox
-            title="Bulk ICSR Processing"
-            text="Efficient Solutions for Large-Scale Pharmacovigilance Needs: Facing a surge in the number of ICSRs that need to be processed, requiring urgent handling of excess amounts of ICSRs, or simply needing ICSR handling for any reason, there's no need to panic. Our expert team is here to assist you with our specialized Bulk ICSR Processing services. Our services are compliant with EudraVigilance rules and adhere to  robust quality control measures."
+            title="Appointment of local contact person in Cyprus during centralized MAA"
+            text=""
             link="/solutions/early-phase/pharmacodynamic-models/"
             color="bg-cyan-200"
           />
