@@ -25,7 +25,7 @@ const paragraphs2 = [
 
 function Cosmetovigilance() {
   return (
-    <div className="mx-auto flex flex-col items-center justify-between">
+    <div className="mx-auto flex flex-col items-center justify-between max-w-[86rem] w-full">
       <ImageCategory
         textSide="right"
         image={team3}
@@ -34,7 +34,7 @@ function Cosmetovigilance() {
       passionate about improving patient outcomes."
       />
 
-      <div className="flex max-w-[86rem] flex-col items-center gap-6 whitespace-pre-line px-4 text-xl text-gray-500 dark:text-gray-400 sm:px-8 py-16">
+      <div className="flex flex-col items-center gap-6 whitespace-pre-line px-4 text-xl text-gray-500 dark:text-gray-400 lg:px-0 py-16">
         <DisplayParagraphs paragraphs={paragraphs} />
 
         <div className="mt-16 flex flex-col justify-between gap-4 text-gray-500 dark:text-gray-400 md:flex-row">

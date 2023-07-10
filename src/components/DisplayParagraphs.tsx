@@ -4,7 +4,7 @@ type DisplayParagraphsProps = {
 
 function DisplayParagraphs({ paragraphs }: DisplayParagraphsProps) {
   return (
-    <div className="flex flex-col gap-8 whitespace-pre-line text-xl text-gray-500 dark:text-gray-400 md:text-2xl text-left">
+    <div className="flex flex-col gap-8 whitespace-pre-line text-gray-500 dark:text-gray-400 text-xl md:text-2xl text-left w-full">
       {paragraphs.map((paragraph, index) => (
         <p key={index} className={`${!index ? "font-semibold" : ""}`}>{paragraph}</p>
       ))}

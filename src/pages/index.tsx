@@ -46,7 +46,7 @@ function Home() {
         ))}
       </Carousel>
 
-      <div className="flex flex-col items-center gap-6 whitespace-pre-line px-4 text-xl text-gray-500 dark:text-gray-400 sm:px-8 py-16">
+      <div className="flex flex-col items-center gap-6 whitespace-pre-line px-4 text-xl text-gray-500 dark:text-gray-400 lg:px-0 py-16">
         <DisplayParagraphs paragraphs={paragraphs} />
         <ProvidedServices />
         {/* <PromoCard /> */}
