@@ -48,7 +48,7 @@ function Header() {
   return (
     <header
       className={`${inter.variable} sticky top-0 z-50 w-full font-sans ${isScrolled
-        ? "bg-[#f6f1eb] shadow-sm dark:bg-[#2d333b]"
+        ? "shadow-sm bg-[#f6f1eb] dark:bg-[#2d333b]"
         : "bg-transparent"
         } transition-all duration-300`}
     >
