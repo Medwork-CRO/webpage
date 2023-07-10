@@ -14,7 +14,7 @@ const Dots = ({ itemsLength, selectedIndex }: Props) => {
                 return (
                     <div
                         className={classNames({
-                            "h-2 w-2 sm:h-2.5 sm:w-2.5 rounded-full transition-all duration-300 bg-cyan-400 border-2 border-[#f6f1eb] dark:border-[#2d333b]": true,
+                            "h-2 w-2 sm:h-2.5 sm:w-2.5 rounded-full transition-all duration-300 bg-cyan-400 border border-[#f6f1eb] dark:border-[#2d333b]": true,
                             "bg-green-800 ": !selected,
                         })}
                         key={index}
