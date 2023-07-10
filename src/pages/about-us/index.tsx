@@ -1,7 +1,9 @@
+import Breadcrumbs from "@/components/Breadcrumb";
 import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ImageCategory from "@/components/ImageCategory";
 import PromoCard from "@/components/PromoCard";
 import team0 from "@assets/team-photos/team0.jpg";
+import { FaHome } from 'react-icons/fa';
 
 const paragraphs = [
   "We have proudly established ourselves as the leading and most esteemed Contract Research Organization (CRO) in Greece.",
@@ -11,6 +13,20 @@ const paragraphs = [
 function Cosmetovigilance() {
   return (
     <div className="mx-auto flex flex-col items-center justify-between max-w-[86rem] w-full">
+      <Breadcrumbs
+        items={[
+          {
+            label: (
+              <FaHome size={18} />
+            ),
+            path: "/",
+          },
+          {
+            label: "About Us",
+            path: "/about-us",
+          },
+        ]}
+      />
       <ImageCategory
         image={team0}
         title="About Medwork"

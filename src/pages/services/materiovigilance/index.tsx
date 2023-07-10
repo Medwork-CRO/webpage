@@ -1,6 +1,8 @@
+import Breadcrumbs from "@/components/Breadcrumb";
 import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ImageCategory from "@/components/ImageCategory";
 import materiovigilance from "@assets/services/materiovigilance.jpg";
+import { FaHome } from 'react-icons/fa';
 
 const paragraphs1 = [
   "Medical Devices Directives ensure that adverse incidents are evaluated and, where appropriate, information is disseminated in the form of a National Competent Authority Report (NCAR) with the objective of preventing the repetition of such incidents through the adoption of appropriate corrective actions to be taken in the field.",
@@ -19,6 +21,24 @@ const paragraphs2 = [
 function Materiovigilance() {
   return (
     <div className="mx-auto flex flex-col items-center justify-between max-w-[86rem] w-full">
+      <Breadcrumbs
+        items={[
+          {
+            label: (
+              <FaHome size={18} />
+            ),
+            path: "/",
+          },
+          {
+            label: "Services",
+            path: "",
+          },
+          {
+            label: "Materialvigilance",
+            path: "/services/materiovigilance",
+          }
+        ]}
+      />
       <ImageCategory
         image={materiovigilance}
         title="Materiovigilance"

@@ -1,3 +1,6 @@
+import Breadcrumbs from "@/components/Breadcrumb";
+import Counter from "@/components/Counter";
+import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ImageCategory from "@/components/ImageCategory";
 import kariera from "@assets/companies/kariera_icon.png";
 import linkedin from "@assets/companies/linkedin_icon.png";
@@ -6,11 +9,9 @@ import ai1 from "@assets/team-photos/ai1.webp";
 import ai2 from "@assets/team-photos/ai2.webp";
 import ai4 from "@assets/team-photos/ai4.webp";
 import team3 from "@assets/team-photos/team3.jpg";
-
-import DisplayParagraphs from "@/components/DisplayParagraphs";
 import Image from "next/image";
 import Link from "next/link";
-import Counter from "@/components/Counter";
+import { FaHome } from 'react-icons/fa';
 
 const paragraphs = [
   "Medwork has made its mark as the top Contract Research Organization (CRO) in Greece, setting the standard for excellence.",
@@ -26,6 +27,20 @@ const paragraphs2 = [
 function Cosmetovigilance() {
   return (
     <div className="mx-auto flex flex-col items-center justify-between max-w-[86rem] w-full">
+      <Breadcrumbs
+        items={[
+          {
+            label: (
+              <FaHome size={18} />
+            ),
+            path: "/",
+          },
+          {
+            label: "Careers",
+            path: "/careers",
+          },
+        ]}
+      />
       <ImageCategory
         textSide="right"
         image={team3}

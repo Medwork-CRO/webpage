@@ -1,7 +1,9 @@
+import Breadcrumbs from "@/components/Breadcrumb";
 import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ImageCategory from "@/components/ImageCategory";
 import InfoBox from "@/components/InfoBox";
 import pharmacovigilance from "@assets/services/pharmacovigilance.jpg";
+import { FaHome } from 'react-icons/fa';
 
 const paragraphs0 = [
   "We have an extensive Pharmacovigilance Department composed of a team of 21 pharmacovigilance professionals and four medical advisors.",
@@ -12,6 +14,24 @@ const paragraphs0 = [
 function Pharmacovigilance() {
   return (
     <div className="mx-auto flex flex-col items-center justify-between max-w-[86rem] w-full">
+      <Breadcrumbs
+        items={[
+          {
+            label: (
+              <FaHome size={18} />
+            ),
+            path: "/",
+          },
+          {
+            label: "Services",
+            path: "",
+          },
+          {
+            label: "Pharmacovigilance",
+            path: "/services/pharmacovigilance",
+          }
+        ]}
+      />
       <ImageCategory
         image={pharmacovigilance}
         title="Pharmacovigilance"
@@ -26,7 +46,7 @@ function Pharmacovigilance() {
             title="Development of Pharmacovigilance Systems"
             text="We develop reliable and compliant pharmacovigilance systems. We understand the criticality of establishing efficient processes that prioritize patient safety and regulatory compliance. Working closely with our clients, we offer customized solutions that align with regulatory requirements and industry standards. Our services encompass the implementation of robust quality systems, reporting mechanisms, comprehensive signal detection and management, streamlined case processing, and proactive risk assessment. We maintain a thorough understanding of the regulatory landscape to deliver effective pharmacovigilance systems."
             link="/solutions/early-phase/patient-studies/"
-          color="bg-blue-200"
+            color="bg-blue-200"
           />
           <InfoBox
             title="Bulk ICSR Processing: Efficient Solutions for acute Needs"

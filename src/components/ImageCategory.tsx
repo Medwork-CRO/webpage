@@ -18,7 +18,7 @@ function ImageCategory({
       <div className="relative hidden aspect-w-16 aspect-h-9 h-[640px] w-full max-w-[86rem] md:block">
         <Image
           src={image}
-          className="h-full min-w-full object-cover shadow-gray-800 shadow-xl"
+          className="h-full min-w-full object-cover shadow-gray-500 dark:shadow-gray-800 shadow-xl"
           alt="alt"
         />
         <div

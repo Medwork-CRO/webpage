@@ -1,6 +1,8 @@
+import Breadcrumbs from "@/components/Breadcrumb";
 import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ImageCategory from "@/components/ImageCategory";
 import cosmetovigilance from "@assets/services/cosmetovigilance.jpg";
+import { FaHome } from 'react-icons/fa';
 
 const paragraphs = [
   "Our services include:",
@@ -14,6 +16,24 @@ const paragraphs = [
 function Cosmetovigilance() {
   return (
     <div className="mx-auto flex flex-col items-center justify-between max-w-[86rem] w-full">
+      <Breadcrumbs
+        items={[
+          {
+            label: (
+              <FaHome size={18} />
+            ),
+            path: "/",
+          },
+          {
+            label: "Services",
+            path: "",
+          },
+          {
+            label: "Cosmetovigilance",
+            path: "/services/cosmetovigilance",
+          }
+        ]}
+      />
       <ImageCategory
         image={cosmetovigilance}
         title="Cosmetovigilance"

@@ -1,6 +1,8 @@
+import Breadcrumbs from "@/components/Breadcrumb";
 import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ImageCategory from "@/components/ImageCategory";
 import qualityManagement from "@assets/services/qualityManagement.jpg";
+import { FaHome } from 'react-icons/fa';
 
 const paragraphs = [
   "Medwork can assist you with:",
@@ -12,6 +14,24 @@ const paragraphs = [
 function QualityManagement() {
   return (
     <div className="mx-auto flex flex-col items-center justify-between max-w-[86rem] w-full">
+      <Breadcrumbs
+        items={[
+          {
+            label: (
+              <FaHome size={18} />
+            ),
+            path: "/",
+          },
+          {
+            label: "Services",
+            path: "",
+          },
+          {
+            label: "Quality Management",
+            path: "/services/quality-management",
+          }
+        ]}
+      />
       <ImageCategory
         image={qualityManagement}
         title="QualityManagement"

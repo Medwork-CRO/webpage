@@ -68,7 +68,7 @@ function getContact(display: string, value: string, contactType: ContactType) {
 function getCompanyInfo() {
   return (
     <div className="font-semibold text-xl text-[#2d333b] dark:text-[#f6f1eb] text-left">
-      <div className="text-[#2d333b] dark:text-[#f6f1eb] flex flex-col justify-end gap-4">
+      <div className="text-[#f6f1eb] flex flex-col justify-end gap-4">
         {getContact('(+30) 210 9960971', '+302109960971', ContactType.Phone)}
         {getContact('(+30) 210 9969578', '+302109969578', ContactType.Fax)}
         {getContact('medworkinfo@medwork.gr', 'medworkinfo@medwork.gr', ContactType.Email)}
