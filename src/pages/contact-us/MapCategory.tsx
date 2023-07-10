@@ -53,7 +53,7 @@ function getContact(display: string, value: string, contactType: ContactType) {
       break;
   }
 
-  return (<div className="flex gap-4 items-center rounded-lg backdrop-blur-3xl px-3 py-3">
+  return (<div className="flex gap-4 items-center rounded-lg px-3 py-3">
     {getIcon(contactType)}
     <Link
       href={href}
@@ -67,7 +67,7 @@ function getContact(display: string, value: string, contactType: ContactType) {
 
 function getCompanyInfo() {
   return (
-    <div className="font-semibold text-xl text-[#2d333b] dark:text-[#f6f1eb] text-left">
+    <div className="font-semibold text-xl text-left">
       <div className="text-[#f6f1eb] flex flex-col justify-end gap-4">
         {getContact('(+30) 210 9960971', '+302109960971', ContactType.Phone)}
         {getContact('(+30) 210 9969578', '+302109969578', ContactType.Fax)}
@@ -87,7 +87,7 @@ function MapCategory({
         <div className="flex flex-col md:flex-row">
           {getIFrame(location)}
           <div className="absolute inset-0 z-10 from-cyan-600 dark:from-cyan-800 to-transparent bg-gradient-to-r w-full"></div>
-          <div className="absolute top-2/4 z-20 flex -translate-y-1/2 transform flex-col justify-center gap-8 px-8 md:px-12 lg:px-24">
+          <div className="absolute top-2/4 z-10 flex -translate-y-1/2 transform flex-col justify-center gap-8 px-8 md:px-12 lg:px-24 h-full">
             {getCompanyInfo()}
           </div>
         </div >
