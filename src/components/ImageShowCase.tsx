@@ -20,7 +20,7 @@ function ImageShowCase({ image, description }: ImageShowCaseProps) {
 
       <div
         className="absolute top-3/4 z-20 flex -translate-y-1/2 transform flex-col justify-center gap-8 px-8 md:px-12 lg:px-24">
-        <span className="font-semibold leading-[2rem] sm:leading-[2rem] md:leading-[3rem] xl:leading-[4rem] text-2xl sm:text-3xl md:text-4xl xl:text-5xl text-[#2d333b] dark:text-[#f6f1eb] text-left">
+        <span className="font-semibold leading-[2rem] sm:leading-[2rem] md:leading-[3rem] xl:leading-[4rem] text-2xl sm:text-3xl md:text-4xl text-[#2d333b] dark:text-[#f6f1eb] text-left">
           {description}
         </span>
       </div>

@@ -15,7 +15,7 @@ import { FaHome } from 'react-icons/fa';
 
 const paragraphs = [
   "Medwork has made its mark as the top Contract Research Organization (CRO) in Greece, setting the standard for excellence.",
-  "90% of our employees have a positive trajectory in their career path, and excel in their field. We are proud to say that Medwork is a place where people can grow and thrive.",
+  "Our employees have a positive trajectory in their career path, and excel in their field. We are proud to say that Medwork is a place where people can grow and thrive.",
 ];
 
 const paragraphs2 = [
@@ -75,7 +75,7 @@ function Cosmetovigilance() {
               </span>
             </div>
           </div>
-          <div className="">
+          <div>
             <div className="flex w-56 flex-col">
               <span className="number mb-4 text-4xl font-bold text-cyan-500 flex flex-row">
                 <Counter number={84} title="" duration={3} />
@@ -88,15 +88,14 @@ function Cosmetovigilance() {
           </div>
         </div>
 
-        <div className="my-12 grid grid-cols-2 gap-2 md:grid-cols-4">
+        <div className="my-12 grid grid-cols-2 gap-2 md:grid-cols-4 w-full max-w-[50rem]">
           <Image src={ai} alt="AI" className="h-48 w-48 object-cover" />
           <Image src={ai1} alt="AI" className="h-48 w-48 object-cover" />
           <Image src={ai2} alt="AI" className="h-48 w-48 object-cover" />
           <Image src={ai4} alt="AI" className="h-48 w-48 object-cover" />
         </div>
 
-        <div className="flex flex-col gap-8 whitespace-pre-line text-2xl text-blue-800 dark:text-blue-400">
-
+        <div className="flex flex-col gap-8 whitespace-pre-line text-2xl p-8 border-2 rounded-lg border-gray-400 shadow-xl w-full max-w-[50rem]">
           <p className="font-thin italic">
             {paragraphs2[0]}
           </p>
@@ -105,7 +104,6 @@ function Cosmetovigilance() {
           </p>
           <p className="font-thin italic">
             {paragraphs2[2]}
-
           </p>
         </div>
 
