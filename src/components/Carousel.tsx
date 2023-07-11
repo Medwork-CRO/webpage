@@ -34,7 +34,7 @@ const Carousel = ({ children, ...options }: Props) => {
     const canScrollPrev = !!emblaApi?.canScrollPrev();
 
     return (
-        <div className="overflow-hidden relative" ref={emblaRef}>
+        <div className="group overflow-hidden relative" ref={emblaRef}>
             <div className="flex">{children}</div>
             <div className="absolute bottom-[50%] left-0 right-0 z-40 flex justify-center">
                 <CarouselControls

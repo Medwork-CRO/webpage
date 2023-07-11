@@ -13,25 +13,24 @@ function ImageCategory({
   image,
   textSide,
 }: ImageCategoryProps) {
+  const bgGradient = !textSide || textSide === "left" ? "bg-gradient-to-t" : "bg-gradient-to-t";
+
   return (
     <>
       <div className="relative hidden aspect-w-16 aspect-h-9 h-[640px] w-full max-w-[86rem] md:block">
         <Image
           src={image}
-          className="h-full min-w-full object-cover shadow-gray-500 dark:shadow-gray-800 shadow-xl"
+          className="h-full min-w-full object-cover shadow-gray-500 dark:shadow-gray-800 shadow-lg"
           alt="alt"
         />
         <div
-          className={`absolute inset-0 z-10 from-cyan-600 dark:from-cyan-800 to-transparent ${!textSide || textSide === "left"
-              ? "bg-gradient-to-t"
-              : "bg-gradient-to-t"
-            }`}
+          className={`absolute inset-0 z-10 from-cyan-600 dark:from-cyan-800 to-transparent ${bgGradient}`}
         ></div>
 
         <div
           className={`absolute text-[#f6f1eb] top-3/4 z-20 flex w-1/2 -translate-y-1/2 transform flex-col justify-center gap-8 px-8 md:px-12 lg:px-24 ${!textSide || textSide === "left"
-              ? "text-left"
-              : "left-1/2 text-right"
+            ? "text-left"
+            : "left-1/2 text-right"
             }`}
         >
           <span className=" text-2xl font-semibold italic md:text-3xl xl:text-4xl">

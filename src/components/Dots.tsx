@@ -5,7 +5,7 @@ type Props = {
     selectedIndex: number;
 };
 
-const Dots = ({ itemsLength, selectedIndex }: Props) => {
+function Dots({ itemsLength, selectedIndex }: Props) {
     const arr = new Array(itemsLength).fill(0);
     return (
         <div className="flex gap-2 justify-center bg-gray-800 dark:bg-gray-600 p-1 sm:p-1.5 rounded-full">
