@@ -49,11 +49,11 @@ function Cosmetovigilance() {
       passionate about improving patient outcomes."
       />
 
-      <div className="flex flex-col items-center gap-6 whitespace-pre-line px-4 text-xl text-gray-500 dark:text-gray-400 lg:px-0 py-16">
+      <div className="flex flex-col items-center gap-12 whitespace-pre-line px-4 text-xl text-gray-500 dark:text-gray-400 lg:px-0 pt-16">
         <DisplayParagraphs paragraphs={paragraphs} />
 
-        <div className="mt-16 flex flex-col justify-between gap-4 text-gray-500 dark:text-gray-400 md:flex-row">
-          <div className="mb-8 mr-8 border-b-2 border-r-0 border-b-gray-500 border-r-gray-500 pb-8 pr-8 md:border-b-0 md:border-r-2">
+        <div className="flex flex-col justify-between gap-8 text-gray-500 dark:text-gray-400 md:flex-row w-full">
+          <div>
             <div className="flex w-56 flex-col">
               <span className="number mb-4 text-4xl font-bold text-cyan-500 flex flex-row">
                 <Counter number={90} title="" duration={3} />
@@ -64,7 +64,8 @@ function Cosmetovigilance() {
               </span>
             </div>
           </div>
-          <div className="mb-8 mr-8 border-b-2 border-r-0 border-b-gray-500 border-r-gray-500 pb-8 pr-8 md:border-b-0 md:border-r-2">
+          <div className="border border-gray-500"></div>
+          <div>
             <div className="flex w-56 flex-col">
               <span className="number mb-4 text-4xl font-bold text-cyan-500 flex flex-row">
                 <Counter number={80} title="" duration={3} />
@@ -75,6 +76,7 @@ function Cosmetovigilance() {
               </span>
             </div>
           </div>
+          <div className="border border-gray-500"></div>
           <div>
             <div className="flex w-56 flex-col">
               <span className="number mb-4 text-4xl font-bold text-cyan-500 flex flex-row">
@@ -88,14 +90,7 @@ function Cosmetovigilance() {
           </div>
         </div>
 
-        <div className="my-12 grid grid-cols-2 gap-2 md:grid-cols-4 w-full max-w-[50rem]">
-          <Image src={ai} alt="AI" className="h-48 w-48 object-cover" />
-          <Image src={ai1} alt="AI" className="h-48 w-48 object-cover" />
-          <Image src={ai2} alt="AI" className="h-48 w-48 object-cover" />
-          <Image src={ai4} alt="AI" className="h-48 w-48 object-cover" />
-        </div>
-
-        <div className="flex flex-col gap-8 whitespace-pre-line text-2xl p-8 border-2 rounded-lg border-gray-400 shadow-xl w-full max-w-[50rem]">
+        <div className="flex flex-col gap-8 whitespace-pre-line text-2xl p-8 border-2 rounded-lg border-gray-400 shadow-xl w-full">
           <p className="font-thin italic">
             {paragraphs2[0]}
           </p>
@@ -105,16 +100,14 @@ function Cosmetovigilance() {
           <p className="font-thin italic">
             {paragraphs2[2]}
           </p>
-        </div>
 
-        <div className="my-16 flex flex-col gap-2 whitespace-pre-line text-2xl font-thin text-cyan-600 dark:text-cyan-400">
-          <div>
+          <div className="my-8 flex flex-col gap-2 items-center whitespace-pre-line text-2xl font-thin text-cyan-600 dark:text-cyan-400">
             You can see all our open job offerings
             <div className="mt-4 flex flex-col sm:flex-row justify-center gap-6 text-center w-full">
               <Link
                 className="text-[#f6f1eb] flex flex-row items-center justify-center gap-4
-                rounded-full bg-cyan-400 px-6 py-2.5 font-bold hover:bg-green-400 dark:text-[#2d333b]
-                 border-2 border-transparent hover:border-[#2d333b] hover:dark:border-[#f6f1eb]"
+                  rounded-full bg-cyan-400 px-6 py-2.5 font-bold hover:bg-green-400 dark:text-[#2d333b]
+                  border-2 border-transparent hover:border-[#2d333b] hover:dark:border-[#f6f1eb]"
                 aria-label={`By clicking you will be taken to kariera.gr`}
                 key={"kariera"}
                 href={"https://www.kariera.gr/en/companies/3531"}
@@ -131,8 +124,8 @@ function Cosmetovigilance() {
               <Link
 
                 className="text-[#f6f1eb] flex flex-row items-center justify-center gap-4
-                rounded-full bg-cyan-400 px-6 py-2.5 font-bold hover:bg-green-400 dark:text-[#2d333b]
-                 border-2 border-transparent hover:border-[#2d333b] hover:dark:border-[#f6f1eb]"
+                  rounded-full bg-cyan-400 px-6 py-2.5 font-bold hover:bg-green-400 dark:text-[#2d333b]
+                  border-2 border-transparent hover:border-[#2d333b] hover:dark:border-[#f6f1eb]"
                 aria-label={`By clicking you will be taken to linkedIn.gr`}
                 key={"linkedIn"}
                 href={"https://www.linkedin.com/company/medwork/jobs/"}
@@ -149,6 +142,14 @@ function Cosmetovigilance() {
             </div>
           </div>
         </div>
+
+        <div className="grid grid-cols-2 gap-2 md:grid-cols-4">
+          <Image src={ai} alt="AI" className="h-48 w-48 object-cover" />
+          <Image src={ai1} alt="AI" className="h-48 w-48 object-cover" />
+          <Image src={ai2} alt="AI" className="h-48 w-48 object-cover" />
+          <Image src={ai4} alt="AI" className="h-48 w-48 object-cover" />
+        </div>
+
         <div className="mt-8"></div>
       </div>
     </div>

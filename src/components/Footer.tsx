@@ -52,7 +52,7 @@ function CompanyFooter() {
     <div className="relative">
       <div className="flex flex-col justify-start gap-2 border-t border-white pb-8 pt-4 text-sm xs:flex-row">
         <span className="text-cyan-400">
-          © Copyright 2005 - {new Date().getFullYear()} Medwork -
+          © Copyright {new Date().getFullYear()} Medwork -
         </span>
         <span className="flex gap-2">
           <span className="text-[#f6f1eb] dark:text-gray-300">All Rights Reserved</span>
@@ -60,6 +60,7 @@ function CompanyFooter() {
           <span className="text-[#f6f1eb] dark:text-gray-300">
             Made by{" "}
             <a
+            className="underline font-semibold"
               href="https://github.com/keybraker"
               target="_blank"
               rel="noopener noreferrer"
