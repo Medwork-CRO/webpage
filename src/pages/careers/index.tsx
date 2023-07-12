@@ -150,7 +150,7 @@ function Cosmetovigilance() {
             </Link>
           </div>
           <div className="mt-8">
-            Or Email us your CV at {" "}
+            Or email us your CV at{" "}
             <a
               className="italic"
               aria-label={`By clicking you will be taken to linkedIn.gr`}

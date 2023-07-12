@@ -1,6 +1,5 @@
-import MapCategory from "@/pages/contact-us/MapCategory";
-import ContactForm from "./ContactForm";
 import Breadcrumbs from "@/components/Breadcrumb";
+import MapCategory from "@/pages/contact-us/MapCategory";
 import { FaHome } from 'react-icons/fa';
 
 const Contact = () => {
