@@ -18,24 +18,28 @@ function Card({
     <div className="flex transform flex-col gap-2 rounded-xl">
       <div className="flex flex-col gap-4">
         <div className="overflow-hidden rounded-2xl">
-          <Image
-            className="h-[16rem] rounded-2xl object-cover sm:h-[12rem]"
-            src={imageData}
-            alt={imageTitle}
-          />
+          <Link
+
+            href={readMoreLink}
+          >
+            <Image
+              className="h-[16rem] rounded-2xl object-cover sm:h-[12rem]"
+              src={imageData}
+              alt={imageTitle}
+            />
+          </Link>
         </div>
-        <p className="text-base font-normal text-cyan-600">{imageTitle}</p>
+        <Link
+          className="font-semibold text-xl text-cyan-600 hover:text-cyan-400 hover:underline dark:text-white"
+          href={readMoreLink}
+        >
+          {imageTitle}
+        </Link>
       </div>
       <div className="flex flex-col gap-2 h-full justify-between">
         <p className="overflow-ellipsis text-lg font-normal text-gray-500 dark:text-gray-400 md:text-base">
           {imageDescription}
         </p>
-        <Link
-          className="font-semibold text-black hover:text-cyan-400 hover:underline dark:text-white"
-          href={readMoreLink}
-        >
-          Learn More
-        </Link>
       </div>
     </div>
   );

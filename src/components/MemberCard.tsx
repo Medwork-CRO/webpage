@@ -13,9 +13,9 @@ function MemberCard({
     <div className="flex flex-col w-full sm:max-w-[20rem]">
       <div className="flex h-32 w-full justify-center rounded-xl bg-cover">
         <Image
-          className="h-[136px] w-[136px] rounded-full border-2 border-cyan-600 object-cover"
-          src={image}
-          alt={title}
+          className={`h-[136px] w-[136px] ${name.length % 2 ? 'rounded-full' : ''} border-2 border-cyan-600 object-cover`}
+        src={image}
+        alt={title}
         />
       </div>
       <div className="items-top mt-8 flex flex-col text-black dark:text-white">

@@ -72,7 +72,7 @@ function getCompanyInfo() {
         {getContact('(+30) 210 9960971', '+302109960971', ContactType.Phone)}
         {getContact('(+30) 210 9969578', '+302109969578', ContactType.Fax)}
         {getContact('medworkinfo@medwork.gr', 'medworkinfo@medwork.gr', ContactType.Email)}
-        {getContact('Chiou 5, Argyroupoli 16452', 'KDKk5piro9Cb6AXG7', ContactType.Address)}
+        {getContact('Greece, Chiou 5, Argyroupoli 16452', 'KDKk5piro9Cb6AXG7', ContactType.Address)}
       </div>
     </div>
   );
@@ -87,7 +87,7 @@ function MapCategory({
         <div className="flex flex-col md:flex-row">
           {getIFrame(location)}
           <div className="absolute inset-0 z-10 from-cyan-600 dark:from-cyan-800 to-transparent bg-gradient-to-r w-full"></div>
-          <div className="absolute top-2/4 z-10 flex -translate-y-1/2 transform flex-col justify-center gap-8 pl-0 md:pl-12 lg:pl-24 h-full">
+          <div className="absolute top-2/4 z-10 flex -translate-y-1/2 transform flex-col justify-center gap-8 ml-12 lg:ml-24 h-full">
             {getCompanyInfo()}
           </div>
         </div >

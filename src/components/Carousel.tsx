@@ -10,11 +10,9 @@ const Carousel = ({ children, ...options }: Props) => {
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false }, [Autoplay({
         stopOnInteraction: true,
         stopOnMouseEnter: true,
-        // stopOnLastSnap: true,
+        stopOnLastSnap: true,
+        delay: 7000,
     })]);
-
-    // need to selectedIndex to allow this component to re-render in react.
-    // Since emblaRef is a ref, it won't re-render even if there are internal changes to its state.
     const [selectedIndex, setSelectedIndex] = useState(0);
 
     useEffect(() => {
@@ -24,9 +22,7 @@ const Carousel = ({ children, ...options }: Props) => {
         }
 
         emblaApi?.on("select", selectHandler);
-        return () => {
-            emblaApi?.off("select", selectHandler);
-        };
+        return () => { emblaApi?.off("select", selectHandler); };
     }, [emblaApi]);
 
     const length = React.Children.count(children);
