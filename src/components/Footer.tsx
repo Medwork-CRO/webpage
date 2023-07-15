@@ -166,11 +166,11 @@ function Footer() {
           </div>
         </div>
         <CompanyFooter />
-        {/* <div className="absolute hidden overflow-hidden lg:block ">
-          <div className="relative bottom-[-175px] select-none overflow-hidden text-[375px] leading-[490px] opacity-5">
-            forward
-          </div>
-        </div> */}
+      </div>
+      <div className="absolute w-full bottom-0 left-0 right-0 flex items-end justify-center h-16 bg-gray-800 dark:bg-gray-600 opacity-5">
+        <span className="select-none text-[5rem] sm:text-[10rem] md:text-[20rem] lg:text-[25rem] leading-[2rem] sm:leading-[5rem] md:leading-[10rem] lg:leading-[15rem] text-white font-bold overflow-hidden h-3/7 tracking-widest">
+          Forward
+        </span>
       </div>
     </footer>
   );
