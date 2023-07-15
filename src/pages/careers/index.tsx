@@ -4,10 +4,6 @@ import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ImageCategory from "@/components/ImageCategory";
 import kariera from "@assets/companies/kariera_icon.png";
 import linkedin from "@assets/companies/linkedin_icon.png";
-import ai from "@assets/team-photos/ai.webp";
-import ai1 from "@assets/team-photos/ai1.webp";
-import ai2 from "@assets/team-photos/ai2.webp";
-import ai4 from "@assets/team-photos/ai4.webp";
 import team3 from "@assets/team-photos/team3.jpg";
 import Image from "next/image";
 import Link from "next/link";
@@ -18,11 +14,11 @@ const paragraphs = [
   "Our employees have a positive trajectory in their career path, and excel in their field. We are proud to say that Medwork is a place where people can grow and thrive.",
 ];
 
-const paragraphs2 = [
-  "Opting to join the Medwork team over further academic study provides multiple benefits and can substantially enhance your career progression.",
-  "Through hands-on experience and learning from industry professionals, you'll gain invaluable insights and skills that surpass classroom education while offering an immediate income and avoiding further academic debt.",
-  "With three years at Medwork, you'll gather extensive industry knowledge, positioning you advantageously for rapid career advancement in the ever-evolving pharmaceutical field."
-];
+// const paragraphs2 = [
+//   "Opting to join the Medwork team over further academic study provides multiple benefits and can substantially enhance your career progression.",
+//   "Through hands-on experience and learning from industry professionals, you'll gain invaluable insights and skills that surpass classroom education while offering an immediate income and avoiding further academic debt.",
+//   "With three years at Medwork, you'll gather extensive industry knowledge, positioning you advantageously for rapid career advancement in the ever-evolving pharmaceutical field."
+// ];
 
 function Cosmetovigilance() {
   const recruitmentEmail = "recruitment@medwork.gr";
