@@ -92,7 +92,7 @@ function Cosmetovigilance() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-8 whitespace-pre-line text-2xl p-8 border-2 rounded-lg border-gray-400 shadow-xl w-full">
+        {/* <div className="flex flex-col gap-8 whitespace-pre-line text-2xl p-8 border-2 rounded-lg border-gray-400 shadow-xl w-full">
           <p className="font-thin italic">
             {paragraphs2[0]}
           </p>
@@ -102,7 +102,7 @@ function Cosmetovigilance() {
           <p className="font-thin italic">
             {paragraphs2[2]}
           </p>
-        </div>
+        </div> */}
 
         <div className="grid grid-cols-2 gap-2 md:grid-cols-4">
           <Image src={ai} alt="AI" className="h-48 w-48 object-cover" />
@@ -116,8 +116,8 @@ function Cosmetovigilance() {
           <div className="mt-4 flex flex-col sm:flex-row justify-center gap-6 text-center w-full">
             <Link
               className="text-[#f6f1eb] flex flex-row items-center justify-center gap-4
-        rounded-full bg-cyan-400 px-6 py-2.5 font-bold hover:bg-green-400 dark:text-[#2d333b]
-        border-2 border-transparent hover:border-[#2d333b] hover:dark:border-[#f6f1eb]"
+              rounded-full bg-cyan-400 px-6 py-2.5 font-bold hover:bg-green-400 dark:text-[#2d333b]
+              border-2 border-transparent hover:border-[#2d333b] hover:dark:border-[#f6f1eb]"
               aria-label={`By clicking you will be taken to kariera.gr`}
               key={"kariera"}
               href={"https://www.kariera.gr/en/companies/3531"}
@@ -133,8 +133,8 @@ function Cosmetovigilance() {
             </Link>
             <Link
               className="text-[#f6f1eb] flex flex-row items-center justify-center gap-4
-        rounded-full bg-cyan-400 px-6 py-2.5 font-bold hover:bg-green-400 dark:text-[#2d333b]
-        border-2 border-transparent hover:border-[#2d333b] hover:dark:border-[#f6f1eb]"
+              rounded-full bg-cyan-400 px-6 py-2.5 font-bold hover:bg-green-400 dark:text-[#2d333b]
+              border-2 border-transparent hover:border-[#2d333b] hover:dark:border-[#f6f1eb]"
               aria-label={`By clicking you will be taken to linkedIn.gr`}
               key={"linkedIn"}
               href={"https://www.linkedin.com/company/medwork/jobs/"}
@@ -149,21 +149,21 @@ function Cosmetovigilance() {
               {"LinkedIn"}
             </Link>
           </div>
-          <div className="mt-8">
-            Or email us your CV at{" "}
+          <div className="flex flex-row justify-center mt-8">
+            ( Or email us your CV at&nbsp;
             <a
               className="italic"
-              aria-label={`By clicking you will be taken to linkedIn.gr`}
+              aria-label={`By clicking you will be taken to LinkedIn.gr`}
               key={recruitmentEmail}
               href={`mailto:${recruitmentEmail}`}
               target="_blank"
               rel="noopener noreferrer"
             >
               {recruitmentEmail}
-            </a>
+            </a>&nbsp;) {/* Add a space after the closing parenthesis */}
           </div>
-        </div>
 
+        </div>
         <div className="mt-8"></div>
       </div>
     </div>

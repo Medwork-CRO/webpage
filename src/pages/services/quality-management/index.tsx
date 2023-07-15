@@ -34,7 +34,7 @@ function QualityManagement() {
       />
       <ImageCategory
         image={qualityManagement}
-        title="QualityManagement"
+        title="Quality Management"
         description="Medwork provides a comprehensive and customizable set of services to assist cosmetics companies in complying with the regulatory directives."
       />
 

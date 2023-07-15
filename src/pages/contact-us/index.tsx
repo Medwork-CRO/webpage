@@ -1,5 +1,7 @@
 import Breadcrumbs from "@/components/Breadcrumb";
 import MapCategory from "@/pages/contact-us/MapCategory";
+import qualityManagement from "@assets/team-photos/entire-company.jpg";
+import Image from "next/image";
 import { FaHome } from 'react-icons/fa';
 
 const Contact = () => {
