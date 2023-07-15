@@ -52,7 +52,7 @@ function CompanyFooter() {
     <div className="relative">
       <div className="flex flex-col justify-start gap-2 pb-8 pt-4 text-sm xs:flex-row text-gray-400">
         <span>
-          © Copyright {new Date().getFullYear()} Medwork -
+          © {new Date().getFullYear()} Medwork -
         </span>
         <span className="flex gap-2">
           <span>All Rights Reserved</span>
