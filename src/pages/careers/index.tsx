@@ -52,8 +52,6 @@ function Cosmetovigilance() {
       />
 
       <div className="flex flex-col items-center gap-12 whitespace-pre-line px-4 text-xl text-gray-500 dark:text-gray-400 lg:px-0 pt-16">
-        <DisplayParagraphs paragraphs={paragraphs} />
-
         <div className="flex flex-col justify-between gap-8 text-gray-500 dark:text-gray-400 md:flex-row w-full">
           <div>
             <div className="flex w-56 flex-col">
@@ -92,6 +90,8 @@ function Cosmetovigilance() {
           </div>
         </div>
 
+        <DisplayParagraphs paragraphs={paragraphs} />
+
         {/* <div className="flex flex-col gap-8 whitespace-pre-line text-2xl p-8 border-2 rounded-lg border-gray-400 shadow-xl w-full">
           <p className="font-thin italic">
             {paragraphs2[0]}
@@ -104,12 +104,12 @@ function Cosmetovigilance() {
           </p>
         </div> */}
 
-        <div className="grid grid-cols-2 gap-2 md:grid-cols-4">
+        {/* <div className="grid grid-cols-2 gap-2 md:grid-cols-4">
           <Image src={ai} alt="AI" className="h-48 w-48 object-cover" />
           <Image src={ai1} alt="AI" className="h-48 w-48 object-cover" />
           <Image src={ai2} alt="AI" className="h-48 w-48 object-cover" />
           <Image src={ai4} alt="AI" className="h-48 w-48 object-cover" />
-        </div>
+        </div> */}
 
         <div className="my-8 flex flex-col gap-2 items-center whitespace-pre-line text-2xl font-thin text-cyan-600 dark:text-cyan-400">
           You can see all our open job offerings
