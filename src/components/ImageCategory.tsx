@@ -28,7 +28,7 @@ function ImageCategory({
         ></div>
 
         <div
-          className={`absolute text-[#f6f1eb] dark:text-[#2d333b] md:dark:text-[#f6f1eb] top-3/4 z-20 flex w-1/2 -translate-y-1/2 transform flex-col justify-center gap-8 px-8 md:px-12 lg:px-24 ${!textSide || textSide === "left"
+          className={`absolute text-[#2d333b] dark:text-[#f6f1eb] top-3/4 z-20 flex w-1/2 -translate-y-1/2 transform flex-col justify-center gap-8 px-8 md:px-12 lg:px-24 ${!textSide || textSide === "left"
             ? "text-left"
             : "left-1/2 text-right"
             }`}
@@ -43,16 +43,11 @@ function ImageCategory({
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 md:hidden">
-        <div className="relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-cyan-800"></div>
-          <div className="relative z-10 float-left p-6 md:p-12">
-            <div>
-              <Image src={image} alt="Image for mobile" />
-            </div>
-            <div className="mt-8 md:mt-0 text-[#f6f1eb] dark:text-[#2d333b] sm:mdrk:text-[#f6f1eb]">
-              <h1 className="mb-4 text-4xl italic">{title}</h1>
-              <p className="mb-4 text-lg">{description}</p>
-            </div>
+        <div className="mx-4 sm:mx-6 lg:mx-0 border-b border-b-[#2d333b] dark:border-b-[#f6f1eb]">
+          <Image src={image} alt="Image for mobile" />
+          <div className="mt-8 md:mt-0 text-[#2d333b] dark:text-[#f6f1eb]">
+            <h1 className="mb-4 text-4xl italic">{title}</h1>
+            <p className="mb-4 text-lg">{description}</p>
           </div>
         </div>
       </div>

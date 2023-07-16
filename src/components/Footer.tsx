@@ -76,7 +76,7 @@ function CompanyFooter() {
 
 function WaveSvg() {
   return (
-    <div className="absolute bottom-0 left-0 w-full opacity-10">
+    <div className="absolute select-none bottom-0 left-0 w-full opacity-10 z-10">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path fill="#06B6D4" fillOpacity="1" d="M0,64L48,80C96,96,192,128,288,144C384,160,480,160,576,138.7C672,117,768,75,864,69.3C960,64,1056,96,1152,122.7C1248,149,1344,171,1392,181.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
       </svg>
@@ -88,8 +88,7 @@ function Footer() {
   return (
     // bg-gradient-to-l from-cyan-500 to-cyan-800
     <footer className={`${inter.variable} w-full flex justify-center shadow-sm bg-[#f6f1eb] dark:bg-[#2d333b] px-4 sm:px-6 lg:px-0 font-sans relative`}>
-      <WaveSvg />
-      <div className="flex w-full max-w-[86rem] flex-col text-[#2d333b] dark:text-[#f6f1eb]">
+      <div className="flex w-full max-w-[86rem] flex-col text-[#2d333b] dark:text-[#f6f1eb] z-30">
         <div className="border-t border-[#2d333b] dark:border-[#f6f1eb]">
         </div>
         <div className="flex flex-col justify-between gap-8 py-16 md:flex-row">
@@ -167,11 +166,12 @@ function Footer() {
         </div>
         <CompanyFooter />
       </div>
-      <div className="absolute w-full bottom-0 left-0 right-0 flex items-end justify-center h-16 bg-gray-800 dark:bg-gray-600 opacity-5">
-        <span className="select-none text-[5rem] sm:text-[10rem] md:text-[20rem] lg:text-[25rem] leading-[2rem] sm:leading-[5rem] md:leading-[10rem] lg:leading-[15rem] text-white font-bold overflow-hidden h-3/7 tracking-widest">
+      <div className="absolute z-20 bottom-0 left-0 right-0 flex items-end justify-center h-16 opacity-5 w-screen">
+        <span className="select-none text-vws leading-vws text-[#2d333b] dark:text-[#f6f1eb] font-bold overflow-hidden h-3/7 tracking-widest">
           Forward
         </span>
       </div>
+      <WaveSvg />
     </footer>
   );
 }

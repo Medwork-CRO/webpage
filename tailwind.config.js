@@ -10,6 +10,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontSize: {
+        'vws': '19vw',
+      },
+      lineHeight: {
+        'vws': '11vw',
+      },
       zIndex: {
         "-1": "-1",
       },

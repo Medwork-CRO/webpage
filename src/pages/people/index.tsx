@@ -9,8 +9,8 @@ import person3 from "@assets/team-photos/person3.jpg";
 import person4 from "@assets/team-photos/person4.webp";
 import person5 from "@assets/team-photos/person5.jpg";
 import person6 from "@assets/team-photos/person6.jpg";
-import ioannis from "@assets/team-photos/ioannis-tsiakkas.jpg";
-import nicolas from "@assets/team-photos/nicolas-tsiakkas.jpg";
+import person7 from "@assets/team-photos/person7.png";
+import person8 from "@assets/team-photos/person8.jpg";
 import team1 from "@assets/team-photos/team1.jpg";
 import { FaHome } from 'react-icons/fa';
 
@@ -58,14 +58,14 @@ const membersInfo: MemberInfo[] = [
       "David is a data analyst with a passion for turning data into insights that drive business decisions. With expertise in data visualization, statistical analysis, and machine learning, he leverages data-driven insights to inform business strategy and improve operational efficiency. David's exceptional analytical skills and attention to detpersonl ensure that his insights are always accurate and actionable.",
   },
   {
-    image: ioannis,
+    image: person7,
     name: "John Doe",
     title: "Head Of Design",
     description:
       "John, the visionary designer, possesses an innate ability to transform ideas into captivating visual experiences. With a keen eye for aesthetics and attention to detpersonl, he crafts innovative designs that captivate audiences and breathe life into brands. Through his creative genius and passion for pushing boundaries, John leaves an indelible mark on every project he undertakes, redefining the world of design.",
   },
   {
-    image: nicolas,
+    image: person8,
     name: "Nicolas Doe",
     title: "Head of Operations",
     description:
