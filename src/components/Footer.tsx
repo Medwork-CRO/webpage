@@ -166,7 +166,7 @@ function Footer() {
         </div>
         <CompanyFooter />
       </div>
-      <div className="absolute z-20 bottom-0 left-0 right-0 flex items-end justify-center h-16 opacity-5 w-screen">
+      <div className="absolute z-20 bottom-0 left-0 right-0 flex items-end justify-center h-16 opacity-5">
         <span className="select-none text-vws leading-vws text-[#2d333b] dark:text-[#f6f1eb] font-bold overflow-hidden h-3/7 tracking-widest">
           Forward
         </span>
