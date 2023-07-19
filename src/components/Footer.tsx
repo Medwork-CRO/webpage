@@ -15,9 +15,24 @@ const linkedin = "company/medwork";
 
 const PDFs = [
   {
-    label: "Code of Conduct.pdf",
+    label: "Code of Conduct",
     filePath: "assets/pdfs",
     fileName: "code-of-conduct.pdf",
+  },
+  {
+    label: "Information Security Policy",
+    filePath: "assets/pdfs",
+    fileName: "information-security-policy.pdf",
+  },
+  {
+    label: "Data Privacy Policy",
+    filePath: "assets/pdfs",
+    fileName: "data-privacy-policy.pdf",
+  },
+  {
+    label: "Quality Policy.pdf",
+    filePath: "assets/pdfs",
+    fileName: "quality-policy.pdf",
   },
 ];
 
@@ -84,27 +99,21 @@ function Legal() {
 
 function Files() {
   return (
-    <div className="relative">
-      <div className="flex flex-col justify-start gap-2 pb-8 pt-4 text-sm xs:flex-row text-gray-400">
-        <span>© {new Date().getFullYear()} Medwork -</span>
-        <span className="flex gap-2">
-          {PDFs.map((a, i) => (
-            <a
-              key={i}
-              className="relative flex h-full w-28 items-center justify-around gap-0 rounded-md border border-black bg-white shadow-md ring-1 ring-gray-900/5 hover:bg-gray-200"
-              href={`${a.filePath}/${a.fileName}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              download={a.fileName}
-            >
-              <span>
-                <GrDocumentPdf />
-                <span>{a.label}</span>
-              </span>
-            </a>
-          ))}
-        </span>
-      </div>
+    <div className="flex gap-2">
+      {PDFs.map((a, i) => (
+        <Link
+          key={i}
+          href={`${a.filePath}/${a.fileName}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          download={a.fileName}
+        >
+          <span>
+            <GrDocumentPdf />
+            <span>{a.label}</span>
+          </span>
+        </Link>
+      ))}
     </div>
   );
 }
