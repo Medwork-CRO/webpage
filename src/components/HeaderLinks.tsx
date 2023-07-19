@@ -36,11 +36,6 @@ const Services = {
   ],
 };
 
-const People = {
-  label: "People",
-  href: "/people",
-};
-
 const Careers = {
   label: "Careers",
   href: "/careers",
@@ -51,6 +46,6 @@ const ContactUs = {
   href: "/contact-us",
 };
 
-const navMenu: NavProp[] = [Services, People, AboutUs, Careers, ContactUs];
+const navMenu: NavProp[] = [Services, AboutUs, Careers, ContactUs];
 
-export { navMenu, Services, People, AboutUs, Careers, ContactUs };
+export { navMenu, Services, AboutUs, Careers, ContactUs };
