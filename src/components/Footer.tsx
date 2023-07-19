@@ -12,6 +12,14 @@ const mail = "medworkinfo@medwork.gr";
 const address = "Greece, Chiou 5, Argyroupoli 164 52";
 const linkedin = "company/medwork";
 
+const PDFs = [
+  {
+    label: "Code of Conduct.pdf",
+    filePath: "assets/pdfs",
+    fileName: "code-of-conduct.pdf",
+  },
+];
+
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
@@ -48,7 +56,7 @@ function CompanyInfo() {
   );
 }
 
-function CompanyFooter() {
+function Legal() {
   return (
     <div className="relative">
       <div className="flex flex-col justify-start gap-2 pb-8 pt-4 text-sm xs:flex-row text-gray-400">
@@ -67,6 +75,32 @@ function CompanyFooter() {
               Keybraker
             </a>
           </span>
+        </span>
+      </div>
+    </div>
+  );
+}
+
+function Files() {
+  return (
+    <div className="relative">
+      <div className="flex flex-col justify-start gap-2 pb-8 pt-4 text-sm xs:flex-row text-gray-400">
+        <span>© {new Date().getFullYear()} Medwork -</span>
+        <span className="flex gap-2">
+          {PDFs.map((a, i) => (
+            <a
+              className="relative flex h-full w-28 items-center justify-around gap-0 rounded-md border border-black bg-white shadow-md ring-1 ring-gray-900/5 hover:bg-gray-200"
+              href={`${a.filePath}/${a.fileName}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              download={a.fileName}
+            >
+              <span>
+                <GrDocumentPdf />
+                <span>{a.label}</span>
+              </span>
+            </a>
+          ))}
         </span>
       </div>
     </div>
@@ -183,7 +217,8 @@ function Footer() {
             <CompanyInfo />
           </div>
         </div>
-        <CompanyFooter />
+        <Files />
+        <Legal />
       </div>
       <div className="absolute z-20 bottom-0 left-0 right-0 flex items-end justify-center h-16 opacity-5">
         <span className="select-none text-vws leading-vws text-[#2d333b] dark:text-[#f6f1eb] font-bold overflow-hidden h-3/7 tracking-widest">
