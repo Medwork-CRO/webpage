@@ -98,7 +98,7 @@ function Legal() {
 
 function Files() {
   return (
-    <div>
+    <div className="flex">
       {"{ "}
       <div className="flex gap-2 text-sm text-[#2d333b] dark:text-[#f6f1eb]">
         {PDFs.map((a, i) => (
