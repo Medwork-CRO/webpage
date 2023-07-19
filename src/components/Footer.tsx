@@ -7,6 +7,7 @@ import { MdLocationOn } from "@react-icons/all-files/md/MdLocationOn";
 import Link from "next/link";
 import { AboutUs, Careers, Services } from "./HeaderLinks";
 import AnimatedWave from "./AnimatedWave";
+import { GrDocumentPdf } from "@react-icons/all-files/gr/GrDocumentPdf";
 
 const mail = "medworkinfo@medwork.gr";
 const address = "Greece, Chiou 5, Argyroupoli 164 52";
@@ -89,6 +90,7 @@ function Files() {
         <span className="flex gap-2">
           {PDFs.map((a, i) => (
             <a
+              key={i}
               className="relative flex h-full w-28 items-center justify-around gap-0 rounded-md border border-black bg-white shadow-md ring-1 ring-gray-900/5 hover:bg-gray-200"
               href={`${a.filePath}/${a.fileName}`}
               target="_blank"
