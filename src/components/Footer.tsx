@@ -100,9 +100,8 @@ function Files() {
   return (
     <div className="flex gap-2">
       {PDFs.map((a, i) => (
-        <div>
+        <div key={i}>
           <Link
-            key={i}
             className="hover:underline"
             href={`${a.filePath}/${a.fileName}`}
             target="_blank"
