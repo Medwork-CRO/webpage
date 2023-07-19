@@ -9,15 +9,15 @@ import pv from "@assets/team-photos/team3.jpg";
 const imageShowCases = [
   {
     image: EMA,
-    description: "Medwork is a European pharmacovigilance expert organization with a focus in Greece and Cyprus.",
+    title: "Medwork is a European pharmacovigilance expert organization with a focus in Greece and Cyprus.",
   },
   {
     image: happyWoman,
-    description: "We undertake projects for clients throughout Europe, leveraging our extensive resources and skilled team to manage complex pharmacovigilance projects.",
+    title: "We undertake projects for clients throughout Europe, leveraging our extensive resources and skilled team to manage complex pharmacovigilance projects.",
   },
   {
     image: pv,
-    description: "We maintain the flexibility, agility, and responsiveness of a compact organization without compromising our commitment to caring for our clients and their projects.",
+    title: "We maintain the flexibility, agility, and responsiveness of a compact organization without compromising our commitment to caring for our clients and their projects.",
   },
 ];
 
@@ -35,7 +35,7 @@ function Home() {
         {imageShowCases.map((imageShowCase, i) => (
           <CarouselImage
             image={imageShowCase.image}
-            title={imageShowCase.description}
+            title={imageShowCase.title}
             key={i}
           />
         ))}
@@ -45,7 +45,6 @@ function Home() {
         <div className="flex flex-col items-center gap-6 whitespace-pre-line px-4 sm:px-6 text-xl text-gray-500 dark:text-gray-400 lg:px-0 py-16">
           <DisplayParagraphs paragraphs={paragraphs} />
           <ProvidedServices />
-          {/* <PromoCard /> */}
         </div>
       </div>
     </div>
