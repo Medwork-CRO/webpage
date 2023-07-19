@@ -2,6 +2,7 @@ import Breadcrumbs from "@/components/Breadcrumb";
 import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ImageCategory from "@/components/ImageCategory";
 import MemberCard from "@/components/MemberCard";
+import { MemberInfo } from "@/types/MemberInfo";
 import person1 from "@assets/people/person1.webp";
 import person2 from "@assets/people/person2.jpg";
 import person3 from "@assets/people/person3.jpg";
