@@ -1,43 +1,47 @@
 import Link from "next/link";
-import { ReactNode } from "react";
+import { useRouter } from "next/router";
 
-type CrumbItem = {
-    label: ReactNode; // e.g., Python
-    path: string; // e.g., /development/programming-languages/python
+const formatBreadcrumb = (str: string) => {
+    return str.replace(/-/g, ' ').split(' ').map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(' ');
 };
 
-type BreadcrumbsProps = {
-    items: CrumbItem[];
+const getPathForKnownRoutes = (str: string) => {
+    if (str === '/home') {
+        return '/';
+    } else if (str === '/home/services') {
+        return '';
+    }
+    return str;
 };
 
-const Breadcrumbs = ({ items }: BreadcrumbsProps) => {
+const Breadcrumbs = () => {
+    const { pathname } = useRouter();
+    const pathnames = ['home'].concat(pathname.split("/").filter(x => x));
+    const paths = pathnames.map((name, idx) => '/' + pathnames.slice(0, idx + 1).join('/'));
+
     return (
-        <div className="flex gap-2 my-4 ml-4 sm:ml-6 lg:ml-0 text-gray-500 dark:text-gray-400">
-            {items.map((crumb, i) => {
-                const isLastItem = i === items.length - 1;
-                if (isLastItem) {
-                    return crumb.label;
-                } else if (!crumb.path) {
-                    return <>
-                        {crumb.label}
-                        <span> / </span>
-                    </>;
+        <div className="flex gap-2 my-4 ml-4 sm:ml-6 lg:ml-0 text-gray-500 dark:text-gray-400 text-lg">
+            {pathnames.map((crumb, i) => {
+                if (i === pathnames.length - 1) {
+                    return <div key={i}>{formatBreadcrumb(crumb)}</div>;
+                } else if (!getPathForKnownRoutes(paths[i])) {
+                    return <div key={i}>{formatBreadcrumb(crumb)}<span> / </span></div>;
                 } else {
                     return (
-                        <>
+                        <div key={i}>
                             <Link
-                                href={crumb.path}
-                                key={i}
+                                href={getPathForKnownRoutes(paths[i])}
                                 className="text-cyan-500 hover:text-cyan-400 hover:underline"
                             >
-                                {crumb.label}
+                                {formatBreadcrumb(crumb)}
                             </Link>
                             <span> / </span>
-                        </>
+                        </div>
                     );
                 }
             })}
         </div>
     );
 };
+
 export default Breadcrumbs;

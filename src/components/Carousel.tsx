@@ -32,7 +32,7 @@ const Carousel = ({ children, ...options }: Props) => {
     return (
         <div className="group overflow-hidden relative" ref={emblaRef}>
             <div className="flex">{children}</div>
-            <div className="absolute bottom-[50%] left-0 right-0 z-40 flex justify-center">
+            <div className="absolute bottom-[50%] left-0 right-0 flex justify-center">
                 <CarouselControls
                     canScrollNext={canScrollNext}
                     canScrollPrev={canScrollPrev}
@@ -40,7 +40,7 @@ const Carousel = ({ children, ...options }: Props) => {
                     onPrev={() => emblaApi?.scrollPrev()}
                 />
             </div>
-            <div className="absolute bottom-0 left-0 right-0 z-40 flex justify-center">
+            <div className="absolute bottom-0 left-0 right-0 flex justify-center">
                 <Dots itemsLength={length} selectedIndex={selectedIndex} />
             </div>
         </div>

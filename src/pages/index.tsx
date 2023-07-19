@@ -35,7 +35,7 @@ function Home() {
         {imageShowCases.map((imageShowCase, i) => (
           <CarouselImage
             image={imageShowCase.image}
-            description={imageShowCase.description}
+            title={imageShowCase.description}
             key={i}
           />
         ))}

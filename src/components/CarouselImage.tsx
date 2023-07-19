@@ -2,11 +2,10 @@ import Image, { StaticImageData } from 'next/image';
 
 type ImageShowCaseProps = {
   image: StaticImageData;
-  description: string;
-  title: string;
+  title?: string;
 };
 
-function CarouselImage({ image, title, description }: ImageShowCaseProps) {
+function CarouselImage({ image, title }: ImageShowCaseProps) {
   return (
     <div className="flex flex-col md:flex-row h-[520px] sm:h-[670px] md:h-[770px] lg:h-[870px] flex-[0_0_100%] relative">
       <Image
@@ -18,13 +17,10 @@ function CarouselImage({ image, title, description }: ImageShowCaseProps) {
       <div className="absolute inset-x-0 top-0 z-10 from-[#f6f1eb] dark:from-[#2d333b] to-transparent bg-gradient-to-b h-[6%]"></div>
       <div className="absolute inset-x-0 bottom-0 z-10 from-[#f6f1eb] dark:from-[#2d333b] to-transparent bg-gradient-to-t h-5/6"></div>
 
-      <div className="absolute top-3/4 z-20 w-full">
-        <div className="flex flex-col justify-center gap-8 max-w-[86rem] mx-auto text-[#2d333b] dark:text-[#f6f1eb] text-left">
+      <div className="absolute bottom-8 sm:bottom-16 z-20 w-full">
+        <div className="flex flex-col justify-center gap-8 max-w-[86rem] px-4 md:px-6 lg:px-0 mx-auto text-[#2d333b] dark:text-[#f6f1eb] text-left">
           <span className="font-semibold text-2xl sm:text-3xl md:text-4xl">
             {title}
-          </span>
-          <span className="leading-[2rem] sm:leading-[2rem] md:leading-[3rem] xl:leading-[4rem] text-2xl sm:text-3xl md:text-4xl">
-            {description}
           </span>
         </div>
       </div>

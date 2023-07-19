@@ -11,7 +11,7 @@ const mail = "medworkinfo@medwork.gr";
 const address = "Greece, Chiou 5, Argyroupoli 164 52";
 const linkedin = "company/medwork";
 
-const PDFs = [
+const policies = [
   {
     label: "Code of Conduct",
     filePath: "assets/pdfs",
@@ -72,7 +72,7 @@ function CompanyInfo() {
 
 function Legal() {
   return (
-    <div className="flex flex-col xs:flex-row gap-2 text-sm text-gray-400">
+    <div className="flex flex-col xs:flex-row items-start gap-2 text-md text-gray-400">
       <span>© {new Date().getFullYear()} Medwork</span>
       <span className="flex flex-col xs:flex-row gap-2">
         <span className="hidden xs:block">|</span>
@@ -94,13 +94,13 @@ function Legal() {
   );
 }
 
-function Files() {
+function Policies() {
   return (
-    <div className="flex flex-col sm:flex-row items-center gap-2 text-sm text-[#2d333b] dark:text-[#f6f1eb]">
-      {PDFs.map((a, i) => (
+    <div className="flex flex-col sm:flex-row flex-wrap items-start gap-2 text-md text-[#2d333b] dark:text-[#f6f1eb]">
+      Policies: {policies.map((a, i) => (
         <div key={i}>
           <Link
-            className="hover:underline whitespace-nowrap"
+            className="font-semibold hover:underline whitespace-nowrap"
             href={`${a.filePath}/${a.fileName}`}
             target="_blank"
             rel="noopener noreferrer"
@@ -108,7 +108,7 @@ function Files() {
           >
             {a.label}
           </Link>
-          {PDFs.length - 1 !== i ? "," : ""}
+          {policies.length - 1 !== i ? "," : ""}
         </div>
       ))}
     </div>
@@ -224,28 +224,17 @@ function Footer() {
             <CompanyInfo />
           </div>
         </div>
-        <div className="flex flex-col md:flex-row justify-between gap-8 items-center sm:items-start pb-8 pt-4">
-          <Files />
+        <div className="flex flex-col md:flex-row justify-between gap-8 items-start pb-8 pt-4">
+          <Policies />
           <Legal />
         </div>
       </div>
-      <div className="absolute z-[3] bottom-0 left-0 right-0 flex items-end justify-center h-16 opacity-[0.03]">
+      <div className="absolute z-[3] bottom-0 left-0 right-0 flex items-end justify-center h-16 opacity-[0.02]">
         <span className="select-none text-vws leading-vws text-[#2d333b] dark:text-[#f6f1eb] font-bold overflow-hidden h-3/7 tracking-widest">
           Forward
         </span>
       </div>
       <WaveSvg />
-      {/* <AnimatedWave
-        color={"#06B6D4"}
-        animationDuration="16s"
-        opacity={"0.2"}
-      />
-      <AnimatedWave
-        color={"#06B6D4"}
-        animationDirection="reverse"
-        animationDuration="12s"
-        opacity={"0.1"}
-      /> */}
     </footer>
   );
 }

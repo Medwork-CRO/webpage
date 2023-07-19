@@ -13,17 +13,6 @@ import person7 from "@assets/people/person7.png";
 import person8 from "@assets/people/person8.jpg";
 import team0 from "@assets/team-photos/team0.jpg";
 
-const crumbs = [
-  {
-    label: "Home",
-    path: "/",
-  },
-  {
-    label: "About Us",
-    path: "/about-us",
-  },
-];
-
 const membersInfo: MemberInfo[] = [
   {
     image: person6,
@@ -105,7 +94,7 @@ function AboutUs() {
       />
 
       <div className="max-w-[86rem] w-full">
-        <Breadcrumbs items={crumbs} />
+        <Breadcrumbs />
 
         <div className="flex flex-col gap-6 whitespace-pre-line px-4 sm:px-6 text-xl text-gray-500 dark:text-gray-400 lg:px-0 py-16">
           <DisplayParagraphs paragraphs={paragraphs} />

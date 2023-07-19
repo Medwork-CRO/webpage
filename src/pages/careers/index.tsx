@@ -8,17 +8,6 @@ import team3 from "@assets/team-photos/team3.jpg";
 import Image from "next/image";
 import Link from "next/link";
 
-const crumbs = [
-  {
-    label: "Home",
-    path: "/",
-  },
-  {
-    label: "Careers",
-    path: "/careers",
-  },
-];
-
 const paragraphs = [
   "Medwork has made its mark as the top Contract Research Organization (CRO) in Greece, setting the standard for excellence.",
   "Our employees have a positive trajectory in their career path, and excel in their field. We are proud to say that Medwork is a place where people can grow and thrive.",
@@ -44,7 +33,7 @@ function Cosmetovigilance() {
       />
 
       <div className="max-w-[86rem] w-full">
-        <Breadcrumbs items={crumbs} />
+        <Breadcrumbs />
         <div className="flex flex-col items-center gap-6 whitespace-pre-line px-4 sm:px-6 text-xl text-gray-500 dark:text-gray-400 lg:px-0 py-16">
           <div className="flex flex-col justify-between gap-8 text-gray-500 dark:text-gray-400 md:flex-row w-full">
             <div>

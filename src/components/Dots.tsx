@@ -14,7 +14,7 @@ function Dots({ itemsLength, selectedIndex }: Props) {
                 return (
                     <div
                         className={classNames({
-                            "h-2.5 sm:h-2.5 rounded-full transition-all duration-300": true,
+                            "h-2.5 sm:h-2.5 rounded-full transition-all duration-500": true,
                             "bg-cyan-400 w-3.5 sm:w-3.5": selected,
                             "bg-cyan-600 w-2.5 sm:w-2.5": !selected,
                         })}

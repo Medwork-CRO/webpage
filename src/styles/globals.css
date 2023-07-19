@@ -101,27 +101,3 @@ a {
 @import url("https://fonts.googleapis.com/css2?family=Archivo&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Helvetica&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Display&display=swap");
-
-/* @layer base {
-  html {
-    font-family: Helvetica;
-  }
-} */
-
-.text-stroke-3 {
-  text-shadow: -0.2px -0.2px 0 rgb(74, 74, 74), 0.2px -0.2px 0 rgb(74, 74, 74), -0.2px 0.2px 0 rgb(74, 74, 74), 0.2px 0.2px 0 rgb(74, 74, 74);
-}
-
-.disable-scroll {
-  overflow: hidden;
-  height: 100vh;
-}
-
-@keyframes wave {
-  0% {
-    background-position-x: 1000px;
-  }
-  100% {
-    background-position-x: 0px;
-  }
-}

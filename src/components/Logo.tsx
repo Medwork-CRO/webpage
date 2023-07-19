@@ -1,14 +1,9 @@
 import medworkLogo from "@assets/medwork-logo.png";
-import { Inter, Roboto } from "@next/font/google";
+import { Roboto } from "@next/font/google";
 import { EmblaOptionsType } from "embla-carousel-react";
 import Image from "next/image";
 import Link from "next/link";
 import { PropsWithChildren } from "react";
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-});
 
 const roboto = Roboto({
   weight: "400",

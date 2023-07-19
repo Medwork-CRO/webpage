@@ -3,21 +3,6 @@ import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ImageCategory from "@/components/ImageCategory";
 import materiovigilance from "@assets/services/materiovigilance.jpg";
 
-const crumbs = [
-  {
-    label: "Home",
-    path: "/",
-  },
-  {
-    label: "Services",
-    path: "",
-  },
-  {
-    label: "Materialvigilance",
-    path: "/services/materiovigilance",
-  }
-];
-
 const paragraphs1 = [
   "Medical Devices Directives ensure that adverse incidents are evaluated and, where appropriate, information is disseminated in the form of a National Competent Authority Report (NCAR) with the objective of preventing the repetition of such incidents through the adoption of appropriate corrective actions to be taken in the field.",
   "Medwork can provide you with a vigilance reporting system that is compliant with MEDDEV 2.12-1 r 6, and develop all the standard operating procedures required.",
@@ -34,18 +19,19 @@ const paragraphs2 = [
 
 function Materiovigilance() {
   return (
-    <div className="mx-auto flex flex-col items-center justify-between max-w-[86rem] w-full">
-      <Breadcrumbs items={crumbs} />
-      
+    <div className="mx-auto flex flex-col items-center justify-between w-full">
       <ImageCategory
         image={materiovigilance}
         title="Materiovigilance"
         description="The principal purpose of materiovigilance is to improve the protection of the health and safety of patients, users and others by reducing the likelihood that incidents related to the use of a medical device will reoccur."
       />
 
-      <div className="flex flex-col items-center gap-6 whitespace-pre-line px-4 sm:px-6 text-xl text-gray-500 dark:text-gray-400 lg:px-0 py-16">
-        <DisplayParagraphs paragraphs={paragraphs1} />
-        <DisplayParagraphs paragraphs={paragraphs2} />
+      <div className="max-w-[86rem] w-full">
+        <Breadcrumbs />
+        <div className="flex flex-col items-center gap-6 whitespace-pre-line px-4 sm:px-6 text-xl text-gray-500 dark:text-gray-400 lg:px-0 py-16">
+          <DisplayParagraphs paragraphs={paragraphs1} />
+          <DisplayParagraphs paragraphs={paragraphs2} />
+        </div>
       </div>
     </div>
   );
