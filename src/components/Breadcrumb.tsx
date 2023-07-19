@@ -12,7 +12,7 @@ type BreadcrumbsProps = {
 
 const Breadcrumbs = ({ items }: BreadcrumbsProps) => {
     return (
-        <div className="flex gap-2 items-center place-self-start mb-4 ml-4 lg:ml-0 text-gray-500 dark:text-gray-400">
+        <div className="flex gap-2 my-4 ml-4 sm:ml-6 lg:ml-0 text-gray-500 dark:text-gray-400">
             {items.map((crumb, i) => {
                 const isLastItem = i === items.length - 1;
                 if (isLastItem) {

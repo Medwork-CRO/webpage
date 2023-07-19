@@ -95,37 +95,40 @@ const paragraphs2 = [
   "Our unwavering dedication, coupled with our commitment to excellence, drives us to continually innovate and provide the highest standard of service. We strive to optimize the research and development process, ensure drug safety, and facilitate efficient regulatory review, all with the ultimate goal of advancing healthcare through exceptional pharmaceutical services. Partner with Medwork for trusted expertise and a customer-centric approach in the ever-evolving pharmaceutical industry.",
 ];
 
-function Cosmetovigilance() {
+function AboutUs() {
   return (
-    <div className="mx-auto flex flex-col items-center justify-between max-w-[86rem] w-full">
-      <Breadcrumbs items={crumbs} />
+    <div className="mx-auto flex flex-col items-center justify-between w-full">
       <ImageCategory
         image={team0}
         title="About Medwork"
         description="We believe in a better world when it comes to health. It is our responsibility to make it."
       />
 
-      <div className="flex flex-col items-center gap-6 whitespace-pre-line px-4 sm:px-6 text-xl text-gray-500 dark:text-gray-400 lg:px-0 py-16">
-        <DisplayParagraphs paragraphs={paragraphs} />
-        {/* <PromoCard /> */}
+      <div className="max-w-[86rem] w-full">
+        <Breadcrumbs items={crumbs} />
 
-        <div className="w-full my-12 grid grid-cols-1 gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          {membersInfo.map((memberInfo, i) => (
-            <MemberCard
-              key={i}
-              image={memberInfo.image}
-              name={memberInfo.name}
-              title={memberInfo.title}
-              description={memberInfo.description}
-              linkedInTag={""}
-            />
-          ))}
+        <div className="flex flex-col gap-6 whitespace-pre-line px-4 sm:px-6 text-xl text-gray-500 dark:text-gray-400 lg:px-0 py-16">
+          <DisplayParagraphs paragraphs={paragraphs} />
+          {/* <PromoCard /> */}
+
+          <div className="w-full my-12 grid grid-cols-1 gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            {membersInfo.map((memberInfo, i) => (
+              <MemberCard
+                key={i}
+                image={memberInfo.image}
+                name={memberInfo.name}
+                title={memberInfo.title}
+                description={memberInfo.description}
+                linkedInTag={""}
+              />
+            ))}
+          </div>
+
+          <DisplayParagraphs paragraphs={paragraphs2} />
         </div>
-
-        <DisplayParagraphs paragraphs={paragraphs2} />
       </div>
     </div>
   );
 }
 
-export default Cosmetovigilance;
+export default AboutUs;

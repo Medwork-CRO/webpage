@@ -17,7 +17,7 @@ function ImageCategory({
 
   return (
     <>
-      <div className="relative hidden aspect-w-16 aspect-h-9 h-[640px] w-full max-w-[86rem] md:block">
+      <div className="relative hidden aspect-w-16 aspect-h-9 h-[640px] w-full md:block">
         <Image
           src={image}
           className="h-full min-w-full object-cover"
@@ -27,18 +27,18 @@ function ImageCategory({
           className={`absolute inset-0 z-10 from-[#f6f1eb] dark:from-[#2d333b] to-transparent ${bgGradient}`}
         ></div>
 
-        <div
-          className={`absolute text-[#2d333b] dark:text-[#f6f1eb] top-3/4 z-20 flex w-1/2 -translate-y-1/2 transform flex-col justify-center gap-8 px-8 md:px-12 lg:px-24 ${!textSide || textSide === "left"
+        <div className="absolute top-3/4 z-20 -translate-y-1/2 transform w-full">
+          <div className={`flex flex-col justify-center gap-8 max-w-[86rem] mx-auto ${!textSide || textSide === "left"
             ? "text-left"
-            : "left-1/2 text-right"
-            }`}
-        >
-          <span className=" text-2xl font-semibold italic md:text-3xl xl:text-4xl">
-            {title}
-          </span>
-          <span className="text-md md:text-xl xl:text-2xl">
-            {description}
-          </span>
+            : "text-right"
+            }`}>
+            <span className="text-2xl font-semibold italic md:text-3xl xl:text-4xl">
+              {title}
+            </span>
+            <span className="text-md md:text-xl xl:text-2xl">
+              {description}
+            </span>
+          </div>
         </div>
       </div>
 

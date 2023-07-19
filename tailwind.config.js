@@ -14,7 +14,7 @@ module.exports = {
         'vws': '19vw',
       },
       lineHeight: {
-        'vws': '11vw',
+        'vws': '9vw',
       },
       zIndex: {
         "-1": "-1",

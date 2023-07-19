@@ -117,17 +117,14 @@ function Files() {
 
 function WaveSvg() {
   return (
-    <div className="absolute select-none bottom-0 left-0 w-full opacity-10 z-10">
+    <div className="absolute select-none bottom-0 left-0 w-full opacity-10 z-[4]">
       {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path fill="#06B6D4" fillOpacity="1" d="M0,64L48,80C96,96,192,128,288,144C384,160,480,160,576,138.7C672,117,768,75,864,69.3C960,64,1056,96,1152,122.7C1248,149,1344,171,1392,181.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
       </svg> */}
       <svg
-        width="100%"
-        height="100%"
         id="svg"
         viewBox="0 0 1440 490"
         xmlns="http://www.w3.org/2000/svg"
-        className="transition duration-300 ease-in-out delay-150"
       >
         <path
           d="M 0,500 C 0,500 0,166 0,166 C 140.42857142857144,179.46428571428572 280.8571428571429,192.92857142857142 410,187 C 539.1428571428571,181.07142857142858 657,155.75 768,138 C 879,120.24999999999999 983.1428571428571,110.07142857142858 1094,116 C 1204.857142857143,121.92857142857142 1322.4285714285716,143.96428571428572 1440,166 C 1440,166 1440,500 1440,500 Z"
@@ -135,7 +132,7 @@ function WaveSvg() {
           strokeWidth="0"
           fill="#0693e3"
           fillOpacity="0.53"
-          className="transition-all duration-300 ease-in-out delay-150 path-0"
+          className="path-0"
         ></path>
         <path
           d="M 0,500 C 0,500 0,333 0,333 C 90.25,363.42857142857144 180.5,393.85714285714283 306,379 C 431.5,364.14285714285717 592.2499999999999,304 721,294 C 849.7500000000001,284 946.5,324.1428571428571 1061,339 C 1175.5,353.8571428571429 1307.75,343.42857142857144 1440,333 C 1440,333 1440,500 1440,500 Z"
@@ -143,7 +140,7 @@ function WaveSvg() {
           strokeWidth="0"
           fill="#0693e3"
           fillOpacity="1"
-          className="transition-all duration-300 ease-in-out delay-150 path-1"
+          className="path-1"
         ></path>
       </svg>
     </div>
@@ -156,7 +153,7 @@ function Footer() {
     <footer
       className={`${inter.variable} w-full flex justify-center shadow-sm bg-[#f6f1eb] dark:bg-[#2d333b] px-4 sm:px-6 lg:px-0 font-sans relative`}
     >
-      <div className="flex w-full max-w-[86rem] flex-col text-[#2d333b] dark:text-[#f6f1eb] z-30">
+      <div className="flex w-full max-w-[86rem] flex-col text-[#2d333b] dark:text-[#f6f1eb] z-[5]">
         <div className="border-t border-[#2d333b] dark:border-[#f6f1eb]"></div>
         {/* <div className="flex flex-col justify-between gap-8 py-16 md:flex-row"> */}
         {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-8 gap-16 py-16"> */}
@@ -232,7 +229,7 @@ function Footer() {
           <Legal />
         </div>
       </div>
-      <div className="absolute z-20 bottom-0 left-0 right-0 flex items-end justify-center h-16 opacity-[0.05]">
+      <div className="absolute z-[3] bottom-0 left-0 right-0 flex items-end justify-center h-16 opacity-[0.03]">
         <span className="select-none text-vws leading-vws text-[#2d333b] dark:text-[#f6f1eb] font-bold overflow-hidden h-3/7 tracking-widest">
           Forward
         </span>

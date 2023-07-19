@@ -1,6 +1,6 @@
 import Carousel from "@/components/Carousel";
 import DisplayParagraphs from "@/components/DisplayParagraphs";
-import ImageShowCase from "@/components/ImageShowCase";
+import CarouselImage from "@/components/CarouselImage";
 import ProvidedServices from "@/components/ProvidedServices";
 import EMA from "@assets/stock-images/ema.jpg";
 import happyWoman from "@assets/stock-images/happy-woman.jpg";
@@ -33,14 +33,15 @@ function Home() {
     <div className="mx-auto flex flex-col items-center justify-between w-full">
       <Carousel loop={true}>
         {imageShowCases.map((imageShowCase, i) => (
-          <ImageShowCase
+          <CarouselImage
             image={imageShowCase.image}
             description={imageShowCase.description}
             key={i}
           />
         ))}
       </Carousel>
-      <div className="max-w-[86rem]">
+
+      <div className="max-w-[86rem] w-full">
         <div className="flex flex-col items-center gap-6 whitespace-pre-line px-4 sm:px-6 text-xl text-gray-500 dark:text-gray-400 lg:px-0 py-16">
           <DisplayParagraphs paragraphs={paragraphs} />
           <ProvidedServices />
