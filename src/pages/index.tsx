@@ -30,7 +30,7 @@ const paragraphs = [
 
 function Home() {
   return (
-    <div className="mx-auto flex flex-col items-center justify-between max-w-[86rem] w-full">
+    <div className="mx-auto flex flex-col items-center justify-between w-full">
       <Carousel loop={true}>
         {imageShowCases.map((imageShowCase, i) => (
           <ImageShowCase
@@ -40,11 +40,12 @@ function Home() {
           />
         ))}
       </Carousel>
-
-      <div className="flex flex-col items-center gap-6 whitespace-pre-line px-4 sm:px-6 text-xl text-gray-500 dark:text-gray-400 lg:px-0 py-16">
-        <DisplayParagraphs paragraphs={paragraphs} />
-        <ProvidedServices />
-        {/* <PromoCard /> */}
+      <div className="max-w-[86rem]">
+        <div className="flex flex-col items-center gap-6 whitespace-pre-line px-4 sm:px-6 text-xl text-gray-500 dark:text-gray-400 lg:px-0 py-16">
+          <DisplayParagraphs paragraphs={paragraphs} />
+          <ProvidedServices />
+          {/* <PromoCard /> */}
+        </div>
       </div>
     </div>
   );
