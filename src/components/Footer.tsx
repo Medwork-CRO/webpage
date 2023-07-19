@@ -7,7 +7,6 @@ import { MdLocationOn } from "@react-icons/all-files/md/MdLocationOn";
 import Link from "next/link";
 import { AboutUs, Careers, Services } from "./HeaderLinks";
 import AnimatedWave from "./AnimatedWave";
-import { GrDocumentPdf } from "@react-icons/all-files/gr/GrDocumentPdf";
 
 const mail = "medworkinfo@medwork.gr";
 const address = "Greece, Chiou 5, Argyroupoli 164 52";
@@ -30,7 +29,7 @@ const PDFs = [
     fileName: "data-privacy-policy.pdf",
   },
   {
-    label: "Quality Policy.pdf",
+    label: "Quality Policy",
     filePath: "assets/pdfs",
     fileName: "quality-policy.pdf",
   },
@@ -101,18 +100,19 @@ function Files() {
   return (
     <div className="flex gap-2">
       {PDFs.map((a, i) => (
-        <Link
-          key={i}
-          href={`${a.filePath}/${a.fileName}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          download={a.fileName}
-        >
-          <span>
-            <GrDocumentPdf />
-            <span>{a.label}</span>
-          </span>
-        </Link>
+        <div>
+          <Link
+            key={i}
+            className="hover:underline"
+            href={`${a.filePath}/${a.fileName}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            download={a.fileName}
+          >
+            {a.label}
+          </Link>
+          ,
+        </div>
       ))}
     </div>
   );
