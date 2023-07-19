@@ -116,3 +116,12 @@ a {
   overflow: hidden;
   height: 100vh;
 }
+
+@keyframes wave {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-position-x: 0px;
+  }
+}

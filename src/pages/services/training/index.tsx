@@ -19,9 +19,7 @@ function Training() {
       <Breadcrumbs
         items={[
           {
-            label: (
-              <FaHome size={18} />
-            ),
+            label: "Home",
             path: "/",
           },
           {

@@ -10,9 +10,7 @@ const Contact = () => {
       <Breadcrumbs
         items={[
           {
-            label: (
-              <FaHome size={18} />
-            ),
+            label: "Home",
             path: "/",
           },
           {

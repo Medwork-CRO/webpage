@@ -2,7 +2,7 @@ import Carousel from "@/components/Carousel";
 import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ImageShowCase from "@/components/ImageShowCase";
 import ProvidedServices from "@/components/ProvidedServices";
-import EMA from "@assets/stock-images/EMA.webp";
+import EMA from "@assets/stock-images/ema.jpg";
 import happyWoman from "@assets/stock-images/happy-woman.jpg";
 import pv from "@assets/team-photos/team3.jpg";
 
