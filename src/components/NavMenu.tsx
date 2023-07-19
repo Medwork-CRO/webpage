@@ -58,8 +58,8 @@ function HorizontalNav({ label, href, subCategories }: NavProp) {
         ">
           {subCategories.map((subCategory, i) => (
             <Link
-              className={`px-5 py-3 text-md hover:bg-[#eae4dd] dark:hover:bg-gray-500
-              ${router.asPath === subCategory.href ? 'bg-[#eae4dd]' : ''}
+              className={`pl-2 py-3 text-md hover:bg-[#eae4dd] dark:hover:bg-gray-500
+              ${router.asPath === subCategory.href ? 'bg-[#eae4dd] dark:bg-gray-500' : ''}
               ${i === 0 ? 'rounded-t-md' : ''}
               ${i === subCategories.length - 1 ? 'rounded-b-md' : ''}`}
               aria-label={`By clicking you will be taken to ${subCategory.label}`}
