@@ -98,21 +98,25 @@ function Legal() {
 
 function Files() {
   return (
-    <div className="flex gap-2">
-      {PDFs.map((a, i) => (
-        <div key={i}>
-          <Link
-            className="hover:underline"
-            href={`${a.filePath}/${a.fileName}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            download={a.fileName}
-          >
-            {a.label}
-          </Link>
-          ,
-        </div>
-      ))}
+    <div>
+      {"{ "}
+      <div className="flex gap-2 text-sm text-[#2d333b] dark:text-[#f6f1eb]">
+        {PDFs.map((a, i) => (
+          <div key={i}>
+            <Link
+              className="hover:underline"
+              href={`${a.filePath}/${a.fileName}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              download={a.fileName}
+            >
+              {a.label}
+            </Link>
+            {PDFs.length - 1 !== i ? "," : ""}
+          </div>
+        ))}
+      </div>
+      {" }"}
     </div>
   );
 }
