@@ -6,7 +6,6 @@ import { MdEmail } from "@react-icons/all-files/md/MdEmail";
 import { MdLocationOn } from "@react-icons/all-files/md/MdLocationOn";
 import Link from "next/link";
 import { AboutUs, Careers, Services } from "./HeaderLinks";
-import AnimatedWave from "./AnimatedWave";
 
 const mail = "medworkinfo@medwork.gr";
 const address = "Greece, Chiou 5, Argyroupoli 164 52";
@@ -73,50 +72,45 @@ function CompanyInfo() {
 
 function Legal() {
   return (
-    <div className="relative">
-      <div className="flex flex-col justify-start gap-2 pb-8 pt-4 text-sm xs:flex-row text-gray-400">
-        <span>© {new Date().getFullYear()} Medwork -</span>
-        <span className="flex gap-2">
-          <span>All Rights Reserved</span>
-          <span>|</span>
-          <span>
-            Made by{" "}
-            <a
-              className="font-semibold"
-              href="https://github.com/keybraker"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Keybraker
-            </a>
-          </span>
+    <div className="flex flex-col xs:flex-row gap-2 text-sm text-gray-400">
+      <span>© {new Date().getFullYear()} Medwork</span>
+      <span className="flex flex-col xs:flex-row gap-2">
+        <span className="hidden xs:block">|</span>
+        <span>All Rights Reserved</span>
+        <span className="hidden xs:block">|</span>
+        <span>
+          Made by{" "}
+          <a
+            className="font-semibold"
+            href="https://github.com/keybraker"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Keybraker
+          </a>
         </span>
-      </div>
+      </span>
     </div>
   );
 }
 
 function Files() {
   return (
-    <div className="flex">
-      {"{ "}
-      <div className="flex gap-2 text-sm text-[#2d333b] dark:text-[#f6f1eb]">
-        {PDFs.map((a, i) => (
-          <div key={i}>
-            <Link
-              className="hover:underline"
-              href={`${a.filePath}/${a.fileName}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              download={a.fileName}
-            >
-              {a.label}
-            </Link>
-            {PDFs.length - 1 !== i ? "," : ""}
-          </div>
-        ))}
-      </div>
-      {" }"}
+    <div className="flex flex-col sm:flex-row items-center gap-2 text-sm text-[#2d333b] dark:text-[#f6f1eb]">
+      {PDFs.map((a, i) => (
+        <div key={i}>
+          <Link
+            className="hover:underline whitespace-nowrap"
+            href={`${a.filePath}/${a.fileName}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            download={a.fileName}
+          >
+            {a.label}
+          </Link>
+          {PDFs.length - 1 !== i ? "," : ""}
+        </div>
+      ))}
     </div>
   );
 }
@@ -164,10 +158,12 @@ function Footer() {
     >
       <div className="flex w-full max-w-[86rem] flex-col text-[#2d333b] dark:text-[#f6f1eb] z-30">
         <div className="border-t border-[#2d333b] dark:border-[#f6f1eb]"></div>
-        <div className="flex flex-col justify-between gap-8 py-16 md:flex-row">
+        {/* <div className="flex flex-col justify-between gap-8 py-16 md:flex-row"> */}
+        {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-8 gap-16 py-16"> */}
+        <div className="flex flex-col sm:flex-row flex-wrap justify-between gap-8 py-16">
           <div className="flex flex-col gap-6">
             <Logo />
-            <span className={"max-w-sm whitespace-pre-line text-left text-xl"}>
+            <span className={"max-w-sm whitespace-pre-line text-left text-lg"}>
               Medwork is a Contract Research Organization (CRO) operating in
               Southeast Europe, which since 2005 offers a wide range of
               specialized services to the pharmaceutical and medical device
@@ -231,10 +227,12 @@ function Footer() {
             <CompanyInfo />
           </div>
         </div>
-        <Files />
-        <Legal />
+        <div className="flex flex-col md:flex-row justify-between gap-8 items-center sm:items-start pb-8 pt-4">
+          <Files />
+          <Legal />
+        </div>
       </div>
-      <div className="absolute z-20 bottom-0 left-0 right-0 flex items-end justify-center h-16 opacity-5">
+      <div className="absolute z-20 bottom-0 left-0 right-0 flex items-end justify-center h-16 opacity-[0.05]">
         <span className="select-none text-vws leading-vws text-[#2d333b] dark:text-[#f6f1eb] font-bold overflow-hidden h-3/7 tracking-widest">
           Forward
         </span>

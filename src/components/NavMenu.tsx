@@ -53,7 +53,7 @@ function HorizontalNav({ label, href, subCategories }: NavProp) {
       )}
       {hasSubCategories && (
         <div className="
-          absolute right-0 z-10 hidden w-[200px] flex-col border-2 border-cyan-500 rounded-lg
+          absolute right-0 z-10 hidden w-[200px] flex-col rounded-lg border border-gray-300 dark:border-gray-400
         bg-[#f6f1eb] text-gray-500 shadow-2xl drop-shadow-lg hover:flex peer-hover:flex dark:bg-[#2d333b] dark:text-gray-400
         ">
           {subCategories.map((subCategory, i) => (
