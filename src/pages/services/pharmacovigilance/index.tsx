@@ -3,7 +3,21 @@ import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ImageCategory from "@/components/ImageCategory";
 import InfoBox from "@/components/InfoBox";
 import pharmacovigilance from "@assets/services/pharmacovigilance.jpg";
-import { FaHome } from 'react-icons/fa';
+
+const crumbs = [
+  {
+    label: "Home",
+    path: "/",
+  },
+  {
+    label: "Services",
+    path: "",
+  },
+  {
+    label: "Pharmacovigilance",
+    path: "/services/pharmacovigilance",
+  }
+];
 
 const paragraphs0 = [
   "We have an extensive Pharmacovigilance Department composed of a team of 21 pharmacovigilance professionals and four medical advisors.",
@@ -14,22 +28,8 @@ const paragraphs0 = [
 function Pharmacovigilance() {
   return (
     <div className="mx-auto flex flex-col items-center justify-between max-w-[86rem] w-full">
-      <Breadcrumbs
-        items={[
-          {
-            label: "Home",
-            path: "/",
-          },
-          {
-            label: "Services",
-            path: "",
-          },
-          {
-            label: "Pharmacovigilance",
-            path: "/services/pharmacovigilance",
-          }
-        ]}
-      />
+      <Breadcrumbs items={crumbs} />
+      
       <ImageCategory
         image={pharmacovigilance}
         title="Pharmacovigilance"

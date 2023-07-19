@@ -2,7 +2,21 @@ import Breadcrumbs from "@/components/Breadcrumb";
 import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ImageCategory from "@/components/ImageCategory";
 import cosmetovigilance from "@assets/services/cosmetovigilance.jpg";
-import { FaHome } from 'react-icons/fa';
+
+const crumbs = [
+  {
+    label: "Home",
+    path: "/",
+  },
+  {
+    label: "Services",
+    path: "",
+  },
+  {
+    label: "Training",
+    path: "/services/training",
+  }
+];
 
 const paragraphs = [
   "Our services include:",
@@ -16,22 +30,7 @@ const paragraphs = [
 function Training() {
   return (
     <div className="mx-auto flex flex-col items-center justify-between max-w-[86rem] w-full">
-      <Breadcrumbs
-        items={[
-          {
-            label: "Home",
-            path: "/",
-          },
-          {
-            label: "Services",
-            path: "",
-          },
-          {
-            label: "Training",
-            path: "/services/training",
-          }
-        ]}
-      />
+      <Breadcrumbs items={crumbs} />
       <ImageCategory
         image={cosmetovigilance}
         title="Training"

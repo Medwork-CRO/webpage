@@ -7,7 +7,17 @@ import linkedin from "@assets/companies/linkedin_icon.png";
 import team3 from "@assets/team-photos/team3.jpg";
 import Image from "next/image";
 import Link from "next/link";
-import { FaHome } from 'react-icons/fa';
+
+const crumbs = [
+  {
+    label: "Home",
+    path: "/",
+  },
+  {
+    label: "Careers",
+    path: "/careers",
+  },
+];
 
 const paragraphs = [
   "Medwork has made its mark as the top Contract Research Organization (CRO) in Greece, setting the standard for excellence.",
@@ -25,18 +35,7 @@ function Cosmetovigilance() {
 
   return (
     <div className="mx-auto flex flex-col items-center justify-between max-w-[86rem] w-full">
-      <Breadcrumbs
-        items={[
-          {
-            label: "Home",
-            path: "/",
-          },
-          {
-            label: "Careers",
-            path: "/careers",
-          },
-        ]}
-      />
+      <Breadcrumbs items={crumbs} />
       <ImageCategory
         textSide="right"
         image={team3}

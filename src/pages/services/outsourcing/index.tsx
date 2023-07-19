@@ -2,7 +2,21 @@ import Breadcrumbs from "@/components/Breadcrumb";
 import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ImageCategory from "@/components/ImageCategory";
 import cosmetovigilance from "@assets/services/cosmetovigilance.jpg";
-import { FaHome } from 'react-icons/fa';
+
+const crumbs = [
+  {
+    label: "Home",
+    path: "/",
+  },
+  {
+    label: "Services",
+    path: "",
+  },
+  {
+    label: "Outsourcing",
+    path: "/services/outsourcing",
+  }
+];
 
 const paragraphs = [
   "We have great people working for the best causes",
@@ -16,22 +30,8 @@ const paragraphs = [
 function Outsourcing() {
   return (
     <div className="mx-auto flex flex-col items-center justify-between max-w-[86rem] w-full">
-      <Breadcrumbs
-        items={[
-          {
-            label: "Home",
-            path: "/",
-          },
-          {
-            label: "Services",
-            path: "",
-          },
-          {
-            label: "Outsourcing",
-            path: "/services/outsourcing",
-          }
-        ]}
-      />
+      <Breadcrumbs items={crumbs} />
+      
       <ImageCategory
         image={cosmetovigilance}
         title="Outsourcing"

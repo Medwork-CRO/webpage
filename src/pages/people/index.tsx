@@ -3,16 +3,26 @@ import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ImageCategory from "@/components/ImageCategory";
 import MemberCard from "@/components/MemberCard";
 import { MemberInfo } from "@/types/MemberInfo";
-import person1 from "@assets/team-photos/person1.webp";
-import person2 from "@assets/team-photos/person2.jpg";
-import person3 from "@assets/team-photos/person3.jpg";
-import person4 from "@assets/team-photos/person4.webp";
-import person5 from "@assets/team-photos/person5.jpg";
-import person6 from "@assets/team-photos/person6.jpg";
-import person7 from "@assets/team-photos/person7.png";
-import person8 from "@assets/team-photos/person8.jpg";
+import person1 from "@assets/people/person1.webp";
+import person2 from "@assets/people/person2.jpg";
+import person3 from "@assets/people/person3.jpg";
+import person4 from "@assets/people/person4.webp";
+import person5 from "@assets/people/person5.jpg";
+import person6 from "@assets/people/person6.jpg";
+import person7 from "@assets/people/person7.png";
+import person8 from "@assets/people/person8.jpg";
 import team1 from "@assets/team-photos/team1.jpg";
-import { FaHome } from 'react-icons/fa';
+
+const crumbs = [
+  {
+    label: "Home",
+    path: "/",
+  },
+  {
+    label: "People",
+    path: "/people",
+  },
+];
 
 const membersInfo: MemberInfo[] = [
   {
@@ -83,18 +93,7 @@ const paragraphs = [
 function OurTeam() {
   return (
     <div className="mx-auto flex flex-col items-center justify-between max-w-[86rem] w-full">
-      <Breadcrumbs
-        items={[
-          {
-            label: "Home",
-            path: "/",
-          },
-          {
-            label: "People",
-            path: "/people",
-          },
-        ]}
-      />
+      <Breadcrumbs items={crumbs} />
       <ImageCategory
         image={team1}
         title="Meet the people behind the answers."
