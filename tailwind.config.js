@@ -2,16 +2,19 @@ const { fontFamily } = require("tailwindcss/defaultTheme");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./app/**/*.{js,ts,jsx,tsx}",
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: {
+    files: [
+      "./app/**/*.{js,ts,jsx,tsx}",
+      "./pages/**/*.{js,ts,jsx,tsx}",
+      "./components/**/*.{js,ts,jsx,tsx}",
+      "./src/**/*.{js,ts,jsx,tsx}",
+    ],
+  },
   theme: {
     extend: {
       fontSize: {
         'vws': '19vw',
+        'md': '1rem',
       },
       lineHeight: {
         'vws': '9vw',
@@ -83,6 +86,27 @@ module.exports = {
       "3xl": "2560px",
       "4xl": "2940px",
     },
+    animation: {
+      fadeIn: "fadeIn 2s ease-in forwards",
+      enlarge: "enlarge 1s ease-in forwards",
+      minify: "minify 1s ease-in forwards"
+    },
+    keyframes: {
+      fadeIn: {
+        "0%": { opacity: 0 },
+        "100%": { opacity: 1 }
+      },
+      enlarge: {
+        "0%": { transform: "scale(0.75)" },
+        "100%": { transform: "scale(1)" }
+      },
+      minify: {
+        "0%": { transform: "scale(1)" },
+        "100%": { transform: "scale(0.75)" }
+      },
+    },
+    variants: {
+      animation: ["motion-safe"]
+    }
   },
-  plugins: [],
 };

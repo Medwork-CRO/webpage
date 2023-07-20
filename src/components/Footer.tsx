@@ -98,7 +98,7 @@ function Policies() {
   return (
     <div className="flex flex-col sm:flex-row flex-wrap items-start gap-2 text-md text-[#2d333b] dark:text-[#f6f1eb]">
       Policies: {policies.map((a, i) => (
-        <div key={i}>
+        <div key={i} className="flex">
           <Link
             className="font-semibold hover:underline whitespace-nowrap"
             href={`${a.filePath}/${a.fileName}`}
@@ -108,7 +108,9 @@ function Policies() {
           >
             {a.label}
           </Link>
-          {policies.length - 1 !== i ? "," : ""}
+          <span className="hidden sm:block">
+            {policies.length - 1 !== i ? "," : ""}
+          </span>
         </div>
       ))}
     </div>

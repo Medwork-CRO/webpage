@@ -58,7 +58,7 @@ function HorizontalNav({ label, href, subCategories }: NavProp) {
         ">
           {subCategories.map((subCategory, i) => (
             <Link
-              className={`pl-2 py-3 text-md hover:bg-[#eae4dd] dark:hover:bg-gray-500
+              className={`px-4 py-4 text-md hover:bg-[#eae4dd] dark:hover:bg-gray-500
               ${router.asPath === subCategory.href ? 'bg-[#eae4dd] dark:bg-gray-500' : ''}
               ${i === 0 ? 'rounded-t-md' : ''}
               ${i === subCategories.length - 1 ? 'rounded-b-md' : ''}`}

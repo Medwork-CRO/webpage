@@ -17,7 +17,7 @@ function getIFrame(location: string, rounded = false) {
   const rounding = rounded ? 'rounded-lg' : '';
   return (<iframe
     src={`https://maps.google.com/maps?q=${location}&t=&z=16&ie=UTF8&iwloc=&output=embed`}
-    className={`w-full h-[420px] ${rounding}`}
+    className={`w-full h-[300px] sm:h-[420px] ${rounding}`}
     allowFullScreen
   ></iframe>);
 }
@@ -53,7 +53,7 @@ function getContact(display: string, value: string, contactType: ContactType) {
       break;
   }
 
-  return (<div className="flex gap-4 items-center rounded-lg py-3">
+  return (<div className="flex gap-4 items-center rounded-lg py-3 text-lg md:text-xl font-semibold">
     {getIcon(contactType)}
     <Link
       href={href}
@@ -68,7 +68,7 @@ function getContact(display: string, value: string, contactType: ContactType) {
 function getCompanyInfo() {
   return (
     <div className="font-semibold text-xl text-left">
-      <div className="text-[#f6f1eb] flex flex-col justify-start gap-4">
+      <div className="text-[#f6f1eb] dark:text-gray-200 flex flex-col justify-start gap-4">
         {getContact('(+30) 210 9960971', '+302109960971', ContactType.Phone)}
         {getContact('(+30) 210 9969578', '+302109969578', ContactType.Fax)}
         {getContact('medworkinfo@medwork.gr', 'medworkinfo@medwork.gr', ContactType.Email)}
@@ -83,20 +83,27 @@ function MapCategory({
 }: MapCategoryProps) {
   return (
     <>
-      <div className="hidden sm:block w-full h-[420px] relative">
-        <div className="flex flex-col md:flex-row">
+      <div className="hidden sm:block w-full">
+        <div className="flex flex-col md:flex-row h-[420px] relative">
           {getIFrame(location)}
           <div className="absolute inset-0 z-10 from-cyan-600 dark:from-cyan-800 to-transparent bg-gradient-to-r w-full"></div>
-          <div className="absolute top-2/4 z-10 flex -translate-y-1/2 transform flex-col justify-center gap-8 ml-12 lg:ml-24 h-full">
-            {getCompanyInfo()}
+
+
+          <div className="absolute top-2/4 z-10 -translate-y-1/2 transform w-full">
+            <div className="flex flex-col justify-center gap-8 px-4 md:px-6 lg:px-0 max-w-[86rem] mx-auto">
+              {getCompanyInfo()}
+            </div >
           </div>
+
+          {/* <div className="absolute top-2/4 z-10 flex -translate-y-1/2 transform flex-col justify-center gap-8 ml-12 lg:ml-24 h-full">
+          </div> */}
         </div >
-      </div>
+      </div >
 
       <div className="grid grid-cols-1 md:grid-cols-2 sm:hidden w-full">
         <div className="relative">
           <div className="absolute  inset-0 bg-gradient-to-r from-cyan-600 to-cyan-800"></div>
-          <div className="relative w-full z-10 float-left p-6 md:p-12">
+          <div className="relative w-full z-10 float-left p-4">
             {getIFrame(location, true)}
             <div className="mt-8 md:mt-0 text-[#f6f1eb]">
               {getCompanyInfo()}
