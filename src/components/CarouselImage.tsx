@@ -10,14 +10,11 @@ function CarouselImage({ image, title }: ImageShowCaseProps) {
   const [lastScrollTop, setLastScrollTop] = useState(0);
 
   useEffect(() => {
-    // Get the elements you want to animate
     const targets = document.querySelectorAll(".js-show-on-scroll");
 
     const onScroll = () => {
-      // Get viewport width
       const viewportWidth = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
 
-      // Only run if viewport width is 576px or larger
       if (viewportWidth >= 576) {
         const scrollY = window.scrollY;
         const isScrollingDown = scrollY > lastScrollTop;
