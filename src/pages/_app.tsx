@@ -1,8 +1,10 @@
 import "@/styles/globals.css";
-import type { AppProps } from "next/app";
-import { Inter } from "@next/font/google";
+
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import { Inter } from "@next/font/google";
+import { AnimatePresence } from "framer-motion";
+import type { AppProps } from "next/app";
 import Head from "next/head";
 
 const inter = Inter({
@@ -12,9 +14,7 @@ const inter = Inter({
 
 function App({ Component, pageProps }: AppProps) {
   return (
-    <div
-      className={`${inter.variable} bg-[#f6f1eb] font-sans dark:bg-[#2d333b]`}
-    >
+    <div className={`${inter.variable} bg-[#f6f1eb] font-sans dark:bg-[#2d333b]`}>
       <Head>
         <title>Medwork</title>
         <meta name="title" content="Medwork" />
@@ -42,7 +42,11 @@ function App({ Component, pageProps }: AppProps) {
       </Head>
       <Header />
       <main className="flex flex-col min-h-screen justify-between">
-        <div className="z-20"><Component {...pageProps} /></div>
+        <div className="z-20">
+          <AnimatePresence mode="wait" initial={false}>
+            <Component {...pageProps} />
+          </AnimatePresence>
+        </div>
         <div className="z-10"><Footer /></div>
       </main>
     </div>

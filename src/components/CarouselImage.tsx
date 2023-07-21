@@ -42,7 +42,7 @@ function CarouselImage({ image, title }: ImageShowCaseProps) {
 
 
   return (
-    <div className="relative flex flex-col md:flex-row h-[88vh] flex-[0_0_100%] motion-safe:animate-fadeIn">
+    <div className="relative flex flex-col md:flex-row h-[88vh] sm::h-[89vh] md:h-[88vh] flex-[0_0_100%] motion-safe:animate-fadeIn">
       <Image
         src={image}
         className="h-full min-w-full object-cover"

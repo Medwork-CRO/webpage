@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { navMenu } from "./HeaderLinks";
 import NavHamburger from "./NavHamburger";
 import NavMenu from "./NavMenu";
+import { useScroll, motion } from "framer-motion";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -13,7 +14,7 @@ const inter = Inter({
 });
 
 function Header() {
-  const [isOpen, setOpen] = useState(false); // Set initial state to false
+  const [isOpen, setOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const router = useRouter();
 
@@ -45,6 +46,8 @@ function Header() {
     setOpen(false);
   }, [router.asPath]);
 
+  const { scrollYProgress } = useScroll();
+
   return (
     <header
       className={`${inter.variable} sticky top-0 z-50 w-full font-sans ${isScrolled
@@ -52,13 +55,15 @@ function Header() {
         : "bg-transparent"
         } transition-all duration-300`}
     >
+      <motion.div className="top-0 left-0 right-0 h-1 bg-cyan-400 origin-center fixed z-50" style={{ scaleX: scrollYProgress }} />
+
       <div className="mx-auto flex max-w-[86rem] px-4 py-3 sm:py-4 lg:px-0 items-center justify-between ">
         <Logo />
         <button
           className="block text-xl md:hidden z-20"
           onClick={() => setOpen(!isOpen)}
         >
-          <Hamburger toggled={isOpen} toggle={setOpen} color="#0891b2" size={24}/>
+          <Hamburger toggled={isOpen} toggle={setOpen} color="#0891b2" size={24} />
         </button>
         <div className="hidden md:block">
           <NavMenu nav={navMenu} />
