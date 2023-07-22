@@ -2,6 +2,7 @@ import Breadcrumbs from "@/components/Breadcrumb";
 import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ImageCategory from "@/components/ImageCategory";
 import MemberCard from "@/components/MemberCard";
+import MultiLayerParallax from "@/components/MultiLayerParallax";
 import { MemberInfo } from "@/types/MemberInfo";
 import person1 from "@assets/people/person1.webp";
 import person2 from "@assets/people/person2.jpg";
@@ -87,11 +88,12 @@ const paragraphs2 = [
 function AboutUs() {
   return (
     <div className="mx-auto flex flex-col items-center justify-between w-full">
-      <ImageCategory
+      {/* <ImageCategory
         image={team0}
         title="About Medwork"
         description="We believe in a better world when it comes to health. It is our responsibility to make it."
-      />
+      /> */}
+      <MultiLayerParallax imageFull='/assets/image-full.png' imageBottom='/assets/image-bottom.png' text='One Team' />
 
       <div className="max-w-[86rem] w-full">
         <Breadcrumbs />
@@ -99,6 +101,7 @@ function AboutUs() {
         <div className="flex flex-col gap-6 whitespace-pre-line px-4 sm:px-6 text-xl text-gray-500 dark:text-gray-400 lg:px-0 py-16">
           <DisplayParagraphs paragraphs={paragraphs} />
           {/* <PromoCard /> */}
+
 
           <div className="w-full my-12 grid grid-cols-1 gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {membersInfo.map((memberInfo, i) => (
