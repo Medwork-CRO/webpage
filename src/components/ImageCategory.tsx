@@ -2,8 +2,8 @@ import Image, { StaticImageData } from "next/image";
 
 type ImageCategoryProps = {
   title: string;
-  description: string;
   image: StaticImageData;
+  description?: string;
   textSide?: "left" | "right";
 };
 

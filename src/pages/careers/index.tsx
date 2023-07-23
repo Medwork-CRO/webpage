@@ -1,10 +1,10 @@
 import Breadcrumbs from "@/components/Breadcrumb";
 import Counter from "@/components/Counter";
 import DisplayParagraphs from "@/components/DisplayParagraphs";
-import ImageCategory from "@/components/ImageCategory";
+import DualLayerParallax from "@/components/DualLayerParallax";
 import kariera from "@assets/companies/kariera_icon.png";
 import linkedin from "@assets/companies/linkedin_icon.png";
-import team3 from "@assets/team-photos/team3.jpg";
+// import team3 from "@assets/team-photos/team3.jpg";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -24,21 +24,23 @@ function Cosmetovigilance() {
 
   return (
     <div className="mx-auto flex flex-col items-center justify-between w-full">
-      <ImageCategory
-        textSide="right"
-        image={team3}
-        title="We value excellence and our people excel at that"
-        description="Our team at Medwork is made up of experienced professionals who are
-      passionate about improving patient outcomes."
-      />
+      {/* <ImageCategory
+         textSide="right"
+         image={team3}
+         title="We value excellence and our people excel at that"
+         description="Our team at Medwork is made up of experienced professionals who are
+       passionate about improving patient outcomes."
+       />
+      */}
+      <DualLayerParallax imageFull='/assets/image-full.png' imageBottom='/assets/image-bottom.png' text='One Team' />
 
       <div className="max-w-[86rem] w-full">
         <Breadcrumbs />
-        <div className="flex flex-col items-center gap-6 whitespace-pre-line px-4 sm:px-6 text-xl text-gray-500 dark:text-gray-400 lg:px-0 py-16">
-          <div className="flex flex-col justify-between gap-8 text-gray-500 dark:text-gray-400 md:flex-row w-full">
+        <div className="flex flex-col items-center gap-6 whitespace-pre-line px-4 sm:px-6 text-xl text-gray-500 dark:text-gray-400 lg:px-0 py-16 text-center">
+          <div className="flex flex-col justify-between  gap-8 text-gray-500 dark:text-gray-400 md:flex-row w-full">
             <div>
               <div className="flex w-56 flex-col">
-                <span className="number mb-4 text-4xl font-bold text-cyan-500 flex flex-row">
+                <span className="flex flex-row self-center mb-4 text-4xl font-bold text-cyan-500">
                   <Counter number={90} title="" duration={3} />
                   <span>%</span>
                 </span>
@@ -50,7 +52,7 @@ function Cosmetovigilance() {
             <div className="border border-gray-500"></div>
             <div>
               <div className="flex w-56 flex-col">
-                <span className="number mb-4 text-4xl font-bold text-cyan-500 flex flex-row">
+                <span className="flex flex-row self-center mb-4 text-4xl font-bold text-cyan-500">
                   <Counter number={80} title="" duration={3} />
                   <span>%</span>
                 </span>
@@ -62,7 +64,7 @@ function Cosmetovigilance() {
             <div className="border border-gray-500"></div>
             <div>
               <div className="flex w-56 flex-col">
-                <span className="number mb-4 text-4xl font-bold text-cyan-500 flex flex-row">
+                <span className="flex flex-row self-center mb-4 text-4xl font-bold text-cyan-500">
                   <Counter number={84} title="" duration={3} />
                   <span>%</span>
                 </span>
