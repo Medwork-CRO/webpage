@@ -1,12 +1,12 @@
 import Logo from "@/components/Logo";
 import { Inter } from "@next/font/google";
+import { motion, useScroll } from "framer-motion";
 import Hamburger from 'hamburger-react';
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { navMenu } from "./HeaderLinks";
 import NavHamburger from "./NavHamburger";
 import NavMenu from "./NavMenu";
-import { useScroll, motion } from "framer-motion";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -14,46 +14,14 @@ const inter = Inter({
 });
 
 function Header() {
-  const [isOpen, setOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
   const router = useRouter();
-
-  useEffect(() => {
-    if (isOpen) {
-      document.querySelector("body")?.classList.add("disable-scroll");
-    } else {
-      document.querySelector("body")?.classList.remove("disable-scroll");
-    }
-  }, [isOpen]);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  useEffect(() => {
-    setOpen(false);
-  }, [router.asPath]);
+  const [isOpen, setOpen] = useState(false);
 
   const { scrollYProgress } = useScroll();
 
   return (
     <header
-      className={`${inter.variable} sticky top-0 z-50 w-full font-sans ${isScrolled
-        ? "shadow-sm bg-[#f6f1eb] dark:bg-[#2d333b]"
-        : "bg-transparent"
-        } transition-all duration-300`}
+      className={`${inter.variable} sticky top-0 z-50 w-full font-sans shadow-sm bg-[#f6f1eb] dark:bg-[#2d333b] transition-all duration-300`}
     >
       <motion.div className="top-0 left-0 right-0 h-[0.1rem] bg-cyan-400 origin-center fixed z-50" style={{ scaleX: scrollYProgress }} />
 

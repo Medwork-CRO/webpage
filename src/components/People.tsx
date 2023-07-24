@@ -71,16 +71,17 @@ const membersInfo: MemberInfo[] = [
 function People({ }) {
     return (
         // <div className="w-full my-12 grid grid-cols-1 gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-        <div className="w-full my-6 py-6 sm:my-12 sm:py-12 flex overflow-x-auto space-x-8">
+        <div className="w-full my-6 py-6 sm:my-12 sm:py-12 flex overflow-x-auto space-x-8 snap-x snap-mandatory">
             {membersInfo.map((memberInfo, i) => (
-                <MemberCard
-                    key={i}
-                    image={memberInfo.image}
-                    name={memberInfo.name}
-                    title={memberInfo.title}
-                    description={memberInfo.description}
-                    linkedInTag={""}
-                />
+                <div className="snap-center" key={i}>
+                    <MemberCard
+                        image={memberInfo.image}
+                        name={memberInfo.name}
+                        title={memberInfo.title}
+                        description={memberInfo.description}
+                        linkedInTag={""}
+                    />
+                </div>
             ))}
         </div>
 

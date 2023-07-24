@@ -65,7 +65,7 @@ function ProvidedServices() {
   return (
     <div className="flex flex-col gap-0">
       <Title title={"Core Services"} />
-      <div className="grid transform grid-cols-1 gap-16 rounded-xl sm:grid-cols-2  md:grid-cols-3 my-8 md:my-12 lg:my-16">
+      <div className="grid transform grid-cols-1 gap-16 rounded-xl sm:grid-cols-2 md:grid-cols-3 my-8 md:my-12 lg:my-16">
         {images.map((image) => (
           <Card
             key={image.imageTitle}

@@ -20,6 +20,48 @@ const paragraphs = [
 //   "With three years at Medwork, you'll gather extensive industry knowledge, positioning you advantageously for rapid career advancement in the ever-evolving pharmaceutical field."
 // ];
 
+function Statistics() {
+  return (
+    <div className="flex flex-col justify-between gap-8 text-gray-500 dark:text-gray-400 md:flex-row w-full items-center">
+      <div>
+        <div className="flex w-56 flex-col">
+          <span className="flex flex-row self-center mb-4 text-4xl font-bold text-cyan-500">
+            <Counter number={90} title="" duration={3} />
+            <span>%</span>
+          </span>
+          <span className="subtext text-gray-600 dark:text-gray-400">
+            of employees are <strong>women</strong>
+          </span>
+        </div>
+      </div>
+      <div className="border border-gray-500"></div>
+      <div>
+        <div className="flex w-56 flex-col">
+          <span className="flex flex-row self-center mb-4 text-4xl font-bold text-cyan-500">
+            <Counter number={80} title="" duration={3} />
+            <span>%</span>
+          </span>
+          <span className="subtext text-gray-600 dark:text-gray-400">
+            of employees are happy after <strong>2 years</strong>
+          </span>
+        </div>
+      </div>
+      <div className="border border-gray-500"></div>
+      <div>
+        <div className="flex w-56 flex-col">
+          <span className="flex flex-row self-center mb-4 text-4xl font-bold text-cyan-500">
+            <Counter number={84} title="" duration={3} />
+            <span>%</span>
+          </span>
+          <span className="subtext text-gray-600 dark:text-gray-400">
+            of employees has at least one <strong>degree</strong>
+          </span>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 function Cosmetovigilance() {
   const recruitmentEmail = "recruitment@medwork.gr";
 
@@ -28,52 +70,15 @@ function Cosmetovigilance() {
       <ImageCategory
         textSide="right"
         image={team3}
-        title="We value excellence and our people excel at that"
+        title="We value excellence"
         description="Our team at Medwork is made up of experienced professionals who are
        passionate about improving patient outcomes."
       />
 
-
       <div className="max-w-[86rem] w-full">
         <Breadcrumbs />
         <div className="flex flex-col items-center gap-6 whitespace-pre-line px-4 sm:px-6 text-xl text-gray-500 dark:text-gray-400 lg:px-0 py-16 text-center w-full">
-          <div className="flex flex-col justify-between gap-8 text-gray-500 dark:text-gray-400 md:flex-row w-full items-center">
-            <div>
-              <div className="flex w-56 flex-col">
-                <span className="flex flex-row self-center mb-4 text-4xl font-bold text-cyan-500">
-                  <Counter number={90} title="" duration={3} />
-                  <span>%</span>
-                </span>
-                <span className="subtext text-gray-600 dark:text-gray-400">
-                  of employees are <strong>women</strong>
-                </span>
-              </div>
-            </div>
-            <div className="border border-gray-500"></div>
-            <div>
-              <div className="flex w-56 flex-col">
-                <span className="flex flex-row self-center mb-4 text-4xl font-bold text-cyan-500">
-                  <Counter number={80} title="" duration={3} />
-                  <span>%</span>
-                </span>
-                <span className="subtext text-gray-600 dark:text-gray-400">
-                  of employees are happy after <strong>2 years</strong>
-                </span>
-              </div>
-            </div>
-            <div className="border border-gray-500"></div>
-            <div>
-              <div className="flex w-56 flex-col">
-                <span className="flex flex-row self-center mb-4 text-4xl font-bold text-cyan-500">
-                  <Counter number={84} title="" duration={3} />
-                  <span>%</span>
-                </span>
-                <span className="subtext text-gray-600 dark:text-gray-400">
-                  of employees has at least one <strong>degree</strong>
-                </span>
-              </div>
-            </div>
-          </div>
+          <Statistics />
 
           <DisplayParagraphs paragraphs={paragraphs} />
 
@@ -148,7 +153,6 @@ function Cosmetovigilance() {
                 {recruitmentEmail}
               </Link>
             </div>
-
           </div>
           <div className="mt-8"></div>
         </div>
