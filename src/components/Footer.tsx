@@ -2,6 +2,7 @@ import Logo from "@/components/Logo";
 import RoundedButton from "@/components/RoundedButton";
 import { Inter } from "@next/font/google";
 import { FaLinkedin } from "@react-icons/all-files/fa/FaLinkedin";
+import { FaMoon, FaSun } from 'react-icons/fa';
 import { MdEmail } from "@react-icons/all-files/md/MdEmail";
 import { MdLocationOn } from "@react-icons/all-files/md/MdLocationOn";
 import Link from "next/link";
@@ -70,7 +71,7 @@ function CompanyInfo() {
   );
 }
 
-function Legal() {
+function Legal({ darkMode, setDarkMode }: { darkMode: any, setDarkMode: any }) {
   return (
     <div className="flex flex-col xs:flex-row items-start gap-2 text-md text-gray-400">
       <span>© {new Date().getFullYear()} Medwork</span>
@@ -90,6 +91,12 @@ function Legal() {
           </a>
         </span>
       </span>
+      <button
+        className="p-1 bg-yellow-600 text-white rounded-full dark:bg-blue-600"
+        onClick={() => setDarkMode(!darkMode)}
+      >
+        {darkMode ? <FaMoon /> : <FaSun />}
+      </button>
     </div>
   );
 }
@@ -228,13 +235,7 @@ function Footer({ darkMode, setDarkMode }: { darkMode: any, setDarkMode: any }) 
         </div>
         <div className="flex flex-col md:flex-row justify-between gap-8 items-start pb-8 pt-4">
           <Policies />
-          <Legal />
-          <button
-            className="py-2 px-2 bg-blue-500 text-white rounded dark:bg-blue-300"
-            onClick={() => setDarkMode(!darkMode)}
-          >
-            Toggle Dark Mode
-          </button>
+          <Legal darkMode={darkMode} setDarkMode={setDarkMode} />
         </div>
       </div>
       <div className="absolute z-[3] bottom-0 left-0 right-0 flex items-end justify-center h-16 opacity-[0.02]">

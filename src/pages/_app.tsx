@@ -16,34 +16,36 @@ const inter = Inter({
 function App({ Component, pageProps }: AppProps) {
   const [darkMode, setDarkMode] = useState(false);
 
-  // On component mount, we check if the system prefers dark mode, and if
-  // the user has a saved preference in localStorage.
-  useEffect(() => {
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    const memoryMode = localStorage.getItem('darkMode');
-    console.log('memoryMode :>> ', memoryMode);
-    const savedMode = memoryMode ? JSON.parse(memoryMode) : null;
-    console.log('savedMode :>> ', savedMode);
-    if (typeof savedMode === 'boolean') {
-      setDarkMode(savedMode);
-    } else {
-      setDarkMode(mediaQuery.matches);
-    }
+  // // On component mount, we check if the system prefers dark mode, and if
+  // // the user has a saved preference in localStorage.
+  // useEffect(() => {
+  //   const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+  //   const memoryMode = localStorage.getItem('darkMode');
+  //   console.log('memoryMode :>> ', memoryMode);
+  //   const savedMode = memoryMode ? JSON.parse(memoryMode) : null;
+  //   console.log('savedMode :>> ', savedMode);
+  //   if (typeof savedMode === 'boolean') {
+  //     setDarkMode(savedMode);
+  //   } else {
+  //     setDarkMode(mediaQuery.matches);
+  //   }
 
-    const handler = (e: { matches: boolean | ((prevState: boolean) => boolean); }) => setDarkMode(e.matches);
-    mediaQuery.addEventListener('change', handler);
+  //   const handler = (e: { matches: boolean | ((prevState: boolean) => boolean); }) => setDarkMode(e.matches);
+  //   mediaQuery.addEventListener('change', handler);
 
-    // Clean up event listener on unmount
-    return () => mediaQuery.removeEventListener('change', handler);
-  }, []);
+  //   // Clean up event listener on unmount
+  //   return () => mediaQuery.removeEventListener('change', handler);
+  // }, []);
 
-  useEffect(() => {
-    const root = window.document.documentElement;
-    root.classList.remove(darkMode ? 'light' : 'dark');
-    root.classList.add(darkMode ? 'dark' : 'light');
-    // Save the mode to localStorage whenever it changes
-    localStorage.setItem('darkMode', JSON.stringify(darkMode));
-  }, [darkMode]);
+  // useEffect(() => {
+  //   const root = window.document.documentElement;
+  //   root.classList.remove(darkMode ? 'light' : 'dark');
+  //   root.classList.add(darkMode ? 'dark' : 'light');
+  //   // Save the mode to localStorage whenever it changes
+  //   console.log(`storing ${darkMode} in localStorage`);
+
+  //   localStorage.setItem('darkMode', JSON.stringify(darkMode));
+  // }, [darkMode]);
 
   return (
     <div className={`${inter.variable} bg-[#f6f1eb] font-sans dark:bg-[#2d333b]`}>
