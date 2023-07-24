@@ -36,8 +36,8 @@ function Cosmetovigilance() {
 
       <div className="max-w-[86rem] w-full">
         <Breadcrumbs />
-        <div className="flex flex-col items-center gap-6 whitespace-pre-line px-4 sm:px-6 text-xl text-gray-500 dark:text-gray-400 lg:px-0 py-16 text-center">
-          <div className="flex flex-col justify-between  gap-8 text-gray-500 dark:text-gray-400 md:flex-row w-full">
+        <div className="flex flex-col items-center gap-6 whitespace-pre-line px-4 sm:px-6 text-xl text-gray-500 dark:text-gray-400 lg:px-0 py-16 text-center w-full">
+          <div className="flex flex-col justify-between gap-8 text-gray-500 dark:text-gray-400 md:flex-row w-full items-center">
             <div>
               <div className="flex w-56 flex-col">
                 <span className="flex flex-row self-center mb-4 text-4xl font-bold text-cyan-500">

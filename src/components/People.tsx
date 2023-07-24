@@ -71,7 +71,7 @@ const membersInfo: MemberInfo[] = [
 function People({ }) {
     return (
         // <div className="w-full my-12 grid grid-cols-1 gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-        <div className="w-full my-12 py-12 flex overflow-x-auto space-x-8">
+        <div className="w-full my-6 py-6 sm:my-12 sm:py-12 flex overflow-x-auto space-x-8">
             {membersInfo.map((memberInfo, i) => (
                 <MemberCard
                     key={i}

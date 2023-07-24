@@ -17,7 +17,7 @@ function ImageCategory({
 
   return (
     <>
-      <div className="relative w-full md:flex-row h-screen hidden md:block motion-safe:animate-fadeIn">
+      <div className="relative w-full md:flex-row h-screen hidden md:block motion-safe:animate-fadeIn text-[#2d333b] dark:text-[#f6f1eb]">
         <Image
           src={image}
           className="h-full min-w-full object-cover"
@@ -33,21 +33,21 @@ function ImageCategory({
             ? "text-left"
             : "text-right"
             }`}>
-            <span className="text-2xl font-semibold italic md:text-3xl xl:text-4xl">
+            <h1 className="font-semibold italic text-2xl md:text-6xl xl:text-7xl">
               {title}
-            </span>
-            <span className="text-md md:text-xl xl:text-2xl">
+            </h1>
+            <p className="text-xl md:text-4xl xl:text-5xl">
               {description}
-            </span>
+            </p>
           </div>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 md:hidden">
+      <div className="grid grid-cols-1 md:grid-cols-2 md:hidden text-[#2d333b] dark:text-[#f6f1eb]">
         <div className="mx-4 sm:mx-6 lg:mx-0 border-b border-b-[#2d333b] dark:border-b-[#f6f1eb]">
           <Image src={image} alt="Image for mobile" />
-          <div className="mt-8 md:mt-0 text-[#2d333b] dark:text-[#f6f1eb]">
-            <h1 className="mb-4 text-4xl italic">{title}</h1>
+          <div className="mt-8 md:mt-0">
+            <h1 className="mb-4 text-2xl italic">{title}</h1>
             <p className="mb-4 text-lg">{description}</p>
           </div>
         </div>
