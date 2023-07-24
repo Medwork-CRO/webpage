@@ -149,7 +149,7 @@ function WaveSvg() {
   );
 }
 
-function Footer() {
+function Footer({ darkMode, setDarkMode }: { darkMode: any, setDarkMode: any }) {
   return (
     // bg-gradient-to-l from-cyan-500 to-cyan-800
     <footer
@@ -229,6 +229,12 @@ function Footer() {
         <div className="flex flex-col md:flex-row justify-between gap-8 items-start pb-8 pt-4">
           <Policies />
           <Legal />
+          <button
+            className="py-2 px-2 bg-blue-500 text-white rounded dark:bg-blue-300"
+            onClick={() => setDarkMode(!darkMode)}
+          >
+            Toggle Dark Mode
+          </button>
         </div>
       </div>
       <div className="absolute z-[3] bottom-0 left-0 right-0 flex items-end justify-center h-16 opacity-[0.02]">

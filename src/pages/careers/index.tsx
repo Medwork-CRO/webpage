@@ -2,9 +2,10 @@ import Breadcrumbs from "@/components/Breadcrumb";
 import Counter from "@/components/Counter";
 import DisplayParagraphs from "@/components/DisplayParagraphs";
 import DualLayerParallax from "@/components/DualLayerParallax";
+import ImageCategory from "@/components/ImageCategory";
 import kariera from "@assets/companies/kariera_icon.png";
 import linkedin from "@assets/companies/linkedin_icon.png";
-// import team3 from "@assets/team-photos/team3.jpg";
+import team3 from "@assets/team-photos/team3.jpg";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -24,15 +25,14 @@ function Cosmetovigilance() {
 
   return (
     <div className="mx-auto flex flex-col items-center justify-between w-full">
-      {/* <ImageCategory
-         textSide="right"
-         image={team3}
-         title="We value excellence and our people excel at that"
-         description="Our team at Medwork is made up of experienced professionals who are
+      <ImageCategory
+        textSide="right"
+        image={team3}
+        title="We value excellence and our people excel at that"
+        description="Our team at Medwork is made up of experienced professionals who are
        passionate about improving patient outcomes."
-       />
-      */}
-      <DualLayerParallax imageFull='/assets/image-full.png' imageBottom='/assets/image-bottom.png' text='One Team' />
+      />
+
 
       <div className="max-w-[86rem] w-full">
         <Breadcrumbs />
@@ -76,6 +76,8 @@ function Cosmetovigilance() {
           </div>
 
           <DisplayParagraphs paragraphs={paragraphs} />
+
+          <DualLayerParallax imageFull='/assets/image-full.png' imageBottom='/assets/image-bottom.png' text='Join the Team' />
 
           {/* <div className="flex flex-col gap-8 whitespace-pre-line text-2xl p-8 border-2 rounded-lg border-gray-400 shadow-xl w-full">
           <p className="font-thin italic">

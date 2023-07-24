@@ -13,7 +13,7 @@ function MemberCard({
     <div className="flex flex-col w-full min-w-[20rem] max-w-[20rem]">
       <div className="flex h-32 w-full justify-center rounded-xl bg-cover">
         <Image
-          className="h-[136px] w-[136px] rounded-full border-2 border-cyan-600 object-cover"
+          className="h-[136px] w-[136px] rounded-full border-2 border-cyan-500 object-cover"
           src={image}
           alt={title}
         />
@@ -31,7 +31,7 @@ function MemberCard({
               <FaLinkedin className="antialiased" size={"20px"} />
             </a>
           </div>
-          <p className="text-base font-normal text-cyan-600">{title}</p>
+          <p className="text-base font-normal text-cyan-500">{title}</p>
         </div>
         <p className="mt-4 overflow-ellipsis text-lg font-normal text-gray-500 dark:text-gray-400 md:text-base">
           {description}

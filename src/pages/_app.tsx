@@ -6,6 +6,7 @@ import { Inter } from "@next/font/google";
 import { AnimatePresence } from "framer-motion";
 import type { AppProps } from "next/app";
 import Head from "next/head";
+import { useEffect, useState } from "react";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -13,6 +14,37 @@ const inter = Inter({
 });
 
 function App({ Component, pageProps }: AppProps) {
+  const [darkMode, setDarkMode] = useState(false);
+
+  // On component mount, we check if the system prefers dark mode, and if
+  // the user has a saved preference in localStorage.
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const memoryMode = localStorage.getItem('darkMode');
+    console.log('memoryMode :>> ', memoryMode);
+    const savedMode = memoryMode ? JSON.parse(memoryMode) : null;
+    console.log('savedMode :>> ', savedMode);
+    if (typeof savedMode === 'boolean') {
+      setDarkMode(savedMode);
+    } else {
+      setDarkMode(mediaQuery.matches);
+    }
+
+    const handler = (e: { matches: boolean | ((prevState: boolean) => boolean); }) => setDarkMode(e.matches);
+    mediaQuery.addEventListener('change', handler);
+
+    // Clean up event listener on unmount
+    return () => mediaQuery.removeEventListener('change', handler);
+  }, []);
+
+  useEffect(() => {
+    const root = window.document.documentElement;
+    root.classList.remove(darkMode ? 'light' : 'dark');
+    root.classList.add(darkMode ? 'dark' : 'light');
+    // Save the mode to localStorage whenever it changes
+    localStorage.setItem('darkMode', JSON.stringify(darkMode));
+  }, [darkMode]);
+
   return (
     <div className={`${inter.variable} bg-[#f6f1eb] font-sans dark:bg-[#2d333b]`}>
       <Head>
@@ -47,7 +79,7 @@ function App({ Component, pageProps }: AppProps) {
             <Component {...pageProps} />
           </AnimatePresence>
         </div>
-        <div className="z-10"><Footer /></div>
+        <div className="z-10"><Footer darkMode={darkMode} setDarkMode={setDarkMode} /></div>
       </main>
     </div>
   );
