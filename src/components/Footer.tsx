@@ -113,7 +113,7 @@ function Legal({ theme, setTheme }: { theme: Theme, setTheme: Function }) {
         </span>
       </span>
       <button
-        className={`p-1 text-medwork-dark dark:text-medwork-light bg-medwork-light dark:bg-medwork-dark border-medwork-dark dark:border-medwork-light border rounded-full`}
+        className="p-1 text-medwork-dark dark:text-medwork-light bg-medwork-light dark:bg-medwork-dark border-medwork-dark dark:border-medwork-light border rounded-full"
         onClick={handleThemeChange}
       >
         {themeIcon()}

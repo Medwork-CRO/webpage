@@ -7,6 +7,7 @@ import { AnimatePresence } from "framer-motion";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import { useEffect, useState } from "react";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -100,6 +101,7 @@ function App({ Component, pageProps }: AppProps) {
         <div className="z-10">
           <Footer theme={theme} setTheme={setTheme} />
         </div>
+        <ScrollToTopButton />
       </main>
     </div>
   );
