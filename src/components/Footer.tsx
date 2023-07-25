@@ -9,6 +9,7 @@ import Link from "next/link";
 import { AboutUs, Careers, Services } from "./HeaderLinks";
 import { Theme } from "@/pages/_app";
 
+const recruitmentEmail = "recruitment@medwork.gr";
 const mail = "medworkinfo@medwork.gr";
 const address = "Greece, Chiou 5, Argyroupoli 164 52";
 const linkedin = "company/medwork";
@@ -50,7 +51,7 @@ function CompanyInfo() {
         target="_blank"
         href={"http://maps.google.com/?q=" + address}
       >
-        <MdLocationOn className="antialiased" size={"20px"} />
+        <MdLocationOn className="antialiased" size={"22px"} />
       </a>
       <a
         aria-label="By clicking you will be taken to Mail"
@@ -58,7 +59,7 @@ function CompanyInfo() {
         target="_blank"
         href={"mailto:" + mail}
       >
-        <MdEmail className="antialiased" size={"20px"} />
+        <MdEmail className="antialiased" size={"22px"} />
       </a>
       <a
         aria-label="By clicking you will be taken to LinkedIn"
@@ -66,7 +67,7 @@ function CompanyInfo() {
         target="_blank"
         href={"https://www.linkedin.com/in/" + linkedin}
       >
-        <FaLinkedin className="antialiased" size={"20px"} />
+        <FaLinkedin className="antialiased" size={"22px"} />
       </a>
     </div>
   );
@@ -241,6 +242,13 @@ function Footer({ theme, setTheme }: { theme: any, setTheme: any }) {
                 rel="noopener noreferrer"
               >
                 {mail}
+              </Link>
+              <Link
+                href={`mailto:${recruitmentEmail}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {recruitmentEmail}
               </Link>
               <Link
                 href={"https://goo.gl/maps/KDKk5piro9Cb6AXG7"}

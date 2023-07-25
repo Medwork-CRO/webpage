@@ -1,10 +1,12 @@
 import Link from "next/link";
 import { AiOutlineEnvironment, AiOutlineMail, AiOutlinePhone } from "react-icons/ai";
+import { MdOutlineFax, MdWorkOutline } from "react-icons/md";
 
 enum ContactType {
   Phone,
   Fax,
   Email,
+  Work,
   Address,
 }
 
@@ -27,9 +29,11 @@ function getIcon(contactType: ContactType) {
     case ContactType.Phone:
       return <AiOutlinePhone className="h-6 w-6" />;
     case ContactType.Fax:
-      return <AiOutlinePhone className="h-6 w-6" />;
+      return <MdOutlineFax className="h-6 w-6" />;
     case ContactType.Email:
       return <AiOutlineMail className="h-6 w-6" />;
+    case ContactType.Work:
+      return <MdWorkOutline className="h-6 w-6" />;
     case ContactType.Address:
       return <AiOutlineEnvironment className="h-6 w-6" />;
   }
@@ -72,6 +76,7 @@ function getCompanyInfo() {
         {getContact('(+30) 210 9960971', '+302109960971', ContactType.Phone)}
         {getContact('(+30) 210 9969578', '+302109969578', ContactType.Fax)}
         {getContact('medworkinfo@medwork.gr', 'medworkinfo@medwork.gr', ContactType.Email)}
+        {getContact('recruitment@medwork.gr', 'recruitment@medwork.gr', ContactType.Work)}
         {getContact('Greece, Chiou 5, Argyroupoli 16452', 'KDKk5piro9Cb6AXG7', ContactType.Address)}
       </div>
     </div>
