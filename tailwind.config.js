@@ -24,6 +24,10 @@ module.exports = {
         "-1": "-1",
       },
       colors: {
+        medwork: {
+          light: "#f6f1eb",
+          dark: "#2d333b",
+        },
         primary: {
           50: "#eff6ff",
           100: "#dbeafe",

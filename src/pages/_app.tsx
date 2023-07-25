@@ -13,44 +13,58 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-function initializeDarkMode() {
-  if (typeof window !== 'undefined') {
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    const memoryMode = localStorage.getItem('darkMode');
-    const savedMode = memoryMode ? JSON.parse(memoryMode) : null;
-    return typeof savedMode === 'boolean' ? savedMode : mediaQuery.matches;
-  }
-  return false; // Default value when window is not defined
+export enum Theme {
+  AUTO = 'auto',
+  LIGHT = 'light',
+  DARK = 'dark',
 }
 
+function initializeThemeSetting() {
+  if (typeof window === 'undefined') {
+    return Theme.AUTO;
+  }
+
+  const savedSetting = localStorage.getItem('theme');
+  return savedSetting ? savedSetting as Theme : Theme.AUTO;
+}
 
 function App({ Component, pageProps }: AppProps) {
-  const [darkMode, setDarkMode] = useState(initializeDarkMode);
+  const [theme, setTheme] = useState(initializeThemeSetting);
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-      const handler = (e: { matches: boolean }) => setDarkMode(e.matches);
-      mediaQuery.addEventListener('change', handler);
+    const root = window.document.documentElement;
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+
+    const applyPreferredTheme = () => {
+      const preferredTheme = mediaQuery.matches ? Theme.DARK : Theme.LIGHT;
+      root.classList.remove(mediaQuery.matches ? Theme.LIGHT : Theme.DARK);
+      root.classList.add(preferredTheme);
+    };
+
+    if (theme === Theme.AUTO) {
+      // Apply the preferred theme
+      applyPreferredTheme();
+      // Watch for changes to the media query
+      mediaQuery.addEventListener('change', applyPreferredTheme);
 
       // Clean up event listener on unmount
-      return () => mediaQuery.removeEventListener('change', handler);
+      return () => mediaQuery.removeEventListener('change', applyPreferredTheme);
     }
-  }, []);
+
+    // If the theme is not 'AUTO', apply the selected theme
+    root.classList.remove(Theme.LIGHT, Theme.DARK);
+    root.classList.add(theme);
+  }, [theme]);
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      const root = window.document.documentElement;
-      root.classList.remove(darkMode ? 'light' : 'dark');
-      root.classList.add(darkMode ? 'dark' : 'light');
-
-      // Save the mode to localStorage whenever it changes
-      localStorage.setItem('darkMode', JSON.stringify(darkMode));
+      // Save the theme to localStorage whenever it changes
+      localStorage.setItem('theme', theme);
     }
-  }, [darkMode]);
+  }, [theme]);
 
   return (
-    <div className={`${inter.variable} bg-[#f6f1eb] font-sans dark:bg-[#2d333b]`}>
+    <div className={`${inter.variable} bg-medwork-light font-sans dark:bg-medwork-dark`}>
       <Head>
         <title>Medwork</title>
         <meta name="title" content="Medwork" />
@@ -84,7 +98,7 @@ function App({ Component, pageProps }: AppProps) {
           </AnimatePresence>
         </div>
         <div className="z-10">
-          <Footer darkMode={darkMode} setDarkMode={setDarkMode} />
+          <Footer theme={theme} setTheme={setTheme} />
         </div>
       </main>
     </div>

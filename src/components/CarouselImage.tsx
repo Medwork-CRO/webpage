@@ -49,11 +49,11 @@ function CarouselImage({ image, title }: ImageShowCaseProps) {
         alt="alt"
       />
 
-      {/* <div className="absolute inset-x-0 top-0 z-10 from-[#f6f1eb] dark:from-[#2d333b] to-transparent bg-gradient-to-b h-[6%]"></div> */}
-      <div className="absolute inset-x-0 bottom-0 z-10 from-[#f6f1eb] dark:from-[#2d333b] to-transparent bg-gradient-to-t h-5/6"></div>
+      {/* <div className="absolute inset-x-0 top-0 z-10 from-medwork-light dark:from-medwork-dark to-transparent bg-gradient-to-b h-[6%]"></div> */}
+      <div className="absolute inset-x-0 bottom-0 z-10 from-medwork-light dark:from-medwork-dark to-transparent bg-gradient-to-t h-5/6"></div>
 
       <div className="absolute bottom-8 sm:bottom-16 z-20 w-full mb-8 sm:mb-2">
-        <div className="flex flex-col justify-center gap-8 max-w-[86rem] px-4 md:px-6 lg:px-0 mx-auto text-[#2d333b] dark:text-[#f6f1eb] text-left">
+        <div className="flex flex-col justify-center gap-8 max-w-[86rem] px-4 md:px-6 lg:px-0 mx-auto text-medwork-dark dark:text-medwork-light text-left">
           <span className="font-semibold text-2xl sm:text-4xl md:text-5xl lg:text-6xl leading-snug sm:leading-relaxed md:leading-relaxed lg:leading-normal">
             {title}
           </span>

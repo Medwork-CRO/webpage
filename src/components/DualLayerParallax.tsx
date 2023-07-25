@@ -53,7 +53,7 @@ function DualLayerParallax({
             />
 
             <div
-                className={`absolute inset-0 z-5 from-[#2d333b] to-transparent bg-gradient-to-t`}
+                className={`absolute inset-0 z-5 from-medwork-dark to-transparent bg-gradient-to-t`}
             ></div>
         </div>
     );

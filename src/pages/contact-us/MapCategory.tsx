@@ -68,7 +68,7 @@ function getContact(display: string, value: string, contactType: ContactType) {
 function getCompanyInfo() {
   return (
     <div className="font-semibold text-xl text-left">
-      <div className="text-[#f6f1eb] dark:text-gray-200 flex flex-col justify-start gap-4">
+      <div className="text-medwork-light dark:text-gray-200 flex flex-col justify-start gap-4">
         {getContact('(+30) 210 9960971', '+302109960971', ContactType.Phone)}
         {getContact('(+30) 210 9969578', '+302109969578', ContactType.Fax)}
         {getContact('medworkinfo@medwork.gr', 'medworkinfo@medwork.gr', ContactType.Email)}
@@ -105,7 +105,7 @@ function MapCategory({
           <div className="absolute  inset-0 bg-gradient-to-r from-cyan-600 to-cyan-800"></div>
           <div className="relative w-full z-10 float-left p-4">
             {getIFrame(location, true)}
-            <div className="mt-8 md:mt-0 text-[#f6f1eb]">
+            <div className="mt-8 md:mt-0 text-medwork-light">
               {getCompanyInfo()}
             </div>
           </div>

@@ -2,11 +2,12 @@ import Logo from "@/components/Logo";
 import RoundedButton from "@/components/RoundedButton";
 import { Inter } from "@next/font/google";
 import { FaLinkedin } from "@react-icons/all-files/fa/FaLinkedin";
-import { FaMoon, FaSun } from 'react-icons/fa';
+import { MdDarkMode, MdLightMode, MdOutlineBrightnessAuto } from 'react-icons/md';
 import { MdEmail } from "@react-icons/all-files/md/MdEmail";
 import { MdLocationOn } from "@react-icons/all-files/md/MdLocationOn";
 import Link from "next/link";
 import { AboutUs, Careers, Services } from "./HeaderLinks";
+import { Theme } from "@/pages/_app";
 
 const mail = "medworkinfo@medwork.gr";
 const address = "Greece, Chiou 5, Argyroupoli 164 52";
@@ -71,9 +72,29 @@ function CompanyInfo() {
   );
 }
 
-function Legal({ darkMode, setDarkMode }: { darkMode: any, setDarkMode: any }) {
+function Legal({ theme, setTheme }: { theme: Theme, setTheme: Function }) {
+  const handleThemeChange = () => {
+    if (theme === Theme.DARK) {
+      setTheme(Theme.LIGHT);
+    } else if (theme === Theme.LIGHT) {
+      setTheme(Theme.AUTO);
+    } else {
+      setTheme(Theme.DARK);
+    }
+  };
+
+  const themeIcon = () => {
+    if (theme === Theme.DARK) {
+      return <MdDarkMode />;
+    } else if (theme === Theme.LIGHT) {
+      return <MdLightMode />;
+    } else {
+      return <MdOutlineBrightnessAuto />;
+    }
+  };
+
   return (
-    <div className="flex flex-col xs:flex-row items-start gap-2 text-md text-gray-400">
+    <div className="flex flex-col xs:flex-row items-start gap-2 text-md text-gray-400 align-center">
       <span>© {new Date().getFullYear()} Medwork</span>
       <span className="flex flex-col xs:flex-row gap-2">
         <span className="hidden xs:block">|</span>
@@ -92,10 +113,10 @@ function Legal({ darkMode, setDarkMode }: { darkMode: any, setDarkMode: any }) {
         </span>
       </span>
       <button
-        className="p-1 bg-yellow-600 text-white rounded-full dark:bg-blue-600"
-        onClick={() => setDarkMode(!darkMode)}
+        className={`p-1 text-medwork-dark dark:text-medwork-light bg-medwork-light dark:bg-medwork-dark border-medwork-dark dark:border-medwork-light border rounded-full`}
+        onClick={handleThemeChange}
       >
-        {darkMode ? <FaMoon /> : <FaSun />}
+        {themeIcon()}
       </button>
     </div>
   );
@@ -103,7 +124,7 @@ function Legal({ darkMode, setDarkMode }: { darkMode: any, setDarkMode: any }) {
 
 function Policies() {
   return (
-    <div className="flex flex-col sm:flex-row flex-wrap items-start gap-2 text-md text-[#2d333b] dark:text-[#f6f1eb]">
+    <div className="flex flex-col sm:flex-row flex-wrap items-start gap-2 text-md text-medwork-dark dark:text-medwork-light">
       Policies: {policies.map((a, i) => (
         <div key={i} className="flex">
           <Link
@@ -156,14 +177,14 @@ function WaveSvg() {
   );
 }
 
-function Footer({ darkMode, setDarkMode }: { darkMode: any, setDarkMode: any }) {
+function Footer({ theme, setTheme }: { theme: any, setTheme: any }) {
   return (
     // bg-gradient-to-l from-cyan-500 to-cyan-800
     <footer
-      className={`${inter.variable} w-full flex justify-center shadow-sm bg-[#f6f1eb] dark:bg-[#2d333b] px-4 sm:px-6 lg:px-0 font-sans relative`}
+      className={`${inter.variable} w-full flex justify-center shadow-sm bg-medwork-light dark:bg-medwork-dark px-4 sm:px-6 lg:px-0 font-sans relative`}
     >
-      <div className="flex w-full max-w-[86rem] flex-col text-[#2d333b] dark:text-[#f6f1eb] z-[5]">
-        <div className="border-t border-[#2d333b] dark:border-[#f6f1eb]"></div>
+      <div className="flex w-full max-w-[86rem] flex-col text-medwork-dark dark:text-medwork-light z-[5]">
+        <div className="border-t border-medwork-dark dark:border-medwork-light"></div>
         {/* <div className="flex flex-col justify-between gap-8 py-16 md:flex-row"> */}
         {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-8 gap-16 py-16"> */}
         <div className="flex flex-col sm:flex-row flex-wrap justify-between gap-8 py-16">
@@ -235,11 +256,11 @@ function Footer({ darkMode, setDarkMode }: { darkMode: any, setDarkMode: any }) 
         </div>
         <div className="flex flex-col md:flex-row justify-between gap-8 items-start pb-8 pt-4">
           <Policies />
-          <Legal darkMode={darkMode} setDarkMode={setDarkMode} />
+          <Legal theme={theme} setTheme={setTheme} />
         </div>
       </div>
-      <div className="absolute z-[3] bottom-0 left-0 right-0 flex items-end justify-center h-16 opacity-[0.02]">
-        <span className="select-none text-vws leading-vws text-[#2d333b] dark:text-[#f6f1eb] font-bold overflow-hidden h-3/7 tracking-widest">
+      <div className="absolute z-[3] bottom-0 left-0 right-0 flex items-end justify-center h-16 opacity-[0.05] dark:opacity-[0.02]">
+        <span className="select-none text-vws leading-vws text-medwork-dark dark:text-medwork-light font-bold overflow-hidden h-3/7 tracking-widest">
           Forward
         </span>
       </div>

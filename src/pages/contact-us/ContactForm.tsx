@@ -12,7 +12,7 @@ function ContactForm() {
   };
 
   return (
-    <div className="font-semibold leading-[2rem] sm:leading-[2rem] md:leading-[3rem] xl:leading-[4rem] text-lg sm:text-xl text-[#2d333b] dark:text-[#f6f1eb] text-left">
+    <div className="font-semibold leading-[2rem] sm:leading-[2rem] md:leading-[3rem] xl:leading-[4rem] text-lg sm:text-xl text-medwork-dark dark:text-medwork-light text-left">
       <Title title="Contact Us" align="left" />
       <p className="mb-8 text-left font-light text-gray-500 dark:text-gray-400 sm:text-xl">
         You are always welcome to send us your CV and tell us about yourself.

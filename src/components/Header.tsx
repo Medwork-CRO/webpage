@@ -25,7 +25,7 @@ function Header() {
 
   return (
     <header
-      className={`${inter.variable} sticky top-0 z-50 w-full font-sans shadow-sm bg-[#f6f1eb] dark:bg-[#2d333b] transition-all duration-300`}
+      className={`${inter.variable} sticky top-0 z-50 w-full font-sans shadow-sm bg-medwork-light dark:bg-medwork-dark transition-all duration-300`}
     >
       <motion.div className="top-0 left-0 right-0 h-[0.1rem] bg-cyan-400 origin-center fixed z-50" style={{ scaleX: scrollYProgress }} />
 

@@ -10,7 +10,7 @@ function RoundedButton({ label, href }: RoundedButtonProps) {
     <Link
       className="
         flex flex-row items-center justify-center gap-4
-        cursor-pointer text-[#f6f1eb] dark:text-[#2d333b]
+        cursor-pointer text-medwork-light dark:text-medwork-dark
         py-2.5 px-4 text-sm sm:text-md md:text-lg text-center font-semibold w-[200px] rounded-full
         bg-cyan-400 hover:bg-cyan-600
         transition duration-100 ease-in focus:outline-none"
