@@ -28,7 +28,7 @@ function DualLayerParallax({
         >
             <motion.h1
                 style={{ y: textY }}
-                className="font-bold mb-[18rem] xs:mb-[32rem] text-white text-7xl xs:text-8xl sm:text-9xl md:text-[12rem] relative z-10"
+                className="font-bold mb-[18rem] xs:mb-[32rem] text-white text-7xl xs:text-8xl sm:text-9xl md:text-[10rem] relative z-10"
             >
                 {text}
             </motion.h1>

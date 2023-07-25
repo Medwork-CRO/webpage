@@ -13,39 +13,41 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
+function initializeDarkMode() {
+  if (typeof window !== 'undefined') {
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const memoryMode = localStorage.getItem('darkMode');
+    const savedMode = memoryMode ? JSON.parse(memoryMode) : null;
+    return typeof savedMode === 'boolean' ? savedMode : mediaQuery.matches;
+  }
+  return false; // Default value when window is not defined
+}
+
+
 function App({ Component, pageProps }: AppProps) {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(initializeDarkMode);
 
-  // // On component mount, we check if the system prefers dark mode, and if
-  // // the user has a saved preference in localStorage.
-  // useEffect(() => {
-  //   const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-  //   const memoryMode = localStorage.getItem('darkMode');
-  //   console.log('memoryMode :>> ', memoryMode);
-  //   const savedMode = memoryMode ? JSON.parse(memoryMode) : null;
-  //   console.log('savedMode :>> ', savedMode);
-  //   if (typeof savedMode === 'boolean') {
-  //     setDarkMode(savedMode);
-  //   } else {
-  //     setDarkMode(mediaQuery.matches);
-  //   }
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+      const handler = (e: { matches: boolean }) => setDarkMode(e.matches);
+      mediaQuery.addEventListener('change', handler);
 
-  //   const handler = (e: { matches: boolean | ((prevState: boolean) => boolean); }) => setDarkMode(e.matches);
-  //   mediaQuery.addEventListener('change', handler);
+      // Clean up event listener on unmount
+      return () => mediaQuery.removeEventListener('change', handler);
+    }
+  }, []);
 
-  //   // Clean up event listener on unmount
-  //   return () => mediaQuery.removeEventListener('change', handler);
-  // }, []);
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const root = window.document.documentElement;
+      root.classList.remove(darkMode ? 'light' : 'dark');
+      root.classList.add(darkMode ? 'dark' : 'light');
 
-  // useEffect(() => {
-  //   const root = window.document.documentElement;
-  //   root.classList.remove(darkMode ? 'light' : 'dark');
-  //   root.classList.add(darkMode ? 'dark' : 'light');
-  //   // Save the mode to localStorage whenever it changes
-  //   console.log(`storing ${darkMode} in localStorage`);
-
-  //   localStorage.setItem('darkMode', JSON.stringify(darkMode));
-  // }, [darkMode]);
+      // Save the mode to localStorage whenever it changes
+      localStorage.setItem('darkMode', JSON.stringify(darkMode));
+    }
+  }, [darkMode]);
 
   return (
     <div className={`${inter.variable} bg-[#f6f1eb] font-sans dark:bg-[#2d333b]`}>
@@ -81,7 +83,9 @@ function App({ Component, pageProps }: AppProps) {
             <Component {...pageProps} />
           </AnimatePresence>
         </div>
-        <div className="z-10"><Footer darkMode={darkMode} setDarkMode={setDarkMode} /></div>
+        <div className="z-10">
+          <Footer darkMode={darkMode} setDarkMode={setDarkMode} />
+        </div>
       </main>
     </div>
   );

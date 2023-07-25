@@ -9,10 +9,11 @@ function RoundedButton({ label, href }: RoundedButtonProps) {
   return (
     <Link
       className="
-        cursor-pointer text-white xs:text-md w-[200px] rounded-full
-        bg-cyan-400 hover:bg-cyan-600 py-2
-        text-center text-sm font-semibold transition duration-100 ease-in focus:outline-none
-        border-2 border-transparent hover:border-[#2d333b] hover:dark:border-[#f6f1eb]"
+        flex flex-row items-center justify-center gap-4
+        cursor-pointer text-[#f6f1eb] dark:text-[#2d333b]
+        py-2.5 px-4 text-sm sm:text-md md:text-lg text-center font-semibold w-[200px] rounded-full
+        bg-cyan-400 hover:bg-cyan-600
+        transition duration-100 ease-in focus:outline-none"
       aria-label="Action button"
       href={href}
     >

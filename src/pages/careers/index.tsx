@@ -105,11 +105,13 @@ function Cosmetovigilance() {
 
           <div className="my-8 flex flex-col gap-2 items-center whitespace-pre-line text-2xl font-thin text-cyan-600 dark:text-cyan-400">
             You can see all our open job offerings
-            <div className="mt-4 flex flex-col sm:flex-row justify-center gap-6 text-center w-full">
+            <div className="mt-4 flex flex-col sm:flex-row justify-center items-center gap-6 text-center w-full">
               <Link
-                className="text-[#f6f1eb] flex flex-row items-center justify-center gap-4
-              rounded-full bg-cyan-400 px-6 py-2.5 font-bold hover:bg-cyan-600 dark:text-[#2d333b]
-              border-2 border-transparent hover:border-[#2d333b] hover:dark:border-[#f6f1eb]"
+                className="flex flex-row items-center justify-center gap-4
+        cursor-pointer text-[#f6f1eb] dark:text-[#2d333b]
+        py-2.5 px-4 text-sm sm:text-md md:text-lg text-center font-semibold w-[200px] rounded-full
+        bg-cyan-400 hover:bg-cyan-600
+        transition duration-100 ease-in focus:outline-none"
                 aria-label={`By clicking you will be taken to kariera.gr`}
                 key={"kariera"}
                 href={"https://www.kariera.gr/en/companies/3531"}
@@ -124,9 +126,11 @@ function Cosmetovigilance() {
                 {"Kariera"}
               </Link>
               <Link
-                className="text-[#f6f1eb] flex flex-row items-center justify-center gap-4
-              rounded-full bg-cyan-400 px-6 py-2.5 font-bold hover:bg-cyan-600 dark:text-[#2d333b]
-              border-2 border-transparent hover:border-[#2d333b] hover:dark:border-[#f6f1eb]"
+                className="flex flex-row items-center justify-center gap-4
+        cursor-pointer text-[#f6f1eb] dark:text-[#2d333b]
+        py-2.5 px-4 text-sm sm:text-md md:text-lg text-center font-semibold w-[200px] rounded-full
+        bg-cyan-400 hover:bg-cyan-600
+        transition duration-100 ease-in focus:outline-none"
                 aria-label={`By clicking you will be taken to linkedIn.gr`}
                 key={"linkedIn"}
                 href={"https://www.linkedin.com/company/medwork/jobs/"}
@@ -142,7 +146,6 @@ function Cosmetovigilance() {
               </Link>
             </div>
             <div className="flex flex-row justify-center mt-8 text-lg">
-              Or email us your CV at&nbsp;
               <Link
                 className="italic"
                 aria-label={`By clicking you will be taken to the email ${recruitmentEmail}`}
@@ -150,11 +153,10 @@ function Cosmetovigilance() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {recruitmentEmail}
+                Or email us your CV at {recruitmentEmail}
               </Link>
             </div>
           </div>
-          <div className="mt-8"></div>
         </div>
       </div>
     </div>
