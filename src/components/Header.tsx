@@ -17,6 +17,10 @@ function Header() {
   const router = useRouter();
   const [isOpen, setOpen] = useState(false);
 
+  useEffect(() => {
+    setOpen(false);
+  }, [router.asPath]);
+
   const { scrollYProgress } = useScroll();
 
   return (
