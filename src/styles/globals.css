@@ -128,8 +128,8 @@ a {
 /* Custom scrollbar */
 @layer utilities {
   ::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
+    width: 6px;
+    height: 6px;
   }
   /* Track */
   ::-webkit-scrollbar-track {
@@ -141,11 +141,13 @@ a {
 
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: rgb(90, 87, 80);
+    --tw-border-opacity: 1;
+    background: rgb(209 213 219 / var(--tw-border-opacity));
     border-radius: 5px;
   }
   .dark ::-webkit-scrollbar-thumb {
-    background: rgb(80, 87, 90);
+    --tw-border-opacity: 1;
+    background: rgb(107 114 128 / var(--tw-border-opacity));
     border-radius: 5px;
   }
 

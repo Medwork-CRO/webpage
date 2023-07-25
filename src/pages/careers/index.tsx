@@ -34,7 +34,7 @@ function Statistics() {
           </span>
         </div>
       </div>
-      <div className="border border-gray-500"></div>
+      <div className="h-full px-12 md:px-0 md:py-12 border border-gray-500"></div>
       <div>
         <div className="flex w-56 flex-col">
           <span className="flex flex-row self-center mb-4 text-4xl font-bold text-cyan-500">
@@ -46,7 +46,7 @@ function Statistics() {
           </span>
         </div>
       </div>
-      <div className="border border-gray-500"></div>
+      <div className="h-full px-12 md:px-0 md:py-12 border border-gray-500"></div>
       <div>
         <div className="flex w-56 flex-col">
           <span className="flex flex-row self-center mb-4 text-4xl font-bold text-cyan-500">
