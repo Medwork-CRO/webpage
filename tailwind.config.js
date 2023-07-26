@@ -27,6 +27,7 @@ module.exports = {
         medwork: {
           light: "#f6f1eb",
           dark: "#2d333b",
+          blue: "#2d333b",
         },
         primary: {
           50: "#eff6ff",
