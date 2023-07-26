@@ -230,7 +230,7 @@ const LegislationTabs = () => {
                         role="tablist"
                     >
                         {legislations.map((legislation, index) => {
-                            return (<li className="-mb-px mr-2 last:mr-0 flex-auto text-center" key={index}>
+                            return (<li className="-mb-px mr-2 last:mr-0 flex-auto text-center cursor-pointer hover:bg-cyan-500 hover:bg-opacity-10" key={index}>
                                 <a
                                     className={
                                         `text-xs font-bold uppercase px-5 py-3 block border-medwork-dark dark:border-medwork-light border ${openTab === index

@@ -47,7 +47,7 @@ function ImageCategory({
         <Image src={image} alt="Image for mobile" />
         <div className="mx-4 sm:mx-6 lg:mx-0 border-b border-b-medwork-dark dark:border-b-medwork-light">
           <div className="mt-8 md:mt-0">
-            <h1 className="mb-4 text-2xl italic text-center">{title}</h1>
+            <h1 className="mb-4 text-2xl italic">{title}</h1>
             <p className="mb-4 text-lg">{description}</p>
           </div>
         </div>

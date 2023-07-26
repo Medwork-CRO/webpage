@@ -73,7 +73,31 @@ function CompanyInfo() {
   );
 }
 
-function Legal({ theme, setTheme }: { theme: Theme, setTheme: Function }) {
+function Legal() {
+  return (
+    <div className="flex flex-col xs:flex-row items-start gap-2 text-md text-gray-400 align-center">
+      <span>© {new Date().getFullYear()} Medwork</span>
+      <span className="flex flex-col xs:flex-row gap-2">
+        <span className="hidden xs:block">|</span>
+        <span>All Rights Reserved</span>
+        <span className="hidden xs:block">|</span>
+        <span>
+          Made by{" "}
+          <a
+            className="font-semibold"
+            href="https://github.com/keybraker"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Keybraker
+          </a>
+        </span>
+      </span>
+    </div>
+  );
+}
+
+function ThemeSelector({ theme, setTheme }: { theme: Theme, setTheme: Function }) {
   const handleThemeChange = () => {
     if (theme === Theme.DARK) {
       setTheme(Theme.LIGHT);
@@ -95,31 +119,12 @@ function Legal({ theme, setTheme }: { theme: Theme, setTheme: Function }) {
   };
 
   return (
-    <div className="flex flex-col xs:flex-row items-start gap-2 text-md text-gray-400 align-center">
-      <span>© {new Date().getFullYear()} Medwork</span>
-      <span className="flex flex-col xs:flex-row gap-2">
-        <span className="hidden xs:block">|</span>
-        <span>All Rights Reserved</span>
-        <span className="hidden xs:block">|</span>
-        <span>
-          Made by{" "}
-          <a
-            className="font-semibold"
-            href="https://github.com/keybraker"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Keybraker
-          </a>
-        </span>
-      </span>
-      <button
-        className="p-1 text-medwork-dark dark:text-medwork-light bg-medwork-light dark:bg-medwork-dark border-medwork-dark dark:border-medwork-light border rounded-full"
-        onClick={handleThemeChange}
-      >
-        {themeIcon()}
-      </button>
-    </div>
+    <button
+      className="mt-4 p-1 w-7 h-7 flex justify-center items-center text-medwork-dark dark:text-medwork-light bg-medwork-light dark:bg-medwork-dark border-medwork-dark dark:border-medwork-light border rounded-full"
+      onClick={handleThemeChange}
+    >
+      {themeIcon()}
+    </button>
   );
 }
 
@@ -183,11 +188,16 @@ function Footer({ theme, setTheme }: { theme: any, setTheme: any }) {
     <footer
       className={`${inter.variable} w-full flex justify-center shadow-sm bg-medwork-light dark:bg-medwork-dark px-4 sm:px-6 lg:px-0 font-sans relative`}
     >
+
       <div className="flex w-full max-w-[86rem] flex-col text-medwork-dark dark:text-medwork-light z-[5]">
-        <div className="border-t border-medwork-dark dark:border-medwork-light"></div>
+        <div className="border-t border-medwork-dark dark:border-medwork-light flex justify-end">
+          <ThemeSelector theme={theme} setTheme={setTheme} />
+        </div>
+
         {/* <div className="flex flex-col justify-between gap-8 py-16 md:flex-row"> */}
         {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-8 gap-16 py-16"> */}
         <div className="flex flex-col sm:flex-row flex-wrap justify-between gap-8 py-16">
+
           <div className="flex flex-col gap-6">
             <Logo />
             <span className={"max-w-sm whitespace-pre-line text-left text-lg"}>
@@ -263,7 +273,7 @@ function Footer({ theme, setTheme }: { theme: any, setTheme: any }) {
         </div>
         <div className="flex flex-col md:flex-row justify-between gap-8 items-start pb-8 pt-4">
           <Policies />
-          <Legal theme={theme} setTheme={setTheme} />
+          <Legal />
         </div>
       </div>
       <div className="absolute z-[3] bottom-0 left-0 right-0 flex items-end justify-center h-16 opacity-[0.05] dark:opacity-[0.02]">

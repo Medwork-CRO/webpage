@@ -15,8 +15,8 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/about-us.php',
-        destination: '/about-us',
+        source: '/about.php',
+        destination: '/about/company',
         permanent: true,
       },
       {
@@ -121,22 +121,52 @@ const nextConfig = {
       },
       {
         source: '/nikolas-tsiakkas.php',
-        destination: '/about-us',
+        destination: '/about/company',
         permanent: true,
       },
       {
         source: '/eleni-voidou.php',
-        destination: '/about-us',
+        destination: '/about/company',
         permanent: true,
       },
       {
         source: '/katerina-paschou.php',
-        destination: '/about-us',
+        destination: '/about/company',
         permanent: true,
       },
       {
         source: '/fotoula-dragatsi.php',
-        destination: '/about-us',
+        destination: '/about/company',
+        permanent: true,
+      },
+      {
+        source: '/articles.php',
+        destination: '/about/legislation',
+        permanent: true,
+      },
+      {
+        source: '/legislation.php',
+        destination: '/about/legislation',
+        permanent: true,
+      },
+      {
+        source: '/greek-legislation.php',
+        destination: '/about/legislation',
+        permanent: true,
+      },
+      {
+        source: '/cypriot-legislation.php',
+        destination: '/about/legislation',
+        permanent: true,
+      },
+      {
+        source: '/greek-materiovigilance.php',
+        destination: '/about/legislation',
+        permanent: true,
+      },
+      {
+        source: '/useful-links.php',
+        destination: '/about/legislation',
         permanent: true,
       },
     ]
