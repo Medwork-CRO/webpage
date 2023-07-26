@@ -1,4 +1,3 @@
-import classNames from 'classnames';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 type Props = {
