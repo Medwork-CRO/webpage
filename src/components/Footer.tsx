@@ -120,7 +120,7 @@ function ThemeSelector({ theme, setTheme }: { theme: Theme, setTheme: Function }
 
   return (
     <button
-      className="mt-4 p-1 w-7 h-7 flex justify-center items-center text-medwork-dark dark:text-medwork-light bg-medwork-light dark:bg-medwork-dark border-medwork-dark dark:border-medwork-light border rounded-full"
+      className="absolute z-50 mt-4 p-1 w-7 h-7 flex justify-center items-center text-medwork-dark dark:text-medwork-light bg-medwork-light dark:bg-medwork-dark border-medwork-dark dark:border-medwork-light border rounded-full"
       onClick={handleThemeChange}
     >
       {themeIcon()}
