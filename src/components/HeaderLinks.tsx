@@ -1,8 +1,18 @@
 import { NavProp } from "./NavHamburger";
 
 const AboutUs = {
-  label: "About Us",
-  href: "/about-us",
+  label: "About",
+  href: "/about",
+  subCategories: [
+    {
+      label: "Company",
+      href: "/about/company",
+    },
+    {
+      label: "Legislation",
+      href: "/about/legislation",
+    },
+  ],
 };
 
 const Services = {
