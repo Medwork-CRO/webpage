@@ -222,15 +222,14 @@ const LegislationTabs = () => {
 
     return (
         <>
-
-            <div className="flex flex-wrap">
+            <div className="flex flex-col sm:flex-row w-full">
                 <div className="w-full">
                     <ul
-                        className="flex mb-0 list-none flex-wrap pt-3 pb-4 flex-row"
+                        className="w-full flex list-none flex-col sm:flex-row pt-3 pb-4"
                         role="tablist"
                     >
                         {legislations.map((legislation, index) => {
-                            return (<li className="-mb-px mr-2 last:mr-0 flex-auto text-center cursor-pointer hover:bg-cyan-500 hover:bg-opacity-10" key={index}>
+                            return (<li className="sm:mr-2 last:mr-0 mb-2 sm:mb-0 last:mb-0 flex-auto text-center cursor-pointer hover:bg-cyan-500 hover:bg-opacity-10" key={index}>
                                 <a
                                     className={
                                         `text-xs font-bold uppercase px-5 py-3 block border-medwork-dark dark:border-medwork-light border ${openTab === index

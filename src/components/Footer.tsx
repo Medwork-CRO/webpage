@@ -120,7 +120,9 @@ function ThemeSelector({ theme, setTheme }: { theme: Theme, setTheme: Function }
 
   return (
     <button
-      className="absolute z-50 mt-4 p-1 w-7 h-7 flex justify-center items-center text-medwork-dark dark:text-medwork-light bg-medwork-light dark:bg-medwork-dark border-medwork-dark dark:border-medwork-light border rounded-full"
+      className="
+        absolute z-50 p-1 w-8 h-8 flex justify-center items-center text-medwork-dark dark:text-medwork-light
+        bg-medwork-light dark:bg-medwork-dark border-medwork-dark dark:border-medwork-light border rounded-full"
       onClick={handleThemeChange}
     >
       {themeIcon()}
@@ -190,7 +192,8 @@ function Footer({ theme, setTheme }: { theme: any, setTheme: any }) {
     >
 
       <div className="flex w-full max-w-[86rem] flex-col text-medwork-dark dark:text-medwork-light z-[5]">
-        <div className="border-t border-medwork-dark dark:border-medwork-light flex justify-end">
+        <div className="mt-6 border-t border-medwork-dark dark:border-medwork-light flex justify-between items-center">
+          <div></div>
           <ThemeSelector theme={theme} setTheme={setTheme} />
         </div>
 
