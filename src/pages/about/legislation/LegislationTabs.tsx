@@ -247,7 +247,7 @@ const LegislationTabs = () => {
                         })}
                     </ul>
 
-                    <p className="text-xs text-medwork-dark dark:text-medwork-light mb-4">* For the full translation of the texts in English, please contact us at <a
+                    <p className="text-xs text-medwork-dark dark:text-medwork-light mb-10">* For the full translation of the texts in English, please contact us at <a
                         aria-label="By clicking you will be taken to Mail"
                         rel="noopener noreferrer"
                         target="_blank"

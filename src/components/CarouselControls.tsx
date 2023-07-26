@@ -16,7 +16,7 @@ function CarouselControls(props: Props) {
                     <button
                         onClick={props.onPrev}
                         className={classNames({
-                            'w-10 h-10 ml-4 text-white rounded-full flex items-center justify-center': true,
+                            'w-10 h-10 ml-4 text-medwork-dark dark:text-medwork-light border-medwork-dark dark:border-medwork-light border rounded-full flex items-center justify-center': true,
                             'bg-black bg-opacity-40': true,
                         })}
                     >
@@ -29,7 +29,7 @@ function CarouselControls(props: Props) {
                     <button
                         onClick={props.onNext}
                         className={classNames({
-                            'w-10 h-10 mr-4 text-white rounded-full flex items-center justify-center': true,
+                            'w-10 h-10 mr-4 text-medwork-dark dark:text-medwork-light border-medwork-dark dark:border-medwork-light border rounded-full flex items-center justify-center': true,
                             'bg-black bg-opacity-40': true,
                         })}
                     >
