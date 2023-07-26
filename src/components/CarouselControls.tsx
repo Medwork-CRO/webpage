@@ -15,12 +15,13 @@ function CarouselControls(props: Props) {
                 {props.canScrollPrev ? (
                     <button
                         onClick={props.onPrev}
-                        className={classNames({
-                            'w-10 h-10 ml-4 text-medwork-dark dark:text-medwork-light border-medwork-dark dark:border-medwork-light border rounded-full flex items-center justify-center': true,
-                            'bg-black bg-opacity-40': true,
-                        })}
+                        className='ml-4
+                        w-10 h-10 rounded-full flex items-center justify-center
+                      bg-medwork-light dark:bg-medwork-dark bg-opacity-40
+                      border-medwork-dark dark:border-medwork-light border
+                      '
                     >
-                        <FaChevronLeft color="white" />
+                        <FaChevronLeft className="text-medwork-dark dark:text-medwork-light" />
                     </button>
                 ) : (
                     <div className='w-10 h-10 ml-4'></div>
@@ -28,18 +29,20 @@ function CarouselControls(props: Props) {
                 {props.canScrollNext ? (
                     <button
                         onClick={props.onNext}
-                        className={classNames({
-                            'w-10 h-10 mr-4 text-medwork-dark dark:text-medwork-light border-medwork-dark dark:border-medwork-light border rounded-full flex items-center justify-center': true,
-                            'bg-black bg-opacity-40': true,
-                        })}
+                        className='mr-4
+                        w-10 h-10 rounded-full flex items-center justify-center
+                      bg-medwork-light dark:bg-medwork-dark bg-opacity-40
+                      border-medwork-dark dark:border-medwork-light border
+                      '
                     >
-                        <FaChevronRight color="white" />
+                        <FaChevronRight className="text-medwork-dark dark:text-medwork-light" />
                     </button>
                 ) : (
                     <div className='w-10 h-10 mr-4'></div>
-                )}
-            </div>
-        </div>
+                )
+                }
+            </div >
+        </div >
     );
 };
 
