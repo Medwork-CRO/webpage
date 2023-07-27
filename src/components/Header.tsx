@@ -27,7 +27,7 @@ function Header() {
     <header
       className={`${inter.variable} sticky top-0 z-50 w-full font-sans shadow-sm bg-medwork-light dark:bg-medwork-dark transition-all duration-300`}
     >
-      <motion.div className="top-0 left-0 right-0 h-[0.2rem] bg-cyan-700 dark:bg-cyan-400 origin-center fixed z-50" style={{ scaleX: scrollYProgress }} />
+      <motion.div className="top-0 left-0 right-0 h-[0.2rem] bg-cyan-400 dark:bg-cyan-600 origin-center fixed z-50" style={{ scaleX: scrollYProgress }} />
 
       <div className="mx-auto flex max-w-[86rem] px-4 py-3 sm:py-4 lg:px-0 items-center justify-between ">
         <Logo />

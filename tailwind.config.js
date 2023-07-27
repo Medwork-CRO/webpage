@@ -95,7 +95,8 @@ module.exports = {
     animation: {
       fadeIn: "fadeIn 2s ease-in forwards",
       enlarge: "enlarge 1s ease-in forwards",
-      minify: "minify 1s ease-in forwards"
+      minify: "minify 1s ease-in forwards",
+      spinSlow: "spin 2s linear infinite",
     },
     keyframes: {
       fadeIn: {

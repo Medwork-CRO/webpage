@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React from 'react';
 
 export type DropDownInfo = {
     title: string,
@@ -8,16 +8,14 @@ export type DropDownInfo = {
     fileName: string
 };
 
-const DropDown = ({ title, content, filePath, fileName }: DropDownInfo) => {
-    const [isOpen, setIsOpen] = useState(false);
-
-    const toggleOpen = () => setIsOpen(!isOpen);
+const DropDown = ({ title, content, filePath, fileName, onClick, isOpen }: DropDownInfo & { onClick: () => void, isOpen: boolean }) => {
+    const toggleOpen = () => onClick();
 
     return (
         <div className="item py-6 border-l-2 pl-4 border-medwork-dark dark:border-medwork-light">
             <div className="w-full flex align-center justify-between cursor-pointer text-left text-medwork-dark dark:text-medwork-light" onClick={toggleOpen}>
                 <span className={`text-lg ${isOpen ? 'text-cyan-600 dark:text-cyan-400' : ''}`}>{title}</span>
-                <span className=''>
+                <span>
                     <svg className={`w-5 h-5 ${isOpen ? 'transform rotate-180' : ''}`}
                         fill="none" stroke-linecap="round"
                         stroke-linejoin="round" stroke-width="2"

@@ -1,5 +1,5 @@
-import React from "react";
-import Faq, { DropDownInfo } from "./Faq";
+import React, { useState } from "react";
+import DropDown, { DropDownInfo } from "./DropDown";
 
 type Legislation = {
     name: string,
@@ -219,6 +219,7 @@ const legislations: Legislation[] = [
 const LegislationTabs = () => {
     const mail = "medworkinfo@medwork.gr";
     const [openTab, setOpenTab] = React.useState(1);
+    const [openDropDown, setOpenDropDown] = useState(-1);
 
     return (
         <>
@@ -236,7 +237,7 @@ const LegislationTabs = () => {
                                             ? "text-medwork-light dark:text-medwork-dark border-cyan-400 dark:border-cyan-400 bg-cyan-400 dark:bg-cyan-400"
                                             : "text-medwork-dark dark:text-medwork-light"}`
                                     }
-                                    onClick={e => { e.preventDefault(); setOpenTab(index); }}
+                                    onClick={e => { e.preventDefault(); setOpenTab(index); setOpenDropDown(-1) }}
                                     data-toggle="tab"
                                     role="tablist"
                                 >
@@ -264,7 +265,14 @@ const LegislationTabs = () => {
                                         <div className="flex flex-col gap-4 w-full">
                                             {legislation.faqs.map((link, index) => {
                                                 return (<div key={index}>
-                                                    <Faq title={link.title} content={link.content} filePath={link.filePath} fileName={link.fileName} />
+                                                    <DropDown
+                                                        title={link.title}
+                                                        content={link.content}
+                                                        filePath={link.filePath}
+                                                        fileName={link.fileName}
+                                                        onClick={() => { setOpenDropDown(openDropDown !== index ? index : -1) }}
+                                                        isOpen={openDropDown === index}
+                                                    />
                                                 </div>)
                                             })}
                                         </div>
