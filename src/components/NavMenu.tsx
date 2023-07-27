@@ -34,30 +34,31 @@ function HorizontalNav({ label, href, subCategories }: NavProp) {
         <Link
           className="peer flex items-center py-4 text-md text-gray-500 hover:text-cyan-500 dark:text-gray-400"
           aria-label={`By clicking you will be taken to ${label}`}
-          key={href}
           href={href}
         >
-          <span className={`flex items-center hover:text-cyan-500`}>
-            <span className={`border-b-2 ${activeClasses}`}>{label.toUpperCase()}</span>
-          </span>
+          <div className={`flex items-center hover:text-cyan-500`}>
+            <div className={`border-b-2 ${activeClasses}`}>{label.toUpperCase()}</div>
+          </div>
         </Link>
       ) : (
         <div
+          tabIndex={0}
           className="peer flex items-center py-4 text-md text-gray-500 hover:text-cyan-500 dark:text-gray-400"
         >
-          <span className="flex hover:text-cyan-500 items-baseline">
-            <span className={`border-b-2 ${activeClasses}`}>{label.toUpperCase()}</span>
-            <span>{hasSubCategories && <FaAngleDown className="ml-2" />}</span>
-          </span>
+          <div className="flex hover:text-cyan-500 items-baseline">
+            <div className={`border-b-2 ${activeClasses}`}>{label.toUpperCase()}</div>
+            <div>{hasSubCategories && <FaAngleDown className="ml-2" />}</div>
+          </div>
         </div>
       )}
       {hasSubCategories && (
         <div className="
           absolute right-0 z-10 hidden w-[200px] flex-col rounded-lg border border-gray-300 dark:border-gray-400
-        bg-medwork-light text-gray-500 shadow-2xl drop-shadow-lg hover:flex peer-hover:flex dark:bg-medwork-dark dark:text-gray-400
+        bg-medwork-light text-gray-500 shadow-2xl drop-shadow-lg hover:flex peer-focus:flex peer-hover:flex dark:bg-medwork-dark dark:text-gray-400
         ">
           {subCategories.map((subCategory, i) => (
             <Link
+              tabIndex={0}
               className={`px-4 py-4 text-md hover:bg-[#eae4dd] dark:hover:bg-gray-500
               ${router.asPath === subCategory.href ? 'bg-[#eae4dd] dark:bg-gray-500' : ''}
               ${i === 0 ? 'rounded-t-md' : ''}

@@ -18,7 +18,7 @@ module.exports = {
         'md': '1rem',
       },
       lineHeight: {
-        'vws': '9vw',
+        'vws': '10vw',
       },
       zIndex: {
         "-1": "-1",

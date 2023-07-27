@@ -9,9 +9,9 @@ type Props = PropsWithChildren & EmblaOptionsType;
 const Carousel = ({ children, ...options }: Props) => {
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false }, [Autoplay({
         stopOnInteraction: true,
-        stopOnMouseEnter: true,
+        stopOnMouseEnter: false,
         stopOnLastSnap: true,
-        delay: 7000,
+        delay: 5000,
     })]);
     const [selectedIndex, setSelectedIndex] = useState(0);
 
