@@ -3,13 +3,13 @@ import DropDown, { DropDownInfo } from "./DropDown";
 
 type Legislation = {
     name: string,
-    faqs: DropDownInfo[]
+    dropDowns: DropDownInfo[]
 };
 
 const legislations: Legislation[] = [
     {
         name: "Greek Pharmacovigilance Legislation",
-        faqs: [
+        dropDowns: [
             {
                 title: 'Circular regarding the management and reporting of safety issues in the context of conducting clinical trials 12976 05-02-2019',
                 content: "Circular regarding the management and reporting of safety issues in the context of conducting clinical trials 12976 05-02-2019 [Original Text: GR]",
@@ -92,7 +92,7 @@ const legislations: Legislation[] = [
     },
     {
         name: "Cypriot Pharmacovigilance Legislation",
-        faqs: [
+        dropDowns: [
             {
                 title: 'Pharmaceutical services - Ministry of Health Circular - RMPs 02-01-2015',
                 content: '',
@@ -145,7 +145,7 @@ const legislations: Legislation[] = [
     },
     {
         name: "Greek Materiovigilance Legislation",
-        faqs: [
+        dropDowns: [
             {
                 title: 'Guidelines on a Medical Device Vigilance System _ revision January 13',
                 content: '',
@@ -260,18 +260,18 @@ const LegislationTabs = () => {
                     <div className="relative flex flex-col min-w-0 break-words">
                         <div className="flex-auto">
                             <div className="tab-content tab-space">
-                                {legislations.map((legislation, index) => {
-                                    return (<div className={`${openTab === index ? "block" : "hidden"}`} key={index} id="link1">
-                                        <div className="flex flex-col gap-4 w-full">
-                                            {legislation.faqs.map((link, index) => {
-                                                return (<div key={index}>
+                                {legislations.map((legislation, legislationIndex) => {
+                                    return (<div className={`${openTab === legislationIndex ? "block" : "hidden"}`} key={legislationIndex} id="link1">
+                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
+                                            {legislation.dropDowns.map((link, dropDownIndex) => {
+                                                return (<div key={dropDownIndex}>
                                                     <DropDown
                                                         title={link.title}
                                                         content={link.content}
                                                         filePath={link.filePath}
                                                         fileName={link.fileName}
-                                                        onClick={() => { setOpenDropDown(openDropDown !== index ? index : -1) }}
-                                                        isOpen={openDropDown === index}
+                                                        onClick={() => { setOpenDropDown(openDropDown !== dropDownIndex ? dropDownIndex : -1) }}
+                                                        isOpen={openDropDown === dropDownIndex}
                                                     />
                                                 </div>)
                                             })}
