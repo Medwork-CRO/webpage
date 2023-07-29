@@ -1,7 +1,7 @@
 import Breadcrumbs from "@/components/Breadcrumb";
 import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ImageCategory from "@/components/ImageCategory";
-import qualityManagement from "@assets/services/qualityManagement.jpg";
+import qualityManagement from "@assets/services/quality-management-vector.jpg";
 
 const paragraphs = [
   "Medwork can assist you with:",

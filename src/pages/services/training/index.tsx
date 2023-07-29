@@ -1,7 +1,7 @@
 import Breadcrumbs from "@/components/Breadcrumb";
 import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ImageCategory from "@/components/ImageCategory";
-import cosmetovigilance from "@assets/services/cosmetovigilance.jpg";
+import training from "@assets/services/training-vector.jpg";
 
 const paragraphs = [
   "Our services include:",
@@ -16,7 +16,7 @@ function Training() {
   return (
     <div className="mx-auto flex flex-col items-center justify-between w-full">
       <ImageCategory
-        image={cosmetovigilance}
+        image={training}
         title="Training"
         description="Medwork provides a comprehensive and customizable set of services to assist cosmetics companies in complying with the regulatory directives."
       />

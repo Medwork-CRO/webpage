@@ -27,9 +27,7 @@ function Header() {
     <header
       className={`${inter.variable} sticky top-0 z-50 w-full font-sans shadow-sm bg-medwork-light dark:bg-medwork-dark transition-all duration-300`}
     >
-      <motion.div className="top-0 left-0 right-0 h-[0.2rem] bg-cyan-400 dark:bg-cyan-600 origin-center fixed z-50" style={{ scaleX: scrollYProgress }} />
-
-      <div className="mx-auto flex max-w-[86rem] px-4 py-3 sm:py-4 lg:px-0 items-center justify-between ">
+      <div className="mx-auto flex max-w-[86rem] px-4 py-3 sm:py-4 lg:px-0 items-center justify-between">
         <Logo />
         <button
           className="block text-xl md:hidden z-20"
@@ -44,6 +42,7 @@ function Header() {
       <div className={`block shadow-xl md:hidden ${isOpen ? 'h-[calc(100vh-4rem)] overflow-auto' : ''}`}>
         <NavHamburger nav={navMenu} isOpen={isOpen} />
       </div>
+      <motion.div className="mx-auto max-w-[86rem] top-0 left-0 right-0 h-[0.2rem] bg-cyan-500 origin-center " style={{ scaleX: scrollYProgress }} />
     </header>
   );
 }

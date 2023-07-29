@@ -2,7 +2,7 @@ import Breadcrumbs from "@/components/Breadcrumb";
 import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ImageCategory from "@/components/ImageCategory";
 import InfoBox from "@/components/InfoBox";
-import pharmacovigilance from "@assets/services/pharmacovigilance.jpg";
+import pharmacovigilance from "@assets/services/pharmacovigilance-vector.jpg";
 
 const paragraphs0 = [
   "We have an extensive Pharmacovigilance Department composed of a team of 21 pharmacovigilance professionals and four medical advisors.",

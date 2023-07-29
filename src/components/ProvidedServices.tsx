@@ -1,13 +1,13 @@
-import cosmetovigilance from "@assets/services/cosmetovigilance.jpg";
+import cosmetovigilance from "@assets/services/cosmetovigilance-vector.jpg";
 import materiovigilance from "@assets/services/materiovigilance.jpg";
-import pharmacovigilance from "@assets/services/pharmacovigilance.jpg";
-import qualityManagement from "@assets/services/qualityManagement.jpg";
+import pharmacovigilance from "@assets/services/pharmacovigilance-vector.jpg";
+import qualityManagement from "@assets/services/quality-management-vector.jpg";
 import { StaticImageData } from "next/image";
 import "react-multi-carousel/lib/styles.css";
 import Card from "./Card";
 import Title from "./Title";
-import outsourcing from "@assets/stock-images/happy-woman.jpg";
-import training from "@assets/stock-images/training.jpg";
+import outsourcing from "@assets/services/outsourcing-vector.jpg";
+import training from "@assets/services/training-vector.jpg";
 
 type ImageData = {
   imageData: StaticImageData;
