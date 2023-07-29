@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import DropDown, { DropDownInfo } from "./DropDown";
+import InlineInfoBox, { InlineInfoBoxParams } from "./InlineInfoBox";
 
 type Legislation = {
     name: string,
-    dropDowns: DropDownInfo[]
+    dropDowns: InlineInfoBoxParams[]
 };
 
 const legislations: Legislation[] = [
@@ -12,7 +12,7 @@ const legislations: Legislation[] = [
         dropDowns: [
             {
                 title: 'Circular regarding the management and reporting of safety issues in the context of conducting clinical trials 12976 05-02-2019',
-                content: "Circular regarding the management and reporting of safety issues in the context of conducting clinical trials 12976 05-02-2019 [Original Text: GR]",
+                content: "this is some contet",
                 filePath: '/file/file',
                 fileName: 'legislation.pdf'
             },
@@ -219,7 +219,7 @@ const legislations: Legislation[] = [
 const LegislationTabs = () => {
     const mail = "medworkinfo@medwork.gr";
     const [openTab, setOpenTab] = React.useState(1);
-    const [openDropDown, setOpenDropDown] = useState(-1);
+    // const [openDropDown, setOpenDropDown] = useState(-1);
 
     return (
         <>
@@ -230,14 +230,14 @@ const LegislationTabs = () => {
                         role="tablist"
                     >
                         {legislations.map((legislation, index) => {
-                            return (<li className="sm:mr-2 last:mr-0 mb-2 sm:mb-0 last:mb-0 flex-auto text-center cursor-pointer hover:bg-cyan-500 hover:bg-opacity-10" key={index}>
+                            return (<li className="sm:mr-2 last:mr-0 mb-2 sm:mb-0 last:mb-0 flex-auto text-center cursor-pointer transition-all duration-500 hover:bg-cyan-300 hover:bg-opacity-25" key={index}>
                                 <a
                                     className={
                                         `text-xs font-bold uppercase px-5 py-3 block border-medwork-dark dark:border-medwork-light border ${openTab === index
                                             ? "text-medwork-light dark:text-medwork-dark border-cyan-400 dark:border-cyan-400 bg-cyan-400 dark:bg-cyan-400"
                                             : "text-medwork-dark dark:text-medwork-light"}`
                                     }
-                                    onClick={e => { e.preventDefault(); setOpenTab(index); setOpenDropDown(-1) }}
+                                    onClick={e => { e.preventDefault(); setOpenTab(index); /* setOpenDropDown(-1) */ }}
                                     data-toggle="tab"
                                     role="tablist"
                                 >
@@ -262,17 +262,23 @@ const LegislationTabs = () => {
                             <div className="tab-content tab-space">
                                 {legislations.map((legislation, legislationIndex) => {
                                     return (<div className={`${openTab === legislationIndex ? "block" : "hidden"}`} key={legislationIndex} id="link1">
-                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
+                                        <div className="grid grid-cols-1 md:grid-cols-1 gap-4 w-full">
                                             {legislation.dropDowns.map((link, dropDownIndex) => {
                                                 return (<div key={dropDownIndex}>
-                                                    <DropDown
+                                                    <InlineInfoBox
+                                                        title={link.title}
+                                                        content={link.content}
+                                                        filePath={link.filePath}
+                                                        fileName={link.fileName}
+                                                    />
+                                                    {/* <DropDown
                                                         title={link.title}
                                                         content={link.content}
                                                         filePath={link.filePath}
                                                         fileName={link.fileName}
                                                         onClick={() => { setOpenDropDown(openDropDown !== dropDownIndex ? dropDownIndex : -1) }}
                                                         isOpen={openDropDown === dropDownIndex}
-                                                    />
+                                                    /> */}
                                                 </div>)
                                             })}
                                         </div>

@@ -1,19 +1,19 @@
 import Link from 'next/link';
 import React from 'react';
 
-export type DropDownInfo = {
+export type DropDownParams = {
     title: string,
     content: string,
     filePath: string,
     fileName: string
 };
 
-const DropDown = ({ title, content, filePath, fileName, onClick, isOpen }: DropDownInfo & { onClick: () => void, isOpen: boolean }) => {
+const DropDown = ({ title, content, filePath, fileName, onClick, isOpen }: DropDownParams & { onClick: () => void, isOpen: boolean }) => {
     const toggleOpen = () => onClick();
 
     return (
-        <div className="item py-6 border-l-2 pl-4 border-medwork-dark dark:border-medwork-light">
-            <div className="w-full flex align-center justify-between cursor-pointer text-left text-medwork-dark dark:text-medwork-light" onClick={toggleOpen}>
+        <div className="item py-6 border-b border-medwork-dark dark:border-medwork-light">
+            <div className="w-full flex gap-8 align-center justify-between cursor-pointer text-left text-medwork-dark dark:text-medwork-light" onClick={toggleOpen}>
                 <span className={`text-lg ${isOpen ? 'text-cyan-600 dark:text-cyan-400' : ''}`}>{title}</span>
                 <span>
                     <svg className={`w-5 h-5 transition-all duration-500 ${isOpen ? 'transform rotate-180' : ''}`}
