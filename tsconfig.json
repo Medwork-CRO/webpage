@@ -26,6 +26,9 @@
       "@assets/*": [
         "./public/assets/*"
       ],
+      "@pdfs/*": [
+        "./public/pdfs/*"
+      ],
       "@generated/*": [
         "./src/__generated__/*"
       ],
@@ -41,6 +44,7 @@
     ".next/types/**/*.ts",
     "public",
     "public/assets",
+    "public/pdfs",
     "src",
     "**/*.ts",
     "**/*.tsx"

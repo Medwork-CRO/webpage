@@ -8,25 +8,20 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
+import { THEME } from "@/types/Theme";
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
 });
 
-export enum Theme {
-  AUTO = 'auto',
-  LIGHT = 'light',
-  DARK = 'dark',
-}
-
 function initializeThemeSetting() {
   if (typeof window === 'undefined') {
-    return Theme.AUTO;
+    return THEME.AUTO;
   }
 
   const savedSetting = localStorage.getItem('theme');
-  return savedSetting ? savedSetting as Theme : Theme.AUTO;
+  return savedSetting ? savedSetting as THEME : THEME.AUTO;
 }
 
 function App({ Component, pageProps }: AppProps) {
@@ -37,12 +32,12 @@ function App({ Component, pageProps }: AppProps) {
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
     const applyPreferredTheme = () => {
-      const preferredTheme = mediaQuery.matches ? Theme.DARK : Theme.LIGHT;
-      root.classList.remove(mediaQuery.matches ? Theme.LIGHT : Theme.DARK);
+      const preferredTheme = mediaQuery.matches ? THEME.DARK : THEME.LIGHT;
+      root.classList.remove(mediaQuery.matches ? THEME.LIGHT : THEME.DARK);
       root.classList.add(preferredTheme);
     };
 
-    if (theme === Theme.AUTO) {
+    if (theme === THEME.AUTO) {
       // Apply the preferred theme
       applyPreferredTheme();
       // Watch for changes to the media query
@@ -53,7 +48,7 @@ function App({ Component, pageProps }: AppProps) {
     }
 
     // If the theme is not 'AUTO', apply the selected theme
-    root.classList.remove(Theme.LIGHT, Theme.DARK);
+    root.classList.remove(THEME.LIGHT, THEME.DARK);
     root.classList.add(theme);
   }, [theme]);
 

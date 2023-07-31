@@ -1,5 +1,5 @@
 import cosmetovigilance from "@assets/services/cosmetovigilance-vector.jpg";
-import materiovigilance from "@assets/services/materiovigilance.jpg";
+import materiovigilance from "@assets/services/materiovigilance-vector.jpg";
 import pharmacovigilance from "@assets/services/pharmacovigilance-vector.jpg";
 import qualityManagement from "@assets/services/quality-management-vector.jpg";
 import { StaticImageData } from "next/image";

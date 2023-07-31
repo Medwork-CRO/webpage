@@ -11,7 +11,7 @@ export type InlineInfoBoxParams = {
 const InlineInfoBox = ({ title, content, filePath, fileName }: InlineInfoBoxParams) => {
     return (
         <>
-            <div className="flex flex-col sm:flex-row gap-24 justify-between w-full text-medwork-dark dark:text-medwork-light">
+            <div className="flex flex-col sm:flex-row gap-6 sm:gap-24 justify-between w-full text-medwork-dark dark:text-medwork-light">
                 <div className="flex flex-col">
                     <div className="text-lg">
                         {title}

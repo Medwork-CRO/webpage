@@ -1,7 +1,7 @@
 import Breadcrumbs from "@/components/Breadcrumb";
 import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ImageCategory from "@/components/ImageCategory";
-import materiovigilance from "@assets/services/materiovigilance.jpg";
+import materiovigilance from "@assets/services/materiovigilance-vector.jpg";
 
 const paragraphs1 = [
   "Medical Devices Directives ensure that adverse incidents are evaluated and, where appropriate, information is disseminated in the form of a National Competent Authority Report (NCAR) with the objective of preventing the repetition of such incidents through the adoption of appropriate corrective actions to be taken in the field.",

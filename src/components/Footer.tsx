@@ -2,12 +2,12 @@ import Logo from "@/components/Logo";
 import RoundedButton from "@/components/RoundedButton";
 import { Inter } from "@next/font/google";
 import { FaLinkedin } from "@react-icons/all-files/fa/FaLinkedin";
-import { MdDarkMode, MdLightMode, MdOutlineBrightnessAuto } from 'react-icons/md';
 import { MdEmail } from "@react-icons/all-files/md/MdEmail";
 import { MdLocationOn } from "@react-icons/all-files/md/MdLocationOn";
 import Link from "next/link";
+import { MdDarkMode, MdLightMode, MdOutlineBrightnessAuto } from 'react-icons/md';
 import { AboutUs, Careers, Services } from "./HeaderLinks";
-import { Theme } from "@/pages/_app";
+import { THEME } from "@/types/Theme";
 
 const recruitmentEmail = "recruitment@medwork.gr";
 const mail = "medworkinfo@medwork.gr";
@@ -97,21 +97,21 @@ function Legal() {
   );
 }
 
-function ThemeSelector({ theme, setTheme }: { theme: Theme, setTheme: Function }) {
+function ThemeSelector({ theme, setTheme }: { theme: THEME, setTheme: Function }) {
   const handleThemeChange = () => {
-    if (theme === Theme.DARK) {
-      setTheme(Theme.LIGHT);
-    } else if (theme === Theme.LIGHT) {
-      setTheme(Theme.AUTO);
+    if (theme === THEME.DARK) {
+      setTheme(THEME.LIGHT);
+    } else if (theme === THEME.LIGHT) {
+      setTheme(THEME.AUTO);
     } else {
-      setTheme(Theme.DARK);
+      setTheme(THEME.DARK);
     }
   };
 
   const themeIcon = () => {
-    if (theme === Theme.DARK) {
+    if (theme === THEME.DARK) {
       return <MdDarkMode />;
-    } else if (theme === Theme.LIGHT) {
+    } else if (theme === THEME.LIGHT) {
       return <MdLightMode />;
     } else {
       return <MdOutlineBrightnessAuto />;
@@ -139,8 +139,8 @@ function Policies() {
             className="font-semibold hover:underline whitespace-nowrap"
             href={`${a.filePath}/${a.fileName}`}
             target="_blank"
-            rel="noopener noreferrer"
-            download={a.fileName}
+            // rel="noopener noreferrer"
+            // download={a.fileName}
           >
             {a.label}
           </Link>
