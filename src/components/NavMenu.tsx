@@ -53,7 +53,7 @@ function HorizontalNav({ label, href, subCategories }: NavProp) {
       )}
       {hasSubCategories && (
         <div className="
-          absolute right-0 z-10 hidden w-[200px] flex-col rounded-lg border border-gray-300 dark:border-gray-400
+          absolute right-0 z-10 hidden w-[200px] flex-col rounded-sm border border-gray-300 dark:border-gray-400
         bg-medwork-light text-gray-500 shadow-2xl drop-shadow-lg hover:flex peer-focus:flex peer-hover:flex dark:bg-medwork-dark dark:text-gray-400
         ">
           {subCategories.map((subCategory, i) => (
@@ -61,8 +61,8 @@ function HorizontalNav({ label, href, subCategories }: NavProp) {
               tabIndex={0}
               className={`px-4 py-4 text-md hover:bg-[#eae4dd] dark:hover:bg-gray-500
               ${router.asPath === subCategory.href ? 'bg-[#eae4dd] dark:bg-gray-500' : ''}
-              ${i === 0 ? 'rounded-t-md' : ''}
-              ${i === subCategories.length - 1 ? 'rounded-b-md' : ''}`}
+              ${i === 0 ? 'rounded-t-sm' : ''}
+              ${i === subCategories.length - 1 ? 'rounded-b-sm' : ''}`}
               aria-label={`By clicking you will be taken to ${subCategory.label}`}
               key={subCategory.href}
               href={subCategory.href}

@@ -15,15 +15,15 @@ function Card({
   readMoreLink,
 }: CardProps) {
   return (
-    <div className="flex transform flex-col gap-2 rounded-xl">
+    <div className="flex transform flex-col gap-2">
       <div className="flex flex-col gap-4">
-        <div className="overflow-hidden rounded-2xl">
+        <div className="overflow-hidden">
           <Link
 
             href={readMoreLink}
           >
             <Image
-              className="h-[16rem] rounded-2xl object-cover sm:h-[12rem]"
+              className="h-[16rem] rounded-lg object-cover sm:h-[12rem]"
               src={imageData}
               alt={imageTitle}
             />
