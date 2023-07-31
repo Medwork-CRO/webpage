@@ -140,7 +140,7 @@ function Policies() {
             href={`${a.filePath}/${a.fileName}`}
             target="_blank"
             // rel="noopener noreferrer"
-            // download={a.fileName}
+            download={a.fileName}
           >
             {a.label}
           </Link>
