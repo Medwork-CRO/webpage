@@ -17,22 +17,22 @@ const linkedin = "company/medwork";
 const policies = [
   {
     label: "Code of Conduct",
-    filePath: "assets/pdfs",
+    filePath: "/pdfs",
     fileName: "code-of-conduct.pdf",
   },
   {
     label: "Information Security Policy",
-    filePath: "assets/pdfs",
+    filePath: "/pdfs",
     fileName: "information-security-policy.pdf",
   },
   {
     label: "Data Privacy Policy",
-    filePath: "assets/pdfs",
+    filePath: "/pdfs",
     fileName: "data-privacy-policy.pdf",
   },
   {
     label: "Quality Policy",
-    filePath: "assets/pdfs",
+    filePath: "/pdfs",
     fileName: "quality-policy.pdf",
   },
 ];
@@ -139,7 +139,7 @@ function Policies() {
             className="font-semibold hover:underline whitespace-nowrap"
             href={`${a.filePath}/${a.fileName}`}
             target="_blank"
-            // rel="noopener noreferrer"
+            rel="noopener noreferrer"
             download={a.fileName}
           >
             {a.label}
@@ -231,7 +231,7 @@ function Footer({ theme, setTheme }: { theme: any, setTheme: any }) {
           <div className="min-w-96 flex flex-col gap-6 text-left">
             <span className="text-xl font-semibold">ABOUT</span>
             <div className="text-md flex flex-col gap-2">
-              {[AboutUs, Careers].map((a, i) => (
+              {[...AboutUs.subCategories, Careers].map((a, i) => (
                 <Link
                   aria-label={`By clicking you will be taken to ${a.label}`}
                   key={i}

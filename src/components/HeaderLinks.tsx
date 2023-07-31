@@ -1,6 +1,6 @@
 import { NavProp } from "./NavHamburger";
 
-const AboutUs = {
+const About = {
   label: "About",
   href: "/about",
   subCategories: [
@@ -56,6 +56,6 @@ const ContactUs = {
   href: "/contact-us",
 };
 
-const navMenu: NavProp[] = [Services, AboutUs, Careers, ContactUs];
+const navMenu: NavProp[] = [Services, About, Careers, ContactUs];
 
-export { navMenu, Services, AboutUs, Careers, ContactUs };
+export { navMenu, Services, About as AboutUs, Careers, ContactUs };
