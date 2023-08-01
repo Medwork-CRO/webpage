@@ -135,15 +135,15 @@ function Policies() {
     <div className="flex flex-col sm:flex-row flex-wrap items-start gap-2 text-md text-medwork-dark dark:text-medwork-light">
       Policies: {policies.map((a, i) => (
         <div key={i} className="flex">
-          <Link
+          <a
             className="font-semibold hover:underline whitespace-nowrap"
             href={`${a.filePath}/${a.fileName}`}
             target="_blank"
             rel="noopener noreferrer"
-            download={a.fileName}
+            // download={a.fileName}
           >
             {a.label}
-          </Link>
+          </a>
           <span className="hidden sm:block">
             {policies.length - 1 !== i ? "," : ""}
           </span>

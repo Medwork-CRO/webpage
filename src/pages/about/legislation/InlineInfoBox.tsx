@@ -21,15 +21,15 @@ const InlineInfoBox = ({ title, content, filePath, fileName }: InlineInfoBoxPara
                     </div>
                 </div>
                 <div className="text-lg">
-                    <Link
+                    <a
                         className="font-semibold hover:underline whitespace-nowrap text-blue-600 dark:text-blue-400"
                         href={`${filePath}/${fileName}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        download={fileName}
+                    // download={fileName}
                     >
                         Download PDF
-                    </Link>
+                    </a>
                 </div>
             </div >
             <div className="my-4 border-b border-gray-600 dark:border-gray-400 border-dashed"></div>
