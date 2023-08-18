@@ -2,16 +2,16 @@ import Breadcrumbs from "@/components/Breadcrumb";
 import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ImageCategory from "@/components/ImageCategory";
 import InfoBox from "@/components/InfoBox";
-import pharmacovigilance from "@assets/services/pharmacovigilance-vector.jpg";
+import vigilance from "@assets/services/vigilance-vector.jpg";
 
 const paragraphs0 = [
   "Medwork is dedicated to supporting Marketing Authorisation Holders in fulfilling their pharmacovigilance obligations. With over 15 years of experience in different facets of pharmacovigilance, our team possesses a wealth of knowledge and a comprehensive understanding of the intricacies involved in ensuring drug safety. ",
 ];
 
-function Pharmacovigilance() {
+function Vigilance() {
   return (
     <div className="mx-auto flex flex-col items-center justify-between w-full">
-      <ImageCategory image={pharmacovigilance} title="Vigilance" />
+      <ImageCategory image={vigilance} title="Vigilance" />
 
       <div className="max-w-[86rem] w-full">
         <Breadcrumbs />
@@ -62,4 +62,4 @@ function Pharmacovigilance() {
   );
 }
 
-export default Pharmacovigilance;
+export default Vigilance;

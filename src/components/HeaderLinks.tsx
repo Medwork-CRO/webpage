@@ -20,8 +20,8 @@ const Services = {
   href: "/services",
   subCategories: [
     {
-      label: "Pharmacovigilance",
-      href: "/services/pharmacovigilance",
+      label: "Vigilance",
+      href: "/services/vigilance",
     },
     {
       label: "Outsourcing",

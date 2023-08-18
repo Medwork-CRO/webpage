@@ -26,32 +26,32 @@ const nextConfig = {
       },
       {
         source: '/pharmacovigilance.php',
-        destination: '/services/pharmacovigilance',
+        destination: '/services/vigilance',
         permanent: true,
       },
       {
         source: '/full-pharmacovigilance-support.php',
-        destination: '/services/pharmacovigilance',
+        destination: '/services/vigilance',
         permanent: true,
       },
       {
         source: '/local-literature-review.php',
-        destination: '/services/pharmacovigilance',
+        destination: '/services/vigilance',
         permanent: true,
       },
       {
         source: '/local-for-greece-cyprus.php',
-        destination: '/services/pharmacovigilance',
+        destination: '/services/vigilance',
         permanent: true,
       },
       {
         source: '/consultancy-services.php',
-        destination: '/services/pharmacovigilance',
+        destination: '/services/vigilance',
         permanent: true,
       },
       {
         source: '/audit-preparation-conduct.php',
-        destination: '/services/pharmacovigilance',
+        destination: '/services/vigilance',
         permanent: true,
       },
       {

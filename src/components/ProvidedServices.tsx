@@ -1,13 +1,10 @@
-import cosmetovigilance from "@assets/services/cosmetovigilance-vector.jpg";
-import materiovigilance from "@assets/services/materiovigilance-vector.jpg";
-import pharmacovigilance from "@assets/services/pharmacovigilance-vector.jpg";
+import outsourcing from "@assets/services/outsourcing-vector.jpg";
+import vigilance from "@assets/services/vigilance-vector.jpg";
 import qualityManagement from "@assets/services/quality-management-vector.jpg";
 import { StaticImageData } from "next/image";
 import "react-multi-carousel/lib/styles.css";
 import Card from "./Card";
 import Title from "./Title";
-import outsourcing from "@assets/services/outsourcing-vector.jpg";
-import training from "@assets/services/training-vector.jpg";
 
 type ImageData = {
   imageData: StaticImageData;
@@ -18,9 +15,9 @@ type ImageData = {
 
 const images: ImageData[] = [
   {
-    imageData: pharmacovigilance,
+    imageData: vigilance,
     imageTitle: "VIGILANCE",
-    readMoreLink: "/services/pharmacovigilance",
+    readMoreLink: "/services/vigilance",
     imageDescription:
       "Pharmacovigilance is our dedicated service ensuring the safety, efficacy, and risk/benefit balance of pharmaceutical products. We provide detailed drug safety and adverse event reporting services.",
   },
