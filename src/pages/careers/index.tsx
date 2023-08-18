@@ -22,12 +22,11 @@ const paragraphs = [
 
 function Statistics() {
   return (
-    <div className="flex flex-col justify-between gap-8 text-gray-500 dark:text-gray-400 md:flex-row w-full items-center">
+    <div className="flex flex-col text-center items-center justify-between gap-8 text-gray-500 dark:text-gray-400 md:flex-row w-full">
       <div>
         <div className="flex w-56 flex-col">
           <span className="flex flex-row self-center mb-4 text-4xl font-bold text-cyan-500">
-            <Counter number={90} title="" duration={3} />
-            <span>%</span>
+            <Counter number={90} title="%" duration={3} />
           </span>
           <span className="subtext text-gray-600 dark:text-gray-400">
             of employees are <strong>women</strong>
@@ -38,8 +37,7 @@ function Statistics() {
       <div>
         <div className="flex w-56 flex-col">
           <span className="flex flex-row self-center mb-4 text-4xl font-bold text-cyan-500">
-            <Counter number={80} title="" duration={3} />
-            <span>%</span>
+            <Counter number={80} title="%" duration={3} />
           </span>
           <span className="subtext text-gray-600 dark:text-gray-400">
             of employees are happy after <strong>2 years</strong>
@@ -50,8 +48,7 @@ function Statistics() {
       <div>
         <div className="flex w-56 flex-col">
           <span className="flex flex-row self-center mb-4 text-4xl font-bold text-cyan-500">
-            <Counter number={84} title="" duration={3} />
-            <span>%</span>
+            <Counter number={84} title="%" duration={3} />
           </span>
           <span className="subtext text-gray-600 dark:text-gray-400">
             of employees has at least one <strong>degree</strong>

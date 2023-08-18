@@ -4,7 +4,9 @@ import CarouselImage from "@/components/CarouselImage";
 import ProvidedServices from "@/components/ProvidedServices";
 import EMA from "@assets/stock-images/ema.jpg";
 import happyWoman from "@assets/stock-images/happy-woman.jpg";
-import pv from "@assets/team-photos/team3.jpg";
+import team2 from "@assets/team-photos/team2.jpg";
+import Title from "@/components/Title";
+import Counter from "@/components/Counter";
 
 const imageShowCases = [
   {
@@ -16,17 +18,56 @@ const imageShowCases = [
     title: "We undertake projects for clients throughout Europe, leveraging our extensive resources and skilled team to manage complex pharmacovigilance projects.",
   },
   {
-    image: pv,
+    image: team2,
     title: "We maintain the flexibility, agility, and responsiveness of a compact organization without compromising our commitment to caring for our clients and their projects.",
   },
 ];
 
 const paragraphs = [
-  "Medwork is a CRO specializing in Drug Safety. Since 2005, Medwork has been providing a wide range of Drug safety services to the pharmaceutical and medical device industries.",
-  "At Medwork, we prioritize experience and quality, following a deliberate path characterized by small yet robust steps. This approach allows us to achieve steady growth year after year, while ensuring the satisfaction of our clients, the smooth progress of their projects, and the ongoing development and deepening of our structure as well as the relationships with our clients. We believe in taking measured and thoughtful strides rather than pursuing rapid acceleration or becoming a booming giant. Our focus is on stability, productivity, and maintaining a strong commitment to quality.",
-  "We consider ourselves fortunate to have had the opportunity to work with MAHs and medical device manufacturers over the course of years and even decades, who appreciate and value this organic growth and maturity approach in all aspects of our collaboration.",
-  "If you resonate with our approach, we would be delighted to establish a partnership whenever you require drug safety services of any kind!",
+  "At Medwork, we focus on vigilance services, combining expertise with flexibility. As a CRO dedicated exclusively to safety, we remain updated with industry advancements and regulatory standards. Our team's in-depth experience in pharmacovigilance provides valuable insights and guidance, helping clients navigate regulatory challenges and establish effective safety strategies.",
+  "What distinguishes us is our agility and adaptability derived from our size. This allows us to quickly adjust our approach and resources to address changing needs, offering an experience that may be challenging for larger CROs to replicate.",
 ];
+
+
+
+function Statistics() {
+  return (
+    <div className="flex flex-col text-center items-center justify-between gap-8 text-gray-500 dark:text-gray-400 md:flex-row w-full">
+      <div>
+        <div className="flex w-56 flex-col">
+          <span className="flex flex-row self-center mb-4 text-4xl font-bold text-cyan-500">
+            <Counter number={15} title="+" duration={3} />
+          </span>
+          <span className="subtext text-gray-600 dark:text-gray-400">
+            years of <strong>experience</strong>
+          </span>
+        </div>
+      </div>
+      <div className="h-full px-12 md:px-0 md:py-12 border border-gray-500"></div>
+      <div>
+        <div className="flex w-56 flex-col">
+          <span className="flex flex-row self-center mb-4 text-4xl font-bold text-cyan-500">
+            <Counter number={85} title="+" duration={3} />
+          </span>
+          <span className="subtext text-gray-600 dark:text-gray-400">
+            active <strong>clients</strong>
+          </span>
+        </div>
+      </div>
+      <div className="h-full px-12 md:px-0 md:py-12 border border-gray-500"></div>
+      <div>
+        <div className="flex w-56 flex-col">
+          <span className="flex flex-row self-center mb-4 text-4xl font-bold text-cyan-500">
+            <Counter number={84} title="+" duration={3} />
+          </span>
+          <span className="subtext text-gray-600 dark:text-gray-400">
+            safety <strong>professionals</strong>
+          </span>
+        </div>
+      </div>
+    </div>
+  )
+}
 
 function Home() {
   return (
@@ -43,8 +84,10 @@ function Home() {
 
       <div className="max-w-[86rem] w-full">
         <div className="flex flex-col items-center gap-6 whitespace-pre-line px-4 sm:px-6 text-xl text-gray-500 dark:text-gray-400 lg:px-0 py-16">
+          <Title title={"Advancing Drug Safety with Operational Excellence, Regulatory Compliance, and Adaptive Solutions"} />
           <DisplayParagraphs paragraphs={paragraphs} />
           <ProvidedServices />
+          <Statistics />
         </div>
       </div>
     </div>

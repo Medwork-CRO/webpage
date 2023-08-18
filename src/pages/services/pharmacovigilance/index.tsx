@@ -20,7 +20,7 @@ function Pharmacovigilance() {
         <div className="flex flex-col items-center gap-6 whitespace-pre-line px-4 sm:px-6 text-xl text-gray-500 dark:text-gray-400 lg:px-0 py-16">
           <DisplayParagraphs paragraphs={paragraphs0} />
 
-          <div className="w-full grid grid-cols-1 md:grid-cols-2 md:mx-4 md:my-8 lg:grid-cols-3 lg:mx-0 lg:my-16 my-8 gap-8">
+          <div className="w-full grid grid-cols-1 md:grid-cols-2 md:mx-4 md:my-8 lg:grid-cols-3 lg:mx-0 lg:my-16 my-8 gap-4">
             <InfoBox
               title="Development of Pharmacovigilance Systems"
               text="We develop reliable and compliant pharmacovigilance systems. We understand the criticality of establishing efficient processes that prioritize patient safety and regulatory compliance. Working closely with our clients, we offer customized solutions that align with regulatory requirements and industry standards. Our services encompass the implementation of robust quality systems, reporting mechanisms, comprehensive signal detection and management, streamlined case processing, and proactive risk assessment. We maintain a thorough understanding of the regulatory landscape to deliver effective pharmacovigilance systems."
