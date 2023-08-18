@@ -106,6 +106,18 @@ a {
   }
 }
 
+.scrollToTopButton {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 0.3s, transform 0.3s;
+  /* ... other styles ... */
+}
+
+.scrollToTopButton.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
