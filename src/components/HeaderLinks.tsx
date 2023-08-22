@@ -8,10 +8,10 @@ const About = {
       label: "Company",
       href: "/about/company",
     },
-    {
-      label: "Legislation",
-      href: "/about/legislation",
-    },
+    // {
+    //   label: "Legislation",
+    //   href: "/about/legislation",
+    // },
   ],
 };
 

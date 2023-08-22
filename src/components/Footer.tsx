@@ -75,7 +75,7 @@ function CompanyInfo() {
 
 function Legal() {
   return (
-    <div className="flex flex-col xs:flex-row items-start gap-2 text-md text-gray-400 align-center">
+    <div className="flex flex-col xs:flex-row items-start gap-2 text-md text-gray-400 self-end">
       <span>© {new Date().getFullYear()} Medwork</span>
       <span className="flex flex-col xs:flex-row gap-2">
         <span className="hidden xs:block">|</span>
@@ -130,26 +130,37 @@ function ThemeSelector({ theme, setTheme }: { theme: THEME, setTheme: Function }
   );
 }
 
-function Policies() {
+function Information() {
   return (
-    <div className="flex flex-col sm:flex-row flex-wrap items-start gap-2 text-md text-medwork-dark dark:text-medwork-light">
-      Policies: {policies.map((a, i) => (
-        <div key={i} className="flex">
-          <a
-            className="font-semibold hover:underline whitespace-nowrap"
-            href={`${a.filePath}/${a.fileName}`}
-            target="_blank"
-            rel="noopener noreferrer"
+    <div className="flex flex-col items-start gap-2 text-md text-medwork-dark dark:text-medwork-light">
+      <div className="flex flex-col sm:flex-row flex-wrap items-start gap-2">
+        <Link
+          className="font-semibold hover:underline whitespace-nowrap"
+          href={'/about/legislation'}
+        >
+          Legislation
+        </Link>
+      </div>
+
+      <div className="flex flex-col sm:flex-row flex-wrap items-start gap-2">
+        Policies: {policies.map((policy, i) => (
+          <div key={i} className="flex">
+            <a
+              className="font-semibold hover:underline whitespace-nowrap"
+              href={`${policy.filePath}/${policy.fileName}`}
+              target="_blank"
+              rel="noopener noreferrer"
             // download={a.fileName}
-          >
-            {a.label}
-          </a>
-          <span className="hidden sm:block">
-            {policies.length - 1 !== i ? "," : ""}
-          </span>
-        </div>
-      ))}
-    </div>
+            >
+              {policy.label}
+            </a>
+            <span className="hidden sm:block">
+              {policies.length - 1 !== i ? "," : ""}
+            </span>
+          </div>
+        ))}
+      </div>
+    </div >
   );
 }
 
@@ -275,7 +286,7 @@ function Footer({ theme, setTheme }: { theme: any, setTheme: any }) {
           </div>
         </div>
         <div className="flex flex-col md:flex-row justify-between gap-8 items-start pb-8 pt-4">
-          <Policies />
+          <Information />
           <Legal />
         </div>
       </div>
