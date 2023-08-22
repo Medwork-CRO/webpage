@@ -134,15 +134,6 @@ function Information() {
   return (
     <div className="flex flex-col items-start gap-2 text-md text-medwork-dark dark:text-medwork-light">
       <div className="flex flex-col sm:flex-row flex-wrap items-start gap-2">
-        <Link
-          className="font-semibold hover:underline whitespace-nowrap"
-          href={'/about/legislation'}
-        >
-          Legislation
-        </Link>
-      </div>
-
-      <div className="flex flex-col sm:flex-row flex-wrap items-start gap-2">
         Policies: {policies.map((policy, i) => (
           <div key={i} className="flex">
             <a
@@ -160,6 +151,15 @@ function Information() {
           </div>
         ))}
       </div>
+      <div className="flex flex-col sm:flex-row flex-wrap items-start gap-2">
+        <Link
+          className="font-semibold hover:underline whitespace-nowrap"
+          href={'/about/legislation'}
+        >
+          Legislation
+        </Link>
+      </div>
+
     </div >
   );
 }
