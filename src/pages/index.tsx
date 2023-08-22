@@ -82,7 +82,7 @@ function Home() {
         ))}
       </Carousel>
 
-      <div className="max-w-[86rem] w-full">
+      <div className="max-w-[1376px] w-full">
         <div className="flex flex-col items-center gap-6 whitespace-pre-line px-4 sm:px-6 text-xl text-gray-500 dark:text-gray-400 lg:px-0 py-16">
           <Title title={"Advancing Drug Safety with Operational Excellence, Regulatory Compliance, and Adaptive Solutions"} />
           <DisplayParagraphs paragraphs={paragraphs} />

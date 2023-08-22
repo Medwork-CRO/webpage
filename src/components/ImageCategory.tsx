@@ -29,7 +29,7 @@ function ImageCategory({
         ></div>
 
         <div className="absolute top-3/4 z-20 -translate-y-1/2 transform w-full">
-          <div className={`flex flex-col select-none justify-center gap-8 px-4 md:px-6 lg:px-0 max-w-[86rem] mx-auto ${!textSide || textSide === "left"
+          <div className={`flex flex-col select-none justify-center gap-8 px-4 md:px-6 lg:px-0 max-w-[1376px] mx-auto ${!textSide || textSide === "left"
             ? "text-left"
             : "text-right"
             }`}>

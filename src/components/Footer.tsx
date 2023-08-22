@@ -202,7 +202,7 @@ function Footer({ theme, setTheme }: { theme: any, setTheme: any }) {
       className={`${inter.variable} w-full flex justify-center shadow-sm bg-medwork-light dark:bg-medwork-dark px-4 sm:px-6 lg:px-0 font-sans relative`}
     >
 
-      <div className="flex w-full max-w-[86rem] flex-col text-medwork-dark dark:text-medwork-light z-[5]">
+      <div className="flex w-full max-w-[1376px] flex-col text-medwork-dark dark:text-medwork-light z-[5]">
         <div className="mt-6 border-t border-medwork-dark dark:border-medwork-light flex justify-between items-center">
           <div></div>
           <ThemeSelector theme={theme} setTheme={setTheme} />
