@@ -134,7 +134,7 @@ function Information() {
   return (
     <div className="flex flex-col items-start gap-2 text-md text-medwork-dark dark:text-medwork-light">
       <div className="flex flex-col sm:flex-row flex-wrap items-start gap-2">
-        Policies: {policies.map((policy, i) => (
+        {policies.map((policy, i) => (
           <div key={i} className="flex">
             <a
               className="font-semibold hover:underline whitespace-nowrap"
