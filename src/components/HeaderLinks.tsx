@@ -24,25 +24,25 @@ const Services = {
       href: "/services/vigilance",
     },
     {
-      label: "Outsourcing",
-      href: "/services/outsourcing",
-    },
-    {
-      label: "Cosmetovigilance",
-      href: "/services/cosmetovigilance",
-    },
-    {
       label: "Quality Management",
       href: "/services/quality-management",
     },
     {
-      label: "Training",
-      href: "/services/training",
+      label: "Outsourcing",
+      href: "/services/outsourcing",
     },
-    {
-      label: "Materiovigilance",
-      href: "/services/materiovigilance",
-    },
+    // {
+    //   label: "Cosmetovigilance",
+    //   href: "/services/cosmetovigilance",
+    // },
+    // {
+    //   label: "Training",
+    //   href: "/services/training",
+    // },
+    // {
+    //   label: "Materiovigilance",
+    //   href: "/services/materiovigilance",
+    // },
   ],
 };
 

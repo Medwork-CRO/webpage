@@ -13,9 +13,14 @@ export type NavHamburgerProp = {
   nav: NavProp[];
 };
 
+
 function VerticalNav({ label, href, subCategories }: NavProp) {
   const [isClicked, setIsClicked] = useState(false);
   const router = useRouter();
+
+  const handleClick = () => {
+    setIsClicked(false);
+  };
 
   const isActive = router.asPath === href;
   const isActiveSubCategory = subCategories?.some(
@@ -32,6 +37,7 @@ function VerticalNav({ label, href, subCategories }: NavProp) {
       >
         {!hasSubCategories && (
           <Link
+            onClick={handleClick}
             className="flex items-center py-3 text-md font-semibold lg:px-8"
             aria-label={`By clicking you will be taken to ${label}`}
             key={href}
@@ -47,7 +53,7 @@ function VerticalNav({ label, href, subCategories }: NavProp) {
             >
               <span className={`border-b-2 ${activeClasses}`}>{label.toUpperCase()}</span>
             </div>
-            <FaAngleDown style={{ transform: `rotate(${isClicked ? 0 : 180}deg)` }} />
+            <FaAngleDown className={`text-xl p-[2px] border-2 border-cyan-800 dark:border-cyan-400 rounded-full ${isClicked ? 'rotate-0' : 'rotate-180'}`} />
           </>
         )}
       </div>
@@ -55,6 +61,7 @@ function VerticalNav({ label, href, subCategories }: NavProp) {
         <div className={"flex w-[200px] flex-col"}>
           {subCategories.map((subCategory) => (
             <Link
+              onClick={handleClick}
               className="ml-2 px-5 py-3 text-md font-semibold text-cyan-800 dark:text-cyan-400 hover:text-cyan-500"
               aria-label={`By clicking you will be taken to ${subCategory.label}`}
               key={subCategory.href}
