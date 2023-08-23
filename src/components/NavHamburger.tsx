@@ -32,7 +32,7 @@ function VerticalNav({ label, href, subCategories }: NavProp) {
   return (
     <div className="transform duration-200">
       <div
-        className="flex items-center justify-between text-cyan-800 dark:text-cyan-400 hover:text-cyan-500"
+        className="flex items-center justify-between text-cyan-800 dark:text-cyan-400 hover:text-cyan-500 border-b-2 border-medwork-dark dark:border-medwork-light"
         onClick={() => setIsClicked(!isClicked)}
       >
         {!hasSubCategories && (
@@ -43,7 +43,7 @@ function VerticalNav({ label, href, subCategories }: NavProp) {
             key={href}
             href={href}
           >
-            <span className={`border-b-2 ${activeClasses}`}>{label.toUpperCase()}</span>
+            <span className={`border-l-2 pl-2 ${activeClasses}`}>{label.toUpperCase()}</span>
           </Link>
         )}
         {hasSubCategories && (
@@ -51,9 +51,9 @@ function VerticalNav({ label, href, subCategories }: NavProp) {
             <div
               className="flex items-center py-3 text-md font-semibold lg:px-8"
             >
-              <span className={`border-b-2 ${activeClasses}`}>{label.toUpperCase()}</span>
+              <span className={`border-l-2 pl-2 ${activeClasses}`}>{label.toUpperCase()}</span>
             </div>
-            <FaAngleDown className={`text-xl p-[2px] border-2 border-cyan-800 dark:border-cyan-400 rounded-full ${isClicked ? 'rotate-0' : 'rotate-180'}`} />
+            <FaAngleDown className={`text-xl p-[2px] text-medwork-dark dark:text-medwork-light rounded-full ${isClicked ? 'rotate-0' : 'rotate-180'}`} />
           </>
         )}
       </div>
