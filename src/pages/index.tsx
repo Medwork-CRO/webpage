@@ -28,8 +28,6 @@ const paragraphs = [
   "What distinguishes us is our agility and adaptability derived from our size. This allows us to quickly adjust our approach and resources to address changing needs, offering an experience that may be challenging for larger CROs to replicate.",
 ];
 
-
-
 function Statistics() {
   return (
     <div className="flex flex-col sm:flex-row text-center items-center justify-between gap-8 text-gray-500 dark:text-gray-400 w-full">
@@ -80,7 +78,7 @@ function Home() {
         ))}
       </Carousel>
 
-      <div className="max-w-[1376px] w-full">
+      <div id="main-content" className="max-w-[1376px] w-full">
         <div className="flex flex-col items-center gap-6 whitespace-pre-line px-4 sm:px-6 text-xl text-gray-500 dark:text-gray-400 lg:px-0 py-16">
           <Title title={"Advancing Drug Safety with Operational Excellence, Regulatory Compliance, and Adaptive Solutions"} />
           <DisplayParagraphs paragraphs={paragraphs} />

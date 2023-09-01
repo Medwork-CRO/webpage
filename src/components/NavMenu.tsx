@@ -81,6 +81,13 @@ function NavMenu(navMenu: NavMenuProp) {
     <div
       className={`${inter.variable} flex-start ml-8 flex flex-row place-items-end items-end justify-start gap-10 align-middle font-sans`}
     >
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only absolute top-0 left-0 m-4 p-2 z-50 bg-medwork-dark text-medwork-light dark:bg-medwork-light dark:text-medwork-dark"
+      >
+        Skip to Main Content
+      </a>
+
       {navMenu.nav.map((tab) => (
         <HorizontalNav
           key={tab.href}
@@ -92,5 +99,6 @@ function NavMenu(navMenu: NavMenuProp) {
     </div>
   );
 }
+
 
 export default NavMenu;
