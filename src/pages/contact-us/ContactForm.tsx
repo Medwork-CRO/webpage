@@ -70,6 +70,7 @@ function ContactForm() {
         </div>
         <div className="flex gap-2">
           <button
+            id="send-message" aria-label="Send message"
             type="submit"
             className="cursor-pointer text-white xs:text-md max-w-full w-full rounded-full bg-cyan-400 hover:bg-green-400 py-3 text-center text-sm font-semibold transition duration-100 ease-in focus:outline-none border-2 border-transparent hover:border-white"
           >

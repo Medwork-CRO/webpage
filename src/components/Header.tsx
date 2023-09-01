@@ -30,6 +30,7 @@ function Header() {
       <div className="mx-auto flex max-w-[1376px] px-4 py-3 sm:py-4 lg:px-0 items-center justify-between">
         <Logo />
         <button
+          id="hamburger-menu" aria-label="Menu hamburger"
           className="block text-xl md:hidden z-20"
           onClick={() => setOpen(!isOpen)}
         >

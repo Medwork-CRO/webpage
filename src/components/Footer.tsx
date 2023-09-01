@@ -8,6 +8,7 @@ import Link from "next/link";
 import { MdDarkMode, MdLightMode, MdOutlineBrightnessAuto } from 'react-icons/md';
 import { AboutUs, Careers, Services } from "./HeaderLinks";
 import { THEME } from "@/types/Theme";
+import { ReactElement } from "react";
 
 const recruitmentEmail = "recruitment@medwork.gr";
 const mail = "medworkinfo@medwork.gr";
@@ -98,34 +99,40 @@ function Legal() {
 }
 
 function ThemeSelector({ theme, setTheme }: { theme: THEME, setTheme: Function }) {
+  let themeIcon: ReactElement<any, any>;
+
+  if (theme === THEME.DARK) {
+    themeIcon = <MdDarkMode />;
+  } else if (theme === THEME.LIGHT) {
+    themeIcon = <MdLightMode />;
+  } else {
+    themeIcon = <MdOutlineBrightnessAuto />;
+  }
+
   const handleThemeChange = () => {
     if (theme === THEME.DARK) {
       setTheme(THEME.LIGHT);
+      themeIcon = <MdLightMode />;
     } else if (theme === THEME.LIGHT) {
       setTheme(THEME.AUTO);
+      themeIcon = <MdOutlineBrightnessAuto />;
     } else {
       setTheme(THEME.DARK);
-    }
-  };
-
-  const themeIcon = () => {
-    if (theme === THEME.DARK) {
-      return <MdDarkMode />;
-    } else if (theme === THEME.LIGHT) {
-      return <MdLightMode />;
-    } else {
-      return <MdOutlineBrightnessAuto />;
+      themeIcon = <MdDarkMode />;
     }
   };
 
   return (
     <button
+      id="theme-selector" aria-label="Change the theme"
       className="
-        absolute z-50 p-1 w-8 h-8 flex justify-center items-center text-medwork-dark dark:text-medwork-light
-        bg-medwork-light dark:bg-medwork-dark border-medwork-dark dark:border-medwork-light border rounded-full"
+        absolute z-50 p-1 w-8 h-8 flex justify-center items-center rounded-full
+        text-medwork-dark dark:text-medwork-light hover:text-medwork-light hover:dark:text-medwork-dark
+        bg-medwork-light dark:bg-medwork-dark hover:bg-medwork-dark hover:dark:bg-medwork-light
+        border border-medwork-dark dark:border-medwork-light hover:border-medwork-light hover:dark:border-medwork-dark"
       onClick={handleThemeChange}
     >
-      {themeIcon()}
+      {themeIcon}
     </button>
   );
 }
