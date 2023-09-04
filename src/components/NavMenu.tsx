@@ -1,11 +1,12 @@
-import { Inter } from "@next/font/google";
-import { FaAngleDown } from "@react-icons/all-files/fa/FaAngleDown";
-import Link from "next/link";
-import { useRouter } from "next/router";
+import { useState } from 'react';
+import { Inter } from '@next/font/google';
+import { FaAngleDown } from '@react-icons/all-files/fa/FaAngleDown';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
+  subsets: ['latin'],
+  variable: '--font-inter',
 });
 
 export type NavProp = {
@@ -19,6 +20,7 @@ export type NavMenuProp = {
 };
 
 function HorizontalNav({ label, href, subCategories }: NavProp) {
+  const [isOpen, setIsOpen] = useState(false);
   const hasSubCategories = subCategories && subCategories.length > 0;
 
   const router = useRouter();
@@ -28,34 +30,35 @@ function HorizontalNav({ label, href, subCategories }: NavProp) {
   );
   const activeClasses = isActive || isActiveSubCategory ? 'border-cyan-500 text-cyan-500' : 'border-transparent';
 
+  const handleKeyDown: React.KeyboardEventHandler<HTMLDivElement> = (e) => {
+    if (e.code === 'Enter') {
+      setIsOpen(!isOpen);
+    }
+  };
+
   return (
     <div className="relative">
-      {!hasSubCategories ? (
-        <Link
-          className="peer flex items-center py-4 text-lg text-gray-600 hover:text-cyan-500 dark:text-gray-400"
-          aria-label={`By clicking you will be taken to ${label}`}
-          href={href}
-        >
-          <div className={`flex items-center hover:text-cyan-500`}>
-            <div className={`border-b-2 ${activeClasses}`}>{label.toUpperCase()}</div>
-          </div>
-        </Link>
-      ) : (
-        <div
-          tabIndex={0}
-          className="peer flex items-center py-4 text-lg text-gray-600 hover:text-cyan-500 dark:text-gray-400"
-        >
-          <div className="flex hover:text-cyan-500 items-baseline">
-            <div className={`border-b-2 ${activeClasses}`}>{label.toUpperCase()}</div>
-            <div>{hasSubCategories && <FaAngleDown className="ml-2" />}</div>
-          </div>
+      <div
+        tabIndex={0}
+        className="peer flex items-center py-4 text-lg text-gray-600 hover:text-cyan-500 dark:text-gray-400"
+        onKeyDown={hasSubCategories ? handleKeyDown : undefined}
+        onMouseEnter={() => setIsOpen(true)}
+        onMouseLeave={() => setIsOpen(false)}
+      >
+        <div className={`flex items-center hover:text-cyan-500`}>
+          <div className={`border-b-2 ${activeClasses}`}>{label.toUpperCase()}</div>
+          {hasSubCategories && <FaAngleDown className="ml-2" />}
         </div>
-      )}
-      {hasSubCategories && (
+      </div>
+
+      {hasSubCategories && isOpen && (
         <div className="
-          absolute right-0 z-10 hidden w-[220px] flex-col rounded-sm border border-gray-300 dark:border-gray-400
-        bg-medwork-light text-gray-600 shadow-2xl drop-shadow-lg hover:flex peer-focus:flex peer-hover:flex dark:bg-medwork-dark dark:text-gray-400
-        ">
+          flex flex-col w-[220px] absolute right-0 z-10 rounded-sm border border-gray-300 dark:border-gray-400
+          bg-medwork-light text-gray-600 shadow-2xl drop-shadow-lg dark:bg-medwork-dark dark:text-gray-400
+          "
+          onMouseEnter={() => setIsOpen(true)}
+          onMouseLeave={() => setIsOpen(false)}
+        >
           {subCategories.map((subCategory, i) => (
             <Link
               tabIndex={0}
@@ -63,7 +66,6 @@ function HorizontalNav({ label, href, subCategories }: NavProp) {
               ${router.asPath === subCategory.href ? 'bg-[#eae4dd] dark:bg-gray-500' : ''}
               ${i === 0 ? 'rounded-t-sm' : ''}
               ${i === subCategories.length - 1 ? 'rounded-b-sm' : ''}`}
-              aria-label={`By clicking you will be taken to ${subCategory.label}`}
               key={subCategory.href}
               href={subCategory.href}
             >

@@ -127,9 +127,15 @@ function ThemeSelector({ theme, setTheme }: { theme: THEME, setTheme: Function }
       id="theme-selector" aria-label="Change the theme"
       className="
         absolute z-50 p-1 w-8 h-8 flex justify-center items-center rounded-full
-        text-medwork-dark dark:text-medwork-light hover:text-medwork-light hover:dark:text-medwork-dark
-        bg-medwork-light dark:bg-medwork-dark hover:bg-medwork-dark hover:dark:bg-medwork-light
-        border border-medwork-dark dark:border-medwork-light hover:border-medwork-light hover:dark:border-medwork-dark"
+        text-medwork-dark dark:text-medwork-light
+        hover:text-medwork-light hover:dark:text-medwork-dark
+        focus-visible:text-medwork-light focus-visible:dark:text-medwork-dark
+        bg-medwork-light dark:bg-medwork-dark
+        hover:bg-medwork-dark hover:dark:bg-medwork-light
+        focus-visible:bg-medwork-dark focus-visible:dark:bg-medwork-light
+        border border-medwork-dark dark:border-medwork-light
+        hover:border-medwork-light hover:dark:border-medwork-dark
+        focus-visible:border-medwork-light focus-visible:dark:border-medwork-dark"
       onClick={handleThemeChange}
     >
       {themeIcon}
@@ -144,7 +150,7 @@ function Information() {
         {policies.map((policy, i) => (
           <div key={i} className="flex">
             <a
-              className="font-semibold hover:underline whitespace-nowrap"
+              className="font-semibold hover:underline focus-visible:underline whitespace-nowrap"
               href={`${policy.filePath}/${policy.fileName}`}
               target="_blank"
               rel="noopener noreferrer"
@@ -160,7 +166,7 @@ function Information() {
       </div>
       <div className="flex flex-col sm:flex-row flex-wrap items-start gap-2">
         <Link
-          className="font-semibold hover:underline whitespace-nowrap"
+          className="font-semibold hover:underline focus-visible:underline whitespace-nowrap"
           href={'/about/legislation'}
         >
           Legislation
@@ -256,7 +262,7 @@ function Footer({ theme, setTheme }: { theme: any, setTheme: any }) {
                   key={i}
                   href={a.href}
                 >
-                  <span className="flex items-center hover:text-cyan-500">
+                  <span className="flex items-center hover:text-cyan-500 focus-visible:text-cyan-500">
                     {a.label}
                   </span>
                 </Link>
