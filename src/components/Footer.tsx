@@ -206,6 +206,7 @@ function WaveSvg() {
 function Footer({ theme, setTheme }: { theme: any, setTheme: any }) {
   return (
     <footer
+      id="footer"
       className={`${inter.variable} w-full flex justify-center shadow-sm bg-medwork-light dark:bg-medwork-dark px-4 sm:px-6 lg:px-0 font-sans relative`}
     >
 
