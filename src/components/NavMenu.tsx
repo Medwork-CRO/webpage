@@ -3,6 +3,7 @@ import { Inter } from '@next/font/google';
 import { FaAngleDown } from '@react-icons/all-files/fa/FaAngleDown';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { useRef } from 'react';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -21,8 +22,8 @@ export type NavMenuProp = {
 
 function HorizontalNav({ label, href, subCategories }: NavProp) {
   const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef(null);
   const hasSubCategories = subCategories && subCategories.length > 0;
-
   const router = useRouter();
   const isActive = router.asPath === href;
   const isActiveSubCategory = subCategories?.some(
@@ -36,16 +37,33 @@ function HorizontalNav({ label, href, subCategories }: NavProp) {
     }
   };
 
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
+  const handleBlur = (event: any) => {
+    const currentTarget = event.currentTarget;
+    setTimeout(() => {
+      if (!currentTarget.contains(document.activeElement)) {
+        setIsOpen(false);
+      }
+    }, 0);
+  };
+
   return (
-    <div className="relative">
+    <div className="relative" ref={menuRef} onBlur={handleBlur}>
       <div
         tabIndex={0}
-        className="peer flex items-center py-4 text-lg text-gray-600 hover:text-cyan-500 dark:text-gray-400"
+        className="
+        peer flex items-center py-4
+        text-lg text-gray-600
+        dark:text-gray-400 hover:text-cyan-500 focus-visible:text-cyan-500
+        "
         onKeyDown={hasSubCategories ? handleKeyDown : undefined}
         onMouseEnter={() => setIsOpen(true)}
         onMouseLeave={() => setIsOpen(false)}
       >
-        <div className={`flex items-center hover:text-cyan-500`}>
+        <div className={`flex items-center hover:text-cyan-500 focus-visible:text-cyan-500`}>
           <div className={`border-b-2 ${activeClasses}`}>{label.toUpperCase()}</div>
           {hasSubCategories && <FaAngleDown className="ml-2" />}
         </div>
@@ -53,7 +71,8 @@ function HorizontalNav({ label, href, subCategories }: NavProp) {
 
       {hasSubCategories && isOpen && (
         <div className="
-          flex flex-col w-[220px] absolute right-0 z-10 rounded-sm border border-gray-300 dark:border-gray-400
+          absolute flex flex-col gap-2 w-[220px] right-0 z-10 rounded-sm
+          border border-gray-300 dark:border-gray-400
           bg-medwork-light text-gray-600 shadow-2xl drop-shadow-lg dark:bg-medwork-dark dark:text-gray-400
           "
           onMouseEnter={() => setIsOpen(true)}
@@ -62,12 +81,16 @@ function HorizontalNav({ label, href, subCategories }: NavProp) {
           {subCategories.map((subCategory, i) => (
             <Link
               tabIndex={0}
-              className={`px-4 py-4 text-lg hover:bg-[#eae4dd] dark:hover:bg-gray-500
-              ${router.asPath === subCategory.href ? 'bg-[#eae4dd] dark:bg-gray-500' : ''}
+              className={`
+              px-4 py-4 text-lg
+              hover:bg-[#eae4dd] dark:hover:bg-gray-500
+              focus-visible:bg-[#eae4dd] dark:focus-visible:bg-gray-500
+              ${router.asPath === subCategory.href ? 'bg-[#c5b8aa] dark:bg-gray-600' : ''}
               ${i === 0 ? 'rounded-t-sm' : ''}
               ${i === subCategories.length - 1 ? 'rounded-b-sm' : ''}`}
               key={subCategory.href}
               href={subCategory.href}
+              onClick={closeMenu}
             >
               {subCategory.label.toUpperCase()}
             </Link>
