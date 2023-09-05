@@ -74,7 +74,7 @@ function Cosmetovigilance() {
 
       <div id="main-content" className="max-w-[1376px] w-full">
         <Breadcrumbs />
-        <div className="flex flex-col items-center gap-6 whitespace-pre-line px-4 sm:px-6 text-xl text-gray-500 dark:text-gray-400 lg:px-0 py-16 text-center w-full">
+        <div className="flex flex-col items-center gap-6 whitespace-pre-line px-4 sm:px-6 text-2xl text-gray-500 dark:text-gray-400 lg:px-0 py-16 text-center w-full">
           <Statistics />
 
           <DisplayParagraphs paragraphs={paragraphs} />

@@ -17,7 +17,7 @@ function ImageCategory({
 
   return (
     <>
-      <div className="relative w-full md:flex-row h-screen hidden md:block motion-safe:animate-fadeIn text-medwork-dark dark:text-medwork-light">
+      <div className="relative w-full md:flex-row h-[60vh] hidden md:block motion-safe:animate-fadeIn text-gray-500 dark:text-gray-400">
         <Image
           src={image}
           className="h-full min-w-full object-cover"
@@ -43,7 +43,7 @@ function ImageCategory({
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 md:hidden text-medwork-dark dark:text-medwork-light">
+      <div className="grid grid-cols-1 md:grid-cols-2 md:hidden text-gray-500 dark:text-gray-400">
         <Image src={image} alt="Image for mobile" />
         <div className="mx-4 sm:mx-6 lg:mx-0 border-b border-b-medwork-dark dark:border-b-medwork-light">
           <div className="mt-8 md:mt-0">

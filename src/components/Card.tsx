@@ -2,6 +2,7 @@ import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
 type CardProps = {
+  index: number,
   imageData: StaticImageData;
   imageTitle: string;
   imageDescription: string;
@@ -9,38 +10,39 @@ type CardProps = {
 };
 
 function Card({
+  index,
   imageData,
   imageTitle,
   imageDescription,
   readMoreLink,
 }: CardProps) {
   return (
-    <div className="flex transform flex-col gap-2">
-      <div className="flex flex-col gap-4">
-        <div className="overflow-hidden">
-          <Link
-
-            href={readMoreLink}
-          >
+    <div className="flex transform flex-col gap-8">
+      <Link href={readMoreLink}>
+        <div tabIndex={index} className="service  flex flex-col gap-6
+          p-4 rounded-xl border-2 border-transparent
+          hover:border-[#c5b8aa] hover:dark:border-gray-700 hover:shadow-xl
+          focus-visible:border-[#c5b8aa] focus-visible:dark:border-gray-700 focus-visible:shadow-xl
+        ">
+          <div className="overflow-hidden">
             <Image
-              className="h-[16rem] rounded-lg object-cover sm:h-[12rem]"
+              className="h-[24rem] rounded-lg object-cover sm:h-[32rem]"
               src={imageData}
               alt={imageTitle}
             />
-          </Link>
+          </div>
+          <div
+            className="font-semibold text-2xl text-cyan-600 dark:text-white"
+          >
+            {imageTitle}
+          </div>
         </div>
-        <Link
-          className="font-semibold text-xl text-cyan-600 hover:text-cyan-400 hover:underline dark:text-white"
-          href={readMoreLink}
-        >
-          {imageTitle}
-        </Link>
-      </div>
-      <div className="flex flex-col gap-2 h-full justify-between">
-        <p className="overflow-ellipsis text-lg font-normal text-gray-500 dark:text-gray-400 md:text-base">
+      </Link>
+      {/* <div className="flex flex-col h-full justify-between">
+        <p className="overflow-ellipsis text-lg font-normal text-gray-500 dark:text-gray-400 md:text-xl">
           {imageDescription}
         </p>
-      </div>
+      </div> */}
     </div>
   );
 }
@@ -56,7 +58,7 @@ alt={imageTitle}
 <span className="absolute top-1/3 left-2 text-5xl md:text-2xl font-bold text-left text-white drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)]">
 {imageTitle}
 </span>
-<p className="absolute top-2/3 left-2 w-full text-lg md:text-base text-white p-2 font-bold drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)]">
+<p className="absolute top-2/3 left-2 w-full text-xl md:text-base text-white p-2 font-bold drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)]">
 {imageDescription}
 </p>
 </div> */

@@ -19,10 +19,10 @@ const getPathForKnownRoutes = (str: string) => {
 const Breadcrumbs = () => {
     const { pathname } = useRouter();
     const pathnames = ['home'].concat(pathname.split("/").filter(x => x));
-    const paths = pathnames.map((name, idx) => '/' + pathnames.slice(0, idx + 1).join('/'));
+    const paths = pathnames.map((_name: string, idx) => '/' + pathnames.slice(0, idx + 1).join('/'));
 
     return (
-        <div className="flex gap-2 my-4 ml-4 sm:ml-6 lg:ml-0 text-gray-500 dark:text-gray-400 text-lg">
+        <div className="flex gap-2 my-4 ml-4 sm:ml-6 lg:ml-0 text-gray-500 dark:text-gray-400 text-2xl">
             {pathnames.map((crumb, i) => {
                 if (i === pathnames.length - 1) {
                     return <div key={i}>{formatBreadcrumb(crumb)}</div>;

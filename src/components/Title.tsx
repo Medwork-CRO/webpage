@@ -1,5 +1,3 @@
-import { Spectral } from "@next/font/google";
-
 type TitleProps = {
   title: string;
   colour?: string;
@@ -9,12 +7,12 @@ type TitleProps = {
 function Title({
   title,
   colour = "text-gray-500 dark:text-gray-400",
-  align = "center",
+  align = "left",
 }: TitleProps) {
   const textAlign = align === "left" ? "md:text-left" : "md:text-center";
   return (
     <div
-      className={`my-4 text-center ${textAlign} text-3xl font-bold ${colour} my-4`}
+      className={`my-4 ${textAlign} text-4xl font-bold ${colour} my-4`}
     >
       {/*  text-cyan-500 */}
       {/* &#8226;  */}

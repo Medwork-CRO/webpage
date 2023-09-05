@@ -51,24 +51,34 @@ function HorizontalNav({ label, href, subCategories }: NavProp) {
   };
 
   return (
-    <div className="relative" ref={menuRef} onBlur={handleBlur}>
-      <div
-        tabIndex={0}
-        className="
-        peer flex items-center py-4
-        text-lg text-gray-600
-        dark:text-gray-400 hover:text-cyan-500 focus-visible:text-cyan-500
-        "
+    <div className="relative py-2" ref={menuRef} onBlur={handleBlur}>
+      {hasSubCategories &&
+        <div tabIndex={0} className={`
+        peer flex items-center py-2
+        text-xl text-gray-600 dark:text-gray-400
+        hover:text-cyan-500 focus-visible:text-cyan-500
+        border-b-2 ${activeClasses}
+        `}
         onKeyDown={hasSubCategories ? handleKeyDown : undefined}
         onMouseEnter={() => setIsOpen(true)}
         onMouseLeave={() => setIsOpen(false)}
-      >
-        <div className={`flex items-center hover:text-cyan-500 focus-visible:text-cyan-500`}>
-          <div className={`border-b-2 ${activeClasses}`}>{label.toUpperCase()}</div>
-          {hasSubCategories && <FaAngleDown className="ml-2" />}
-        </div>
-      </div>
-
+        >{label.toUpperCase()}<FaAngleDown className="ml-2 " /></div>
+      }
+      {!hasSubCategories &&
+        <Link
+          tabIndex={0}
+          className={`
+          peer flex items-center py-2
+          text-xl text-gray-600 dark:text-gray-400
+          hover:text-cyan-500 focus-visible:text-cyan-500
+          border-b-2 ${activeClasses}
+          `}
+          key={href}
+          href={href}
+        >
+            {label.toUpperCase()}
+        </Link>
+      }
       {hasSubCategories && isOpen && (
         <div className="
           absolute flex flex-col gap-2 w-[220px] right-0 z-10 rounded-sm
@@ -82,7 +92,8 @@ function HorizontalNav({ label, href, subCategories }: NavProp) {
             <Link
               tabIndex={0}
               className={`
-              px-4 py-4 text-lg
+              cursor-pointer
+              px-4 py-4 text-xl
               hover:bg-[#eae4dd] dark:hover:bg-gray-500
               focus-visible:bg-[#eae4dd] dark:focus-visible:bg-gray-500
               ${router.asPath === subCategory.href ? 'bg-[#c5b8aa] dark:bg-gray-600' : ''}

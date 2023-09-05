@@ -30,7 +30,7 @@ const paragraphs = [
 
 function Statistics() {
   return (
-    <div className="flex flex-col sm:flex-row text-center items-center justify-between gap-8 text-gray-500 dark:text-gray-400 w-full">
+    <div className="flex flex-col sm:flex-row text-center items-center justify-between gap-8 text-gray-500 dark:text-gray-400 w-full mt-24">
       <div className="flex w-56 flex-col">
         <span className="flex flex-row self-center mb-4 text-4xl font-bold text-cyan-500">
           <Counter number={15} title="+" duration={3} />
@@ -79,7 +79,7 @@ function Home() {
       </Carousel>
 
       <div id="main-content" className="max-w-[1376px] w-full">
-        <div className="flex flex-col items-center gap-6 whitespace-pre-line px-4 sm:px-6 text-xl text-gray-500 dark:text-gray-400 lg:px-0 py-16">
+        <div className="flex flex-col items-center gap-12 whitespace-pre-line px-4 sm:px-6 text-2xl text-gray-500 dark:text-gray-400 lg:px-0 py-16">
           <Title title={"Advancing Drug Safety with Operational Excellence, Regulatory Compliance, and Adaptive Solutions"} />
           <DisplayParagraphs paragraphs={paragraphs} />
           <ProvidedServices />

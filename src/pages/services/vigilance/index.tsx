@@ -5,7 +5,7 @@ import InfoBox from "@/components/InfoBox";
 import vigilance from "@assets/services/vigilance-vector.jpg";
 
 const paragraphs0 = [
-  "Medwork is dedicated to supporting Marketing Authorisation Holders in fulfilling their pharmacovigilance obligations. With over 15 years of experience in different facets of pharmacovigilance, our team possesses a wealth of knowledge and a comprehensive understanding of the intricacies involved in ensuring drug safety. ",
+  "Medwork is dedicated to supporting Marketing Authorisation Holders in fulfilling their pharmacovigilance obligations. With over 15 years of experience in different facets of pharmacovigilance, our team possesses a wealth of knowledge and a comprehensive understanding of the intricacies involved in ensuring drug safety.",
 ];
 
 function Vigilance() {
@@ -15,13 +15,13 @@ function Vigilance() {
 
       <div id="main-content" className="max-w-[1376px] w-full">
         <Breadcrumbs />
-        <div className="flex flex-col items-center gap-6 whitespace-pre-line px-4 sm:px-6 text-xl text-gray-500 dark:text-gray-400 lg:px-0 py-16">
+        <div className="flex flex-col items-center gap-16 whitespace-pre-line px-4 sm:px-6 text-2xl text-gray-500 dark:text-gray-400 lg:px-0 py-16">
           <DisplayParagraphs paragraphs={paragraphs0} />
 
-          <div className="w-full grid grid-cols-1 md:grid-cols-2 md:mx-4 md:my-8 lg:grid-cols-3 lg:mx-0 lg:my-16 my-8 gap-4">
+          <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-4 md:mx-8 lg:mx-16 my-4 md:my-8 lg:my-16 gap-16">
             <InfoBox
               title="PV System & QPPV"
-              text="We establish and maintain robust Pharmacovigilance Systems.  Our team of experienced EU Qualified Persons for Pharmacovigilance will guarantee the effective management of your drug safety operations and ensure regulatory compliance."
+              text="We establish and maintain robust Pharmacovigilance Systems.  Our team of experienced EU Qualified Persons for Pharmacovigilance will guarantee the effective management of your drug safety affairs and ensure regulatory compliance."
               link="/solutions/early-phase/clinical-research-units/"
               color="bg-blue-200"
             />
@@ -33,25 +33,25 @@ function Vigilance() {
             />
             <InfoBox
               title="Case processing"
-              text="We provide streamlined case processing solutions tailored to client's workflows and processes. We adapt to customer's needs, being able to handle excessive volume of ICSRs while ensuring quality and compliance."
+              text="Streamlined case processing solutions tailored to clients workflows and processes. We adapt to our customers needs, being able to handle excessive volume of ICSRs while ensuring quality and compliance. "
               link="/solutions/early-phase/pharmacodynamic-models/"
               color="bg-blue-200"
             />
             <InfoBox
               title="Global and local literature monitoring"
-              text="To be defined"
+              text="Medwork offers efficient global and local literature monitoring services empowered by the involvement of Medical Doctors who are actively engaged in the review and assessment process."
               link="/solutions/early-phase/pharmacodynamic-models/"
               color="bg-blue-200"
             />
             <InfoBox
               title="Clinical Safety"
-              text="To be defined"
+              text="Despite our relatively young presence, our focus on clinical trials safety is steadfast. With a history of clinical trial PV execution in over 10 countries, our experience is steadily growing and extending to encompass additional territories."
               link="/solutions/early-phase/pharmacodynamic-models/"
               color="bg-blue-200"
             />
             <InfoBox
               title="Medical device vigilance"
-              text="To be defined"
+              text="Drawing from our extensive 15-year journey in drug safety, we extend our expertise to the realm of medical device vigilance applying the same <stringent> concepts and mindset that have defined our pharmacovigilance legacy."
               link="/solutions/early-phase/pharmacodynamic-models/"
               color="bg-blue-200"
             />

@@ -76,7 +76,7 @@ function CompanyInfo() {
 
 function Legal() {
   return (
-    <div className="flex flex-col xs:flex-row items-start gap-2 text-md text-gray-400 self-end">
+    <div className="flex flex-col xs:flex-row items-start gap-2 text-md text-gray-400 sm:self-end">
       <span>© {new Date().getFullYear()} Medwork</span>
       <span className="flex flex-col xs:flex-row gap-2">
         <span className="hidden xs:block">|</span>
@@ -146,10 +146,11 @@ function ThemeSelector({ theme, setTheme }: { theme: THEME, setTheme: Function }
 function Information() {
   return (
     <div className="flex flex-col items-start gap-2 text-md text-medwork-dark dark:text-medwork-light">
-      <div className="flex flex-col sm:flex-row flex-wrap items-start gap-2">
+      <div className="flex flex-col sm:flex-row flex-wrap items-start gap-4">
         {policies.map((policy, i) => (
-          <div key={i} className="flex">
-            <a
+          <>
+            <Link
+            key={i}
               className="font-semibold hover:underline focus-visible:underline whitespace-nowrap"
               href={`${policy.filePath}/${policy.fileName}`}
               target="_blank"
@@ -157,14 +158,14 @@ function Information() {
             // download={a.fileName}
             >
               {policy.label}
-            </a>
+            </Link>
             <span className="hidden sm:block">
-              {policies.length - 1 !== i ? "," : ""}
-            </span>
-          </div>
+            {policies.length - 1 !== i ? "|" : ""}
+          </span>
+          </>
         ))}
       </div>
-      <div className="flex flex-col sm:flex-row flex-wrap items-start gap-2">
+      <div className="flex flex-col sm:flex-row flex-wrap items-start gap-2 text-md">
         <Link
           className="font-semibold hover:underline focus-visible:underline whitespace-nowrap"
           href={'/about/legislation'}
@@ -172,7 +173,6 @@ function Information() {
           Legislation
         </Link>
       </div>
-
     </div >
   );
 }
@@ -213,10 +213,9 @@ function Footer({ theme, setTheme }: { theme: any, setTheme: any }) {
   return (
     <footer
       id="footer"
-      className={`${inter.variable} w-full flex justify-center shadow-sm bg-medwork-light dark:bg-medwork-dark px-4 sm:px-6 lg:px-0 font-sans relative`}
+      className={`${inter.variable} w-full flex justify-center shadow-sm bg-medwork-light dark:bg-medwork-dark px-4 sm:px-6 lg:px-0 pt-0 sm:pt-12 lg:pt-24 font-sans relative`}
     >
-
-      <div className="flex w-full max-w-[1376px] flex-col text-medwork-dark dark:text-medwork-light z-[5]">
+      <div className="flex w-full max-w-[1676px] mx-0 eq:mx-8 flex-col text-medwork-dark dark:text-medwork-light z-[5]"> {/* max-w-[1376px] */}
         <div className="mt-6 border-t border-medwork-dark dark:border-medwork-light flex justify-between items-center">
           <div></div>
           <ThemeSelector theme={theme} setTheme={setTheme} />
@@ -228,7 +227,7 @@ function Footer({ theme, setTheme }: { theme: any, setTheme: any }) {
 
           <div className="flex flex-col gap-6">
             <Logo />
-            <span className={"max-w-sm whitespace-pre-line text-left text-lg"}>
+            <span className={"max-w-sm whitespace-pre-line text-left text-2xl"}>
               Medwork is a Contract Research Organization (CRO) operating in
               Southeast Europe, which since 2005 offers a wide range of
               specialized services to the pharmaceutical and medical device
@@ -237,8 +236,8 @@ function Footer({ theme, setTheme }: { theme: any, setTheme: any }) {
           </div>
 
           <div className="min-w-96 flex flex-col gap-6 text-left">
-            <span className="text-xl font-semibold">SERVICES</span>
-            <div className="text-md flex flex-col gap-2">
+            <span className="text-2xl font-semibold">SERVICES</span>
+            <div className="text-xl flex flex-col gap-2">
               {Services.subCategories.map((service, i) => (
                 <Link
                   aria-label={`By clicking you will be taken to ${service.label}`}
@@ -254,8 +253,8 @@ function Footer({ theme, setTheme }: { theme: any, setTheme: any }) {
           </div>
 
           <div className="min-w-96 flex flex-col gap-6 text-left">
-            <span className="text-xl font-semibold">ABOUT</span>
-            <div className="text-md flex flex-col gap-2">
+            <span className="text-2xl font-semibold">ABOUT</span>
+            <div className="text-xl flex flex-col gap-2">
               {[...AboutUs.subCategories, Careers].map((a, i) => (
                 <Link
                   aria-label={`By clicking you will be taken to ${a.label}`}
@@ -271,8 +270,8 @@ function Footer({ theme, setTheme }: { theme: any, setTheme: any }) {
           </div>
 
           <div className="min-w-96 flex flex-col gap-6 text-left">
-            <span className="text-xl font-semibold">CONTACT INFO</span>
-            <div className="text-md flex flex-col gap-2">
+            <span className="text-2xl font-semibold">CONTACT INFO</span>
+            <div className="text-xl flex flex-col gap-2">
               <Link
                 href={`mailto:${mail}`}
                 target="_blank"
@@ -299,7 +298,7 @@ function Footer({ theme, setTheme }: { theme: any, setTheme: any }) {
             <CompanyInfo />
           </div>
         </div>
-        <div className="flex flex-col md:flex-row justify-between gap-8 items-start pb-8 pt-4">
+        <div className="flex flex-col md:flex-row justify-between gap-8 items-start pb-8">
           <Information />
           <Legal />
         </div>
