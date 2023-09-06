@@ -26,34 +26,39 @@ function VerticalNav({ label, href, subCategories }: NavProp) {
   const isActiveSubCategory = subCategories?.some(
     (subCategory) => subCategory.href === router.asPath
   );
-  const activeClasses = isActive || isActiveSubCategory ? 'border-cyan-500 text-cyan-500' : 'border-transparent';
+  const activeClasses = isActive || isActiveSubCategory ? 'text-cyan-800 dark:text-cyan-400' : '';
   const hasSubCategories = subCategories && subCategories.length > 0;
 
   return (
     <div className="transform duration-200">
       <div
-        className="flex items-center justify-between text-cyan-800 dark:text-cyan-400 hover:text-cyan-500 border-b-2 border-medwork-dark dark:border-medwork-light"
+        className="
+          flex items-center justify-between shadow-xl
+          pb-4 mb-4 text-lg font-semibold
+          text-medwork-dark dark:text-medwork-light
+          border-b border-medwork-dark dark:border-medwork-light
+        "
         onClick={() => setIsClicked(!isClicked)}
       >
         {!hasSubCategories && (
           <Link
             onClick={handleClick}
-            className="flex items-center py-3 text-md font-semibold lg:px-8"
+            className="flex items-center"
             aria-label={`By clicking you will be taken to ${label}`}
             key={href}
             href={href}
           >
-            <span className={`border-l-2 pl-2 ${activeClasses}`}>{label.toUpperCase()}</span>
+            <span className={`pl-2 ${activeClasses}`}>{label.toUpperCase()}</span>
           </Link>
         )}
         {hasSubCategories && (
           <>
             <div
-              className="flex items-center py-3 text-md font-semibold lg:px-8"
+              className="flex items-center"
             >
-              <span className={`border-l-2 pl-2 ${activeClasses}`}>{label.toUpperCase()}</span>
+              <span className={`pl-2 ${activeClasses}`}>{label.toUpperCase()}</span>
             </div>
-            <FaAngleDown className={`text-xl p-[2px] text-medwork-dark dark:text-medwork-light rounded-full ${isClicked ? 'rotate-0' : 'rotate-180'}`} />
+            <FaAngleDown className={`text-xl p-[2px] mr-2 text-medwork-dark dark:text-medwork-light rounded-full ${isClicked ? 'rotate-0' : 'rotate-180'}`} />
           </>
         )}
       </div>
@@ -62,7 +67,7 @@ function VerticalNav({ label, href, subCategories }: NavProp) {
           {subCategories.map((subCategory) => (
             <Link
               onClick={handleClick}
-              className="ml-2 px-5 py-3 text-md font-semibold text-cyan-800 dark:text-cyan-400 hover:text-cyan-500"
+              className="ml-2 px-5 py-3 text-md font-semibold text-medwork-dark dark:text-medwork-light"
               aria-label={`By clicking you will be taken to ${subCategory.label}`}
               key={subCategory.href}
               href={subCategory.href}
@@ -83,7 +88,7 @@ function NavHamburger(navHamburger: NavHamburgerProp & { isOpen: boolean }) {
     <>
       {navHamburger.isOpen &&
         <div className="fixed inset-0 bg-gray-400 backdrop-blur-sm bg-opacity-40 z-10"></div>}
-      <div className={`mx-6 mb-4 flex flex-col fixed inset-x-1 bottom-0 transform duration-200 ${visibility} z-20`}>
+      <div className={`mx-4 pb-6 flex flex-col gap-8 z-20 fixed inset-x-1 bottom-0 ${visibility}`}>
         {navHamburger.nav.map((props) => (
           <VerticalNav key={props.href} {...props} />
         ))}

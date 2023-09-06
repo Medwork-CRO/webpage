@@ -21,8 +21,9 @@ function Card({
       <Link href={readMoreLink}>
         <div tabIndex={index} className="service  flex flex-col gap-6
           p-4 rounded-xl border-2 border-transparent
-          hover:border-[#c5b8aa] hover:dark:border-gray-700 hover:shadow-xl
-          focus-visible:border-[#c5b8aa] focus-visible:dark:border-gray-700 focus-visible:shadow-xl
+          border-[#c5b8aa] dark:border-gray-700
+          hover:shadow-2xl focus-visible:shadow-xl
+          transition duration-500 ease-in-out
         ">
           <div className="overflow-hidden">
             <Image
