@@ -86,8 +86,8 @@ function NavHamburger(navHamburger: NavHamburgerProp & { isOpen: boolean }) {
   return (
     <>
       {navHamburger.isOpen &&
-        <div className="fixed inset-0 bg-gray-400 backdrop-blur-sm bg-opacity-40 z-10"></div>}
-      <div className={`mx-4 pb-6 flex flex-col gap-8 z-20 fixed inset-x-1 bottom-0 ${visibility}`}>
+        <div className="fixed inset-0 bg-medwork-light backdrop-blur-sm bg-opacity-10 z-10 overscroll-none"></div>}
+      <div className={`mx-4 pb-6 flex flex-col gap-8 z-40 fixed inset-x-1 bottom-0 ${visibility}`}>
         {navHamburger.nav.map((props) => (
           <VerticalNav key={props.href} {...props} />
         ))}

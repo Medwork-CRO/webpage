@@ -30,8 +30,9 @@ const ScrollToTopButton = () => {
             id="scroll-to-top" aria-label="Scroll to the top"
             onClick={scrollToTop}
             className={`scrollToTopButton
-            fixed bottom-8 right-4 p-3 rounded-full text-medwork-dark dark:text-medwork-light bg-medwork-light dark:bg-medwork-dark
-            border-medwork-dark dark:border-medwork-light border z-50
+            fixed bottom-8 right-4 p-3 rounded-full
+            text-medwork-dark dark:text-medwork-light bg-medwork-light dark:bg-medwork-dark
+            border-medwork-dark dark:border-medwork-light border z-30
             ${isVisible ? 'visible' : ''}`}
         >
             <AiOutlineArrowUp />

@@ -17,7 +17,7 @@ function ImageCategory({
 
   return (
     <>
-      <div className="relative w-full md:flex-row h-[95vh] sm:h-[60vh] hidden md:block motion-safe:animate-fadeIn text-gray-500 dark:text-gray-400">
+      <div className="relative w-full md:flex-row h-[92vh] sm:h-[60vh] hidden md:block motion-safe:animate-fadeIn text-gray-500 dark:text-gray-400">
         <Image
           src={image}
           className="h-full min-w-full object-cover"
