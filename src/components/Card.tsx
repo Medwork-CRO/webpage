@@ -19,11 +19,12 @@ function Card({
   return (
     <div className="flex transform flex-col gap-8">
       <Link href={readMoreLink}>
-        <div tabIndex={index} className="service  flex flex-col gap-6
+        <div tabIndex={index} className="
+          flex flex-col gap-6
           p-4 rounded-xl border-2 border-transparent
           border-[#c5b8aa] dark:border-gray-700
-          hover:shadow-2xl focus-visible:shadow-xl
-          transition duration-500 ease-in-out
+          shadow-md hover:shadow-2xl focus-visible:shadow-xl
+          transition duration-200 ease-in-out
         ">
           <div className="overflow-hidden">
             <Image

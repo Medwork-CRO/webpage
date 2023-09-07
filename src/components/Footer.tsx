@@ -77,7 +77,7 @@ function CompanyInfo() {
 function Legal() {
   return (
     <div className="flex flex-col xs:flex-row items-start gap-2 text-md text-gray-400 sm:self-end">
-      <span>© {new Date().getFullYear()} Medwork</span>
+      <span>2005 - {new Date().getFullYear()} © Medwork</span>
       <span className="flex flex-col xs:flex-row gap-2">
         <span className="hidden xs:block">|</span>
         <span>All Rights Reserved</span>
