@@ -26,14 +26,15 @@ function VerticalNav({ label, href, subCategories }: NavProp) {
   const isActiveSubCategory = subCategories?.some(
     (subCategory) => subCategory.href === router.asPath
   );
-  const activeClasses = isActive || isActiveSubCategory ? 'text-cyan-500 dark:text-cyan-400' : '';
+  const activeOption = isActive || isActiveSubCategory ? 'text-cyan-500 dark:text-cyan-400' : '';
+  const clickedOption = isClicked ? 'shadow-xl' : '';
   const hasSubCategories = subCategories && subCategories.length > 0;
 
   return (
     <div className="transform duration-200">
       <div
         className={`
-          ${hasSubCategories ? 'shadow-xl' : ''}
+          ${clickedOption}
           flex items-center justify-between
           pb-4 mb-4 text-lg font-semibold
           text-medwork-dark dark:text-medwork-light
@@ -49,13 +50,13 @@ function VerticalNav({ label, href, subCategories }: NavProp) {
             key={href}
             href={href}
           >
-            <span className={`pl-2 ${activeClasses}`}>{label.toUpperCase()}</span>
+            <span className={`pl-2 ${activeOption}`}>{label.toUpperCase()}</span>
           </Link>
         )}
         {hasSubCategories && (
           <>
             <div className="flex items-center">
-              <span className={`pl-2 ${activeClasses}`}>{label.toUpperCase()}</span>
+              <span className={`pl-2 ${activeOption}`}>{label.toUpperCase()}</span>
             </div>
             <FaAngleDown className={`text-xl p-[2px] mr-2 text-medwork-dark dark:text-medwork-light rounded-full ${isClicked ? 'rotate-0' : 'rotate-180'}`} />
           </>

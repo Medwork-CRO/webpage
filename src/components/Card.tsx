@@ -23,18 +23,18 @@ function Card({
           flex flex-col gap-6
           p-4 rounded-xl border-2 border-transparent
           border-[#c5b8aa] dark:border-gray-700
-          shadow-md hover:shadow-2xl focus-visible:shadow-xl
+          shadow-sm hover:shadow-2xl focus-visible:shadow-2xl dark:shadow-gray-600
           transition duration-200 ease-in-out
         ">
           <div className="overflow-hidden">
             <Image
-              className="h-[24rem] rounded-lg object-cover sm:h-[32rem]"
+              className="h-[12rem] sm:h-[24rem] md:h-[32rem] rounded-lg object-cover"
               src={imageData}
               alt={imageTitle}
             />
           </div>
           <div
-            className="font-semibold text-2xl text-cyan-600 dark:text-white"
+            className="font-semibold text-center text-2xl text-cyan-600 dark:text-white"
           >
             {imageTitle}
           </div>
