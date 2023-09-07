@@ -146,11 +146,19 @@ function ThemeSelector({ theme, setTheme }: { theme: THEME, setTheme: Function }
 function Information() {
   return (
     <div className="flex flex-col items-start gap-2 text-md text-medwork-dark dark:text-medwork-light">
+      <div className="flex flex-col sm:flex-row flex-wrap items-start">
+        <Link
+          className="font-semibold hover:underline focus-visible:underline whitespace-nowrap"
+          href={'/about/legislation'}
+        >
+          Legislation
+        </Link>
+      </div>
       <div className="flex flex-col sm:flex-row flex-wrap items-start gap-4">
         {policies.map((policy, i) => (
           <>
             <Link
-            key={i}
+              key={i}
               className="font-semibold hover:underline focus-visible:underline whitespace-nowrap"
               href={`${policy.filePath}/${policy.fileName}`}
               target="_blank"
@@ -164,14 +172,6 @@ function Information() {
           </span>
           </>
         ))}
-      </div>
-      <div className="flex flex-col sm:flex-row flex-wrap items-start gap-2 text-md">
-        <Link
-          className="font-semibold hover:underline focus-visible:underline whitespace-nowrap"
-          href={'/about/legislation'}
-        >
-          Legislation
-        </Link>
       </div>
     </div >
   );
