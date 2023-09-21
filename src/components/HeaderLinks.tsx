@@ -3,16 +3,16 @@ import { NavProp } from "./NavHamburger";
 const About = {
   label: "About",
   href: "/about",
-  subCategories: [
-    {
-      label: "Company",
-      href: "/about/company",
-    },
-    // {
-    //   label: "Legislation",
-    //   href: "/about/legislation",
-    // },
-  ],
+  // subCategories: [
+  //   {
+  //     label: "Company",
+  //     href: "/about/company",
+  //   },
+  //   {
+  //     label: "Legislation",
+  //     href: "/about/legislation",
+  //   },
+  // ],
 };
 
 const Services = {

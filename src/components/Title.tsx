@@ -12,7 +12,7 @@ function Title({
   const textAlign = align === "left" ? "md:text-left" : "md:text-center";
   return (
     <div
-      className={`my-4 ${textAlign} text-4xl font-bold ${colour} my-4`}
+      className={`my-4 ${textAlign} text-4xl font-bold leading-relaxed ${colour} my-4`}
     >
       {/*  text-cyan-500 */}
       {/* &#8226;  */}

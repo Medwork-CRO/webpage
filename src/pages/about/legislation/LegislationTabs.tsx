@@ -233,7 +233,7 @@ const LegislationTabs = () => {
                             return (<li className="sm:mr-2 last:mr-0 mb-2 sm:mb-0 last:mb-0 flex-auto text-center cursor-pointer transition-all duration-500 hover:bg-cyan-300 hover:bg-opacity-25" key={index}>
                                 <a
                                     className={
-                                        `text-xs font-bold uppercase px-5 py-3 block border-medwork-dark dark:border-medwork-light border ${openTab === index
+                                        `text-md font-bold uppercase px-5 py-3 block border-medwork-dark dark:border-medwork-light border ${openTab === index
                                             ? "text-medwork-light dark:text-medwork-dark border-cyan-400 dark:border-cyan-400 bg-cyan-400 dark:bg-cyan-400"
                                             : "text-medwork-dark dark:text-medwork-light"}`
                                     }
@@ -247,14 +247,15 @@ const LegislationTabs = () => {
                         })}
                     </ul>
 
-                    <p className="text-xs text-medwork-dark dark:text-medwork-light mb-10">* For the full translation of the texts in English, please contact us at <a
-                        aria-label="By clicking you will be taken to Mail"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                        href={"mailto:" + mail}
-                    >
-                        {mail}
-                    </a>
+                    <p className="text-sm text-medwork-dark dark:text-medwork-light mb-10">
+                        * For the full translation of the texts in English, please contact us at <a
+                            aria-label="By clicking you will be taken to Mail"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                            href={"mailto:" + mail}
+                        >
+                            {mail}
+                        </a>
                     </p>
 
                     <div className="relative flex flex-col min-w-0 break-words">

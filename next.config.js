@@ -16,7 +16,7 @@ const nextConfig = {
       },
       {
         source: '/about.php',
-        destination: '/about/company',
+        destination: '/about',
         permanent: true,
       },
       {
@@ -121,22 +121,22 @@ const nextConfig = {
       },
       {
         source: '/nikolas-tsiakkas.php',
-        destination: '/about/company',
+        destination: '/about',
         permanent: true,
       },
       {
         source: '/eleni-voidou.php',
-        destination: '/about/company',
+        destination: '/about',
         permanent: true,
       },
       {
         source: '/katerina-paschou.php',
-        destination: '/about/company',
+        destination: '/about',
         permanent: true,
       },
       {
         source: '/fotoula-dragatsi.php',
-        destination: '/about/company',
+        destination: '/about',
         permanent: true,
       },
       {

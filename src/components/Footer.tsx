@@ -215,7 +215,7 @@ function Footer({ theme, setTheme }: { theme: any, setTheme: any }) {
       id="footer"
       className={`${inter.variable} w-full flex justify-center shadow-sm bg-medwork-light dark:bg-medwork-dark px-4 sm:px-6 lg:px-0 pt-0 sm:pt-12 lg:pt-24 font-sans relative`}
     >
-      <div className="flex w-full max-w-[1676px] mx-0 eq:mx-8 flex-col text-medwork-dark dark:text-medwork-light z-[5]"> {/* max-w-[1376px] */}
+      <div className="flex w-full max-w-[1676px] mx-0 eq:mx-8 flex-col text-medwork-dark dark:text-medwork-light z-[5]"> {/* max-w-[1476px] */}
         <div className="mt-6 border-t border-medwork-dark dark:border-medwork-light flex justify-between items-center">
           <div></div>
           <ThemeSelector theme={theme} setTheme={setTheme} />
@@ -255,7 +255,7 @@ function Footer({ theme, setTheme }: { theme: any, setTheme: any }) {
           <div className="min-w-96 flex flex-col gap-6 text-left">
             <span className="text-2xl font-semibold">ABOUT</span>
             <div className="text-xl flex flex-col gap-2">
-              {[...AboutUs.subCategories, Careers].map((a, i) => (
+              {[AboutUs, Careers].map((a, i) => (
                 <Link
                   aria-label={`By clicking you will be taken to ${a.label}`}
                   key={i}
