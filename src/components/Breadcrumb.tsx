@@ -2,7 +2,14 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 const formatBreadcrumb = (str: string) => {
-    return str.replace(/-/g, ' ').split(' ').map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(' ');
+    return str
+        .replace(/-/g, ' ')
+        .replace(/_/g, ' ')
+        .split(' ')
+        .map(s =>
+            s.charAt(0).toUpperCase() + s.slice(1)
+        )
+        .join(' ');
 };
 
 const getPathForKnownRoutes = (str: string) => {
@@ -10,6 +17,8 @@ const getPathForKnownRoutes = (str: string) => {
         return '/';
     } else if (str === '/home/services') {
         return '';
+    } else if (str === '/home/services/vigilance') {
+        return '/services/vigilance';
     } else if (str === '/home/about') {
         return '';
     }

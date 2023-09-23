@@ -22,37 +22,37 @@ function Vigilance() {
             <InfoBox
               title="PV System & QPPV"
               text="We establish and maintain robust Pharmacovigilance Systems.  Our team of experienced EU Qualified Persons for Pharmacovigilance will guarantee the effective management of your drug safety affairs and ensure regulatory compliance."
-              link="/solutions/early-phase/clinical-research-units/"
+              link="/services/vigilance/pv-system-qppv"
               color="bg-blue-200"
             />
             <InfoBox
               title="Local Pharmacovigilance"
               text="Comprehensive and integrated pharmacovigilance services for Greece, Cyprus and Malta, that extend beyond the responsibilities of the LPPV/LSO, providing Marketing Authorization Holders with a complete local PV system."
-              link="/solutions/early-phase/pharmacodynamic-models/"
+              link="/services/vigilance/local-pharmacovigilance"
               color="bg-blue-200"
             />
             <InfoBox
               title="Case processing"
               text="Streamlined case processing solutions tailored to clients workflows and processes. We adapt to our customers needs, being able to handle excessive volume of ICSRs while ensuring quality and compliance. "
-              link="/solutions/early-phase/pharmacodynamic-models/"
+              link="/services/vigilance/case-processing"
               color="bg-blue-200"
             />
             <InfoBox
               title="Global and local literature monitoring"
               text="Medwork offers efficient global and local literature monitoring services empowered by the involvement of Medical Doctors who are actively engaged in the review and assessment process."
-              link="/solutions/early-phase/pharmacodynamic-models/"
+              link="/services/vigilance/global-and-local-literature-monitoring"
               color="bg-blue-200"
             />
             <InfoBox
               title="Clinical Safety"
               text="Despite our relatively young presence, our focus on clinical trials safety is steadfast. With a history of clinical trial PV execution in over 10 countries, our experience is steadily growing and extending to encompass additional territories."
-              link="/solutions/early-phase/pharmacodynamic-models/"
+              link="/services/vigilance/clinical-safety"
               color="bg-blue-200"
             />
             <InfoBox
               title="Medical device vigilance"
               text="Drawing from our extensive 15-year journey in drug safety, we extend our expertise to the realm of medical device vigilance applying the same <stringent> concepts and mindset that have defined our pharmacovigilance legacy."
-              link="/solutions/early-phase/pharmacodynamic-models/"
+              link="/services/vigilance/medical-device-vigilance"
               color="bg-blue-200"
             />
           </div>

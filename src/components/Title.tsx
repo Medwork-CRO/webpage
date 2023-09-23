@@ -12,6 +12,7 @@ function Title({
   const textAlign = align === "left" ? "md:text-left" : "md:text-center";
   return (
     <div
+      id={title.split(" ").join("-").toLowerCase()}
       className={`my-4 ${textAlign} text-4xl font-bold leading-relaxed ${colour} my-4`}
     >
       {/*  text-cyan-500 */}
