@@ -2,16 +2,16 @@ import Breadcrumbs from "@/components/Breadcrumb";
 import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ImageCategory from "@/components/ImageCategory";
 import Title from "@/components/Title";
-import vigilance from "@assets/services/vigilance-vector.jpg";
+import safety from "@assets/services/safety-vector.jpg";
 
 const paragraph = [
   "Navigating the realm of clinical trials safety requires diligence and expertise. While we might not boast extensive experience, our dedication to excellence remains unwavering. Discover how we bring a fresh perspective and commitment to your clinical trials safety needs.",
 ];
 
-function Vigilance() {
+function ClinicalSafety() {
   return (
     <div className="mx-auto flex flex-col items-center justify-between w-full">
-      <ImageCategory image={vigilance} title="CLINICAL TRIALS SAFETY" />
+      <ImageCategory image={safety} title="CLINICAL TRIALS SAFETY" />
 
       <div id="main-content" className="max-w-[1476px] w-full">
         <Breadcrumbs />
@@ -39,4 +39,4 @@ function Vigilance() {
   );
 }
 
-export default Vigilance;
+export default ClinicalSafety;

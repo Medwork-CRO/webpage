@@ -2,7 +2,7 @@ import Breadcrumbs from "@/components/Breadcrumb";
 import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ImageCategory from "@/components/ImageCategory";
 import Title from "@/components/Title";
-import vigilance from "@assets/services/vigilance-vector.jpg";
+import vigilance from "@assets/services/safety-vector.jpg";
 
 const paragraphs0 = [
   "Enhancing Pharmacovigilance Efficacy: PV Systems and QPPV Services.",

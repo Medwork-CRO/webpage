@@ -1,5 +1,5 @@
 import outsourcing from "@assets/services/outsourcing-vector.jpg";
-import vigilance from "@assets/services/vigilance-vector.jpg";
+import safety from "@assets/services/safety-vector.jpg";
 import qualityManagement from "@assets/services/quality-management-vector.jpg";
 import { StaticImageData } from "next/image";
 import "react-multi-carousel/lib/styles.css";
@@ -15,9 +15,9 @@ type ImageData = {
 
 const images: ImageData[] = [
   {
-    imageData: vigilance,
-    imageTitle: "VIGILANCE",
-    readMoreLink: "/services/vigilance",
+    imageData: safety,
+    imageTitle: "SAFETY",
+    readMoreLink: "/services/safety",
     imageDescription:
       "Pharmacovigilance is our dedicated service ensuring the safety, efficacy, and risk/benefit balance of pharmaceutical products. We provide detailed drug safety and adverse event reporting services.",
   },

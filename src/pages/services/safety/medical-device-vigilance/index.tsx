@@ -2,20 +2,20 @@ import Breadcrumbs from "@/components/Breadcrumb";
 import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ImageCategory from "@/components/ImageCategory";
 import Title from "@/components/Title";
-import vigilance from "@assets/services/vigilance-vector.jpg";
+import safety from "@assets/services/safety-vector.jpg";
 
 const paragraph1 = [
   "Drawing from our extensive 15-year journey in pharmacovigilance, we proudly extend our expertise to the realm of medical device vigilance. As a natural progression of our commitment to safety, we approach medical devices with the same stringent concepts and unwavering mindset that have defined our pharmacovigilance legacy.",
 ];
 
 const paragraph2 = [
-  "Embrace this evolution with us, as our pharmacovigilance legacy transcends to elevate medical device vigilance. It's more than a service – it's a continuation of our commitment to fostering safety and trust across the healthcare spectrum.",
+  "Embrace this evolution with us, as our pharmacovigilance legacy transcends to elevate medical device vigilance. It's more than a service - it's a continuation of our commitment to fostering safety and trust across the healthcare spectrum.",
 ];
 
-function Vigilance() {
+function MedicalDeviceVigilance() {
   return (
     <div className="mx-auto flex flex-col items-center justify-between w-full">
-      <ImageCategory image={vigilance} title="MEDICAL DEVICES VIGILANCE" />
+      <ImageCategory image={safety} title="MEDICAL DEVICES VIGILANCE" />
 
       <div id="main-content" className="max-w-[1476px] w-full">
         <Breadcrumbs />
@@ -49,4 +49,4 @@ function Vigilance() {
   );
 }
 
-export default Vigilance;
+export default MedicalDeviceVigilance;

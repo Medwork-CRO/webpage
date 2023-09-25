@@ -17,8 +17,8 @@ const getPathForKnownRoutes = (str: string) => {
         return '/';
     } else if (str === '/home/services') {
         return '';
-    } else if (str === '/home/services/vigilance') {
-        return '/services/vigilance';
+    } else if (str === '/home/services/safety') {
+        return '/services/safety';
     } else if (str === '/home/about') {
         return '';
     }

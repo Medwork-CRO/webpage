@@ -2,17 +2,17 @@ import Breadcrumbs from "@/components/Breadcrumb";
 import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ImageCategory from "@/components/ImageCategory";
 import Title from "@/components/Title";
-import vigilance from "@assets/services/vigilance-vector.jpg";
+import safety from "@assets/services/safety-vector.jpg";
 
 const paragraphs0 = [
   "LPPV & Local PV Services in Greece, Cyprus and Malta",
   "Experience Tailored to Your Needs: Our local Pharmacovigilance (PV) services are designed to cater to a diverse range of clients, ensuring seamless compliance and risk management. Whether you're a small Marketing Authorization Holder (MAH) with limited products and no local office, or a prominent international pharmaceutical company with an extensive portfolio, our expertise adapts to your specific requirements.",
 ];
 
-function Vigilance() {
+function LocalPharmacovigilance() {
   return (
     <div className="mx-auto flex flex-col items-center justify-between w-full">
-      <ImageCategory image={vigilance} title="LOCAL PHARMACOVIGILANCE" />
+      <ImageCategory image={safety} title="LOCAL PHARMACOVIGILANCE" />
 
       <div id="main-content" className="max-w-[1476px] w-full">
         <Breadcrumbs />
@@ -52,4 +52,4 @@ function Vigilance() {
   );
 }
 
-export default Vigilance;
+export default LocalPharmacovigilance;

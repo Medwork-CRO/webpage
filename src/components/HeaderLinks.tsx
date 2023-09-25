@@ -20,8 +20,8 @@ const Services = {
   href: "/services",
   subCategories: [
     {
-      label: "Vigilance",
-      href: "/services/vigilance",
+      label: "Safety",
+      href: "/services/safety",
     },
     {
       label: "Quality Management",

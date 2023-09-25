@@ -2,7 +2,7 @@ import Breadcrumbs from "@/components/Breadcrumb";
 import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ImageCategory from "@/components/ImageCategory";
 import Title from "@/components/Title";
-import vigilance from "@assets/services/vigilance-vector.jpg";
+import safety from "@assets/services/safety-vector.jpg";
 
 const paragraph = [
   "Efficient ICSR Case Processing crafted to  your requirements. With an extended team of dedicated pharmacovigilance professionals, we excel in managing all aspects of ICSR processing. Whether faced with urgent or substantial caseloads, we seamlessly adapt to your requirements.",
@@ -12,10 +12,10 @@ const paragraph2 = [
   "Partner with us to experience the synergy of skilled professionals, adaptable solutions, and a robust quality assurance framework for ICSR case processing that meets the highest standards of accuracy and efficiency.",
 ];
 
-function Vigilance() {
+function CaseProcessing() {
   return (
     <div className="mx-auto flex flex-col items-center justify-between w-full">
-      <ImageCategory image={vigilance} title="CASE PROCESSING" />
+      <ImageCategory image={safety} title="CASE PROCESSING" />
 
       <div id="main-content" className="max-w-[1476px] w-full">
         <Breadcrumbs />
@@ -53,4 +53,4 @@ function Vigilance() {
   );
 }
 
-export default Vigilance;
+export default CaseProcessing;
