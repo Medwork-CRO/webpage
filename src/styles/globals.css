@@ -73,6 +73,10 @@
   }
 }
 
+.narrow-letters {
+  font-stretch: condensed;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;

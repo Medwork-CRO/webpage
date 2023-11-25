@@ -42,7 +42,7 @@ function CarouselImage({ image, title }: ImageShowCaseProps) {
 
 
   return (
-    <div className="relative flex flex-col md:flex-row h-[92vh] sm:h-[60vh] flex-[0_0_100%] motion-safe:animate-fadeIn">
+    <div className="relative flex flex-col md:flex-row h-[85vh] flex-[0_0_100%] motion-safe:animate-fadeIn">
       <Image
         src={image}
         className="h-full min-w-full object-cover"
@@ -54,7 +54,7 @@ function CarouselImage({ image, title }: ImageShowCaseProps) {
 
       <div className="absolute bottom-8 sm:bottom-16 z-20 w-full mb-8 sm:mb-2">
         <div className="flex flex-col justify-center gap-8 max-w-[1576px] px-4 md:px-6 lg:px-0 mx-auto text-gray-700 dark:text-gray-300 text-center">
-          <span className="font-semibold text-2xl sm:text-4xl lg:text-4xl leading-snug sm:leading-snug md:leading-snug lg:leading-snug">
+          <span className="font-light narrow-letters text-2xl sm:text-4xl lg:text-4xl leading-relaxed sm:leading-relaxed md:leading-relaxed lg:leading-relaxed">
             {title}
           </span>
         </div>

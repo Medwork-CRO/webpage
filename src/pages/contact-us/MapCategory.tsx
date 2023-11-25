@@ -95,7 +95,7 @@ function MapCategory({
 
 
           <div className="absolute top-2/4 z-10 -translate-y-1/2 transform w-full">
-            <div className="flex flex-col justify-center gap-8 px-4 md:px-6 lg:px-0 max-w-[1476px] mx-auto">
+            <div className="flex flex-col justify-center gap-8 px-4 md:px-6 lg:px-0 max-w-[1200px] mx-auto">
               {getCompanyInfo()}
             </div >
           </div>

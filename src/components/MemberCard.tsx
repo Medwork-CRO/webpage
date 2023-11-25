@@ -21,7 +21,7 @@ function MemberCard({
       <div className="items-top mt-8 flex flex-col text-black dark:text-white">
         <div className="flex flex-col items-center gap-2">
           <div className="flex items-center gap-2 justify-center">
-            <h4 className="text-bluePrimary text-xl font-bold">{name}</h4>
+            <h4 className="text-bluePrimary text-xl font-extralight narrow-letters">{name}</h4>
             <a
               aria-label="By clicking you will be taken to LinkedIn"
               rel="noopener noreferrer"
@@ -31,9 +31,9 @@ function MemberCard({
               <FaLinkedin className="antialiased" size={"20px"} />
             </a>
           </div>
-          <p className="text-base font-normal text-cyan-500">{title}</p>
+          <p className="text-base font-thin narrow-letters text-cyan-500">{title}</p>
         </div>
-        <p className="mt-4 overflow-ellipsis text-lg font-normal text-gray-500 dark:text-gray-400 md:text-base">
+        <p className="mt-4 overflow-ellipsis text-lg font-thin narrow-letters text-gray-500 dark:text-gray-400 md:text-base">
           {description}
         </p>
       </div>

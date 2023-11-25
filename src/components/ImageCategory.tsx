@@ -17,7 +17,7 @@ function ImageCategory({
 
   return (
     <>
-      <div className="relative w-full md:flex-row h-[92vh] sm:h-[60vh] hidden md:block motion-safe:animate-fadeIn text-gray-500 dark:text-gray-400">
+      <div className="relative w-full md:flex-row h-[90vh] hidden md:block motion-safe:animate-fadeIn text-gray-500 dark:text-gray-400">
         <Image
           src={image}
           className="h-full min-w-full object-cover"
@@ -29,14 +29,14 @@ function ImageCategory({
         ></div>
 
         <div className="absolute top-3/4 z-20 -translate-y-1/2 transform w-full">
-          <div className={`flex flex-col select-none justify-center gap-8 px-4 md:px-6 lg:px-0 max-w-[1476px] mx-auto ${!textSide || textSide === "left"
+          <div className={`flex flex-col select-none justify-center gap-8 px-4 md:px-6 lg:px-0 max-w-[1200px] mx-auto ${!textSide || textSide === "left"
             ? "text-left"
             : "text-right"
             }`}>
-            <h1 className="font-semibold italic text-2xl md:text-6xl xl:text-7xl">
+            <h1 className=" font-thin narrow-letters italic text-lg md:text-6xl xl:text-7xl">
               {title}
             </h1>
-            <p className="text-xl md:text-4xl xl:text-5xl">
+            <p className="text-md md:text-xl xl:text-2xl font-thin narrow-letters">
               {description}
             </p>
           </div>
@@ -47,8 +47,8 @@ function ImageCategory({
         <Image src={image} alt="Image for mobile" />
         <div className="mx-4 sm:mx-6 lg:mx-0 border-b border-b-medwork-dark dark:border-b-medwork-light">
           <div className="mt-4 md:mt-0">
-            <h1 className="mb-8 text-3xl italic text-center">{title}</h1>
-            <p className="mb-4 text-lg">{description}</p>
+            <h1 className="mb-8 text-lg italic text-center">{title}</h1>
+            <p className="mb-4 text-md">{description}</p>
           </div>
         </div>
       </div>

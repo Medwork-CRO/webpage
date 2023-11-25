@@ -1,8 +1,8 @@
 import Breadcrumbs from "@/components/Breadcrumb";
-import Counter from "@/components/Counter";
 import DisplayParagraphs from "@/components/DisplayParagraphs";
 import DualLayerParallax from "@/components/DualLayerParallax";
 import ImageCategory from "@/components/ImageCategory";
+import Statistics from "@/components/Statistics";
 import kariera from "@assets/companies/kariera_icon.png";
 import linkedin from "@assets/companies/linkedin_icon.png";
 import team3 from "@assets/team-photos/team3.jpg";
@@ -20,45 +20,6 @@ const paragraphs = [
 //   "With three years at Medwork, you'll gather extensive industry knowledge, positioning you advantageously for rapid career advancement in the ever-evolving pharmaceutical field."
 // ];
 
-function Statistics() {
-  return (
-    <div className="flex flex-col text-center items-center justify-between gap-8 text-gray-500 dark:text-gray-400 md:flex-row w-full">
-      <div>
-        <div className="flex w-56 flex-col">
-          <span className="flex flex-row self-center mb-4 text-4xl font-bold text-cyan-500">
-            <Counter number={90} title="%" duration={3} />
-          </span>
-          <span className="subtext text-gray-600 dark:text-gray-400">
-            of employees are <strong>women</strong>
-          </span>
-        </div>
-      </div>
-      <div className="h-full px-12 md:px-0 md:py-12 border border-gray-500"></div>
-      <div>
-        <div className="flex w-56 flex-col">
-          <span className="flex flex-row self-center mb-4 text-4xl font-bold text-cyan-500">
-            <Counter number={80} title="%" duration={3} />
-          </span>
-          <span className="subtext text-gray-600 dark:text-gray-400">
-            of employees are happy after <strong>2 years</strong>
-          </span>
-        </div>
-      </div>
-      <div className="h-full px-12 md:px-0 md:py-12 border border-gray-500"></div>
-      <div>
-        <div className="flex w-56 flex-col">
-          <span className="flex flex-row self-center mb-4 text-4xl font-bold text-cyan-500">
-            <Counter number={84} title="%" duration={3} />
-          </span>
-          <span className="subtext text-gray-600 dark:text-gray-400">
-            of employees has at least one <strong>degree</strong>
-          </span>
-        </div>
-      </div>
-    </div>
-  )
-}
-
 function Cosmetovigilance() {
   const recruitmentEmail = "recruitment@medwork.gr";
 
@@ -72,10 +33,14 @@ function Cosmetovigilance() {
        passionate about improving patient outcomes."
       />
 
-      <div id="main-content" className="max-w-[1476px] w-full">
+      <div id="main-content" className="max-w-[1200px] w-full">
         <Breadcrumbs />
         <div className="flex flex-col items-center gap-6 whitespace-pre-line px-4 sm:px-6 text-2xl text-gray-500 dark:text-gray-400 lg:px-0 py-16 text-center w-full">
-          <Statistics />
+          <Statistics Stats={[
+            { count: 90, symbol: "%", title: "of employees are", point: "women" },
+            { count: 80, symbol: "%", title: "of employees are happy after", point: "2 years" },
+            { count: 84, symbol: "%", title: "of employees has at least one", point: "degree" },
+          ]}/>
 
           <DisplayParagraphs paragraphs={paragraphs} />
 

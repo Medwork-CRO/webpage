@@ -6,14 +6,14 @@ type TitleProps = {
 
 function Title({
   title,
-  colour = "text-gray-500 dark:text-gray-400",
+  colour = "text-[#444444] dark:text-gray-400",
   align = "left",
 }: TitleProps) {
   const textAlign = align === "left" ? "md:text-left" : "md:text-center";
   return (
     <div
       id={title.split(" ").join("-").toLowerCase()}
-      className={`my-4 ${textAlign} text-4xl font-bold leading-relaxed ${colour} my-4`}
+      className={`my-4 ${textAlign} text-4xl font-light narrow-letters leading-relaxed ${colour} my-4`}
     >
       {/*  text-cyan-500 */}
       {/* &#8226;  */}

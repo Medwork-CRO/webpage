@@ -26,8 +26,9 @@ module.exports = {
       colors: {
         medwork: {
           light: "#f6f1eb",
-          dark: "#2d333b",
+          dark: "#1A1B26",
           blue: "#2d333b",
+          brown: "#444444",
         },
         primary: {
           50: "#eff6ff",
@@ -86,7 +87,7 @@ module.exports = {
       xs: "400px",
       sm: "576px",
       md: "960px",
-      eq: "2120px",
+      eq: "1200px",
       lg: "1440px",
       xl: "1840px",
       "2xl": "2160px",

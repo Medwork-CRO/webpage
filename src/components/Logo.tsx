@@ -21,8 +21,7 @@ function Logo({ children, ...options }: Props) {
     >
       <Image src={medworkLogo} alt="Medwork Logo" width={46} />
       <div
-        className={`${roboto.className} font-sans text-3xl text-[#818181]`}
-        style={{ fontStyle: "italic" }}
+        className={`${roboto.className} font-sans text-3xl text-[#818181] font-light narrow-letters`}
       >
         Medwork
       </div>
