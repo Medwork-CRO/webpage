@@ -53,7 +53,7 @@ function CarouselImage({ image, title }: ImageShowCaseProps) {
       <div className="absolute inset-x-0 bottom-0 z-10 from-medwork-light dark:from-medwork-dark to-transparent bg-gradient-to-t h-5/6"></div>
 
       <div className="absolute bottom-8 sm:bottom-16 z-20 w-full mb-8 sm:mb-2">
-        <div className="flex flex-col justify-center gap-8 max-w-[1576px] px-4 md:px-6 lg:px-0 mx-auto text-gray-700 dark:text-gray-300 text-center">
+        <div className="flex flex-col justify-center gap-8 max-w-[1200px] px-4 md:px-6 lg:px-0 mx-auto text-gray-700 dark:text-gray-300 text-center">
           <span className="font-light narrow-letters text-2xl sm:text-4xl lg:text-4xl leading-relaxed sm:leading-relaxed md:leading-relaxed lg:leading-relaxed">
             {title}
           </span>

@@ -21,9 +21,9 @@ function Logo({ children, ...options }: Props) {
     >
       <Image src={medworkLogo} alt="Medwork Logo" width={46} />
       <div
-        className={`${roboto.className} font-sans text-3xl text-[#818181] font-light narrow-letters`}
+        className={`${roboto.className} font-sans font-light narrow-letters leading-relaxed text-3xl text-medwork-brown dark:text-medwork-light`}
       >
-        Medwork
+        MedWork
       </div>
     </Link>
   );
