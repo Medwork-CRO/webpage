@@ -6,7 +6,7 @@ type TitleProps = {
 
 function Title({
   title,
-  colour = "text-[#444444] dark:text-gray-400",
+  colour = "text-medwork-brown dark:text-gray-400",
   align = "left",
 }: TitleProps) {
   const textAlign = align === "left" ? "md:text-left" : "md:text-center";

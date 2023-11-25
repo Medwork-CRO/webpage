@@ -42,11 +42,11 @@ function Home() {
       </Carousel>
 
       <div id="main-content" className="max-w-[1200px] w-full">
-        <div className="flex flex-col items-center gap-12 whitespace-pre-line px-4 sm:px-6 text-2xl text-gray-500 dark:text-gray-400 lg:px-0 py-16 h-screen">
+        <div className="flex flex-col items-center gap-12 whitespace-pre-line px-4 sm:px-6 lg:px-0 py-16 h-screen">
           <Title title={"Advancing Drug Safety with Operational Excellence, Regulatory Compliance, and Adaptive Solutions"} />
           <DisplayParagraphs paragraphs={paragraphs} />
         </div>
-        <div className="flex flex-col items-center gap-12 whitespace-pre-line px-4 sm:px-6 text-2xl text-gray-500 dark:text-gray-400 lg:px-0 py-16">
+        <div className="flex flex-col items-center gap-12 whitespace-pre-line px-4 sm:px-6 lg:px-0 py-16">
           <ProvidedServices />
           <Statistics Stats={[
             { count: 15, symbol: "+", title: "years of", point: "experience" },
