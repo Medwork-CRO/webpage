@@ -2,18 +2,12 @@ import "@/styles/globals.css";
 
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import { Inter } from "@next/font/google";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
+import { THEME } from "@/types/Theme";
 import { AnimatePresence } from "framer-motion";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import { useEffect, useState } from "react";
-import ScrollToTopButton from "@/components/ScrollToTopButton";
-import { THEME } from "@/types/Theme";
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-});
 
 function initializeThemeSetting() {
   if (typeof window === 'undefined') {
@@ -60,7 +54,7 @@ function App({ Component, pageProps }: AppProps) {
   }, [theme]);
 
   return (
-    <div className={`${inter.variable} bg-medwork-light font-sans dark:bg-medwork-dark`}>
+    <div className={`bg-medwork-light font-sans dark:bg-medwork-dark`}>
       <Head>
         <title>Medwork</title>
         <meta name="title" content="Medwork" />

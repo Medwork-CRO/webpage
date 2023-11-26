@@ -1,14 +1,14 @@
 import Logo from "@/components/Logo";
 import RoundedButton from "@/components/RoundedButton";
-import { Inter } from "@next/font/google";
+import { THEME } from "@/types/Theme";
 import { FaLinkedin } from "@react-icons/all-files/fa/FaLinkedin";
 import { MdEmail } from "@react-icons/all-files/md/MdEmail";
 import { MdLocationOn } from "@react-icons/all-files/md/MdLocationOn";
 import Link from "next/link";
+import { ReactElement } from "react";
 import { MdDarkMode, MdLightMode, MdOutlineBrightnessAuto } from 'react-icons/md';
 import { AboutUs, Careers, Services } from "./HeaderLinks";
-import { THEME } from "@/types/Theme";
-import { ReactElement } from "react";
+import CompanyInfo from "./companyInfo";
 
 const recruitmentEmail = "recruitment@medwork.gr";
 const mail = "medworkinfo@medwork.gr";
@@ -38,12 +38,7 @@ const policies = [
   },
 ];
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-});
-
-function CompanyInfo() {
+function CompanyContact() {
   return (
     <div className="flex-start flex flex-row items-start justify-start gap-4 align-middle">
       <a
@@ -76,7 +71,7 @@ function CompanyInfo() {
 
 function Legal() {
   return (
-    <div className="flex flex-col xs:flex-row items-start gap-2 text-md text-gray-400 sm:self-end">
+    <div className="flex flex-col xs:flex-row items-start gap-2 text-md font-thin narrow-letters text-gray-400 sm:self-end">
       <span>2005 - {new Date().getFullYear()} © Medwork</span>
       <span className="flex flex-col xs:flex-row gap-2">
         <span className="hidden xs:block">|</span>
@@ -85,7 +80,7 @@ function Legal() {
         <span>
           Made by{" "}
           <a
-            className="font-semibold"
+            className="font-thin narrow-letters"
             href="https://github.com/keybraker"
             target="_blank"
             rel="noopener noreferrer"
@@ -100,13 +95,17 @@ function Legal() {
 
 function ThemeSelector({ theme, setTheme }: { theme: THEME, setTheme: Function }) {
   let themeIcon: ReactElement<any, any>;
+  let tooltipText = "";
 
   if (theme === THEME.DARK) {
     themeIcon = <MdDarkMode />;
+    tooltipText = "Switch to light mode";
   } else if (theme === THEME.LIGHT) {
     themeIcon = <MdLightMode />;
+    tooltipText = "Switch to auto mode";
   } else {
     themeIcon = <MdOutlineBrightnessAuto />;
+    tooltipText = "Switch to dark mode";
   }
 
   const handleThemeChange = () => {
@@ -125,6 +124,7 @@ function ThemeSelector({ theme, setTheme }: { theme: THEME, setTheme: Function }
   return (
     <button
       id="theme-selector" aria-label="Change the theme"
+      title={tooltipText}
       className="
         absolute z-50 p-1 w-8 h-8 flex justify-center items-center rounded-full
         text-medwork-dark dark:text-medwork-light
@@ -145,21 +145,19 @@ function ThemeSelector({ theme, setTheme }: { theme: THEME, setTheme: Function }
 
 function Information() {
   return (
-    <div className="flex flex-col items-start gap-2 text-md text-medwork-dark dark:text-medwork-light">
-      <div className="flex flex-col sm:flex-row flex-wrap items-start">
-        <Link
-          className="font-semibold hover:underline focus-visible:underline whitespace-nowrap"
-          href={'/about/legislation'}
-        >
-          Legislation
-        </Link>
-      </div>
+    <div className="flex flex-col items-start gap-4 text-md text-medwork-dark dark:text-medwork-light">
+      <Link
+        className="font-black narrow-letters hover:underline focus-visible:underline whitespace-nowrap"
+        href={'/about/legislation'}
+      >
+        Legislation
+      </Link>
       <div className="flex flex-col sm:flex-row flex-wrap items-start gap-4">
         {policies.map((policy, i) => (
           <>
             <Link
               key={i}
-              className="font-semibold hover:underline focus-visible:underline whitespace-nowrap"
+              className="font-thin narrow-letters hover:underline focus-visible:underline whitespace-nowrap"
               href={`${policy.filePath}/${policy.fileName}`}
               target="_blank"
               rel="noopener noreferrer"
@@ -213,9 +211,9 @@ function Footer({ theme, setTheme }: { theme: any, setTheme: any }) {
   return (
     <footer
       id="footer"
-      className={`${inter.variable} w-full flex justify-center shadow-sm bg-medwork-light dark:bg-medwork-dark px-4 sm:px-6 lg:px-0 pt-0 sm:pt-12 lg:pt-24 font-sans relative`}
+      className={`w-full flex justify-center shadow-sm bg-medwork-light dark:bg-medwork-dark px-4 sm:px-6 lg:px-0 pt-0 sm:pt-12 lg:pt-24 font-sans relative`}
     >
-      <div className="flex w-full max-w-[1676px] md:px-4 mx-0 eq:mx-8 flex-col text-medwork-dark dark:text-medwork-light z-[5]"> {/* max-w-[1476px] */}
+      <div className="flex w-full max-w-[1200px] mx-0 eq:mx-8 flex-col text-medwork-dark dark:text-medwork-light z-[5]"> {/* max-w-[1200px] */}
         <div className="mt-6 border-t border-medwork-dark dark:border-medwork-light flex justify-between items-center">
           <div></div>
           <ThemeSelector theme={theme} setTheme={setTheme} />
@@ -224,20 +222,14 @@ function Footer({ theme, setTheme }: { theme: any, setTheme: any }) {
         {/* <div className="flex flex-col justify-between gap-8 py-16 md:flex-row"> */}
         {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-8 gap-16 py-16"> */}
         <div className="flex flex-col sm:flex-row flex-wrap justify-between gap-8 py-16">
-
           <div className="flex flex-col gap-6">
             <Logo />
-            <span className={"max-w-sm whitespace-pre-line text-left text-2xl"}>
-              Medwork is a Contract Research Organization (CRO) operating in
-              Southeast Europe, which since 2005 offers a wide range of
-              specialized services to the pharmaceutical and medical device
-              industries
-            </span>
+            <CompanyInfo />
           </div>
 
           <div className="min-w-96 flex flex-col gap-6 text-left">
-            <span className="text-2xl font-semibold">SERVICES</span>
-            <div className="text-xl flex flex-col gap-2">
+            <span className="text-xl font-light narrow-letters uppercase">{Services.label}</span>
+            <div className="text-md font-thin narrow-letters flex flex-col gap-2">
               {Services.subCategories.map((service, i) => (
                 <Link
                   aria-label={`By clicking you will be taken to ${service.label}`}
@@ -253,8 +245,8 @@ function Footer({ theme, setTheme }: { theme: any, setTheme: any }) {
           </div>
 
           <div className="min-w-96 flex flex-col gap-6 text-left">
-            <span className="text-2xl font-semibold">ABOUT</span>
-            <div className="text-xl flex flex-col gap-2">
+            <span className="text-xl font-light narrow-letters uppercase">{AboutUs.label}</span>
+            <div className="text-md font-thin narrow-letters flex flex-col gap-2">
               {[AboutUs, Careers].map((a, i) => (
                 <Link
                   aria-label={`By clicking you will be taken to ${a.label}`}
@@ -270,8 +262,8 @@ function Footer({ theme, setTheme }: { theme: any, setTheme: any }) {
           </div>
 
           <div className="min-w-96 flex flex-col gap-6 text-left">
-            <span className="text-2xl font-semibold">CONTACT INFO</span>
-            <div className="text-xl flex flex-col gap-2">
+            <span className="text-xl font-light narrow-letters uppercase">CONTACT INFO</span>
+            <div className="text-md font-thin narrow-letters flex flex-col gap-2">
               <Link
                 href={`mailto:${mail}`}
                 target="_blank"
@@ -295,7 +287,7 @@ function Footer({ theme, setTheme }: { theme: any, setTheme: any }) {
               </Link>
             </div>
             <RoundedButton label="GET IN TOUCH" href="/contact-us" />
-            <CompanyInfo />
+            <CompanyContact />
           </div>
         </div>
         <div className="flex flex-col md:flex-row justify-between gap-8 items-start pb-8">

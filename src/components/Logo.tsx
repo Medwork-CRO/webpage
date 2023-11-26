@@ -1,15 +1,8 @@
 import medworkLogo from "@assets/medwork-logo.png";
-import { Roboto } from "@next/font/google";
 import { EmblaOptionsType } from "embla-carousel-react";
 import Image from "next/image";
 import Link from "next/link";
 import { PropsWithChildren } from "react";
-
-const roboto = Roboto({
-  weight: "400",
-  subsets: ["latin"],
-});
-
 type Props = PropsWithChildren & EmblaOptionsType;
 
 function Logo({ children, ...options }: Props) {
@@ -21,10 +14,9 @@ function Logo({ children, ...options }: Props) {
     >
       <Image src={medworkLogo} alt="Medwork Logo" width={46} />
       <div
-        className={`${roboto.className} font-sans text-3xl text-[#818181]`}
-        style={{ fontStyle: "italic" }}
+        className={`font-sans font-thin narrow-letters leading-relaxed text-3xl text-medwork-brown dark:text-medwork-light`}
       >
-        Medwork
+        MEDWORK
       </div>
     </Link>
   );

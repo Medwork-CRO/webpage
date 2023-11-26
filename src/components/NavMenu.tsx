@@ -52,7 +52,7 @@ function HorizontalNav({ label, href, subCategories }: NavProp) {
     <div className="relative py-2" ref={menuRef} onBlur={handleBlur}>
       {hasSubCategories &&
         <div tabIndex={0} className={`
-        peer flex items-center py-2
+        peer flex items-center py-2 font-thin narrow-letters
         text-xl text-gray-600 dark:text-gray-400
         hover:text-cyan-500 focus-visible:text-cyan-500
         border-b-2 ${activeClasses}
@@ -66,7 +66,7 @@ function HorizontalNav({ label, href, subCategories }: NavProp) {
         <Link
           tabIndex={0}
           className={`
-          peer flex items-center py-2
+          peer flex items-center py-2 font-thin narrow-letters
           text-xl text-gray-600 dark:text-gray-400
           hover:text-cyan-500 focus-visible:text-cyan-500
           border-b-2 ${activeClasses}
@@ -81,7 +81,8 @@ function HorizontalNav({ label, href, subCategories }: NavProp) {
         <div className="
           absolute flex flex-col gap-2 w-[220px] right-0 z-10 rounded-sm
           border border-gray-300 dark:border-gray-400
-          bg-medwork-light text-gray-600 shadow-2xl drop-shadow-lg dark:bg-medwork-dark dark:text-gray-400
+          text-xl font-thin narrow-letters text-gray-600
+          bg-medwork-light shadow-2xl drop-shadow-lg dark:bg-medwork-dark dark:text-gray-400
           "
           onMouseEnter={() => setIsOpen(true)}
           onMouseLeave={() => setIsOpen(false)}

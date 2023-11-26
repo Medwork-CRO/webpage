@@ -1,10 +1,10 @@
 import CountUp from "react-countup";
 
-function Counter({ number, duration, title }: { number: number, duration: number, title: string }) {
+function Counter({ number, duration, symbol }: { number: number, duration: number, symbol: string }) {
   return (
     <div>
       <CountUp duration={duration} className="counter" end={number} />
-      <span>{title}</span>
+      <span>{symbol}</span>
     </div>
   );
 }

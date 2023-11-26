@@ -17,34 +17,31 @@ function Card({
   readMoreLink,
 }: CardProps) {
   return (
-    <div className="flex transform flex-col gap-8">
+    <div className="group flex transform flex-col gap-8">
       <Link href={readMoreLink}>
         <div tabIndex={index} className="
-          flex flex-col gap-6
-          p-4 rounded-xl border-2 border-transparent
-          border-[#c5b8aa] dark:border-gray-700
+          flex flex-col gap-6 p-4 rounded-xl border-2 border-transparent
+          border-[#bbab9a] dark:border-gray-700
           shadow-sm hover:shadow-2xl focus-visible:shadow-2xl dark:shadow-gray-600
           transition duration-200 ease-in-out
         ">
           <div className="overflow-hidden">
             <Image
-              className="h-[12rem] sm:h-[24rem] md:h-[32rem] rounded-lg object-cover"
+              className="h-[12rem] sm:h-[16rem] md:h-[24rem] rounded-lg object-cover"
               src={imageData}
               alt={imageTitle}
             />
           </div>
           <div
-            className="font-semibold text-center text-2xl text-cyan-600 dark:text-white"
+            className="relative font-extralight narrow-letters text-center text-2xl text-cyan-600 dark:text-white"
           >
             {imageTitle}
+            <span className="absolute right-full opacity-0 group-hover:right-0 group-hover:opacity-100 transition-all duration-500">
+              →
+            </span>
           </div>
         </div>
       </Link>
-      {/* <div className="flex flex-col h-full justify-between">
-        <p className="overflow-ellipsis text-lg font-normal text-gray-500 dark:text-gray-400 md:text-xl">
-          {imageDescription}
-        </p>
-      </div> */}
     </div>
   );
 }

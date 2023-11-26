@@ -1,12 +1,12 @@
 import Carousel from "@/components/Carousel";
-import DisplayParagraphs from "@/components/DisplayParagraphs";
 import CarouselImage from "@/components/CarouselImage";
+import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ProvidedServices from "@/components/ProvidedServices";
+import Statistics from "@/components/Statistics";
+import Title from "@/components/Title";
 import EMA from "@assets/stock-images/ema.jpg";
 import happyWoman from "@assets/stock-images/happy-woman.jpg";
 import team2 from "@assets/team-photos/team2.jpg";
-import Title from "@/components/Title";
-import Counter from "@/components/Counter";
 
 const imageShowCases = [
   {
@@ -28,43 +28,6 @@ const paragraphs = [
   "What distinguishes us is our agility and adaptability derived from our size. This allows us to quickly adjust our approach and resources to address changing needs, offering an experience that may be challenging for larger CROs to replicate.",
 ];
 
-function Statistics() {
-  return (
-    <div className="flex flex-col sm:flex-row text-center items-center justify-between gap-8 text-gray-500 dark:text-gray-400 w-full mt-24">
-      <div className="flex w-56 flex-col">
-        <span className="flex flex-row self-center mb-4 text-4xl font-bold text-cyan-500">
-          <Counter number={15} title="+" duration={3} />
-        </span>
-        <span className="subtext text-gray-600 dark:text-gray-400">
-          years of <strong>experience</strong>
-        </span>
-      </div>
-
-      <div className="h-full px-12 sm:px-0 sm:py-12 border border-gray-500"></div>
-
-      <div className="flex w-56 flex-col">
-        <span className="flex flex-row self-center mb-4 text-4xl font-bold text-cyan-500">
-          <Counter number={85} title="+" duration={3} />
-        </span>
-        <span className="subtext text-gray-600 dark:text-gray-400">
-          active <strong>clients</strong>
-        </span>
-      </div>
-
-      <div className="h-full px-12 sm:px-0 sm:py-12 border border-gray-500"></div>
-
-      <div className="flex w-56 flex-col">
-        <span className="flex flex-row self-center mb-4 text-4xl font-bold text-cyan-500">
-          <Counter number={84} title="+" duration={3} />
-        </span>
-        <span className="subtext text-gray-600 dark:text-gray-400">
-          safety <strong>professionals</strong>
-        </span>
-      </div>
-    </div>
-  )
-}
-
 function Home() {
   return (
     <div className="mx-auto flex flex-col items-center justify-between w-full">
@@ -78,12 +41,18 @@ function Home() {
         ))}
       </Carousel>
 
-      <div id="main-content" className="max-w-[1476px] w-full">
-        <div className="flex flex-col items-center gap-12 whitespace-pre-line px-4 sm:px-6 text-2xl text-gray-500 dark:text-gray-400 lg:px-0 py-16">
+      <div id="main-content" className="max-w-[1200px] w-full">
+        <div className="flex flex-col items-center gap-12 whitespace-pre-line px-4 sm:px-6 lg:px-0 py-16 h-screen">
           <Title title={"Advancing Drug Safety with Operational Excellence, Regulatory Compliance, and Adaptive Solutions"} />
           <DisplayParagraphs paragraphs={paragraphs} />
+        </div>
+        <div className="flex flex-col items-center gap-12 whitespace-pre-line px-4 sm:px-6 lg:px-0 py-16">
           <ProvidedServices />
-          <Statistics />
+          <Statistics Stats={[
+            { count: 15, symbol: "+", title: "years of", point: "experience" },
+            { count: 85, symbol: "+", title: "active", point: "clients" },
+            { count: 84, symbol: "+", title: "safety", point: "professionals" },
+          ]}/>
         </div>
       </div>
     </div>
