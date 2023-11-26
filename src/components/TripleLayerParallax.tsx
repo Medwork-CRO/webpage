@@ -17,7 +17,6 @@ function TripleLayerParallax({
     const ref = useRef(null);
     const { scrollYProgress } = useScroll({
         target: ref,
-        // @ts-ignore
         offset: ["start start", "end start"],
     });
 
@@ -48,7 +47,7 @@ function TripleLayerParallax({
             </motion.h1>
 
             <div
-                className={`absolute inset-0 bottom-0 z-20 from-medwork-light to-transparent bg-gradient-to-t opacity-40`}
+                className={"absolute inset-0 bottom-0 z-20 from-medwork-light to-transparent bg-gradient-to-t opacity-40"}
             ></div>
 
             <motion.div

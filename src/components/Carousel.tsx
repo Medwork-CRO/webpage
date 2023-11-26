@@ -1,4 +1,4 @@
-import Autoplay from 'embla-carousel-autoplay';
+import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel, { EmblaOptionsType } from "embla-carousel-react";
 import React, { PropsWithChildren, useEffect, useState } from "react";
 import CarouselControls from "./CarouselControls";
@@ -6,7 +6,7 @@ import Dots from "./Dots";
 
 type Props = PropsWithChildren & EmblaOptionsType;
 
-const Carousel = ({ children, ...options }: Props) => {
+const Carousel = ({ children }: Props) => {
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false }, [Autoplay({
         stopOnInteraction: true,
         stopOnMouseEnter: false,

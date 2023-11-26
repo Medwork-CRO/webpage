@@ -58,12 +58,11 @@ const InlineInfoBox = ({ title, content, filePath, fileNameGR, fileNameEN, fileN
             { extraFileNames &&
                 <div className="flex flex-col mt-4 gap-2 justify-between w-full text-medwork-dark dark:text-medwork-light">
                     {extraFileNames.map(({ title, fileName }) => (
-                        <div className="flex flex-row items-center justify-between gap-2">
-                            <div key={title} className="text-sm">
+                        <div key={title} className="flex flex-row items-center justify-between gap-2">
+                            <div className="text-sm">
                                 {title}
                             </div>
                             <Link
-                                key={title}
                                 className="text-md font-light narrow-letters whitespace-nowrap hover:underline focus-visible:underline text-blue-600 dark:text-blue-400"
                                 href={`/${filePath}/${fileName}`}
                                 target="_blank"
@@ -78,6 +77,6 @@ const InlineInfoBox = ({ title, content, filePath, fileNameGR, fileNameEN, fileN
             <div className="my-4 border-b border-gray-600 dark:border-gray-400 border-dashed"></div>
         </>
     );
-}
+};
 
 export default InlineInfoBox;

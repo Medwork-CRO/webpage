@@ -24,6 +24,6 @@ function Dots({ itemsLength, selectedIndex }: Props) {
             })}
         </div>
     );
-};
+}
 
 export default Dots;
