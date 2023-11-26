@@ -1,5 +1,4 @@
 import Logo from "@/components/Logo";
-import { Inter } from "@next/font/google";
 import { motion, useScroll } from "framer-motion";
 import Hamburger from 'hamburger-react';
 import { useRouter } from "next/router";
@@ -7,11 +6,6 @@ import { useEffect, useState } from "react";
 import { navMenu } from "./HeaderLinks";
 import NavHamburger from "./NavHamburger";
 import NavMenu from "./NavMenu";
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-});
 
 function Header() {
   const router = useRouter();
@@ -25,9 +19,9 @@ function Header() {
 
   return (
     <header
-      className={`${inter.variable} sticky top-0 z-50 w-full font-sans shadow-sm bg-medwork-light dark:bg-medwork-dark transition-all duration-300`}
+      className={`sticky top-0 z-50 w-full font-sans shadow-sm bg-medwork-light dark:bg-medwork-dark transition-all duration-300`}
     >
-      <div className="mx-auto flex max-w-[1200px] px-4 py-3 sm:py-4 lg:px-0 items-center justify-between">
+      <div className="mx-auto flex max-w-[1200px] py-2 sm:py-3 px-2 md:px-4 lg:px-0 items-center justify-between">
         <Logo />
         <button
           id="hamburger-menu" aria-label="Menu hamburger"

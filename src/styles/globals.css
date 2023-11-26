@@ -114,7 +114,6 @@ a {
   opacity: 0;
   transform: translateY(100px);
   transition: opacity 0.3s, transform 0.3s;
-  /* ... other styles ... */
 }
 
 .scrollToTopButton.visible {

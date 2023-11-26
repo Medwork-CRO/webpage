@@ -38,11 +38,6 @@ const policies = [
   },
 ];
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-});
-
 function CompanyInfo() {
   return (
     <div className="flex-start flex flex-row items-start justify-start gap-4 align-middle">
@@ -100,13 +95,17 @@ function Legal() {
 
 function ThemeSelector({ theme, setTheme }: { theme: THEME, setTheme: Function }) {
   let themeIcon: ReactElement<any, any>;
+  let tooltipText = "";
 
   if (theme === THEME.DARK) {
     themeIcon = <MdDarkMode />;
+    tooltipText = "Switch to light mode";
   } else if (theme === THEME.LIGHT) {
     themeIcon = <MdLightMode />;
+    tooltipText = "Switch to auto mode";
   } else {
     themeIcon = <MdOutlineBrightnessAuto />;
+    tooltipText = "Switch to dark mode";
   }
 
   const handleThemeChange = () => {
@@ -125,6 +124,7 @@ function ThemeSelector({ theme, setTheme }: { theme: THEME, setTheme: Function }
   return (
     <button
       id="theme-selector" aria-label="Change the theme"
+      title={tooltipText}
       className="
         absolute z-50 p-1 w-8 h-8 flex justify-center items-center rounded-full
         text-medwork-dark dark:text-medwork-light
@@ -145,15 +145,13 @@ function ThemeSelector({ theme, setTheme }: { theme: THEME, setTheme: Function }
 
 function Information() {
   return (
-    <div className="flex flex-col items-start gap-2 text-md text-medwork-dark dark:text-medwork-light">
-      <div className="flex flex-col sm:flex-row flex-wrap items-start">
-        <Link
-          className="font-bold narrow-letters hover:underline focus-visible:underline whitespace-nowrap"
-          href={'/about/legislation'}
-        >
-          Legislation
-        </Link>
-      </div>
+    <div className="flex flex-col items-start gap-4 text-md text-medwork-dark dark:text-medwork-light">
+      <Link
+        className="font-black narrow-letters hover:underline focus-visible:underline whitespace-nowrap"
+        href={'/about/legislation'}
+      >
+        Legislation
+      </Link>
       <div className="flex flex-col sm:flex-row flex-wrap items-start gap-4">
         {policies.map((policy, i) => (
           <>
@@ -213,7 +211,7 @@ function Footer({ theme, setTheme }: { theme: any, setTheme: any }) {
   return (
     <footer
       id="footer"
-      className={`${inter.variable} w-full flex justify-center shadow-sm bg-medwork-light dark:bg-medwork-dark px-4 sm:px-6 lg:px-0 pt-0 sm:pt-12 lg:pt-24 font-sans relative`}
+      className={`w-full flex justify-center shadow-sm bg-medwork-light dark:bg-medwork-dark px-4 sm:px-6 lg:px-0 pt-0 sm:pt-12 lg:pt-24 font-sans relative`}
     >
       <div className="flex w-full max-w-[1200px] mx-0 eq:mx-8 flex-col text-medwork-dark dark:text-medwork-light z-[5]"> {/* max-w-[1200px] */}
         <div className="mt-6 border-t border-medwork-dark dark:border-medwork-light flex justify-between items-center">
@@ -235,8 +233,8 @@ function Footer({ theme, setTheme }: { theme: any, setTheme: any }) {
           </div>
 
           <div className="min-w-96 flex flex-col gap-6 text-left">
-            <span className="text-xl font-thin narrow-letters">SERVICES</span>
-            <div className="text-md  font-thin narrow-letters flex flex-col gap-2">
+            <span className="text-xl font-light narrow-letters uppercase">{Services.label}</span>
+            <div className="text-md font-thin narrow-letters flex flex-col gap-2">
               {Services.subCategories.map((service, i) => (
                 <Link
                   aria-label={`By clicking you will be taken to ${service.label}`}
@@ -252,8 +250,8 @@ function Footer({ theme, setTheme }: { theme: any, setTheme: any }) {
           </div>
 
           <div className="min-w-96 flex flex-col gap-6 text-left">
-            <span className="text-xl font-thin narrow-letters">ABOUT</span>
-            <div className="text-md  font-thin narrow-letters flex flex-col gap-2">
+            <span className="text-xl font-light narrow-letters uppercase">{AboutUs.label}</span>
+            <div className="text-md font-thin narrow-letters flex flex-col gap-2">
               {[AboutUs, Careers].map((a, i) => (
                 <Link
                   aria-label={`By clicking you will be taken to ${a.label}`}
@@ -269,7 +267,7 @@ function Footer({ theme, setTheme }: { theme: any, setTheme: any }) {
           </div>
 
           <div className="min-w-96 flex flex-col gap-6 text-left">
-            <span className="text-xl font-thin narrow-letters">CONTACT INFO</span>
+            <span className="text-xl font-light narrow-letters uppercase">CONTACT INFO</span>
             <div className="text-md font-thin narrow-letters flex flex-col gap-2">
               <Link
                 href={`mailto:${mail}`}

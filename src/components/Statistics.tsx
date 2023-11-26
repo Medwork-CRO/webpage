@@ -20,7 +20,7 @@ function Statistics({ Stats }: { Stats: Stat[] }) {
     <div className="flex flex-col sm:flex-row text-center items-center justify-between gap-8 w-full mt-24">
       {Stats.map((stat, i) => (
         <>
-          <Statistic count={stat.count} title={stat.title} point={stat.point} symbol={stat.symbol}/>
+          <Statistic key={i} count={stat.count} title={stat.title} point={stat.point} symbol={stat.symbol}/>
           {i < Stats.length - 1 && (
             <div className="h-full px-12 sm:px-0 sm:py-12 border border-gray-500"></div>
           )}
