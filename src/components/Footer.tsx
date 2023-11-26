@@ -100,7 +100,7 @@ function Legal() {
 
 function ThemeSelector({ theme, setTheme }: ThemeSelectorProps) {
     let themeIcon: ReactElement;
-    let tooltipText = "";
+    let tooltipText: string;
 
     if (theme === THEME.DARK) {
         themeIcon = <MdDarkMode />;
@@ -125,9 +125,21 @@ function ThemeSelector({ theme, setTheme }: ThemeSelectorProps) {
 
     return (
         <button
-            id="theme-selector" aria-label="Change the theme"
+            id="theme-selector"
+            aria-label="Change the theme"
             title={tooltipText}
-            className="...your classes..."
+            className="
+                absolute z-50 p-1 w-8 h-8 flex justify-center items-center rounded-full
+                text-medwork-dark dark:text-medwork-light
+                hover:text-medwork-light hover:dark:text-medwork-dark
+                focus-visible:text-medwork-light focus-visible:dark:text-medwork-dark
+                bg-medwork-light dark:bg-medwork-dark
+                hover:bg-medwork-dark hover:dark:bg-medwork-light
+                focus-visible:bg-medwork-dark focus-visible:dark:bg-medwork-light
+                border border-medwork-dark dark:border-medwork-light
+                hover:border-medwork-light hover:dark:border-medwork-dark
+                focus-visible:border-medwork-light focus-visible:dark:border-medwork-dark
+            "
             onClick={handleThemeChange}
         >
             {themeIcon}
@@ -147,17 +159,17 @@ function Information() {
             <div className="flex flex-col sm:flex-row flex-wrap items-start">
                 {policies.map((policy, i) => (
                     <span key={i} className="flex flex-row">
-                            <Link
-                                className="font-thin narrow-letters hover:underline focus-visible:underline whitespace-nowrap"
-                                href={`${policy.filePath}/${policy.fileName}`}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                {policy.label}
-                            </Link>
-                            <span className="hidden sm:block mx-2">
-                                {policies.length - 1 !== i ? "|" : ""}
-                            </span>
+                        <Link
+                            className="font-thin narrow-letters hover:underline focus-visible:underline whitespace-nowrap"
+                            href={`${policy.filePath}/${policy.fileName}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            {policy.label}
+                        </Link>
+                        <span className="hidden sm:block mx-2">
+                            {policies.length - 1 !== i ? "|" : ""}
+                        </span>
                     </span>
                 ))}
             </div>
