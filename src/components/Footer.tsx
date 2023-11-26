@@ -1,14 +1,14 @@
 import Logo from "@/components/Logo";
 import RoundedButton from "@/components/RoundedButton";
-import { Inter } from "@next/font/google";
+import { THEME } from "@/types/Theme";
 import { FaLinkedin } from "@react-icons/all-files/fa/FaLinkedin";
 import { MdEmail } from "@react-icons/all-files/md/MdEmail";
 import { MdLocationOn } from "@react-icons/all-files/md/MdLocationOn";
 import Link from "next/link";
+import { ReactElement } from "react";
 import { MdDarkMode, MdLightMode, MdOutlineBrightnessAuto } from 'react-icons/md';
 import { AboutUs, Careers, Services } from "./HeaderLinks";
-import { THEME } from "@/types/Theme";
-import { ReactElement } from "react";
+import CompanyInfo from "./companyInfo";
 
 const recruitmentEmail = "recruitment@medwork.gr";
 const mail = "medworkinfo@medwork.gr";
@@ -38,7 +38,7 @@ const policies = [
   },
 ];
 
-function CompanyInfo() {
+function CompanyContact() {
   return (
     <div className="flex-start flex flex-row items-start justify-start gap-4 align-middle">
       <a
@@ -224,12 +224,7 @@ function Footer({ theme, setTheme }: { theme: any, setTheme: any }) {
         <div className="flex flex-col sm:flex-row flex-wrap justify-between gap-8 py-16">
           <div className="flex flex-col gap-6">
             <Logo />
-            <span className={"max-w-sm whitespace-pre-line text-left text-xl font-thin narrow-letters"}>
-              Medwork is a Contract Research Organization (CRO) operating in
-              Southeast Europe, which since 2005 offers a wide range of
-              specialized services to the pharmaceutical and medical device
-              industries
-            </span>
+            <CompanyInfo />
           </div>
 
           <div className="min-w-96 flex flex-col gap-6 text-left">
@@ -292,7 +287,7 @@ function Footer({ theme, setTheme }: { theme: any, setTheme: any }) {
               </Link>
             </div>
             <RoundedButton label="GET IN TOUCH" href="/contact-us" />
-            <CompanyInfo />
+            <CompanyContact />
           </div>
         </div>
         <div className="flex flex-col md:flex-row justify-between gap-8 items-start pb-8">
