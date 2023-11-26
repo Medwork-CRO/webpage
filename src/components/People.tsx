@@ -68,7 +68,7 @@ const membersInfo: MemberInfo[] = [
     },
 ];
 
-function People({ }) {
+function People() {
     return (
         // <div className="w-full my-12 grid grid-cols-1 gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         <div className="eq:border-x-2 border-gray-300 dark:border-gray-500 w-full my-6 py-6 sm:my-12 sm:py-12 px-4 flex overflow-x-auto space-x-8 snap-x snap-mandatory">

@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-import { AiOutlineArrowUp } from 'react-icons/ai';
+import { useEffect, useState } from "react";
+import { AiOutlineArrowUp } from "react-icons/ai";
 
 const ScrollToTopButton = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -13,15 +13,15 @@ const ScrollToTopButton = () => {
     };
 
     useEffect(() => {
-        window.addEventListener('scroll', toggleVisibility);
+        window.addEventListener("scroll", toggleVisibility);
 
-        return () => window.removeEventListener('scroll', toggleVisibility);
+        return () => window.removeEventListener("scroll", toggleVisibility);
     }, []);
 
     const scrollToTop = () => {
         window.scrollTo({
             top: 0,
-            behavior: 'smooth',
+            behavior: "smooth",
         });
     };
 
@@ -34,7 +34,7 @@ const ScrollToTopButton = () => {
             text-medwork-dark dark:text-medwork-light
             bg-medwork-light dark:bg-medwork-dark
             border-medwork-dark dark:border-medwork-light border z-30
-            ${isVisible ? 'visible' : ''}`}
+            ${isVisible ? "visible" : ""}`}
         >
             <AiOutlineArrowUp />
         </button>

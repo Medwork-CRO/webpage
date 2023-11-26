@@ -1,4 +1,4 @@
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 type Props = {
     canScrollPrev: boolean;
@@ -43,6 +43,6 @@ function CarouselControls(props: Props) {
             </div>
         </div>
     );
-};
+}
 
 export default CarouselControls;
