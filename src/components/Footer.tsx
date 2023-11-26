@@ -144,20 +144,20 @@ function Information() {
             >
         Legislation
             </Link>
-            <div className="flex flex-col sm:flex-row flex-wrap items-start gap-4">
+            <div className="flex flex-col sm:flex-row flex-wrap items-start">
                 {policies.map((policy, i) => (
-                    <span key={i}>
-                        <Link
-                            className="font-thin narrow-letters hover:underline focus-visible:underline whitespace-nowrap"
-                            href={`${policy.filePath}/${policy.fileName}`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            {policy.label}
-                        </Link>
-                        <span className="hidden sm:block">
-                            {policies.length - 1 !== i ? "|" : ""}
-                        </span>
+                    <span key={i} className="flex flex-row">
+                            <Link
+                                className="font-thin narrow-letters hover:underline focus-visible:underline whitespace-nowrap"
+                                href={`${policy.filePath}/${policy.fileName}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                {policy.label}
+                            </Link>
+                            <span className="hidden sm:block mx-2">
+                                {policies.length - 1 !== i ? "|" : ""}
+                            </span>
                     </span>
                 ))}
             </div>
