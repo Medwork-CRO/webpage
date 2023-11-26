@@ -27,7 +27,7 @@ function AboutUs() {
           <LegislationTabs />
         </div>
       </div>
-    </div >
+    </div>
   );
 }
 

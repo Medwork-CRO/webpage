@@ -154,9 +154,8 @@ function Information() {
       </Link>
       <div className="flex flex-col sm:flex-row flex-wrap items-start gap-4">
         {policies.map((policy, i) => (
-          <>
+          <span key={i}>
             <Link
-              key={i}
               className="font-thin narrow-letters hover:underline focus-visible:underline whitespace-nowrap"
               href={`${policy.filePath}/${policy.fileName}`}
               target="_blank"
@@ -166,12 +165,12 @@ function Information() {
               {policy.label}
             </Link>
             <span className="hidden sm:block">
-            {policies.length - 1 !== i ? "|" : ""}
+              {policies.length - 1 !== i ? "|" : ""}
+            </span>
           </span>
-          </>
         ))}
       </div>
-    </div >
+    </div>
   );
 }
 
@@ -193,7 +192,8 @@ function WaveSvg() {
           fill="#0693e3"
           fillOpacity="0.53"
           className="path-0"
-        ></path>
+        >
+        </path>
         <path
           d="M 0,500 C 0,500 0,333 0,333 C 90.25,363.42857142857144 180.5,393.85714285714283 306,379 C 431.5,364.14285714285717 592.2499999999999,304 721,294 C 849.7500000000001,284 946.5,324.1428571428571 1061,339 C 1175.5,353.8571428571429 1307.75,343.42857142857144 1440,333 C 1440,333 1440,500 1440,500 Z"
           stroke="none"
@@ -201,7 +201,8 @@ function WaveSvg() {
           fill="#0693e3"
           fillOpacity="1"
           className="path-1"
-        ></path>
+        >
+        </path>
       </svg>
     </div>
   );

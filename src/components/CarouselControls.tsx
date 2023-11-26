@@ -40,8 +40,8 @@ function CarouselControls(props: Props) {
                     <div className='w-10 h-10 mr-4'></div>
                 )
                 }
-            </div >
-        </div >
+            </div>
+        </div>
     );
 };
 

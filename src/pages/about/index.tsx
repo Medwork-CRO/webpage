@@ -38,7 +38,7 @@ function AboutUs() {
           <DisplayParagraphs paragraphs={paragraphs2} />
         </div>
       </div>
-    </div >
+    </div>
   );
 }
 
