@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from "react";
 import { MemberInfo } from "@/types/MemberInfo";
 import Image from "next/image";
 import { FaLinkedin } from "react-icons/fa";
@@ -49,7 +49,7 @@ function MemberCard({
                     {showFullDescription || !isLongDescription ? description : truncatedDescription}
                     {isLongDescription && (
                         <button onClick={toggleDescription} className="text-cyan-500 underline">
-                            {showFullDescription ? 'Show Less' : 'Continue Reading'}
+                            {showFullDescription ? "Show Less" : "Continue Reading"}
                         </button>
                     )}
                 </p>
