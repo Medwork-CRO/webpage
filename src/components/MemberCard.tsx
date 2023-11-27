@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { MemberInfo } from "@/types/MemberInfo";
 import Image from "next/image";
 import { FaLinkedin } from "react-icons/fa";
@@ -9,6 +10,17 @@ function MemberCard({
     description,
     linkedInTag,
 }: MemberInfo) {
+    const [showFullDescription, setShowFullDescription] = useState(false);
+
+    // Function to toggle the description view
+    const toggleDescription = () => {
+        setShowFullDescription(!showFullDescription);
+    };
+
+    // Determine if the description is long enough to need truncation
+    const isLongDescription = description.length > 500;
+    const truncatedDescription = isLongDescription ? description.substring(0, 500) + "..." : description;
+
     return (
         <div className="flex flex-col w-full min-w-[20rem] max-w-[20rem]">
             <div className="flex h-32 w-full justify-center rounded-xl bg-cover">
@@ -33,9 +45,13 @@ function MemberCard({
                     </div>
                     <p className="text-base font-thin narrow-letters text-cyan-500">{title}</p>
                 </div>
-                <p className="mt-4 overflow-ellipsis
-          font-light narrow-letters leading-relaxed text-medwork-brown dark:text-gray-400 text-2xl md:text-base">
-                    {description}
+                <p className="mt-4 overflow-ellipsis font-light narrow-letters leading-relaxed text-medwork-brown dark:text-gray-400 text-2xl md:text-base">
+                    {showFullDescription || !isLongDescription ? description : truncatedDescription}
+                    {isLongDescription && (
+                        <button onClick={toggleDescription} className="text-cyan-500 underline">
+                            {showFullDescription ? 'Show Less' : 'Continue Reading'}
+                        </button>
+                    )}
                 </p>
             </div>
         </div>

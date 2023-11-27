@@ -11,7 +11,7 @@ import team2 from "@assets/team-photos/team2.jpg";
 const imageShowCases = [
     {
         image: EMA,
-        title: "Medwork is a European pharmacovigilance expert organization with a focus in Greece and Cyprus.",
+        title: "Medwork is a European pharmacovigilance expert organization.",
     },
     {
         image: happyWoman,
@@ -42,8 +42,8 @@ function Home() {
             </Carousel>
 
             <div id="main-content" className="max-w-[1200px] w-full">
-                <div className="flex flex-col items-center gap-12 whitespace-pre-line px-4 sm:px-6 lg:px-0 py-16 h-screen">
-                    <Title title={"Advancing Drug Safety with Operational Excellence, Regulatory Compliance, and Adaptive Solutions"} />
+                <div className="flex flex-col items-center gap-12 whitespace-pre-line px-4 sm:px-6 lg:px-0 py-16">
+                    <Title title={"We Offer Drug Safety Services with Advanced Process Management, Regulatory Compliance, and Adaptive Solutions"} />
                     <DisplayParagraphs paragraphs={paragraphs} />
                 </div>
                 <div className="flex flex-col items-center gap-12 whitespace-pre-line px-4 sm:px-6 lg:px-0 py-16">

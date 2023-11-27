@@ -60,7 +60,7 @@ const images: ImageData[] = [
 
 function ProvidedServices() {
     return (
-        <div className="flex flex-col gap-0">
+        <div className="flex flex-col">
             <Title title={"Core Services"} />
             <div className="grid transform gap-16 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-8 md:my-12 lg:my-16">
                 {images.map((image, i) => (

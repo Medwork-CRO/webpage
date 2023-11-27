@@ -12,10 +12,10 @@ import MemberCard from "./MemberCard";
 const membersInfo: MemberInfo[] = [
     {
         image: person6,
-        name: "Jane Smith",
-        title: "Marketing Manager",
+        name: "Nicolas Tsiakkas",
+        title: "M.D., Scientific Director",
         description:
-            "Jane is a creative and strategic marketing professional with a passion for developing innovative solutions that drive business growth. With a deep understanding of consumer behavior and market trends, she leverages data-driven insights to create impactful marketing strategies that resonate with target audiences. Jane's exceptional communication skills and collaborative approach make her a valuable asset to any team.",
+            "Nicolas Tsiakkas has been an active member of the pharmaceutical industry for over 30 years, having gained a deep knowledge and expertise across a wide range of pharmacovigilance, clinical development and quality assurance activities. Following his specialization in ophthalmology at the Medical School of Wurzburg in Germany, he started his career in 1989 in Schering-Plough Greece, holding the position of Medical Director for a period of 5 years. He then moved to Rhone-Poulenc Rorer as the Regional Medical Director and Pharmacovigilance Manager, being responsible for the company’s research program from Phase II to Phase IV studies and surveys in Greece, Bulgaria, Romania and former Yugoslavia. Following the merger of Rhone-Poulenc Rorer with Hoechst-Marion-Rοussel, he served as a Medical Director and Pharmacovigilance Manager in Aventis Pharma Greece, between 2000 and 2005. In 2005 he founded Medwork, which, under his leadership, has grown from a company offering clinical research and Pharmacovigilance services to a highly esteemed, Vigilance services oriented CRO for international and local pharmaceutical companies. Dr. Tsiakkas is a member of the Pharmacovigilance Working Group of the European CRO Federation (EUCROF). Since 2019, he is also a member of the organizing committee for the DIA EU-QPPV annual meetings.",
     },
     {
         image: person1,
@@ -57,7 +57,7 @@ const membersInfo: MemberInfo[] = [
         name: "John Doe",
         title: "Head Of Design",
         description:
-            "John, the visionary designer, possesses an innate ability to transform ideas into captivating visual experiences. With a keen eye for aesthetics and attention to detpersonl, he crafts innovative designs that captivate audiences and breathe life into brands. Through his creative genius and passion for pushing boundaries, John leaves an indelible mark on every project he undertakes, redefining the world of design.",
+            "John, the visionary designer, possesses an innate ability to transform ideas into captivating visual experiences. With a keen eye for aesthetics and attention to the people, he crafts innovative designs that captivate audiences and breathe life into brands. Through his creative genius and passion for pushing boundaries, John leaves an indelible mark on every project he undertakes, redefining the world of design.",
     },
     {
         image: person8,
@@ -70,7 +70,6 @@ const membersInfo: MemberInfo[] = [
 
 function People() {
     return (
-        // <div className="w-full my-12 grid grid-cols-1 gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         <div className="eq:border-x-2 border-gray-300 dark:border-gray-500 w-full my-6 py-6 sm:my-12 sm:py-12 px-4 flex overflow-x-auto space-x-8 snap-x snap-mandatory">
             {membersInfo.map((memberInfo, i) => (
                 <div className="snap-center" key={i}>
@@ -84,7 +83,6 @@ function People() {
                 </div>
             ))}
         </div>
-
     );
 }
 
