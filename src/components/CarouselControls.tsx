@@ -13,12 +13,12 @@ function CarouselControls(props: Props) {
             <div className="flex w-full justify-between items-center gap-2">
                 {props.canScrollPrev ? (
                     <button
-                        id="next-image" aria-label="Move to next image"
+                        id="next-image"
+                        aria-label="Move to next image"
                         onClick={props.onPrev}
-                        className='ml-4
-                        w-10 h-10 rounded-full flex items-center justify-center
-                      bg-medwork-light dark:bg-medwork-dark bg-opacity-40
-                      border-medwork-dark dark:border-medwork-light border'
+                        className='ml-4 w-10 h-10 rounded-full flex items-center justify-center
+                        bg-medwork-light dark:bg-medwork-dark bg-opacity-40
+                        border-medwork-dark dark:border-medwork-light border'
                     >
                         <FaChevronLeft className="text-medwork-dark dark:text-medwork-light" />
                     </button>
@@ -27,12 +27,12 @@ function CarouselControls(props: Props) {
                 )}
                 {props.canScrollNext ? (
                     <button
-                        id="prev-image" aria-label="Move to previous image"
+                        id="prev-image"
+                        aria-label="Move to previous image"
                         onClick={props.onNext}
-                        className='mr-4
-                        w-10 h-10 rounded-full flex items-center justify-center
-                      bg-medwork-light dark:bg-medwork-dark bg-opacity-40
-                      border-medwork-dark dark:border-medwork-light border'
+                        className='mr-4 w-10 h-10 rounded-full flex items-center justify-center
+                        bg-medwork-light dark:bg-medwork-dark bg-opacity-40
+                        border-medwork-dark dark:border-medwork-light border'
                     >
                         <FaChevronRight className="text-medwork-dark dark:text-medwork-light" />
                     </button>

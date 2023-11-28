@@ -43,61 +43,6 @@ const policies = [
     },
 ];
 
-function CompanyContact() {
-    return (
-        <div className="flex-start flex flex-row items-start justify-start gap-4 align-middle">
-            <a
-                aria-label="By clicking you will be taken to Maps"
-                rel="noopener noreferrer"
-                target="_blank"
-                href={"http://maps.google.com/?q=" + address}
-            >
-                <MdLocationOn className="antialiased" size={"22px"} />
-            </a>
-            <a
-                aria-label="By clicking you will be taken to Mail"
-                rel="noopener noreferrer"
-                target="_blank"
-                href={"mailto:" + mail}
-            >
-                <MdEmail className="antialiased" size={"22px"} />
-            </a>
-            <a
-                aria-label="By clicking you will be taken to LinkedIn"
-                rel="noopener noreferrer"
-                target="_blank"
-                href={"https://www.linkedin.com/in/" + linkedin}
-            >
-                <FaLinkedin className="antialiased" size={"22px"} />
-            </a>
-        </div>
-    );
-}
-
-function Legal() {
-    return (
-        <div className="flex flex-col xs:flex-row items-start gap-2 text-md font-thin narrow-letters text-gray-400 sm:self-end">
-            <span>2005 - {new Date().getFullYear()} © Medwork</span>
-            <span className="flex flex-col xs:flex-row gap-2">
-                <span className="hidden xs:block">|</span>
-                <span>All Rights Reserved</span>
-                <span className="hidden xs:block">|</span>
-                <span>
-          Made by{" "}
-                    <a
-                        className="font-thin narrow-letters"
-                        href="https://github.com/keybraker"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-            Keybraker
-                    </a>
-                </span>
-            </span>
-        </div>
-    );
-}
-
 function ThemeSelector({ theme, setTheme }: ThemeSelectorProps) {
     let themeIcon: ReactElement;
     let tooltipText: string;
@@ -147,14 +92,70 @@ function ThemeSelector({ theme, setTheme }: ThemeSelectorProps) {
     );
 }
 
+function CompanyContact() {
+    return (
+        <div className="flex-start flex flex-row text-xl sm:text-lg items-start justify-start gap-4 align-middle">
+            <a
+                aria-label="By clicking you will be taken to Maps"
+                rel="noopener noreferrer"
+                target="_blank"
+                href={"http://maps.google.com/?q=" + address}
+            >
+                <MdLocationOn className="antialiased" size={"28px"} />
+            </a>
+            <a
+                aria-label="By clicking you will be taken to Mail"
+                rel="noopener noreferrer"
+                target="_blank"
+                href={"mailto:" + mail}
+            >
+                <MdEmail className="antialiased" size={"28px"} />
+            </a>
+            <a
+                aria-label="By clicking you will be taken to LinkedIn"
+                rel="noopener noreferrer"
+                target="_blank"
+                href={"https://www.linkedin.com/in/" + linkedin}
+            >
+                <FaLinkedin className="antialiased" size={"28px"} />
+            </a>
+        </div>
+    );
+}
+
+function Legal() {
+    return (
+        // <div className="flex flex-col sm:flex-row items-start gap-2 text-xl sm:text-lg font-thin narrow-letters text-gray-400 sm:self-end">
+        <div className="flex flex-col sm:flex-row flex-wrap items-start sm:self-end gap-2 text-xl sm:text-lg font-light narrow-letters text-gray-400">
+            <span>2005 - {new Date().getFullYear()} © Medwork</span>
+            <span className="flex flex-col sm:flex-row gap-2">
+                <span className="hidden sm:block">|</span>
+                <span>All Rights Reserved</span>
+                <span className="hidden sm:block">|</span>
+                <span>
+                    Made by{" "}
+                    <a
+                        className="font-semibold narrow-letters"
+                        href="https://github.com/keybraker"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Keybraker
+                    </a>
+                </span>
+            </span>
+        </div>
+    );
+}
+
 function Information() {
     return (
-        <div className="flex flex-col items-start gap-4 text-md text-medwork-dark dark:text-medwork-light">
+        <div className="flex flex-col items-start gap-4 text-xl sm:text-lg text-medwork-dark dark:text-medwork-light">
             <Link
                 className="font-black narrow-letters hover:underline focus-visible:underline whitespace-nowrap"
                 href={"/about/legislation"}
             >
-        Legislation
+                Legislation
             </Link>
             <div className="flex flex-col sm:flex-row flex-wrap items-start">
                 {policies.map((policy, i) => (
@@ -232,8 +233,8 @@ function Footer({ theme, setTheme }: ThemeSelectorProps) {
                     </div>
 
                     <div className="min-w-96 flex flex-col gap-6 text-left">
-                        <span className="text-xl font-light narrow-letters uppercase">{Services.label}</span>
-                        <div className="text-md font-thin narrow-letters flex flex-col gap-2">
+                        <span className="text-2xl sm:text-lg font-light narrow-letters uppercase">{Services.label}</span>
+                        <div className="text-xl sm:text-lg font-thin narrow-letters flex flex-col gap-2">
                             {Services.subCategories.map((service, i) => (
                                 <Link
                                     aria-label={`By clicking you will be taken to ${service.label}`}
@@ -249,8 +250,8 @@ function Footer({ theme, setTheme }: ThemeSelectorProps) {
                     </div>
 
                     <div className="min-w-96 flex flex-col gap-6 text-left">
-                        <span className="text-xl font-light narrow-letters uppercase">{AboutUs.label}</span>
-                        <div className="text-md font-thin narrow-letters flex flex-col gap-2">
+                        <span className="text-2xl sm:text-lg font-light narrow-letters uppercase">{AboutUs.label}</span>
+                        <div className="text-xl sm:text-lg font-thin narrow-letters flex flex-col gap-2">
                             {[AboutUs, Careers].map((a, i) => (
                                 <Link
                                     aria-label={`By clicking you will be taken to ${a.label}`}
@@ -266,8 +267,8 @@ function Footer({ theme, setTheme }: ThemeSelectorProps) {
                     </div>
 
                     <div className="min-w-96 flex flex-col gap-6 text-left">
-                        <span className="text-xl font-light narrow-letters uppercase">CONTACT INFO</span>
-                        <div className="text-md font-thin narrow-letters flex flex-col gap-2">
+                        <span className="text-2xl sm:text-lg font-light narrow-letters uppercase">CONTACT INFO</span>
+                        <div className="text-xl sm:text-lg font-thin narrow-letters flex flex-col gap-2">
                             <Link
                                 href={`mailto:${mail}`}
                                 target="_blank"
@@ -301,7 +302,7 @@ function Footer({ theme, setTheme }: ThemeSelectorProps) {
             </div>
             <div className="absolute z-[3] bottom-0 left-0 right-0 flex items-end justify-center h-16 opacity-[0.05] dark:opacity-[0.02]">
                 <span className="select-none text-vws leading-vws text-medwork-dark dark:text-medwork-light font-bold overflow-hidden h-3/7 tracking-widest">
-          Forward
+                    Forward
                 </span>
             </div>
             <WaveSvg />
