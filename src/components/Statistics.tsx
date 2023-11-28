@@ -1,3 +1,4 @@
+import React from "react";
 import Counter from "./Counter";
 
 type Stat = { count: number; symbol: string, title: string; point: string };
@@ -19,12 +20,12 @@ function Statistics({ Stats }: { Stats: Stat[] }) {
     return (
         <div className="flex flex-col sm:flex-row text-center items-center justify-between gap-8 w-full mt-24">
             {Stats.map((stat, i) => (
-                <>
+                <React.Fragment key={i}>
                     <Statistic key={i} count={stat.count} title={stat.title} point={stat.point} symbol={stat.symbol}/>
                     {i < Stats.length - 1 && (
                         <div className="h-full px-12 sm:px-0 sm:py-12 border border-gray-500"></div>
                     )}
-                </>
+                </React.Fragment>
             ))}
         </div>
     );
