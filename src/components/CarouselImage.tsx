@@ -40,7 +40,6 @@ function CarouselImage({ image, title }: ImageShowCaseProps) {
         };
     }, [lastScrollTop]);
 
-
     return (
         <div className="relative flex flex-col md:flex-row h-[85vh] flex-[0_0_100%] motion-safe:animate-fadeIn">
             <Image

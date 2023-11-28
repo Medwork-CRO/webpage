@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
+import React from "react";
 
 const formatBreadcrumb = (str: string) => {
     return str
@@ -33,23 +34,23 @@ const Breadcrumbs = () => {
             inline-flex items-center text-gray-600 dark:text-gray-300
             text-base md:text-lg
             py-2 px-4 rounded-lg
-            border border-gray-300 dark:border-gray-600
+            m-0 sm:m-2
             space-x-2 shadow-inner
         ">
             {pathnames.map((crumb, i) => {
                 if (i === pathnames.length - 1) {
                     return <div key={i}>{formatBreadcrumb(crumb)}</div>;
                 } else if (!getPathForKnownRoutes(paths[i])) {
-                    return <>
-                        <div key={i}>
+                    return  <React.Fragment key={i}>
+                        <div>
                             {formatBreadcrumb(crumb)}
                         </div>
                         <span>/</span>
-                    </>;
+                    </React.Fragment>;
                 } else {
                     return (
-                        <>
-                            <div key={i}>
+                        <React.Fragment key={i}>
+                            <div>
                                 <Link
                                     href={getPathForKnownRoutes(paths[i])}
                                     className="text-cyan-500 hover:text-cyan-400 hover:underline"
@@ -58,7 +59,7 @@ const Breadcrumbs = () => {
                                 </Link>
                             </div>
                             <span>/</span>
-                        </>
+                        </React.Fragment>
                     );
                 }
             })}

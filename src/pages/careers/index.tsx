@@ -45,27 +45,8 @@ function Cosmetovigilance() {
 
                     <DualLayerParallax imageFull='/assets/image-full.png' imageBottom='/assets/image-bottom.png' text='Join the Team' />
 
-                    {/* <div className="flex flex-col gap-8 whitespace-pre-line text-2xl p-8 border-2 rounded-lg border-gray-400 shadow-xl w-full">
-          <p className="font-thin italic">
-            {paragraphs2[0]}
-          </p>
-          <p className="font-thin italic">
-            {paragraphs2[1]}
-          </p>
-          <p className="font-thin italic">
-            {paragraphs2[2]}
-          </p>
-        </div> */}
-
-                    {/* <div className="grid grid-cols-2 gap-2 md:grid-cols-4">
-          <Image src={ai} alt="AI" className="h-48 w-48 object-cover" />
-          <Image src={ai1} alt="AI" className="h-48 w-48 object-cover" />
-          <Image src={ai2} alt="AI" className="h-48 w-48 object-cover" />
-          <Image src={ai4} alt="AI" className="h-48 w-48 object-cover" />
-        </div> */}
-
                     <div className="my-8 flex flex-col gap-2 items-center whitespace-pre-line text-2xl font-thin text-cyan-600 dark:text-cyan-400">
-            You can see all our open job offerings
+                        You can see all our open job offerings
                         <div className="mt-4 flex flex-col sm:flex-row justify-center items-center gap-6 text-center w-full">
                             <Link
                                 className="flex flex-row items-center justify-center gap-4

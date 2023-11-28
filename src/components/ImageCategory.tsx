@@ -11,50 +11,25 @@ function ImageCategory({
     title,
     description,
     image,
-    textSide,
 }: ImageCategoryProps) {
-    const bgGradient = !textSide || textSide === "left" ? "bg-gradient-to-t" : "bg-gradient-to-t";
-
     return (
         <>
-            <div className="
-        relative w-full md:flex-row h-[90vh] hidden md:block motion-safe:animate-fadeIn
-        text-2xl font-light narrow-letters leading-relaxed text-medwork-brown dark:text-gray-400
-      ">
+            <div className="relative flex flex-col md:flex-row flex-[0_0_100%] motion-safe:animate-fadeIn">
                 <Image
                     src={image}
-                    className="h-full min-w-full object-cover"
+                    className="h-[75vh] object-cover"
                     alt="alt"
                 />
 
-                <div
-                    className={`absolute inset-0 z-10 from-medwork-light dark:from-medwork-dark to-transparent ${bgGradient}`}
-                ></div>
+                {/* <div className="absolute inset-x-0 top-0 z-10 from-medwork-light dark:from-medwork-dark to-transparent bg-gradient-to-b h-[6%]"></div> */}
+                <div className="absolute inset-x-0 bottom-0 z-10 from-medwork-light dark:from-medwork-dark to-transparent bg-gradient-to-t h-5/6"></div>
 
-                <div className="absolute top-3/4 z-20 -translate-y-1/2 transform w-full">
-                    <div className={`flex flex-col select-none justify-center gap-8 px-4 md:px-6 lg:px-0 max-w-[1200px] mx-auto ${!textSide || textSide === "left"
-                        ? "text-left"
-                        : "text-right"
-                    }`}>
-                        <h1 className="font-light italic text-lg md:text-6xl xl:text-7xl">
-                            {title}
-                        </h1>
-                        <p className="font-extralight text-md md:text-2xl xl:text-3xl">
-                            {description}
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div className="
-        grid grid-cols-1 md:grid-cols-2 md:hidden
-        text-2xl font-light narrow-letters leading-relaxed text-medwork-brown dark:text-gray-400
-      ">
-                <Image src={image} alt="Image for mobile" />
-                <div className="mx-4 sm:mx-6 lg:mx-0 border-b border-b-medwork-dark dark:border-b-medwork-light">
-                    <div className="mt-4 md:mt-0">
-                        <h1 className="mb-8 text-lg italic text-center">{title}</h1>
-                        <p className="mb-4 text-md">{description}</p>
+                <div className="absolute bottom-8 sm:bottom-16 z-20 w-full mb-8 sm:mb-2">
+                    <div className="flex flex-col justify-center gap-8 max-w-[1200px] px-4 md:px-6 lg:px-0 mx-auto text-gray-700 dark:text-gray-300 text-center">
+                        <div className="mt-4 md:mt-0">
+                            <h1 className="mb-2 text-2xl sm:text-6xl italic">{title}</h1>
+                            <p className="mb-4 text-md sm:text-3xl">{description}</p>
+                        </div>
                     </div>
                 </div>
             </div>

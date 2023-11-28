@@ -10,7 +10,7 @@ const companyBrief = "Since its establishment in 2005, Medwork has been offering
 
 function CompanyInfo({ align = "left" }: CompanyInfoProps) {
     return (
-        <span className={`max-w-sm whitespace-pre-line text-${align} text-xl sm:text-lg font-thin narrow-letters`}>
+        <span className={`max-w-sm whitespace-pre-line text-${align} text-2xl font-thin narrow-letters`}>
             {companyBrief}
         </span>
     );

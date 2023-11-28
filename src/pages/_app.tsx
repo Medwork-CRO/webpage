@@ -59,7 +59,8 @@ function App({ Component, pageProps }: AppProps) {
                 <title>Medwork</title>
                 <meta name="title" content="Medwork" />
                 <meta name="description" content="Medwork Website" />
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
                 <link rel="icon" href="/favicon.ico" />
 
                 <meta property="og:type" content="website" />

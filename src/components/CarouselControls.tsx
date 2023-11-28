@@ -16,23 +16,23 @@ function CarouselControls(props: Props) {
                         id="next-image"
                         aria-label="Move to next image"
                         onClick={props.onPrev}
-                        className='ml-4 w-10 h-10 rounded-full flex items-center justify-center
+                        className="ml-4 w-10 h-10 rounded-full flex items-center justify-center
                         bg-medwork-light dark:bg-medwork-dark bg-opacity-40
-                        border-medwork-dark dark:border-medwork-light border'
+                        border-medwork-dark dark:border-medwork-light border"
                     >
                         <FaChevronLeft className="text-medwork-dark dark:text-medwork-light" />
                     </button>
                 ) : (
-                    <div className='w-10 h-10 ml-4'></div>
+                    <div className="w-10 h-10 ml-4"></div>
                 )}
                 {props.canScrollNext ? (
                     <button
                         id="prev-image"
                         aria-label="Move to previous image"
                         onClick={props.onNext}
-                        className='mr-4 w-10 h-10 rounded-full flex items-center justify-center
+                        className="mr-4 w-10 h-10 rounded-full flex items-center justify-center
                         bg-medwork-light dark:bg-medwork-dark bg-opacity-40
-                        border-medwork-dark dark:border-medwork-light border'
+                        border-medwork-dark dark:border-medwork-light border"
                     >
                         <FaChevronRight className="text-medwork-dark dark:text-medwork-light" />
                     </button>

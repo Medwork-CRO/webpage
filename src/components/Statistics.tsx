@@ -18,7 +18,7 @@ function Statistic({ count, symbol, title, point }: Stat) {
 
 function Statistics({ Stats }: { Stats: Stat[] }) {
     return (
-        <div className="flex flex-col sm:flex-row text-center items-center justify-between gap-8 w-full mt-24">
+        <div className="flex flex-col sm:flex-row text-center items-center justify-between gap-8 w-full">
             {Stats.map((stat, i) => (
                 <React.Fragment key={i}>
                     <Statistic key={i} count={stat.count} title={stat.title} point={stat.point} symbol={stat.symbol}/>

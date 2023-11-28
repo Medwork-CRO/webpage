@@ -23,7 +23,8 @@ const imageShowCases = [
     },
 ];
 
-const paragraphs = [
+const leadTitle = "We Offer Drug Safety Services with Advanced Process Management, Regulatory Compliance, and Adaptive Solutions";
+const leadParagraph = [
     "At Medwork, we focus on vigilance services, combining expertise with flexibility. As a CRO dedicated exclusively to safety, we remain updated with industry advancements and regulatory standards. Our team's in-depth experience in pharmacovigilance provides valuable insights and guidance, helping clients navigate regulatory challenges and establish effective safety strategies.",
     "What distinguishes us is our agility and adaptability derived from our size. This allows us to quickly adjust our approach and resources to address changing needs, offering an experience that may be challenging for larger CROs to replicate.",
 ];
@@ -34,19 +35,19 @@ function Home() {
             <Carousel loop={true}>
                 {imageShowCases.map((imageShowCase, i) => (
                     <CarouselImage
+                        key={i}
                         image={imageShowCase.image}
                         title={imageShowCase.title}
-                        key={i}
                     />
                 ))}
             </Carousel>
 
-            <div id="main-content" className="max-w-[1200px] w-full">
-                <div className="flex flex-col items-center gap-12 whitespace-pre-line px-4 sm:px-6 lg:px-0 py-16">
-                    <Title title={"We Offer Drug Safety Services with Advanced Process Management, Regulatory Compliance, and Adaptive Solutions"} />
-                    <DisplayParagraphs paragraphs={paragraphs} />
+            <div id="main-content" className="max-w-[1200px] w-full items-center whitespace-pre-line px-4 sm:px-6 lg:px-0 py-16">
+                <div className="flex flex-col">
+                    <Title title={leadTitle} />
+                    <DisplayParagraphs paragraphs={leadParagraph} />
                 </div>
-                <div className="flex flex-col items-center gap-12 whitespace-pre-line px-4 sm:px-6 lg:px-0 py-16">
+                <div className="flex flex-col">
                     <ProvidedServices />
                     <Statistics Stats={[
                         { count: 15, symbol: "+", title: "years of", point: "experience" },
