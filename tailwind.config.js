@@ -100,7 +100,10 @@ module.exports = {
       },
     },
     variants: {
-      animation: ["motion-safe"]
+      animation: ["motion-safe"],
+      extend: {
+        display: ['hover'],
+      },
     }
   },
 };
