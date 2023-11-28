@@ -13,7 +13,7 @@ function Title({
     return (
         <div
             id={title.split(" ").join("-").toLowerCase()}
-            className={`${colour} my-4 ${textAlign} text-4xl font-light narrow-letters leading-relaxed my-4`}
+            className={`${colour} ${textAlign} text-3xl font-light narrow-letters leading-relaxed`}
         >
             {/*  text-cyan-500 */}
             {/* &#8226;  */}

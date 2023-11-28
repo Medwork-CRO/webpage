@@ -45,7 +45,9 @@ function Home() {
             <div id="main-content" className="max-w-[1200px] w-full items-center whitespace-pre-line px-4 sm:px-6 lg:px-0 py-16">
                 <div className="flex flex-col">
                     <Title title={leadTitle} />
-                    <DisplayParagraphs paragraphs={leadParagraph} />
+                    <div className="my-12">
+                        <DisplayParagraphs paragraphs={leadParagraph} />
+                    </div>
                 </div>
                 <div className="flex flex-col">
                     <ProvidedServices />
