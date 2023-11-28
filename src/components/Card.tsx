@@ -26,6 +26,7 @@ function Card({
                     overflow-hidden
                     transform transition duration-200 ease-in-out
                     hover:border-gray-400 dark:hover:border-gray-600
+                    h-[420px]
                 ">
                     <Image
                         className="object-cover"

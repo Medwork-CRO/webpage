@@ -6,9 +6,7 @@ const formatBreadcrumb = (str: string) => {
         .replace(/-/g, " ")
         .replace(/_/g, " ")
         .split(" ")
-        .map(s =>
-            s.charAt(0).toUpperCase() + s.slice(1)
-        )
+        .map(s => s.charAt(0).toUpperCase() + s.slice(1))
         .join(" ");
 };
 
@@ -31,23 +29,36 @@ const Breadcrumbs = () => {
     const paths = pathnames.map((_name: string, idx) => "/" + pathnames.slice(0, idx + 1).join("/"));
 
     return (
-        <div className="flex gap-2 my-4 ml-4 sm:ml-6 lg:ml-0 text-gray-500 dark:text-gray-400 text-lg sm:text-xl eq:text-2xl">
+        <div className="
+            inline-flex items-center text-gray-600 dark:text-gray-300
+            text-base md:text-lg
+            py-2 px-4 rounded-lg
+            border border-gray-300 dark:border-gray-600
+            space-x-2 shadow-inner
+        ">
             {pathnames.map((crumb, i) => {
                 if (i === pathnames.length - 1) {
                     return <div key={i}>{formatBreadcrumb(crumb)}</div>;
                 } else if (!getPathForKnownRoutes(paths[i])) {
-                    return <div key={i}>{formatBreadcrumb(crumb)}<span> / </span></div>;
+                    return <>
+                        <div key={i}>
+                            {formatBreadcrumb(crumb)}
+                        </div>
+                        <span>/</span>
+                    </>;
                 } else {
                     return (
-                        <div key={i}>
-                            <Link
-                                href={getPathForKnownRoutes(paths[i])}
-                                className="text-cyan-500 hover:text-cyan-400 hover:underline"
-                            >
-                                {formatBreadcrumb(crumb)}
-                            </Link>
-                            <span> / </span>
-                        </div>
+                        <>
+                            <div key={i}>
+                                <Link
+                                    href={getPathForKnownRoutes(paths[i])}
+                                    className="text-cyan-500 hover:text-cyan-400 hover:underline"
+                                >
+                                    {formatBreadcrumb(crumb)}
+                                </Link>
+                            </div>
+                            <span>/</span>
+                        </>
                     );
                 }
             })}

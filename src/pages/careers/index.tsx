@@ -69,11 +69,11 @@ function Cosmetovigilance() {
                         <div className="mt-4 flex flex-col sm:flex-row justify-center items-center gap-6 text-center w-full">
                             <Link
                                 className="flex flex-row items-center justify-center gap-4
-                cursor-pointer text-medwork-light dark:text-medwork-dark
-                font-light narrow-letters leading-relaxed
-                py-2 px-4 text-sm sm:text-md md:text-lg text-centerx w-[200px] rounded-full
-                bg-cyan-400 hover:bg-cyan-600
-                transition duration-100 ease-in focus:outline-none"
+                                cursor-pointer text-medwork-light dark:text-medwork-dark
+                                font-light narrow-letters leading-relaxed
+                                py-2 px-4 text-sm sm:text-md md:text-lg text-center w-[200px] rounded-full
+                                bg-blue-400 hover:bg-blue-500 focus-visible:bg-blue-500
+                                transition duration-100 ease-in focus:outline-none"
                                 aria-label={"By clicking you will be taken to kariera.gr"}
                                 key={"kariera"}
                                 href={"https://www.kariera.gr/en/companies/3531"}
@@ -89,11 +89,11 @@ function Cosmetovigilance() {
                             </Link>
                             <Link
                                 className="flex flex-row items-center justify-center gap-4
-                  cursor-pointer text-medwork-light dark:text-medwork-dark
-                  font-light narrow-letters leading-relaxed
-                  py-2 px-4 text-sm sm:text-md md:text-lg text-center w-[200px] rounded-full
-                  bg-cyan-400 hover:bg-cyan-600
-                  transition duration-100 ease-in focus:outline-none"
+                                cursor-pointer text-medwork-light dark:text-medwork-dark
+                                font-light narrow-letters leading-relaxed
+                                py-2 px-4 text-sm sm:text-md md:text-lg text-center w-[200px] rounded-full
+                                bg-blue-400 hover:bg-blue-500 focus-visible:bg-blue-500
+                                transition duration-100 ease-in focus:outline-none"
                                 aria-label={"By clicking you will be taken to linkedIn.gr"}
                                 key={"linkedIn"}
                                 href={"https://www.linkedin.com/company/medwork/jobs/"}

@@ -23,27 +23,27 @@ function LocalPharmacovigilance() {
                     <ul className="w-full flex flex-col px-4 mx-4 md:mx-8 lg:mx-16 my-4 md:my-8 lg:my-16 gap-16 list-disc">
                         <li>
                             <b className="mr-2">Customized PV Systems:</b>
-                            <span>We design and implement local PV systems that match your operations, ensuring seamless integration and compliance with local regulations.</span>
+                            <span>We design and implement local PV systems that align with the client&apos;s operations, ensuring seamless integration and compliance with local regulations.</span>
                         </li>
                         <li>
                             <b className="mr-2">Expert LPPVs:</b>
-                            <span>Benefit from the expertise of our Local Qualified Persons for Pharmacovigilance (LPPVs), who bring in-depth knowledge of local regulations and practices to the table.</span>
+                            <span>Clients benefit from the expertise of our Local Qualified Persons for Pharmacovigilance (LPPVs), who bring a comprehensive understanding of local regulations and practices.</span>
                         </li>
                         <li>
                             <b className="mr-2">Adaptive Systems and Databases:</b>
-                            <span>Our experts adapt and utilize your existing systems and databases, streamlining processes for maximum efficiency and convenience.</span>
+                            <span>Our experts adapt and utilize client&apos;s existing systems and databases, optimizing processes for peak efficiency and convenience.</span>
                         </li>
                         <li>
                             <b className="mr-2">Tailored Compliance:</b>
-                            <span>Navigate complex local regulations with ease, as we provide guidance and strategies that keep you compliant while minimizing risks.</span>
+                            <span>We guide clients through local regulations, providing strategies that ensure compliance while minimizing risks.</span>
                         </li>
                         <li>
                             <b className="mr-2">Diverse Client Base:</b>
-                            <span>From small MAHs with limited products to international pharma giants with extensive portfolios, our services cater to a wide spectrum of clients.</span>
+                            <span>Our services are tailored to a broad spectrum of clients, from small MAHs with limited products to international pharmaceutical companies with extensive portfolios.</span>
                         </li>
                         <li>
                             <b className="mr-2">Local Expertise:</b>
-                            <span>Leverage our local affiliates understanding of regional regulations and practices to ensure smooth operations and timely submissions.</span>
+                            <span>Clients can leverage our local affiliate&apos;s knowledge of regional regulations and practices to ensure smooth operations and timely submissions.</span>
                         </li>
                     </ul>
                 </div>

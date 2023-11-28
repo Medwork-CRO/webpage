@@ -54,7 +54,7 @@ function App({ Component, pageProps }: AppProps) {
     }, [theme]);
 
     return (
-        <div className={"bg-medwork-light font-sans dark:bg-medwork-dark"}>
+        <div className={"font-sans bg-medwork-light dark:bg-medwork-dark"}>
             <Head>
                 <title>Medwork</title>
                 <meta name="title" content="Medwork" />

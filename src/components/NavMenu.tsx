@@ -1,14 +1,8 @@
-import { useState } from "react";
-import { Inter } from "@next/font/google";
-import { FaAngleDown } from "@react-icons/all-files/fa/FaAngleDown";
+// import { FaAngleDown } from "@react-icons/all-files/fa/FaAngleDown";
+import { MdExpandMore } from "react-icons/md";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useRef } from "react";
-
-const inter = Inter({
-    subsets: ["latin"],
-    variable: "--font-inter",
-});
+import { useRef, useState } from "react";
 
 export type NavProp = {
   label: string;
@@ -29,8 +23,8 @@ function HorizontalNav({ label, href, subCategories }: NavProp) {
     const isActiveSubCategory = subCategories?.some((subCategory) => subCategory.href === router.asPath);
     const activeClasses = isActive || isActiveSubCategory ? "border-cyan-500 text-cyan-500" : "border-transparent";
 
-    const handleKeyDown: React.KeyboardEventHandler<HTMLDivElement> = (e) => {
-        if (e.code === "Enter") {
+    const handleKeyDown: React.KeyboardEventHandler<HTMLDivElement> = (event) => {
+        if (event.code === "Enter") {
             setIsOpen(!isOpen);
         }
     };
@@ -61,7 +55,7 @@ function HorizontalNav({ label, href, subCategories }: NavProp) {
             onMouseEnter={() => setIsOpen(true)}
             onMouseLeave={() => setIsOpen(false)}
             >
-                {label.toUpperCase()}<FaAngleDown className="ml-2 " /></div>}
+                {label.toUpperCase()}<MdExpandMore className="ml-2 "/></div>}
             {!hasSubCategories &&
                 <Link
                     tabIndex={0}
@@ -80,9 +74,11 @@ function HorizontalNav({ label, href, subCategories }: NavProp) {
             {hasSubCategories && isOpen && (
                 <div className="
                     absolute flex flex-col gap-2 w-[220px] right-0 z-10 rounded-sm
+                    shadow-2xl drop-shadow-lg
+                    text-xl font-thin narrow-letters
                     border border-gray-300 dark:border-gray-400
-                    text-xl font-thin narrow-letters text-gray-600
-                    bg-medwork-light shadow-2xl drop-shadow-lg dark:bg-medwork-dark dark:text-gray-400
+                    text-gray-600 dark:text-gray-400
+                    bg-medwork-light dark:bg-medwork-dark
                 "
                 onMouseEnter={() => setIsOpen(true)}
                 onMouseLeave={() => setIsOpen(false)}
@@ -94,6 +90,7 @@ function HorizontalNav({ label, href, subCategories }: NavProp) {
                                 cursor-pointer
                                 px-4 py-4 text-xl
                                 hover:bg-[#eae4dd] dark:hover:bg-gray-500
+                                hover:text-cyan-500 focus-visible:text-cyan-500
                                 focus-visible:bg-[#eae4dd] dark:focus-visible:bg-gray-500
                                 ${router.asPath === subCategory.href ? "bg-[#c5b8aa] dark:bg-gray-600" : ""}
                                 ${i === 0 ? "rounded-t-sm" : ""}
@@ -114,13 +111,13 @@ function HorizontalNav({ label, href, subCategories }: NavProp) {
 function NavMenu(navMenu: NavMenuProp) {
     return (
         <div
-            className={`${inter.variable} flex-start ml-8 flex flex-row place-items-end items-end justify-start gap-10 align-middle font-sans`}
+            className="flex-start ml-8 flex flex-row place-items-end items-end justify-start gap-10 align-middle font-sans"
         >
             <a
                 href="#main-content"
                 className="sr-only focus:not-sr-only absolute top-0 left-0 m-4 p-2 z-50 bg-medwork-dark text-medwork-light dark:bg-medwork-light dark:text-medwork-dark"
             >
-        Skip to Main Content
+                Skip to Main Content
             </a>
 
             {navMenu.nav.map((tab) => (

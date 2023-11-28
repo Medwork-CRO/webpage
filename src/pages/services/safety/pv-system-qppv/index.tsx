@@ -5,8 +5,8 @@ import Title from "@/components/Title";
 import vigilance from "@assets/services/safety-vector.jpg";
 
 const paragraphs0 = [
-    "Enhancing Pharmacovigilance Efficacy: PV Systems and QPPV Services.",
-    "We understand the criticality of establishing efficient processes that prioritize patient safety and regulatory compliance. Working closely with our clients, we offer customized solutions that align with regulatory requirements and industry standards.",
+    "Enhancing Pharmacovigilance Outcomes: PV Systems and QPPV Services.",
+    "We understand the criticality of establishing processes that prioritize regulatory compliance, efficiency, and quality. Working closely with our clients, we offer customized solutions that align with regulatory requirements and industry standards.",
 ];
 
 function Vigilance() {
@@ -22,24 +22,24 @@ function Vigilance() {
                     <Title title="Our Core Strengths" />
                     <ul className="w-full flex flex-col px-4 mx-4 md:mx-8 lg:mx-16 my-4 md:my-8 lg:my-16 gap-16 list-disc">
                         <li>
-                            <b className="mr-2">Quality System Implementation:</b>
-                            <span>Our foundation lies in building robust quality systems that serve as the cornerstone of your pharmacovigilance framework, ensuring adherence to stringent standards and safety measures.</span>
+                            <b className="mr-2">Robust Quality System:</b>
+                            <span>Our services are developed within a thorough quality system, ensuring each deliverable meets the desired and valued standards of our clients.</span>
                         </li>
                         <li>
-                            <b className="mr-2">Customized PV Systems:</b>
-                            <span>Tailored to your needs, our PV Systems offer robust solutions that seamlessly integrate into your operations, ensuring compliance and meticulous safety oversight.</span>
+                            <b className="mr-2">Flexible PV System:</b>
+                            <span>Customised to meet the unique needs of medium-sized MAHs, or CROs our PV system provides efficient, versatile solutions that ensure compliance and detailed safety oversight for a diverse range of clients.</span>
                         </li>
                         <li>
                             <b className="mr-2">QPPV Expertise:</b>
-                            <span>Our experienced QPPVs act as your vigilant guardians, ensuring adherence to local regulations and global best practices, thereby safeguarding your pharmacovigilance operations.</span>
+                            <span>Our skilled QPPVs diligently ensure compliance with local and EU regulations and industry best practices, guaranteeing that our client&apos;s pharmacovigilance operations adhere to the standards set by competent authorities.</span>
                         </li>
                         <li>
                             <b className="mr-2">Adaptability to Regulations:</b>
-                            <span>Embracing diverse regulatory landscapes, we navigate intricate requirements with ease, guaranteeing compliance while maintaining operational efficiency.</span>
+                            <span>Catering to the varied portfolios, needs, and operating environments of MAHs and CROs, we adeptly handle complex requirements, ensuring compliance without compromising operational efficiency.</span>
                         </li>
                         <li>
                             <b className="mr-2">Holistic Approach:</b>
-                            <span>Just as with our other services, our PV Systems and QPPV support are underpinned by a holistic understanding of pharmacovigilance, aligning seamlessly with your broader safety strategies.</span>
+                            <span>Our pharmacovigilance systems and QPPVs adopt a holistic approach, implementing smart and efficient solutions. The holistic approach enables us to steer clear of simplistic solutions that may be problematic in the future, ensuring our deliverables/solutions remain optimal over time.</span>
                         </li>
                     </ul>
                 </div>

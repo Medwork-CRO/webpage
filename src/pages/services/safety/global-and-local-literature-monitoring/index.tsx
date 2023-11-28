@@ -6,7 +6,7 @@ import safety from "@assets/services/safety-vector.jpg";
 
 const paragraph1 = [
     "Global MLM",
-    "Unlock unparalleled pharmacovigilance insights with our Global Literature Monitoring service. Backed by a reservoir of strengths, we redefine safety assessment with our deep expertise and client-centric approach.",
+    "Unlock a mature system supported by an experienced team with our Global Literature Monitoring service. Our deep expertise and client-centric approach redefine maximal accuracy, consistency, compliance and well designed and executed processes.",
 ];
 
 const paragraph2 = [
@@ -28,19 +28,19 @@ function GlobalAndLocalLiteratureMonitoring() {
                     <ul className="w-full flex flex-col px-4 mx-4 md:mx-8 lg:mx-16 my-4 md:my-8 lg:my-16 gap-16 list-disc">
                         <li>
                             <b className="mr-2">Profound Expertise:</b>
-                            <span>With a wealth of experience, our team possesses an intricate understanding of global literature monitoring, ensuring meticulous scrutiny of safety data.</span>
+                            <span>Our team&apos;s extensive experience, bolstered by continuous training and knowledge sharing among members, ensures meticulous scrutiny of safety data.</span>
                         </li>
                         <li>
                             <b className="mr-2">Tailored Adaptability:</b>
-                            <span>We mold our service to your needs. Whether it&apos;s the scope, depth, or specific requirements, our adaptable approach aligns seamlessly with your preferences.</span>
+                            <span>We customise our service to client needs, ensuring seamless alignment with scope, depth, and specific requirements.</span>
                         </li>
                         <li>
                             <b className="mr-2">SOP Alignment:</b>
-                            <span>We integrate seamlessly with your Standard Operating Procedures (SOPs), assuring compliance and a consistent approach in line with your established protocols.</span>
+                            <span>Our integration with client Standard Operating Procedures (SOPs) assures compliance and consistency with established protocols.</span>
                         </li>
                         <li>
                             <b className="mr-2">Medical Doctor Engagement:</b>
-                            <span>Our service is elevated by the involvement of Medical Doctors, experts who provide in-depth medical insights for a comprehensive safety assessment.</span>
+                            <span>Our service benefits from the involvement of Medical Doctors, who offer in-depth medical insights for complex, intricate, or ambiguous cases.</span>
                         </li>
                     </ul>
                 </div>
@@ -52,31 +52,31 @@ function GlobalAndLocalLiteratureMonitoring() {
                     <ul className="w-full flex flex-col px-4 mx-4 md:mx-8 lg:mx-16 my-4 md:my-8 lg:my-16 gap-16 list-disc">
                         <li>
                             <b className="mr-2">Proven Expertise:</b>
-                            <span>Benefit from a mature process refined over 15 years, ensuring accuracy and reliability in every review.</span>
+                            <span>Benefit from our 15-year-refined process, ensuring accuracy and reliability in each review.</span>
                         </li>
                         <li>
                             <b className="mr-2">Medical Doctor Review:</b>
-                            <span>Exclusively performed by our trained and experienced Medical Doctors, guaranteeing a meticulous and informed assessment.</span>
+                            <span>Exclusively performed by trained, experienced Medical Doctors for a meticulous and informed assessment.</span>
                         </li>
                         <li>
                             <b className="mr-2">Comprehensive Coverage:</b>
-                            <span>Beyond medical journals, we scrutinize published conference proceedings – a primary source of safety information – amplifying the scope of our assessment.</span>
+                            <span>We extend beyond medical journals to include conference proceedings - a primary source of safety information - amplifying the scope of our assessment.</span>
                         </li>
                         <li>
                             <b className="mr-2">Thorough Examination:</b>
-                            <span>Our review is word-by-word, cover-by-cover, leaving no stone unturned and ensuring no detail is missed.</span>
+                            <span>Our word-by-word, cover-by-cover review leaves no stone unturned, and no detail missed.</span>
                         </li>
                         <li>
                             <b className="mr-2">Monthly Quality Checks:</b>
-                            <span>Regular Quality Control evaluations, including the performance assessment of our Reviewers, underscore our commitment to excellence.</span>
+                            <span>Regular quality controls, including reviewer performance assessments, underscore our commitment to excellence.</span>
                         </li>
                         <li>
                             <b className="mr-2">Extensive Trust:</b>
-                            <span>Over 70 MAHs entrust us with the screening of more than 1,000 APIs, attesting to the reliability of our service.</span>
+                            <span>Over 70 MAHs rely on us for screening over 1,000 APIs, attesting to our service&apos;s reliability.</span>
                         </li>
                         <li>
                             <b className="mr-2">Holistic Recording:</b>
-                            <span>We record all safety information identified for all pharmaceutical products, allowing for comprehensive retrospective reviews.</span>
+                            <span>We document all identified safety information for all pharmaceutical products, enabling comprehensive retrospective reviews.</span>
                         </li>
                     </ul>
                 </div>

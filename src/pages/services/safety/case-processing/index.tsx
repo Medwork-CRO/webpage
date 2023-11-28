@@ -5,11 +5,11 @@ import Title from "@/components/Title";
 import safety from "@assets/services/safety-vector.jpg";
 
 const paragraph = [
-    "Efficient ICSR Case Processing crafted to  your requirements. With an extended team of dedicated pharmacovigilance professionals, we excel in managing all aspects of ICSR processing. Whether faced with urgent or substantial caseloads, we seamlessly adapt to your requirements.",
+    "Efficient ICSR Case Processing Crafted to Client's Requirements: With an extended team of dedicated pharmacovigilance professionals, we manage all aspects of ICSR processing, seamlessly adapting to client's urgent or substantial caseloads.",
 ];
 
 const paragraph2 = [
-    "Partner with us to experience the synergy of skilled professionals, adaptable solutions, and a robust quality assurance framework for ICSR case processing that meets the highest standards of accuracy and efficiency.",
+    "Partner with us for a synergy of skilled professionals, adaptable solutions, and a robust quality assurance framework. Our ICSR case processing meets industry standards of accuracy and efficiency, tailored to client's specific needs.",
 ];
 
 function CaseProcessing() {
@@ -30,11 +30,11 @@ function CaseProcessing() {
                         </li>
                         <li>
                             <b className="mr-2">Urgent and High-Volume adaptability:</b>
-                            <span>We are equipped to seamlessly adapt to urgent or excessive ICSR processing requirements, providing timely solutions without compromising quality.</span>
+                            <span>We are equipped to adapt to urgent or high volume ICSR processing requirements, delivering timely solutions without compromising on quality.</span>
                         </li>
                         <li>
                             <b className="mr-2">Database Expertise:</b>
-                            <span>Leveraging our PV Database and extensive experience with major PV databases, we guarantee meticulous processing tailored to your specific needs.</span>
+                            <span>Leveraging our PV Database and extensive experience with major PV databases, we ensure case processing tailored to specific client needs.</span>
                         </li>
                         <li>
                             <b className="mr-2">Flexible Compliance:</b>
@@ -42,7 +42,7 @@ function CaseProcessing() {
                         </li>
                         <li>
                             <b className="mr-2">3-Step process  including Medical Doctors expertise:</b>
-                            <span>Benefit from our comprehensive 3-step approach, including initial processing, expert medical assessment by qualified Medical Doctors, and thorough Quality Control checks by experienced (Senior) PV personnel.</span>
+                            <span>Clients benefit from our comprehensive 3-step approach, encompassing initial processing, expert medical assessment by qualified Medical Doctors, and thorough Quality Control checks by experienced PV personnel.</span>
                         </li>
                     </ul>
 
