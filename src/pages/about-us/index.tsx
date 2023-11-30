@@ -3,9 +3,9 @@ import Breadcrumbs from "@/components/Breadcrumb";
 import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ImageCategory from "@/components/ImageCategory";
 import People from "@/components/People";
+import Title from "@/components/Title";
 
 const paragraphs = [
-    "Who we are",
     "We have proudly established ourselves as the leading and most esteemed Contract Research Organization (CRO) in Greece.",
     "Our commitment to making a significant difference propelled us to expand our operations to Cyprus. Currently, we have extended our sphere of influence to encompass the whole of Europe, always maintaining our dedication to high quality service and respect for all stakeholders.",
 ];
@@ -30,9 +30,12 @@ function AboutUs() {
                 <Breadcrumbs />
 
                 <div className="flex flex-col gap-6 whitespace-pre-line px-4 sm:px-6 text-xl text-gray-500 dark:text-gray-400 lg:px-0 py-16">
-                    <DisplayParagraphs paragraphs={paragraphs} />
+                    <Title title="Who we are" />
+                    <DisplayParagraphs withLead={true} paragraphs={paragraphs} />
                     {/* <PromoCard /> */}
-                    <DisplayParagraphs paragraphs={paragraphs2} />
+                    <DisplayParagraphs withLead={true} paragraphs={paragraphs2} />
+
+                    <Title title="Leadership" />
                     <People />
                 </div>
             </div>

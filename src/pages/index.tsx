@@ -3,10 +3,9 @@ import CarouselImage from "@/components/CarouselImage";
 import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ProvidedServices from "@/components/ProvidedServices";
 import Statistics from "@/components/Statistics";
-import Title from "@/components/Title";
 // import EMA from "@assets/stock-images/ema.jpg";
-import office from "@assets/stock-images/office.jpg";
 import happyWoman from "@assets/stock-images/happy-woman.jpg";
+import office from "@assets/stock-images/office.jpg";
 import team2 from "@assets/team-photos/team2.jpg";
 
 const carouselTitle = "Advancing Drug Safety with Operational Excellence, Regulatory Compliance, and Adaptive Solutions";
@@ -25,8 +24,8 @@ const imageShowCases = [
     },
 ];
 
-const leadTitle = "We Offer Drug Safety Services with Advanced Process Management, Regulatory Compliance, and Adaptive Solutions";
-const leadParagraph = [
+const introParagraph = [
+    "We Offer Drug Safety Services with Advanced Process Management, Regulatory Compliance, and Adaptive Solutions",
     "At Medwork, we focus on vigilance services, combining expertise with flexibility. As a CRO dedicated exclusively to safety, we remain updated with industry advancements and regulatory standards. Our team's in-depth experience in pharmacovigilance provides valuable insights and guidance, helping clients navigate regulatory challenges and establish effective safety strategies.",
     "What distinguishes us is our agility and adaptability derived from our size. This allows us to quickly adjust our approach and resources to address changing needs, offering an experience that may be challenging for larger CROs to replicate.",
 ];
@@ -45,11 +44,8 @@ function Home() {
             </Carousel>
 
             <div id="main-content" className="max-w-[1200px] w-full items-center whitespace-pre-line px-4 sm:px-6 lg:px-0 py-16">
-                <div className="flex flex-col">
-                    <Title title={leadTitle} />
-                    <div className="my-12">
-                        <DisplayParagraphs paragraphs={leadParagraph} />
-                    </div>
+                <div className="flex flex-col gap-4 mb-16">
+                    <DisplayParagraphs withLead={true} paragraphs={introParagraph} />
                 </div>
                 <div className="flex flex-col">
                     <ProvidedServices />

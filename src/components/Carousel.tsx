@@ -4,9 +4,12 @@ import React, { PropsWithChildren, useEffect, useState } from "react";
 import CarouselControls from "./CarouselControls";
 import Dots from "./Dots";
 
-type Props = PropsWithChildren & EmblaOptionsType;
+// Until I find a way to pass it as a variable
+// const carouselTitle = "Advancing Drug Safety with Operational Excellence, Regulatory Compliance, and Adaptive Solutions";
 
-const Carousel = ({ title, children }: {title: string, children: Props}) => {
+type Props = PropsWithChildren & EmblaOptionsType & { title: string };
+
+const Carousel = ({ children, title }: Props) => {
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false }, [Autoplay({
         stopOnInteraction: true,
         stopOnMouseEnter: false,

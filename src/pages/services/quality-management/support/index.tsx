@@ -50,7 +50,7 @@ function CaseProcessing() {
 
             <div id="main-content" className="max-w-[1200px] w-full">
                 <Breadcrumbs />
-                <div className="flex flex-col items-center gap-16 whitespace-pre-line px-4 sm:px-6 text-2xl text-gray-500 dark:text-gray-400 lg:px-0 py-16">
+                <div className="flex flex-col items-center gap-8 whitespace-pre-line px-4 sm:px-6 text-2xl text-gray-500 dark:text-gray-400 lg:px-0 py-16">
                     <Showcasing title={title1} showcases={showcases1} />
                     <Showcasing title={title2} showcases={showcases2} />
                 </div>

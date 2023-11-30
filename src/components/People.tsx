@@ -41,7 +41,7 @@ function People() {
         <div className="
             flex
              border-gray-300 dark:border-gray-500
-            w-full my-6 py-6 sm:my-12 sm:py-12 px-4
+            w-full m-2 sm:p4 px-4
             overflow-x-auto space-x-8 snap-x snap-mandatory
             ">
             {membersInfo.map((memberInfo, i) => (

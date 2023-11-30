@@ -9,7 +9,7 @@ const paragraphs0 = [
     "Experience Tailored to Your Needs: Our local Pharmacovigilance (PV) services are designed to cater to a diverse range of clients, ensuring seamless compliance and risk management. Whether you're a small Marketing Authorization Holder (MAH) with limited products and no local office, or a prominent international pharmaceutical company with an extensive portfolio, our expertise adapts to your specific requirements.",
 ];
 
-const title = "Key Attributes";
+const title = "Our Core Strengths";
 const showcases = [
     {
         title: "Customized PV Systems",
@@ -44,8 +44,8 @@ function LocalPharmacovigilance() {
 
             <div id="main-content" className="max-w-[1200px] w-full">
                 <Breadcrumbs />
-                <div className="flex flex-col items-center gap-16 whitespace-pre-line px-4 sm:px-6 text-2xl text-gray-500 dark:text-gray-400 lg:px-0 py-16">
-                    <DisplayParagraphs paragraphs={paragraphs0} />
+                <div className="flex flex-col items-center gap-8 whitespace-pre-line px-4 sm:px-6 text-2xl text-gray-500 dark:text-gray-400 lg:px-0 py-16">
+                    <DisplayParagraphs withLead={false} paragraphs={paragraphs0} />
                     <Showcasing title={title} showcases={showcases} />
                 </div>
             </div>

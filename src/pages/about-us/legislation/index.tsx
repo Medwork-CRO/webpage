@@ -23,7 +23,7 @@ function AboutUs() {
                 <Breadcrumbs />
 
                 <div className="flex flex-col gap-6 whitespace-pre-line px-4 sm:px-6 text-xl text-gray-500 dark:text-gray-400 lg:px-0 py-16">
-                    <DisplayParagraphs paragraphs={paragraphs} />
+                    <DisplayParagraphs withLead={false} paragraphs={paragraphs} />
                     <LegislationTabs />
                 </div>
             </div>

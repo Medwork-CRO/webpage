@@ -36,7 +36,7 @@ function Cosmetovigilance() {
                 <Breadcrumbs />
                 <div className="flex flex-col items-center gap-6 whitespace-pre-line px-4 sm:px-6 lg:px-0 py-16 text-2xl text-gray-500 dark:text-gray-400 text-center w-full">
 
-                    <DisplayParagraphs paragraphs={paragraphs} />
+                    <DisplayParagraphs withLead={true} paragraphs={paragraphs} />
 
                     <DualLayerParallax imageFull='/assets/image-full.png' imageBottom='/assets/image-bottom.png' text='Join the Team' />
 
@@ -86,7 +86,7 @@ function Cosmetovigilance() {
                             <Link
                                 className="flex flex-row items-center justify-center gap-4
                                 cursor-pointer text-medwork-light dark:text-medwork-dark
-                                font-light narrow-letters leading-relaxed
+                                font-light narrow-letters leading-relaxed whitespace-nowrap
                                 py-2 px-4 text-sm sm:text-md md:text-lg text-center w-[200px] rounded-full
                                 bg-blue-400 hover:bg-blue-500 focus-visible:bg-blue-500
                                 transition duration-100 ease-in focus:outline-none"
