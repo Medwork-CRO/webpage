@@ -11,23 +11,27 @@ const formatBreadcrumb = (str: string) => {
         .join(" ");
 };
 
-const getPathForKnownRoutes = (str: string) => {
-    if (str === "/home") {
-        return "/";
-    } else if (str === "/home/services") {
-        return "";
-    } else if (str === "/home/services/safety") {
-        return "/services/safety";
-    } else if (str === "/home/about") {
-        return "";
+function pathSanitisation(str: string): { valid: boolean; path: string } {
+    const nonExistentPaths = ["/home/services", "/home/about"];
+
+    if (nonExistentPaths.includes(str)) {
+        return {
+            valid: false,
+            path: "",
+        };
     }
-    return str;
-};
+
+    return {
+        valid: true,
+        path: str.replace("/home", "/"),
+    };
+}
 
 const Breadcrumbs = () => {
     const { pathname } = useRouter();
-    const pathnames = ["home"].concat(pathname.split("/").filter(x => x));
-    const paths = pathnames.map((_name: string, idx) => "/" + pathnames.slice(0, idx + 1).join("/"));
+
+    const pathNames = ["home"].concat(pathname.split("/").filter(x => !!x));
+    const paths = pathNames.map((_name: string, idx) => "/" + pathNames.slice(0, idx + 1).join("/"));
 
     return (
         <div className="
@@ -35,14 +39,12 @@ const Breadcrumbs = () => {
             py-2 px-4 rounded-lg text-base
             m-0 sm:m-2 space-x-2 shadow-inner
         ">
-            {pathnames.map((crumb, i) => {
-                if (i === pathnames.length - 1) {
+            {pathNames.map((crumb, i) => {
+                if (i === pathNames.length - 1) {
                     return <div key={i}>{formatBreadcrumb(crumb)}</div>;
-                } else if (!getPathForKnownRoutes(paths[i])) {
+                } else if (!pathSanitisation(paths[i]).valid) {
                     return  <React.Fragment key={i}>
-                        <div>
-                            {formatBreadcrumb(crumb)}
-                        </div>
+                        <div>{formatBreadcrumb(crumb)}</div>
                         <span>/</span>
                     </React.Fragment>;
                 } else {
@@ -50,7 +52,7 @@ const Breadcrumbs = () => {
                         <React.Fragment key={i}>
                             <div>
                                 <Link
-                                    href={getPathForKnownRoutes(paths[i])}
+                                    href={pathSanitisation(paths[i]).path}
                                     className="text-cyan-500 hover:text-cyan-400 hover:underline"
                                 >
                                     {formatBreadcrumb(crumb)}
