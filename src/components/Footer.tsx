@@ -15,7 +15,7 @@ type ThemeSelectorProps = {
     setTheme: (theme: THEME) => void;
 };
 
-const recruitmentEmail = "recruitment@medwork.gr";
+const recruitmentEmail = "hr@medwork.gr";
 const mail = "medworkinfo@medwork.gr";
 const address = "Greece, Chiou 5, Argyroupoli 164 52";
 const linkedin = "company/medwork";

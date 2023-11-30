@@ -1,7 +1,6 @@
 import Breadcrumbs from "@/components/Breadcrumb";
 import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ImageCategory from "@/components/ImageCategory";
-import InfoBox from "@/components/InfoBox";
 import InfoBoxMatrix from "@/components/InfoBoxMatrix";
 import safety from "@assets/services/safety-vector.jpg";
 

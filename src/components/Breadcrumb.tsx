@@ -35,9 +35,8 @@ const Breadcrumbs = () => {
 
     return (
         <div className="
-            inline-flex text-gray-600 dark:text-gray-300 md:text-lg
-            py-2 px-4 rounded-lg text-base
-            m-0 sm:m-2 space-x-2 shadow-inner
+            inline-flex text-gray-600 dark:text-gray-300 md:text-lg text-base
+            px-4 sm:px-6 lg:px-0 space-x-2
         ">
             {pathNames.map((crumb, i) => {
                 if (i === pathNames.length - 1) {

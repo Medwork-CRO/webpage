@@ -4,13 +4,14 @@ import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ProvidedServices from "@/components/ProvidedServices";
 import Statistics from "@/components/Statistics";
 import Title from "@/components/Title";
-import EMA from "@assets/stock-images/ema.jpg";
+// import EMA from "@assets/stock-images/ema.jpg";
+import office from "@assets/stock-images/office.jpg";
 import happyWoman from "@assets/stock-images/happy-woman.jpg";
 import team2 from "@assets/team-photos/team2.jpg";
 
 const imageShowCases = [
     {
-        image: EMA,
+        image: office,
         title: "Medwork is a European pharmacovigilance expert organization.",
     },
     {

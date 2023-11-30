@@ -11,7 +11,7 @@ function Logo() {
         >
             <Image src={medworkLogo} alt="Medwork Logo" width={46} />
             <div
-                className={"font-thin narrow-letters leading-relaxed text-3xl text-medwork-brown dark:text-medwork-light"}
+                className={"font-ultrathin narrow-letters leading-relaxed text-3xl text-medwork-brown dark:text-medwork-light"}
             >
                 Medwork
             </div>
