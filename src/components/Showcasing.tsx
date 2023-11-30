@@ -22,7 +22,7 @@ function Showcasing({ title, showcases }: { title: string, showcases: Showcase[]
             <ul className="flex flex-col gap-6 list-disc">
                 {showcases.map((showcase, i) => (
                     <React.Fragment key={i}>
-                        <Showcase key={i} title={showcase.title} point={showcase.point} />
+                        <Showcase title={showcase.title} point={showcase.point} />
                     </React.Fragment>
                 ))}
             </ul>
