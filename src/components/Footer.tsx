@@ -15,9 +15,9 @@ type ThemeSelectorProps = {
     setTheme: (theme: THEME) => void;
 };
 
-const recruitmentEmail = "hr@medwork.gr";
 const mail = "medworkinfo@medwork.gr";
-const address = "Greece, Chiou 5, Argyroupoli 164 52";
+const addressA = "5 Chiou street";
+const addressB = "16 452 Argyroupolis, Greece";
 const linkedin = "company/medwork";
 
 const policies = [
@@ -99,7 +99,7 @@ function CompanyContact() {
                 aria-label="By clicking you will be taken to Maps"
                 rel="noopener noreferrer"
                 target="_blank"
-                href={"http://maps.google.com/?q=" + address}
+                href={"https://goo.gl/maps/KDKk5piro9Cb6AXG7"}
             >
                 <MdLocationOn className="antialiased" size={"28px"} />
             </a>
@@ -115,7 +115,7 @@ function CompanyContact() {
                 aria-label="By clicking you will be taken to LinkedIn"
                 rel="noopener noreferrer"
                 target="_blank"
-                href={"https://www.linkedin.com/in/" + linkedin}
+                href={"https://www.linkedin.com/" + linkedin}
             >
                 <FaLinkedin className="antialiased" size={"28px"} />
             </a>
@@ -125,7 +125,6 @@ function CompanyContact() {
 
 function Legal() {
     return (
-        // <div className="flex flex-col sm:flex-row items-start gap-2 text-xl sm:text-lg font-thin narrow-letters text-gray-400 sm:self-end">
         <div className="flex flex-col sm:flex-row flex-wrap items-start sm:self-end gap-2 text-xl sm:text-lg font-light narrow-letters text-gray-400">
             <span>2005 - {new Date().getFullYear()} © Medwork</span>
             <span className="flex flex-col sm:flex-row gap-2">
@@ -152,8 +151,8 @@ function Information() {
     return (
         <div className="flex flex-col items-start gap-4 text-xl sm:text-lg text-medwork-dark dark:text-medwork-light">
             <Link
-                className="font-black narrow-letters hover:underline focus-visible:underline whitespace-nowrap"
-                href={"/about/legislation"}
+                className="font-light narrow-letters hover:underline focus-visible:underline whitespace-nowrap"
+                href={"/about-us/legislation"}
             >
                 Legislation
             </Link>
@@ -161,10 +160,11 @@ function Information() {
                 {policies.map((policy, i) => (
                     <span key={i} className="flex flex-row">
                         <Link
-                            className="font-thin narrow-letters hover:underline focus-visible:underline whitespace-nowrap"
+                            className="font-ultralight narrow-letters hover:underline focus-visible:underline whitespace-nowrap"
                             href={`${policy.filePath}/${policy.fileName}`}
                             target="_blank"
                             rel="noopener noreferrer"
+                            title={policy.label}
                         >
                             {policy.label}
                         </Link>
@@ -224,8 +224,6 @@ function Footer({ theme, setTheme }: ThemeSelectorProps) {
                     <ThemeSelector theme={theme} setTheme={setTheme} />
                 </div>
 
-                {/* <div className="flex flex-col justify-between gap-8 py-16 md:flex-row"> */}
-                {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-8 gap-16 py-16"> */}
                 <div className="flex flex-col sm:flex-row flex-wrap justify-between gap-8 py-16">
                     <div className="flex flex-col gap-6">
                         <Logo />
@@ -233,7 +231,7 @@ function Footer({ theme, setTheme }: ThemeSelectorProps) {
                     </div>
 
                     <div className="min-w-96 flex flex-col gap-6 text-left">
-                        <span className="text-2xl sm:text-lg font-light narrow-letters uppercase">{Services.label}</span>
+                        <span className="text-2xl sm:text-lg font-normal narrow-letters uppercase">{Services.label}</span>
                         <div className="text-xl sm:text-lg font-thin narrow-letters flex flex-col gap-2">
                             {Services.subCategories.map((service, i) => (
                                 <Link
@@ -277,18 +275,14 @@ function Footer({ theme, setTheme }: ThemeSelectorProps) {
                                 {mail}
                             </Link>
                             <Link
-                                href={`mailto:${recruitmentEmail}`}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                {recruitmentEmail}
-                            </Link>
-                            <Link
                                 href={"https://goo.gl/maps/KDKk5piro9Cb6AXG7"}
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                {address}
+                                <div className="flex flex-col">
+                                    <div>{addressA}</div>
+                                    <div>{addressB}</div>
+                                </div>
                             </Link>
                         </div>
                         <RoundedButton label="GET IN TOUCH" href="/contact-us" />

@@ -6,8 +6,6 @@ type Legislation = {
     dropDowns: InlineInfoBoxParams[]
 };
 
-const MedworkInfoMail = "medworkinfo@medwork.gr";
-
 const legislations: Legislation[] = [
     {
         name: "Greek Pharmacovigilance Legislation",
@@ -298,7 +296,7 @@ const LegislationTabs = () => {
                         })}
                     </ul>
 
-                    <p className="text-sm text-medwork-dark dark:text-medwork-light mb-10">
+                    {/* <p className="text-sm text-medwork-dark dark:text-medwork-light mb-10">
                         * For the full translation of the texts in English, please contact us at <a
                             aria-label="By clicking you will be taken to Mail"
                             rel="noopener noreferrer"
@@ -307,7 +305,7 @@ const LegislationTabs = () => {
                         >
                             {MedworkInfoMail}
                         </a>
-                    </p>
+                    </p> */}
 
                     <div className="relative flex flex-col min-w-0 break-words">
                         <div className="flex-auto">

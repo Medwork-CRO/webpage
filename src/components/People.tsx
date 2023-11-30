@@ -2,11 +2,7 @@ import { MemberInfo } from "@/types/MemberInfo";
 import person1 from "@assets/people/person1.webp";
 import person2 from "@assets/people/person2.jpg";
 import person3 from "@assets/people/person3.jpg";
-import person4 from "@assets/people/person4.webp";
-import person5 from "@assets/people/person5.jpg";
 import person6 from "@assets/people/person6.jpg";
-import person7 from "@assets/people/person7.png";
-import person8 from "@assets/people/person8.jpg";
 import MemberCard from "./MemberCard";
 
 const membersInfo: MemberInfo[] = [
@@ -37,34 +33,6 @@ const membersInfo: MemberInfo[] = [
         title: "Sales Manager",
         description:
             "Alex is a results-driven sales professional with a proven track record of exceeding targets. With expertise in lead generation, account management, and sales strategy, he drives revenue growth and builds long-term customer relationships. Alex's exceptional communication skills and ability to understand customer needs make him a valuable asset to any sales team.",
-    },
-    {
-        image: person4,
-        name: "Sarah Lee",
-        title: "Product Manager",
-        description:
-            "Sarah is a highly skilled product manager with a passion for developing innovative products that meet customer needs. With expertise in product strategy, market research, and user experience design, she leads cross-functional teams to deliver products that exceed customer expectations. Sarah's exceptional communication skills and ability to collaborate with stakeholders make her a valuable asset to any product team.",
-    },
-    {
-        image: person5,
-        name: "David Kim",
-        title: "Data Analyst",
-        description:
-            "David is a data analyst with a passion for turning data into insights that drive business decisions. With expertise in data visualization, statistical analysis, and machine learning, he leverages data-driven insights to inform business strategy and improve operational efficiency. David's exceptional analytical skills and attention to detpersonl ensure that his insights are always accurate and actionable.",
-    },
-    {
-        image: person7,
-        name: "John Doe",
-        title: "Head Of Design",
-        description:
-            "John, the visionary designer, possesses an innate ability to transform ideas into captivating visual experiences. With a keen eye for aesthetics and attention to the people, he crafts innovative designs that captivate audiences and breathe life into brands. Through his creative genius and passion for pushing boundaries, John leaves an indelible mark on every project he undertakes, redefining the world of design.",
-    },
-    {
-        image: person8,
-        name: "Nicolas Doe",
-        title: "Head of Operations",
-        description:
-            "Nicolas, the exceptional Head of Operations, orchestrates seamless efficiency and optimal performance within the organization. With a strategic mindset and sharp analytical skills, he streamlines processes, enhances productivity, and ensures smooth day-to-day operations. Nicolas's unwavering dedication and leadership inspire the team to achieve operational excellence, driving the company's success to new heights.",
     },
 ];
 

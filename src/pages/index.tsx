@@ -9,18 +9,19 @@ import office from "@assets/stock-images/office.jpg";
 import happyWoman from "@assets/stock-images/happy-woman.jpg";
 import team2 from "@assets/team-photos/team2.jpg";
 
+const carouselTitle = "Advancing Drug Safety with Operational Excellence, Regulatory Compliance, and Adaptive Solutions";
 const imageShowCases = [
     {
         image: office,
-        title: "Medwork is a European pharmacovigilance expert organization.",
+        title: undefined, // "Medwork is a European pharmacovigilance expert organization.",
     },
     {
         image: happyWoman,
-        title: "We undertake projects for clients throughout Europe, leveraging our extensive resources and skilled team to manage complex pharmacovigilance projects.",
+        title: undefined, // "We undertake projects for clients throughout Europe, leveraging our extensive resources and skilled team to manage complex pharmacovigilance projects.",
     },
     {
         image: team2,
-        title: "We maintain the flexibility, agility, and responsiveness of a compact organization without compromising our commitment to caring for our clients and their projects.",
+        title: undefined, // "We maintain the flexibility, agility, and responsiveness of a compact organization without compromising our commitment to caring for our clients and their projects.",
     },
 ];
 
@@ -33,7 +34,7 @@ const leadParagraph = [
 function Home() {
     return (
         <div className="mx-auto flex flex-col items-center justify-between w-full">
-            <Carousel loop={true}>
+            <Carousel title={carouselTitle} loop={true}>
                 {imageShowCases.map((imageShowCase, i) => (
                     <CarouselImage
                         key={i}
@@ -55,7 +56,7 @@ function Home() {
                     <Statistics Stats={[
                         { count: 15, symbol: "+", title: "years of", point: "experience" },
                         { count: 85, symbol: "+", title: "active", point: "clients" },
-                        { count: 84, symbol: "+", title: "safety", point: "professionals" },
+                        { count: 30, symbol: "+", title: "", point: "safety professionals" },
                     ]}/>
                 </div>
             </div>

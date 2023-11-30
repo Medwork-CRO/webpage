@@ -2,6 +2,7 @@ import { useState } from "react";
 import { MemberInfo } from "@/types/MemberInfo";
 import Image from "next/image";
 import { FaLinkedin } from "react-icons/fa";
+import { MdExpandMore, MdExpandLess } from "react-icons/md";
 
 function MemberCard({
     image,
@@ -12,20 +13,15 @@ function MemberCard({
 }: MemberInfo) {
     const [showFullDescription, setShowFullDescription] = useState(false);
 
-    // Function to toggle the description view
     const toggleDescription = () => {
         setShowFullDescription(!showFullDescription);
     };
 
-    // Determine if the description is long enough to need truncation
-    const isLongDescription = description.length > 500;
-    const truncatedDescription = isLongDescription ? description.substring(0, 500) + "..." : description;
-
     return (
         <div className="flex flex-col w-full min-w-[20rem] max-w-[20rem]">
-            <div className="flex h-32 w-full justify-center rounded-xl bg-cover">
+            <div className="flex h-[200px] w-full justify-center rounded-xl bg-cover">
                 <Image
-                    className="h-[136px] w-[136px] rounded-full border-2 border-cyan-500 object-cover"
+                    className="h-[212px] w-[156px] rounded-lg border-2 border-cyan-500 object-cover"
                     src={image}
                     alt={title}
                 />
@@ -34,25 +30,31 @@ function MemberCard({
                 <div className="flex flex-col items-center gap-2">
                     <div className="flex items-center gap-2 justify-center">
                         <h4 className="text-bluePrimary text-xl font-extralight narrow-letters">{name}</h4>
-                        <a
+                        {linkedInTag && <a
                             aria-label="By clicking you will be taken to LinkedIn"
                             rel="noopener noreferrer"
                             target="_blank"
                             href={"https://www.linkedin.com/in/" + linkedInTag}
                         >
                             <FaLinkedin className="antialiased" size={"20px"} />
-                        </a>
+                        </a>}
                     </div>
                     <p className="text-base font-thin narrow-letters text-cyan-500">{title}</p>
                 </div>
-                <p className="mt-4 overflow-ellipsis font-light narrow-letters leading-relaxed text-medwork-brown dark:text-gray-400 text-2xl md:text-base">
-                    {showFullDescription || !isLongDescription ? description : truncatedDescription}
-                    {isLongDescription && (
-                        <button onClick={toggleDescription} className="text-cyan-500 underline">
-                            {showFullDescription ? "Show Less" : "Continue Reading"}
-                        </button>
+                <div className="mt-4 flex flex-col items-center text-sm font-light narrow-letters leading-relaxed text-cyan-500">
+                    <button
+                        onClick={toggleDescription}
+                        className="flex items-center"
+                    >
+                        {showFullDescription ? (<MdExpandLess className="mr-2 rounded-full border border-cyan-500 dark:border-cyan-800" />) : (<MdExpandMore className="mr-2 rounded-full border border-cyan-500 dark:border-cyan-800" />)}
+                        READ BIO
+                    </button>
+                    {showFullDescription && (
+                        <p className="mt-2 overflow-ellipsis font-light narrow-letters leading-relaxed text-2xl md:text-base transform transition duration-200 ease-in-out">
+                            {description}
+                        </p>
                     )}
-                </p>
+                </div>
             </div>
         </div>
     );

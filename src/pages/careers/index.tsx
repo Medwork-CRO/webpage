@@ -2,7 +2,7 @@ import Breadcrumbs from "@/components/Breadcrumb";
 import DisplayParagraphs from "@/components/DisplayParagraphs";
 import DualLayerParallax from "@/components/DualLayerParallax";
 import ImageCategory from "@/components/ImageCategory";
-import Statistics from "@/components/Statistics";
+import { MdEmail } from "@react-icons/all-files/md/MdEmail";
 import kariera from "@assets/companies/kariera_icon.png";
 import linkedin from "@assets/companies/linkedin_icon.png";
 import team3 from "@assets/team-photos/team3.jpg";
@@ -21,7 +21,7 @@ const paragraphs = [
 // ];
 
 function Cosmetovigilance() {
-    const recruitmentEmail = "recruitment@medwork.gr";
+    const hrEmail = "hr@medwork.gr";
 
     return (
         <div className="mx-auto flex flex-col items-center justify-between w-full">
@@ -35,11 +35,6 @@ function Cosmetovigilance() {
             <div id="main-content" className="max-w-[1200px] w-full">
                 <Breadcrumbs />
                 <div className="flex flex-col items-center gap-6 whitespace-pre-line px-4 sm:px-6 lg:px-0 py-16 text-2xl text-gray-500 dark:text-gray-400 text-center w-full">
-                    <Statistics Stats={[
-                        { count: 90, symbol: "%", title: "of employees are", point: "women" },
-                        { count: 80, symbol: "%", title: "of employees are happy after", point: "2 years" },
-                        { count: 84, symbol: "%", title: "of employees has at least one", point: "degree" },
-                    ]}/>
 
                     <DisplayParagraphs paragraphs={paragraphs} />
 
@@ -88,18 +83,34 @@ function Cosmetovigilance() {
                                 />
                                 {"LinkedIn"}
                             </Link>
-                        </div>
-                        <div className="flex flex-row justify-center mt-8 text-lg">
                             <Link
-                                className="italic"
-                                aria-label={`By clicking you will be taken to the email ${recruitmentEmail}`}
-                                href={`mailto:${recruitmentEmail}`}
+                                className="flex flex-row items-center justify-center gap-4
+                                cursor-pointer text-medwork-light dark:text-medwork-dark
+                                font-light narrow-letters leading-relaxed
+                                py-2 px-4 text-sm sm:text-md md:text-lg text-center w-[200px] rounded-full
+                                bg-blue-400 hover:bg-blue-500 focus-visible:bg-blue-500
+                                transition duration-100 ease-in focus:outline-none"
+                                aria-label={"By clicking you will be taken to linkedIn.gr"}
+                                key={"linkedIn"}
+                                href={`mailto:${hrEmail}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                Or email us your CV at {recruitmentEmail}
+                                <MdEmail className="h-8 w-8 object-cover" />
+                                Email us your CV
                             </Link>
                         </div>
+                        {/* <div className="flex flex-row justify-center mt-8 text-lg">
+                            <Link
+                                className="italic"
+                                aria-label={`By clicking you will be taken to the email ${hrEmail}`}
+                                href={`mailto:${hrEmail}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Or email us your CV at {hrEmail}
+                            </Link>
+                        </div> */}
                     </div>
                 </div>
             </div>

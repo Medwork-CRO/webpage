@@ -2,19 +2,19 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
 
-const formatBreadcrumb = (str: string) => {
-    return str
+function formatBreadcrumb(input: string) {
+    return input
         .replace(/-/g, " ")
         .replace(/_/g, " ")
         .split(" ")
         .map(s => s.charAt(0).toUpperCase() + s.slice(1))
         .join(" ");
-};
+}
 
-function pathSanitisation(str: string): { valid: boolean; path: string } {
-    const nonExistentPaths = ["/home/services", "/home/about"];
+function pathSanitisation(input: string): { valid: boolean; path: string } {
+    const nonExistentPaths = ["/home/services", "/home/about-us"];
 
-    if (nonExistentPaths.includes(str)) {
+    if (nonExistentPaths.includes(input)) {
         return {
             valid: false,
             path: "",
@@ -23,15 +23,28 @@ function pathSanitisation(str: string): { valid: boolean; path: string } {
 
     return {
         valid: true,
-        path: str.replace("/home", "/"),
+        path: input.replace("/home", "/"),
     };
+}
+
+function pathBeautifier(input: string): string {
+    console.log("input :>> ", input);
+    const wordsToUppercase = ["pv", "qppv", "mlm", "cro", "gvp"];
+
+    return input.split("-").map(word => {
+        if (wordsToUppercase.includes(word.toLowerCase())) {
+            return word.toUpperCase();
+        }
+        return word;
+    }).join("-");
 }
 
 const Breadcrumbs = () => {
     const { pathname } = useRouter();
 
-    const pathNames = ["home"].concat(pathname.split("/").filter(x => !!x));
+    let pathNames = ["home"].concat(pathname.split("/").filter(x => !!x));
     const paths = pathNames.map((_name: string, idx) => "/" + pathNames.slice(0, idx + 1).join("/"));
+    pathNames = pathNames.map(pathBeautifier);
 
     return (
         <div className="

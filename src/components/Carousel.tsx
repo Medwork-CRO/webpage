@@ -6,7 +6,7 @@ import Dots from "./Dots";
 
 type Props = PropsWithChildren & EmblaOptionsType;
 
-const Carousel = ({ children }: Props) => {
+const Carousel = ({ title, children }: {title: string, children: Props}) => {
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false }, [Autoplay({
         stopOnInteraction: true,
         stopOnMouseEnter: false,
@@ -32,6 +32,14 @@ const Carousel = ({ children }: Props) => {
     return (
         <div className="group overflow-hidden relative" ref={emblaRef}>
             <div className="flex">{children}</div>
+            <div className="absolute bottom-8 sm:bottom-16 z-20 w-full mb-8 sm:mb-2">
+                <div className="flex flex-col justify-center gap-8 max-w-[1200px] px-4 md:px-6 lg:px-0 mx-auto text-gray-700 dark:text-gray-300 text-center">
+                    <span className="font-sans font-light narrow-letters text-3xl sm:text-4xl lg:text-5xl leading-normal  sm:leading-normal md:leading-normal lg:leading-normal">
+                        {title}
+                    </span>
+                </div>
+            </div>
+
             <div className="absolute bottom-[50%] left-0 right-0 flex justify-center">
                 <CarouselControls
                     canScrollNext={canScrollNext}
@@ -40,6 +48,7 @@ const Carousel = ({ children }: Props) => {
                     onPrev={() => emblaApi?.scrollPrev()}
                 />
             </div>
+
             <div className="absolute bottom-0 left-0 right-0 flex justify-center">
                 <Dots itemsLength={length} selectedIndex={selectedIndex} />
             </div>

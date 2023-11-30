@@ -1,6 +1,9 @@
+import { FaLinkedin } from "@react-icons/all-files/fa/FaLinkedin";
+import { MdEmail } from "@react-icons/all-files/md/MdEmail";
+import { MdLocationOn } from "@react-icons/all-files/md/MdLocationOn";
 import Link from "next/link";
-import { AiOutlineEnvironment, AiOutlineMail, AiOutlinePhone } from "react-icons/ai";
-import { MdOutlineFax, MdWorkOutline } from "react-icons/md";
+import { FaPhone } from "react-icons/fa";
+import { MdFax, MdWorkOutline } from "react-icons/md";
 
 enum ContactType {
   Phone,
@@ -8,6 +11,7 @@ enum ContactType {
   Email,
   Work,
   Address,
+  LinkedIn
 }
 
 type MapCategoryProps = {
@@ -27,15 +31,17 @@ function getIFrame(location: string, rounded = false) {
 function getIcon(contactType: ContactType) {
     switch (contactType) {
     case ContactType.Phone:
-        return <AiOutlinePhone className="h-6 w-6" />;
+        return <FaPhone className="h-6 w-6" />;
     case ContactType.Fax:
-        return <MdOutlineFax className="h-6 w-6" />;
+        return <MdFax className="h-6 w-6" />;
     case ContactType.Email:
-        return <AiOutlineMail className="h-6 w-6" />;
+        return <MdEmail className="h-6 w-6" />;
     case ContactType.Work:
         return <MdWorkOutline className="h-6 w-6" />;
     case ContactType.Address:
-        return <AiOutlineEnvironment className="h-6 w-6" />;
+        return <MdLocationOn className="h-6 w-6" />;
+    case ContactType.LinkedIn:
+        return <FaLinkedin className="h-6 w-6" />;
     }
 }
 
@@ -54,6 +60,9 @@ function getContact(display: string, value: string, contactType: ContactType) {
         break;
     case ContactType.Address:
         href = `https://goo.gl/maps/${value}`;
+        break;
+    case ContactType.LinkedIn:
+        href = `https://www.linkedin.com/${value}`;
         break;
     }
 
@@ -76,7 +85,8 @@ function getCompanyInfo() {
                 {getContact("(+30) 210 9960971", "+302109960971", ContactType.Phone)}
                 {getContact("(+30) 210 9969578", "+302109969578", ContactType.Fax)}
                 {getContact("medworkinfo@medwork.gr", "medworkinfo@medwork.gr", ContactType.Email)}
-                {getContact("Greece, Chiou 5, Argyroupoli 16452", "KDKk5piro9Cb6AXG7", ContactType.Address)}
+                {getContact("Medwork", "companies/medwork", ContactType.LinkedIn)}
+                {getContact("Chiou 5 street,16 452 Argyroupoli Greece", "KDKk5piro9Cb6AXG7", ContactType.Address)}
             </div>
         </div>
     );

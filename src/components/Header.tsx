@@ -37,7 +37,7 @@ function Header() {
             <div className={`block shadow-xl md:hidden ${isOpen ? "h-[calc(100vh-4rem)] overflow-auto" : ""}`}>
                 <NavHamburger nav={navMenu} isOpen={isOpen} />
             </div>
-            <motion.div className="mx-auto max-w-[1200px] top-0 left-0 right-0 h-[0.2rem] bg-cyan-500 origin-center " style={{ scaleX: scrollYProgress }} />
+            <motion.div className="mx-auto max-w-[1200px] top-0 left-0 right-0 h-[0.2rem] bg-blue-400 origin-center " style={{ scaleX: scrollYProgress }} />
         </header>
     );
 }

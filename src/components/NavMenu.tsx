@@ -1,4 +1,3 @@
-// import { FaAngleDown } from "@react-icons/all-files/fa/FaAngleDown";
 import { MdExpandMore } from "react-icons/md";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -21,7 +20,7 @@ function HorizontalNav({ label, href, subCategories }: NavProp) {
     const router = useRouter();
     const isActive = router.asPath === href;
     const isActiveSubCategory = subCategories?.some((subCategory) => subCategory.href === router.asPath);
-    const activeClasses = isActive || isActiveSubCategory ? "border-cyan-500 text-cyan-500" : "border-transparent";
+    const activeClasses = isActive || isActiveSubCategory ? "border-cyan-500 text-blue-500" : "border-transparent";
 
     const handleKeyDown: React.KeyboardEventHandler<HTMLDivElement> = (event) => {
         if (event.code === "Enter") {
@@ -46,9 +45,9 @@ function HorizontalNav({ label, href, subCategories }: NavProp) {
         <div className="relative py-2" ref={menuRef} onBlur={handleBlur}>
             {hasSubCategories &&
             <div tabIndex={0} className={`
-                peer flex items-center py-2 font-thin narrow-letters
+                peer flex items-center py-2 font-normal narrow-letters
                 text-xl text-gray-600 dark:text-gray-400
-                hover:text-cyan-500 focus-visible:text-cyan-500
+                hover:text-blue-500 focus-visible:text-blue-500
                 border-b-2 ${activeClasses}
                 `}
             onKeyDown={hasSubCategories ? handleKeyDown : undefined}
@@ -60,9 +59,9 @@ function HorizontalNav({ label, href, subCategories }: NavProp) {
                 <Link
                     tabIndex={0}
                     className={`
-                        peer flex items-center py-2 font-thin narrow-letters
+                        peer flex items-center py-2 font-normal narrow-letters
                         text-xl text-gray-600 dark:text-gray-400
-                        hover:text-cyan-500 focus-visible:text-cyan-500
+                        hover:text-blue-500 focus-visible:text-blue-500
                         border-b-2 ${activeClasses}
                     `}
                     key={href}
@@ -75,7 +74,7 @@ function HorizontalNav({ label, href, subCategories }: NavProp) {
                 <div className="
                     absolute flex flex-col gap-2 w-[220px] right-0 z-10 rounded-sm
                     shadow-2xl drop-shadow-lg
-                    text-xl font-thin narrow-letters
+                    text-xl font-normal narrow-letters
                     border border-gray-300 dark:border-gray-400
                     text-gray-600 dark:text-gray-400
                     bg-medwork-light dark:bg-medwork-dark
@@ -90,7 +89,7 @@ function HorizontalNav({ label, href, subCategories }: NavProp) {
                                 cursor-pointer
                                 px-4 py-4 text-xl
                                 hover:bg-[#eae4dd] dark:hover:bg-gray-500
-                                hover:text-cyan-500 focus-visible:text-cyan-500
+                                hover:text-blue-500 focus-visible:text-blue-500
                                 focus-visible:bg-[#eae4dd] dark:focus-visible:bg-gray-500
                                 ${router.asPath === subCategory.href ? "bg-[#c5b8aa] dark:bg-gray-600" : ""}
                                 ${i === 0 ? "rounded-t-sm" : ""}

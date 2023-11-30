@@ -29,7 +29,7 @@ function Card({
                     h-[420px]
                 ">
                     <Image
-                        className="object-cover"
+                        className="object-cover h-56"
                         src={imageData}
                         alt={imageTitle}
                     />

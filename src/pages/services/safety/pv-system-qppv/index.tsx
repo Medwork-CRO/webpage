@@ -5,7 +5,7 @@ import Showcasing from "@/components/Showcasing";
 import vigilance from "@assets/services/safety-vector.jpg";
 
 const paragraphs = [
-    "Enhancing Pharmacovigilance Outcomes: PV Systems and QPPV Services.",
+    "Enhancing Pharmacovigilance Outcomes: PV Systems and QPPV Services",
     "We understand the criticality of establishing processes that prioritize regulatory compliance, efficiency, and quality. Working closely with our clients, we offer customized solutions that align with regulatory requirements and industry standards.",
 ];
 

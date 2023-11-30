@@ -5,30 +5,30 @@ import Showcasing from "@/components/Showcasing";
 import safety from "@assets/services/safety-vector.jpg";
 
 const paragraph1 = [
-    "Drawing from our extensive 15-year journey in pharmacovigilance, we proudly extend our expertise to the realm of medical device vigilance. As a natural progression of our commitment to safety, we approach medical devices with the same stringent concepts and unwavering mindset that have defined our pharmacovigilance legacy.",
+    "Drawing from our extensive 15-year journey in pharmacovigilance, we are proud to extend our expertise into the realm of medical device vigilance. This step represents a natural progression of our steadfast commitment to safety, as we apply the same rigorous principle and resolute mindset to medical devices that have defined our legacy in pharmacovigilance.",
 ];
 
 const paragraph2 = [
-    "Embrace this evolution with us, as our pharmacovigilance legacy transcends to elevate medical device vigilance. It's more than a service - it's a continuation of our commitment to fostering safety and trust across the healthcare spectrum.",
+    "Embrace this evolution with us, as our pharmacovigilance legacy advances to enhance medical device vigilance. It is more than a service - it is the continuation of our commitment to promoting safety and trust across the healthcare spectrum.",
 ];
 
 const title = "Our Core Strengths";
 const showcases = [
     {
         title: "Seamless Transition",
-        point: "Our transition to medical device vigilance is not just a new venture; it&apos;s an evolution of our legacy. The same dedication that has fueled our pharmacovigilance journey now underpins our approach to medical devices.",
+        point: "Our transition to medical device vigilance is not merely a new venture; it signifies an evolution of our legacy. The same dedication that has propelled our journey in pharmacovigilance now forms the foundation of our approach to medical devices.",
     },
     {
         title: "Consistent Standards",
-        point: "Just as we&apos;ve maintained uncompromising standards in pharmacovigilance, we bring the same level of rigor and precision to our medical device vigilance services.",
+        point: "Just as we have upheld uncompromising standards in pharmacovigilance, we apply the same level of rigour and precision to our medical device vigilance services",
     },
     {
         title: "Holistic Expertise",
-        point: "Our multidisciplinary team leverages insights from both pharmacovigilance and medical device fields, creating a holistic approach that addresses diverse safety concerns.",
+        point: "Our multidisciplinary team harnesses insights from both the pharmacovigilance and medical device fields, cultivating a comprehensive approach that addresses a spectrum of safety concerns.",
     },
     {
         title: "Unified Vigilance",
-        point: "Whether pharmaceuticals or medical devices, our overarching goal remains unchanged: to safeguard patient well-being and uphold regulatory compliance.",
+        point: "Regardless of whether it&#39;s pharmaceuticals or medical devices, our paramount goal remains steadfast: to safeguard patient well-being and ensure regulatory compliance.",
     },
 ];
 

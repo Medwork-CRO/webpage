@@ -22,7 +22,7 @@ module.exports = {
             },
             colors: {
                 medwork: {
-                    light: "#F9F9EB",
+                    light: "#F5F5F5",
                     dark: "#1A1B26",
                     blue: "#2d333b",
                     brown: "#444444",
