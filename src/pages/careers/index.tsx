@@ -32,7 +32,7 @@ function Cosmetovigilance() {
                 description=""
             />
 
-            <div id="main-content" className="max-w-[1200px] w-full">
+            <div id="main-content" className="max-w-[1200px] w-full items-left whitespace-pre-line flex flex-col mt-12 gap-16">
                 <Breadcrumbs />
                 <div className="flex flex-col items-center gap-6 whitespace-pre-line px-4 sm:px-6 lg:px-0 py-16 text-2xl text-gray-500 dark:text-gray-400 text-center w-full">
 

@@ -42,18 +42,14 @@ function Home() {
                 ))}
             </Carousel>
 
-            <div id="main-content" className="max-w-[1200px] w-full items-center whitespace-pre-line px-4 sm:px-6 lg:px-0 py-16">
-                <div className="flex flex-col gap-4 mb-16">
-                    <DisplayParagraphs withLead={true} paragraphs={introParagraph} />
-                </div>
-                <div className="flex flex-col">
-                    <ProvidedServices />
-                    <Statistics Stats={[
-                        { count: 15, symbol: "+", title: "years of", point: "experience" },
-                        { count: 85, symbol: "+", title: "active", point: "clients" },
-                        { count: 30, symbol: "+", title: "", point: "safety professionals" },
-                    ]}/>
-                </div>
+            <div id="main-content" className="max-w-[1200px] w-full items-left whitespace-pre-line flex flex-col mt-12 gap-16">
+                <DisplayParagraphs withLead={true} paragraphs={introParagraph} />
+                <ProvidedServices />
+                <Statistics Stats={[
+                    { count: 15, symbol: "+", title: "years of", point: "experience" },
+                    { count: 85, symbol: "+", title: "active", point: "clients" },
+                    { count: 30, symbol: "+", title: "", point: "safety professionals" },
+                ]}/>
             </div>
         </div>
     );

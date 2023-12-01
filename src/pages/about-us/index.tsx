@@ -26,15 +26,17 @@ function AboutUs() {
                 description=""
             />
 
-            <div id="main-content" className="max-w-[1200px] w-full">
+            <div id="main-content" className="max-w-[1200px] w-full items-left whitespace-pre-line flex flex-col mt-12 gap-16">
                 <Breadcrumbs />
 
-                <div className="flex flex-col gap-6 whitespace-pre-line px-4 sm:px-6 text-xl text-gray-500 dark:text-gray-400 lg:px-0 py-16">
+                <div className="flex flex-col gap-6 whitespace-pre-line px-4 sm:px-6 text-xl text-gray-500 dark:text-gray-400 lg:px-0 py-16 w-full">
                     <Title title="Who we are" />
                     <DisplayParagraphs withLead={true} paragraphs={paragraphs} />
                     {/* <PromoCard /> */}
                     <DisplayParagraphs withLead={true} paragraphs={paragraphs2} />
+                </div>
 
+                <div className="flex flex-col gap-6 whitespace-pre-line px-4 sm:px-6 text-xl text-gray-500 dark:text-gray-400 lg:px-0 py-16 w-full">
                     <Title title="Leadership" />
                     <People />
                 </div>

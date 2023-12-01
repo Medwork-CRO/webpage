@@ -6,7 +6,7 @@ const Contact = () => {
         <div className="mx-auto flex flex-col items-center justify-between w-full">
             <MapCategory />
 
-            <div id="main-content" className="max-w-[1200px] w-full">
+            <div id="main-content" className="max-w-[1200px] w-full items-left whitespace-pre-line flex flex-col mt-12 gap-16">
                 <Breadcrumbs />
                 <div className="flex flex-col items-center gap-6 whitespace-pre-line px-4 sm:px-6 text-2xl text-gray-500 dark:text-gray-400 lg:px-0 py-16">
                     {/* <div className="flex flex-col items-center gap-6 whitespace-pre-line px-4 sm:px-6 text-2xl text-gray-500 dark:text-gray-400 lg:px-0 py-16">
