@@ -17,7 +17,7 @@ type ThemeSelectorProps = {
 
 const mail = "medworkinfo@medwork.gr";
 const addressA = "5 Chiou street";
-const addressB = "16 452 Argyroupolis, Greece";
+const addressB = "164 52 Argyroupolis, Greece";
 const linkedin = "company/medwork";
 
 const policies = [

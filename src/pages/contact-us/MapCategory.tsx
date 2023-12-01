@@ -6,24 +6,24 @@ import { FaPhone } from "react-icons/fa";
 import { MdFax, MdWorkOutline } from "react-icons/md";
 
 enum ContactType {
-  Phone,
-  Fax,
-  Email,
-  Work,
-  Address,
-  LinkedIn
+    Phone,
+    Fax,
+    Email,
+    Work,
+    Address,
+    LinkedIn
 }
 
 type MapCategoryProps = {
-  location?: string;
-  title?: string;
+    location?: string;
+    title?: string;
 };
 
-function getIFrame(location: string, rounded = false) {
+function getIFrame(location: string, rounded = false, height = "h-[100vh]") {
     const rounding = rounded ? "rounded-lg" : "";
     return (<iframe
         src={`https://maps.google.com/maps?q=${location}&t=&z=16&ie=UTF8&iwloc=&output=embed`}
-        className={`w-full h-[300px] sm:h-[420px] ${rounding}`}
+        className={`w-full ${height} ${rounding}`}
         allowFullScreen
     ></iframe>);
 }
@@ -86,7 +86,7 @@ function getCompanyInfo() {
                 {getContact("(+30) 210 9969578", "+302109969578", ContactType.Fax)}
                 {getContact("medworkinfo@medwork.gr", "medworkinfo@medwork.gr", ContactType.Email)}
                 {getContact("Medwork", "companies/medwork", ContactType.LinkedIn)}
-                {getContact("5 Chiou street, 16 452 Argyroupolis, Greece", "KDKk5piro9Cb6AXG7", ContactType.Address)}
+                {getContact("5 Chiou street, 164 52 Argyroupolis, Greece", "KDKk5piro9Cb6AXG7", ContactType.Address)}
             </div>
         </div>
     );
@@ -98,26 +98,26 @@ function MapCategory({
     return (
         <>
             <div className="hidden sm:block w-full">
-                <div className="flex flex-col md:flex-row h-[420px] relative">
+                <div className="flex flex-col md:flex-row h-[100vh] relative">
                     {getIFrame(location)}
-                    <div className="absolute inset-0 z-10 from-medwork-light dark:from-medwork-dark to-transparent bg-gradient-to-r w-full"></div>
+                    <div className="absolute inset-0 z-10 bg-gradient-to-r from-medwork-light dark:from-medwork-dark via-transparent to-transparent"></div>
+                    <div className="absolute inset-0 z-10 bg-gradient-to-l from-medwork-light dark:from-medwork-dark via-transparent to-transparent"></div>
+                    <div className="absolute inset-0 z-10 bg-gradient-to-t from-medwork-light dark:from-medwork-dark via-transparent to-transparent"></div>
+                    <div className="absolute inset-0 z-10 bg-gradient-to-b from-medwork-light dark:from-medwork-dark via-transparent to-transparent"></div>
 
-                    <div className="absolute top-2/4 z-10 -translate-y-1/2 transform w-full">
+                    <div className="absolute top-1/2 z-10 -translate-y-1/2 transform w-full">
                         <div className="flex flex-col justify-center gap-8 px-4 md:px-6 lg:px-0 max-w-[1200px] mx-auto">
                             {getCompanyInfo()}
                         </div>
                     </div>
-
-                    {/* <div className="absolute top-2/4 z-10 flex -translate-y-1/2 transform flex-col justify-center gap-8 ml-12 lg:ml-24 h-full">
-          </div> */}
                 </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 sm:hidden w-full">
                 <div className="relative">
-                    <div className="absolute  inset-0 from-medwork-light dark:from-medwork-dark to-transparent bg-gradient-to-t"></div>
+                    <div className="absolute inset-0 from-medwork-light dark:from-medwork-dark to-transparent bg-gradient-to-t"></div>
                     <div className="relative w-full z-10 float-left p-4">
-                        {getIFrame(location, true)}
+                        {getIFrame(location, true, "h-[24]")}
                         <div className="mt-8 md:mt-0 text-medwork-light">
                             {getCompanyInfo()}
                         </div>

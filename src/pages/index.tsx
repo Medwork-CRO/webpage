@@ -3,9 +3,8 @@ import CarouselImage from "@/components/CarouselImage";
 import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ProvidedServices from "@/components/ProvidedServices";
 import Statistics from "@/components/Statistics";
-// import EMA from "@assets/stock-images/ema.jpg";
 import happyWoman from "@assets/stock-images/happy-woman.jpg";
-import office from "@assets/building/building_back.webp";
+import office from "@assets/building/building_front.webp";
 import team2 from "@assets/team-photos/team2.jpg";
 
 const carouselTitle = "Advancing Drug Safety with Operational Excellence, Regulatory Compliance, and Adaptive Solutions";
@@ -43,13 +42,15 @@ function Home() {
             </Carousel>
 
             <div id="main-content" className="max-w-[1200px] w-full items-left whitespace-pre-line flex flex-col mt-12 gap-16">
-                <DisplayParagraphs withLead={true} paragraphs={introParagraph} />
-                <ProvidedServices />
-                <Statistics Stats={[
-                    { count: 15, symbol: "+", title: "years of", point: "experience" },
-                    { count: 85, symbol: "+", title: "active", point: "clients" },
-                    { count: 30, symbol: "+", title: "", point: "safety professionals" },
-                ]}/>
+                <div className="w-full flex flex-col items-left gap-12 px-4 sm:px-6 py-16 lg:px-0 whitespace-pre-line text-gray-500 dark:text-gray-400">
+                    <DisplayParagraphs withLead={true} paragraphs={introParagraph} />
+                    <ProvidedServices />
+                    <Statistics Stats={[
+                        { count: 15, symbol: "+", title: "years of", point: "experience" },
+                        { count: 85, symbol: "+", title: "active", point: "clients" },
+                        { count: 30, symbol: "+", title: "", point: "safety professionals" },
+                    ]}/>
+                </div>
             </div>
         </div>
     );

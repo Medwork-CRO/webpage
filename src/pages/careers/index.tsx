@@ -28,7 +28,7 @@ function Cosmetovigilance() {
             <ImageCategory
                 textSide="right"
                 image={team3}
-                title="We value excellence"
+                title="Careers"
                 description=""
             />
 
