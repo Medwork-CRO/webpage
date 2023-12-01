@@ -3,31 +3,27 @@ import ImageCategory from "@/components/ImageCategory";
 import Showcasing from "@/components/Showcasing";
 import safety from "@assets/services/safety-vector.jpg";
 
-const title1 = "Quality management system development / improvement / monitoring according to GCP, GVP, GDP and ISO 9001";
+const title1 = "Development, improvement and monitoring according to GCP, GVP, GDP and ISO 9001";
 const showcases1 = [
     {
         title: "",
-        point: "Setup and implementation of quality management systems adapted to your business needs with standardized processes reflecting the particularities of your organization, in compliance with legal/regulatory requirements",
+        point: "Setup and implementation of quality management systems with standardised processes, compliant to legal/regulatory requirements and applicable quality standards, and adapted to your business needs reflecting the particularities of your organization",
     },
     {
         title: "",
-        point: "Review of existing quality management systems for compliance/effectiveness/efficiency and suggestion of alternative solutions",
+        point: "Review of existing quality management systems for compliance, effectiveness and efficiency",
     },
     {
         title: "",
-        point: "Reengineering of existing quality management systems to improve their compliance, effectiveness and efficiency, and to reduce the effort and resources required",
+        point: "Re-engineering of existing quality management systems to improve their compliance, effectiveness and efficiency, and to reduce the effort and resources required",
     },
     {
         title: "",
         point: "Development and review of quality management system documents",
     },
-    {
-        title: "",
-        point: "Assumption of quality management responsibilities and duties",
-    },
 ];
 
-const title2 = "Quality management consulting";
+const title2 = "Quality Management Consulting";
 const showcases2 = [
     {
         title: "",
@@ -36,6 +32,14 @@ const showcases2 = [
     {
         title: "",
         point: "Consulting on individual quality-related issues",
+    },
+    {
+        title: "",
+        point: "Assumption of quality management responsibilities.",
+    },
+    {
+        title: "",
+        point: "Ongoing quality support.",
     },
     {
         title: "",

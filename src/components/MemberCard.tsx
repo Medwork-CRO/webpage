@@ -50,10 +50,13 @@ function MemberCard({
                         READ BIO
                     </button>
                     {showFullDescription && (
-                        <p className="mt-2 overflow-ellipsis font-light narrow-letters leading-relaxed text-2xl md:text-base transform transition duration-200 ease-in-out">
-                            {description}
-                        </p>
+                        description.map((item, index) => (
+                            <p key={index} className="mt-4 overflow-ellipsis font-light narrow-letters leading-relaxed text-2xl md:text-base transform transition duration-200 ease-in-out">
+                                {item}
+                            </p>
+                        ))
                     )}
+
                 </div>
             </div>
         </div>

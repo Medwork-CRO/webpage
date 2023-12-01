@@ -4,6 +4,6 @@ export type MemberInfo = {
   image: StaticImageData;
   name: string;
   title: string;
-  description: string;
+  description: string[];
   linkedInTag?: string;
 };
