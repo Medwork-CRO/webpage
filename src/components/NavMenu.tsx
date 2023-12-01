@@ -72,9 +72,10 @@ function HorizontalNav({ label, href, subCategories }: NavProp) {
             }
             {hasSubCategories && isOpen && (
                 <div className="
-                    absolute flex flex-col gap-2 w-[220px] right-0 z-10 rounded-sm
+                    absolute flex flex-col w-[220px]
+                    right-0 z-10 rounded-md
                     shadow-2xl drop-shadow-lg
-                    text-xl font-normal narrow-letters
+                    text-lg font-normal narrow-letters
                     border border-gray-300 dark:border-gray-400
                     text-gray-600 dark:text-gray-400
                     bg-medwork-light dark:bg-medwork-dark
@@ -87,11 +88,10 @@ function HorizontalNav({ label, href, subCategories }: NavProp) {
                             tabIndex={0}
                             className={`
                                 cursor-pointer
-                                px-4 py-4 text-xl
-                                hover:bg-[#eae4dd] dark:hover:bg-gray-500
+                                px-4 py-4 text-lg
                                 hover:text-blue-500 focus-visible:text-blue-500
                                 focus-visible:bg-[#eae4dd] dark:focus-visible:bg-gray-500
-                                ${router.asPath === subCategory.href ? "bg-[#c5b8aa] dark:bg-gray-600" : ""}
+                                ${router.asPath === subCategory.href ? "border-l-2 border-blue-500" : ""}
                                 ${i === 0 ? "rounded-t-sm" : ""}
                                 ${i === subCategories.length - 1 ? "rounded-b-sm" : ""}`}
                             key={subCategory.href}

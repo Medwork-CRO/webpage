@@ -28,7 +28,6 @@ function pathSanitisation(input: string): { valid: boolean; path: string } {
 }
 
 function pathBeautifier(input: string): string {
-    console.log("input :>> ", input);
     const wordsToUppercase = ["pv", "qppv", "mlm", "cro", "gvp"];
 
     return input.split("-").map(word => {
