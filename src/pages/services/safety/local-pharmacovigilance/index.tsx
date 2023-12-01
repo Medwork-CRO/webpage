@@ -45,7 +45,7 @@ function LocalPharmacovigilance() {
             <div id="main-content" className="max-w-[1200px] w-full">
                 <Breadcrumbs />
                 <div className="flex flex-col items-center gap-8 whitespace-pre-line px-4 sm:px-6 text-2xl text-gray-500 dark:text-gray-400 lg:px-0 py-16">
-                    <DisplayParagraphs withLead={false} paragraphs={paragraphs0} />
+                    <DisplayParagraphs withLead={true} paragraphs={paragraphs0} />
                     <Showcasing title={title} showcases={showcases} />
                 </div>
             </div>

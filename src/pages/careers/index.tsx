@@ -29,7 +29,7 @@ function Cosmetovigilance() {
                 textSide="right"
                 image={team3}
                 title="We value excellence"
-                description="Our team at Medwork is made up of experienced professionals who are passionate about improving patient outcomes."
+                description=""
             />
 
             <div id="main-content" className="max-w-[1200px] w-full">

@@ -16,7 +16,7 @@ function AboutUs() {
             <ImageCategory
                 image={legislation}
                 title="Legislation"
-                description="We follow the rules and regulations of the countries we operate in."
+                description=""
             />
 
             <div id="main-content" className="max-w-[1200px] w-full">

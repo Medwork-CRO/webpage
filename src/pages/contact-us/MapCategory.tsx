@@ -86,14 +86,14 @@ function getCompanyInfo() {
                 {getContact("(+30) 210 9969578", "+302109969578", ContactType.Fax)}
                 {getContact("medworkinfo@medwork.gr", "medworkinfo@medwork.gr", ContactType.Email)}
                 {getContact("Medwork", "companies/medwork", ContactType.LinkedIn)}
-                {getContact("Chiou 5 street,16 452 Argyroupoli Greece", "KDKk5piro9Cb6AXG7", ContactType.Address)}
+                {getContact("5 Chiou street, 16 452 Argyroupolis, Greece", "KDKk5piro9Cb6AXG7", ContactType.Address)}
             </div>
         </div>
     );
 }
 
 function MapCategory({
-    location = "Chiou5,Argyroupoli16452",
+    location = "Chiou 5, Argyroupolis 16452, Greece",
 }: MapCategoryProps) {
     return (
         <>
@@ -101,7 +101,6 @@ function MapCategory({
                 <div className="flex flex-col md:flex-row h-[420px] relative">
                     {getIFrame(location)}
                     <div className="absolute inset-0 z-10 from-cyan-600 dark:from-cyan-800 to-transparent bg-gradient-to-r w-full"></div>
-
 
                     <div className="absolute top-2/4 z-10 -translate-y-1/2 transform w-full">
                         <div className="flex flex-col justify-center gap-8 px-4 md:px-6 lg:px-0 max-w-[1200px] mx-auto">

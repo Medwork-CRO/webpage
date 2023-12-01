@@ -1,7 +1,7 @@
 import Breadcrumbs from "@/components/Breadcrumb";
-import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ImageCategory from "@/components/ImageCategory";
 import InfoBoxMatrix from "@/components/InfoBoxMatrix";
+import LeadingParagraphs from "@/components/LeadingParagraphs";
 import safety from "@assets/services/safety-vector.jpg";
 
 // const paragraphsOld = [
@@ -59,7 +59,7 @@ function Safety() {
             <div id="main-content" className="max-w-[1200px] w-full">
                 <Breadcrumbs />
                 <div className="flex flex-col items-center gap-8 whitespace-pre-line px-4 sm:px-6 text-2xl text-gray-500 dark:text-gray-400 lg:px-0 py-16">
-                    <DisplayParagraphs withLead={false} paragraphs={paragraphs} />
+                    <LeadingParagraphs withLead={false} paragraphs={paragraphs} />
                     <InfoBoxMatrix infoBoxes={infoBoxes} />
                 </div>
             </div>

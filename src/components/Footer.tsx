@@ -151,7 +151,7 @@ function Information() {
     return (
         <div className="flex flex-col items-start gap-4 text-xl sm:text-lg text-medwork-dark dark:text-medwork-light">
             <Link
-                className="font-light narrow-letters hover:underline focus-visible:underline whitespace-nowrap"
+                className="font-ultralight narrow-letters hover:underline focus-visible:underline whitespace-nowrap"
                 href={"/about-us/legislation"}
             >
                 Legislation
@@ -248,7 +248,7 @@ function Footer({ theme, setTheme }: ThemeSelectorProps) {
                     </div>
 
                     <div className="min-w-96 flex flex-col gap-6 text-left">
-                        <span className="text-2xl sm:text-lg font-light narrow-letters uppercase">{AboutUs.label}</span>
+                        <span className="text-2xl sm:text-lg font-normal narrow-letters uppercase">{AboutUs.label}</span>
                         <div className="text-xl sm:text-lg font-thin narrow-letters flex flex-col gap-2">
                             {[AboutUs, Careers].map((a, i) => (
                                 <Link
@@ -265,7 +265,7 @@ function Footer({ theme, setTheme }: ThemeSelectorProps) {
                     </div>
 
                     <div className="min-w-96 flex flex-col gap-6 text-left">
-                        <span className="text-2xl sm:text-lg font-light narrow-letters uppercase">CONTACT INFO</span>
+                        <span className="text-2xl sm:text-lg font-normal narrow-letters uppercase">CONTACT INFO</span>
                         <div className="text-xl sm:text-lg font-thin narrow-letters flex flex-col gap-2">
                             <Link
                                 href={`mailto:${mail}`}

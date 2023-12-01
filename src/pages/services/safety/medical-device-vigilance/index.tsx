@@ -35,7 +35,7 @@ const showcases = [
 function MedicalDeviceVigilance() {
     return (
         <div className="mx-auto flex flex-col items-center justify-between w-full">
-            <ImageCategory image={safety} title="MEDICAL DEVICES VIGILANCE" />
+            <ImageCategory image={safety} title="MEDICAL DEVICE VIGILANCE" />
 
             <div id="main-content" className="max-w-[1200px] w-full">
                 <Breadcrumbs />

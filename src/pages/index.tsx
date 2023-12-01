@@ -25,7 +25,6 @@ const imageShowCases = [
 ];
 
 const introParagraph = [
-    "We Offer Drug Safety Services with Advanced Process Management, Regulatory Compliance, and Adaptive Solutions",
     "At Medwork, we focus on vigilance services, combining expertise with flexibility. As a CRO dedicated exclusively to safety, we remain updated with industry advancements and regulatory standards. Our team's in-depth experience in pharmacovigilance provides valuable insights and guidance, helping clients navigate regulatory challenges and establish effective safety strategies.",
     "What distinguishes us is our agility and adaptability derived from our size. This allows us to quickly adjust our approach and resources to address changing needs, offering an experience that may be challenging for larger CROs to replicate.",
 ];

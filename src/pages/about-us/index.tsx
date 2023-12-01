@@ -23,7 +23,7 @@ function AboutUs() {
             <ImageCategory
                 image={team0}
                 title="About Medwork"
-                description="We believe in a better world when it comes to health. It is our responsibility to make it."
+                description=""
             />
 
             <div id="main-content" className="max-w-[1200px] w-full">
