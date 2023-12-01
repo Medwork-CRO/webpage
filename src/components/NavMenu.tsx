@@ -20,7 +20,7 @@ function HorizontalNav({ label, href, subCategories }: NavProp) {
     const router = useRouter();
     const isActive = router.asPath === href;
     const isActiveSubCategory = subCategories?.some((subCategory) => subCategory.href === router.asPath);
-    const activeClasses = isActive || isActiveSubCategory ? "border-cyan-500 text-blue-500" : "border-transparent";
+    const activeClasses = isActive || isActiveSubCategory ? "border-blue-500 text-blue-500" : "border-transparent";
 
     const handleKeyDown: React.KeyboardEventHandler<HTMLDivElement> = (event) => {
         if (event.code === "Enter") {

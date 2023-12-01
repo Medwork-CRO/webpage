@@ -6,7 +6,7 @@ type Stat = { count: number; symbol: string, title: string; point: string };
 function Statistic({ count, symbol, title, point }: Stat) {
     return (
         <div className="flex w-56 flex-col">
-            <span className="flex flex-row self-center mb-4 text-4xl text-cyan-500">
+            <span className="flex flex-row self-center mb-4 text-4xl text-blue-500">
                 <Counter number={count} symbol={symbol} duration={3} />
             </span>
             <span className="subtext text-2xl font-extralight narrow-letters leading-relaxed text-medwork-brown dark:text-gray-400">

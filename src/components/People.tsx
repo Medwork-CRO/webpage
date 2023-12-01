@@ -38,12 +38,13 @@ const membersInfo: MemberInfo[] = [
 
 function People() {
     return (
-        <div className="
-            flex
-             border-gray-300 dark:border-gray-500
-            w-full m-2 sm:p4 px-4
-            overflow-x-auto space-x-8 snap-x snap-mandatory
-            ">
+        // <div className="
+        //     flex
+        //      border-gray-300 dark:border-gray-500
+        //     w-full m-2 sm:p4 px-4
+        //     overflow-x-auto space-x-8 snap-x snap-mandatory
+        //     ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {membersInfo.map((memberInfo, i) => (
                 <div className="snap-center" key={i}>
                     <MemberCard

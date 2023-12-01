@@ -18,7 +18,7 @@ function MemberCard({
     };
 
     return (
-        <div className="flex flex-col w-full min-w-[20rem] max-w-[20rem]">
+        <div className="flex flex-col w-full">
             <div className="flex h-[200px] w-full justify-center rounded-xl bg-cover">
                 <Image
                     className="h-[212px] w-[156px] rounded-lg border-2 border-cyan-500 object-cover"

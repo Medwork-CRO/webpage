@@ -65,7 +65,7 @@ const Breadcrumbs = () => {
                             <div>
                                 <Link
                                     href={pathSanitisation(paths[i]).path}
-                                    className="text-cyan-500 hover:text-cyan-400 hover:underline"
+                                    className="text-blue-500 hover:text-blue-400 hover:underline"
                                 >
                                     {formatBreadcrumb(crumb)}
                                 </Link>

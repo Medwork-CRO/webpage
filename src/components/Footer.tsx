@@ -239,7 +239,7 @@ function Footer({ theme, setTheme }: ThemeSelectorProps) {
                                     key={i}
                                     href={service.href}
                                 >
-                                    <span className="flex items-center hover:text-cyan-500">
+                                    <span className="flex items-center hover:text-blue-500">
                                         {service.label}
                                     </span>
                                 </Link>
@@ -256,7 +256,7 @@ function Footer({ theme, setTheme }: ThemeSelectorProps) {
                                     key={i}
                                     href={a.href}
                                 >
-                                    <span className="flex items-center hover:text-cyan-500 focus-visible:text-cyan-500">
+                                    <span className="flex items-center hover:text-blue-500 focus-visible:text-blue-500">
                                         {a.label}
                                     </span>
                                 </Link>

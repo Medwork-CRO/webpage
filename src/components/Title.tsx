@@ -20,7 +20,8 @@ function Title({
         <h1
             id={title.split(" ").join("-").toLowerCase()}
             className={`
-                pb-2 ${colour} ${textAlign}
+                mt-16 pb-2
+                ${colour} ${textAlign}
                 text-lg md:text-xl lg:text-2xl
                 font-semibold tracking-wide
                 uppercase leading-tight
