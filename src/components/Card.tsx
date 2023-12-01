@@ -26,7 +26,7 @@ function Card({
                     overflow-hidden
                     transform transition duration-200 ease-in-out
                     hover:border-gray-400 dark:hover:border-gray-600
-                    h-[420px]
+                    h-full sm:h-[24rem] lg:h-[28rem] w-full
                 ">
                     <Image
                         className="object-cover h-56"
@@ -34,12 +34,8 @@ function Card({
                         alt={imageTitle}
                     />
                     <div className="p-4">
-                        <h2 className="text-lg font-semibold text-gray-800 dark:text-white">
-                            {imageTitle}
-                        </h2>
-                        <p className="text-sm text-gray-600 dark:text-gray-300 mt-4">
-                            {imageDescription}
-                        </p>
+                        <p className="mb-6 text-xl narrow-letters leading-relaxed">{imageTitle}</p>
+                        <p className="text-md narrow-letters leading-relaxed">{imageDescription}</p>
                     </div>
                 </div>
             </Link>
