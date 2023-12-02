@@ -17,7 +17,7 @@ function Title({
 
     const textAlign = textAlignClass[align];
     return (
-        <h1
+        <span
             id={title.split(" ").join("-").toLowerCase()}
             className={`
                 mt-2 pb-2
@@ -28,7 +28,7 @@ function Title({
               `}
         >
             {title}
-        </h1>
+        </span>
     );
 }
 

@@ -45,7 +45,8 @@ function QualityManagement() {
 
             <div id="main-content" className="max-w-[1200px] w-full items-left whitespace-pre-line flex flex-col">
                 <Breadcrumbs />
-                <div className="flex flex-col items-center gap-8 whitespace-pre-line px-4 sm:px-6 text-2xl text-gray-500 dark:text-gray-400 lg:px-0 py-16">
+
+                <div className="flex flex-col gap-12 px-4 sm:px-6 lg:px-0 py-16">
                     <DisplayParagraphs withLead={false} paragraphs={introParagraph} />
                     <Showcasing title={title} showcases={showcases} />
                     <InfoBoxMatrix infoBoxes={infoBoxes} />
