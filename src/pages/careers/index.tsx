@@ -8,6 +8,7 @@ import linkedin from "@assets/companies/linkedin_icon.png";
 import team3 from "@assets/team-photos/team3.jpg";
 import Image from "next/image";
 import Link from "next/link";
+import RoundedButtonExternal, { ButtonType } from "@/components/RoundedButtonExternal";
 
 const paragraphs = [
     "Medwork has made its mark as the top Contract Research Organization (CRO) in Greece, setting the standard for excellence.",
@@ -32,85 +33,40 @@ function Cosmetovigilance() {
                 description=""
             />
 
-            <div id="main-content" className="max-w-[1200px] w-full items-left whitespace-pre-line flex flex-col gap-8">
+            <div id="main-content" className="max-w-[1200px] w-full items-left whitespace-pre-line flex flex-col">
                 <Breadcrumbs />
-                <div className="flex flex-col items-center gap-6 whitespace-pre-line px-4 sm:px-6 lg:px-0 py-16 text-2xl text-gray-500 dark:text-gray-400 text-center w-full">
 
+                <div className="flex flex-col gap-12 px-4 sm:px-6 lg:px-0 py-16">
                     <DisplayParagraphs withLead={true} paragraphs={paragraphs} />
-
                     <DualLayerParallax imageFull='/assets/image-full.png' imageBottom='/assets/image-bottom.png' text='Join the Team' />
-
                     <div className="my-8 flex flex-col gap-2 items-center whitespace-pre-line text-2xl font-thin text-cyan-600 dark:text-cyan-400">
                         You can see all our open job offerings
                         <div className="mt-4 flex flex-col sm:flex-row justify-center items-center gap-6 text-center w-full">
-                            <Link
-                                className="flex flex-row items-center justify-center gap-4
-                                cursor-pointer text-medwork-light dark:text-medwork-dark
-                                font-light narrow-letters leading-relaxed
-                                py-2 px-4 text-sm sm:text-md md:text-lg text-center w-[200px] rounded-full
-                                bg-blue-400 hover:bg-blue-500 focus-visible:bg-blue-500
-                                transition duration-100 ease-in focus:outline-none"
-                                aria-label={"By clicking you will be taken to kariera.gr"}
-                                key={"kariera"}
+                            <RoundedButtonExternal
+                                label={"Kariera"}
                                 href={"https://www.kariera.gr/en/companies/3531"}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <Image
-                                    src={kariera}
-                                    alt="kariera"
-                                    className="h-8 w-8 object-cover"
-                                />
-                                {"Kariera"}
-                            </Link>
-                            <Link
-                                className="flex flex-row items-center justify-center gap-4
-                                cursor-pointer text-medwork-light dark:text-medwork-dark
-                                font-light narrow-letters leading-relaxed
-                                py-2 px-4 text-sm sm:text-md md:text-lg text-center w-[200px] rounded-full
-                                bg-blue-400 hover:bg-blue-500 focus-visible:bg-blue-500
-                                transition duration-100 ease-in focus:outline-none"
-                                aria-label={"By clicking you will be taken to linkedIn.gr"}
-                                key={"linkedIn"}
+                                ariaLabel={"By clicking you will be taken to kariera.gr"}
+                                key={"kariera"}
+                                type={ButtonType.IMAGE}
+                                source={kariera}
+                            />
+                            <RoundedButtonExternal
+                                label={"LinkedIn"}
                                 href={"https://www.linkedin.com/company/medwork/jobs/"}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <Image
-                                    src={linkedin}
-                                    alt="linkedin"
-                                    className="h-8 w-8 object-cover"
-                                />
-                                {"LinkedIn"}
-                            </Link>
-                            <Link
-                                className="flex flex-row items-center justify-center gap-4
-                                cursor-pointer text-medwork-light dark:text-medwork-dark
-                                font-light narrow-letters leading-relaxed whitespace-nowrap
-                                py-2 px-4 text-sm sm:text-md md:text-lg text-center w-[200px] rounded-full
-                                bg-blue-400 hover:bg-blue-500 focus-visible:bg-blue-500
-                                transition duration-100 ease-in focus:outline-none"
-                                aria-label={"By clicking you will be taken to linkedIn.gr"}
+                                ariaLabel={"By clicking you will be taken to linkedIn.gr"}
                                 key={"linkedIn"}
+                                type={ButtonType.IMAGE}
+                                source={linkedin}
+                            />
+                            <RoundedButtonExternal
+                                label={"Email us your CV"}
                                 href={`mailto:${hrEmail}`}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <MdEmail className="h-8 w-8 object-cover" />
-                                Email us your CV
-                            </Link>
+                                ariaLabel={"By clicking you will be taken to compose an email to medwork hr"}
+                                key={"email"}
+                                type={ButtonType.ICON}
+                                source={kariera}
+                            />
                         </div>
-                        {/* <div className="flex flex-row justify-center mt-8 text-lg">
-                            <Link
-                                className="italic"
-                                aria-label={`By clicking you will be taken to the email ${hrEmail}`}
-                                href={`mailto:${hrEmail}`}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                Or email us your CV at {hrEmail}
-                            </Link>
-                        </div> */}
                     </div>
                 </div>
             </div>

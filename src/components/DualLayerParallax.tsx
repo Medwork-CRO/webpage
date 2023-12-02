@@ -23,7 +23,7 @@ function DualLayerParallax({
     return (
         <div
             ref={ref}
-            className="w-full h-screen overflow-hidden relative grid place-items-center motion-safe:animate-fadeIn rounded-xl"
+            className="w-full h-screen overflow-hidden relative grid place-items-center motion-safe:animate-fadeIn rounded-xl text-center"
         >
             <motion.h1
                 style={{ y: textY }}
