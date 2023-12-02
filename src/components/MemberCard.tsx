@@ -1,8 +1,17 @@
-import { useState } from "react";
-import { MemberInfo } from "@/types/MemberInfo";
 import Image from "next/image";
+import { useState } from "react";
 import { FaLinkedin } from "react-icons/fa";
-import { MdExpandMore, MdExpandLess } from "react-icons/md";
+import { MdExpandLess, MdExpandMore } from "react-icons/md";
+import { StaticImageData } from "next/image";
+
+export type MemberInfo = {
+  image: StaticImageData;
+  name: string;
+  title: string;
+  description: string[];
+  linkedInTag?: string;
+};
+
 
 function MemberCard({
     image,
@@ -18,7 +27,7 @@ function MemberCard({
     };
 
     return (
-        <div className="flex flex-col items-center content-center text-center">
+        <div className="flex flex-col items-center content-center text-center text-medwork-dark dark:text-medwork-light">
             <div className="flex flex-col sm:flex-row md:flex-col items-center content-center gap-4">
                 <div className="flex h-[230px] rounded-xl bg-cover">
                     <Image
@@ -28,7 +37,7 @@ function MemberCard({
                     />
                 </div>
                 <div className="items-top flex flex-col justify-between">
-                    <div className="items-top mt-0 sm:mt-8 flex flex-col text-2xl font-light narrow-letters leading-relaxed text-medwork-brown dark:text-white">
+                    <div className="items-top mt-0 sm:mt-8 flex flex-col text-2xl font-light narrow-letters leading-relaxed">
                         <div className="flex flex-col items-center">
                             <div className="flex items-center">
                                 <h4 className="text-bluePrimary text-xl font-extralight narrow-letters">{name}</h4>
@@ -59,7 +68,7 @@ function MemberCard({
                 <div className="flex flex-col">
                     {description.map((item, index) => (
                         <p key={index} className="
-                            mt-4 overflow-ellipsis font-light narrow-letters leading-relaxed text-sm transform transition duration-200 ease-in-out
+                            mt-4 overflow-ellipsis font-light narrow-letters leading-relaxed text-sm text-left
                         ">
                             {item}
                         </p>

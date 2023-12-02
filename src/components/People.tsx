@@ -1,10 +1,9 @@
-import { MemberInfo } from "@/types/MemberInfo";
 import person1 from "@assets/people/nicolas_tsiakkas.webp";
 // import person2 from "@assets/people/eleni_voidou.webp";
 import person2 from "@assets/people/default.jpg";
 import person3 from "@assets/people/katerina_paschou.webp";
 import person4 from "@assets/people/fotoula_dragatsi.webp";
-import MemberCard from "./MemberCard";
+import MemberCard, { MemberInfo } from "./MemberCard";
 
 const membersInfo: MemberInfo[] = [
     {
