@@ -1,4 +1,4 @@
-import team0 from "@assets/team-photos/team0.jpg";
+import office from "@assets/building/medwork-vanced.webp";
 import Breadcrumbs from "@/components/Breadcrumb";
 import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ImageCategory from "@/components/ImageCategory";
@@ -21,7 +21,7 @@ function AboutUs() {
     return (
         <div className="mx-auto flex flex-col items-center justify-between w-full">
             <ImageCategory
-                image={team0}
+                image={office}
                 title="About Medwork"
                 description=""
             />

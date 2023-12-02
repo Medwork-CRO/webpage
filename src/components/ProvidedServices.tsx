@@ -1,6 +1,6 @@
-import outsourcing from "@assets/services/outsourcing-vector.jpg";
-import safety from "@assets/services/safety-vector.jpg";
-import qualityManagement from "@assets/services/quality-management-vector.jpg";
+import outsourcing from "@assets/services/outsourcing.webp";
+import safety from "@assets/services/safety.webp";
+import qualityManagement from "@assets/services/quality-management.webp";
 import { StaticImageData } from "next/image";
 import "react-multi-carousel/lib/styles.css";
 import Card from "./Card";
