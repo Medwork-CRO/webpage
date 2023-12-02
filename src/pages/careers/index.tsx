@@ -5,7 +5,7 @@ import ImageCategory from "@/components/ImageCategory";
 import RoundedButtonExternal, { ButtonType } from "@/components/RoundedButtonExternal";
 import kariera from "@assets/companies/kariera_icon.png";
 import linkedin from "@assets/companies/linkedin_icon.png";
-import team3 from "@assets/team-photos/team3.jpg";
+import team3 from "@assets/teams/pv/IMG_9134.jpg";
 
 const paragraphs = [
     "Medwork has made its mark as the top Contract Research Organization (CRO) in Greece, setting the standard for excellence.",

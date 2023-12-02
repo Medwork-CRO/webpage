@@ -17,7 +17,7 @@ function ImageCategory({
             <div className="relative flex flex-col md:flex-row flex-[0_0_100%] motion-safe:animate-fadeIn">
                 <Image
                     src={image}
-                    className="h-[75vh] object-cover"
+                    className="h-[75vh] object-cover saturate-150"
                     alt="alt"
                 />
 
