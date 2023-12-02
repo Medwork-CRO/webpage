@@ -20,11 +20,10 @@ function Card({
         <div className="flex flex-col gap-2">
             <Link href={readMoreLink}>
                 <div tabIndex={index} className="
-                    flex flex-col items-center
-                    border-2 border-gray-300 dark:border-gray-700
-                    rounded-lg
-                    overflow-hidden
+                    bg-gray-300 dark:bg-gray-700
+                    flex flex-col items-center overflow-hidden
                     transform transition duration-200 ease-in-out
+                    border-4 border-transparent rounded-lg
                     hover:border-gray-400 dark:hover:border-gray-600
                     h-full sm:h-[24rem] lg:h-[29rem] xl:h-[30rem] w-full
                 ">
