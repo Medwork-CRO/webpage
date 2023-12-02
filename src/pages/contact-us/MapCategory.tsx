@@ -70,7 +70,6 @@ function getContact(display: string, value: string, contactType: ContactType) {
         flex gap-4 items-center rounded-lg py-3
         text-lg md:text-xl font-normal
         text-medwork-dark dark:text-medwork-light
-        sm:bg-medwork-light sm:dark:bg-medwork-dark sm:bg-opacity-40
         whitespace-pre-line tracking-wide text-left
         narrow-letters leading-relaxed
         ">
@@ -88,7 +87,11 @@ function getContact(display: string, value: string, contactType: ContactType) {
 function getCompanyInfo() {
     return (
         <div className="font-semibold text-xl text-left">
-            <div className="flex flex-col max-w-[300px] justify-start gap-4">
+            <div className="
+                flex flex-col max-w-[300px] justify-start gap-4 rounded-lg
+                sm:bg-medwork-light sm:dark:bg-transparent sm:bg-opacity-90
+                p-0 sm:p-4
+            ">
                 {getContact("(+30) 210 9960971", "+302109960971", ContactType.Phone)}
                 {getContact("(+30) 210 9969578", "+302109969578", ContactType.Fax)}
                 {getContact("medworkinfo@medwork.gr", "medworkinfo@medwork.gr", ContactType.Email)}
@@ -107,8 +110,8 @@ function MapCategory({
             <div className="hidden sm:block w-full">
                 <div className="flex flex-col md:flex-row h-[100vh] relative">
                     {getIFrame(location)}
-                    <div className="absolute inset-0 z-10 bg-gradient-to-r from-medwork-light dark:from-medwork-dark via-transparent to-transparent"></div>
-                    <div className="absolute inset-0 z-10 bg-gradient-to-l from-medwork-light dark:from-medwork-dark via-transparent to-transparent"></div>
+                    {/* <div className="absolute inset-0 z-10 bg-gradient-to-r from-medwork-light dark:from-medwork-dark via-transparent to-transparent"></div>
+                    <div className="absolute inset-0 z-10 bg-gradient-to-l from-medwork-light dark:from-medwork-dark via-transparent to-transparent"></div> */}
                     <div className="absolute inset-0 z-10 bg-gradient-to-t from-medwork-light dark:from-medwork-dark via-transparent to-transparent"></div>
                     <div className="absolute inset-0 z-10 bg-gradient-to-b from-medwork-light dark:from-medwork-dark via-transparent to-transparent"></div>
 
@@ -119,6 +122,7 @@ function MapCategory({
                     </div>
                 </div>
             </div>
+
 
             <div className="grid grid-cols-1 md:grid-cols-2 sm:hidden w-full">
                 <div className="relative">
