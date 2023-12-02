@@ -50,7 +50,7 @@ function Outsourcing() {
             <div id="main-content" className="max-w-[1200px] w-full items-left whitespace-pre-line flex flex-col">
                 <Breadcrumbs />
 
-                <div className="w-full flex flex-col items-left gap-12 px-4 sm:px-6 py-16 lg:px-0 whitespace-pre-line text-gray-500 dark:text-gray-400">
+                <div className="flex flex-col gap-12 px-4 sm:px-6 lg:px-0 py-16">
                     <LeadingParagraphs withLead={false} paragraphs={introParagraph} />
                     <DisplayParagraphs withLead={true} paragraphs={expertiseParagraph} />
                     <DisplayParagraphs withLead={true} paragraphs={customSolutionsParagraph} />

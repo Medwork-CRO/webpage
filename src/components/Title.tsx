@@ -20,12 +20,9 @@ function Title({
         <span
             id={title.split(" ").join("-").toLowerCase()}
             className={`
-                mt-2 pb-2
-                ${colour} ${textAlign}
-                text-2xl md:text-3xl
-                font-semibold tracking-wide uppercase leading-tight
-                border-b border-gray-200 dark:border-gray-600
-              `}
+                pl-4 mt-2 text-2xl md:text-3xl text-center ${colour} ${textAlign}
+                font-normal uppercase tracking-wide leading-tight narrow-letters
+            `}
         >
             {title}
         </span>

@@ -19,12 +19,11 @@ function Showcasing({ title, showcases }: { title: string, showcases: Showcase[]
         <div className="
             w-full flex flex-col gap-6
             text-medwork-brown dark:text-gray-400
-            border-l border-medwork-brown dark:border-gray-400
         ">
             <span
                 id={title.split(" ").join("-").toLowerCase()}
                 className={`
-                pl-4 mt-2 text-2xl md:text-3xl text-left
+                pl-4 mt-2 text-2xl md:text-3xl text-center
                 font-normal uppercase tracking-wide leading-tight narrow-letters
               `}
             >
@@ -32,6 +31,7 @@ function Showcasing({ title, showcases }: { title: string, showcases: Showcase[]
             </span>
             <ul className="
                 flex flex-col gap-6 list-disc pl-4
+                border-l border-medwork-brown dark:border-gray-400
             ">
                 {showcases.map((showcase, i) => (
                     <React.Fragment key={i}>

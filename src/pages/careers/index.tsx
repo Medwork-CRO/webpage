@@ -2,13 +2,10 @@ import Breadcrumbs from "@/components/Breadcrumb";
 import DisplayParagraphs from "@/components/DisplayParagraphs";
 import DualLayerParallax from "@/components/DualLayerParallax";
 import ImageCategory from "@/components/ImageCategory";
-import { MdEmail } from "@react-icons/all-files/md/MdEmail";
+import RoundedButtonExternal, { ButtonType } from "@/components/RoundedButtonExternal";
 import kariera from "@assets/companies/kariera_icon.png";
 import linkedin from "@assets/companies/linkedin_icon.png";
 import team3 from "@assets/team-photos/team3.jpg";
-import Image from "next/image";
-import Link from "next/link";
-import RoundedButtonExternal, { ButtonType } from "@/components/RoundedButtonExternal";
 
 const paragraphs = [
     "Medwork has made its mark as the top Contract Research Organization (CRO) in Greece, setting the standard for excellence.",

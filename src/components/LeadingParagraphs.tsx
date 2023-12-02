@@ -6,7 +6,7 @@ type LeadingParagraphsProps = {
 function LeadingParagraphs({ paragraphs, withLead = false }: LeadingParagraphsProps) {
     return (
         <div className="
-        pl-6 border-l-2 border-medwork-brown dark:border-gray-400
+        pl-6 border-l border-medwork-brown dark:border-gray-400
         font-ultralight
         flex flex-col w-full
         gap-12 sm:gap-16
