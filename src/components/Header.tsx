@@ -19,7 +19,7 @@ function Header() {
 
     return (
         <header
-            className={"sticky top-0 z-50 w-full font-sans shadow-sm bg-medwork-light dark:bg-medwork-dark transition-all duration-300"}
+            className={"sticky top-0 z-50 w-full font-sans bg-medwork-light dark:bg-medwork-dark transition-all duration-300"} // shadow-sm
         >
             <div className="mx-auto flex max-w-[1200px] py-2 sm:py-3 px-2 md:px-4 lg:px-0 items-center justify-between">
                 <Logo />
@@ -37,7 +37,7 @@ function Header() {
             <div className={`block shadow-xl md:hidden ${isOpen ? "h-[calc(100vh-4rem)] overflow-auto" : ""}`}>
                 <NavHamburger nav={navMenu} isOpen={isOpen} />
             </div>
-            <motion.div className="mx-auto max-w-[1200px] top-0 left-0 right-0 h-[0.2rem] bg-blue-400 origin-center " style={{ scaleX: scrollYProgress }} />
+            <motion.div className="mx-auto max-w-[1200px] top-0 left-0 right-0 h-[0.1rem] bg-blue-400 origin-center" style={{ scaleX: scrollYProgress }} />
         </header>
     );
 }
