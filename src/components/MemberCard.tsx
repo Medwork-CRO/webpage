@@ -18,8 +18,8 @@ function MemberCard({
     };
 
     return (
-        <div className="flex flex-col items-center content-center">
-            <div className="flex flex-col sm:flex-row md:flex-col items-center content-center">
+        <div className="flex flex-col items-center content-center text-center">
+            <div className="flex flex-col sm:flex-row md:flex-col items-center content-center gap-4">
                 <div className="flex h-[230px] rounded-xl bg-cover">
                     <Image
                         className="w-[156px] rounded-lg border-2 border-blue-500 object-cover"
@@ -27,7 +27,7 @@ function MemberCard({
                         alt={title}
                     />
                 </div>
-                <div className="items-top flex flex-col justify-between px-4">
+                <div className="items-top flex flex-col justify-between">
                     <div className="items-top mt-0 sm:mt-8 flex flex-col text-2xl font-light narrow-letters leading-relaxed text-medwork-brown dark:text-white">
                         <div className="flex flex-col items-center">
                             <div className="flex items-center">
