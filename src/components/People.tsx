@@ -1,8 +1,9 @@
 import { MemberInfo } from "@/types/MemberInfo";
-import person1 from "@assets/people/nicolas_tsiakkas.jpg";
-// import person2 from "@assets/people/eleni_voidou.jpg";
-import person3 from "@assets/people/katerina_paschou.jpg";
-import person4 from "@assets/people/fotoula_dragatsi.jpg";
+import person1 from "@assets/people/nicolas_tsiakkas.webp";
+// import person2 from "@assets/people/eleni_voidou.webp";
+import person2 from "@assets/people/default.jpg";
+import person3 from "@assets/people/katerina_paschou.webp";
+import person4 from "@assets/people/fotoula_dragatsi.webp";
 import MemberCard from "./MemberCard";
 
 const membersInfo: MemberInfo[] = [
@@ -14,7 +15,7 @@ const membersInfo: MemberInfo[] = [
             ["Nicolas Tsiakkas has been an active member of the pharmaceutical industry for over 35 years, having gained a deep knowledge and expertise across a wide range of pharmacovigilance, clinical development and quality assurance activities. Following his specialization in ophthalmology at the Medical School of Wurzburg in Germany, he started his career in 1989 in Schering-Plough Greece, holding the position of Medical Director for a period of 5 years. He then moved to Rhone-Poulenc Rorer as the Regional Medical Director and Pharmacovigilance Manager, being responsible for the company's research program from Phase II to Phase IV studies and surveys in Greece, Bulgaria, Romania and former Yugoslavia. Following the merger of Rhone-Poulenc Rorer with Hoechst-Marion-Roussel, he served as a Medical Director and Pharmacovigilance Manager in Aventis Pharma Greece, between 2000 and 2005. In 2005 he founded Medwork, which, under his leadership, has grown from a company offering clinical research and Pharmacovigilance services to a highly esteemed, Vigilance services oriented CRO for international and local pharmaceutical companies. Dr. Tsiakkas is a member of the Pharmacovigilance Working Group of the European CRO Federation (EUCROF). Since 2019, he is also a member of the organizing committee for the DIA EU-QPPV annual meetings.",]
     },
     {
-        image: person3,
+        image: person2,
         name: "Eleni Voidou",
         title: "Administration Director",
         description: [

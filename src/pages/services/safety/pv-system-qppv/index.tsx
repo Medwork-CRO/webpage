@@ -1,8 +1,11 @@
 import Breadcrumbs from "@/components/Breadcrumb";
 import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ImageCategory from "@/components/ImageCategory";
+import ImageInline from "@/components/ImageInline";
 import Showcasing from "@/components/Showcasing";
 import vigilance from "@assets/services/safety-vector.jpg";
+// import full_pv_team from "@assets/teams/full_pv/IMG_9289.jpg";
+import local_pv_team from "@assets/teams/local_pv/IMG_9278.jpg";
 
 const paragraphs = [
     "Enhancing Pharmacovigilance Outcomes: PV Systems and QPPV Services",
@@ -43,7 +46,9 @@ function Vigilance() {
 
                 <div className="flex flex-col gap-12 px-4 sm:px-6 lg:px-0 py-16">
                     <DisplayParagraphs withLead={true} paragraphs={paragraphs} />
+                    {/* <ImageInline image={full_pv_team}/> */}
                     <Showcasing title={title} showcases={showcases} />
+                    <ImageInline image={local_pv_team}/>
                 </div>
             </div>
         </div>

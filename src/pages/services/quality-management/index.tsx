@@ -1,9 +1,11 @@
 import Breadcrumbs from "@/components/Breadcrumb";
 import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ImageCategory from "@/components/ImageCategory";
+import ImageInline from "@/components/ImageInline";
 import InfoBoxMatrix, { InfoBoxAttributes } from "@/components/InfoBoxMatrix";
 import Showcasing from "@/components/Showcasing";
 import qualityManagement from "@assets/services/quality-management-vector.jpg";
+import quality_assurance_team from "@assets/teams/qa/IMG_9269.jpg";
 
 const introParagraph = ["Combining an excellent knowledge of the pharmaceutical environment, a deep understanding of European and international pharmaceutical quality standards and an unwavering commitment to quality, Medwork provides tailored and cost-effective quality assurance services in the area of Pharmacovigilance (GVP)."];
 
@@ -50,6 +52,7 @@ function QualityManagement() {
                     <DisplayParagraphs withLead={false} paragraphs={introParagraph} />
                     <Showcasing title={title} showcases={showcases} />
                     <InfoBoxMatrix infoBoxes={infoBoxes} />
+                    <ImageInline image={quality_assurance_team}/>
                 </div>
             </div>
         </div>

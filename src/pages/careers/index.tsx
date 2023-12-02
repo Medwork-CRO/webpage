@@ -1,11 +1,10 @@
 import Breadcrumbs from "@/components/Breadcrumb";
 import DisplayParagraphs from "@/components/DisplayParagraphs";
-import DualLayerParallax from "@/components/DualLayerParallax";
 import ImageCategory from "@/components/ImageCategory";
 import RoundedButtonExternal, { ButtonType } from "@/components/RoundedButtonExternal";
 import kariera from "@assets/companies/kariera_icon.png";
 import linkedin from "@assets/companies/linkedin_icon.png";
-import team3 from "@assets/teams/pv/IMG_9134.jpg";
+import team3 from "@assets/teams/pv/IMG_9134 2@2x.webp";
 
 const paragraphs = [
     "Medwork has made its mark as the top Contract Research Organization (CRO) in Greece, setting the standard for excellence.",
@@ -35,7 +34,7 @@ function Cosmetovigilance() {
 
                 <div className="flex flex-col gap-12 px-4 sm:px-6 lg:px-0 py-16">
                     <DisplayParagraphs withLead={true} paragraphs={paragraphs} />
-                    <DualLayerParallax imageFull='/assets/image-full.png' imageBottom='/assets/image-bottom.png' text='Join the Team' />
+                    {/* <DualLayerParallax imageFull='/assets/image-full.png' imageBottom='/assets/image-bottom.png' text='Join the Team' /> */}
                     <div className="my-8 flex flex-col gap-2 items-center whitespace-pre-line text-2xl font-thin text-cyan-600 dark:text-cyan-400">
                         You can see all our open job offerings
                         <div className="mt-4 flex flex-col sm:flex-row justify-center items-center gap-6 text-center w-full">
