@@ -57,7 +57,7 @@ function VerticalNav({ label, href, subCategories }: NavProp) {
                         <div className="flex items-center">
                             <span className={`pl-2 ${activeOption}`}>{label.toUpperCase()}</span>
                         </div>
-                        <MdExpandMore className={`text-xl p-[2px] mr-2 text-medwork-dark dark:text-medwork-light rounded-full ${isClicked ? "rotate-0" : "rotate-180"}`} />
+                        <MdExpandMore className={`text-xl mr-2 text-medwork-dark dark:text-medwork-light rounded-full ${isClicked ? "rotate-0" : "rotate-180"}`} />
                     </>
                 )}
             </div>
@@ -66,7 +66,7 @@ function VerticalNav({ label, href, subCategories }: NavProp) {
                     {subCategories.map((subCategory) => (
                         <Link
                             onClick={handleClick}
-                            className="ml-2 px-5 py-3 text-md font-semibold text-medwork-dark dark:text-medwork-light"
+                            className="ml-2 px-5 py-3 text-lg font-semibold text-medwork-dark dark:text-medwork-light"
                             aria-label={`By clicking you will be taken to ${subCategory.label}`}
                             key={subCategory.href}
                             href={subCategory.href}
@@ -85,12 +85,9 @@ function NavHamburger(navHamburger: NavHamburgerProp & { isOpen: boolean }) {
 
     return (
         <>
-            {navHamburger.isOpen &&
-        <div className="fixed inset-0 bg-medwork-light backdrop-blur-sm bg-opacity-10 z-10 overscroll-none"></div>}
+            {navHamburger.isOpen && <div className="fixed inset-0 bg-medwork-light backdrop-blur-sm bg-opacity-10 z-10 overscroll-none"></div>}
             <div className={`mx-4 pb-6 flex flex-col gap-8 z-40 fixed inset-x-1 bottom-0 ${visibility}`}>
-                {navHamburger.nav.map((props) => (
-                    <VerticalNav key={props.href} {...props} />
-                ))}
+                {navHamburger.nav.map((props) => (<VerticalNav key={props.href} {...props} />))}
             </div>
         </>
     );
