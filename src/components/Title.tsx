@@ -22,9 +22,8 @@ function Title({
             className={`
                 mt-2 pb-2
                 ${colour} ${textAlign}
-                text-lg md:text-xl lg:text-2xl
-                font-semibold tracking-wide
-                uppercase leading-tight
+                text-2xl md:text-3xl
+                font-semibold tracking-wide uppercase leading-tight
                 border-b border-gray-200 dark:border-gray-600
               `}
         >

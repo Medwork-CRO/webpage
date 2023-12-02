@@ -7,8 +7,8 @@ function DisplayParagraphs({ paragraphs, withLead = false }: DisplayParagraphsPr
     return (
         <div className="
         p-4 sm:p-8 rounded-2xl
-        bg-medwork-light2 dark:bg-medwork-dark2
         flex flex-col w-full
+        bg-medwork-light2 dark:bg-medwork-dark2
         whitespace-pre-line tracking-wide text-left
         narrow-letters leading-relaxed
         text-medwork-brown dark:text-gray-400

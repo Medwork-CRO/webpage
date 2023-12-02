@@ -11,7 +11,7 @@ const InfoBox = ({ title, text, link, color }: InfoBoxProps) => (
     <Link href={link}>
         <div className={`${color}
           flex flex-col p-4 rounded-lg
-          h-full sm:h-[16rem] lg:h-[20rem] w-full
+          h-full sm:h-[16rem] md:h-[18rem] lg:h-[20rem] w-full
           hover:border-cyan-600 border-4 border-transparent
           text-cyan-800 transition duration-500 ease-in-out`}
         >

@@ -21,7 +21,7 @@ function Cosmetovigilance() {
                 description="Medwork provides a comprehensive and customizable set of services to assist cosmetics companies in complying with the regulatory directives."
             />
 
-            <div id="main-content" className="max-w-[1200px] w-full items-left whitespace-pre-line flex flex-col mt-12 gap-16">
+            <div id="main-content" className="max-w-[1200px] w-full items-left whitespace-pre-line flex flex-col gap-8">
                 <Breadcrumbs />
 
                 <div className="w-full flex flex-col items-left gap-12 px-4 sm:px-6 py-16 lg:px-0 whitespace-pre-line text-gray-500 dark:text-gray-400">
