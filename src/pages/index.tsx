@@ -5,7 +5,7 @@ import ProvidedServices from "@/components/ProvidedServices";
 import Statistics from "@/components/Statistics";
 import office from "@assets/building/medwork-vanced.webp";
 import happyWoman from "@assets/stock-images/happy-woman.jpg";
-import team2 from "@assets/teams/mw/bo/IMG_9147.jpg";
+import team2 from "@assets/teams/mw/IMG_9147.jpg";
 
 const carouselTitle = "Advancing Drug Safety with Operational Excellence, Regulatory Compliance, and Adaptive Solutions";
 const imageShowCases = [
