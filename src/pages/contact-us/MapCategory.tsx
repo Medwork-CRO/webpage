@@ -66,7 +66,14 @@ function getContact(display: string, value: string, contactType: ContactType) {
         break;
     }
 
-    return (<div className="flex gap-4 items-center rounded-lg py-3 text-lg md:text-xl font-semibold">
+    return (<div className="
+        flex gap-4 items-center rounded-lg py-3
+        text-lg md:text-xl font-normal
+        text-medwork-dark dark:text-medwork-light
+        sm:bg-medwork-light sm:dark:bg-medwork-dark sm:bg-opacity-40
+        whitespace-pre-line tracking-wide text-left
+        narrow-letters leading-relaxed
+        ">
         {getIcon(contactType)}
         <Link
             href={href}
@@ -81,7 +88,7 @@ function getContact(display: string, value: string, contactType: ContactType) {
 function getCompanyInfo() {
     return (
         <div className="font-semibold text-xl text-left">
-            <div className="text-medwork-dark dark:text-medwork-light flex flex-col justify-start gap-4">
+            <div className="flex flex-col max-w-[300px] justify-start gap-4">
                 {getContact("(+30) 210 9960971", "+302109960971", ContactType.Phone)}
                 {getContact("(+30) 210 9969578", "+302109969578", ContactType.Fax)}
                 {getContact("medworkinfo@medwork.gr", "medworkinfo@medwork.gr", ContactType.Email)}

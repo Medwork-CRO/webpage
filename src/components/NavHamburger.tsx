@@ -26,7 +26,7 @@ function VerticalNav({ label, href, subCategories }: NavProp) {
     const isActiveSubCategory = subCategories?.some(
         (subCategory) => subCategory.href === router.asPath
     );
-    const activeOption = isActive || isActiveSubCategory ? "text-cyan-500 dark:text-cyan-400" : "";
+    const activeOption = isActive || isActiveSubCategory ? "text-blue-500 dark:text-blue-400" : "";
     const clickedOption = isClicked ? "border-blue-500" : "";
     const hasSubCategories = subCategories && subCategories.length > 0;
 

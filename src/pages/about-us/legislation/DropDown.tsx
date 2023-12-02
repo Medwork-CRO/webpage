@@ -14,7 +14,7 @@ const DropDown = ({ title, content, filePath, fileName, onClick, isOpen }: DropD
     return (
         <div className="item py-6 border-b border-medwork-dark dark:border-medwork-light">
             <div className="w-full flex gap-8 align-center justify-between cursor-pointer text-left text-medwork-dark dark:text-medwork-light" onClick={toggleOpen}>
-                <span className={`text-lg ${isOpen ? "text-cyan-600 dark:text-cyan-400" : ""}`}>{title}</span>
+                <span className={`text-lg ${isOpen ? "text-blue-600 dark:text-blue-400" : ""}`}>{title}</span>
                 <span>
                     <svg className={`w-5 h-5 transition-all duration-500 ${isOpen ? "transform rotate-180" : ""}`}
                         fill="none" stroke-linecap="round"

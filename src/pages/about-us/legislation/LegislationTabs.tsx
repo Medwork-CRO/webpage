@@ -278,12 +278,12 @@ const LegislationTabs = () => {
                         role="tablist"
                     >
                         {legislations.map((legislation, index) => {
-                            return (<li className="sm:mr-2 last:mr-0 mb-2 sm:mb-0 last:mb-0 flex-auto text-center cursor-pointer transition-all duration-500 hover:bg-cyan-300 hover:bg-opacity-25" key={index}>
+                            return (<li className="sm:mr-2 last:mr-0 mb-2 sm:mb-0 last:mb-0 flex-auto text-center cursor-pointer transition-all duration-500 hover:bg-blue-300 hover:bg-opacity-25" key={index}>
                                 <a
                                     key={index}
                                     className={
                                         `text-md font-bold uppercase px-5 py-3 block border-medwork-dark dark:border-medwork-light border ${openTab === index
-                                            ? "text-medwork-light dark:text-medwork-dark border-cyan-400 dark:border-cyan-400 bg-cyan-400 dark:bg-cyan-400"
+                                            ? "text-medwork-light dark:text-medwork-dark border-blue-400 dark:border-blue-400 bg-blue-400 dark:bg-blue-400"
                                             : "text-medwork-dark dark:text-medwork-light"}`
                                     }
                                     onClick={e => { e.preventDefault(); setOpenTab(index); /* setOpenDropDown(-1) */ }}

@@ -15,7 +15,7 @@ function ContactForm() {
         <div className="font-semibold leading-[2rem] sm:leading-[2rem] md:leading-[3rem] xl:leading-[4rem] text-lg sm:text-xl text-medwork-dark dark:text-medwork-light text-left">
             <Title title="Contact Us" align="left" />
             <p className="mb-8 text-left font-light text-gray-500 dark:text-gray-400 sm:text-xl">
-        You are always welcome to send us your CV and tell us about yourself.
+                You are always welcome to send us your CV and tell us about yourself.
             </p>
             <form onSubmit={handleSubmit} className="space-y-8">
                 <div>
@@ -72,15 +72,15 @@ function ContactForm() {
                     <button
                         id="send-message" aria-label="Send message"
                         type="submit"
-                        className="cursor-pointer text-white xs:text-md max-w-full w-full rounded-full bg-cyan-400 hover:bg-green-400 py-3 text-center text-sm font-semibold transition duration-100 ease-in focus:outline-none border-2 border-transparent hover:border-white"
+                        className="cursor-pointer text-white xs:text-md max-w-full w-full rounded-full bg-blue-400 hover:bg-green-400 py-3 text-center text-sm font-semibold transition duration-100 ease-in focus:outline-none border-2 border-transparent hover:border-white"
                     >
-            Send message
+                        Send message
                     </button>
                     <label
                         htmlFor="cv"
-                        className="cursor-pointer text-white xs:text-md max-w-full w-full rounded-full bg-cyan-400 hover:bg-green-400 py-3 text-center text-sm font-semibold transition duration-100 ease-in focus:outline-none border-2 border-transparent hover:border-white"
+                        className="cursor-pointer text-white xs:text-md max-w-full w-full rounded-full bg-blue-400 hover:bg-green-400 py-3 text-center text-sm font-semibold transition duration-100 ease-in focus:outline-none border-2 border-transparent hover:border-white"
                     >
-            Upload CV
+                        Upload CV
                         <input
                             type="file"
                             id="cv"
