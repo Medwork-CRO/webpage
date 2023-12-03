@@ -35,7 +35,7 @@ function Cosmetovigilance() {
                 <div className="flex flex-col gap-12 px-4 sm:px-6 lg:px-0 py-16">
                     <DisplayParagraphs withLead={true} paragraphs={paragraphs} />
                     {/* <DualLayerParallax imageFull='/assets/image-full.png' imageBottom='/assets/image-bottom.png' text='Join the Team' /> */}
-                    <div className="my-8 flex flex-col gap-2 items-center whitespace-pre-line text-2xl font-thin text-blue-600 dark:text-blue-400">
+                    <div className="my-8 flex flex-col gap-6 items-center whitespace-pre-line text-2xl font-thin text-blue-600 dark:text-blue-400">
                         You can see all our open job offerings
                         <div className="mt-4 flex flex-col sm:flex-row justify-center items-center gap-6 text-center w-full">
                             <RoundedButtonExternal
@@ -54,6 +54,11 @@ function Cosmetovigilance() {
                                 type={ButtonType.IMAGE}
                                 source={linkedin}
                             />
+                        </div>
+                    </div>
+                    <div className="my-8 flex flex-col gap-6 items-center whitespace-pre-line text-2xl font-thin text-blue-600 dark:text-blue-400">
+                        You can always send us your CV, even if there is no open job offering that suits you
+                        <div className="mt-4 flex flex-col sm:flex-row justify-center items-center gap-6 text-center w-full">
                             <RoundedButtonExternal
                                 label={"Email us your CV"}
                                 href={`mailto:${hrEmail}`}

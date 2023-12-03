@@ -30,12 +30,16 @@ function VerticalNav({ label, href, subCategories }: NavProp) {
     const clickedOption = isClicked ? "border-blue-500" : "";
     const hasSubCategories = subCategories && subCategories.length > 0;
 
+    // pb-4 mb-4
     return (
-        <div className="transform duration-200">
+        <div className="
+            transform duration-200
+        ">
             <div
                 className={`
                 flex items-center justify-between
-                pb-4 mb-4 text-lg font-semibold
+                mb-2
+                text-lg font-semibold
                 text-medwork-dark dark:text-medwork-light
                 ${clickedOption}
                 `}
@@ -62,11 +66,15 @@ function VerticalNav({ label, href, subCategories }: NavProp) {
                 )}
             </div>
             {isClicked && hasSubCategories && (
-                <div className={"flex w-[200px] flex-col border-l border-medwork-dark dark:border-medwork-light"}>
+                <div className="
+                    flex w-[200px] flex-col
+                    ml-2 pt-8 pl-4 gap-8
+                    border-l border-medwork-dark dark:border-medwork-light
+                ">
                     {subCategories.map((subCategory) => (
                         <Link
                             onClick={handleClick}
-                            className="ml-2 px-5 py-3 text-lg font-semibold text-medwork-dark dark:text-medwork-light"
+                            className="text-lg font-semibold text-medwork-dark dark:text-medwork-light"
                             aria-label={`By clicking you will be taken to ${subCategory.label}`}
                             key={subCategory.href}
                             href={subCategory.href}
@@ -86,7 +94,14 @@ function NavHamburger(navHamburger: NavHamburgerProp & { isOpen: boolean }) {
     return (
         <>
             {navHamburger.isOpen && <div className="fixed inset-0 bg-medwork-light backdrop-blur-sm bg-opacity-10 z-10 overscroll-none"></div>}
-            <div className={`mx-4 pb-6 flex flex-col gap-8 z-40 fixed inset-x-1 bottom-0 ${visibility}`}>
+            <div className={`
+                flex flex-col
+                mx-4 px-4 pb-6
+                border-l border-medwork-dark dark:border-medwork-light
+                gap-12 z-40
+                fixed inset-x-1 bottom-0
+                ${visibility}
+            `}>
                 {navHamburger.nav.map((props) => (<VerticalNav key={props.href} {...props} />))}
             </div>
         </>

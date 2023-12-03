@@ -11,7 +11,11 @@ const membersInfo: MemberInfo[] = [
         name: "Nicolas Tsiakkas",
         title: "Scientific Director",
         description:
-            ["Nicolas Tsiakkas has been an active member of the pharmaceutical industry for over 35 years, having gained a deep knowledge and expertise across a wide range of pharmacovigilance, clinical development and quality assurance activities. Following his specialization in ophthalmology at the Medical School of Wurzburg in Germany, he started his career in 1989 in Schering-Plough Greece, holding the position of Medical Director for a period of 5 years. He then moved to Rhone-Poulenc Rorer as the Regional Medical Director and Pharmacovigilance Manager, being responsible for the company's research program from Phase II to Phase IV studies and surveys in Greece, Bulgaria, Romania and former Yugoslavia. Following the merger of Rhone-Poulenc Rorer with Hoechst-Marion-Roussel, he served as a Medical Director and Pharmacovigilance Manager in Aventis Pharma Greece, between 2000 and 2005. In 2005 he founded Medwork, which, under his leadership, has grown from a company offering clinical research and Pharmacovigilance services to a highly esteemed, Vigilance services oriented CRO for international and local pharmaceutical companies. Dr. Tsiakkas is a member of the Pharmacovigilance Working Group of the European CRO Federation (EUCROF). Since 2019, he is also a member of the organizing committee for the DIA EU-QPPV annual meetings.",]
+            [
+                "Nicolas Tsiakkas has been an active member of the pharmaceutical industry for over 30 years, possessing extensive knowledge and expertise in pharmacovigilance, clinical development, and quality assurance. An MD by training, Nicolas commenced his pharmaceutical career in 1989 at Schering-Plough Greece as Medical Director. Following a five-year tenure, he transitioned to Rhone-Poulenc Rorer, serving as the Regional Medical Director and Pharmacovigilance Manager for Greece, Bulgaria, Romania, and the former Yugoslavia.",
+                "In 2005, amidst successive mergers with Hoechst Marion Russel and Sanofi, he established Medwork. Under his leadership, Medwork has evolved from a provider of clinical research and pharmacovigilance services into a highly-regarded CRO, specializing in vigilance services for both international and local pharmaceutical companies.",
+                "Dr. Tsiakkas is a member of the Pharmacovigilance Working Group of the European CRO Federation (EUCROF). Additionally, from 2019 to 2022, he served on the organizing committee for the DIA Global Forum for Qualified Persons in Pharmacovigilance.",
+            ]
     },
     {
         image: person2,
@@ -28,14 +32,21 @@ const membersInfo: MemberInfo[] = [
         name: "Katerina Paschou",
         title: "Human Resources Manager",
         description:
-            ["Emily is a dedicated and compassionate HR professional with a passion for creating a positive work environment. With expertise in talent acquisition, employee relations, and performance management, she ensures that the organization attracts and retpersonns top talent. Emily's exceptional interpersonal skills and ability to build strong relationships make her a trusted advisor to both employees and management.",]
+            [
+                "Katerina Paschou graduated from the National and Kapodistrian University of Athens with a bachelor's degree in Dentistry (DDS). She practiced Dentistry for two years and in 2009 she joined Medwork, taking up the position of Pharmacovigilance Assistant. Since then, Katerina has been gradually taking responsibility for a variety of complex and difficult tasks, among which have been assuming the roles of EU Qualified Person for Pharmacovigilance (QPPV) and Local Pharmacovigilance Contact Person. She has also served as a substitute Drug Safety Manager at Roche Hellas for a period of six months in 2011.",
+                "Katerina progressively assumed further responsibilities and became the Pharmacovigilance Manager of Medwork in 2012, coordinating a department of 26 pharmacovigilance professionals. Her extensive knowledge of pharmacovigilance and her personal commitment to quality makes her an invaluable member of Medwork's team.",
+            ]
     },
     {
         image: person4,
         name: "Fotoula Dragatsi",
         title: "Sales Manager",
         description:
-            ["Alex is a results-driven sales professional with a proven track record of exceeding targets. With expertise in lead generation, account management, and sales strategy, he drives revenue growth and builds long-term customer relationships. Alex's exceptional communication skills and ability to understand customer needs make him a valuable asset to any sales team.",]
+            [
+                "Fotoula has more than 18 years in the pharmaceutical industry experience. She started her career in 1995 as a Sales Representative at Boehringer Ingelheim, Greece, and, one year later, moved to Rhone-Poulenc Rorer/Aventis as a Clinical Research Associate. Fotoula progressively assumed management responsibilities in a wide range of activity areas, including clinical trial regulatory clearance, investigative product management, training and SOP development. Following the creation of Sanofi-Aventis in 2005, Fotoula assumed further responsibilities including the roles of SOP & Training Ambassador, Clinical Trial Application Manager and Investigational Product Manager.",
+                "In 2011, Fotoula joined Medwork as Quality Services Manager and in this capacity she is responsible for the organization, provision and management of all aspects of quality management services.",
+                "In addition to her deep knowledge of and experience in quality assurance and the training she received in her specialist field, Fotoula has also been trained as an auditor/lead auditor as per ISO 9001 and has successfully conducted numerous GCP, GDP and quality system audits.",
+            ]
     },
 ];
 

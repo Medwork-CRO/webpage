@@ -88,10 +88,10 @@ function getCompanyInfo() {
     return (
         <div className="font-semibold text-xl text-left">
             <div className="
-                flex flex-col max-w-[300px] justify-start gap-4 rounded-lg
+                flex flex-col w-full max-w-[400px] justify-start gap-4 rounded-lg
                 sm:bg-medwork-light sm:dark:bg-medwork-dark sm:bg-opacity-90
                 border border-medwork-dark dark:border-medwork-light
-                p-0 sm:p-4
+                p-6
             ">
                 {getContact("(+30) 210 9960971", "+302109960971", ContactType.Phone)}
                 {getContact("(+30) 210 9969578", "+302109969578", ContactType.Fax)}
