@@ -10,7 +10,7 @@ type CardProps = {
     readMoreLink: string;
 };
 
-function Card({
+function ServiceCard({
     index,
     imageData,
     imageTitle,
@@ -36,7 +36,7 @@ function Card({
                     transform transition duration-200 ease-in-out
                     border-4 border-transparent rounded-lg
                     hover:border-gray-400 dark:hover:border-gray-600
-                    h-full sm:h-[24rem] lg:h-[29rem] xl:h-[30rem] w-full
+                    h-full sm:h-[24rem] lg:h-[30rem] w-full
                 ">
                     <Image
                         className="object-cover h-56"
@@ -53,4 +53,4 @@ function Card({
     );
 }
 
-export default Card;
+export default ServiceCard;

@@ -3,7 +3,7 @@ import safety from "@assets/services/safety.webp";
 import qualityManagement from "@assets/services/quality-management.webp";
 import { StaticImageData } from "next/image";
 import "react-multi-carousel/lib/styles.css";
-import Card from "./Card";
+import ServiceCard from "./ServiceCard";
 import Title from "./Title";
 
 type ImageData = {
@@ -64,7 +64,7 @@ function ProvidedServices() {
             <Title title={"Core Services"} />
             <div className="grid transform gap-16 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-8 md:my-12 lg:my-16">
                 {images.map((image, i) => (
-                    <Card
+                    <ServiceCard
                         index={i}
                         key={image.imageTitle}
                         imageData={image.imageData}
