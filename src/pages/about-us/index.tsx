@@ -29,7 +29,7 @@ function AboutUs() {
             <div id="main-content" className="max-w-[1200px] w-full items-left whitespace-pre-line flex flex-col">
                 <Breadcrumbs />
 
-                <div className="flex flex-col gap-12 px-4 sm:px-6 lg:px-0 py-16">
+                <div className="flex flex-col gap-24 sm:gap-48 px-4 sm:px-6 lg:px-0 py-16">
                     <div className="flex flex-col gap-12">
                         {/* <Title title="Who we are" /> */}
                         <DisplayParagraphs withLead={true} paragraphs={paragraphs} />
@@ -37,7 +37,7 @@ function AboutUs() {
                         <DisplayParagraphs withLead={true} paragraphs={paragraphs2} />
                     </div>
 
-                    <div className="flex flex-col gap-12">
+                    <div className="flex flex-col gap-24">
                         <Title title="Leadership" />
                         <People />
                     </div>

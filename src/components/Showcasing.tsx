@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React from "react";
 
 type Showcase = {
@@ -15,8 +16,17 @@ function Showcase({ title, point }: Showcase) {
 }
 
 function Showcasing({ title, showcases }: { title: string, showcases: Showcase[] }) {
+    const variants = {
+        visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
+        hidden: { opacity: 0, scale: 0.8 }
+    };
+
     return (
-        <div className="
+        <motion.div
+            initial="hidden"
+            whileInView="visible"
+            variants={variants}
+            className="
             w-full flex flex-col gap-6
             text-medwork-brown dark:text-gray-400
         ">
@@ -39,7 +49,7 @@ function Showcasing({ title, showcases }: { title: string, showcases: Showcase[]
                     </React.Fragment>
                 ))}
             </ul>
-        </div>
+        </motion.div>
     );
 }
 

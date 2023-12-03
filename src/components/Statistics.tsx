@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React from "react";
 import Counter from "./Counter";
 
@@ -17,8 +18,18 @@ function Statistic({ count, symbol, title, point }: Stat) {
 }
 
 function Statistics({ Stats }: { Stats: Stat[] }) {
+    const variants = {
+        visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
+        hidden: { opacity: 0, scale: 0.8 }
+    };
+
     return (
-        <div className="flex flex-col sm:flex-row text-center items-center justify-between gap-8 w-full">
+        <motion.div
+            initial="hidden"
+            whileInView="visible"
+            variants={variants}
+            className="flex flex-col sm:flex-row text-center items-center justify-between gap-8 w-full"
+        >
             {Stats.map((stat, i) => (
                 <React.Fragment key={i}>
                     <Statistic key={i} count={stat.count} title={stat.title} point={stat.point} symbol={stat.symbol}/>
@@ -27,7 +38,7 @@ function Statistics({ Stats }: { Stats: Stat[] }) {
                     )}
                 </React.Fragment>
             ))}
-        </div>
+        </motion.div>
     );
 }
 

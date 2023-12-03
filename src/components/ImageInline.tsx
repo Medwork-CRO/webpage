@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
 
 type ImageInlineProps = {
@@ -7,16 +8,27 @@ type ImageInlineProps = {
 function ImageInline({
     image,
 }: ImageInlineProps) {
+    const variants = {
+        visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
+        hidden: { opacity: 0, scale: 0.8 }
+    };
+
     return (
-        <Image
-            src={image}
-            className="
+        <motion.div
+            initial="hidden"
+            whileInView="visible"
+            variants={variants}
+        >
+            <Image
+                src={image}
+                className="
                 h-[420px] object-cover
                 rounded-lg
                 border-4 border-gray-400 dark:border-gray-600 shadow-md
             "
-            alt="alt"
-        />
+                alt="alt"
+            />
+        </motion.div>
     );
 }
 

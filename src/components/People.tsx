@@ -4,6 +4,7 @@ import person2 from "@assets/people/default.jpg";
 import person3 from "@assets/people/katerina_paschou.webp";
 import person4 from "@assets/people/fotoula_dragatsi.webp";
 import MemberCard, { MemberInfo } from "./MemberCard";
+import { motion } from "framer-motion";
 
 const membersInfo: MemberInfo[] = [
     {
@@ -51,8 +52,17 @@ const membersInfo: MemberInfo[] = [
 ];
 
 function People() {
+    const variants = {
+        visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
+        hidden: { opacity: 0, scale: 0.8 }
+    };
+
     return (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 sm:gap-24">
+        <motion.div
+            initial="hidden"
+            whileInView="visible"
+            variants={variants}
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 sm:gap-24">
             {/* <div className="flex flex-wrap justify-between w-full gap-8 items-center self-center"> */}
             {membersInfo.map((memberInfo, i) => (
                 <MemberCard
@@ -64,7 +74,7 @@ function People() {
                     key={i}
                 />
             ))}
-        </div>
+        </motion.div>
     );
 }
 

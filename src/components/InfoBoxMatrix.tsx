@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React from "react";
 import InfoBox from "./InfoBox";
 
@@ -9,8 +10,17 @@ export type InfoBoxAttributes = {
 };
 
 function InfoBoxMatrix({ infoBoxes }: { infoBoxes: InfoBoxAttributes[] }) {
+    const variants = {
+        visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
+        hidden: { opacity: 0, scale: 0.8 }
+    };
+
     return (
-        <div className="w-full self-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-4 md:mx-8 lg:mx-16 my-4 md:my-8 lg:my-16 gap-8">
+        <motion.div
+            initial="hidden"
+            whileInView="visible"
+            variants={variants}
+            className="w-full self-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-4 md:mx-8 lg:mx-16 my-4 md:my-8 lg:my-16 gap-8">
             {infoBoxes.map((infoBox, i) => (
                 <React.Fragment key={i}>
                     <InfoBox
@@ -21,7 +31,7 @@ function InfoBoxMatrix({ infoBoxes }: { infoBoxes: InfoBoxAttributes[] }) {
                     />
                 </React.Fragment>
             ))}
-        </div>
+        </motion.div>
     );
 }
 

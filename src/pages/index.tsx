@@ -23,6 +23,12 @@ const imageShowCases = [
     },
 ];
 
+const statistics= [
+    { count: 15, symbol: "+", title: "years of", point: "experience" },
+    { count: 85, symbol: "+", title: "active", point: "clients" },
+    { count: 30, symbol: "+", title: "", point: "safety professionals" },
+];
+
 const introParagraph = [
     "At Medwork, we focus on vigilance services, combining expertise with flexibility. As a CRO dedicated exclusively to safety, we remain updated with industry advancements and regulatory standards. Our team's in-depth experience in pharmacovigilance provides valuable insights and guidance, helping clients navigate regulatory challenges and establish effective safety strategies.",
     "What distinguishes us is our agility and adaptability derived from our size. This allows us to quickly adjust our approach and resources to address changing needs, offering an experience that may be challenging for larger CROs to replicate.",
@@ -42,14 +48,10 @@ function Home() {
             </Carousel>
 
             <div id="main-content" className="max-w-[1200px] w-full items-left whitespace-pre-line flex flex-col">
-                <div className="w-full flex flex-col items-left gap-12 px-4 sm:px-6 py-16 lg:px-0 whitespace-pre-line text-gray-500 dark:text-gray-400">
+                <div className="flex flex-col gap-24 sm:gap-48 px-4 sm:px-6 lg:px-0 py-16">
                     <DisplayParagraphs withLead={true} paragraphs={introParagraph} />
+                    <Statistics Stats={statistics}/>
                     <ProvidedServices />
-                    <Statistics Stats={[
-                        { count: 15, symbol: "+", title: "years of", point: "experience" },
-                        { count: 85, symbol: "+", title: "active", point: "clients" },
-                        { count: 30, symbol: "+", title: "", point: "safety professionals" },
-                    ]}/>
                 </div>
             </div>
         </div>
