@@ -27,17 +27,22 @@ function ServiceCard({
             initial="hidden"
             whileInView="visible"
             variants={variants}
+            viewport={{ once: true }}
             className="flex flex-col gap-2">
             <Link href={readMoreLink}>
-                <div tabIndex={index} className="
-                    bg-medwork-light2 dark:bg-medwork-dark2
-                    text-medwork-dark2 dark:text-medwork-light2
-                    flex flex-col items-center overflow-hidden
-                    transform transition duration-200 ease-in-out
-                    border-4 border-transparent rounded-lg
-                    hover:border-gray-400 dark:hover:border-gray-600
-                    h-full sm:h-[24rem] lg:h-[30rem] w-full
-                ">
+                <div
+                    key={index}
+                    tabIndex={0}
+                    className="
+                        bg-medwork-light2 dark:bg-medwork-dark2
+                        text-medwork-dark2 dark:text-medwork-light2
+                        flex flex-col items-center overflow-hidden
+                        transform transition duration-200 ease-in-out
+                        border-4 border-transparent rounded-lg
+                        hover:border-gray-400 dark:hover:border-gray-600
+                        h-full sm:h-[24rem] lg:h-[30rem] w-full
+                    "
+                >
                     <Image
                         className="object-cover h-56"
                         src={imageData}

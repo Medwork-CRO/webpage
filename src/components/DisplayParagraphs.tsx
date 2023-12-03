@@ -16,6 +16,7 @@ function DisplayParagraphs({ paragraphs, withLead = false }: DisplayParagraphsPr
             initial="hidden"
             whileInView="visible"
             variants={variants}
+            viewport={{ once: true }}
             className="
             p-4 sm:p-8 rounded-2xl
             flex flex-col w-full

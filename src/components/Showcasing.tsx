@@ -26,6 +26,7 @@ function Showcasing({ title, showcases }: { title: string, showcases: Showcase[]
             initial="hidden"
             whileInView="visible"
             variants={variants}
+            viewport={{ once: true }}
             className="
             w-full flex flex-col gap-6
             text-medwork-brown dark:text-gray-400

@@ -16,6 +16,7 @@ const Carousel = ({ children, title }: Props) => {
         stopOnLastSnap: true,
         delay: 5000,
     })]);
+
     const [selectedIndex, setSelectedIndex] = useState(0);
 
     useEffect(() => {

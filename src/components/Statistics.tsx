@@ -15,6 +15,7 @@ function Statistic({ count, symbol, title, point }: Stat) {
             initial="hidden"
             whileInView="visible"
             variants={variants}
+            viewport={{ once: true }}
             className="flex w-56 flex-col">
             <span className="flex flex-row self-center mb-4 text-4xl text-blue-500">
                 <Counter number={count} symbol={symbol} duration={3} />

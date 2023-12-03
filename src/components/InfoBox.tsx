@@ -19,6 +19,7 @@ function InfoBox({ title, text, link, color }: InfoBoxProps) {
             initial="hidden"
             whileInView="visible"
             variants={variants}
+            viewport={{ once: true }}
         >
             <Link href={link}>
                 <div className={`${color}

@@ -35,6 +35,7 @@ function MemberCard({
             initial="hidden"
             whileInView="visible"
             variants={variants}
+            viewport={{ once: true }}
             className="flex flex-col items-center content-center text-center text-medwork-dark dark:text-medwork-light">
             <div className="flex flex-col sm:flex-row md:flex-col items-center content-center">
                 <div className="flex h-[230px] rounded-xl bg-cover">

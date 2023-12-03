@@ -6,11 +6,12 @@ function Logo() {
     return (
         <Link
             className="flex items-center gap-4"
-            aria-label="By clicking you will be taken to Home"
+            aria-label="Medwork Logo"
             href="/"
         >
-            <Image src={medworkLogo} alt="Medwork Logo" width={46} />
+            <Image src={medworkLogo} alt="Logo image" width={46} />
             <div
+                aria-label="Name"
                 className={"font-ultrathin narrow-letters leading-relaxed text-3xl text-medwork-brown dark:text-medwork-light"}
             >
                 Medwork

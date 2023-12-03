@@ -16,6 +16,7 @@ function LeadingParagraphs({ paragraphs, withLead = false }: LeadingParagraphsPr
             initial="hidden"
             whileInView="visible"
             variants={variants}
+            viewport={{ once: true }}
             className="
             pl-6 border-l border-medwork-brown dark:border-gray-400
             font-ultralight

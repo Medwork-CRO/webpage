@@ -18,6 +18,7 @@ function ImageInline({
             initial="hidden"
             whileInView="visible"
             variants={variants}
+            viewport={{ once: true }}
         >
             <Image
                 src={image}
