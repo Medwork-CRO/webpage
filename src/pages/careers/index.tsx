@@ -32,7 +32,7 @@ function Cosmetovigilance() {
             <div id="main-content" className="max-w-[1200px] w-full items-left whitespace-pre-line flex flex-col">
                 <Breadcrumbs />
 
-                <div className="flex flex-col gap-24 sm:gap-48 px-4 sm:px-6 lg:px-0 py-16">
+                <div className="flex flex-col gap-24 sm:gap-32 md:gap-38 lg:gap-42 px-4 sm:px-6 lg:px-0 py-16">
                     <DisplayParagraphs withLead={true} paragraphs={paragraphs} />
                     {/* <DualLayerParallax imageFull='/assets/image-full.png' imageBottom='/assets/image-bottom.png' text='Join the Team' /> */}
                     <div className="my-8 flex flex-col gap-6 items-center whitespace-pre-line text-2xl font-thin text-blue-600 dark:text-blue-400">

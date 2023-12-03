@@ -44,7 +44,7 @@ function Vigilance() {
             <div id="main-content" className="max-w-[1200px] w-full items-left whitespace-pre-line flex flex-col">
                 <Breadcrumbs />
 
-                <div className="flex flex-col gap-24 sm:gap-48 px-4 sm:px-6 lg:px-0 py-16">
+                <div className="flex flex-col gap-24 sm:gap-32 md:gap-38 lg:gap-42 px-4 sm:px-6 lg:px-0 py-16">
                     <DisplayParagraphs withLead={true} paragraphs={paragraphs} />
                     {/* <ImageInline image={full_pv_team}/> */}
                     <Showcasing title={title} showcases={showcases} />
