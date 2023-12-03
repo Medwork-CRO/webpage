@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
@@ -16,11 +17,21 @@ function Card({
     imageDescription,
     readMoreLink,
 }: CardProps) {
+    const variants = {
+        visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
+        hidden: { opacity: 0, scale: 0.8 }
+    };
+
     return (
-        <div className="flex flex-col gap-2">
+        <motion.div
+            initial="hidden"
+            whileInView="visible"
+            variants={variants}
+            className="flex flex-col gap-2">
             <Link href={readMoreLink}>
                 <div tabIndex={index} className="
                     bg-medwork-light2 dark:bg-medwork-dark2
+                    text-medwork-dark2 dark:text-medwork-light2
                     flex flex-col items-center overflow-hidden
                     transform transition duration-200 ease-in-out
                     border-4 border-transparent rounded-lg
@@ -38,7 +49,7 @@ function Card({
                     </div>
                 </div>
             </Link>
-        </div>
+        </motion.div>
     );
 }
 

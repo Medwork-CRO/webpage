@@ -1,15 +1,15 @@
-import Image from "next/image";
+import { motion } from "framer-motion";
+import Image, { StaticImageData } from "next/image";
 import { useState } from "react";
 import { FaLinkedin } from "react-icons/fa";
 import { MdExpandLess, MdExpandMore } from "react-icons/md";
-import { StaticImageData } from "next/image";
 
 export type MemberInfo = {
-  image: StaticImageData;
-  name: string;
-  title: string;
-  description: string[];
-  linkedInTag?: string;
+    image: StaticImageData;
+    name: string;
+    title: string;
+    description: string[];
+    linkedInTag?: string;
 };
 
 
@@ -25,10 +25,18 @@ function MemberCard({
     const toggleDescription = () => {
         setShowFullDescription(!showFullDescription);
     };
+    const variants = {
+        visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
+        hidden: { opacity: 0, scale: 0.8 }
+    };
 
     return (
-        <div className="flex flex-col items-center content-center text-center text-medwork-dark dark:text-medwork-light">
-            <div className="flex flex-col sm:flex-row md:flex-col items-center content-center gap-4">
+        <motion.div
+            initial="hidden"
+            whileInView="visible"
+            variants={variants}
+            className="flex flex-col items-center content-center text-center text-medwork-dark dark:text-medwork-light">
+            <div className="flex flex-col sm:flex-row md:flex-col items-center content-center">
                 <div className="flex h-[230px] rounded-xl bg-cover">
                     <Image
                         className="w-[156px] rounded-lg border-2 border-blue-500 object-cover"
@@ -75,7 +83,7 @@ function MemberCard({
                     ))}
                 </div>
             )}
-        </div>
+        </motion.div>
     );
 }
 

@@ -16,6 +16,7 @@ function Title({
     };
 
     const textAlign = textAlignClass[align];
+
     return (
         <span
             id={title.split(" ").join("-").toLowerCase()}
