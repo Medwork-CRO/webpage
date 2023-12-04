@@ -1,10 +1,8 @@
 import Breadcrumbs from "@/components/Breadcrumb";
 import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ImageCategory from "@/components/ImageCategory";
-import ImageInline from "@/components/ImageInline";
 import Showcasing from "@/components/Showcasing";
 import safety from "@assets/services/safety-vector.jpg";
-import lmlm_team from "@assets/teams/lmlm/IMG_9215.jpg";
 
 const paragraph1 = [
     "Global MLM",
@@ -76,15 +74,14 @@ function GlobalAndLocalLiteratureMonitoring() {
             <div id="main-content" className="max-w-[1200px] w-full items-left whitespace-pre-line flex flex-col">
                 <Breadcrumbs />
 
-                <div className="flex flex-col gap-24 sm:gap-32 md:gap-38 lg:gap-42 px-4 sm:px-6 lg:px-0 py-16">
+                <div className="flex flex-col gap-20 sm:gap-24 md:gap-28 px-4 sm:px-6 lg:px-0 py-16">
                     <DisplayParagraphs withLead={true} paragraphs={paragraph1} />
                     <Showcasing title={title} showcases={showcases} />
                 </div>
 
-                <div className="flex flex-col gap-24 sm:gap-32 md:gap-38 lg:gap-42 px-4 sm:px-6 lg:px-0 py-16">
+                <div className="flex flex-col gap-20 sm:gap-24 md:gap-28 px-4 sm:px-6 lg:px-0 py-16">
                     <DisplayParagraphs withLead={true} paragraphs={paragraph2} />
                     <Showcasing title={title2} showcases={showcases2} />
-                    <ImageInline image={lmlm_team} />
                 </div>
             </div>
         </div>

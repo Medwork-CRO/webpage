@@ -1,11 +1,9 @@
 import Breadcrumbs from "@/components/Breadcrumb";
 import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ImageCategory from "@/components/ImageCategory";
-import ImageInline from "@/components/ImageInline";
 import InfoBoxMatrix, { InfoBoxAttributes } from "@/components/InfoBoxMatrix";
 import Showcasing from "@/components/Showcasing";
 import qualityManagement from "@assets/services/quality-management-vector.jpg";
-import quality_assurance_team from "@assets/teams/qa/IMG_9269.jpg";
 
 const introParagraph = ["Combining an excellent knowledge of the pharmaceutical environment, a deep understanding of European and international pharmaceutical quality standards and an unwavering commitment to quality, Medwork provides tailored and cost-effective quality assurance services in the area of Pharmacovigilance (GVP)."];
 
@@ -48,11 +46,10 @@ function QualityManagement() {
             <div id="main-content" className="max-w-[1200px] w-full items-left whitespace-pre-line flex flex-col">
                 <Breadcrumbs />
 
-                <div className="flex flex-col gap-24 sm:gap-32 md:gap-38 lg:gap-42 px-4 sm:px-6 lg:px-0 py-16">
+                <div className="flex flex-col gap-20 sm:gap-24 md:gap-28 px-4 sm:px-6 lg:px-0 py-16">
                     <DisplayParagraphs withLead={false} paragraphs={introParagraph} />
                     <Showcasing title={title} showcases={showcases} />
                     <InfoBoxMatrix infoBoxes={infoBoxes} />
-                    <ImageInline image={quality_assurance_team}/>
                 </div>
             </div>
         </div>

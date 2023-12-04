@@ -88,8 +88,8 @@ function getCompanyInfo() {
     return (
         <div className="font-semibold text-xl text-left">
             <div className="
-                flex flex-col w-full max-w-[400px] justify-start gap-4 rounded-lg
-                sm:bg-medwork-light sm:dark:bg-medwork-dark sm:bg-opacity-90
+                flex flex-col w-full max-w-[360px] justify-start gap-4 rounded-lg
+                sm:bg-medwork-light sm:dark:bg-medwork-dark sm:bg-opacity-95
                 border border-medwork-dark dark:border-medwork-light
                 p-6
             ">

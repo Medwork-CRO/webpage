@@ -4,7 +4,6 @@ import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ProvidedServices from "@/components/ProvidedServices";
 import Statistics from "@/components/Statistics";
 import office from "@assets/building/medwork-vanced.webp";
-import happyWoman from "@assets/stock-images/happy-woman.jpg";
 import team2 from "@assets/teams/mw/IMG_9147.jpg";
 
 const carouselTitle = "Advancing Drug Safety with Operational Excellence, Regulatory Compliance, and Adaptive Solutions";
@@ -12,10 +11,6 @@ const imageShowCases = [
     {
         image: office,
         title: undefined, // "Medwork is a European pharmacovigilance expert organization.",
-    },
-    {
-        image: happyWoman,
-        title: undefined, // "We undertake projects for clients throughout Europe, leveraging our extensive resources and skilled team to manage complex pharmacovigilance projects.",
     },
     {
         image: team2,
@@ -48,7 +43,7 @@ function Home() {
             </Carousel>
 
             <div id="main-content" className="max-w-[1200px] w-full items-left whitespace-pre-line flex flex-col">
-                <div className="flex flex-col gap-24 sm:gap-32 md:gap-38 lg:gap-42 px-4 sm:px-6 lg:px-0 py-16">
+                <div className="flex flex-col gap-20 sm:gap-24 md:gap-28 px-4 sm:px-6 lg:px-0 py-16">
                     <DisplayParagraphs withLead={true} paragraphs={introParagraph} />
                     <Statistics Stats={statistics}/>
                     <ProvidedServices />

@@ -6,15 +6,6 @@ type Showcase = {
     point: string
 };
 
-function Showcase({ title, point }: Showcase) {
-    return (
-        <li className="flex flex-col narrow-letters leading-relaxed">
-            <span className="font-light text-2xl">{title}</span>
-            <span className="font-thin text-xl">{point}</span>
-        </li>
-    );
-}
-
 function Showcasing({ title, showcases }: { title: string, showcases: Showcase[] }) {
     const variants = {
         visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
@@ -35,19 +26,21 @@ function Showcasing({ title, showcases }: { title: string, showcases: Showcase[]
                 id={title.split(" ").join("-").toLowerCase()}
                 className={`
                 pl-4 mt-2 mb-4 text-2xl md:text-3xl text-center
-                font-normal uppercase tracking-wide leading-tight narrow-letters
+                font-semibold uppercase tracking-wide leading-tight narrow-letters
               `}
             >
                 {title}
             </span>
+
             <ul className="
-                flex flex-col gap-6 list-disc pl-4
+                flex flex-col gap-8 list-disc pl-8
                 border-l border-medwork-brown dark:border-gray-400
             ">
                 {showcases.map((showcase, i) => (
-                    <React.Fragment key={i}>
-                        <Showcase title={showcase.title} point={showcase.point} />
-                    </React.Fragment>
+                    <li className="narrow-letters leading-relaxed" key={i}>
+                        <p className="font-normal text-2xl">{showcase.title}</p>
+                        <p className="font-thin text-xl">{showcase.point}</p>
+                    </li>
                 ))}
             </ul>
         </motion.div>

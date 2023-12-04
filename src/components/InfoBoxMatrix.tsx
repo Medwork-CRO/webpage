@@ -10,7 +10,7 @@ export type InfoBoxAttributes = {
 
 function InfoBoxMatrix({ infoBoxes }: { infoBoxes: InfoBoxAttributes[] }) {
     return (
-        <div className="w-full self-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-4 md:mx-8 lg:mx-16 my-4 md:my-8 lg:my-16 gap-8">
+        <div className="w-full self-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-4 md:mx-8 lg:mx-16 gap-8">
             {infoBoxes.map((infoBox, i) => (
                 <React.Fragment key={i}>
                     <InfoBox

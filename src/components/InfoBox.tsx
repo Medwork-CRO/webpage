@@ -23,13 +23,18 @@ function InfoBox({ title, text, link, color }: InfoBoxProps) {
         >
             <Link href={link}>
                 <div className={`${color}
-          flex flex-col p-4 rounded-lg
-          h-full sm:h-[16rem] md:h-[18rem] lg:h-[22rem] w-full
-          hover:border-blue-500 border-4 border-transparent
-          text-blue-800 transition duration-500 ease-in-out`}
+                    flex flex-col p-4 rounded-lg
+                    h-[26rem] sm:h-[20rem] md:h-[22rem] lg:h-[26rem] w-full
+                    hover:border-blue-500 border-4 border-transparent
+                    text-blue-800 transition duration-500 ease-in-out
+                    narrow-letters leading-relaxed
+                `}
                 >
-                    <p className="mb-6 text-xl narrow-letters leading-relaxed border-b border-blue-500">{title.toUpperCase()}</p>
-                    <p className="text-md narrow-letters leading-relaxed">{text}</p>
+                    <p className="mb-6 text-xl border-b border-blue-500">{title.toUpperCase()}</p>
+                    <span className="flex flex-col h-full justify-between text-lg">
+                        <p>{text}</p>
+                        <p className="font-normal">Read more</p>
+                    </span>
                 </div>
             </Link>
         </motion.div>

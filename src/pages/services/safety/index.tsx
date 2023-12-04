@@ -2,7 +2,7 @@ import Breadcrumbs from "@/components/Breadcrumb";
 import ImageCategory from "@/components/ImageCategory";
 import InfoBoxMatrix from "@/components/InfoBoxMatrix";
 import LeadingParagraphs from "@/components/LeadingParagraphs";
-import safety from "@assets/services/safety-vector.jpg";
+import safety from "@assets/teams/pv/IMG_9134 2@2x.webp";
 
 // const paragraphsOld = [
 //     "Medwork is dedicated to supporting Marketing Authorisation Holders in fulfilling their pharmacovigilance obligations. With over 15 years of experience in different facets of pharmacovigilance, our team possesses a wealth of knowledge and a comprehensive understanding of the intricacies involved in ensuring drug safety.",
@@ -59,7 +59,7 @@ function Safety() {
             <div id="main-content" className="max-w-[1200px] w-full items-left whitespace-pre-line flex flex-col">
                 <Breadcrumbs />
 
-                <div className="flex flex-col gap-24 sm:gap-32 md:gap-38 lg:gap-42 px-4 sm:px-6 lg:px-0 py-16">
+                <div className="flex flex-col gap-20 sm:gap-24 md:gap-28 px-4 sm:px-6 lg:px-0 py-16">
                     <LeadingParagraphs withLead={false} paragraphs={paragraphs} />
                     <InfoBoxMatrix infoBoxes={infoBoxes} />
                 </div>

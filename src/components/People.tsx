@@ -52,7 +52,7 @@ const membersInfo: MemberInfo[] = [
 
 function People() {
     return (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 sm:gap-4">
             {/* <div className="flex flex-wrap justify-between w-full gap-8 items-center self-center"> */}
             {membersInfo.map((memberInfo, i) => (
                 <MemberCard

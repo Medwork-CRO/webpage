@@ -18,7 +18,7 @@ function LeadingParagraphs({ paragraphs, withLead = false }: LeadingParagraphsPr
             variants={variants}
             viewport={{ once: true }}
             className="
-            pl-6 border-l border-medwork-brown dark:border-gray-400
+            pl-6 border-l border-medwork-brown dark:border-gray-400 bg-opacity-25
             font-ultralight
             flex flex-col w-full
             gap-12 sm:gap-16
