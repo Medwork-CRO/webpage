@@ -1,8 +1,10 @@
 import Breadcrumbs from "@/components/Breadcrumb";
 import ImageCategory from "@/components/ImageCategory";
+import ImageInline from "@/components/ImageInline";
 import LeadingParagraphs from "@/components/LeadingParagraphs";
 import Showcasing from "@/components/Showcasing";
 import safety from "@assets/services/safety-vector.jpg";
+import sias from "@assets/teams/sias/IMG_9320.jpg";
 
 const paragraph = [
     "Efficient ICSR Case Processing Crafted to Client's Requirements: With an extended team of dedicated pharmacovigilance professionals, we manage all aspects of ICSR processing, seamlessly adapting to client's urgent or substantial caseloads.",
@@ -47,6 +49,7 @@ function CaseProcessing() {
                     <LeadingParagraphs withLead={false} paragraphs={paragraph} />
                     <Showcasing title={title} showcases={showcases} />
                     <LeadingParagraphs withLead={false} paragraphs={paragraph2} />
+                    <ImageInline image={sias}/>
                 </div>
             </div>
         </div>

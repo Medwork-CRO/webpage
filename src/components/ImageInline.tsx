@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
+import Title from "./Title";
 
 type ImageInlineProps = {
   image: StaticImageData;
@@ -20,6 +21,7 @@ function ImageInline({
             variants={variants}
             viewport={{ once: true }}
         >
+            <Title title="Our Team" />
             <Image
                 src={image}
                 className="

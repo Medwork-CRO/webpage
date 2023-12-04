@@ -22,7 +22,7 @@ function AboutUs() {
         <div className="mx-auto flex flex-col items-center justify-between w-full">
             <ImageCategory
                 image={office}
-                title="About Medwork"
+                title="About us"
                 description=""
             />
 

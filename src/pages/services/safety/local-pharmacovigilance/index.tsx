@@ -1,8 +1,10 @@
 import Breadcrumbs from "@/components/Breadcrumb";
 import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ImageCategory from "@/components/ImageCategory";
+import ImageInline from "@/components/ImageInline";
 import Showcasing from "@/components/Showcasing";
 import safety from "@assets/services/safety-vector.jpg";
+import local_pv_team from "@assets/teams/local_pv/IMG_9278.jpg";
 
 const paragraphs0 = [
     "LPPV & Local PV Services in Greece, Cyprus and Malta",
@@ -48,6 +50,7 @@ function LocalPharmacovigilance() {
                 <div className="flex flex-col gap-24 sm:gap-32 md:gap-38 lg:gap-42 px-4 sm:px-6 lg:px-0 py-16">
                     <DisplayParagraphs withLead={true} paragraphs={paragraphs0} />
                     <Showcasing title={title} showcases={showcases} />
+                    <ImageInline image={local_pv_team}/>
                 </div>
             </div>
         </div>

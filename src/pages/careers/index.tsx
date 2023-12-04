@@ -4,7 +4,7 @@ import ImageCategory from "@/components/ImageCategory";
 import RoundedButtonExternal, { ButtonType } from "@/components/RoundedButtonExternal";
 import kariera from "@assets/companies/kariera_icon.png";
 import linkedin from "@assets/companies/linkedin_icon.png";
-import team3 from "@assets/teams/pv/IMG_9134 2@2x.webp";
+import careers from "@assets/services/careers.webp";
 
 const paragraphs = [
     "Medwork has made its mark as the top Contract Research Organization (CRO) in Greece, setting the standard for excellence.",
@@ -24,7 +24,7 @@ function Cosmetovigilance() {
         <div className="mx-auto flex flex-col items-center justify-between w-full">
             <ImageCategory
                 textSide="right"
-                image={team3}
+                image={careers}
                 title="Careers"
                 description=""
             />
