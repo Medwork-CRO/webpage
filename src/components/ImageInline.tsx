@@ -25,8 +25,7 @@ function ImageInline({
             <Image
                 src={image}
                 className="
-                h-[420px] object-cover
-                rounded-lg
+                max-h-[420px] object-cover rounded-lg
                 border-4 border-gray-400 dark:border-gray-600 shadow-md
             "
                 alt="alt"
