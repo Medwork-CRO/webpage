@@ -12,7 +12,6 @@ type RoundedButtonExternalProps = {
   label: string;
   href: string;
   ariaLabel: string;
-  key: string;
   type: ButtonType;
   source: StaticImageData;
 };
@@ -25,7 +24,7 @@ function ImageryAddition({type, source}: {type: ButtonType, source: StaticImageD
         return (
             <Image
                 src={source}
-                alt="kariera"
+                alt={source.toString()}
                 className="h-6 w-6 object-cover"
             />
         );
@@ -35,7 +34,7 @@ function ImageryAddition({type, source}: {type: ButtonType, source: StaticImageD
     }
 }
 
-function RoundedButtonExternal({ label, href, ariaLabel, key, type, source }: RoundedButtonExternalProps) {
+function RoundedButtonExternal({ label, href, ariaLabel, type, source }: RoundedButtonExternalProps) {
     return (
         <Link
             className="flex flex-row items-center justify-center gap-4
@@ -46,7 +45,6 @@ function RoundedButtonExternal({ label, href, ariaLabel, key, type, source }: Ro
                 bg-blue-400 hover:bg-blue-500 focus-visible:bg-blue-500
                 transition duration-100 ease-in focus:outline-none"
             aria-label={ariaLabel}
-            key={key}
             href={href}
             target="_blank"
             rel="noopener noreferrer"

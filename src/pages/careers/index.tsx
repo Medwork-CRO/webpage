@@ -17,7 +17,7 @@ const paragraphs = [
 //   "With three years at Medwork, you'll gather extensive industry knowledge, positioning you advantageously for rapid career advancement in the ever-evolving pharmaceutical field."
 // ];
 
-function Cosmetovigilance() {
+function Careers() {
     const hrEmail = "hr@medwork.gr";
 
     return (
@@ -43,7 +43,6 @@ function Cosmetovigilance() {
                                     label={"Kariera"}
                                     href={"https://www.kariera.gr/en/companies/3531"}
                                     ariaLabel={"By clicking you will be taken to kariera.gr"}
-                                    key={"kariera"}
                                     type={ButtonType.IMAGE}
                                     source={kariera}
                                 />
@@ -51,7 +50,6 @@ function Cosmetovigilance() {
                                     label={"LinkedIn"}
                                     href={"https://www.linkedin.com/company/medwork/jobs/"}
                                     ariaLabel={"By clicking you will be taken to linkedIn.gr"}
-                                    key={"linkedIn"}
                                     type={ButtonType.IMAGE}
                                     source={linkedin}
                                 />
@@ -64,7 +62,6 @@ function Cosmetovigilance() {
                                     label={"Email us your CV"}
                                     href={`mailto:${hrEmail}`}
                                     ariaLabel={"By clicking you will be taken to compose an email to medwork hr"}
-                                    key={"email"}
                                     type={ButtonType.ICON}
                                     source={kariera}
                                 />
@@ -77,4 +74,4 @@ function Cosmetovigilance() {
     );
 }
 
-export default Cosmetovigilance;
+export default Careers;
