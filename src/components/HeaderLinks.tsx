@@ -24,8 +24,8 @@ const Services = {
             href: "/services/safety",
         },
         {
-            label: "Quality Management",
-            href: "/services/quality-management",
+            label: "Quality Assurance",
+            href: "/services/quality-assurance",
         },
         {
             label: "Outsourcing",

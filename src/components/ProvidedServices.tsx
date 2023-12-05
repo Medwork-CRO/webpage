@@ -1,6 +1,6 @@
 import outsourcing from "@assets/services/outsourcing.webp";
 import safety from "@assets/services/safety.webp";
-import qualityManagement from "@assets/services/quality-management.webp";
+import qualityAssurance from "@assets/services/quality-assurance.webp";
 import { StaticImageData } from "next/image";
 import "react-multi-carousel/lib/styles.css";
 import ServiceCard from "./ServiceCard";
@@ -22,11 +22,11 @@ const images: ImageData[] = [
       "Pharmacovigilance is our dedicated service ensuring the safety, efficacy, and risk/benefit balance of pharmaceutical products. We provide detailed drug safety and adverse event reporting services.",
     },
     {
-        imageData: qualityManagement,
-        imageTitle: "QUALITY MANAGEMENT",
-        readMoreLink: "/services/quality-management",
+        imageData: qualityAssurance,
+        imageTitle: "QUALITY ASSURANCE",
+        readMoreLink: "/services/quality-assurance",
         imageDescription:
-      "Our Quality Management service is designed to help organizations maintain and exceed industry standards of quality and compliance. We provide comprehensive quality systems, audits, and continuous improvement strategies.",
+      "Our Quality Assurance service is designed to help organizations maintain and exceed industry standards of quality and compliance. We provide comprehensive quality systems, audits, and continuous improvement strategies.",
     },
     {
         imageData: outsourcing,

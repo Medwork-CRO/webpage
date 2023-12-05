@@ -56,17 +56,17 @@ const nextConfig = {
             },
             {
                 source: "/quality-assurance.php",
-                destination: "/services/quality-management",
+                destination: "/services/quality-assurance",
                 permanent: true,
             },
             {
                 source: "/quality-management-support.php",
-                destination: "/services/quality-management",
+                destination: "/services/quality-assurance",
                 permanent: true,
             },
             {
                 source: "/gdp-audits.php",
-                destination: "/services/quality-management",
+                destination: "/services/quality-assurance",
                 permanent: true,
             },
             {

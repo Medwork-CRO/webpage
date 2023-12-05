@@ -44,7 +44,7 @@ const membersInfo: MemberInfo[] = [
         description:
             [
                 "Fotoula has more than 18 years in the pharmaceutical industry experience. She started her career in 1995 as a Sales Representative at Boehringer Ingelheim, Greece, and, one year later, moved to Rhone-Poulenc Rorer/Aventis as a Clinical Research Associate. Fotoula progressively assumed management responsibilities in a wide range of activity areas, including clinical trial regulatory clearance, investigative product management, training and SOP development. Following the creation of Sanofi-Aventis in 2005, Fotoula assumed further responsibilities including the roles of SOP & Training Ambassador, Clinical Trial Application Manager and Investigational Product Manager.",
-                "In 2011, Fotoula joined Medwork as Quality Services Manager and in this capacity she is responsible for the organization, provision and management of all aspects of quality management services.",
+                "In 2011, Fotoula joined Medwork as Quality Services Manager and in this capacity she is responsible for the organization, provision and assurance of all aspects of quality assurance services.",
                 "In addition to her deep knowledge of and experience in quality assurance and the training she received in her specialist field, Fotoula has also been trained as an auditor/lead auditor as per ISO 9001 and has successfully conducted numerous GCP, GDP and quality system audits.",
             ]
     },
