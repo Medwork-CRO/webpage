@@ -30,17 +30,17 @@ const membersInfo: MemberInfo[] = [
     {
         image: person3,
         name: "Katerina Paschou",
-        title: "Human Resources Manager",
+        title: "Pharmacovigilance Manager",
         description:
             [
                 "Katerina Paschou graduated from the National and Kapodistrian University of Athens with a bachelor's degree in Dentistry (DDS). She practiced Dentistry for two years and in 2009 she joined Medwork, taking up the position of Pharmacovigilance Assistant. Since then, Katerina has been gradually taking responsibility for a variety of complex and difficult tasks, among which have been assuming the roles of EU Qualified Person for Pharmacovigilance (QPPV) and Local Pharmacovigilance Contact Person. She has also served as a substitute Drug Safety Manager at Roche Hellas for a period of six months in 2011.",
-                "Katerina progressively assumed further responsibilities and became the Pharmacovigilance Manager of Medwork in 2012, coordinating a department of 26 pharmacovigilance professionals. Her extensive knowledge of pharmacovigilance and her personal commitment to quality makes her an invaluable member of Medwork's team.",
+                "Katerina progressively assumed further responsibilities and became the Pharmacovigilance Manager of Medwork in 2012, coordinating a department of 27 pharmacovigilance professionals. Her extensive knowledge of pharmacovigilance and her personal commitment to quality makes her an invaluable member of Medwork's team.",
             ]
     },
     {
         image: person4,
         name: "Fotoula Dragatsi",
-        title: "Sales Manager",
+        title: "Quality Assurance Manager",
         description:
             [
                 "Fotoula has more than 18 years in the pharmaceutical industry experience. She started her career in 1995 as a Sales Representative at Boehringer Ingelheim, Greece, and, one year later, moved to Rhone-Poulenc Rorer/Aventis as a Clinical Research Associate. Fotoula progressively assumed management responsibilities in a wide range of activity areas, including clinical trial regulatory clearance, investigative product management, training and SOP development. Following the creation of Sanofi-Aventis in 2005, Fotoula assumed further responsibilities including the roles of SOP & Training Ambassador, Clinical Trial Application Manager and Investigational Product Manager.",

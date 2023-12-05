@@ -21,7 +21,8 @@ const customSolutionsParagraph = [
 
 const title = "Benefits of Outsourcing with Medwork";
 const showcases = [
-    { title: "Cost-Efficiency",
+    {
+        title: "Cost-Efficiency",
         point: "Outsourcing your pharmacovigilance personnel allows you to control costs effectively, eliminating the need for extensive in-house resources."
     },
     {
