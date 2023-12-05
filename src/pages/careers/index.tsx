@@ -13,7 +13,7 @@ const paragraphs = [
 ];
 
 const paragraphs2 = [
-  "Embark on an exciting journey with Medwork, where you can jump-start your career in a thriving industry with endless possibilities. We take pride in being the perfect organization for aspiring professionals entering a field with vast opportunities. Join us and let your career take off!"
+    "Embark on an exciting journey with Medwork, where you can jump-start your career in a thriving industry with endless possibilities. We take pride in being the perfect organization for aspiring professionals entering a field with vast opportunities. Join us and let your career take off!"
 ];
 
 const title = "Why Medwork?";
