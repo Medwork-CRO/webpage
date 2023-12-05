@@ -61,7 +61,7 @@ function Safety() {
 
                 <div className="flex flex-col gap-20 sm:gap-24 md:gap-28 px-4 sm:px-6 lg:px-0 py-16">
                     <LeadingParagraphs withLead={false} paragraphs={paragraphs} />
-                    <InfoBoxMatrix infoBoxes={infoBoxes} />
+                    <InfoBoxMatrix infoBoxes={infoBoxes}/>
                 </div>
             </div>
         </div>

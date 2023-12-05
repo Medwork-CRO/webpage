@@ -61,7 +61,7 @@ function QualityAssurance() {
                 <div className="flex flex-col gap-20 sm:gap-24 md:gap-28 px-4 sm:px-6 lg:px-0 py-16">
                     <DisplayParagraphs withLead={false} paragraphs={introParagraph} />
                     <Showcasing title={title} showcases={showcases} />
-                    <InfoBoxMatrix infoBoxes={infoBoxes} />
+                    <InfoBoxMatrix infoBoxes={infoBoxes}/>
                 </div>
             </div>
         </div>
