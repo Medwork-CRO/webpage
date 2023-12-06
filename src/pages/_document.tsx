@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import { Head, Html, Main, NextScript } from "next/document";
 
 function Layout() {
@@ -7,6 +8,7 @@ function Layout() {
             <body>
                 <Main />
                 <NextScript />
+                <Analytics />
             </body>
         </Html>
     );
