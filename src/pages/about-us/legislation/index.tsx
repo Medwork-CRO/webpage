@@ -1,7 +1,7 @@
 import Breadcrumbs from "@/components/Breadcrumb";
 import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ImageCategory from "@/components/ImageCategory";
-import legislation from "@assets/stock-images/legislation.jpg";
+import legislation from "@assets/services/legislation.jpg";
 import LegislationTabs from "./LegislationTabs";
 
 const paragraphs = [
