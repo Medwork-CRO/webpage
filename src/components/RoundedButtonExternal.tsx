@@ -1,11 +1,14 @@
+import kariera from "@assets/companies/kariera_icon.png";
+import { FaLinkedin } from "@react-icons/all-files/fa/FaLinkedin";
+import Image from "next/image";
 import Link from "next/link";
-import Image, { StaticImageData } from "next/image";
 import { MdEmail } from "react-icons/md";
 
 export enum ButtonType {
     TEXT,
-    ICON,
-    IMAGE,
+    EMAIL,
+    LINKEDIN,
+    KARIERA,
 }
 
 type RoundedButtonExternalProps = {
@@ -13,18 +16,19 @@ type RoundedButtonExternalProps = {
   href: string;
   ariaLabel: string;
   type: ButtonType;
-  source: StaticImageData;
 };
 
-function ImageryAddition({type, source}: {type: ButtonType, source: StaticImageData}) {
+function ImageryAddition({type}: {type: ButtonType}) {
     switch (type) {
-    case ButtonType.ICON:
+    case ButtonType.EMAIL:
         return <MdEmail className="h-6 w-6 object-cover" />;
-    case ButtonType.IMAGE:
+    case ButtonType.LINKEDIN:
+        return <FaLinkedin className="h-6 w-6" />;
+    case ButtonType.KARIERA:
         return (
             <Image
-                src={source}
-                alt={source.toString()}
+                src={kariera}
+                alt={"kariera"}
                 className="h-6 w-6 object-cover"
             />
         );

@@ -3,8 +3,6 @@ import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ImageCategory from "@/components/ImageCategory";
 import RoundedButtonExternal, { ButtonType } from "@/components/RoundedButtonExternal";
 import Showcasing from "@/components/Showcasing";
-import kariera from "@assets/companies/kariera_icon.png";
-import linkedin from "@assets/companies/linkedin_icon.png";
 import careers from "@assets/services/careers.webp";
 
 const paragraphs = [
@@ -83,15 +81,13 @@ function Careers() {
                                     label={"Kariera"}
                                     href={"https://www.kariera.gr/en/companies/3531"}
                                     ariaLabel={"By clicking you will be taken to kariera.gr"}
-                                    type={ButtonType.IMAGE}
-                                    source={kariera}
+                                    type={ButtonType.KARIERA}
                                 />
                                 <RoundedButtonExternal
                                     label={"LinkedIn"}
                                     href={"https://www.linkedin.com/company/medwork/jobs/"}
                                     ariaLabel={"By clicking you will be taken to linkedIn.gr"}
-                                    type={ButtonType.IMAGE}
-                                    source={linkedin}
+                                    type={ButtonType.LINKEDIN}
                                 />
                             </div>
                         </div>
@@ -102,8 +98,7 @@ function Careers() {
                                     label={"Email us your CV"}
                                     href={`mailto:${hrEmail}`}
                                     ariaLabel={"By clicking you will be taken to compose an email to medwork hr"}
-                                    type={ButtonType.ICON}
-                                    source={kariera}
+                                    type={ButtonType.EMAIL}
                                 />
                             </div>
                         </div>
