@@ -38,7 +38,7 @@ function ImageryAddition({type}: {type: ButtonType}) {
     }
 }
 
-function RoundedButtonExternal({ label, href, ariaLabel, type, source }: RoundedButtonExternalProps) {
+function RoundedButtonExternal({ label, href, ariaLabel, type }: RoundedButtonExternalProps) {
     return (
         <Link
             className="flex flex-row items-center justify-center gap-4
@@ -53,7 +53,7 @@ function RoundedButtonExternal({ label, href, ariaLabel, type, source }: Rounded
             target="_blank"
             rel="noopener noreferrer"
         >
-            <ImageryAddition type={type} source={source} />
+            <ImageryAddition type={type} />
             {label}
         </Link>
     );
