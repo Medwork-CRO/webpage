@@ -7,7 +7,6 @@ import qualityAssurance from "@assets/services/quality-assurance-vector.jpg";
 
 const introParagraph = ["At Medwork, we recognize that maintaining the highest standards in pharmacovigilance is paramount for ensuring the safety of pharmaceutical products. Combining excellent knowledge of the pharmaceutical environment, a deep understanding of European and international pharmaceutical quality standards and an unwavering commitment to quality, Medwork provides tailored and cost-effective quality assurance services in the area of Pharmacovigilance (GVP)."];
 
-const title = "Medwork can assist you with";
 const showcases = [
     {
         title: "",
@@ -48,7 +47,7 @@ function QualityAssurance() {
 
                 <div className="flex flex-col gap-20 sm:gap-24 md:gap-28 px-4 sm:px-6 lg:px-0 py-16">
                     <DisplayParagraphs withLead={false} paragraphs={introParagraph} />
-                    <Showcasing title={title} showcases={showcases} />
+                    <Showcasing title={""} showcases={showcases} />
                     <InfoBoxMatrix infoBoxes={infoBoxes}/>
                 </div>
             </div>

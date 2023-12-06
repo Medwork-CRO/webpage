@@ -29,7 +29,7 @@ const showcases = [
 function CaseProcessing() {
     return (
         <div className="mx-auto flex flex-col items-center justify-between w-full">
-            <ImageCategory image={safety} title="QUALITY ASSURANCE SUPPORT" />
+            <ImageCategory image={safety} title="Quality Management Systems" />
 
             <div id="main-content" className="max-w-[1200px] w-full items-left whitespace-pre-line flex flex-col">
                 <Breadcrumbs />
