@@ -5,7 +5,7 @@ import InfoBoxMatrix, { InfoBoxAttributes } from "@/components/InfoBoxMatrix";
 import Showcasing from "@/components/Showcasing";
 import qualityAssurance from "@assets/services/quality-assurance-vector.jpg";
 
-const introParagraph = ["At Medwork, we recognize that maintaining the highest standards in pharmacovigilance is paramount for ensuring the safety and efficacy of pharmaceutical products. Combining excellent knowledge of the pharmaceutical environment, a deep understanding of European and international pharmaceutical quality standards and an unwavering commitment to quality, Medwork provides tailored and cost- effective quality assurance services in the area of Pharmacovigilance (GVP)."];
+const introParagraph = ["At Medwork, we recognize that maintaining the highest standards in pharmacovigilance is paramount for ensuring the safety of pharmaceutical products. Combining excellent knowledge of the pharmaceutical environment, a deep understanding of European and international pharmaceutical quality standards and an unwavering commitment to quality, Medwork provides tailored and cost-effective quality assurance services in the area of Pharmacovigilance (GVP)."];
 
 const title = "Medwork can assist you with";
 const showcases = [
@@ -25,12 +25,6 @@ const showcases = [
 
 const infoBoxes: InfoBoxAttributes[] = [
     {
-        title: "Quality Assurance Consulting",
-        text: "In the dynamic and highly regulated landscape of the pharmaceutical sector, navigating the complexities of quality management requires a specialized and strategic approach. At Medwork, our Quality Management Consulting services are designed to empower your organization, ensuring compliance, optimizing processes and fostering a culture of continuous improvement.",
-        link: "/services/quality-assurance/quality-assurance-consulting",
-        color: "bg-blue-200",
-    },
-    {
         title: "Quality Management Systems",
         text: "A robust Quality Management System is the backbone of effective pharmacovigilance. Whether you need a new QMS established, an existing one reviewed, or enhancements for continuous improvement, our experts work closely with you to tailor solutions that align with your requirements.",
         link: "/services/quality-assurance/quality-management-systems",
@@ -38,16 +32,10 @@ const infoBoxes: InfoBoxAttributes[] = [
     },
     {
         title: "QA personnel",
-        text: "Ensure the seamless functioning of your Pharmacovigilance department with our dedicated local QA personnel. These professionals serve as the responsible QA persons for PV (medical?), bringing a deep understanding of local regulatory nuances and contributing to the overall effectiveness of your pharmacovigilance system.",
+        text: "Ensure the seamless functioning of your Pharmacovigilance department's quality structure with our dedicated local QA personnel. These professionals serve as the responsible QA persons for PV operations and bring a deep understanding of local regulatory nuances. Their expertise contributes to the overall effectiveness of your pharmacovigilance system.",
         link: "/services/quality-assurance/qa-personnel",
         color: "bg-blue-200",
     },
-    {
-        title: "GVP auditing",
-        text: "Comprehensive auditing services focused specifically on Good Vigilance Practice (GVP). Our dedicated team ensures that pharmacovigilance practices align with the industry standards, providing in-depth assessments and recommendations for compliance.",
-        link: "/services/quality-assurance/gvp-auditing",
-        color: "bg-blue-200",
-    }
 ];
 
 function QualityAssurance() {

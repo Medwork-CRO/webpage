@@ -13,11 +13,15 @@ const showcases = [
     },
     {
         title: "",
-        point: "Support during internal audits",
+        point: "Liaise with Global QA personnel",
     },
     {
         title: "",
-        point: "Localization of global SOPs",
+        point: "Development of local SOPs and localization of global SOPs",
+    },
+    {
+        title: "",
+        point: "Support during internal audits",
     },
     {
         title: "",

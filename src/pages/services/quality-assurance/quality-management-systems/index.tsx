@@ -13,12 +13,16 @@ const showcases = [
         point: "We customize processes to align with standardized practices, ensuring compliance with legal and regulatory requirements, as well as relevant quality standards.",
     },
     {
-        title: "Review of Existing Quality Management Systems",
+        title: "Review and Improvement of Existing Quality Management Systems",
         point: "We assess your existing quality management systems for compliance, effectiveness, and efficiency. Our experts provide detailed insights, highlighting areas of strength and opportunities for improvement. This strategic evaluation ensures that your QMS continues to evolve, meeting the dynamic demands of industry standards.",
     },
     {
-        title: "Re-engineering for Enhanced Compliance and Efficiency",
-        point: "We streamline and enhance existing quality management systems, focusing on improving compliance, effectiveness, and efficiency. Development and Review of QMS Documents",
+        title: "Development and Review of QMS Documents",
+        point: "",
+    },
+    {
+        title: "GVP audits/ inspections",
+        point: "preparation and follow-up.",
     },
 ];
 
