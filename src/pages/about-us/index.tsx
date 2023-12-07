@@ -4,24 +4,25 @@ import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ImageCategory from "@/components/ImageCategory";
 import People from "@/components/People";
 import Title from "@/components/Title";
+import LeadingParagraphs from "@/components/LeadingParagraphs";
 
 const paragraphs = [
-    "We have proudly established ourselves as the leading and most esteemed Contract Research Organization (CRO) in Greece.",
-    "Our commitment to making a significant difference propelled us to expand our operations to Cyprus. Currently, we have extended our sphere of influence to encompass the whole of Europe, always maintaining our dedication to high quality service and respect for all stakeholders.",
+    "In a world where safety is paramount, Medwork stands out for a dedicated, personalized, and reliable pharmacovigilance experience.",
 ];
 
 const paragraphs2 = [
-    "Medwork is a Contract Research Organization located in Athens which provides a wide range of specialized services to the pharmaceutical and medical device industries, including Pharmacovigilance, Materiovigilance, Cosmetovigilance and Quality Assurance services. Founded in 2005, Medwork has steadily evolved into a leading Vigilance provider in Europe, combining excellent knowledge of the pharmaceutical environment with a deep understanding of European pharmaceutical quality standards.",
-    "Our services can be adapted to suit the size and scope of the project, as each project receives the same level of attention to detail and commitment in order to ensure the delivery of a high-quality outcome, within budget and within the agreed timescale.",
-    "Our team consists of highly-qualified senior personnel with deep expertise in the field, as well as young, motivated associates who help us achieve our ambitions by assisting our clients to accomplish their goals, through understanding their challenges and providing targeted and effective services.",
-    "Our relationships with our clients are enduring and are based on a thorough knowledge of their business; they are honoured by trust that is demonstrated in contracts that are continuously renewed year after year."
+    "Devoted to vigilance ",
+    "Unlike full service CROs, we are exclusively dedicated to Vigilance. This singular commitment allows us to direct all our efforts, expertise, and resources toward ensuring the utmost quality in our safety services."
 ];
 
 const paragraphs3 = [
-    "Medwork is a leading pharmaceutical company, specializing in clinical, drug safety, and review services for global pharmaceutical, biotechnology, and medical device companies.",
-    "Our team of experts brings a wealth of experience and a comprehensive portfolio of solutions, including clinical research support, life science consulting, R&D technology, pharmacovigilance, and IRB/IBC services. We are committed to delivering optimal outcomes for our clients trials and improving patient care.",
-    "With our end-to-end global clinical services and advanced technology solutions, Medwork is dedicated to serving the needs of clinical research and patients worldwide.",
-    "Our unwavering dedication, coupled with our commitment to excellence, drives us to continually innovate and provide the highest standard of service. We strive to optimize the research and development process, ensure drug safety, and facilitate efficient regulatory review, all with the ultimate goal of advancing healthcare through exceptional pharmaceutical services. Partner with Medwork for trusted expertise and a customer-centric approach in the ever-evolving pharmaceutical industry.",
+    "Optimal scale for maximum impact",
+    "Striking the perfect balance, Medwork is Large Enough for Specialization and Expertise, yet Small Enough for Personalized Interactions. Our size enables us to host specialized teams with deep pharmacovigilance knowledge, ensuring that we are well-versed in industry standards. Simultaneously, our nimble structure allows us to provide a tailored experience to each client, adapting seamlessly to evolving customer needs.",
+];
+
+const paragraphs4 = [
+    "Quality Assurance Embedded",
+    "At Medwork, a Quality Assurance Mindset is ingrained in our culture. Supported by a robust Quality Management System (QMS) and IT infrastructure, our services not only align with regulatory requirements but consistently surpass expectations. Welcome to a partnership where quality is not merely a standard but a fundamental aspect of how we conduct business.",
 ];
 
 function AboutUs() {
@@ -38,11 +39,10 @@ function AboutUs() {
 
                 <div className="flex flex-col gap-20 sm:gap-24 md:gap-28 px-4 sm:px-6 lg:px-0 py-16">
                     <div className="flex flex-col gap-12">
-                        {/* <Title title="Who we are" /> */}
-                        <DisplayParagraphs withLead={true} paragraphs={paragraphs} />
-                        {/* <PromoCard /> */}
-                        <DisplayParagraphs withLead={false} paragraphs={paragraphs2} />
+                        <LeadingParagraphs withLead={true} paragraphs={paragraphs} />
+                        <DisplayParagraphs withLead={true} paragraphs={paragraphs2} />
                         <DisplayParagraphs withLead={true} paragraphs={paragraphs3} />
+                        <DisplayParagraphs withLead={true} paragraphs={paragraphs4} />
                     </div>
 
                     <div className="flex flex-col gap-24">

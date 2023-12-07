@@ -4,9 +4,9 @@ import ImageCategory from "@/components/ImageCategory";
 import Showcasing from "@/components/Showcasing";
 import safety from "@assets/services/safety-vector.jpg";
 
-const paragraphs = ["At Medwork, we specialize in the comprehensive development, enhancement, and vigilant monitoring of your Quality Management System (QMS) to ensure alignment with industry standards and regulations."];
+const paragraphs = ["We can develop, improve, and monitoring your Quality Management System (QMS) to ensure alignment with industry standards and regulations."];
 
-const title = "Quality Assurance Consulting";
+const title = "Our services include";
 const showcases = [
     {
         title: "Setup and Implementation of Quality Management Systems",
@@ -22,7 +22,7 @@ const showcases = [
     },
     {
         title: "GVP audits/ inspections",
-        point: "preparation and follow-up.",
+        point: "Preparation and follow-up.",
     },
 ];
 
