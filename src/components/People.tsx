@@ -33,8 +33,9 @@ const membersInfo: MemberInfo[] = [
         title: "Pharmacovigilance Manager",
         description:
             [
-                "Katerina Paschou graduated from the National and Kapodistrian University of Athens with a bachelor's degree in Dentistry (DDS). She practiced Dentistry for two years and in 2009 she joined Medwork, taking up the position of Pharmacovigilance Assistant. Since then, Katerina has been gradually taking responsibility for a variety of complex and difficult tasks, among which have been assuming the roles of EU Qualified Person for Pharmacovigilance (QPPV) and Local Pharmacovigilance Contact Person. She has also served as a substitute Drug Safety Manager at Roche Hellas for a period of six months in 2011.",
-                "Katerina progressively assumed further responsibilities and became the Pharmacovigilance Manager of Medwork in 2012, coordinating a department of 27 pharmacovigilance professionals. Her extensive knowledge of pharmacovigilance and her personal commitment to quality makes her an invaluable member of Medwork's team.",
+                "Katerina embarked on her pharmacovigilance journey in 2009, transitioning from dentistry to become a member of Medwork's newly established pharmacovigilance department. As Medwork evolved, so did Katerina's role, navigating through various responsibilities. In 2012, she assumed the role of Pharmacovigilance Manager, leading a compact team of four PV officers.",
+                "Under Katerina's guidance, Medwork's pharmacovigilance services flourished, expanding both in scope and expertise. Currently heading Medwork's safety department, she oversees a dynamic team of over 25 safety professionals. Katerina's contribution has been essential in the continuous growth and expansion of Medwork's safety services, establishing a reputation for quality services trusted by a diverse clientele.",
+                "A graduate of the National and Kapodistrian University of Athens with a Doctor of Dental Surgery (DDS) degree, Katerina brings a unique perspective to her leadership role, ensuring Medwork remains at the forefront of delivering exceptional pharmacovigilance services.",
             ]
     },
     {
@@ -43,9 +44,9 @@ const membersInfo: MemberInfo[] = [
         title: "Quality Assurance Manager",
         description:
             [
-                "Fotoula has more than 18 years in the pharmaceutical industry experience. She started her career in 1995 as a Sales Representative at Boehringer Ingelheim, Greece, and, one year later, moved to Rhone-Poulenc Rorer/Aventis as a Clinical Research Associate. Fotoula progressively assumed management responsibilities in a wide range of activity areas, including clinical trial regulatory clearance, investigative product management, training and SOP development. Following the creation of Sanofi-Aventis in 2005, Fotoula assumed further responsibilities including the roles of SOP & Training Ambassador, Clinical Trial Application Manager and Investigational Product Manager.",
-                "In 2011, Fotoula joined Medwork as Quality Services Manager and in this capacity she is responsible for the organization, provision and assurance of all aspects of quality assurance services.",
-                "In addition to her deep knowledge of and experience in quality assurance and the training she received in her specialist field, Fotoula has also been trained as an auditor/lead auditor as per ISO 9001 and has successfully conducted numerous GCP, GDP and quality system audits.",
+                "Fotoula's experience in the pharmaceutical industry goes back to 1995, when she started her career as a Sales Representative at Boehringer-Ingelheim Greece. A year later, she transitioned to Rhone-Poulenc Rorer/Aventis as a Clinical Research Associate. Over time, her responsibilities progressively expanded in diverse areas, including regulatory clearance for clinical trials, investigational products management, training, and development of procedural documents. With the formation of Sanofi-Aventis in 2005, Fotoula took on additional roles as SOP & Training Ambassador, Clinical Trial Application Manager and Investigational Product Manager.",
+                "In 2011 Fotoula joined Medwork as the Quality Assurance Manager where she  is responsible for the maintenance and continual improvement of the company's quality management system. In addition to her extensive expertise in quality assurance, Fotoula has been trained as an auditor/lead auditor as per ISO 9001 and has successfully conducted numerous GCP, GDP and system audits.",
+                "Fotoula's profound understanding and commitment to quality make her an invaluable guardian of Medwork's dedication to excellence, serving as a trusted consultancy point for the company's clients."
             ]
     },
 ];

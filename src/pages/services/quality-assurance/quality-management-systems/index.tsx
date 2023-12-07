@@ -4,7 +4,7 @@ import ImageCategory from "@/components/ImageCategory";
 import Showcasing from "@/components/Showcasing";
 import safety from "@assets/services/safety-vector.jpg";
 
-const paragraphs = ["We can develop, improve, and monitoring your Quality Management System (QMS) to ensure alignment with industry standards and regulations."];
+const paragraphs = ["We can develop, improve, and monitor your Quality Management System (QMS) to ensure alignment with industry standards and regulations."];
 
 const title = "Our services include";
 const showcases = [

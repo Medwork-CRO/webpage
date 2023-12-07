@@ -156,13 +156,13 @@ function Information() {
             <div className="flex flex-row gap-4">
                 <Image
                     src={TUV_9001}
-                    className="h-20 w-20 sm:h-16 sm:w-16 object-cover"
-                    alt="alt"
+                    className="h-24 w-24 sm:h-32 sm:w-32 object-cover"
+                    alt="TUV Certificate of ISO 9001"
                 />
                 <Image
                     src={TUV_27001}
-                    className="h-20 w-20 sm:h-16 sm:w-16 object-cover"
-                    alt="alt"
+                    className="h-24 w-24 sm:h-32 sm:w-32 object-cover"
+                    alt="TUV Certificate of ISO 27001"
                 />
             </div>
             <Link

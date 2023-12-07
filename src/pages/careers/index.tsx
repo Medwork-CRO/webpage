@@ -3,6 +3,7 @@ import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ImageCategory from "@/components/ImageCategory";
 import RoundedButtonExternal, { ButtonType } from "@/components/RoundedButtonExternal";
 import Showcasing from "@/components/Showcasing";
+import Title from "@/components/Title";
 import careers from "@assets/services/careers.webp";
 
 const paragraphs = [
@@ -49,6 +50,7 @@ function Careers() {
                     <Showcasing title={title} showcases={showcases} />
                     {/* <DualLayerParallax imageFull='/assets/image-full.png' imageBottom='/assets/image-bottom.png' text='Join the Team' /> */}
                     <div className="flex flex-col whitespace-pre-line text-2xl font-thin text-blue-600 dark:text-blue-400">
+                        <Title title="How to Apply"/>
                         <div className="my-6 flex flex-col gap-6 items-center">
                             <p className="font-semibold">Explore our current job openings</p>
                             <div className="mt-4 flex flex-col sm:flex-row justify-center items-center gap-6 text-center w-full">
