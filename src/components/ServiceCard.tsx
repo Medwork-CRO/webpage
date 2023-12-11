@@ -40,7 +40,7 @@ function ServiceCard({
                         transform transition duration-200 ease-in-out
                         border-4 border-transparent rounded-lg
                         hover:border-gray-400 dark:hover:border-gray-600
-                        h-full sm:h-[24rem] lg:h-[30rem] w-full
+                        h-full sm:h-[28rem] lg:h-[30rem] w-full
                     "
                 >
                     <Image

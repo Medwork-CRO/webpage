@@ -1,9 +1,12 @@
 import Logo from "@/components/Logo";
 import RoundedButton from "@/components/RoundedButton";
 import { THEME } from "@/types/Theme";
+import TUV_27001 from "@assets/certificates/TUV_hellas_iso27001.webp";
+import TUV_9001 from "@assets/certificates/TUV_hellas_iso9001.webp";
 import { FaLinkedin } from "@react-icons/all-files/fa/FaLinkedin";
 import { MdEmail } from "@react-icons/all-files/md/MdEmail";
 import { MdLocationOn } from "@react-icons/all-files/md/MdLocationOn";
+import Image from "next/image";
 import Link from "next/link";
 import { ReactElement } from "react";
 import { MdDarkMode, MdLightMode, MdOutlineBrightnessAuto } from "react-icons/md";
@@ -150,6 +153,18 @@ function Legal() {
 function Information() {
     return (
         <div className="flex flex-col items-start gap-4 text-xl sm:text-lg text-medwork-dark dark:text-medwork-light">
+            <div className="flex flex-row gap-4">
+                <Image
+                    src={TUV_9001}
+                    className="h-24 w-24 sm:h-32 sm:w-32 object-cover"
+                    alt="TUV Certificate of ISO 9001"
+                />
+                <Image
+                    src={TUV_27001}
+                    className="h-24 w-24 sm:h-32 sm:w-32 object-cover"
+                    alt="TUV Certificate of ISO 27001"
+                />
+            </div>
             <Link
                 className="font-ultralight narrow-letters hover:underline focus-visible:underline whitespace-nowrap"
                 href={"/about-us/legislation"}
