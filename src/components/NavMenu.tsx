@@ -42,12 +42,11 @@ function HorizontalNav({ label, href, subCategories }: NavProp) {
     };
 
     return (
-        <div className="relative py-2" ref={menuRef} onBlur={handleBlur}>
+        <div className="relative py-2 text-gray-600 dark:text-gray-400" ref={menuRef} onBlur={handleBlur}>
             {hasSubCategories &&
             <div tabIndex={0} className={`
                 peer flex items-center py-2 font-normal narrow-letters
-                text-xl text-gray-600 dark:text-gray-400
-                hover:text-blue-500 focus-visible:text-blue-500
+                text-xl hover:text-blue-500 focus-visible:text-blue-500
                 border-b-2 ${activeClasses}
                 `}
             onKeyDown={hasSubCategories ? handleKeyDown : undefined}
@@ -60,8 +59,7 @@ function HorizontalNav({ label, href, subCategories }: NavProp) {
                     tabIndex={0}
                     className={`
                         peer flex items-center py-2 font-normal narrow-letters
-                        text-xl text-gray-600 dark:text-gray-400
-                        hover:text-blue-500 focus-visible:text-blue-500
+                        text-xl hover:text-blue-500 focus-visible:text-blue-500
                         border-b-2 ${activeClasses}
                     `}
                     key={href}
@@ -77,7 +75,6 @@ function HorizontalNav({ label, href, subCategories }: NavProp) {
                     shadow-2xl drop-shadow-lg
                     text-lg font-normal narrow-letters
                     border border-gray-300 dark:border-gray-400
-                    text-gray-600 dark:text-gray-400
                     bg-medwork-light dark:bg-medwork-dark
                 "
                 onMouseEnter={() => setIsOpen(true)}
@@ -91,7 +88,7 @@ function HorizontalNav({ label, href, subCategories }: NavProp) {
                                 px-4 py-4 text-lg
                                 hover:text-blue-500 focus-visible:text-blue-500
                                 focus-visible:bg-[#eae4dd] dark:focus-visible:bg-gray-500
-                                ${router.asPath === subCategory.href ? "border-l-2 border-blue-500" : ""}
+                                ${router.asPath === subCategory.href ? "border-l-[3px] border-blue-500" : ""}
                                 ${i === 0 ? "rounded-t-sm" : ""}
                                 ${i === subCategories.length - 1 ? "rounded-b-sm" : ""}`}
                             key={subCategory.href}
@@ -114,7 +111,12 @@ function NavMenu(navMenu: NavMenuProp) {
         >
             <a
                 href="#main-content"
-                className="sr-only focus:not-sr-only absolute top-0 left-0 m-4 p-2 z-50 bg-medwork-dark text-medwork-light dark:bg-medwork-light dark:text-medwork-dark"
+                className="
+                    sr-only focus:not-sr-only absolute top-0 left-0
+                    m-4 p-2 z-50
+                    bg-medwork-dark text-medwork-light
+                    dark:bg-medwork-light dark:text-medwork-dark
+                "
             >
                 Skip to Main Content
             </a>

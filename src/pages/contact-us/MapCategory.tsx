@@ -88,10 +88,10 @@ function getCompanyInfo() {
     return (
         <div className="font-semibold text-xl text-left">
             <div className="
-                flex flex-col w-full max-w-[360px] justify-start gap-4 rounded-lg
+                flex flex-col w-full md:max-w-[400px] justify-start gap-4 rounded-md
                 sm:bg-medwork-light sm:dark:bg-medwork-dark sm:bg-opacity-95
                 border border-medwork-dark dark:border-medwork-light
-                p-6
+                p-8
             ">
                 {getContact("(+30) 210 9960971", "+302109960971", ContactType.Phone)}
                 {getContact("(+30) 210 9969578", "+302109969578", ContactType.Fax)}
@@ -108,7 +108,7 @@ function MapCategory({
 }: MapCategoryProps) {
     return (
         <>
-            <div className="hidden sm:block w-full">
+            <div className="hidden md:block w-full">
                 <div className="flex flex-col md:flex-row h-[100vh] relative">
                     {getIFrame(location)}
                     {/* <div className="absolute inset-0 z-10 bg-gradient-to-r from-medwork-light dark:from-medwork-dark via-transparent to-transparent"></div>
@@ -124,8 +124,7 @@ function MapCategory({
                 </div>
             </div>
 
-
-            <div className="grid grid-cols-1 md:grid-cols-2 sm:hidden w-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 md:hidden w-full">
                 <div className="relative">
                     <div className="absolute inset-0 from-medwork-light dark:from-medwork-dark to-transparent bg-gradient-to-t"></div>
                     <div className="relative w-full z-10 float-left p-4">
