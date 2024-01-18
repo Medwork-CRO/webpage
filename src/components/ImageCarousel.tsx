@@ -1,12 +1,12 @@
-import { useEffect, useState } from "react";
 import Image, { StaticImageData } from "next/image";
+import { useEffect, useState } from "react";
 
 type ImageShowCaseProps = {
   image: StaticImageData;
   title?: string;
 };
 
-function CarouselImage({ image, title }: ImageShowCaseProps) {
+function ImageCarousel({ image, title }: ImageShowCaseProps) {
     const [lastScrollTop, setLastScrollTop] = useState(0);
 
     useEffect(() => {
@@ -62,4 +62,4 @@ function CarouselImage({ image, title }: ImageShowCaseProps) {
     );
 }
 
-export default CarouselImage;
+export default ImageCarousel;

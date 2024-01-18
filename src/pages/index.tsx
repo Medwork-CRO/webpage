@@ -1,5 +1,5 @@
 import Carousel from "@/components/Carousel";
-import CarouselImage from "@/components/CarouselImage";
+import ImageCarousel from "@/components/ImageCarousel";
 import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ProvidedServices from "@/components/ProvidedServices";
 import Statistics from "@/components/Statistics";
@@ -34,7 +34,7 @@ function Home() {
         <div className="mx-auto flex flex-col items-center justify-between w-full">
             <Carousel title={carouselTitle} loop={true}>
                 {imageShowCases.map((imageShowCase, i) => (
-                    <CarouselImage
+                    <ImageCarousel
                         key={i}
                         image={imageShowCase.image}
                         title={imageShowCase.title}
