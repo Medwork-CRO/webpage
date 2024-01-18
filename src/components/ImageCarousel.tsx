@@ -1,5 +1,5 @@
-import Image, { StaticImageData } from "next/image";
 import { useEffect, useState } from "react";
+import Image, { StaticImageData } from "next/image";
 
 type ImageShowCaseProps = {
   image: StaticImageData;
@@ -41,10 +41,10 @@ function ImageCarousel({ image, title }: ImageShowCaseProps) {
     }, [lastScrollTop]);
 
     return (
-        <div className="relative flex flex-col md:flex-row h-[85vh] flex-[0_0_100%] motion-safe:animate-fadeIn">
+        <div className="relative flex flex-col md:flex-row h-[50vh] flex-[0_0_100%] motion-safe:animate-fadeIn justify-center">
             <Image
                 src={image}
-                className="h-full min-w-full object-cover"
+                className="h-full max-w-[1200px] object-cover"
                 alt="alt"
             />
 
