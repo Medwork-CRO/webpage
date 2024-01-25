@@ -1,7 +1,7 @@
-import { MdExpandMore } from "react-icons/md";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useRef, useState } from "react";
+import { MdExpandMore } from "react-icons/md";
 
 export type NavProp = {
   label: string;
@@ -112,8 +112,8 @@ function NavMenu(navMenu: NavMenuProp) {
             <a
                 href="#main-content"
                 className="
-                    sr-only focus:not-sr-only absolute top-0 left-0
-                    m-4 p-2 z-50
+                    sr-only focus:not-sr-only
+                    absolute top-0 left-0 m-4 p-2 z-50
                     bg-medwork-dark text-medwork-light
                     dark:bg-medwork-light dark:text-medwork-dark
                 "

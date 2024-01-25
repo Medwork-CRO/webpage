@@ -2,7 +2,7 @@ import Breadcrumbs from "@/components/Breadcrumb";
 import ImageCategory from "@/components/ImageCategory";
 import InfoBoxMatrix from "@/components/InfoBoxMatrix";
 import LeadingParagraphs from "@/components/LeadingParagraphs";
-import safety from "@assets/teams/pv/IMG_9134 2@2x.webp";
+import safety from "@assets/stock-images/Safety.jpg";
 
 // const paragraphsOld = [
 //     "Medwork is dedicated to supporting Marketing Authorisation Holders in fulfilling their pharmacovigilance obligations. With over 15 years of experience in different facets of pharmacovigilance, our team possesses a wealth of knowledge and a comprehensive understanding of the intricacies involved in ensuring drug safety.",
@@ -11,7 +11,7 @@ const paragraphs = [
     "Medwork is dedicated to supporting marketing authorisation holders and medical device manufacturers in fulfilling their vigilance obligations. With over 15 years of experience across various aspects of vigilance, our team possesses a wealth of knowledge and a comprehensive understanding of the complexities involved in ensuring the safety of medicines and medical devices.",
 ];
 
-const infoBoxes = [
+export const infoBoxes = [
     {
         title: "PV System & QPPV",
         text: "We establish and maintain robust pharmacovigilance systems. Our team of experienced EU qualified persons for pharmacovigilance, guarantees the effective management of your drug safety affairs and ensures strict regulatory compliance.",

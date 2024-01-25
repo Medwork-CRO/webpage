@@ -30,17 +30,17 @@ const policies = [
         fileName: "code-of-conduct.pdf",
     },
     {
-        label: "Information Security Policy",
+        label: "Information Security",
         filePath: "/pdfs",
         fileName: "information-security-policy.pdf",
     },
     {
-        label: "Data Privacy Policy",
+        label: "Data Privacy",
         filePath: "/pdfs",
         fileName: "data-privacy-policy.pdf",
     },
     {
-        label: "Quality Policy",
+        label: "Quality",
         filePath: "/pdfs",
         fileName: "quality-policy.pdf",
     },
@@ -128,23 +128,21 @@ function CompanyContact() {
 
 function Legal() {
     return (
-        <div className="flex flex-col sm:flex-row flex-wrap items-start sm:self-end gap-2 text-xl sm:text-lg font-light narrow-letters text-gray-400">
+        <div className="flex flex-wrap justify-start md:justify-end gap-4 w-full sm:self-end text-xl sm:text-md font-light narrow-letters text-gray-400">
             <span>2005 - {new Date().getFullYear()} © Medwork</span>
-            <span className="flex flex-col sm:flex-row gap-2">
-                <span className="hidden sm:block">|</span>
-                <span>All Rights Reserved</span>
-                <span className="hidden sm:block">|</span>
-                <span>
-                    Made by{" "}
-                    <a
-                        className="font-semibold narrow-letters"
-                        href="https://github.com/keybraker"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Keybraker
-                    </a>
-                </span>
+            <span className="hidden sm:block">|</span>
+            <span>All Rights Reserved</span>
+            <span className="hidden sm:block">|</span>
+            <span>
+                Made by{" "}
+                <a
+                    className="font-semibold narrow-letters"
+                    href="https://github.com/keybraker"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+            Keybraker
+                </a>
             </span>
         </div>
     );
@@ -152,16 +150,16 @@ function Legal() {
 
 function Information() {
     return (
-        <div className="flex flex-col items-start gap-4 text-xl sm:text-lg text-medwork-dark dark:text-medwork-light">
+        <div className="flex flex-col justify-start gap-4 text-xl sm:text-lg narrow-letters text-medwork-dark dark:text-medwork-light">
             <div className="flex flex-row gap-4">
                 <Image
                     src={TUV_9001}
-                    className="h-24 w-24 sm:h-32 sm:w-32 object-cover"
+                    className="h-32 w-32 sm:h-36 sm:w-36 object-cover"
                     alt="TUV Certificate of ISO 9001"
                 />
                 <Image
                     src={TUV_27001}
-                    className="h-24 w-24 sm:h-32 sm:w-32 object-cover"
+                    className="h-32 w-32 sm:h-36 sm:w-36 object-cover"
                     alt="TUV Certificate of ISO 27001"
                 />
             </div>
@@ -171,7 +169,7 @@ function Information() {
             >
                 Legislation
             </Link>
-            <div className="flex flex-col sm:flex-row flex-wrap items-start">
+            <div className="flex flex-col sm:flex-row flex-wrap items-start text-xl sm:text-md">
                 {policies.map((policy, i) => (
                     <span key={i} className="flex flex-row">
                         <Link
@@ -304,7 +302,7 @@ function Footer({ theme, setTheme }: ThemeSelectorProps) {
                         <CompanyContact />
                     </div>
                 </div>
-                <div className="flex flex-col md:flex-row justify-between gap-8 items-start pb-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 justify-between gap-8 items-start pb-8">
                     <Information />
                     <Legal />
                 </div>
