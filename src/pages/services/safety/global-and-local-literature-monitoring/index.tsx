@@ -58,7 +58,7 @@ const showcases2 = [
     },
     {
         title: "Extensive Trust",
-        point: "Over 70 MAHs rely on us for screening over 1,000 APIs, attesting to our service&apos;s reliability."
+        point: "Over 70 MAHs rely on us for screening over 1,000 APIs, attesting to our service' reliability."
     },
     {
         title: "Holistic Recording",

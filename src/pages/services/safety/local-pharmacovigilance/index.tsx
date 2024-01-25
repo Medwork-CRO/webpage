@@ -13,7 +13,7 @@ const title = "Our Core Strengths";
 const showcases = [
     {
         title: "Customized PV Systems",
-        point: "We design and implement local PV systems that align with the client&apos;s operations, ensuring seamless integration and compliance with local regulations."
+        point: "We design and implement local PV systems that align with the client' operations, ensuring seamless integration and compliance with local regulations."
     },
     {
         title: "Expert LPPVs",
@@ -21,7 +21,7 @@ const showcases = [
     },
     {
         title: "Adaptive Systems and Databases",
-        point: "Our experts adapt and utilize client&apos;s existing systems and databases, optimizing processes for peak efficiency and convenience."
+        point: "Our experts adapt and utilize client' existing systems and databases, optimizing processes for peak efficiency and convenience."
     },
     {
         title: "Tailored Compliance",
@@ -33,7 +33,7 @@ const showcases = [
     },
     {
         title: "Local Expertise",
-        point: "Clients can leverage our local affiliate&apos;s knowledge of regional regulations and practices to ensure smooth operations and timely submissions."
+        point: "Clients can leverage our local affiliate' knowledge of regional regulations and practices to ensure smooth operations and timely submissions."
     },
 ];
 
