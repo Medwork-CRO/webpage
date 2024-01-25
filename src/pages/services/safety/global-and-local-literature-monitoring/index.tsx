@@ -2,7 +2,7 @@ import Breadcrumbs from "@/components/Breadcrumb";
 import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ImageCategory from "@/components/ImageCategory";
 import Showcasing from "@/components/Showcasing";
-import safety from "@assets/services/safety-vector.jpg";
+import safety from "@assets/stock-images/Safety.jpg";
 
 const paragraph1 = [
     "Global MLM",

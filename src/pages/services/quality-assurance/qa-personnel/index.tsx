@@ -2,7 +2,7 @@ import Breadcrumbs from "@/components/Breadcrumb";
 import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ImageCategory from "@/components/ImageCategory";
 import Showcasing from "@/components/Showcasing";
-import safety from "@assets/services/safety-vector.jpg";
+import qualityAssurance from "@assets/stock-images/Quality Assurance.jpg";
 
 // const paragraphs = ["At Medwork, we specialize in the comprehensive development, enhancement, and vigilant monitoring of your Quality Management System (QMS) to ensure alignment with industry standards and regulations."];
 
@@ -35,7 +35,7 @@ const showcases = [
 function CaseProcessing() {
     return (
         <div className="mx-auto flex flex-col items-center justify-between w-full">
-            <ImageCategory image={safety} title="QA PERSONNEL" />
+            <ImageCategory image={qualityAssurance} title="QA PERSONNEL" />
 
             <div id="main-content" className="max-w-[1200px] w-full items-left whitespace-pre-line flex flex-col">
                 <Breadcrumbs />

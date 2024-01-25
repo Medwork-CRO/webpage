@@ -4,7 +4,8 @@ import ImageCategory from "@/components/ImageCategory";
 import RoundedButtonExternal, { ButtonType } from "@/components/RoundedButtonExternal";
 import Showcasing from "@/components/Showcasing";
 import Title from "@/components/Title";
-import careers from "@assets/services/careers.webp";
+// import careers from "@assets/services/careers.webp";
+import careers from "@assets/badimages/Careers.jpg";
 
 const paragraphs = [
     "Embark on an exciting journey with Medwork, where you can jump-start your career in a thriving industry with endless possibilities. We take pride in being the perfect organization for aspiring professionals entering a field with vast opportunities. Join us and let your career take off!"

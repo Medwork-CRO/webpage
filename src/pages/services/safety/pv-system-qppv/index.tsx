@@ -2,8 +2,7 @@ import Breadcrumbs from "@/components/Breadcrumb";
 import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ImageCategory from "@/components/ImageCategory";
 import Showcasing from "@/components/Showcasing";
-import vigilance from "@assets/services/safety-vector.jpg";
-// import full_pv_team from "@assets/teams/full_pv/IMG_9289.jpg";
+import safety from "@assets/stock-images/Safety.jpg";
 
 const paragraphs = [
     "Enhancing Pharmacovigilance Outcomes: PV Systems and QPPV Services",
@@ -37,7 +36,7 @@ const showcases = [
 function Vigilance() {
     return (
         <div className="mx-auto flex flex-col items-center justify-between w-full">
-            <ImageCategory image={vigilance} title="PV SYSTEM & QPPV" />
+            <ImageCategory image={safety} title="PV SYSTEM & QPPV" />
 
             <div id="main-content" className="max-w-[1200px] w-full items-left whitespace-pre-line flex flex-col">
                 <Breadcrumbs />

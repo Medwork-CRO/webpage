@@ -2,7 +2,7 @@ import Breadcrumbs from "@/components/Breadcrumb";
 import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ImageCategory from "@/components/ImageCategory";
 import Showcasing from "@/components/Showcasing";
-import safety from "@assets/services/safety-vector.jpg";
+import safety from "@assets/stock-images/Safety.jpg";
 
 const paragraph1 = [
     "Drawing from our extensive 15-year journey in pharmacovigilance, we are proud to extend our expertise into the realm of medical device vigilance. This step represents a natural progression of our steadfast commitment to safety, as we apply the same rigorous principle and resolute mindset to medical devices that have defined our legacy in pharmacovigilance.",
