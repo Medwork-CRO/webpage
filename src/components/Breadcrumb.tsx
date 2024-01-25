@@ -8,7 +8,7 @@ import { InfoBoxAttributes } from "./InfoBoxMatrix";
 
 const SERVICES = ["safety", "quality-assurance"];
 
-function SafetyServices(service: string) {
+function servicesPerCategory(service: string) {
     let infoBoxes: InfoBoxAttributes[] = [];
 
     if (service === "safety") {
@@ -20,7 +20,7 @@ function SafetyServices(service: string) {
     return infoBoxes.map((infoBox, i) => {
         return (
             <React.Fragment key={i}>
-                <div>
+                <div className="mt-2">
                     <Link
                         href={infoBox.link}
                         className="text-blue-500 hover:text-blue-400 hover:underline"
@@ -75,7 +75,7 @@ const Breadcrumbs = () => {
     let pathNames = ["home"].concat(pathname.split("/").filter(x => !!x));
     const paths = pathNames.map((_name: string, idx) => "/" + pathNames.slice(0, idx + 1).join("/"));
     pathNames = pathNames.map(pathBeautifier);
-    console.log("pathNames :>> ", pathNames);
+
     return (
         <div className="
             inline-flex px-4 sm:px-6 lg:px-0 space-x-2
@@ -100,7 +100,7 @@ const Breadcrumbs = () => {
                                     >
                                         {formatBreadcrumb(crumb)}
                                     </Link>
-                                    {SERVICES.includes(crumb) && <MdExpandMore className="ml-2 "/>}
+                                    {SERVICES.includes(crumb) && <MdExpandMore className="ml-1"/>}
                                 </div>
                                 {SERVICES.includes(crumb) && <div className="
                                     hidden group-hover/item:block z-50 absolute
@@ -108,7 +108,7 @@ const Breadcrumbs = () => {
                                     bg-medwork-light dark:bg-medwork-dark
                                     p-4 rounded-md shadow-2xl drop-shadow-lg
                                 ">
-                                    {SafetyServices(crumb)}
+                                    {servicesPerCategory(crumb)}
                                 </div>}
                             </div>
                             <span>/</span>
