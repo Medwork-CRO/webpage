@@ -128,7 +128,7 @@ function CompanyContact() {
 
 function Legal() {
     return (
-        <div className="flex flex-wrap justify-start md:justify-end gap-4 w-full sm:self-end text-xl sm:text-md font-light narrow-letters text-gray-400">
+        <div className="flex flex-col sm:flex-row flex-wrap justify-start md:justify-end gap-4 w-full sm:self-end text-xl sm:text-md font-light narrow-letters text-gray-400">
             <span>2005 - {new Date().getFullYear()} © Medwork</span>
             <span className="hidden sm:block">|</span>
             <span>All Rights Reserved</span>
@@ -169,7 +169,7 @@ function Information() {
             >
                 Legislation
             </Link>
-            <div className="flex flex-col sm:flex-row flex-wrap items-start text-xl sm:text-md">
+            <div className="flex flex-col sm:flex-row flex-wrap items-start text-xl sm:text-md gap-4">
                 {policies.map((policy, i) => (
                     <span key={i} className="flex flex-row">
                         <Link
@@ -181,7 +181,7 @@ function Information() {
                         >
                             {policy.label}
                         </Link>
-                        <span className="hidden sm:block mx-2">
+                        <span className="hidden sm:block ml-4">
                             {policies.length - 1 !== i ? "|" : ""}
                         </span>
                     </span>

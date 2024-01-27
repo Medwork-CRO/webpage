@@ -116,7 +116,7 @@ const Breadcrumbs = () => {
                         <div className="group/item">
                             <div className="flex flex-row items-center">
                                 <div>{formatBreadcrumb(crumb)}</div>
-                                {crumb === "services" && <MdExpandMore className="ml-1"/>}
+                                {crumb === "services" ? <MdExpandMore className="ml-1"/> : <span className="ml-1"></span>}
                                 <span>/</span>
                             </div>
                             {crumb === "services" && services()}
