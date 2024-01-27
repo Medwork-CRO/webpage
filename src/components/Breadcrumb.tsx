@@ -8,29 +8,56 @@ import { InfoBoxAttributes } from "./InfoBoxMatrix";
 
 const SERVICES = ["safety", "quality-assurance"];
 
+function hoverList(list: {link: string, title: string}[]) {
+    return (<div className="
+        hidden group-hover/item:block z-50 absolute
+        border border-gray-300 dark:border-gray-600
+        bg-medwork-light dark:bg-medwork-dark
+        p-4 rounded-md shadow-2xl drop-shadow-lg
+    ">
+        <div className="flex flex-col gap-2">
+            {list.map((item, i) => {
+                console.log("item.title :>> ", item.title);
+                return (
+                    <React.Fragment key={i}>
+                        <Link
+                            href={item.link}
+                            className="hover:text-blue-400"
+                        >
+                            {item.title}
+                        </Link>
+                    </React.Fragment>
+                );
+            })}
+        </div>
+    </div>);
+}
+
 function servicesPerCategory(service: string) {
     let infoBoxes: InfoBoxAttributes[] = [];
 
-    if (service === "safety") {
+    if (service === SERVICES[0]) {
         infoBoxes = safetyInfoBoxes;
-    } else if (service === "quality-assurance") {
+    } else if (service === SERVICES[1]) {
         infoBoxes = qualityAssuranceInfoBoxes;
     }
 
-    return infoBoxes.map((infoBox, i) => {
-        return (
-            <React.Fragment key={i}>
-                <div className="mt-2">
-                    <Link
-                        href={infoBox.link}
-                        className="text-blue-500 hover:text-blue-400 hover:underline"
-                    >
-                        {infoBox.title}
-                    </Link>
-                </div>
-            </React.Fragment>
-        );
-    });
+    return hoverList(infoBoxes);
+}
+
+function services() {
+    const list: {link: string, title: string}[] = [{
+        link: "/services/safety",
+        title: "Safety",
+    },{
+        link: "/services/quality-assurance",
+        title: "Quality Assurance",
+    },{
+        link: "/services/outsourcing",
+        title: "Outsourcing",
+    }];
+
+    return hoverList(list);
 }
 
 function formatBreadcrumb(input: string) {
@@ -78,7 +105,7 @@ const Breadcrumbs = () => {
 
     return (
         <div className="
-            inline-flex px-4 sm:px-6 lg:px-0 space-x-2
+            inline-flex px-4 pb-2  mb-4 sm:px-6 lg:px-0 space-x-2
             text-gray-600 dark:text-gray-300 md:text-lg text-base
         ">
             {pathNames.map((crumb, i) => {
@@ -86,8 +113,14 @@ const Breadcrumbs = () => {
                     return <div key={i}>{formatBreadcrumb(crumb)}</div>;
                 } else if (!pathSanitisation(paths[i]).valid) {
                     return  <React.Fragment key={i}>
-                        <div>{formatBreadcrumb(crumb)}</div>
-                        <span>/</span>
+                        <div className="group/item">
+                            <div className="flex flex-row items-center">
+                                <div>{formatBreadcrumb(crumb)}</div>
+                                {crumb === "services" && <MdExpandMore className="ml-1"/>}
+                                <span>/</span>
+                            </div>
+                            {crumb === "services" && services()}
+                        </div>
                     </React.Fragment>;
                 } else {
                     return (
@@ -96,20 +129,13 @@ const Breadcrumbs = () => {
                                 <div className="flex flex-row items-center">
                                     <Link
                                         href={pathSanitisation(paths[i]).path}
-                                        className="text-blue-500 hover:text-blue-400 hover:underline"
+                                        className="hover:text-blue-400"
                                     >
                                         {formatBreadcrumb(crumb)}
                                     </Link>
                                     {SERVICES.includes(crumb) && <MdExpandMore className="ml-1"/>}
                                 </div>
-                                {SERVICES.includes(crumb) && <div className="
-                                    hidden group-hover/item:block z-50 absolute
-                                    border border-gray-300 dark:border-gray-400
-                                    bg-medwork-light dark:bg-medwork-dark
-                                    p-4 rounded-md shadow-2xl drop-shadow-lg
-                                ">
-                                    {servicesPerCategory(crumb)}
-                                </div>}
+                                {SERVICES.includes(crumb) && servicesPerCategory(crumb)}
                             </div>
                             <span>/</span>
                         </React.Fragment>
