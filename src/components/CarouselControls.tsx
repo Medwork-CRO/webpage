@@ -9,7 +9,7 @@ type Props = {
 
 function CarouselControls(props: Props) {
     return (
-        <div className='sm:hidden group-hover:block w-1/2'>
+        <div className='sm:hidden group-hover:block w-full'>
             <div className="flex justify-between items-center">
                 {props.canScrollPrev ? (
                     <button
