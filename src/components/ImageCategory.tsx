@@ -16,7 +16,7 @@ function ImageCategory({
         <div className="relative flex flex-col md:flex-row] h-[50vh] flex-[0_0_100%] motion-safe:animate-fadeIn justify-center">
             <Image
                 src={image}
-                className="h-full w-full max-w-[1200px] object-cover rounded-xl"
+                className="h-full w-full max-w-[1200px] object-cover eq:rounded-xl"
                 alt="alt"
             />
 
