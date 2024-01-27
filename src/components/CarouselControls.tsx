@@ -9,8 +9,8 @@ type Props = {
 
 function CarouselControls(props: Props) {
     return (
-        <div className='sm:hidden group-hover:block w-full'>
-            <div className="flex w-full justify-between items-center gap-2">
+        <div className='sm:hidden group-hover:block w-1/2'>
+            <div className="flex justify-between items-center">
                 {props.canScrollPrev ? (
                     <button
                         id="next-image"
@@ -38,8 +38,7 @@ function CarouselControls(props: Props) {
                     </button>
                 ) : (
                     <div className='w-10 h-10 mr-4'></div>
-                )
-                }
+                )}
             </div>
         </div>
     );
