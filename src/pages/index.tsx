@@ -51,7 +51,7 @@ const introParagraph = [
 
 function Home() {
     return (
-        <div className="mx-auto flex flex-col items-center justify-between w-full">
+        <div className="max-w-[1200px] mx-auto flex flex-col items-center justify-between w-full">
             <Carousel title={carouselTitle} loop={true}>
                 {imageShowCases.map((imageShowCase, i) => (
                     <ImageCarousel
@@ -62,7 +62,7 @@ function Home() {
                 ))}
             </Carousel>
 
-            <div id="main-content" className="max-w-[1200px] w-full items-left whitespace-pre-line flex flex-col">
+            <div id="main-content" className="w-full items-left whitespace-pre-line flex flex-col">
                 <div className="flex flex-col gap-20 sm:gap-24 md:gap-28 px-4 sm:px-6 eq:px-0 py-16">
                     <DisplayParagraphs withLead={true} paragraphs={introParagraph} />
                     <Statistics Stats={statistics}/>

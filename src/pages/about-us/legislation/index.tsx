@@ -12,14 +12,14 @@ const paragraphs = [
 
 function AboutUs() {
     return (
-        <div className="mx-auto flex flex-col items-center justify-between w-full">
+        <div className="max-w-[1200px] mx-auto flex flex-col items-center justify-between w-full">
             <ImageCategory
                 image={legislation}
                 title="Legislation"
                 description=""
             />
 
-            <div id="main-content" className="max-w-[1200px] w-full items-left whitespace-pre-line flex flex-col">
+            <div id="main-content" className="w-full items-left whitespace-pre-line flex flex-col">
                 <Breadcrumbs />
 
                 <div className="flex flex-col gap-6 whitespace-pre-line px-4 sm:px-6 text-xl text-gray-500 dark:text-gray-400 eq:px-0 py-16">

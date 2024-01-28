@@ -14,14 +14,14 @@ const paragraphs = [
 
 function Training() {
     return (
-        <div className="mx-auto flex flex-col items-center justify-between w-full">
+        <div className="max-w-[1200px] mx-auto flex flex-col items-center justify-between w-full">
             <ImageCategory
                 image={training}
                 title="Training"
                 description="Medwork provides a comprehensive and customizable set of services to assist cosmetics companies in complying with the regulatory directives."
             />
 
-            <div id="main-content" className="max-w-[1200px] w-full items-left whitespace-pre-line flex flex-col">
+            <div id="main-content" className="w-full items-left whitespace-pre-line flex flex-col">
                 <Breadcrumbs />
                 <div className="flex flex-col gap-20 sm:gap-24 md:gap-28 px-4 sm:px-6 eq:px-0 py-16">
                     <DisplayParagraphs withLead={false} paragraphs={paragraphs} />
