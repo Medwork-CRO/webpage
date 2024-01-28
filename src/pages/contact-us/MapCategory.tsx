@@ -117,7 +117,7 @@ function MapCategory({
                     <div className="absolute inset-0 z-10 bg-gradient-to-b from-medwork-light dark:from-medwork-dark via-transparent to-transparent"></div>
 
                     <div className="absolute top-1/2 z-10 -translate-y-1/2 transform w-full">
-                        <div className="flex flex-col justify-center gap-8 px-4 md:px-6 lg:px-0 max-w-[1200px] mx-auto">
+                        <div className="flex flex-col justify-center gap-8 px-4 md:px-6 eq:px-0 max-w-[1200px] mx-auto">
                             {getCompanyInfo()}
                         </div>
                     </div>

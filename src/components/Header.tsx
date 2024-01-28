@@ -21,7 +21,7 @@ function Header() {
         <header
             className={"sticky top-0 z-50 w-full font-sans bg-medwork-light dark:bg-medwork-dark transition-all duration-300"} // shadow-sm
         >
-            <div className="mx-auto flex max-w-[1200px] py-2 sm:py-3 px-2 md:px-4 lg:px-0 items-center justify-between">
+            <div className="mx-auto flex max-w-[1200px] py-2 sm:py-3 px-2 md:px-4 eq:px-0 items-center justify-between">
                 <Logo />
                 <button
                     id="hamburger-menu" aria-label="Menu hamburger"

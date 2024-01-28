@@ -28,7 +28,7 @@ function Materiovigilance() {
 
             <div id="main-content" className="max-w-[1200px] w-full items-left whitespace-pre-line flex flex-col">
                 <Breadcrumbs />
-                <div className="flex flex-col gap-20 sm:gap-24 md:gap-28 px-4 sm:px-6 lg:px-0 py-16">
+                <div className="flex flex-col gap-20 sm:gap-24 md:gap-28 px-4 sm:px-6 eq:px-0 py-16">
                     <DisplayParagraphs withLead={false} paragraphs={paragraphs1} />
                     <DisplayParagraphs withLead={false} paragraphs={paragraphs2} />
                 </div>

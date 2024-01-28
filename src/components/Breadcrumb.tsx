@@ -105,7 +105,7 @@ const Breadcrumbs = () => {
 
     return (
         <div className="
-            inline-flex my-4 px-4 pb-2 mb-4 sm:px-6 lg:px-0 space-x-2
+            inline-flex my-4 px-4 pb-2 mb-4 sm:px-6 eq:px-0 space-x-2
             text-gray-600 dark:text-gray-300 md:text-lg text-base
         ">
             {pathNames.map((crumb, i) => {

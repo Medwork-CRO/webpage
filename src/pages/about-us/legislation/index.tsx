@@ -22,7 +22,7 @@ function AboutUs() {
             <div id="main-content" className="max-w-[1200px] w-full items-left whitespace-pre-line flex flex-col">
                 <Breadcrumbs />
 
-                <div className="flex flex-col gap-6 whitespace-pre-line px-4 sm:px-6 text-xl text-gray-500 dark:text-gray-400 lg:px-0 py-16">
+                <div className="flex flex-col gap-6 whitespace-pre-line px-4 sm:px-6 text-xl text-gray-500 dark:text-gray-400 eq:px-0 py-16">
                     <DisplayParagraphs withLead={false} paragraphs={paragraphs} />
                     <LegislationTabs />
                 </div>
