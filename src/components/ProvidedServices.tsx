@@ -26,14 +26,14 @@ const images: ImageData[] = [
         imageTitle: "QUALITY ASSURANCE",
         readMoreLink: "/services/quality-assurance",
         imageDescription:
-      "Our Quality Assurance service is designed to help organizations maintain and exceed industry standards of quality and compliance. We provide comprehensive quality systems, audits, and continuous improvement strategies.",
+      "Our Quality Assurance service is designed to help organizations maintain and exceed industry standards of quality and compliance. We provide comprehensive quality systems, conduct audits, and implement continuous improvement strategies to ensure a high level of proficiency in your operations.",
     },
     {
         imageData: outsourcing,
         imageTitle: "OUTSOURCING",
         readMoreLink: "/services/outsourcing",
         imageDescription:
-      "Outsourcing is our service designed to help organizations manage their pharmacovigilance and regulatory affairs needs. We provide comprehensive outsourcing solutions tailored to your organization needs.",
+      "Our Outsourcing service is specifically crafted to assist organizations in handling their pharmacovigilance requirements for both temporary and long-term staffing. We offer tailored and comprehensive outsourcing solutions to meet the unique needs of your organization.",
     },
     // {
     //   imageData: cosmetovigilance,

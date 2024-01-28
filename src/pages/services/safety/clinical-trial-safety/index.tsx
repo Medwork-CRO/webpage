@@ -5,18 +5,18 @@ import Showcasing from "@/components/Showcasing";
 import safety from "@assets/stock-images/Safety.jpg";
 
 const paragraph = [
-    "Navigating the realm of clinical trials safety requires diligence and expertise. While we might not boast extensive experience, our dedication to excellence remains unwavering. Discover how we bring a fresh perspective and commitment to your clinical trials safety needs.",
+    "Navigating the realm of clinical trial safety requires diligence and expertise. Although we might not boast extensive experience, our dedication to excellence remains unwavering. Discover how we bring a fresh perspective and commitment to your clinical trial safety needs.",
 ];
 
 const title = "Our Core Strengths";
 const showcases = [
     {
         title: "Focused Approach",
-        point: "Despite our relatively young presence, our focus on clinical trials safety is steadfast. We approach each project with an eagerness to learn and a dedication to delivering results.",
+        point: "Despite our relatively young presence, our focus on clinical trial safety is steadfast. We approach each project with an eagerness to learn and a dedication to delivering results.",
     },
     {
         title: "Collaborative Adaptation",
-        point: "We understand the unique demands of clinical trials safety. By collaborating closely with your team, we tailor our approach to meet your specific requirements.",
+        point: "We understand the unique demands of clinical trial safety. By collaborating closely with your team, we tailor our approach to meet your specific requirements.",
     },
     {
         title: "Growing experience",

@@ -5,32 +5,32 @@ import Showcasing from "@/components/Showcasing";
 import safety from "@assets/stock-images/Safety.jpg";
 
 const paragraph1 = [
-    "Global MLM",
-    "Unlock a mature system supported by an experienced team with our Global Literature Monitoring service. Our deep expertise and client-centric approach redefine maximal accuracy, consistency, compliance and well designed and executed processes.",
+    "Global and Local Medical Literature Monitoring",
+    "Unlock a mature system supported by an experienced team with our global literature screening service. Our deep expertise and client-centric approach redefine maximal accuracy, consistency, compliance, and well-designed and well-executed processes.",
 ];
 
 const paragraph2 = [
     "Local MLM",
-    "Elevate your pharmacovigilance strategy with our exceptional Local Literature Monitoring services. Our process ensures accuracy and thoroughness in identifying crucial safety information.",
+    "Elevate your pharmacovigilance strategy with our exceptional local medical literature review services. Our process ensures accuracy and thoroughness in identifying crucial safety information.",
 ];
 
 const title = "Our Core Strengths";
 const showcases = [
     {
         title: "Profound Expertise",
-        point: "Our team's extensive experience, bolstered by continuous training and knowledge sharing among members, ensures meticulous scrutiny of safety data.",
+        point: "Our team's extensive experience, bolstered by continuous training and knowledge-sharing among members, ensures meticulous scrutiny of safety data.",
     },
     {
         title: "Tailored Adaptability",
-        point: "We customise our service to client needs, ensuring seamless alignment with scope, depth, and specific requirements.",
+        point: "We customise our service to your needs, ensuring seamless alignment with scope, depth, and specific requirements.",
     },
     {
         title: "SOP Alignment",
-        point: "Our integration with client Standard Operating Procedures (SOPs) assures compliance and consistency with established protocols.",
+        point: "Our integration with your Standard Operating Procedures (SOPs) assures compliance and consistency with established protocols.",
     },
     {
         title: "Medical Doctor Engagement",
-        point: "Our service benefits from the involvement of Medical Doctors, who offer in-depth medical insights for complex, intricate, or ambiguous cases.",
+        point: "Our service benefits from the involvement of medical doctors, who offer in-depth medical insights for complex, intricate, or ambiguous cases.",
     },
 ];
 
@@ -58,7 +58,7 @@ const showcases2 = [
     },
     {
         title: "Extensive Trust",
-        point: "Over 70 MAHs rely on us for screening over 1,000 APIs, attesting to our service' reliability."
+        point: "Over 70 MAHs rely on us for screening over 1,000 Active Pharmaceutical Ingredients (APIs), attesting to our services reliability."
     },
     {
         title: "Holistic Recording",

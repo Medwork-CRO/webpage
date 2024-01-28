@@ -165,7 +165,7 @@ function Information() {
             </div>
             <Link
                 className="font-ultralight narrow-letters hover:underline focus-visible:underline whitespace-nowrap"
-                href={"/about-us/legislation"}
+                href={"/legislation"}
             >
                 Legislation
             </Link>

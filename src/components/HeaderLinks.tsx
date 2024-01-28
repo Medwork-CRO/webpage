@@ -10,7 +10,7 @@ const AboutUs = {
     //   },
     //   {
     //     label: "Legislation",
-    //     href: "/about-us/legislation",
+    //     href: "/legislation",
     //   },
     // ],
 };

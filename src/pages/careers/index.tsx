@@ -15,7 +15,7 @@ const title = "Why Choose Medwork?";
 const showcases = [
     {
         title: "Investing in Your Growth",
-        point: "We believe in the power of continuous learning and understand the importance of investing in the next generation. Whether you're a recent graduate or someone exploring new horizons, we've got robust training programs to ensure you're well-prepared for the exciting journey ahead."
+        point: "We believe in the power of continuous learning and understand the importance of investing in the next generation. Whether you're a recent graduate or someone exploring new horizons, we've got robust training programmes to ensure you're well-prepared for the exciting journey ahead."
     },
     {
         title: "Prospects for Professional Development",
@@ -23,11 +23,11 @@ const showcases = [
     },
     {
         title: "A Vibrant Community of Young Professionals",
-        point: "Join a company that thrives on the energy and enthusiasm of its young workforce. At Medwork you'll be surrounded by like-minded individuals who share a passion for excellence and making a difference. Collaborate, connect, and celebrate  together in a vibrant community that values fresh perspectives."
+        point: "Join a company that thrives on the energy and enthusiasm of its young workforce. At Medwork, you'll be surrounded by like-minded individuals who share a passion for excellence and making a difference. Collaborate, connect, and celebrate together in a vibrant community that values fresh perspectives."
     },
     {
         title: "Learn from the Best in the Field",
-        point: "At Medwork we believe in learning from the best to become the best. Join our team and become part of the leading pharmacovigilance service provider in Greece."
+        point: "At Medwork, we believe in learning from the best to become the best. Join our team and become part of the leading pharmacovigilance service provider in Greece."
     },
 ];
 

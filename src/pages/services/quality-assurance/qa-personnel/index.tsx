@@ -6,7 +6,7 @@ import qualityAssurance from "@assets/stock-images/Quality Assurance.jpg";
 
 // const paragraphs = ["At Medwork, we specialize in the comprehensive development, enhancement, and vigilant monitoring of your Quality Management System (QMS) to ensure alignment with industry standards and regulations."];
 
-const paragraphs = ["Our local QA experts work closely with your team to oversee and manage the QA aspects of your PV processes"];
+const paragraphs = ["Our local QA experts work closely with your team to oversee and manage the QA aspects of your PV processes."];
 
 const title = "This includes";
 const showcases = [
@@ -16,7 +16,7 @@ const showcases = [
     },
     {
         title: "",
-        point: "Liaise with Global QA personnel",
+        point: "Liaison with global QA personnel",
     },
     {
         title: "",
@@ -28,7 +28,7 @@ const showcases = [
     },
     {
         title: "",
-        point: "Providing ongoing support for continuous improvement",
+        point: "Ongoing support for continuous improvement",
     },
 ];
 

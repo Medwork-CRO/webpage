@@ -3,15 +3,16 @@ import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ImageCategory from "@/components/ImageCategory";
 import LeadingParagraphs from "@/components/LeadingParagraphs";
 import Showcasing from "@/components/Showcasing";
-import outsourcing from "@assets/services/outsourcing-vector.jpg";
+// import outsourcing from "@assets/services/outsourcing-vector.jpg";
+import outsourcing from "@assets/badimages/Outsourcing.jpg";
 
 const introParagraph = [
-    "In today's dynamic and rapidly evolving pharmaceutical landscape, maintaining a robust pharmacovigilance system is imperative for regulatory compliance and patient safety. To help you navigate the complexities of pharmacovigilance seamlessly, we offer strategic personnel outsourcing solutions tailored to meet your specific needs.",
+    "In today's dynamic and rapidly evolving pharmaceutical landscape, maintaining a robust pharmacovigilance system is imperative for regulatory compliance and patient safety. To help you seamlessly navigate the complexities of pharmacovigilance, we offer strategic personnel outsourcing solutions tailored to meet your specific needs.",
 ];
 
 const expertiseParagraph = [
     "Our Expertise",
-    "At Medwork we understand the critical role pharmacovigilance plays in ensuring the safety of pharmaceutical products. Our team comprises highly skilled and experienced professionals with in-depth knowledge of global regulatory requirements and industry best practices. By outsourcing your pharmacovigilance personnel needs to us, you gain access to a dedicated team committed to maintaining the highest standards of drug safety and compliance.",
+    "At Medwork, we understand the critical role pharmacovigilance plays in ensuring the safety of pharmaceutical products. Our team comprises highly skilled and experienced professionals with in-depth knowledge of global regulatory requirements and industry best practices. By outsourcing your pharmacovigilance personnel needs to us, you gain access to a dedicated team committed to maintaining the highest standards of drug safety and compliance.",
 ];
 
 const customSolutionsParagraph = [

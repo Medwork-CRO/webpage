@@ -7,22 +7,22 @@ import Title from "@/components/Title";
 import LeadingParagraphs from "@/components/LeadingParagraphs";
 
 const paragraphs = [
-    "In a world where safety is paramount, Medwork stands out for a dedicated, personalized, and reliable pharmacovigilance experience.",
+    "In a world where safety is paramount, Medwork stands out for offering a dedicated, personalized, and reliable pharmacovigilance experience.",
 ];
 
 const paragraphs2 = [
-    "Devoted to vigilance ",
+    "Devoted to Vigilance",
     "Unlike full service CROs, we are exclusively dedicated to Vigilance. This singular commitment allows us to direct all our efforts, expertise, and resources toward ensuring the utmost quality in our safety services."
 ];
 
 const paragraphs3 = [
-    "Optimal scale for maximum impact",
-    "Striking the perfect balance, Medwork is Large Enough for Specialization and Expertise, yet Small Enough for Personalized Interactions. Our size enables us to host specialized teams with deep pharmacovigilance knowledge, ensuring that we are well-versed in industry standards. Simultaneously, our nimble structure allows us to provide a tailored experience to each client, adapting seamlessly to evolving customer needs.",
+    "Optimal Scale for Maximum Impact",
+    "Striking the perfect balance, Medwork is large enough for specialization and expertise, yet small enough for personalized interactions. Our size enables us to host specialized teams with deep pharmacovigilance knowledge, ensuring that we are well-versed in industry standards. Simultaneously, our nimble structure allows us to provide a tailored experience to each client, adapting seamlessly to evolving customer needs.",
 ];
 
 const paragraphs4 = [
     "Quality Assurance Embedded",
-    "At Medwork, a Quality Assurance Mindset is ingrained in our culture. Supported by a robust Quality Management System (QMS) and IT infrastructure, our services not only align with regulatory requirements but consistently surpass expectations. Welcome to a partnership where quality is not merely a standard but a fundamental aspect of how we conduct business.",
+    "At Medwork, a quality assurance mindset is ingrained in our culture. Supported by a robust QMS and IT infrastructure, our services not only align with regulatory requirements but consistently surpass expectations. Welcome to a partnership where quality is not merely a standard but a fundamental aspect of how we conduct business.",
 ];
 
 function AboutUs() {

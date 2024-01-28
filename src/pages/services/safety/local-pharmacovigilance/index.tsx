@@ -6,22 +6,22 @@ import safety from "@assets/stock-images/Safety.jpg";
 
 const paragraphs0 = [
     "LPPV & Local PV Services in Greece, Cyprus and Malta",
-    "Experience Tailored to Your Needs: Our local Pharmacovigilance (PV) services are designed to cater to a diverse range of clients, ensuring seamless compliance and risk management. Whether you're a small Marketing Authorization Holder (MAH) with limited products and no local office, or a prominent international pharmaceutical company with an extensive portfolio, our expertise adapts to your specific requirements.",
+    "Experience Tailored to Your Needs: Our local pharmacovigilance (PV) services are designed to cater to a diverse range of clients, ensuring seamless compliance and risk management. Whether you're a small MAH with limited products and no local office, or a prominent international pharmaceutical company with an extensive portfolio, our expertise adapts to your specific requirements.",
 ];
 
 const title = "Our Core Strengths";
 const showcases = [
     {
         title: "Customized PV Systems",
-        point: "We design and implement local PV systems that align with the client' operations, ensuring seamless integration and compliance with local regulations."
+        point: "We design and implement local PV systems that align with your operations, ensuring seamless integration and compliance with local regulations."
     },
     {
-        title: "Expert LPPVs",
-        point: "Clients benefit from the expertise of our Local Qualified Persons for Pharmacovigilance (LPPVs), who bring a comprehensive understanding of local regulations and practices."
+        title: "Expert LRPPV",
+        point: "Clients benefit from the expertise of our Local Responsible Persons for Pharmacovigilance (LRPPVs) and Local Person Responsible for Scientific Affairs who bring a comprehensive understanding of local regulations and practices. "
     },
     {
         title: "Adaptive Systems and Databases",
-        point: "Our experts adapt and utilize client' existing systems and databases, optimizing processes for peak efficiency and convenience."
+        point: "Our experts can adapt and utilize your existing systems and databases, optimizing processes for peak efficiency and convenience."
     },
     {
         title: "Tailored Compliance",
@@ -33,7 +33,7 @@ const showcases = [
     },
     {
         title: "Local Expertise",
-        point: "Clients can leverage our local affiliate' knowledge of regional regulations and practices to ensure smooth operations and timely submissions."
+        point: "Clients can leverage our local affiliate's knowledge of regional regulations and practices to ensure smooth operations and timely submissions."
     },
 ];
 

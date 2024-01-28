@@ -17,11 +17,11 @@ const showcases = [
     },
     {
         title: "Flexible PV System",
-        point: "Customised to meet the unique needs of medium-sized MAHs, or CROs our PV system provides efficient, versatile solutions that ensure compliance and detailed safety oversight for a diverse range of clients.",
+        point: "Our PV system is customized to meet the unique needs of medium-sized Marketing Authorization Holders (MAHs) or CROs, providing efficient, versatile solutions that ensure compliance and detailed safety oversight for a diverse range of clients.",
     },
     {
         title: "QPPV Expertise",
-        point: "Our skilled QPPVs diligently ensure compliance with local and EU regulations and industry best practices, guaranteeing that our client's pharmacovigilance operations adhere to the standards set by competent authorities.",
+        point: "Our skilled QPPVs diligently ensure compliance with local and EU regulations and industry best practices, guaranteeing that your drug safety operations adhere to the standards set by competent authorities.",
     },
     {
         title: "Adaptability to Regulations",
@@ -35,13 +35,13 @@ const showcases = [
 
 function Vigilance() {
     return (
-        <div className="max-w-[1200px] mx-auto flex flex-col items-center justify-between w-full">
-            <ImageCategory image={safety} title="PV SYSTEM & QPPV" />
+        <div className="mx-auto flex flex-col items-center justify-between w-full">
+            <ImageCategory image={safety} title="PV & QPPV" />
 
-            <div id="main-content" className="w-full items-left whitespace-pre-line flex flex-col">
+            <div id="main-content" className="max-w-[1200px] w-full items-left whitespace-pre-line flex flex-col">
                 <Breadcrumbs />
 
-                <div className="flex flex-col gap-20 sm:gap-24 md:gap-28 px-4 sm:px-6 eq:px-0 py-16">
+                <div className="flex flex-col gap-20 sm:gap-24 md:gap-28 px-4 sm:px-6 lg:px-0 py-16">
                     <DisplayParagraphs withLead={true} paragraphs={paragraphs} />
                     {/* <ImageInline image={full_pv_team}/> */}
                     <Showcasing title={title} showcases={showcases} />

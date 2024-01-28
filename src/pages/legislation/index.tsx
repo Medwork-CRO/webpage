@@ -6,7 +6,7 @@ import LegislationTabs from "./LegislationTabs";
 
 const paragraphs = [
     "The Greek pharmaceutical and medical devices legislation is based on the relevant EU legislation, with a few national adjustments.",
-    "In each of the following sections, you will find all original legislative texts, and where available an English translation.",
+    "In each of the following sections, you will find all original legislative texts, and, where available, an English translation.",
     "If you are interested in receiving a full translation of the texts in English, please contact us at medworkinfo@medwork.gr",
 ];
 

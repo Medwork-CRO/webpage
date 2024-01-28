@@ -4,24 +4,28 @@ import ImageCategory from "@/components/ImageCategory";
 import Showcasing from "@/components/Showcasing";
 import qualityAssurance from "@assets/stock-images/Quality Assurance.jpg";
 
-const paragraphs = ["We can develop, improve, and monitor your Quality Management System (QMS) to ensure alignment with industry standards and regulations."];
+const paragraphs = ["We can develop, improve, and monitor your QMS to ensure alignment with industry standards and regulations."];
 
 const title = "Our services include";
 const showcases = [
     {
-        title: "Setup and Implementation of Quality Management Systems",
-        point: "We customize processes to align with standardized practices, ensuring compliance with legal and regulatory requirements, as well as relevant quality standards.",
+        title: "Setup and Implementation of QMS",
+        point: "We customize processes to align with standardized practices, ensuring compliance with legal and regulatory requirements, and relevant quality standards.",
     },
     {
-        title: "Review and Improvement of Existing Quality Management Systems",
-        point: "We assess your existing quality management systems for compliance, effectiveness, and efficiency. Our experts provide detailed insights, highlighting areas of strength and opportunities for improvement. This strategic evaluation ensures that your QMS continues to evolve, meeting the dynamic demands of industry standards.",
+        title: "Review and Improvement of Existing QMS",
+        point: "We assess your existing QMS for compliance, effectiveness, and efficiency. Our experts provide detailed insights, highlighting areas of strength and opportunities for improvement. This strategic evaluation ensures that your QMS continues to evolve, meeting the dynamic demands of industry standards.",
     },
     {
         title: "Development and Review of QMS Documents",
         point: "",
     },
     {
-        title: "GVP audits/ inspections",
+        title: "Quality Management Consulting",
+        point: "",
+    },
+    {
+        title: "GVP Audits/Inspections",
         point: "Preparation and follow-up.",
     },
 ];

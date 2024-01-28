@@ -141,32 +141,32 @@ const nextConfig = {
             },
             {
                 source: "/articles.php",
-                destination: "/about-us/legislation",
+                destination: "/legislation",
                 permanent: true,
             },
             {
                 source: "/legislation.php",
-                destination: "/about-us/legislation",
+                destination: "/legislation",
                 permanent: true,
             },
             {
                 source: "/greek-legislation.php",
-                destination: "/about-us/legislation",
+                destination: "/legislation",
                 permanent: true,
             },
             {
                 source: "/cypriot-legislation.php",
-                destination: "/about-us/legislation",
+                destination: "/legislation",
                 permanent: true,
             },
             {
                 source: "/greek-materiovigilance.php",
-                destination: "/about-us/legislation",
+                destination: "/legislation",
                 permanent: true,
             },
             {
                 source: "/useful-links.php",
-                destination: "/about-us/legislation",
+                destination: "/legislation",
                 permanent: true,
             },
         ];

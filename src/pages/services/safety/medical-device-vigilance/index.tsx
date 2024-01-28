@@ -5,11 +5,11 @@ import Showcasing from "@/components/Showcasing";
 import safety from "@assets/stock-images/Safety.jpg";
 
 const paragraph1 = [
-    "Drawing from our extensive 15-year journey in pharmacovigilance, we are proud to extend our expertise into the realm of medical device vigilance. This step represents a natural progression of our steadfast commitment to safety, as we apply the same rigorous principle and resolute mindset to medical devices that have defined our legacy in pharmacovigilance.",
+    "Drawing from our extensive 15-year journey in pharmacovigilance, we are proud to extend our expertise into the realm of medical device vigilance. This step represents a natural progression of our steadfast commitment to safety, as we apply the same rigorous principles and resolute mindset to medical devices that have defined our legacy in pharmacovigilance.",
 ];
 
 const paragraph2 = [
-    "Embrace this evolution with us, as our pharmacovigilance legacy advances to enhance medical device vigilance. It is more than a service - it is the continuation of our commitment to promoting safety and trust across the healthcare spectrum.",
+    "Embrace this evolution with us, as our pharmacovigilance legacy advances to enhance medical device vigilance. It is more than a service; it is the continuation of our commitment to promoting safety and trust across the healthcare spectrum.",
 ];
 
 const title = "Our Core Strengths";
@@ -20,15 +20,15 @@ const showcases = [
     },
     {
         title: "Consistent Standards",
-        point: "Just as we have upheld uncompromising standards in pharmacovigilance, we apply the same level of rigour and precision to our medical device vigilance services",
+        point: "Just as we have upheld uncompromising standards in pharmacovigilance, we apply the same level of rigour and precision to our medical device vigilance services.",
     },
     {
         title: "Holistic Expertise",
-        point: "Our multidisciplinary team harnesses insights from both the pharmacovigilance and medical device fields, cultivating a comprehensive approach that addresses a spectrum of safety concerns.",
+        point: "Our multidisciplinary team harnesses insights from both the pharmacovigilance and medical device fields, cultivating a comprehensive approach across the spectrum of safety concerns.",
     },
     {
         title: "Unified Vigilance",
-        point: "Regardless of whether it's pharmaceuticals or medical devices, our paramount goal remains steadfast: to safeguard patient well-being and ensure regulatory compliance.",
+        point: "Regardless of whether it's pharmaceuticals or medical devices, our paramount goal remains the same: to safeguard patient well-being and ensure regulatory compliance.",
     },
 ];
 
