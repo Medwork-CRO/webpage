@@ -1,7 +1,7 @@
 import Breadcrumbs from "@/components/Breadcrumb";
 import DisplayParagraphs from "@/components/DisplayParagraphs";
-import ImageCategory from "@/components/ImageCategory";
-import legislation from "@assets/services/legislation.jpg";
+// import ImageCategory from "@/components/ImageCategory";
+// import legislation from "@assets/services/legislation.jpg";
 import LegislationTabs from "./LegislationTabs";
 
 const paragraphs = [
@@ -13,11 +13,11 @@ const paragraphs = [
 function AboutUs() {
     return (
         <div className="max-w-[1200px] mx-auto flex flex-col items-center justify-between w-full">
-            <ImageCategory
+            {/* <ImageCategory
                 image={legislation}
                 title="Legislation"
                 description=""
-            />
+            /> */}
 
             <div id="main-content" className="w-full items-left whitespace-pre-line flex flex-col">
                 <Breadcrumbs />
