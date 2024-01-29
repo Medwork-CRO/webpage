@@ -4,6 +4,7 @@ import person2 from "@assets/people/default.jpg";
 import person3 from "@assets/people/katerina_paschou.webp";
 import person4 from "@assets/people/fotoula_dragatsi.webp";
 import MemberCard, { MemberInfo } from "./MemberCard";
+import { useState } from "react";
 
 const membersInfo: MemberInfo[] = [
     {
@@ -52,19 +53,37 @@ const membersInfo: MemberInfo[] = [
 ];
 
 function People() {
+    const [selectedMemberIndex, setSelectedMemberIndex] = useState<number | null>(null);
+
+    const toggleDescription = (index: number) => {
+        setSelectedMemberIndex(selectedMemberIndex === index ? null : index);
+    };
+
     return (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 sm:gap-4">
-            {/* <div className="flex flex-wrap justify-between w-full gap-8 items-center self-center"> */}
-            {membersInfo.map((memberInfo, i) => (
-                <MemberCard
-                    image={memberInfo.image}
-                    name={memberInfo.name}
-                    title={memberInfo.title}
-                    description={memberInfo.description}
-                    linkedInTag={""}
-                    key={i}
-                />
-            ))}
+        <div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 sm:gap-4">
+                {membersInfo.map((memberInfo, i) => (
+                    <MemberCard
+                        {...memberInfo}
+                        onToggleDescription={() => toggleDescription(i)}
+                        showDescription={selectedMemberIndex === i}
+                        key={i}
+                    />
+                ))}
+            </div>
+            {selectedMemberIndex !== null && (
+                <div className="hidden sm:block">
+                    <div className="
+                    text-md md:text-lg
+                    flex flex-col gap-4 mt-4 pt-4 text-medwork-dark dark:text-medwork-light
+                    border-t border-t-medwork-dark dark:border-t-medwork-light
+                ">
+                        {membersInfo[selectedMemberIndex].description.map((item, index) => (
+                            <p key={index}>{item}</p>
+                        ))}
+                    </div>
+                </div>
+            )}
         </div>
     );
 }
