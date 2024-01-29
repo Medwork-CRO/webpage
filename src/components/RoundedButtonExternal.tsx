@@ -45,7 +45,7 @@ function RoundedButtonExternal({ label, href, ariaLabel, type }: RoundedButtonEx
                 cursor-pointer text-medwork-light dark:text-medwork-dark
                 font-light narrow-letters leading-relaxed whitespace-nowrap
                 py-3 sm:py-2 px-6 sm:px-4 w-[200px] rounded-full
-                text-sm sm:text-md md:text-lg text-center
+                text-lg md:text-xl text-center
                 bg-blue-400 hover:bg-blue-500 focus-visible:bg-blue-500
                 transition duration-100 ease-in focus:outline-none"
             aria-label={ariaLabel}

@@ -86,7 +86,7 @@ function MemberCard({
                         <p key={index} className="
                             mt-4 overflow-ellipsis
                             font-light narrow-letters leading-relaxed
-                            text-sm text-left
+                            text-sm sm:text-md md:text-lg text-left
                         ">
                             {item}
                         </p>

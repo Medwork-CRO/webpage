@@ -72,7 +72,7 @@ function Careers() {
                         <div className="my-6 flex flex-col gap-6 items-center">
                             <div className="mt-4 flex flex-col sm:flex-row justify-center items-center gap-6 text-center w-full">
                                 <RoundedButtonExternal
-                                    label={"Email us your CV"}
+                                    label={"Email your CV"}
                                     href={`mailto:${hrEmail}`}
                                     ariaLabel={"By clicking you will be taken to compose an email to medwork hr"}
                                     type={ButtonType.EMAIL}
