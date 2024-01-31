@@ -8,7 +8,7 @@ import image1 from "@assets/badimages/Home 2_Large group.jpg";
 import image2 from "@assets/badimages/Home 3_Small group.jpg";
 import image3 from "@assets/badimages/Home_1a.jpg";
 import image4 from "@assets/badimages/Home_1b.jpg";
-import team2 from "@assets/teams/mw/IMG_9147.jpg";
+import team2 from "@assets/teams/mw/IMG_9147_2.webp";
 
 const carouselTitle = "Advancing Drug Safety with Operational Excellence, Regulatory Compliance, and Adaptive Solutions";
 const imageShowCases = [

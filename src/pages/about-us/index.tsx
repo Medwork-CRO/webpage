@@ -1,4 +1,4 @@
-import office from "@assets/teams/mw/IMG_9147.jpg";
+import office from "@assets/teams/mw/IMG_9147_2.webp";
 import Breadcrumbs from "@/components/Breadcrumb";
 import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ImageCategory from "@/components/ImageCategory";
