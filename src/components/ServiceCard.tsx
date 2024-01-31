@@ -28,7 +28,8 @@ function ServiceCard({
             whileInView="visible"
             variants={variants}
             viewport={{ once: true }}
-            className="flex flex-col gap-2">
+            className="flex flex-col gap-2"
+        >
             <Link href={readMoreLink}>
                 <div
                     key={index}
@@ -40,7 +41,7 @@ function ServiceCard({
                         transform transition duration-200 ease-in-out
                         border-4 border-transparent rounded-lg
                         hover:border-gray-400 dark:hover:border-gray-600
-                        h-full sm:h-[28rem] lg:h-[30rem] w-full
+                        h-full sm:h-[32rem] lg:h-[34rem] w-full
                     "
                 >
                     <Image
@@ -49,7 +50,7 @@ function ServiceCard({
                         alt={imageTitle}
                     />
                     <div className="p-4">
-                        <p className="mb-6 text-xl narrow-letters leading-relaxed">{imageTitle}</p>
+                        <p className="mb-12 text-xl narrow-letters leading-relaxed">{imageTitle}</p>
                         <p className="text-md narrow-letters leading-relaxed">{imageDescription}</p>
                     </div>
                 </div>
