@@ -33,37 +33,37 @@ const showcases = [
 
 export const infoBoxes = [
     {
-        title: "PV SYSTEMS & QPPV SERVICES",
+        title: "PV Systems & QPPV Services",
         text: "We establish and maintain robust pharmacovigilance systems. Our team of experienced EU Qualified Persons for Pharmacovigilance guarantees the effective management of your drug safety affairs and ensures strict regulatory compliance.",
         link: "/services/safety/pv-systems-qppv-services",
         color: "bg-blue-200",
     },
     {
-        title: "LOCAL PHARMACOVIGILANCE",
+        title: "Local Pharmacovigilance",
         text: "Offering comprehensive and integrated drug safety services for Greece, Cyprus, and Malta, our approach extends beyond the responsibilities of the LPPV/LSO. We provide marketing authorization holders with a complete local PV system, ensuring thorough coverage.",
         link: "/services/safety/local-pharmacovigilance",
         color: "bg-blue-200",
     },
     {
-        title: "CASE PROCESSING",
+        title: "Case Processing",
         text: "We are able to handle high volumes of Individual Case Study Reports (ICSRs) by ensuring both quality and compliance. To deliver optimal service, we can customize our case handling solutions to seamlessly align with your workflows and processes.",
         link: "/services/safety/case-processing",
         color: "bg-blue-200",
     },
     {
-        title: "GLOBAL AND LOCAL MEDICAL LITERATURE MONITORING",
+        title: "Global and Local Medical Literature Monitoring",
         text: "Medwork offers efficient global and local medical literature monitoring services empowered by the involvement of medical doctors who are actively engaged in the review and assessment process.",
         link: "/services/safety/global-and-local-medical-literature-monitoring",
         color: "bg-blue-200",
     },
     {
-        title: "CLINICAL TRIAL SAFETY",
+        title: "Clinical Trial Safety",
         text: "Medwork can ensure adherence to safety-related obligations for sponsors and investigators, efficiently removing this responsibility from them. This strategy enables you to concentrate solely on reaching your clinical goals. A dedicated group of experienced professionals will support you in every stage of clinical trial conduct and reporting.",
         link: "/services/safety/clinical-trial-safety",
         color: "bg-blue-200",
     },
     {
-        title: "MEDICAL DEVICE VIGILANCE",
+        title: "Medical Device Vigilance",
         text: "As a vigilance-focused organization, we have the expertise to ensure safety across substances, devices, and combinations. With materiovigilance evolving towards a pharmacovigilance approach, we're well-equipped to help medical device manufacturers navigate these new regulatory requirements using our proven, stringent principles.",
         link: "/services/safety/medical-device-vigilance",
         color: "bg-blue-200",
@@ -72,10 +72,10 @@ export const infoBoxes = [
 
 function Safety() {
     return (
-        <div className="max-w-[1200px] mx-auto flex flex-col items-center justify-between w-full">
+        <div className="mx-auto flex flex-col items-center justify-between w-full">
             <ImageCategory image={safety} title="Safety" />
 
-            <div id="main-content" className="w-full items-left whitespace-pre-line flex flex-col">
+            <div id="main-content" className="max-w-[1200px] items-left whitespace-pre-line flex flex-col">
                 <Breadcrumbs />
 
                 <div className="flex flex-col gap-20 sm:gap-24 md:gap-28 px-4 sm:px-6 eq:px-0 py-16">

@@ -35,7 +35,7 @@ const showcases = [
 
 function Vigilance() {
     return (
-        <div className="max-w-[1200px] mx-auto flex flex-col items-center justify-between w-full">
+        <div className="mx-auto flex flex-col items-center justify-between w-full">
             <ImageCategory image={safety} title="PV Systems & QPPV Services" />
 
             <div id="main-content" className="max-w-[1200px] w-full items-left whitespace-pre-line flex flex-col">
