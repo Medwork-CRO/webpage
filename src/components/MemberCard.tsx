@@ -63,8 +63,14 @@ function MemberCard({
                 <div className="flex flex-col items-center mt-3 text-sm">
                     <button
                         onClick={onToggleDescription}
-                        className={`flex justify-around w-[56px] items-center rounded-full ${showDescription && "bg-blue-800 text-medwork-light"}
-                        border border-blue-500 dark:border-blue-800 hover:bg-blue-800 hover:dark:border-blue-500 hover:text-medwork-light`}
+                        className={`
+                            flex justify-around w-[56px] items-center rounded-full
+                            ${showDescription && "bg-medwork-dark2 text-medwork-light2 dark:bg-medwork-light dark:text-medwork-dark"}
+                            border border-medwork-brown dark:border-gray-400
+                            hover:bg-medwork-dark hover:dark:bg-medwork-light
+                            text-medwork-brown dark:text-gray-400
+                            hover:text-medwork-light2 hover:dark:text-medwork-dark2
+                        `}
                     >
                         {showDescription ? <MdExpandLess /> : <MdExpandMore />}
                         <span>CV</span>

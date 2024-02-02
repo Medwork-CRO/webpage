@@ -4,6 +4,7 @@ import InfoBoxMatrix from "@/components/InfoBoxMatrix";
 import LeadingParagraphs from "@/components/LeadingParagraphs";
 import Showcasing from "@/components/Showcasing";
 import safety from "@assets/stock-images/Safety.jpg";
+import { motion } from "framer-motion";
 import { useState } from "react";
 
 // const paragraphsOld = [
@@ -78,6 +79,11 @@ function Safety() {
         setShowShowcasing(!showShowcasing);
     };
 
+    const variants = {
+        visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
+        hidden: { opacity: 0, scale: 0.8 }
+    };
+
     return (
         <div className="mx-auto flex flex-col items-center justify-between w-full">
             <ImageCategory image={safety} title="Safety" />
@@ -86,20 +92,26 @@ function Safety() {
                 <Breadcrumbs />
 
                 <div className="flex flex-col gap-20 sm:gap-24 md:gap-28 px-4 sm:px-6 eq:px-0 py-16">
-                    <div>
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
+                        variants={variants}
+                        viewport={{ once: true }}>
                         <LeadingParagraphs withLead={false} paragraphs={paragraphs} />
                         <button onClick={toggleShowcasing} className={`
                         w-full sm:max-w-[120px] mx-auto mt-4 p-1
                         border border-medwork-brown dark:border-gray-400 rounded-full
                         bg-opacity-25 ${showShowcasing && "bg-medwork-dark dark:bg-medwork-light mb-8"}
+                        hover:bg-medwork-dark2 hover:dark:bg-medwork-light2
                         font-ultralight whitespace-pre-line tracking-wide
                         narrow-letters leading-relaxed italic
                         text-medwork-brown dark:text-gray-400 text-md md:text-lg text-center
+                        hover:text-medwork-light2 hover:dark:text-medwork-brown2
                     `}>
                             {showShowcasing ? "Read Less" : "Read More"}
                         </button>
                         {showShowcasing && <Showcasing title={title} showcases={showcases} />}
-                    </div>
+                    </ motion.div>
                     <InfoBoxMatrix infoBoxes={infoBoxes}/>
                 </div>
             </div>
