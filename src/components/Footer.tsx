@@ -237,7 +237,7 @@ function Footer({ theme, setTheme }: ThemeSelectorProps) {
                     <ThemeSelector theme={theme} setTheme={setTheme} />
                 </div>
 
-                <div className="flex flex-col sm:flex-row flex-wrap justify-between gap-8 py-16">
+                <div className="flex flex-col sm:flex-row flex-wrap justify-between gap-8 pt-16 pb-16 sm:pb-0">
                     <div className="flex flex-col gap-6">
                         <Logo />
                         <CompanyInfo />
@@ -302,6 +302,7 @@ function Footer({ theme, setTheme }: ThemeSelectorProps) {
                         <CompanyContact />
                     </div>
                 </div>
+
                 <div className="grid grid-cols-1 md:grid-cols-2 justify-between gap-8 items-start pb-8">
                     <Information />
                     <Legal />
