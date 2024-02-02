@@ -26,7 +26,7 @@ function Materiovigilance() {
                 description="The principal purpose of materiovigilance is to improve the protection of the health and safety of patients, users and others by reducing the likelihood that incidents related to the use of a medical device will reoccur."
             />
 
-            <div id="main-content" className="max-w-[1200px] items-left whitespace-pre-line flex flex-col">
+            <div id="main-content" className="w-full max-w-[1200px] items-left whitespace-pre-line flex flex-col">
                 <Breadcrumbs />
                 <div className="flex flex-col gap-20 sm:gap-24 md:gap-28 px-4 sm:px-6 eq:px-0 py-16">
                     <DisplayParagraphs withLead={false} paragraphs={paragraphs1} />

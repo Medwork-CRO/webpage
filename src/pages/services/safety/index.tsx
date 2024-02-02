@@ -82,7 +82,7 @@ function Safety() {
         <div className="mx-auto flex flex-col items-center justify-between w-full">
             <ImageCategory image={safety} title="Safety" />
 
-            <div id="main-content" className="max-w-[1200px] items-left whitespace-pre-line flex flex-col">
+            <div id="main-content" className="w-full max-w-[1200px] items-left whitespace-pre-line flex flex-col">
                 <Breadcrumbs />
 
                 <div className="flex flex-col gap-20 sm:gap-24 md:gap-28 px-4 sm:px-6 eq:px-0 py-16">

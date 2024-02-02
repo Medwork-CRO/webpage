@@ -19,7 +19,7 @@ function AboutUs() {
                 description=""
             /> */}
 
-            <div id="main-content" className="max-w-[1200px] items-left whitespace-pre-line flex flex-col">
+            <div id="main-content" className="w-full max-w-[1200px] items-left whitespace-pre-line flex flex-col">
                 <Breadcrumbs />
 
                 <div className="flex flex-col gap-6 whitespace-pre-line px-4 sm:px-6 text-xl text-gray-500 dark:text-gray-400 eq:px-0 py-16">

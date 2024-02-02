@@ -14,19 +14,19 @@ enum ContactType {
     LinkedIn
 }
 
-// type MapCategoryProps = {
-//     location?: string;
-//     title?: string;
-// };
+type MapCategoryProps = {
+    location?: string;
+    title?: string;
+};
 
-// function getIFrame(location: string, rounded = false, height = "h-[100vh]") {
-//     const rounding = rounded ? "rounded-lg" : "";
-//     return (<iframe
-//         src={`https://maps.google.com/maps?q=${location}&t=&z=16&ie=UTF8&iwloc=&output=embed`}
-//         className={`w-full ${height} ${rounding}`}
-//         allowFullScreen
-//     ></iframe>);
-// }
+function getIFrame(location: string, rounded = false, height = "h-[100vh]") {
+    const rounding = rounded ? "rounded-b-lg" : "";
+    return (<iframe
+        src={`https://maps.google.com/maps?q=${location}&t=&z=16&ie=UTF8&iwloc=&output=embed`}
+        className={`w-full ${height} ${rounding} `}
+        allowFullScreen
+    ></iframe>);
+}
 
 function getIcon(contactType: ContactType) {
     switch (contactType) {
@@ -88,17 +88,16 @@ function getCompanyInfo() {
     return (
         <div className="
             flex flex-col sm:flex-row
-            w-full justify-between gap-4
+            w-full justify-between
             font-semibold text-xl text-left
-            sm:bg-medwork-light sm:dark:bg-medwork-dark sm:bg-opacity-95 rounded-md
-            border border-medwork-dark dark:border-medwork-light
-            p-8
+            px-12 pt-4 pb-12
+            rounded-t-lg
         ">
-            <div>
+            <div className="flex flex-col gap-4">
                 {getContact("(+30) 210 9960971", "+302109960971", ContactType.Phone)}
                 {getContact("medworkinfo@medwork.gr", "medworkinfo@medwork.gr", ContactType.Email)}
             </div>
-            <div>
+            <div className="flex flex-col gap-4">
                 {getContact("Medwork", "companies/medwork", ContactType.LinkedIn)}
                 {getContact("5 Chiou street, 164 52 Argyroupolis, Greece", "KDKk5piro9Cb6AXG7", ContactType.Address)}
             </div>
@@ -143,11 +142,19 @@ function getCompanyInfo() {
 // }
 
 
-function MapCategory() {
+function MapCategory({
+    location = "Chiou 5, Argyroupolis 16452, Greece",
+}: MapCategoryProps) {
     return (
         <>
             <div className="mx-auto sm:my-24 px-4 md:px-6 eq:px-0 w-full max-w-[1200px]">
-                {getCompanyInfo()}
+                <div className="
+                    flex flex-col
+                    border border-medwork-dark dark:border-medwork-light rounded-lg
+                ">
+                    {getCompanyInfo()}
+                    {getIFrame(location, true, "h-[24]")}
+                </div>
             </div>
         </>
     );
