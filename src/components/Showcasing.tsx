@@ -25,7 +25,7 @@ function Showcasing({ title, showcases }: { title: string, showcases: Showcase[]
             <span
                 id={title.split(" ").join("-").toLowerCase()}
                 className={`
-                pl-4 mt-2 mb-4 text-2xl md:text-3xl text-center
+                pl-4 mt-2 mb-4 text-2xl md:text-3xl text-start sm:text-center
                 font-semibold uppercase tracking-wide leading-tight narrow-letters
               `}
             >
