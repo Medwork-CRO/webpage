@@ -14,19 +14,19 @@ enum ContactType {
     LinkedIn
 }
 
-type MapCategoryProps = {
-    location?: string;
-    title?: string;
-};
+// type MapCategoryProps = {
+//     location?: string;
+//     title?: string;
+// };
 
-function getIFrame(location: string, rounded = false, height = "h-[100vh]") {
-    const rounding = rounded ? "rounded-lg" : "";
-    return (<iframe
-        src={`https://maps.google.com/maps?q=${location}&t=&z=16&ie=UTF8&iwloc=&output=embed`}
-        className={`w-full ${height} ${rounding}`}
-        allowFullScreen
-    ></iframe>);
-}
+// function getIFrame(location: string, rounded = false, height = "h-[100vh]") {
+//     const rounding = rounded ? "rounded-lg" : "";
+//     return (<iframe
+//         src={`https://maps.google.com/maps?q=${location}&t=&z=16&ie=UTF8&iwloc=&output=embed`}
+//         className={`w-full ${height} ${rounding}`}
+//         allowFullScreen
+//     ></iframe>);
+// }
 
 function getIcon(contactType: ContactType) {
     switch (contactType) {
@@ -86,16 +86,19 @@ function getContact(display: string, value: string, contactType: ContactType) {
 
 function getCompanyInfo() {
     return (
-        <div className="font-semibold text-xl text-left">
-            <div className="
-                flex flex-col w-full md:max-w-[400px] justify-start gap-4 rounded-md
-                sm:bg-medwork-light sm:dark:bg-medwork-dark sm:bg-opacity-95
-                border border-medwork-dark dark:border-medwork-light
-                p-8
-            ">
+        <div className="
+            flex flex-col sm:flex-row
+            w-full justify-between gap-4
+            font-semibold text-xl text-left
+            sm:bg-medwork-light sm:dark:bg-medwork-dark sm:bg-opacity-95 rounded-md
+            border border-medwork-dark dark:border-medwork-light
+            p-8
+        ">
+            <div>
                 {getContact("(+30) 210 9960971", "+302109960971", ContactType.Phone)}
-                {getContact("(+30) 210 9969578", "+302109969578", ContactType.Fax)}
                 {getContact("medworkinfo@medwork.gr", "medworkinfo@medwork.gr", ContactType.Email)}
+            </div>
+            <div>
                 {getContact("Medwork", "companies/medwork", ContactType.LinkedIn)}
                 {getContact("5 Chiou street, 164 52 Argyroupolis, Greece", "KDKk5piro9Cb6AXG7", ContactType.Address)}
             </div>
@@ -103,37 +106,48 @@ function getCompanyInfo() {
     );
 }
 
-function MapCategory({
-    location = "Chiou 5, Argyroupolis 16452, Greece",
-}: MapCategoryProps) {
+// function MapCategory({
+//     location = "Chiou 5, Argyroupolis 16452, Greece",
+// }: MapCategoryProps) {
+//     return (
+//         <>
+//             <div className="hidden md:block w-full">
+//                 <div className="flex flex-col md:flex-row h-[100vh] relative">
+//                     {getIFrame(location)}
+//                     {/* <div className="absolute inset-0 z-10 bg-gradient-to-r from-medwork-light dark:from-medwork-dark via-transparent to-transparent"></div>
+//                     <div className="absolute inset-0 z-10 bg-gradient-to-l from-medwork-light dark:from-medwork-dark via-transparent to-transparent"></div> */}
+//                     <div className="absolute inset-0 z-10 bg-gradient-to-t from-medwork-light dark:from-medwork-dark via-transparent to-transparent"></div>
+//                     <div className="absolute inset-0 z-10 bg-gradient-to-b from-medwork-light dark:from-medwork-dark via-transparent to-transparent"></div>
+
+//                     <div className="absolute top-1/2 z-10 -translate-y-1/2 transform w-full">
+//                         <div className="flex flex-col justify-center gap-8 px-4 md:px-6 eq:px-0 max-w-[1200px] mx-auto">
+//                             {getCompanyInfo()}
+//                         </div>
+//                     </div>
+//                 </div>
+//             </div>
+
+//             <div className="grid grid-cols-1 md:grid-cols-2 md:hidden w-full">
+//                 <div className="relative">
+//                     <div className="absolute inset-0 from-medwork-light dark:from-medwork-dark to-transparent bg-gradient-to-t"></div>
+//                     <div className="relative w-full z-10 float-left p-4">
+//                         {getIFrame(location, true, "h-[24]")}
+//                         <div className="mt-8 md:mt-0 text-medwork-light">
+//                             {getCompanyInfo()}
+//                         </div>
+//                     </div>
+//                 </div>
+//             </div>
+//         </>
+//     );
+// }
+
+
+function MapCategory() {
     return (
         <>
-            <div className="hidden md:block w-full">
-                <div className="flex flex-col md:flex-row h-[100vh] relative">
-                    {getIFrame(location)}
-                    {/* <div className="absolute inset-0 z-10 bg-gradient-to-r from-medwork-light dark:from-medwork-dark via-transparent to-transparent"></div>
-                    <div className="absolute inset-0 z-10 bg-gradient-to-l from-medwork-light dark:from-medwork-dark via-transparent to-transparent"></div> */}
-                    <div className="absolute inset-0 z-10 bg-gradient-to-t from-medwork-light dark:from-medwork-dark via-transparent to-transparent"></div>
-                    <div className="absolute inset-0 z-10 bg-gradient-to-b from-medwork-light dark:from-medwork-dark via-transparent to-transparent"></div>
-
-                    <div className="absolute top-1/2 z-10 -translate-y-1/2 transform w-full">
-                        <div className="flex flex-col justify-center gap-8 px-4 md:px-6 eq:px-0 max-w-[1200px] mx-auto">
-                            {getCompanyInfo()}
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 md:hidden w-full">
-                <div className="relative">
-                    <div className="absolute inset-0 from-medwork-light dark:from-medwork-dark to-transparent bg-gradient-to-t"></div>
-                    <div className="relative w-full z-10 float-left p-4">
-                        {getIFrame(location, true, "h-[24]")}
-                        <div className="mt-8 md:mt-0 text-medwork-light">
-                            {getCompanyInfo()}
-                        </div>
-                    </div>
-                </div>
+            <div className="mx-auto sm:my-24 px-4 md:px-6 eq:px-0 w-full max-w-[1200px]">
+                {getCompanyInfo()}
             </div>
         </>
     );
