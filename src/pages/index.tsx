@@ -65,7 +65,7 @@ function Home() {
 
             <div id="main-content" className="max-w-[1200px] w-full items-left whitespace-pre-line flex flex-col">
                 <div className="flex flex-col gap-20 sm:gap-24 md:gap-28 px-4 sm:px-6 eq:px-0 py-16">
-                    <DisplayParagraphs withLead={true} paragraphs={introParagraph} />
+                    <DisplayParagraphs withLead={false} paragraphs={introParagraph} />
                     <Statistics Stats={statistics}/>
                     <ProvidedServices />
                 </div>

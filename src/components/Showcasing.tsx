@@ -31,9 +31,9 @@ function Showcasing({ title, showcases }: { title: string, showcases: Showcase[]
             >
                 {title}
             </span>
-
+            {/* list-disc */}
             <ul className="
-                flex flex-col gap-8 list-disc pl-8
+                flex flex-col gap-8 pl-8
                 border-l border-medwork-brown dark:border-gray-400
             ">
                 {showcases.map((showcase, i) => (
