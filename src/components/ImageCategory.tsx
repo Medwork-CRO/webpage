@@ -1,23 +1,23 @@
 import Image, { StaticImageData } from "next/image";
 
 type ImageCategoryProps = {
-  title: string;
-  image: StaticImageData;
-  description?: string;
-  textSide?: "left" | "right";
+    image: StaticImageData;
+    title?: string;
+    description?: string;
+    textSide?: "left" | "right";
 };
 
 function ImageCategory({
+    image,
     title,
     description,
-    image,
 }: ImageCategoryProps) {
     return (
         <div className="relative flex flex-col md:flex-row] w-full flex-[0_0_100%] motion-safe:animate-fadeIn justify-center">
             <Image
                 src={image}
                 className="h-[50vh] w-full object-cover"
-                alt="alt"
+                alt={`${title} ${description}`}
             />
 
             {/* <div className="absolute inset-x-0 bottom-0 z-10 h-full bg-medwork-dark bg-opacity-60"></div> */}
