@@ -117,10 +117,10 @@ const Breadcrumbs = () => {
                             <div className="flex flex-row items-center">
                                 <div>{formatBreadcrumb(crumb)}</div>
                                 {crumb === "services" ? <MdExpandMore className="ml-1"/> : <span className="ml-1"></span>}
-                                <span>/</span>
                             </div>
                             {crumb === "services" && services()}
                         </div>
+                        <span>/</span>
                     </React.Fragment>;
                 } else {
                     return (
