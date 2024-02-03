@@ -90,7 +90,7 @@ function getCompanyInfo() {
             flex flex-col sm:flex-row
             w-full justify-between
             font-semibold text-xl text-left
-            px-12 pt-4 pb-12
+            px-12 pt-4 pb-12 gap-4
             rounded-t-lg
         ">
             <div className="flex flex-col gap-4">
@@ -147,7 +147,7 @@ function MapCategory({
 }: MapCategoryProps) {
     return (
         <>
-            <div className="mx-auto sm:my-24 px-4 md:px-6 eq:px-0 w-full max-w-[1200px]">
+            <div className="mx-auto 0 w-full max-w-[1200px]">
                 <div className="
                     flex flex-col
                     border border-medwork-dark dark:border-medwork-light rounded-lg
