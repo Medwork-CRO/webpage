@@ -1,7 +1,7 @@
 import Breadcrumbs from "@/components/Breadcrumb";
 import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ImageCategory from "@/components/ImageCategory";
-import cosmetovigilance from "@assets/services/cosmetovigilance.webp";
+import cosmetovigilance from "@assets/vectors/cosmetovigilance.webp";
 
 const paragraphs = [
     "Our services include:",
