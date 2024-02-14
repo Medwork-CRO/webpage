@@ -2,7 +2,7 @@ import Breadcrumbs from "@/components/Breadcrumb";
 import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ImageCategory from "@/components/ImageCategory";
 import Showcasing from "@/components/Showcasing";
-import safety from "@assets/vectors/safety-vector.jpg";
+import qualityAssurance from "@assets/services/quality-assurance.jpg";
 
 const introParagraph = ["Medwork is ideally situated in a geographical area with an increasing need for pharmaceutical quality services. Clinical trials and pharmacovigilance systems in Southeast Europe and the Middle East are required to be audited against the same quality standards as those in Northwest Europe. Cooperation with a reliable regional partner can contribute to reducing travel and frustration for your staff as well as lowering expenses for your organization."];
 
@@ -29,7 +29,7 @@ const showcases = [
 function CaseProcessing() {
     return (
         <div className="mx-auto flex flex-col items-center justify-between w-full">
-            <ImageCategory image={safety} title="QUALITY ASSURANCE CONSULTING" />
+            <ImageCategory image={qualityAssurance} title="QUALITY ASSURANCE CONSULTING" />
 
             <div id="main-content" className="w-full max-w-[1200px] items-left whitespace-pre-line flex flex-col">
                 <Breadcrumbs />

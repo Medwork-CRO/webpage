@@ -2,7 +2,7 @@ import Breadcrumbs from "@/components/Breadcrumb";
 import ImageCategory from "@/components/ImageCategory";
 import LeadingParagraphs from "@/components/LeadingParagraphs";
 import Showcasing from "@/components/Showcasing";
-import safety from "@assets/stock-images/Safety.jpg";
+import safety from "@assets/services/safety.webp";
 
 const paragraph = [
     "Efficient ICSR Case Processing Crafted to Your Requirements: With an extended team of dedicated pharmacovigilance professionals, we manage all aspects of ICSR processing, seamlessly adapting to your urgent or substantial caseloads. ",

@@ -2,7 +2,7 @@ import Breadcrumbs from "@/components/Breadcrumb";
 import ImageCategory from "@/components/ImageCategory";
 import LeadingParagraphs from "@/components/LeadingParagraphs";
 import Showcasing from "@/components/Showcasing";
-import safety from "@assets/stock-images/Safety.jpg";
+import safety from "@assets/services/safety.webp";
 
 const paragraph = [
     "Navigating the realm of clinical trial safety requires diligence and expertise. Although we might not boast extensive experience, our dedication to excellence remains unwavering. Discover how we bring a fresh perspective and commitment to your clinical trial safety needs.",

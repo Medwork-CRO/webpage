@@ -2,7 +2,7 @@ import Breadcrumbs from "@/components/Breadcrumb";
 import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ImageCategory from "@/components/ImageCategory";
 import Showcasing from "@/components/Showcasing";
-import safety from "@assets/stock-images/Safety.jpg";
+import safety from "@assets/services/safety.webp";
 
 const paragraphs0 = [
     "LPPV & Local PV Services in Greece, Cyprus and Malta",

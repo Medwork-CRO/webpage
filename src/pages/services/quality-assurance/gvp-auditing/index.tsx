@@ -1,16 +1,14 @@
 import Breadcrumbs from "@/components/Breadcrumb";
 import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ImageCategory from "@/components/ImageCategory";
-import safety from "@assets/services/safety-vector.jpg";
+import qualityAssurance from "@assets/services/quality-assurance.webp";
 
 const paragraphs = ["Whether it's strengthening your internal processes or ensuring compliance across external partnerships, our GVP auditing services are tailored to address the dynamic needs of the pharmaceutical industry. Our auditing offerings cover both internal and Vendor/External partner audits."];
-
-
 
 function CaseProcessing() {
     return (
         <div className="mx-auto flex flex-col items-center justify-between w-full">
-            <ImageCategory image={safety} title="GVP AUDITING" />
+            <ImageCategory image={qualityAssurance} title="GVP AUDITING" />
 
             <div id="main-content" className="w-full max-w-[1200px] items-left whitespace-pre-line flex flex-col">
                 <Breadcrumbs />

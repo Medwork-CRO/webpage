@@ -2,7 +2,7 @@ import Breadcrumbs from "@/components/Breadcrumb";
 import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ImageCategory from "@/components/ImageCategory";
 import Showcasing from "@/components/Showcasing";
-import qualityAssurance from "@assets/stock-images/Quality Assurance.jpg";
+import qualityAssurance from "@assets/services/quality-assurance.jpg";
 
 const paragraphs = ["We can develop, improve, and monitor your QMS to ensure alignment with industry standards and regulations."];
 
