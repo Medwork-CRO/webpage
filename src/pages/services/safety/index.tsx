@@ -3,7 +3,7 @@ import ImageCategory from "@/components/ImageCategory";
 import InfoBoxMatrix from "@/components/InfoBoxMatrix";
 import LeadingParagraphs from "@/components/LeadingParagraphs";
 import Showcasing from "@/components/Showcasing";
-import safety from "@assets/stock-images/Safety.jpg";
+import safety from "@assets/services/safety.webp";
 import { motion } from "framer-motion";
 import { useState } from "react";
 

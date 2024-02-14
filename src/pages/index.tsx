@@ -1,27 +1,24 @@
 import Carousel from "@/components/Carousel";
-import ImageCarousel from "@/components/ImageCarousel";
 import DisplayParagraphs from "@/components/DisplayParagraphs";
+import ImageCarousel from "@/components/ImageCarousel";
 import ProvidedServices from "@/components/ProvidedServices";
 import Statistics from "@/components/Statistics";
-// import office from "@assets/building/medwork-vanced.webp";
-// import team2 from "@assets/teams/mw/IMG_9147_2.webp";
-import image1 from "@assets/badimages/Home 2_Large group.jpg";
-import image2 from "@assets/badimages/Home 3_Small group.jpg";
-import image3 from "@assets/badimages/Home_1a.jpg";
-// import image4 from "@assets/badimages/Home_1b.jpg";
+import image1 from "@assets/stock-images/abstract.webp";
+import image2 from "@assets/stock-images/corporate-meeting.webp";
+import image3 from "@assets/stock-images/group-meeting.webp";
 
 const carouselTitle = "Advancing Drug Safety with Operational Excellence, Regulatory Compliance, and Adaptive Solutions";
 const imageShowCases = [
-    {
-        image: image3,
-        title: undefined, // "Medwork is a European pharmacovigilance expert organization.",
-    },
     {
         image: image1,
         title: undefined, // "Medwork is a European pharmacovigilance expert organization.",
     },
     {
         image: image2,
+        title: undefined, // "Medwork is a European pharmacovigilance expert organization.",
+    },
+    {
+        image: image3,
         title: undefined, // "Medwork is a European pharmacovigilance expert organization.",
     },
     // {

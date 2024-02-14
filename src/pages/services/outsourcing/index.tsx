@@ -3,8 +3,7 @@ import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ImageCategory from "@/components/ImageCategory";
 import LeadingParagraphs from "@/components/LeadingParagraphs";
 import Showcasing from "@/components/Showcasing";
-// import outsourcing from "@assets/services/outsourcing-vector.jpg";
-import outsourcing from "@assets/badimages/Outsourcing.jpg";
+import outsourcing from "@assets/services/outsourcing.webp";
 
 const introParagraph = [
     "In today's dynamic and rapidly evolving pharmaceutical landscape, maintaining a robust pharmacovigilance system is imperative for regulatory compliance and patient safety. To help you seamlessly navigate the complexities of pharmacovigilance, we offer strategic personnel outsourcing solutions tailored to meet your specific needs.",

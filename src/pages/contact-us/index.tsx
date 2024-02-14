@@ -1,7 +1,7 @@
 import Breadcrumbs from "@/components/Breadcrumb";
 import ImageCategory from "@/components/ImageCategory";
 import MapCategory from "@/pages/contact-us/MapCategory";
-import contactUs from "@assets/badimages/Contact us.jpg";
+import contactUs from "@assets/stock-images/contact-us.webp";
 
 const ContactUs = () => {
     return (

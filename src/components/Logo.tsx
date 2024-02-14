@@ -1,5 +1,4 @@
-// import medworkLogo from "@assets/medwork-logo.png";
-import medworkLogo from "@assets/badimages/MW logo.png";
+import medworkLogo from "@assets/logos/medwork-logo.png";
 import Image from "next/image";
 import Link from "next/link";
 
