@@ -1,7 +1,7 @@
 import Breadcrumbs from "@/components/Breadcrumb";
 import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ImageCategory from "@/components/ImageCategory";
-import training from "@assets/services/training-vector.jpg";
+import training from "@assets/vectors/training.webp";
 
 const paragraphs = [
     "Our services include:",
