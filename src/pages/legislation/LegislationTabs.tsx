@@ -6,6 +6,8 @@ type Legislation = {
     dropDowns: InlineInfoBoxParams[]
 };
 
+const EOF = "https://www.eof.gr/web/guest/lawmedical?p_p_id=62_INSTANCE_4s7I&p_p_lifecycle=0&p_p_state=maximized&p_p_mode=view&p_p_col_id=column-2&p_p_col_count=2&_62_INSTANCE_4s7I_struts_action=%2Fjournal_articles%2Fview&_62_INSTANCE_4s7I_groupId=12225&_62_INSTANCE_4s7I_articleId=18157&_62_INSTANCE_4s7I_version=1.0";
+
 const legislations: Legislation[] = [
     {
         name: "Greek Pharmacovigilance Legislation",
@@ -212,6 +214,8 @@ const LegislationTabs = () => {
                             </div>
                         </div>
                     </div>
+
+                    <span>For further information regarding legislation on medical devices please visit <a className="underline" href={EOF}>National Organisation for Medicine&apos;s website</a></span>
                 </div>
             </div>
         </>
