@@ -3,7 +3,8 @@ import InlineInfoBox, { InlineInfoBoxParams } from "./InlineInfoBox";
 
 type Legislation = {
     name: string,
-    dropDowns: InlineInfoBoxParams[]
+    dropDowns: InlineInfoBoxParams[],
+    footer?: string,
 };
 
 const EOF = "https://www.eof.gr/web/guest/lawmedical?p_p_id=62_INSTANCE_4s7I&p_p_lifecycle=0&p_p_state=maximized&p_p_mode=view&p_p_col_id=column-2&p_p_col_count=2&_62_INSTANCE_4s7I_struts_action=%2Fjournal_articles%2Fview&_62_INSTANCE_4s7I_groupId=12225&_62_INSTANCE_4s7I_articleId=18157&_62_INSTANCE_4s7I_version=1.0";
@@ -123,6 +124,7 @@ const legislations: Legislation[] = [
                 fileNameGR: "Summary_v1.0_Apr10.pdf",
             },
         ],
+        footer: `<span>For further information regarding legislation on medical devices please visit: <a href=${EOF} target="_blank">National Organisation for Medicine&apos;s website</a></span>`
     },
 ];
 
@@ -185,8 +187,8 @@ const LegislationTabs = () => {
                         <div className="flex-auto">
                             <div className="tab-content tab-space">
                                 {legislations.map((legislation, legislationIndex) => {
-                                    return (<div className={`${openTab === legislationIndex ? "block" : "hidden"}`} key={legislationIndex} id="link1">
-                                        <div className="grid grid-cols-1 md:grid-cols-1 gap-4 w-full">
+                                    return (<ul className={`${openTab === legislationIndex ? "block" : "hidden"}`} key={legislationIndex} id="link1">
+                                        <li className="grid grid-cols-1 md:grid-cols-1 gap-4 w-full">
                                             {legislation.dropDowns.map((link, dropDownIndex) => {
                                                 return (<div key={dropDownIndex}>
                                                     <InlineInfoBox
@@ -206,16 +208,15 @@ const LegislationTabs = () => {
                                                         onClick={() => { setOpenDropDown(openDropDown !== dropDownIndex ? dropDownIndex : -1) }}
                                                         isOpen={openDropDown === dropDownIndex}
                                                     /> */}
+                                                    {dropDownIndex === legislations.length && !!legislation.footer ? <div dangerouslySetInnerHTML={{ __html: legislation.footer }}></div> : ""}
                                                 </div>);
                                             })}
-                                        </div>
-                                    </div>);
+                                        </li>
+                                    </ul>);
                                 })}
                             </div>
                         </div>
                     </div>
-
-                    <span>For further information regarding legislation on medical devices please visit <a className="underline" href={EOF}>National Organisation for Medicine&apos;s website</a></span>
                 </div>
             </div>
         </>
