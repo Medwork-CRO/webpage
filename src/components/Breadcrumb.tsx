@@ -110,7 +110,7 @@ const Breadcrumbs = () => {
         ">
             {pathNames.map((crumb, i) => {
                 if (i === pathNames.length - 1) {
-                    return <div key={i}>{formatBreadcrumb(crumb)}</div>;
+                    return <div key={i} className="font-semibold">{formatBreadcrumb(crumb)}</div>;
                 } else if (!pathSanitisation(paths[i]).valid) {
                     return  <React.Fragment key={i}>
                         <div className="group/item">
