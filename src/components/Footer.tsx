@@ -231,7 +231,7 @@ function Footer({ theme, setTheme }: ThemeSelectorProps) {
             id="footer"
             className={"w-full flex justify-center shadow-sm bg-medwork-light dark:bg-medwork-dark px-4 sm:px-6 eq:px-0 pt-0 sm:pt-12 lg:pt-24 font-sans relative"}
         >
-            <div className="flex w-full max-w-[1200px] mx-0 eq:mx-8 flex-col text-medwork-dark dark:text-medwork-light z-[5]"> {/* max-w-[1200px] */}
+            <div className="flex w-full max-w-[1200px] mx-0 eq:mx-8 flex-col text-medwork-dark dark:text-medwork-light z-[5]">
                 <div className="mt-6 border-t border-medwork-dark dark:border-medwork-light flex justify-between items-center">
                     <div></div>
                     <ThemeSelector theme={theme} setTheme={setTheme} />
