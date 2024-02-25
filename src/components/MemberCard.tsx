@@ -64,7 +64,7 @@ function MemberCard({
                     <button
                         onClick={onToggleDescription}
                         className={`
-                            flex justify-around w-[56px] items-center rounded-full
+                            flex justify-around w-[64px] items-center rounded-xl py-2 px-2
                             ${showDescription && "bg-medwork-dark2 text-medwork-light2 dark:bg-medwork-light dark:text-medwork-dark"}
                             border border-medwork-brown dark:border-gray-400
                             hover:bg-medwork-dark hover:dark:bg-medwork-light
@@ -72,8 +72,8 @@ function MemberCard({
                             hover:text-medwork-light2 hover:dark:text-medwork-dark2
                         `}
                     >
-                        {showDescription ? <MdExpandLess /> : <MdExpandMore />}
                         <span>CV</span>
+                        {showDescription ? <MdExpandLess /> : <MdExpandMore />}
                     </button>
                 </div>
 
