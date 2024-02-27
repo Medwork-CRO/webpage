@@ -3,8 +3,8 @@ import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ImageCarousel from "@/components/ImageCarousel";
 import ProvidedServices from "@/components/ProvidedServices";
 import Statistics from "@/components/Statistics";
-import image1 from "@assets/stock-images/abstract.webp";
-import image2 from "@assets/stock-images/corporate-meeting.webp";
+import image1 from "@assets/stock-images/corporate-meeting.webp";
+import image2 from "@assets/stock-images/abstract.webp";
 import image3 from "@assets/stock-images/group-meeting.webp";
 
 const carouselTitle = "Advancing Drug Safety with Operational Excellence, Regulatory Compliance, and Adaptive Solutions";
@@ -36,7 +36,7 @@ const imageShowCases = [
 ];
 
 const statistics= [
-    { count: 15, symbol: "+", title: "years of", point: "experience" },
+    { count: 19, symbol: "+", title: "years of", point: "experience" },
     { count: 85, symbol: "+", title: "active", point: "clients" },
     { count: 30, symbol: "+", title: "", point: "safety professionals" },
 ];

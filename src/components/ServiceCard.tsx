@@ -45,7 +45,7 @@ function ServiceCard({
                     "
                 >
                     <Image
-                        className="object-cover h-56"
+                        className="object-cover h-48"
                         src={imageData}
                         alt={imageTitle}
                     />

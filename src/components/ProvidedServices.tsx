@@ -1,6 +1,6 @@
-import outsourcing from "@assets/vectors/outsourcing.webp";
-import safety from "@assets/vectors/safety.webp";
-import qualityAssurance from "@assets/vectors/quality-assurance.webp";
+import outsourcing from "@assets/services/outsourcing.webp";
+import safety from "@assets/services/safety.webp";
+import qualityAssurance from "@assets/services/quality-assurance.webp";
 import { StaticImageData } from "next/image";
 import "react-multi-carousel/lib/styles.css";
 import ServiceCard from "./ServiceCard";

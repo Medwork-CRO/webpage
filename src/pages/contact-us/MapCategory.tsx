@@ -153,7 +153,7 @@ function MapCategory({
                     border border-medwork-dark dark:border-medwork-light rounded-lg
                 ">
                     {getCompanyInfo()}
-                    {getIFrame(location, true, "h-[24]")}
+                    {getIFrame(location, true, "h-96")}
                 </div>
             </div>
         </>

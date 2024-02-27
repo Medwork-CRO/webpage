@@ -4,7 +4,7 @@ import ImageCategory from "@/components/ImageCategory";
 import InfoBoxMatrix, { InfoBoxAttributes } from "@/components/InfoBoxMatrix";
 import qualityAssurance from "@assets/services/quality-assurance.webp";
 
-const introParagraph = ["At Medwork, we recognize that maintaining the highest standards in pharmacovigilance is paramount for ensuring the safety of pharmaceutical products. Combining excellent knowledge of the pharmaceutical environment, a deep understanding of European and international pharmaceutical quality standards, and an unwavering commitment to quality, Medwork provides tailored and cost-effective quality assurance services in the area of pharmacovigilance (Good Pharmacovigilance Practices (GVP))."];
+const introParagraph = ["At Medwork, we recognize that maintaining the highest standards in pharmacovigilance is paramount for ensuring the safety of pharmaceutical products. Combining excellent knowledge of the pharmaceutical environment, a deep understanding of European and international pharmaceutical quality standards, and an unwavering commitment to quality, Medwork provides tailored and cost-effective quality assurance services in the area of pharmacovigilance (GVP)."];
 
 export const infoBoxes: InfoBoxAttributes[] = [
     {
