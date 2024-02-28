@@ -1,5 +1,6 @@
 import person1 from "@assets/people/nicolas_tsiakkas.webp";
 // import person2 from "@assets/people/eleni_voidou.webp";
+import person2 from "@assets/people/default.jpg";
 import person3 from "@assets/people/katerina_paschou.webp";
 import person4 from "@assets/people/fotoula_dragatsi.webp";
 import MemberCard, { MemberInfo } from "./MemberCard";
@@ -17,16 +18,16 @@ const membersInfo: MemberInfo[] = [
                 "Nikolas is a member of the Pharmacovigilance Working Group of the European CRO Federation (EUCROF). Additionally, from 2019 to 2022, he served on the organizing committee for the Drug Information Association (DIA) Global Forum for Qualified Persons in Pharmacovigilance.",
             ]
     },
-    // {
-    //     image: person2,
-    //     name: "Eleni Voidou",
-    //     title: "Administration Director",
-    //     description: [
-    //         "As the head of Medwork's operations, Eleni is one of the driving forces behind our commitment to client satisfaction and the continuous development of our team. With a background in the pharmaceutical industry dating back to 1997, her professional journey began in the medical device sector, where she transitioned from hand-on operational responsibilities to strategic roles in sales. Between 2004 and 2008, she took charge as the Sales Manager for the GE Healthcare ICU/CCU monitoring product line in Greece, navigating the intricacies of the industry.",
-    //         "In 2009, Eleni seamlessly shifted gears into the pharmaceutical domain, taking on the role of Administration Director at Medwork. In this capacity, she not only refined her skills in business development and operational management but also played a pivotal role in steering the company towards sustained growth.",
-    //         "Eleni holds a Bachelor's degree in Physics and a Master's degree in Biomedical Engineering from Imperial College London.",
-    //     ]
-    // },
+    {
+        image: person2,
+        name: "Eleni Voidou",
+        title: "Administration Director",
+        description: [
+            "As the head of Medwork's operations, Eleni is one of the driving forces behind our commitment to client satisfaction and the continuous development of our team. With a background in the pharmaceutical industry dating back to 1997, her professional journey began in the medical device sector, where she transitioned from hand-on operational responsibilities to strategic roles in sales. Between 2004 and 2008, she took charge as the Sales Manager for the GE Healthcare ICU/CCU monitoring product line in Greece, navigating the intricacies of the industry.",
+            "In 2009, Eleni seamlessly shifted gears into the pharmaceutical domain, taking on the role of Administration Director at Medwork. In this capacity, she not only refined her skills in business development and operational management but also played a pivotal role in steering the company towards sustained growth.",
+            "Eleni holds a Bachelor's degree in Physics and a Master's degree in Biomedical Engineering from Imperial College London.",
+        ]
+    },
     {
         image: person3,
         name: "Katerina Paschou",
@@ -60,7 +61,7 @@ function People() {
 
     return (
         <div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 sm:gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 sm:gap-4">
                 {membersInfo.map((memberInfo, i) => (
                     <MemberCard
                         {...memberInfo}
