@@ -65,21 +65,21 @@ function App({ Component, pageProps }: AppProps) {
                 <link rel="icon" href="/favicon.ico" />
 
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://itsiakkas.xyz/" />
+                <meta property="og:url" content="https://medwork.gr/" />
                 <meta property="og:title" content="Medwork" />
                 <meta property="og:description" content="Medwork Website" />
                 <meta
                     property="og:image"
-                    content="https://avatars.githubusercontent.com/u/23459466?v=4"
+                    content="https://medwork.gr/_next/static/media/medwork-logo.0984309a.png"
                 />
 
                 <meta property="twitter:card" content="summary_large_image" />
-                <meta property="twitter:url" content="https://itsiakkas.xyz/" />
+                <meta property="twitter:url" content="https://medwork.gr/" />
                 <meta property="twitter:title" content="Medwork" />
                 <meta property="twitter:description" content="Medwork Website" />
                 <meta
                     property="twitter:image"
-                    content="https://avatars.githubusercontent.com/u/23459466?v=4"
+                    content="https://medwork.gr/_next/static/media/medwork-logo.0984309a.png"
                 />
             </Head>
             <Header />
