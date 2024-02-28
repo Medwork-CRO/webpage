@@ -1,12 +1,9 @@
-/** @type {import('next').NextConfig} */
-// const isProd = process.env.NODE_ENV === "production";
-
+/**
+ * @type {import('next').NextConfig}
+ */
 const nextConfig = {
     reactStrictMode: true,
-    // assetPrefix: "medwork.gr",
-    images: {
-        unoptimized: true,
-    },
+    assetPrefix: "medwork.gr",
     async redirects() {
         return [
             {
@@ -15,7 +12,7 @@ const nextConfig = {
                 permanent: true,
             },
             {
-                source: "/about.php",
+                source: "/about-us.php",
                 destination: "/about-us",
                 permanent: true,
             },
@@ -36,12 +33,12 @@ const nextConfig = {
             },
             {
                 source: "/local-literature-review.php",
-                destination: "/services/safety",
+                destination: "/services/safety/global-and-local-medical-literature-monitoring",
                 permanent: true,
             },
             {
                 source: "/local-for-greece-cyprus.php",
-                destination: "/services/safety",
+                destination: "/services/safety/global-and-local-medical-literature-monitoring",
                 permanent: true,
             },
             {
@@ -51,7 +48,7 @@ const nextConfig = {
             },
             {
                 source: "/audit-preparation-conduct.php",
-                destination: "/services/safety",
+                destination: "/services/quality-assurance",
                 permanent: true,
             },
             {
@@ -71,12 +68,12 @@ const nextConfig = {
             },
             {
                 source: "/materiovigilance.php",
-                destination: "/services/materiovigilance",
+                destination: "/services/safety/medical-device-vigilance",
                 permanent: true,
             },
             {
                 source: "/cosmetovigilance.php",
-                destination: "/services/cosmetovigilance",
+                destination: "/services/safety",
                 permanent: true,
             },
             {
@@ -86,26 +83,21 @@ const nextConfig = {
             },
             {
                 source: "/legislation.php",
-                destination: "/",
+                destination: "/legislation",
                 permanent: true,
             },
             {
                 source: "/greek-legislation.php",
-                destination: "/",
+                destination: "/legislation",
                 permanent: true,
             },
             {
                 source: "/cypriot-legislation.php",
-                destination: "/",
+                destination: "/legislation",
                 permanent: true,
             },
             {
                 source: "/greek-materiovigilance.php",
-                destination: "/",
-                permanent: true,
-            },
-            {
-                source: "/useful-links.php",
                 destination: "/",
                 permanent: true,
             },
@@ -116,7 +108,7 @@ const nextConfig = {
             },
             {
                 source: "/code-of-conduct.php",
-                destination: "/",
+                destination: "/pdfs/code-of-conduct.pdf",
                 permanent: true,
             },
             {
@@ -161,7 +153,7 @@ const nextConfig = {
             },
             {
                 source: "/greek-materiovigilance.php",
-                destination: "/legislation",
+                destination: "/services/safety/medical-device-vigilance",
                 permanent: true,
             },
             {
