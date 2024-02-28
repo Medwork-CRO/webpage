@@ -1,9 +1,12 @@
-/**
- * @type {import('next').NextConfig}
- */
+/** @type {import('next').NextConfig} */
+// const isProd = process.env.NODE_ENV === "production";
+
 const nextConfig = {
     reactStrictMode: true,
-    assetPrefix: "medwork.gr",
+    // assetPrefix: "medwork.gr",
+    images: {
+        unoptimized: true,
+    },
     async redirects() {
         return [
             {
