@@ -1,4 +1,5 @@
 import "@/styles/globals.css";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
@@ -92,6 +93,7 @@ function App({ Component, pageProps }: AppProps) {
                     <Footer theme={theme} setTheme={setTheme} />
                 </div>
                 <ScrollToTopButton />
+                <SpeedInsights/>
             </main>
         </div>
     );
