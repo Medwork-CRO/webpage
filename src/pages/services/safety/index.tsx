@@ -17,7 +17,7 @@ const paragraphs = [
 const title = "Our services cover all aspects of pharmacovigilance, including:";
 const showcases = [
     { title: "EU Qualified Person for Pharmacovigilance (QPPV)", point: "" },
-    { title: "Local pharmacovigilance contact/Qualified Person (Greece, Cyprus, Malta)", point: "" },
+    { title: "Local pharmacovigilance contact / Qualified Person (Greece, Cyprus, Malta)", point: "" },
     { title: "Development and maintenance of pharmacovigilance systems and Pharmacovigilance System Master File (PSMF) ", point: "" },
     { title: "Management of case reports ", point: "" },
     { title: "Signal management activities (including monitoring of EudraVigilance data via EudraVigilance Data Analysis System (EVDAS))", point: "" },
@@ -28,7 +28,7 @@ const showcases = [
     { title: "Local and global literature monitoring", point: "" },
     { title: "Local (Greece, Cyprus, Malta) and EU pharmacovigilance regulatory intelligence", point: "" },
     { title: "Submission of data to Extended EudraVigilance Medicinal Product Dictionary (XEVMPD)", point: "" },
-    { title: "Clinical trial pharmacovigilance (including EudraVigilance registration and provision of Responsible Person, management of Serious Adverse Event (SAE)/ Suspected Unexpected Serious Adverse Reaction (SUSAR), Development Safety Update Report (DSUR) preparation and submission, literature monitoring)", point: "" },
+    { title: "Clinical trial pharmacovigilance (including EudraVigilance registration and provision of Responsible Person, management of Serious Adverse Event (SAE) / Suspected Unexpected Serious Adverse Reaction (SUSAR), Development Safety Update Report (DSUR) preparation and submission, literature monitoring)", point: "" },
     { title: "Medical information", point: "" },
     { title: "Pharmacovigilance training", point: "" },
 ];
