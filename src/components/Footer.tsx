@@ -1,6 +1,6 @@
 import Logo from "@/components/Logo";
 import RoundedButton from "@/components/RoundedButton";
-import { THEME } from "@/types/Theme";
+import { Theme } from "@/types/Theme";
 import TUV_27001 from "@assets/certificates/TUV_hellas_iso27001.webp";
 import TUV_9001 from "@assets/certificates/TUV_hellas_iso9001.webp";
 import { FaLinkedin } from "@react-icons/all-files/fa/FaLinkedin";
@@ -14,8 +14,8 @@ import { AboutUs, Careers, Services } from "./HeaderLinks";
 import CompanyInfo from "./companyInfo";
 
 type ThemeSelectorProps = {
-    theme: THEME;
-    setTheme: (theme: THEME) => void;
+    theme: Theme;
+    setTheme: (theme: Theme) => void;
 };
 
 const mail = "medworkinfo@medwork.gr";
@@ -50,10 +50,10 @@ function ThemeSelector({ theme, setTheme }: ThemeSelectorProps) {
     let themeIcon: ReactElement;
     let tooltipText: string;
 
-    if (theme === THEME.DARK) {
+    if (theme === Theme.DARK) {
         themeIcon = <MdDarkMode />;
         tooltipText = "Switch to light mode";
-    } else if (theme === THEME.LIGHT) {
+    } else if (theme === Theme.LIGHT) {
         themeIcon = <MdLightMode />;
         tooltipText = "Switch to auto mode";
     } else {
@@ -62,12 +62,12 @@ function ThemeSelector({ theme, setTheme }: ThemeSelectorProps) {
     }
 
     const handleThemeChange = () => {
-        if (theme === THEME.DARK) {
-            setTheme(THEME.LIGHT);
-        } else if (theme === THEME.LIGHT) {
-            setTheme(THEME.AUTO);
+        if (theme === Theme.DARK) {
+            setTheme(Theme.LIGHT);
+        } else if (theme === Theme.LIGHT) {
+            setTheme(Theme.AUTO);
         } else {
-            setTheme(THEME.DARK);
+            setTheme(Theme.DARK);
         }
     };
 

@@ -5,10 +5,11 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import { useEffect, useState } from "react";
 
+import Cookies from "@/components/Cookies";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
-import { THEME } from "@/types/Theme";
+import { Theme } from "@/types/Theme";
 
 const URL = "https://medwork.gr";
 const TITLE = "Medwork";
@@ -17,11 +18,11 @@ const IMAGE = "https://medwork.gr/_next/static/media/medwork-logo.0984309a.png";
 
 function initializeThemeSetting() {
     if (typeof window === "undefined") {
-        return THEME.AUTO;
+        return Theme.AUTO;
     }
 
     const savedSetting = localStorage.getItem("theme");
-    return savedSetting ? savedSetting as THEME : THEME.AUTO;
+    return savedSetting ? savedSetting as Theme : Theme.AUTO;
 }
 
 function App({ Component, pageProps }: AppProps) {
@@ -32,19 +33,19 @@ function App({ Component, pageProps }: AppProps) {
         const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
         const applyPreferredTheme = () => {
-            const preferredTheme = mediaQuery.matches ? THEME.DARK : THEME.LIGHT;
-            root.classList.remove(mediaQuery.matches ? THEME.LIGHT : THEME.DARK);
+            const preferredTheme = mediaQuery.matches ? Theme.DARK : Theme.LIGHT;
+            root.classList.remove(mediaQuery.matches ? Theme.LIGHT : Theme.DARK);
             root.classList.add(preferredTheme);
         };
 
-        if (theme === THEME.AUTO) {
+        if (theme === Theme.AUTO) {
             applyPreferredTheme();
             mediaQuery.addEventListener("change", applyPreferredTheme);
 
             return () => mediaQuery.removeEventListener("change", applyPreferredTheme);
         }
 
-        root.classList.remove(THEME.LIGHT, THEME.DARK);
+        root.classList.remove(Theme.LIGHT, Theme.DARK);
         root.classList.add(theme);
     }, [theme]);
 
@@ -87,6 +88,7 @@ function App({ Component, pageProps }: AppProps) {
                     <Footer theme={theme} setTheme={setTheme} />
                 </div>
                 <ScrollToTopButton />
+                <Cookies />
                 <SpeedInsights />
             </main>
         </div>
