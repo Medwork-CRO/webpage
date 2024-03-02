@@ -1,3 +1,8 @@
+import Image from "next/image";
+import Link from "next/link";
+import { ReactElement } from "react";
+import { MdDarkMode, MdLightMode, MdOutlineBrightnessAuto } from "react-icons/md";
+
 import Logo from "@/components/Logo";
 import RoundedButton from "@/components/RoundedButton";
 import { Theme } from "@/types/Theme";
@@ -6,12 +11,8 @@ import TUV_9001 from "@assets/certificates/TUV_hellas_iso9001.webp";
 import { FaLinkedin } from "@react-icons/all-files/fa/FaLinkedin";
 import { MdEmail } from "@react-icons/all-files/md/MdEmail";
 import { MdLocationOn } from "@react-icons/all-files/md/MdLocationOn";
-import Image from "next/image";
-import Link from "next/link";
-import { ReactElement } from "react";
-import { MdDarkMode, MdLightMode, MdOutlineBrightnessAuto } from "react-icons/md";
 import { AboutUs, Careers, Services } from "./HeaderLinks";
-import CompanyInfo from "./companyInfo";
+import CompanyInfo from "./CompanyInfo";
 
 type ThemeSelectorProps = {
     theme: Theme;
