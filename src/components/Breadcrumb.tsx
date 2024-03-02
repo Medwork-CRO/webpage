@@ -1,9 +1,11 @@
-import { infoBoxes as safetyInfoBoxes } from "@/pages/services/safety";
-import { infoBoxes as qualityAssuranceInfoBoxes } from "@/pages/services/quality-assurance";
+
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
 import { MdExpandMore } from "react-icons/md";
+
+import { infoBoxes as safetyInfoBoxes } from "@/pages/services/safety";
+import { infoBoxes as qualityAssuranceInfoBoxes } from "@/pages/services/quality-assurance";
 import { InfoBoxAttributes } from "./InfoBoxMatrix";
 
 const SERVICES = ["safety", "quality-assurance"];
@@ -99,7 +101,7 @@ function pathBeautifier(input: string): string {
 const Breadcrumbs = () => {
     const { pathname } = useRouter();
 
-    let pathNames = ["home"].concat(pathname.split("/").filter(x => !!x));
+    let pathNames = ["home"].concat(pathname.split("/").filter((x: string) => !!x));
     const paths = pathNames.map((_name: string, idx) => "/" + pathNames.slice(0, idx + 1).join("/"));
     pathNames = pathNames.map(pathBeautifier);
 
