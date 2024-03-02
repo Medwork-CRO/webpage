@@ -1,14 +1,15 @@
-import "@/styles/globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { AnimatePresence } from "framer-motion";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import { useEffect, useState } from "react";
+import { Analytics } from "@vercel/analytics/react";
 
 import Cookies from "@/components/Cookies";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
+import "@/styles/globals.css";
 import { Theme } from "@/types/Theme";
 
 const URL = "https://medwork.gr";
@@ -89,6 +90,7 @@ function App({ Component, pageProps }: AppProps) {
                 </div>
                 <ScrollToTopButton />
                 <Cookies />
+                <Analytics />
                 <SpeedInsights />
             </main>
         </div>
