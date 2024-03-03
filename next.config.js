@@ -116,22 +116,22 @@ const nextConfig = {
             },
             {
                 source: "/nikolas-tsiakkas.php",
-                destination: "/about-us",
+                destination: "/about-us#leadership",
                 permanent: true,
             },
             {
                 source: "/eleni-voidou.php",
-                destination: "/about-us",
+                destination: "/about-us#leadership",
                 permanent: true,
             },
             {
                 source: "/katerina-paschou.php",
-                destination: "/about-us",
+                destination: "/about-us#leadership",
                 permanent: true,
             },
             {
                 source: "/fotoula-dragatsi.php",
-                destination: "/about-us",
+                destination: "/about-us#leadership",
                 permanent: true,
             },
             {
@@ -161,6 +161,31 @@ const nextConfig = {
             },
             {
                 source: "/useful-links.php",
+                destination: "/legislation",
+                permanent: true,
+            },
+            {
+                source: "/more-cclinical.php",
+                destination: "/legislation",
+                permanent: true,
+            },
+            {
+                source: "/more-legislation.php",
+                destination: "/legislation",
+                permanent: true,
+            },
+            {
+                source: "/more-articles.php",
+                destination: "/legislation",
+                permanent: true,
+            },
+            {
+                source: "/more-clegislation.php",
+                destination: "/legislation",
+                permanent: true,
+            },
+            {
+                source: "/images/:path*",
                 destination: "/legislation",
                 permanent: true,
             },
