@@ -1,8 +1,10 @@
+import Link from "next/link";
 import React, { useState, useEffect } from "react";
 
 const LocalStorageProperty = "cookie-accepted";
 
 export default function Cookies() {
+    const cookiesPdf = "/pdfs/cookie-notice.pdf";
     const [showPrompt, setShowPrompt] = useState(true);
 
     useEffect(() => {
@@ -31,7 +33,15 @@ export default function Cookies() {
                     border-medwork-dark dark:border-medwork-light border
                 ">
                 <span>
-                    We only use essential cookies required for our website to function properly and improve your browsing experience.
+                    We only use essential cookies required for our website to function properly and improve your browsing experience. 
+                    {" "}<Link
+                        className="font-light narrow-letters whitespace-nowrap hover:underline focus-visible:underline text-blue-600 dark:text-blue-400"
+                        href={cookiesPdf}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Cookies Policy
+                    </Link>
                 </span>
                 <button
                     onClick={handleAccept}
