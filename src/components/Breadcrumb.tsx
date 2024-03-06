@@ -19,7 +19,6 @@ function hoverList(list: {link: string, title: string}[]) {
     ">
         <div className="flex flex-col gap-2">
             {list.map((item, i) => {
-                console.log("item.title :>> ", item.title);
                 return (
                     <React.Fragment key={i}>
                         <Link

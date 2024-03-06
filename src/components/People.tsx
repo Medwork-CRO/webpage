@@ -75,7 +75,7 @@ function People() {
                 <div className="hidden sm:block">
                     <div className="
                     text-md md:text-lg
-                    flex flex-col gap-4 mt-4 pt-4 text-medwork-dark dark:text-medwork-light
+                    flex flex-col gap-4 pt-4 text-medwork-dark dark:text-medwork-light
                     border-t border-t-medwork-dark dark:border-t-medwork-light
                 ">
                         {membersInfo[selectedMemberIndex].description.map((item, index) => (

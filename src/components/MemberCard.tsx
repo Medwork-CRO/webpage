@@ -38,9 +38,9 @@ function MemberCard({
             viewport={{ once: true }}
             className="flex flex-col items-center content-center text-center text-medwork-dark dark:text-medwork-light"
         >
-            <div className="flex h-[230px] rounded-xl bg-cover">
+            <div className={`flex h-[240px] rounded-xl bg-cover ${showDescription && "shadow-xl shadow-blue-500/50 dark:shadow-blue-400/50 drop-shadow-2xl"}`}>
                 <Image
-                    className="w-[156px] rounded-lg border-2 border-blue-500 object-cover"
+                    className="w-[170px] rounded-lg border-2 border-blue-500 dark:border-blue-400 object-cover"
                     src={image}
                     alt={name}
                 />
@@ -59,13 +59,12 @@ function MemberCard({
                 )}
                 <p className="text-lg font-thin text-blue-500">{title}</p>
 
-
                 <div className="flex flex-col items-center mt-3 text-sm">
                     <button
                         onClick={onToggleDescription}
                         className={`
                             flex justify-around w-[64px] items-center rounded-xl py-2 px-2
-                            ${showDescription && "bg-medwork-dark2 text-medwork-light2 dark:bg-medwork-light dark:text-medwork-dark"}
+                            ${showDescription && "bg-medwork-dark2 dark:bg-medwork-light text-medwork-light2 dark:text-medwork-dark"}
                             border border-medwork-brown dark:border-gray-400
                             hover:bg-medwork-dark hover:dark:bg-medwork-light
                             text-medwork-brown dark:text-gray-400

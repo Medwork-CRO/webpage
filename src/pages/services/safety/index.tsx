@@ -11,7 +11,7 @@ import { useState } from "react";
 //     "Medwork is dedicated to supporting Marketing Authorisation Holders in fulfilling their pharmacovigilance obligations. With over 15 years of experience in different facets of pharmacovigilance, our team possesses a wealth of knowledge and a comprehensive understanding of the intricacies involved in ensuring drug safety.",
 // ];
 const paragraphs = [
-    "Medwork is dedicated to supporting marketing authorization holders and medical device manufacturers in fulfilling their vigilance obligations. With over 15 years of experience across various aspects of vigilance, our team possesses a wealth of knowledge and a comprehensive understanding of the complexities involved in ensuring the safety of medicines and medical devices.",
+    "Medwork is dedicated to supporting marketing authorization holders and medical device manufacturers in fulfilling their vigilance obligations. With over 19 years of experience across various aspects of vigilance, our team possesses a wealth of knowledge and a comprehensive understanding of the complexities involved in ensuring the safety of medicines and medical devices.",
 ];
 
 const title = "Our services cover all aspects of pharmacovigilance, including:";
@@ -98,19 +98,21 @@ function Safety() {
                         variants={variants}
                         viewport={{ once: true }}>
                         <LeadingParagraphs withLead={false} paragraphs={paragraphs} />
-                        <button onClick={toggleShowcasing} className={`
-                        w-full sm:max-w-[120px] mx-auto mt-4 p-1
-                        border border-medwork-brown dark:border-gray-400 rounded-full
-                        bg-opacity-25 ${showShowcasing && "bg-medwork-dark dark:bg-medwork-light mb-8"}
-                        hover:bg-medwork-dark2 hover:dark:bg-medwork-light2
-                        font-ultralight whitespace-pre-line tracking-wide
-                        narrow-letters leading-relaxed italic
-                        text-medwork-brown dark:text-gray-400 text-md md:text-lg text-center
-                        hover:text-medwork-light2 hover:dark:text-medwork-brown2
-                    `}>
+                        <button
+                            onClick={toggleShowcasing}
+                            className={`
+                                w-full sm:max-w-[120px] mx-auto mt-4 p-1
+                                border border-medwork-brown dark:border-gray-400 rounded-full
+                                bg-opacity-25 ${showShowcasing && "bg-medwork-dark dark:bg-medwork-light mb-8"}
+                                hover:bg-medwork-dark2 hover:dark:bg-medwork-light2
+                                font-ultralight whitespace-pre-line tracking-wide
+                                narrow-letters leading-relaxed italic
+                                text-medwork-brown dark:text-gray-400 text-md md:text-lg text-center
+                                hover:text-medwork-light2 hover:dark:text-medwork-brown2
+                        `}>
                             {showShowcasing ? "Read Less" : "Read More"}
                         </button>
-                        {showShowcasing && <Showcasing title={title} showcases={showcases} />}
+                        {showShowcasing && <Showcasing title={title} showcases={showcases} textSize={"text-lg md:text-xl"} smallTextSize={"text-sm"} />}
                     </ motion.div>
                     <InfoBoxMatrix infoBoxes={infoBoxes}/>
                 </div>

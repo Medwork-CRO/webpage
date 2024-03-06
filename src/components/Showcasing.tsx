@@ -6,7 +6,7 @@ type Showcase = {
     point: string
 };
 
-function Showcasing({ title, showcases }: { title: string, showcases: Showcase[] }) {
+function Showcasing({ title, textSize, smallTextSize, showcases }: { title: string, textSize?: string, smallTextSize?: string, showcases: Showcase[] }) {
     const variants = {
         visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
         hidden: { opacity: 0, scale: 0.8 }
@@ -18,14 +18,16 @@ function Showcasing({ title, showcases }: { title: string, showcases: Showcase[]
             whileInView="visible"
             variants={variants}
             viewport={{ once: true }}
-            className="
-            w-full flex flex-col gap-6
-            text-medwork-brown dark:text-gray-400
-        ">
+            className={`
+                w-full flex flex-col gap-6
+                text-medwork-brown dark:text-gray-400
+                ${textSize}
+            `}
+        >
             <span
                 id={title.split(" ").join("-").toLowerCase()}
                 className={`
-                pl-4 mt-2 mb-4 text-2xl md:text-3xl text-start sm:text-center
+                pl-4 mt-2 mb-4 ${textSize ?? "text-2xl md:text-3xl"} text-start sm:text-center
                 font-semibold uppercase tracking-wide leading-tight narrow-letters
               `}
             >
@@ -38,8 +40,8 @@ function Showcasing({ title, showcases }: { title: string, showcases: Showcase[]
             ">
                 {showcases.map((showcase, i) => (
                     <li className="narrow-letters leading-relaxed" key={i}>
-                        <p className="font-normal text-2xl">{showcase.title}</p>
-                        <p className="font-thin text-xl">{showcase.point}</p>
+                        <p className={`font-normal ${textSize ?? "text-2xl md:text-3xl"}`}>{showcase.title}</p>
+                        <p className={`font-thin ${smallTextSize ?? "text-xl"}`}>{showcase.point}</p>
                     </li>
                 ))}
             </ul>

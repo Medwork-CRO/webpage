@@ -9,7 +9,7 @@ function Logo() {
             aria-label="Medwork Logo"
             href="/"
         >
-            <Image src={medworkLogo} alt="Logo image" width={176} />
+            <Image src={medworkLogo} alt="Logo image" width={176} className="antialiased" />
             {/* <Image src={medworkLogo} alt="Logo image" width={46} />
             <div
                 aria-label="Name"

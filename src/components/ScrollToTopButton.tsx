@@ -5,11 +5,7 @@ const ScrollToTopButton = () => {
     const [isVisible, setIsVisible] = useState(false);
 
     const toggleVisibility = () => {
-        if (window.scrollY > document.documentElement.clientHeight) {
-            setIsVisible(true);
-        } else {
-            setIsVisible(false);
-        }
+        setIsVisible(window.scrollY > document.documentElement.clientHeight/2);
     };
 
     useEffect(() => {
@@ -33,7 +29,7 @@ const ScrollToTopButton = () => {
                 scrollToTopButton z-30
                 fixed bottom-8 right-4 p-4 sm:p-3 rounded-full
                 text-medwork-dark dark:text-medwork-light
-                bg-medwork-light dark:bg-medwork-dark bg-opacity-40
+                bg-medwork-light dark:bg-medwork-dark bg-opacity-80
                 border-medwork-dark dark:border-medwork-light border
                 ${isVisible ? "visible" : ""}
             `}
