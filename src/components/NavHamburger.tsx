@@ -60,14 +60,14 @@ function VerticalNav({ label, href, subCategories }: NavProp) {
                         <div className="flex items-center">
                             <span className={`pl-2 ${activeOption}`}>{label.toUpperCase()}</span>
                         </div>
-                        <MdExpandMore className={`text-xl mr-2 text-medwork-dark dark:text-medwork-light rounded-full ${isClicked ? "rotate-0" : "rotate-180"}`} />
+                        <MdExpandMore className={`text-xl mr-2 text-medwork-dark dark:text-medwork-light rounded-full ${isClicked ? "rotate-180" : "rotate-0"}`} />
                     </>
                 )}
             </div>
             {isClicked && hasSubCategories && (
                 <div className="
-                    flex w-[200px] flex-col
-                    ml-2 pt-8 pl-4 gap-8
+                    flex flex-col
+                    ml-2 pt-8 pl-6 gap-8
                     border-l border-medwork-dark dark:border-medwork-light
                 ">
                     {subCategories.map((subCategory) => (
