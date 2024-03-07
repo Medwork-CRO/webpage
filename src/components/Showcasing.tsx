@@ -19,7 +19,7 @@ function Showcasing({ title, textSize, smallTextSize, showcases }: { title: stri
             variants={variants}
             viewport={{ once: true }}
             className={`
-                w-full flex flex-col gap-6
+                w-full flex flex-col
                 text-medwork-brown dark:text-gray-400
                 ${textSize}
             `}
@@ -27,7 +27,7 @@ function Showcasing({ title, textSize, smallTextSize, showcases }: { title: stri
             <span
                 id={title.split(" ").join("-").toLowerCase()}
                 className={`
-                pl-4 mt-2 mb-4 ${textSize ?? "text-2xl md:text-3xl"} text-start sm:text-center
+                mb-8 sm:mb-12 ${textSize ?? "text-2xl md:text-3xl"} text-start sm:text-center
                 font-semibold uppercase tracking-wide leading-tight narrow-letters
               `}
             >
