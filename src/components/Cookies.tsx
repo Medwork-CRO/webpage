@@ -5,12 +5,14 @@ const LocalStorageProperty = "cookie-accepted";
 
 export default function Cookies() {
     const cookiesPdf = "/pdfs/cookie-notice.pdf";
-    const [showPrompt, setShowPrompt] = useState(true);
+    const [showPrompt, setShowPrompt] = useState(false);
 
     useEffect(() => {
         const cookieAccepted = localStorage.getItem(LocalStorageProperty);
         if (cookieAccepted) {
             setShowPrompt(false);
+        } else {
+            setShowPrompt(true);
         }
     }, []);
 
