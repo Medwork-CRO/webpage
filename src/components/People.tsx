@@ -61,12 +61,13 @@ function People() {
 
     return (
         <div id="leadership">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 sm:gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 sm:gap-8 mb-4">
                 {membersInfo.map((memberInfo, i) => (
                     <MemberCard
                         {...memberInfo}
                         onToggleDescription={() => toggleDescription(i)}
                         showDescription={selectedMemberIndex === i}
+                        selected={selectedMemberIndex !== null}
                         key={i}
                     />
                 ))}
@@ -75,7 +76,7 @@ function People() {
                 <div className="hidden sm:block">
                     <div className="
                     text-md md:text-lg
-                    flex flex-col gap-4 pt-4 text-medwork-dark dark:text-medwork-light
+                    flex flex-col gap-4 pt-8 text-medwork-dark dark:text-medwork-light
                     border-t border-t-medwork-dark dark:border-t-medwork-light
                 ">
                         {membersInfo[selectedMemberIndex].description.map((item, index) => (

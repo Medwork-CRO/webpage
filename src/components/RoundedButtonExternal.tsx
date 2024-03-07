@@ -41,17 +41,19 @@ function ImageryAddition({type}: {type: ButtonType}) {
 function RoundedButtonExternal({ label, href, ariaLabel, type }: RoundedButtonExternalProps) {
     return (
         <Link
-            className="flex flex-row items-center justify-center gap-4
+            aria-label={ariaLabel}
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="
+                flex flex-row items-center justify-center gap-4
                 cursor-pointer text-medwork-light dark:text-medwork-dark
                 font-light narrow-letters leading-relaxed whitespace-nowrap
                 py-3 sm:py-2 px-6 sm:px-4 w-[200px] rounded-full
                 text-lg md:text-xl text-center
                 bg-blue-400 hover:bg-blue-500 focus-visible:bg-blue-500
-                transition duration-100 ease-in focus:outline-none"
-            aria-label={ariaLabel}
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
+                transition duration-100 ease-in focus:outline-none
+            "
         >
             <ImageryAddition type={type} />
             {label}

@@ -14,6 +14,7 @@ export type MemberInfo = {
 type MemberCardProps = MemberInfo & {
     onToggleDescription: () => void;
     showDescription: boolean;
+    selected: boolean;
 };
 
 function MemberCard({
@@ -24,6 +25,7 @@ function MemberCard({
     description,
     onToggleDescription,
     showDescription,
+    selected,
 }: MemberCardProps) {
     const variants = {
         visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
@@ -38,9 +40,9 @@ function MemberCard({
             viewport={{ once: true }}
             className="flex flex-col items-center content-center text-center text-medwork-dark dark:text-medwork-light"
         >
-            <div className={`flex h-[240px] rounded-xl bg-cover ${showDescription && "shadow-xl shadow-blue-500/50 dark:shadow-blue-400/50 drop-shadow-2xl"}`}>
+            <div className={`flex h-[240px] rounded-sm bg-cover border-2 border-blue-500 dark:border-blue-400 ${showDescription && "shadow-2xl shadow-blue-500 dark:shadow-blue-400 drop-shadow-2xl"}`}>
                 <Image
-                    className="w-[170px] rounded-lg border-2 border-blue-500 dark:border-blue-400 object-cover"
+                    className={`w-[170px] object-cover ${(!showDescription && selected) &&  "sm:blur-sm"}`}
                     src={image}
                     alt={name}
                 />
@@ -63,14 +65,22 @@ function MemberCard({
                     <button
                         onClick={onToggleDescription}
                         className={`
-                            flex justify-around w-[64px] items-center rounded-xl py-2 px-2
+                            flex flex-row items-center justify-center gap-2
+                            cursor-pointer text-medwork-light dark:text-medwork-dark
+                            font-light narrow-letters leading-relaxed whitespace-nowrap
+                            py-2 sm:py-1 px-4 sm:px-3 rounded-full
+                            text-md md:text-sm text-center
+                            bg-blue-400 hover:bg-blue-500 focus-visible:bg-blue-500
+                            transition duration-100 ease-in focus:outline-none
+                            ${showDescription && "bg-blue-500"}
+                        `}
+                    >
+                        {/* flex justify-around w-[64px] items-center rounded-xl py-2 px-2
                             ${showDescription && "bg-medwork-dark2 dark:bg-medwork-light text-medwork-light2 dark:text-medwork-dark"}
                             border border-medwork-brown dark:border-gray-400
                             hover:bg-medwork-dark hover:dark:bg-medwork-light
                             text-medwork-brown dark:text-gray-400
-                            hover:text-medwork-light2 hover:dark:text-medwork-dark2
-                        `}
-                    >
+                            hover:text-medwork-light2 hover:dark:text-medwork-dark2 */}
                         <span>CV</span>
                         {showDescription ? <MdExpandLess /> : <MdExpandMore />}
                     </button>
@@ -80,11 +90,14 @@ function MemberCard({
                     <div className="block sm:hidden">
                         <div className="flex flex-col">
                             {description.map((item, index) => (
-                                <p key={index} className="
-                                mt-4 overflow-ellipsis
-                                font-light narrow-letters leading-relaxed
-                                text-md text-left
-                            ">{item}</p>))}
+                                <p
+                                    key={index}
+                                    className="
+                                        mt-4 overflow-ellipsis
+                                        font-light narrow-letters leading-relaxed
+                                        text-md text-left
+                                    "
+                                >{item}</p>))}
                         </div>
                     </div>
                 )}
