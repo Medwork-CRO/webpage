@@ -15,11 +15,19 @@ function Header() {
         setOpen(false);
     }, [router.asPath]);
 
+    useEffect(() => {
+        document.body.style.overflow = isOpen ? "hidden" : "auto";
+
+        return () => {
+            document.body.style.overflow = "auto";
+        };
+    }, [isOpen]);
+
     const { scrollYProgress } = useScroll();
 
     return (
         <header
-            className={"sticky top-0 z-50 w-full font-sans bg-medwork-light dark:bg-medwork-dark transition-all duration-300"} // shadow-sm
+            className={"sticky top-0 z-50 w-full font-sans bg-medwork-light dark:bg-medwork-dark transition-all duration-300"}
         >
             <div className="mx-auto flex max-w-[1200px] py-2 sm:py-3 px-2 md:px-6 eq:px-0 items-center justify-between">
                 <Logo />

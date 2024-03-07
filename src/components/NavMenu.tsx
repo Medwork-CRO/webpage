@@ -44,16 +44,20 @@ function HorizontalNav({ label, href, subCategories }: NavProp) {
     return (
         <div className="relative py-2 text-gray-600 dark:text-gray-400" ref={menuRef} onBlur={handleBlur}>
             {hasSubCategories &&
-            <div tabIndex={0} className={`
-                peer flex items-center py-2 font-normal narrow-letters
-                text-xl hover:text-blue-500 focus-visible:text-blue-500
-                border-b-2 ${activeClasses}
-                `}
-            onKeyDown={hasSubCategories ? handleKeyDown : undefined}
-            onMouseEnter={() => setIsOpen(true)}
-            onMouseLeave={() => setIsOpen(false)}
-            >
-                {label.toUpperCase()}<MdExpandMore className="ml-2 "/></div>}
+                <div
+                    tabIndex={0}
+                    className={`
+                        peer flex items-center py-2 font-normal narrow-letters
+                        text-xl hover:text-blue-500 focus-visible:text-blue-500
+                        border-b-2 ${activeClasses}
+                    `}
+                    onKeyDown={hasSubCategories ? handleKeyDown : undefined}
+                    onMouseEnter={() => setIsOpen(true)}
+                    onMouseLeave={() => setIsOpen(false)}
+                >
+                    {label.toUpperCase()}<MdExpandMore className="ml-2 "/>
+                </div>
+            }
             {!hasSubCategories &&
                 <Link
                     tabIndex={0}
@@ -69,16 +73,17 @@ function HorizontalNav({ label, href, subCategories }: NavProp) {
                 </Link>
             }
             {hasSubCategories && isOpen && (
-                <div className="
-                    absolute flex flex-col w-[220px]
-                    right-0 z-10 rounded-md
-                    shadow-2xl drop-shadow-lg
-                    text-lg font-normal narrow-letters
-                    border border-gray-300 dark:border-gray-400
-                    bg-medwork-light dark:bg-medwork-dark
-                "
-                onMouseEnter={() => setIsOpen(true)}
-                onMouseLeave={() => setIsOpen(false)}
+                <div
+                    className="
+                        absolute flex flex-col w-[220px]
+                        right-0 z-10 rounded-md
+                        shadow-2xl drop-shadow-lg
+                        text-lg font-normal narrow-letters
+                        border border-gray-300 dark:border-gray-400
+                        bg-medwork-light dark:bg-medwork-dark
+                    "
+                    onMouseEnter={() => setIsOpen(true)}
+                    onMouseLeave={() => setIsOpen(false)}
                 >
                     {subCategories.map((subCategory, i) => (
                         <Link
