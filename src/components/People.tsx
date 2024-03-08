@@ -1,15 +1,16 @@
-import person1 from "@assets/people/nicolas_tsiakkas.webp";
+import person1 from "@assets/people/nikolas_tsiakkas.webp";
 // import person2 from "@assets/people/eleni_voidou.webp";
 import person2 from "@assets/people/default.jpg";
-import person3 from "@assets/people/katerina_paschou.webp";
 import person4 from "@assets/people/fotoula_dragatsi.webp";
-import MemberCard, { MemberInfo } from "./MemberCard";
+import person3 from "@assets/people/katerina_paschou.webp";
+import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
+import MemberCard, { MemberInfo } from "./MemberCard";
 
 const membersInfo: MemberInfo[] = [
     {
         image: person1,
-        name: "Nicolas Tsiakkas",
+        name: "Nikolas Tsiakkas",
         title: "Scientific Director",
         description:
             [
@@ -59,6 +60,26 @@ function People() {
         setSelectedMemberIndex(selectedMemberIndex === index ? null : index);
     };
 
+    const variants = {
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.3,
+                ease: "easeOut"
+            }
+        },
+        hidden: {
+            opacity: 0,
+            y: 20,
+            transition: {
+                duration: 0.3,
+                ease: "easeIn"
+            }
+        }
+    };
+
+
     return (
         <div id="leadership">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 sm:gap-8 mb-4">
@@ -72,19 +93,28 @@ function People() {
                     />
                 ))}
             </div>
-            {selectedMemberIndex !== null && (
-                <div className="hidden sm:block">
-                    <div className="
-                    text-md md:text-lg
-                    flex flex-col gap-4 pt-8 text-medwork-dark dark:text-medwork-light
-                    border-t border-t-medwork-dark dark:border-t-medwork-light
-                ">
-                        {membersInfo[selectedMemberIndex].description.map((item, index) => (
-                            <p key={index}>{item}</p>
-                        ))}
-                    </div>
-                </div>
-            )}
+            <AnimatePresence>
+                {selectedMemberIndex !== null && (
+                    <motion.div
+                        className="hidden sm:block"
+                        initial="hidden"
+                        animate="visible"
+                        exit="hidden"
+                        variants={variants}
+                        transition={{ duration: 0.5 }}
+                    >
+                        <div className="
+                            text-md md:text-lg
+                            flex flex-col gap-4 pt-8 text-medwork-dark dark:text-medwork-light
+                            border-t border-t-medwork-dark dark:border-t-medwork-light
+                        ">
+                            {membersInfo[selectedMemberIndex].description.map((item, index) => (
+                                <p key={index}>{item}</p>
+                            ))}
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </div>
     );
 }

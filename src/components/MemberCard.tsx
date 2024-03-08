@@ -40,14 +40,17 @@ function MemberCard({
             viewport={{ once: true }}
             className="flex flex-col items-center content-center text-center text-medwork-dark dark:text-medwork-light"
         >
-            <div className={`flex h-[240px] rounded-sm bg-cover border-2 border-blue-500 dark:border-blue-400 ${showDescription && "shadow-2xl shadow-blue-500 dark:shadow-blue-400 drop-shadow-2xl"}`}>
+            <div className={`
+                flex h-[240px] rounded-sm bg-cover border-2 border-blue-500 dark:border-blue-400
+                ${showDescription && "shadow-2xl shadow-blue-500 dark:shadow-blue-400 drop-shadow-2xl"}
+            `}>
                 <Image
-                    className={`w-[170px] object-cover ${(!showDescription && selected) &&  "sm:blur-sm"}`}
+                    className={`w-[170px] object-cover ${(!showDescription && selected) &&  "sm:blur-[2px]"}`}
                     src={image}
                     alt={name}
                 />
             </div>
-            <div className="flex flex-col gap-2 m-4">
+            <div className="flex flex-col gap-2 m-4 z-10">
                 <p className="text-blue text-xl font-extralight">{name}</p>
                 {linkedInTag && (
                     <a

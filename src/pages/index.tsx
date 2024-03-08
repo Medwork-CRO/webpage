@@ -36,7 +36,7 @@ const imageShowCases = [
 ];
 
 const statistics= [
-    { count: 19, symbol: "+", title: "years of", point: "experience" },
+    { count: 20, symbol: "+", title: "years of", point: "experience" },
     { count: 85, symbol: "+", title: "active", point: "clients" },
     { count: 30, symbol: "+", title: "", point: "safety professionals" },
 ];
