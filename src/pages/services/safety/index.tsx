@@ -11,7 +11,7 @@ import { useState } from "react";
 //     "Medwork is dedicated to supporting Marketing Authorisation Holders in fulfilling their pharmacovigilance obligations. With over 15 years of experience in different facets of pharmacovigilance, our team possesses a wealth of knowledge and a comprehensive understanding of the intricacies involved in ensuring drug safety.",
 // ];
 const paragraphs = [
-    "Medwork is dedicated to supporting marketing authorization holders and medical device manufacturers in fulfilling their vigilance obligations. With over 20 years of experience across various aspects of vigilance, our team possesses a wealth of knowledge and a comprehensive understanding of the complexities involved in ensuring the safety of medicines and medical devices.",
+    "Medwork is dedicated to supporting marketing authorization holders and medical device manufacturers in fulfilling their vigilance obligations. With 20 years of experience across various aspects of vigilance, our team possesses a wealth of knowledge and a comprehensive understanding of the complexities involved in ensuring the safety of medicines and medical devices.",
 ];
 
 const title = "Our services cover all aspects of pharmacovigilance, including:";
