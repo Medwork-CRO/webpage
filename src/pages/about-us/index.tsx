@@ -4,7 +4,7 @@ import ImageCategory from "@/components/ImageCategory";
 import LeadingParagraphs from "@/components/LeadingParagraphs";
 import People from "@/components/People";
 import Title from "@/components/Title";
-import office from "@assets/team/medwork-group.webp";
+import office from "@assets/team/medwork-group-removed.webp";
 
 const paragraphs = [
     "In a world where safety is paramount, Medwork stands out for offering a dedicated, personalized, and reliable pharmacovigilance experience.",
