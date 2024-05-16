@@ -8,7 +8,6 @@ function ContactForm() {
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        console.log(email, subject, message);
     };
 
     return (
@@ -23,7 +22,7 @@ function ContactForm() {
                         htmlFor="email"
                         className="mb-2 block text-sm font-medium text-gray-900 dark:text-gray-300"
                     >
-            Your email
+                        Your email
                     </label>
                     <input
                         type="email"
@@ -40,7 +39,7 @@ function ContactForm() {
                         htmlFor="subject"
                         className="mb-2 block text-sm font-medium text-gray-900 dark:text-gray-300"
                     >
-            Subject
+                        Subject
                     </label>
                     <input
                         type="text"
@@ -57,7 +56,7 @@ function ContactForm() {
                         htmlFor="message"
                         className="mb-2 block text-sm font-medium text-gray-900 dark:text-gray-400"
                     >
-            Your message
+                        Your message
                     </label>
                     <textarea
                         id="message"
