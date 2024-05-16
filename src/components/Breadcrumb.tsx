@@ -10,7 +10,7 @@ import { InfoBoxAttributes } from "./InfoBoxMatrix";
 
 const SERVICES = ["safety", "quality-assurance"];
 
-function hoverList(list: {link: string, title: string}[]) {
+function hoverList(list: { link: string, title: string }[]) {
     return (<div className="
         hidden group-hover/item:block z-50 absolute
         border border-gray-300 dark:border-gray-600
@@ -47,13 +47,13 @@ function servicesPerCategory(service: string) {
 }
 
 function services() {
-    const list: {link: string, title: string}[] = [{
+    const list: { link: string, title: string }[] = [{
         link: "/services/safety",
         title: "Safety",
-    },{
+    }, {
         link: "/services/quality-assurance",
         title: "Quality Assurance",
-    },{
+    }, {
         link: "/services/outsourcing",
         title: "Outsourcing",
     }];
@@ -82,7 +82,7 @@ function pathSanitisation(input: string): { valid: boolean; path: string } {
 
     return {
         valid: true,
-        path: input.replace("/home", "/"),
+        path: input.replace("/home", "/").replace("//", "/")
     };
 }
 
@@ -102,6 +102,7 @@ const Breadcrumbs = () => {
 
     let pathNames = ["home"].concat(pathname.split("/").filter((x: string) => !!x));
     const paths = pathNames.map((_name: string, idx) => "/" + pathNames.slice(0, idx + 1).join("/"));
+
     pathNames = pathNames.map(pathBeautifier);
 
     return (
@@ -113,11 +114,11 @@ const Breadcrumbs = () => {
                 if (i === pathNames.length - 1) {
                     return <div key={i} className="font-semibold">{formatBreadcrumb(crumb)}</div>;
                 } else if (!pathSanitisation(paths[i]).valid) {
-                    return  <React.Fragment key={i}>
+                    return <React.Fragment key={i}>
                         <div className="group/item">
                             <div className="flex flex-row items-center">
                                 <div>{formatBreadcrumb(crumb)}</div>
-                                {crumb === "services" ? <MdExpandMore className="ml-1"/> : <span className="ml-1"></span>}
+                                {crumb === "services" ? <MdExpandMore className="ml-1" /> : <span className="ml-1"></span>}
                             </div>
                             {crumb === "services" && services()}
                         </div>
@@ -134,7 +135,7 @@ const Breadcrumbs = () => {
                                     >
                                         {formatBreadcrumb(crumb)}
                                     </Link>
-                                    {SERVICES.includes(crumb) && <MdExpandMore className="ml-1"/>}
+                                    {SERVICES.includes(crumb) && <MdExpandMore className="ml-1" />}
                                 </div>
                                 {SERVICES.includes(crumb) && servicesPerCategory(crumb)}
                             </div>
