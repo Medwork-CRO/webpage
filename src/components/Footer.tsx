@@ -138,11 +138,11 @@ function Legal() {
                 Made by{" "}
                 <a
                     className="font-semibold narrow-letters"
-                    href="https://github.com/keybraker"
+                    href="https://itsiakkas.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-            Keybraker
+                    Keybraker
                 </a>
             </span>
         </div>
