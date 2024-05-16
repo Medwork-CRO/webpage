@@ -45,12 +45,12 @@ function MemberCard({
                 ${showDescription && "shadow-2xl shadow-blue-500 dark:shadow-blue-400 drop-shadow-2xl"}
             `}>
                 <Image
-                    className={`w-[170px] object-cover ${(!showDescription && selected) &&  "sm:blur-[2px]"}`}
+                    className={`w-[170px] h-[230px] object-cover ${(!showDescription && selected) && "sm:blur-[2px]"}`}
                     src={image}
                     alt={name}
                 />
             </div>
-            <div className="flex flex-col gap-2 m-4 z-10">
+            <div className="flex flex-col justify-between h-full gap-2 m-4 z-10">
                 <p className="text-blue text-xl font-extralight">{name}</p>
                 {linkedInTag && (
                     <a

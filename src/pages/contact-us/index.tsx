@@ -6,7 +6,7 @@ import contactUs from "@assets/stock-images/contact-us.webp";
 const ContactUs = () => {
     return (
         <div className="mx-auto flex flex-col items-center justify-between w-full">
-            <ImageCategory image={contactUs} title="Contact Us" description="" />
+            <ImageCategory image={contactUs} title="Contact Us" description="Contact Us" aria-label="Contact Us" />
 
             <div id="main-content" className="w-full max-w-[1200px] items-left whitespace-pre-line flex flex-col">
                 <Breadcrumbs />

@@ -79,7 +79,6 @@ function People() {
         }
     };
 
-
     return (
         <div id="leadership">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 sm:gap-8 mb-4">
