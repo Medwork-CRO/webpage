@@ -21,10 +21,10 @@ const membersInfo: MemberInfo[] = [
     {
         image: person2,
         name: "Eleni Voidou",
-        title: "Administration Director",
+        title: "Director of Operations",
         description: [
             "As the head of Medwork's operations, Eleni is one of the driving forces behind our commitment to client satisfaction and the continuous development of our team. With a background in the pharmaceutical industry dating back to 1997, her professional journey began in the medical device sector, where she transitioned from hand-on operational responsibilities to strategic roles in sales. Between 2004 and 2008, she took charge as the Sales Manager for the GE Healthcare ICU/CCU monitoring product line in Greece, navigating the intricacies of the industry.",
-            "In 2009, Eleni seamlessly shifted gears into the pharmaceutical domain, taking on the role of Administration Director at Medwork. In this capacity, she not only refined her skills in business development and operational management but also played a pivotal role in steering the company towards sustained growth.",
+            "In 2009, Eleni seamlessly shifted gears into the pharmaceutical domain, taking on the role of Director of Operations at Medwork. In this capacity, she not only refined her skills in business development and operational management but also played a pivotal role in steering the company towards sustained growth.",
             "Eleni holds a Bachelor's degree in Physics and a Master's degree in Biomedical Engineering from Imperial College London.",
         ]
     },
