@@ -35,17 +35,18 @@ function ServiceCard({
                     key={index}
                     tabIndex={0}
                     className="
+                        w-full h-full sm:h-[32rem] lg:h-[34rem]
                         bg-medwork-light2 dark:bg-medwork-dark2
                         text-medwork-dark2 dark:text-medwork-light2
                         flex flex-col items-center overflow-hidden
-                        transform transition duration-200 ease-in-out
-                        border-4 border-transparent rounded-lg
+                        transform transition-transform duration-300 ease-in-out
+                        border-2 border-transparent rounded-lg
                         hover:border-gray-400 dark:hover:border-gray-600
-                        h-full sm:h-[32rem] lg:h-[34rem] w-full
+                        hover:scale-105 hover:shadow-lg
                     "
                 >
                     <Image
-                        className="object-cover h-48"
+                        className="object-cover h-48 transition-transform duration-300 ease-in-out"
                         src={imageData}
                         alt={imageTitle}
                     />
@@ -55,6 +56,7 @@ function ServiceCard({
                     </div>
                 </div>
             </Link>
+
         </motion.div>
     );
 }
