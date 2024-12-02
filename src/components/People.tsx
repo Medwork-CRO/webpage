@@ -68,7 +68,7 @@ function People() {
 
     return (
         <div id="leadership">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 sm:gap-8 mb-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 sm:gap-8">
                 {membersInfo.map((memberInfo, i) => (
                     <MemberCard
                         {...memberInfo}
@@ -79,28 +79,6 @@ function People() {
                     />
                 ))}
             </div>
-            <AnimatePresence>
-                {selectedMemberIndex !== null && (
-                    <motion.div
-                        className="hidden sm:block"
-                        initial="hidden"
-                        animate="visible"
-                        exit="hidden"
-                        variants={variants}
-                        transition={{ duration: 0.5 }}
-                    >
-                        <div className="
-                            text-md md:text-lg
-                            flex flex-col gap-4 pt-8 text-medwork-dark dark:text-medwork-light
-                            border-t border-t-medwork-dark dark:border-t-medwork-light
-                        ">
-                            {membersInfo[selectedMemberIndex].description.map((item, index) => (
-                                <p key={index}>{item}</p>
-                            ))}
-                        </div>
-                    </motion.div>
-                )}
-            </AnimatePresence>
         </div>
     );
 }

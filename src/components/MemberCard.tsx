@@ -41,11 +41,11 @@ function MemberCard({
             className="flex flex-col items-center content-center text-center text-medwork-dark dark:text-medwork-light"
         >
             <div className={`
-                flex h-[240px] rounded-sm bg-cover border-2 border-blue-500 dark:border-blue-400
+                flex h-[240px] rounded-lg bg-cover border-2 border-blue-500 dark:border-blue-400
                 ${showDescription && "shadow-2xl shadow-blue-500 dark:shadow-blue-400 drop-shadow-2xl"}
             `}>
                 <Image
-                    className={`w-[170px] h-[230px] object-cover ${(!showDescription && selected) && "sm:blur-[2px]"}`}
+                    className={`w-[170px] h-[230px] object-cover rounded-md ${(!showDescription && selected) && "sm:blur-[2px]"}`}
                     src={image}
                     alt={name}
                 />
