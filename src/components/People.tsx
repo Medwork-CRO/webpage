@@ -1,6 +1,5 @@
 import person1 from "@assets/people/nikolas_tsiakkas.webp";
 import person2 from "@assets/people/eleni_voidou.webp";
-import person4 from "@assets/people/fotoula_dragatsi.webp";
 import person3 from "@assets/people/katerina_paschou.webp";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
@@ -39,17 +38,6 @@ const membersInfo: MemberInfo[] = [
                 "A graduate of the National and Kapodistrian University of Athens with a Doctor of Dental Surgery (DDS) degree, Katerina brings a unique perspective to her leadership role, ensuring Medwork remains at the forefront of delivering exceptional pharmacovigilance services.",
             ]
     },
-    {
-        image: person4,
-        name: "Fotoula Dragatsi",
-        title: "Quality Assurance Manager",
-        description:
-            [
-                "Fotoula's experience in the pharmaceutical industry goes back to 1995, when she started her career as a Sales Representative at Boehringer-Ingelheim, Greece. A year later, she transitioned to Rhone-Poulenc Rorer/Aventis as a Clinical Research Associate. Over time, her responsibilities progressively expanded in diverse areas, including regulatory clearance for clinical trials, investigational products management, training, and development of procedural documents. With the formation of Sanofi-Aventis in 2005, Fotoula took on additional roles as SOP & Training Ambassador, Clinical Trial Application Manager and Investigational Product Manager.",
-                "In 2011, Fotoula joined Medwork as the Quality Assurance Manager, where she is responsible for the maintenance and continual improvement of the company's quality management system. In addition to her extensive expertise in quality assurance, Fotoula has been trained as an Auditor/Lead Auditor as per ISO 9001 and has successfully conducted numerous Good Clinical Practice (GCP), Good Distribution Practice (GDP), and system audits.",
-                "Fotoula's profound understanding and commitment to quality make her an invaluable guardian of Medwork's dedication to excellence, serving as a trusted consultancy point for the company's clients."
-            ]
-    },
 ];
 
 function People() {
@@ -80,7 +68,7 @@ function People() {
 
     return (
         <div id="leadership">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 sm:gap-8 mb-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 sm:gap-8 mb-4">
                 {membersInfo.map((memberInfo, i) => (
                     <MemberCard
                         {...memberInfo}
