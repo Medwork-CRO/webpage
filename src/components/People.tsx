@@ -79,6 +79,28 @@ function People() {
                     />
                 ))}
             </div>
+            <AnimatePresence>
+                {selectedMemberIndex !== null && (
+                    <motion.div
+                        className="hidden sm:block"
+                        initial="hidden"
+                        animate="visible"
+                        exit="hidden"
+                        variants={variants}
+                        transition={{ duration: 0.5 }}
+                    >
+                        <div className="
+                            text-md md:text-lg
+                            flex flex-col gap-4 pt-8 text-medwork-dark dark:text-medwork-light
+                            border-t border-t-medwork-dark dark:border-t-medwork-light
+                        ">
+                            {membersInfo[selectedMemberIndex].description.map((item, index) => (
+                                <p key={index}>{item}</p>
+                            ))}
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </div>
     );
 }
