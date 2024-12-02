@@ -40,17 +40,22 @@ function ServiceCard({
                         transform transition-transform duration-300 ease-in-out
                         bg-medwork-light2 dark:bg-medwork-dark2
                         text-medwork-dark2 dark:text-medwork-light2
-                        border-2 border-transparent rounded-lg
-                        hover:border-gray-400 dark:hover:border-gray-600
+                        p-2
+                        rounded-lg
                         hover:scale-105 hover:shadow-lg
                     "
                 >
                     <Image
-                        className="object-cover h-36 sm:h-48 transition-transform duration-300 ease-in-out"
+                        className="
+                            object-cover h-36 sm:h-48
+                            transition-transform duration-300 ease-in-out
+                            border-2 border-gray-400 dark:border-gray-600
+                            rounded-md
+                        "
                         src={imageData}
                         alt={imageTitle}
                     />
-                    <div className="p-4">
+                    <div className="p-2">
                         <p className="mb-8 text-xl narrow-letters leading-relaxed">{imageTitle}</p>
                         <p className="text-md narrow-letters leading-relaxed">{imageDescription}</p>
                     </div>
