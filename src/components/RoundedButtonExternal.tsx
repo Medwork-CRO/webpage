@@ -5,10 +5,10 @@ import Link from "next/link";
 import { MdEmail } from "react-icons/md";
 
 export enum ButtonType {
-    TEXT,
-    EMAIL,
-    LINKEDIN,
-    KARIERA,
+  TEXT,
+  EMAIL,
+  LINKEDIN,
+  KARIERA,
 }
 
 type RoundedButtonExternalProps = {
@@ -18,34 +18,35 @@ type RoundedButtonExternalProps = {
   type: ButtonType;
 };
 
-function ImageryAddition({type}: {type: ButtonType}) {
-    switch (type) {
+function ImageryAddition({ type }: { type: ButtonType }) {
+  switch (type) {
     case ButtonType.EMAIL:
-        return <MdEmail className="h-6 w-6 object-cover" />;
+      return <MdEmail className="h-6 w-6 object-cover" />;
     case ButtonType.LINKEDIN:
-        return <FaLinkedin className="h-6 w-6" />;
+      return <FaLinkedin className="h-6 w-6" />;
     case ButtonType.KARIERA:
-        return (
-            <Image
-                src={kariera}
-                alt={"kariera"}
-                className="h-6 w-6 object-cover"
-            />
-        );
+      return (
+        <Image src={kariera} alt={"kariera"} className="h-6 w-6 object-cover" />
+      );
     case ButtonType.TEXT:
     default:
-        return <></>;
-    }
+      return <></>;
+  }
 }
 
-function RoundedButtonExternal({ label, href, ariaLabel, type }: RoundedButtonExternalProps) {
-    return (
-        <Link
-            aria-label={ariaLabel}
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="
+function RoundedButtonExternal({
+  label,
+  href,
+  ariaLabel,
+  type,
+}: RoundedButtonExternalProps) {
+  return (
+    <Link
+      aria-label={ariaLabel}
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="
                 flex flex-row items-center justify-center gap-4
                 cursor-pointer text-medwork-light dark:text-medwork-dark
                 font-light narrow-letters leading-relaxed whitespace-nowrap
@@ -54,11 +55,11 @@ function RoundedButtonExternal({ label, href, ariaLabel, type }: RoundedButtonEx
                 bg-blue-400 hover:bg-blue-500 focus-visible:bg-blue-500
                 transition duration-100 ease-in focus:outline-none
             "
-        >
-            <ImageryAddition type={type} />
-            {label}
-        </Link>
-    );
+    >
+      <ImageryAddition type={type} />
+      {label}
+    </Link>
+  );
 }
 
 export default RoundedButtonExternal;

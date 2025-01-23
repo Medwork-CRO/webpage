@@ -11,6 +11,7 @@ Serve locally:
 ```bash
 npm run dev
 ```
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 Build:
@@ -18,6 +19,7 @@ Build:
 ```bash
 npm run build
 ```
+
 ### Deployment
 
 When merging to master a `gh-pages` branch is deployed and served online. If CNAME file is added you can change the url it is served at.

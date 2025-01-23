@@ -1,6 +1,6 @@
 {
-    "git-blame.gitWebUrl": "",
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true,
-    "files.eol": "\n"
+  "git-blame.gitWebUrl": "",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "files.eol": "\n"
 }

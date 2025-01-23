@@ -1,36 +1,36 @@
 import { NavProp } from "./NavHamburger";
 
 const AboutUs = {
-    label: "About Us",
-    href: "/about-us",
-    // subCategories: [
-    //   {
-    //     label: "Company",
-    //     href: "/about-us/company",
-    //   },
-    //   {
-    //     label: "Legislation",
-    //     href: "/legislation",
-    //   },
-    // ],
+  label: "About Us",
+  href: "/about-us",
+  // subCategories: [
+  //   {
+  //     label: "Company",
+  //     href: "/about-us/company",
+  //   },
+  //   {
+  //     label: "Legislation",
+  //     href: "/legislation",
+  //   },
+  // ],
 };
 
 const Services = {
-    label: "Services",
-    href: "/services",
-    subCategories: [
-        {
-            label: "Safety",
-            href: "/services/safety",
-        },
-        {
-            label: "Quality Assurance",
-            href: "/services/quality-assurance",
-        },
-        {
-            label: "Outsourcing",
-            href: "/services/outsourcing",
-        },
+  label: "Services",
+  href: "/services",
+  subCategories: [
+    {
+      label: "Safety",
+      href: "/services/safety",
+    },
+    {
+      label: "Quality Assurance",
+      href: "/services/quality-assurance",
+    },
+    {
+      label: "Outsourcing",
+      href: "/services/outsourcing",
+    },
     // {
     //   label: "Cosmetovigilance",
     //   href: "/services/cosmetovigilance",
@@ -43,17 +43,17 @@ const Services = {
     //   label: "Materiovigilance",
     //   href: "/services/materiovigilance",
     // },
-    ],
+  ],
 };
 
 const Careers = {
-    label: "Careers",
-    href: "/careers",
+  label: "Careers",
+  href: "/careers",
 };
 
 const ContactUs = {
-    label: "Contact Us",
-    href: "/contact-us",
+  label: "Contact Us",
+  href: "/contact-us",
 };
 
 const navMenu: NavProp[] = [Services, AboutUs, Careers, ContactUs];

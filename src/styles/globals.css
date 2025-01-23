@@ -113,7 +113,9 @@ a {
 .scrollToTopButton {
   opacity: 0;
   transform: translateY(100px);
-  transition: opacity 0.3s, transform 0.3s;
+  transition:
+    opacity 0.3s,
+    transform 0.3s;
 }
 
 .scrollToTopButton.visible {
@@ -137,7 +139,6 @@ a {
     scrollbar-width: none; /* Firefox */
   }
 }
-
 
 /* Custom scrollbar */
 @layer utilities {

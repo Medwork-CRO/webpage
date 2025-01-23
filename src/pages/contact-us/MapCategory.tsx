@@ -6,103 +6,115 @@ import { FaPhone } from "react-icons/fa";
 import { MdFax, MdWorkOutline } from "react-icons/md";
 
 enum ContactType {
-    Phone,
-    Fax,
-    Email,
-    Work,
-    Address,
-    LinkedIn
+  Phone,
+  Fax,
+  Email,
+  Work,
+  Address,
+  LinkedIn,
 }
 
 type MapCategoryProps = {
-    location?: string;
-    title?: string;
+  location?: string;
+  title?: string;
 };
 
 function getIFrame(location: string, rounded = false, height = "h-[100vh]") {
-    const rounding = rounded ? "rounded-b-lg" : "";
-    return (<iframe
-        src={`https://maps.google.com/maps?q=${location}&t=&z=16&ie=UTF8&iwloc=&output=embed`}
-        className={`w-full ${height} ${rounding} `}
-        allowFullScreen
-    ></iframe>);
+  const rounding = rounded ? "rounded-b-lg" : "";
+  return (
+    <iframe
+      src={`https://maps.google.com/maps?q=${location}&t=&z=16&ie=UTF8&iwloc=&output=embed`}
+      className={`w-full ${height} ${rounding} `}
+      allowFullScreen
+    ></iframe>
+  );
 }
 
 function getIcon(contactType: ContactType) {
-    switch (contactType) {
+  switch (contactType) {
     case ContactType.Phone:
-        return <FaPhone className="h-6 w-6" />;
+      return <FaPhone className="h-6 w-6" />;
     case ContactType.Fax:
-        return <MdFax className="h-6 w-6" />;
+      return <MdFax className="h-6 w-6" />;
     case ContactType.Email:
-        return <MdEmail className="h-6 w-6" />;
+      return <MdEmail className="h-6 w-6" />;
     case ContactType.Work:
-        return <MdWorkOutline className="h-6 w-6" />;
+      return <MdWorkOutline className="h-6 w-6" />;
     case ContactType.Address:
-        return <MdLocationOn className="h-6 w-6" />;
+      return <MdLocationOn className="h-6 w-6" />;
     case ContactType.LinkedIn:
-        return <FaLinkedin className="h-6 w-6" />;
-    }
+      return <FaLinkedin className="h-6 w-6" />;
+  }
 }
 
 function getContact(display: string, value: string, contactType: ContactType) {
-    let href = "";
+  let href = "";
 
-    switch (contactType) {
+  switch (contactType) {
     case ContactType.Phone:
-        href = `tel:${value}`;
-        break;
+      href = `tel:${value}`;
+      break;
     case ContactType.Fax:
-        href = `fax:${value}`;
-        break;
+      href = `fax:${value}`;
+      break;
     case ContactType.Email:
-        href = `mailto:${value}`;
-        break;
+      href = `mailto:${value}`;
+      break;
     case ContactType.Address:
-        href = `https://goo.gl/maps/${value}`;
-        break;
+      href = `https://goo.gl/maps/${value}`;
+      break;
     case ContactType.LinkedIn:
-        href = `https://www.linkedin.com/${value}`;
-        break;
-    }
+      href = `https://www.linkedin.com/${value}`;
+      break;
+  }
 
-    return (<div className="
+  return (
+    <div
+      className="
         flex gap-4 items-center rounded-lg py-3
         text-lg md:text-xl font-normal
         text-medwork-dark dark:text-medwork-light
         whitespace-pre-line tracking-wide text-left
         narrow-letters leading-relaxed
-        ">
-        {getIcon(contactType)}
-        <Link
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            {display}
-        </Link>
-    </div>);
+        "
+    >
+      {getIcon(contactType)}
+      <Link href={href} target="_blank" rel="noopener noreferrer">
+        {display}
+      </Link>
+    </div>
+  );
 }
 
 function getCompanyInfo() {
-    return (
-        <div className="
+  return (
+    <div
+      className="
             flex flex-col sm:flex-row
             w-full justify-between
             font-semibold text-xl text-left
             px-12 py-8 gap-4
             rounded-t-lg
-        ">
-            <div className="flex flex-col gap-4">
-                {getContact("(+30) 210 9960971", "+302109960971", ContactType.Phone)}
-                {getContact("medworkinfo@medwork.gr", "medworkinfo@medwork.gr", ContactType.Email)}
-            </div>
-            <div className="flex flex-col gap-4">
-                {getContact("Medwork", "companies/medwork", ContactType.LinkedIn)}
-                {getContact("5 Chiou street, 164 52 Argyroupolis, Greece", "KDKk5piro9Cb6AXG7", ContactType.Address)}
-            </div>
-        </div>
-    );
+        "
+    >
+      <div className="flex flex-col gap-4">
+        {getContact("(+30) 210 9960971", "+302109960971", ContactType.Phone)}
+        {getContact(
+          "medworkinfo@medwork.gr",
+          "medworkinfo@medwork.gr",
+          ContactType.Email
+        )}
+      </div>
+      <div className="flex flex-col gap-4">
+        {getContact("Medwork", "companies/medwork", ContactType.LinkedIn)}
+        {getContact(
+          "5 Chiou street, 164 52 Argyroupolis, Greece",
+          "KDKk5piro9Cb6AXG7",
+          ContactType.Address
+        )}
+      </div>
+    </div>
+  );
 }
 
 // function MapCategory({
@@ -141,23 +153,24 @@ function getCompanyInfo() {
 //     );
 // }
 
-
 function MapCategory({
-    location = "Chiou 5, Argyroupolis 16452, Greece",
+  location = "Chiou 5, Argyroupolis 16452, Greece",
 }: MapCategoryProps) {
-    return (
-        <>
-            <div className="mx-auto w-full max-w-[1200px]">
-                <div className="
+  return (
+    <>
+      <div className="mx-auto w-full max-w-[1200px]">
+        <div
+          className="
                     flex flex-col
                     border border-medwork-dark dark:border-medwork-light rounded-lg
-                ">
-                    {getCompanyInfo()}
-                    {getIFrame(location, true, "h-96")}
-                </div>
-            </div>
-        </>
-    );
+                "
+        >
+          {getCompanyInfo()}
+          {getIFrame(location, true, "h-96")}
+        </div>
+      </div>
+    </>
+  );
 }
 
 export default MapCategory;

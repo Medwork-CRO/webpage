@@ -6,11 +6,11 @@ type RoundedButtonProps = {
 };
 
 function RoundedButton({ label, href }: RoundedButtonProps) {
-    return (
-        <Link
-            role="button"
-            tabIndex={0}
-            className="
+  return (
+    <Link
+      role="button"
+      tabIndex={0}
+      className="
                 flex flex-row items-center justify-center gap-4 cursor-pointer
                 font-light narrow-letters leading-relaxed
                 text-medwork-light dark:text-medwork-dark
@@ -21,12 +21,12 @@ function RoundedButton({ label, href }: RoundedButtonProps) {
                 hover:dark:border-medwork-light focus-visible:dark:border-medwork-light
                 transition duration-100 ease-in focus:outline-none
             "
-            aria-label="Action button"
-            href={href}
-        >
-            {label}
-        </Link>
-    );
+      aria-label="Action button"
+      href={href}
+    >
+      {label}
+    </Link>
+  );
 }
 
 export default RoundedButton;
