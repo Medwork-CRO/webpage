@@ -39,7 +39,7 @@ const legislations: Legislation[] = [
       {
         title: "National Organization for Medicines - Yellow Card",
         content:
-          'The "Yellow Card", is used to collect information on adverse drug reactions. Healthcare professionals and patients can use it to report adverse drug reactions to the National Organization for Medicines (EOF). It can be sent via fax or regular mail. Alternatively, adverse drug reactions may be reported electronically via EOF\'s site. For more information visit: https://www.eof.gr/web/guest/yellowgeneral.',
+          "The \"Yellow Card\", is used to collect information on adverse drug reactions. Healthcare professionals and patients can use it to report adverse drug reactions to the National Organization for Medicines (EOF). It can be sent via fax or regular mail. Alternatively, adverse drug reactions may be reported electronically via EOF's site. For more information visit: https://www.eof.gr/web/guest/yellowgeneral.",
         filePath: "pdfs/legislation/greek-pharmacovigilance",
         fileNameGR: "Yellow card.pdf",
       },
@@ -47,7 +47,7 @@ const legislations: Legislation[] = [
         title:
           "Ministerial Decision 3a/90023, published in Government Gazette issue 2485/B/03-10-2013",
         content:
-          'Transposition of Directive 2012/26/EU of the European Parliament and of the Council of 25 October 2012 into Greek law, amending Directive 2001/83/EC as regards pharmacovigilance. It applies in conjunction with the "Ministerial Decision No. 3a / G.P.",32221/29-04-2013.',
+          "Transposition of Directive 2012/26/EU of the European Parliament and of the Council of 25 October 2012 into Greek law, amending Directive 2001/83/EC as regards pharmacovigilance. It applies in conjunction with the \"Ministerial Decision No. 3a / G.P.\",32221/29-04-2013.",
         filePath: "pdfs/legislation/greek-pharmacovigilance",
         fileNameGR: "3a_90023_03-10-2013.pdf",
       },
@@ -99,7 +99,7 @@ const legislations: Legislation[] = [
         title:
           "Pharmaceutical Services - Ministry of Health Announcement 25-10-2013",
         content:
-          'Announcement regarding "Dear Health Care Professional (DHPC)" communications',
+          "Announcement regarding \"Dear Health Care Professional (DHPC)\" communications",
         filePath: "pdfs/legislation/cypriot-pharmacovigilance",
         fileNameGR: "Announcement_DHPC_25-10-2013.pdf",
       },
@@ -247,14 +247,14 @@ const LegislationTabs = () => {
                                                     /> */}
                               {dropDownIndex === legislations.length &&
                               !!legislation.footer ? (
-                                <div
-                                  dangerouslySetInnerHTML={{
-                                    __html: legislation.footer,
-                                  }}
-                                ></div>
-                              ) : (
-                                ""
-                              )}
+                                  <div
+                                    dangerouslySetInnerHTML={{
+                                      __html: legislation.footer,
+                                    }}
+                                  ></div>
+                                ) : (
+                                  ""
+                                )}
                             </div>
                           );
                         })}

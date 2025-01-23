@@ -32,18 +32,18 @@ function getIFrame(location: string, rounded = false, height = "h-[100vh]") {
 
 function getIcon(contactType: ContactType) {
   switch (contactType) {
-    case ContactType.Phone:
-      return <FaPhone className="h-6 w-6" />;
-    case ContactType.Fax:
-      return <MdFax className="h-6 w-6" />;
-    case ContactType.Email:
-      return <MdEmail className="h-6 w-6" />;
-    case ContactType.Work:
-      return <MdWorkOutline className="h-6 w-6" />;
-    case ContactType.Address:
-      return <MdLocationOn className="h-6 w-6" />;
-    case ContactType.LinkedIn:
-      return <FaLinkedin className="h-6 w-6" />;
+  case ContactType.Phone:
+    return <FaPhone className="h-6 w-6" />;
+  case ContactType.Fax:
+    return <MdFax className="h-6 w-6" />;
+  case ContactType.Email:
+    return <MdEmail className="h-6 w-6" />;
+  case ContactType.Work:
+    return <MdWorkOutline className="h-6 w-6" />;
+  case ContactType.Address:
+    return <MdLocationOn className="h-6 w-6" />;
+  case ContactType.LinkedIn:
+    return <FaLinkedin className="h-6 w-6" />;
   }
 }
 
@@ -51,21 +51,21 @@ function getContact(display: string, value: string, contactType: ContactType) {
   let href = "";
 
   switch (contactType) {
-    case ContactType.Phone:
-      href = `tel:${value}`;
-      break;
-    case ContactType.Fax:
-      href = `fax:${value}`;
-      break;
-    case ContactType.Email:
-      href = `mailto:${value}`;
-      break;
-    case ContactType.Address:
-      href = `https://goo.gl/maps/${value}`;
-      break;
-    case ContactType.LinkedIn:
-      href = `https://www.linkedin.com/${value}`;
-      break;
+  case ContactType.Phone:
+    href = `tel:${value}`;
+    break;
+  case ContactType.Fax:
+    href = `fax:${value}`;
+    break;
+  case ContactType.Email:
+    href = `mailto:${value}`;
+    break;
+  case ContactType.Address:
+    href = `https://goo.gl/maps/${value}`;
+    break;
+  case ContactType.LinkedIn:
+    href = `https://www.linkedin.com/${value}`;
+    break;
   }
 
   return (

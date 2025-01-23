@@ -20,17 +20,17 @@ type RoundedButtonExternalProps = {
 
 function ImageryAddition({ type }: { type: ButtonType }) {
   switch (type) {
-    case ButtonType.EMAIL:
-      return <MdEmail className="h-6 w-6 object-cover" />;
-    case ButtonType.LINKEDIN:
-      return <FaLinkedin className="h-6 w-6" />;
-    case ButtonType.KARIERA:
-      return (
-        <Image src={kariera} alt={"kariera"} className="h-6 w-6 object-cover" />
-      );
-    case ButtonType.TEXT:
-    default:
-      return <></>;
+  case ButtonType.EMAIL:
+    return <MdEmail className="h-6 w-6 object-cover" />;
+  case ButtonType.LINKEDIN:
+    return <FaLinkedin className="h-6 w-6" />;
+  case ButtonType.KARIERA:
+    return (
+      <Image src={kariera} alt={"kariera"} className="h-6 w-6 object-cover" />
+    );
+  case ButtonType.TEXT:
+  default:
+    return <></>;
   }
 }
 

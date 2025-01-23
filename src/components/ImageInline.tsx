@@ -23,9 +23,9 @@ function ImageInline({ image }: ImageInlineProps) {
       <Image
         src={image}
         className="
-                max-h-[420px] object-cover rounded-lg
-                border-4 border-gray-400 dark:border-gray-600 shadow-md
-            "
+            max-h-[420px] object-cover rounded-lg
+            border-4 border-gray-400 dark:border-gray-600 shadow-md
+        "
         alt="alt"
       />
     </motion.div>
