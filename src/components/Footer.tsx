@@ -108,6 +108,7 @@ function CompanyContact() {
         rel="noopener noreferrer"
         target="_blank"
         href={"https://goo.gl/maps/KDKk5piro9Cb6AXG7"}
+        className="hover:text-blue-500 focus-visible:text-blue-500"
       >
         <MdLocationOn className="antialiased" size={"28px"} />
       </a>
@@ -116,6 +117,7 @@ function CompanyContact() {
         rel="noopener noreferrer"
         target="_blank"
         href={"mailto:" + mail}
+        className="hover:text-blue-500 focus-visible:text-blue-500"
       >
         <MdEmail className="antialiased" size={"28px"} />
       </a>
@@ -124,6 +126,7 @@ function CompanyContact() {
         rel="noopener noreferrer"
         target="_blank"
         href={"https://www.linkedin.com/" + linkedin}
+        className="hover:text-blue-500 focus-visible:text-blue-500"
       >
         <FaLinkedin className="antialiased" size={"28px"} />
       </a>
@@ -137,7 +140,12 @@ function Legal({
   themeSelectorProps: ThemeSelectorProps;
 }) {
   return (
-    <div className="flex flex-col sm:flex-row flex-wrap justify-start lg:justify-end pb-8 sm:pb-0 gap-4 w-full sm:self-end text-xl sm:text-md font-light narrow-letters text-gray-500">
+    <div
+      className="
+      flex flex-col sm:flex-row flex-wrap justify-start lg:justify-end
+      pb-8 sm:pb-0 gap-4 w-full sm:self-end text-xl sm:text-md font-light narrow-letters text-gray-500
+    "
+    >
       <span>2005 - {new Date().getFullYear()} © Medwork</span>
       <span className="hidden sm:block">|</span>
       <span>All Rights Reserved</span>
@@ -301,6 +309,7 @@ function Footer({ theme, setTheme }: ThemeSelectorProps) {
                 href={`mailto:${mail}`}
                 target="_blank"
                 rel="noopener noreferrer"
+                className="hover:text-blue-500 focus-visible:text-blue-500"
               >
                 {mail}
               </Link>
@@ -308,6 +317,7 @@ function Footer({ theme, setTheme }: ThemeSelectorProps) {
                 href={"https://goo.gl/maps/KDKk5piro9Cb6AXG7"}
                 target="_blank"
                 rel="noopener noreferrer"
+                className="hover:text-blue-500 focus-visible:text-blue-500"
               >
                 <div className="flex flex-col">
                   <div>{addressA}</div>
