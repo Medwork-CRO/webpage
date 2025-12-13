@@ -10,13 +10,16 @@ import {
 import Logo from "@/components/Logo";
 import RoundedButton from "@/components/RoundedButton";
 import { Theme } from "@/types/Theme";
-import TUV_27001 from "@assets/certificates/TUV_hellas_iso27001.webp";
-import TUV_9001 from "@assets/certificates/TUV_hellas_iso9001.webp";
+import TUV_27001_IMG from "@assets/certificates/TUV_hellas_iso27001.webp";
+import TUV_9001_IMG from "@assets/certificates/TUV_hellas_iso9001.webp";
 import { FaLinkedin } from "@react-icons/all-files/fa/FaLinkedin";
 import { MdEmail } from "@react-icons/all-files/md/MdEmail";
 import { MdLocationOn } from "@react-icons/all-files/md/MdLocationOn";
-import { AboutUs, Careers, Services } from "./HeaderLinks";
 import CompanyInfo from "./CompanyInfo";
+import { AboutUs, Careers, Services } from "./HeaderLinks";
+
+const TUV_27001_FILE = "/assets/certificates/MW_ISO_27001_Certificate_2024_en.pdf";
+const TUV_9001_FILE = "/assets/certificates/MW_ISO_9001_Certificate_2024_en.pdf";
 
 type ThemeSelectorProps = {
   theme: Theme;
@@ -175,16 +178,37 @@ function Information() {
   return (
     <div className="flex flex-col justify-start gap-4 text-xl sm:text-lg narrow-letters text-medwork-dark dark:text-medwork-light">
       <div className="flex flex-row gap-4">
-        <Image
-          src={TUV_9001}
-          className="h-32 w-32 sm:h-36 sm:w-36 object-cover"
-          alt="TUV Certificate of ISO 9001"
-        />
-        <Image
-          src={TUV_27001}
-          className="h-32 w-32 sm:h-36 sm:w-36 object-cover"
-          alt="TUV Certificate of ISO 27001"
-        />
+        <a
+          href={TUV_9001_FILE}
+          download
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Download ISO 9001 certificate"
+          title="Download ISO 9001 certificate"
+          className="inline-block"
+        >
+          <Image
+            src={TUV_9001_IMG}
+            className="h-32 w-32 sm:h-36 sm:w-36 object-cover"
+            alt="TUV Certificate of ISO 9001"
+          />
+        </a>
+
+        <a
+          href={TUV_27001_FILE}
+          download
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Download ISO 27001 certificate"
+          title="Download ISO 27001 certificate"
+          className="inline-block"
+        >
+          <Image
+            src={TUV_27001_IMG}
+            className="h-32 w-32 sm:h-36 sm:w-36 object-cover"
+            alt="TUV Certificate of ISO 27001"
+          />
+        </a>
       </div>
       <Link
         className="font-ultralight narrow-letters hover:underline focus-visible:underline whitespace-nowrap"
