@@ -2,8 +2,6 @@ import Breadcrumbs from "@/components/Breadcrumb";
 import DisplayParagraphs from "@/components/DisplayParagraphs";
 import ImageCategory from "@/components/ImageCategory";
 import LeadingParagraphs from "@/components/LeadingParagraphs";
-import People from "@/components/People";
-import Title from "@/components/Title";
 import office from "@assets/team/medwork-group-removed.webp";
 
 const paragraphs = [
@@ -44,10 +42,10 @@ function AboutUs() {
             <DisplayParagraphs withLead={true} paragraphs={paragraphs4} />
           </div>
 
-          <div className="flex flex-col gap-24">
+          {/* <div className="flex flex-col gap-24">
             <Title title="Leadership" />
             <People />
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
